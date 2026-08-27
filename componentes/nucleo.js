@@ -8,6 +8,10 @@
 
   var paginaActiva = document.body.getAttribute('data-pagina') || 'inicio';
 
+  // Modo embed: si la URL lleva ?embed se omiten la cabecera y el pie
+  // para no duplicar la navegación cuando ya la aporta Google Sites.
+  var modoEmbed = new URLSearchParams(window.location.search).has('embed');
+
   // Calcula la ruta base según dónde se aloje el archivo (raíz o /cursos/).
   // Permite reutilizar el mismo shell en index.html y en cursos/*.html.
   var enCursos = (window.location.pathname || '').indexOf('/cursos/') !== -1;
@@ -62,6 +66,8 @@
     +     '</div>'
     +   '</div>'
     + '</footer>';
+
+  if (modoEmbed) return; // Sin cabecera ni pie dentro del embed
 
   document.getElementById('shell-header').innerHTML = header;
   // El footer se inserta al final del body (después del contenido).

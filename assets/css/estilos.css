@@ -12,7 +12,7 @@
 
 /* Reset ligero para iframe: hereda ancho del contenedor */
 *, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; overflow-x: hidden; }
 body { min-height: 100%; }
 
 /* Evita desbordamiento horizontal dentro del embed */
