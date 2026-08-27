@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3º ESO · Computación y Robótica · IES Pintor Pedro Gómez</title>
+  <meta name="description" content="Unidades, proyectos ABP y criterios BOJA de 3º ESO. Desarrollo web, IA, Big Data, scraping, ciberseguridad y propiedad intelectual." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/estilos.css" />
+</head>
+<body data-pagina="3eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <section class="rounded-2xl bg-gradient-to-br from-ink-800 to-brand-700 p-8 text-white shadow-lg">
+      <p class="text-sm font-semibold uppercase tracking-wider text-brand-200">Curso 2025/26 · 3º ESO</p>
+      <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">Aplicación, Datos e Inteligencia</h1>
+      <p class="mt-3 max-w-2xl text-white/90">Saberes básicos <span class="font-semibold">BOJA</span>: desarrollo de aplicaciones web, <span class="font-semibold">IA y Big Data</span>, scraping ético, ciberseguridad, protección de datos y propiedad intelectual. Metodología <span class="font-semibold">ABP</span>.</p>
+    </section>
+
+    <section class="mt-8" data-tab-group>
+      <div class="flex flex-wrap gap-2" role="tablist">
+        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="unidades" aria-selected="true">Unidades de trabajo</button>
+        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="proyectos" aria-selected="false">Proyectos de aula (ABP)</button>
+        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="boja" aria-selected="false">Criterios BOJA</button>
+      </div>
+
+      <div class="tab-panel mt-5" data-panel="unidades">
+        <div class="grid gap-4 md:grid-cols-2">
+          <article class="ud-card">
+            <h3 class="font-bold text-ink-800">UD1 · Desarrollo de apps web</h3>
+            <p class="mt-1 text-sm text-slate-600">HTML5 semántico, CSS3 responsive y JS vanilla. Accesibilidad y usabilidad.</p>
+          </article>
+          <article class="ud-card">
+            <h3 class="font-bold text-ink-800">UD2 · Big Data e IA básica</h3>
+            <p class="mt-1 text-sm text-slate-600">Conceptos de datos masivos, aprendizaje automático y ética algorítmica.</p>
+          </article>
+          <article class="ud-card">
+            <h3 class="font-bold text-ink-800">UD3 · Scraping y tratamiento de datos</h3>
+            <p class="mt-1 text-sm text-slate-600">Obtención, limpieza y visualización de datos con herramientas libres (Python).</p>
+          </article>
+          <article class="ud-card">
+            <h3 class="font-bold text-ink-800">UD4 · Ciberseguridad y privacidad</h3>
+            <p class="mt-1 text-sm text-slate-600">RGPD/LOPDGDD, contraseñas, amenazas y hábitos digitales seguros.</p>
+          </article>
+          <article class="ud-card">
+            <h3 class="font-bold text-ink-800">UD5 · Propiedad intelectual y licencias</h3>
+            <p class="mt-1 text-sm text-slate-600">Derechos de autor, Creative Commons y cultura de código abierto.</p>
+          </article>
+          <article class="ud-card">
+            <h3 class="font-bold text-ink-800">UD6 · Proyecto integrador (ABP)</h3>
+            <p class="mt-1 text-sm text-slate-600">App web con datos reales, IA o IoT, documentada bajo licencia abierta.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="tab-panel mt-5 hidden" data-panel="proyectos">
+        <div class="rounded-xl border border-ink-800/20 bg-slate-100 p-6">
+          <h3 class="font-bold text-ink-800">Proyecto integrador · "Mi app con propósito"</h3>
+          <p class="mt-2 text-sm text-slate-700">ABP: desarrollar una aplicación web que resuelva una necesidad del centro (ej. agenda de reciclaje, mapa de sombras, consulta de datos abiertos). Incluye scraping ético, privacidad por diseño y licencia CC BY-NC 4.0.</p>
+          <ul class="mt-3 grid gap-2 text-sm text-slate-700 sm:grid-cols-2">
+            <li>✓ Fase 1 — Análisis y modelado de datos</li>
+            <li>✓ Fase 2 — Front-end accesible</li>
+            <li>✓ Fase 3 — Back-end / scraping ético</li>
+            <li>✓ Fase 4 — Ciberseguridad y licencia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-panel mt-5 hidden" data-panel="boja">
+        <div class="space-y-3">
+          <p class="text-sm text-slate-600">Criterios de evaluación asociados (extracto BOJA Andalucía):</p>
+          <span class="criterio">CE1 · Desarrollar apps web</span>
+          <span class="criterio">CE2 · Explicar IA y Big Data</span>
+          <span class="criterio">CE3 · Obtener y tratar datos</span>
+          <span class="criterio">CE4 · Aplicar ciberseguridad</span>
+          <span class="criterio">CE5 · Respetar la privacidad</span>
+          <span class="criterio">CE6 · Reconocer licencias abiertas</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-10 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Recursos y herramientas libres</h2>
+      <div class="mt-3 flex flex-wrap gap-2 text-sm">
+        <span class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700">HTML5 / CSS3 / JS</span>
+        <span class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700">Python (pandas)</span>
+        <span class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700">Jupyter</span>
+        <span class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700">Licencias CC / GPL</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="../componentes/nucleo.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

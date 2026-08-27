@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Departamento de Computación y Robótica · IES Pintor Pedro Gómez</title>
+  <meta name="description" content="Sitio educativo modular de Computación y Robótica para 1º, 2º y 3º ESO. ABP, pensamiento computacional y cultura libre (CC BY-NC 4.0). IES Pintor Pedro Gómez." />
+  <meta name="author" content="Departamento de Computación y Robótica - IES Pintor Pedro Gómez" />
+
+  <!-- Tailwind CSS (Play CDN: sin build, portable para embed en Google Sites) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand:   { 50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731' },
+            accent:  { 400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca' },
+            ink:     { 800:'#1f2937',900:'#111827' }
+          },
+          fontFamily: { sans:['Inter','Segoe UI',"system-ui","sans-serif"] }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos propios / tema e iframe-friendly -->
+  <link rel="stylesheet" href="assets/css/estilos.css" />
+</head>
+<body data-pagina="inicio" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <!-- ===== SHELL MODULAR (header + nav + footer) inyectado por nucleo.js ===== -->
+  <div id="shell-header"></div>
+
+  <!-- ===== CONTENIDO PRINCIPAL DE LA PÁGINA ===== -->
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- HERO -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg sm:p-12">
+      <p class="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-100">IES Pintor Pedro Gómez · Almería</p>
+      <h1 class="text-3xl font-extrabold leading-tight sm:text-4xl">Computación y Robótica</h1>
+      <p class="mt-3 max-w-2xl text-brand-50/90">Proyecto educativo modular para 1º, 2º y 3º de ESO. Aprendizaje Basado en Proyectos (ABP), pensamiento computacional y cultura de <span class="font-semibold">software y hardware libre</span>, alineado con los saberes básicos de la <span class="font-semibold">BOJA</span> de Andalucía.</p>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="cursos/1eso.html" class="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow hover:bg-brand-50 transition">1º ESO</a>
+        <a href="cursos/2eso.html" class="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow hover:bg-brand-50 transition">2º ESO</a>
+        <a href="cursos/3eso.html" class="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow hover:bg-brand-50 transition">3º ESO</a>
+        <a href="#diversidad" class="rounded-lg border border-white/40 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition">Atención a la diversidad</a>
+      </div>
+    </section>
+
+    <!-- MAPA DEL SITIO -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink-800">Mapa del sitio</h2>
+      <p class="mt-1 text-sm text-slate-600">Navegación completa por cursos, bloques temáticos y recursos transversales.</p>
+
+      <div class="mt-6 grid gap-5 md:grid-cols-3">
+        <!-- 1º ESO -->
+        <article class="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-700 font-bold">1º</div>
+          <h3 class="font-bold text-ink-800">1º ESO — Iniciación</h3>
+          <ul class="mt-2 space-y-1 text-sm text-slate-600">
+            <li>• Pensamiento computacional e algoritmia</li>
+            <li>• Programación por bloques (Scratch)</li>
+            <li>• Introducción a la robótica educativa</li>
+          </ul>
+          <a href="cursos/1eso.html" class="mt-4 inline-block text-sm font-semibold text-accent-600 group-hover:underline">Ver unidades →</a>
+        </article>
+
+        <!-- 2º ESO -->
+        <article class="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent-100 text-accent-700 font-bold">2º</div>
+          <h3 class="font-bold text-ink-800">2º ESO — Desarrollo</h3>
+          <ul class="mt-2 space-y-1 text-sm text-slate-600">
+            <li>• Python: estructuras y funciones</li>
+            <li>• Electrónica digital y Arduino</li>
+            <li>• Internet de las Cosas (IoT) y sostenibilidad</li>
+          </ul>
+          <a href="cursos/2eso.html" class="mt-4 inline-block text-sm font-semibold text-accent-600 group-hover:underline">Ver unidades →</a>
+        </article>
+
+        <!-- 3º ESO -->
+        <article class="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-ink-800 text-white font-bold">3º</div>
+          <h3 class="font-bold text-ink-800">3º ESO — Aplicación</h3>
+          <ul class="mt-2 space-y-1 text-sm text-slate-600">
+            <li>• Desarrollo web (HTML/CSS/JS)</li>
+            <li>• IA, Big Data y scraping básico</li>
+            <li>• Ciberseguridad y propiedad intelectual</li>
+          </ul>
+          <a href="cursos/3eso.html" class="mt-4 inline-block text-sm font-semibold text-accent-600 group-hover:underline">Ver unidades →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- BLOQUES TEMÁTICOS TRANSVERSALES -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink-800">Bloques temáticos (transversales a los 3 cursos)</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <span class="rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-sm font-medium text-brand-700">Programación y estructuras algorítmicas</span>
+        <span class="rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-sm font-medium text-brand-700">Computación física y robótica</span>
+        <span class="rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-sm font-medium text-brand-700">IoT y sistemas digitales sostenibles</span>
+        <span class="rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-sm font-medium text-brand-700">Apps web/móviles y protección de datos</span>
+        <span class="rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-sm font-medium text-brand-700">IA, Big Data y scraping básico</span>
+        <span class="rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-sm font-medium text-brand-700">Ciberseguridad y propiedad intelectual</span>
+      </div>
+    </section>
+
+    <!-- ATENCIÓN A LA DIVERSIDAD -->
+    <section id="diversidad" class="mt-10 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-xl font-bold text-ink-800">Atención a la diversidad y recuperación</h2>
+      <p class="mt-2 text-sm text-slate-700">Gestión de materias pendientes del curso anterior a través de <span class="font-semibold">itinerarios en Google Classroom</span>. Cada itinerario adapta los saberes básicos no superados mediante rúbricas de recuperación y proyectos puente.</p>
+      <ul class="mt-3 grid gap-2 text-sm text-slate-700 sm:grid-cols-2">
+        <li>✓ Diagnóstico inicial y carpeta de recuperación compartida.</li>
+        <li>✓ Itinerarios auto-gestionados con fechas y criterios BOJA.</li>
+        <li>✓ Adaptaciones metodológicas (ABB, apoyos visuales, bloques).</li>
+        <li>✓ Seguimiento en Classroom con rúbricas abiertas (CC BY-NC).</li>
+      </ul>
+    </section>
+
+    <!-- FILOSOFÍA LIBRE -->
+    <section class="mt-10 flex flex-col items-start gap-4 rounded-xl bg-ink-900 p-6 text-white sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <h2 class="text-lg font-bold">Cultura libre y sostenible</h2>
+        <p class="mt-1 text-sm text-slate-300">Contenidos bajo <span class="font-semibold text-brand-200">Creative Commons CC BY-NC 4.0</span>. Fomentamos software y hardware libre (GPL, MIT, Arduino, RISC-V).</p>
+      </div>
+      <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" class="shrink-0 rounded-lg border border-white/30 px-4 py-2 text-sm font-semibold hover:bg-white/10 transition">Licencia CC BY-NC 4.0</a>
+    </section>
+
+  </main>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="componentes/nucleo.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
