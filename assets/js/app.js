@@ -34,6 +34,52 @@
     });
   });
 
+  /* ---------- Quizzes interactivos ---------- */
+  document.querySelectorAll('.quiz').forEach(function (quiz) {
+    var opciones = quiz.querySelectorAll('.quiz-opcion');
+    var resultado = quiz.querySelector('.quiz-resultado');
+    var scoreEl = quiz.querySelector('.quiz-score');
+    var correcta = quiz.getAttribute('data-correcta');
+    var total = parseInt(quiz.getAttribute('data-total') || '1', 10);
+    var aciertos = 0;
+    var respondido = false;
+
+    opciones.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (respondido) return;
+        respondido = true;
+
+        var elegida = btn.getAttribute('data-valor');
+
+        // Marcar correcta/incorrecta visualmente
+        opciones.forEach(function (b) {
+          b.disabled = true;
+          if (b.getAttribute('data-valor') === correcta) {
+            b.classList.add('correcta');
+          }
+        });
+
+        if (elegida === correcta) {
+          aciertos++;
+          if (resultado) {
+            resultado.textContent = '¡Correcto! Bien hecho.';
+            resultado.className = 'quiz-resultado correcto';
+          }
+        } else {
+          btn.classList.add('incorrecta');
+          if (resultado) {
+            resultado.textContent = 'Incorrecto. La respuesta correcta está marcada en verde.';
+            resultado.className = 'quiz-resultado incorrecto';
+          }
+        }
+
+        if (scoreEl) {
+          scoreEl.textContent = aciertos + ' / ' + total + ' correctas';
+        }
+      });
+    });
+  });
+
   /* ---------- Año dinámico en footer (si se usa) ---------- */
   var y = document.getElementById('anio');
   if (y) y.textContent = new Date().getFullYear();

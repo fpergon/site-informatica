@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD3 · Desarrollo de Aplicaciones Móviles y Entornos Web · 1º ESO</title>
+  <meta name="description" content="Unidad Didáctica 3 de 1º ESO: Desarrollo móvil con Thunkable, programación orientada a eventos, desarrollo web con HTML/CSS." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="1eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../1eso.html" class="hover:underline">1.º ESO</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloques D + E</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD3 · Desarrollo de Aplicaciones Móviles y Entornos Web</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Transferir los conocimientos algorítmicos a entornos reales de programación orientada a eventos en móviles y maquetación web. Aprenderemos a crear aplicaciones y páginas web.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: App móvil + Página web</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloques D (Desarrollo Móvil) + E (Desarrollo Web)</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.D.1</span> Introducción a los IDEs de lenguajes de bloques para móviles.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.D.2</span> Introducción a la programación orientada a eventos.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.D.3</span> Definición de eventos.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.D.4</span> Generadores de eventos: los sensores.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.D.5</span> Introducción a las E/S: captura de eventos y su respuesta.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.E.1</span> Introducción a las páginas web.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.E.2</span> Introducción a los servidores web.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.E.3</span> Tipos de lenguajes para la edición de páginas web.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.E.4</span> Introducción a la animación web.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">2.2 · Apps móviles</span>
+        <span class="criterio">2.3 · Desarrollo de apps e IoT</span>
+        <span class="criterio">5.1 · Aplicaciones web seguras</span>
+        <span class="criterio">5.2 · Problemas en desarrollo web</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- SESIÓN 1 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción al desarrollo móvil con Thunkable</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En los primeros años de la era digital, la creación de aplicaciones móviles estaba reservada a aquellos con conocimientos avanzados en programación. Sin embargo, la tecnología nos ha brindado herramientas que transforman esta realidad, convirtiendo la programación en una actividad accesible para todos. Entre estas herramientas se encuentran los IDEs de lenguajes de bloques para móviles, como <strong>Thunkable</strong>.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un IDE?</h4>
+            <p>Un <strong>IDE (Entorno de Desarrollo Integrado)</strong> es como un taller digital todo en uno para personas que crean aplicaciones. Proporciona a los programadores todas las herramientas que necesitan —como un editor para escribir y corregir código, un simulador para probar el programa y muchas otras ayudas—, en un único lugar.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Thunkable</h4>
+            <p>Thunkable es una plataforma de desarrollo de aplicaciones móviles sin código, fundada en 2015 por Arun Saigal y Weihua Li, quienes formaban parte del equipo de App Inventor en el MIT. Se basa en el proyecto App Inventor, iniciado en la investigación de Google y continuado por el MIT desde 2010. La plataforma permite crear aplicaciones arrastrando y ensamblando bloques que representan diferentes funciones o acciones.</p>
+          </div>
+          <div class="callout callout-nota">
+            <p><strong>Dato curioso:</strong> Thunkable fue fundada por los creadores de App Inventor. Su objetivo era democratizar aún más el desarrollo móvil, haciéndolo accesible incluso para personas sin experiencia en programación.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Registrarse en Thunkable (thunkable.com) con la cuenta de Google del instituto. Explorar la interfaz: panel de componentes, panel de diseño, panel de bloques y vista previa en el móvil.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 2 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Programación orientada a eventos y componentes</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Programación orientada a eventos</h4>
+            <p>La <strong>programación orientada a eventos</strong> es una forma de crear aplicaciones que responden a lo que sucede a nuestro alrededor: transforma la pasividad en interactividad, esperando y respondiendo a señales o acciones específicas, como un toque en la pantalla, un mensaje entrante o incluso el cambio en la orientación del dispositivo.</p>
+            <p class="mt-2">Un ejemplo cotidiano es una aplicación de mensajería: permanece en espera hasta que recibe un nuevo mensaje. En ese momento, se activa un evento que provoca que la aplicación os notifique la llegada. Este proceso es el resultado de la programación orientada a eventos.</p>
+          </div>
+          <div class="callout callout-consejo">
+            <p><strong>Ejemplo del mundo real:</strong> Cuando pulsas el botón "Me gusta" en una red social, tocas la pantalla de tu móvil, o conectas unos auriculares, estás generando eventos. La app está programada para detectar esas acciones y reaccionar en consecuencia.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes en Thunkable</h4>
+            <p>Los componentes son los elementos que forman nuestra aplicación. Algunos componentes básicos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Button:</strong> Botón que el usuario puede pulsar.</li>
+              <li><strong>Text Input:</strong> Campo de texto para entrada de datos.</li>
+              <li><strong>Label:</strong> Etiqueta para mostrar texto.</li>
+              <li><strong>Image:</strong> Para mostrar imágenes.</li>
+              <li><strong>Sound:</strong> Para reproducir sonidos.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Thunkable 1 - "Hola Mundo":</strong> Crear una aplicación que muestre un botón y, al pulsarlo, aparezca el mensaje "¡Hola Mundo!" en pantalla. Aprenderemos a usar el componente Button y el evento "OnPress".</p>
+          </div>
+          <div class="quiz" data-correcta="a" data-total="3">
+            <p class="font-semibold text-ink-800 mb-2">¿Qué es la programación orientada a eventos?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="a">
+                <input type="radio" name="q1s6" class="accent-brand-600" />
+                <span class="text-sm">Forma de crear apps que responden a acciones específicas</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="b">
+                <input type="radio" name="q1s6" class="accent-brand-600" />
+                <span class="text-sm">Un lenguaje de programación orientado a objetos</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="c">
+                <input type="radio" name="q1s6" class="accent-brand-600" />
+                <span class="text-sm">Un tipo de sensor que detecta eventos</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 3 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Sensores y generadores de eventos</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Los sensores como generadores de eventos</h4>
+            <p>Cuando programamos aplicaciones móviles, los <strong>sensores</strong> actúan como los ojos y oídos del dispositivo, permitiéndonos capturar una amplia gama de eventos que ocurren en el mundo real.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Principales sensores del móvil</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Acelerómetro:</strong> Mide los cambios en la velocidad de movimiento del dispositivo en tres dimensiones. Usado en juegos que requieren inclinación.</li>
+              <li><strong>Giroscopio:</strong> Detecta la orientación/rotación del dispositivo.</li>
+              <li><strong>Sensor de proximidad:</strong> Detecta la cercanía de objetos (como la cara durante una llamada).</li>
+              <li><strong>GPS:</strong> Proporciona la ubicación geográfica precisa.</li>
+              <li><strong>Cámara:</strong> Captura imágenes y vídeos.</li>
+              <li><strong>Micrófono:</strong> Capta sonidos y voz.</li>
+            </ul>
+          </div>
+          <div class="callout callout-aviso">
+            <p><strong>Atención:</strong> El uso continuado de sensores como el GPS o la cámara puede Consumir mucha batería. Es importante programar los sensores solo cuando sean necesarios y desactivarlos cuando no se usen para ahorrar energía.</p>
+          </div>
+          <div class="quiz" data-correcta="b" data-total="3">
+            <p class="font-semibold text-ink-800 mb-2">¿Qué sensor mide la orientación del dispositivo?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="a">
+                <input type="radio" name="q1s2" class="accent-brand-600" />
+                <span class="text-sm">Acelerómetro</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="b">
+                <input type="radio" name="q1s2" class="accent-brand-600" />
+                <span class="text-sm">Giroscopio</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="c">
+                <input type="radio" name="q1s2" class="accent-brand-600" />
+                <span class="text-sm">Sensor de proximidad</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Thunkable 2 - "Traductor":</strong> Crear una aplicación que, al pulsar un botón, use el micrófono para reconocer voz y la traduzca a otro idioma usando un servicio web. Trabajaremos con componentes de sensores y servicios de IA.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 4 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción a las páginas web</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una página web?</h4>
+            <p>Una página web es un <strong>documento digital</strong> que puede contener texto, imágenes, videos y enlaces a otras páginas web, creando así una <strong>red de información</strong>. Son esos enlaces en los que reside la auténtica potencia de este sistema, ya que desde un solo documento, saltando de enlace en enlace, podemos acceder a todo el conocimiento universal.</p>
+          </div>
+          <div class="callout callout-nota">
+            <p><strong>Dato curioso:</strong> La World Wide Web fue inventada por Tim Berners-Lee en 1989 mientras trabajaba en el CERN. Su idea era crear un sistema de información global que permitiera compartir documentos entre investigadores de todo el mundo.</p>
+          </div>
+          <div class="quiz" data-correcta="c" data-total="3">
+            <p class="font-semibold text-ink-800 mb-2">¿En qué lenguaje están escritas las páginas web?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="a">
+                <input type="radio" name="q1s3" class="accent-brand-600" />
+                <span class="text-sm">JavaScript</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="b">
+                <input type="radio" name="q1s3" class="accent-brand-600" />
+                <span class="text-sm">CSS</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="c">
+                <input type="radio" name="q1s3" class="accent-brand-600" />
+                <span class="text-sm">HTML</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Cómo accedemos a las páginas web?</h4>
+            <p>Para ver una página web, utilizamos un programa llamado <strong>navegador web</strong> (como Google Chrome, Firefox, Safari o Edge). Introducimos una <strong>dirección web (URL)</strong> en el navegador, y este actúa como nuestro guía personal, llevándonos directamente a las páginas que queremos ver.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿De qué están hechas las páginas web?</h4>
+            <p>Las páginas web están escritas en un lenguaje especial llamado <strong>HTML</strong> (HyperText Markup Language), que el navegador interpreta para mostrarnos la página de una manera estructurada y visualmente atractiva. HTML permite organizar la información en secciones, como si estuviéramos maquetando las páginas de un libro.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Explorar las herramientas de desarrollo del navegador (F12). Inspeccionar la estructura HTML de una página web conocida y identificar las etiquetas principales: &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;h1&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt;.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 5 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Servidores web y lenguajes de edición</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un servidor web?</h4>
+            <p>Un servidor web es un <strong>ordenador especializado</strong>, permanentemente encendido, que almacena, envía y recibe páginas web o datos a través de internet. Cuando escribes una dirección web en tu navegador, estás solicitando a un servidor web que te envíe una copia de la página web que deseas ver.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cómo funciona</h4>
+            <p>El esquema cliente-servidor sigue estos pasos:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Solicitud:</strong> El navegador envía una petición al servidor.</li>
+              <li><strong>Procesamiento:</strong> El servidor busca la página web solicitada.</li>
+              <li><strong>Respuesta:</strong> El servidor envía los datos de la página al navegador.</li>
+              <li><strong>Visualización:</strong> El navegador muestra la página en pantalla.</li>
+            </ol>
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/72g2CpKg0Ck" title="Modelo cliente-servidor" class="w-full aspect-video rounded-lg" allowfullscreen></iframe>
+          </div>
+          <div class="quiz" data-correcta="b" data-total="3">
+            <p class="font-semibold text-ink-800 mb-2">¿Qué componente es 'la ropa' de una página web?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="a">
+                <input type="radio" name="q1s4" class="accent-brand-600" />
+                <span class="text-sm">HTML</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="b">
+                <input type="radio" name="q1s4" class="accent-brand-600" />
+                <span class="text-sm">CSS</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="c">
+                <input type="radio" name="q1s4" class="accent-brand-600" />
+                <span class="text-sm">JavaScript</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Lenguajes de edición web</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>HTML:</strong> El esqueleto. Estructura el contenido (párrafos, títulos, imágenes, enlaces).</li>
+              <li><strong>CSS:</strong> La ropa. Controla la apariencia visual (colores, fuentes, diseño).</li>
+              <li><strong>JavaScript:</strong> El cerebro. Añade interactividad y contenido dinámico.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Google Sites:</strong> Crear una primera página web usando Google Sites (sites.google.com). Añadir texto, imágenes y un enlace. Publicar la página y compartirla con el profesor.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 6 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Animación web y Webflow</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción a la animación web</h4>
+            <p>La animación web se refiere a la técnica de dar vida a las páginas web a través del movimiento. Cuando estás leyendo un cómic, las imágenes son estáticas, pero en una película de animación los personajes se mueven. La animación web es como llevar ese dinamismo a las páginas de Internet.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Técnicas de animación</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>CSS:</strong> Permite crear animaciones simples como desvanecimientos, cambios de tamaño o rotaciones.</li>
+              <li><strong>JavaScript:</strong> Para animaciones más complejas y controladas.</li>
+              <li><strong>Herramientas específicas:</strong> Adobe After Effects, LottieFiles, Webflow.</li>
+            </ul>
+          </div>
+          <div class="callout callout-consejo">
+            <p><strong>Consejo:</strong> Las animaciones CSS son muy ligeras y no afectan significativamente al rendimiento de la página. Son ideales para mejorar la experiencia de usuario sin sacrificar velocidad de carga.</p>
+          </div>
+          <div class="quiz" data-correcta="a" data-total="3">
+            <p class="font-semibold text-ink-800 mb-2">¿Qué herramienta permite crear webs sin código?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="a">
+                <input type="radio" name="q1s5" class="accent-brand-600" />
+                <span class="text-sm">Webflow</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="b">
+                <input type="radio" name="q1s5" class="accent-brand-600" />
+                <span class="text-sm">Adobe Photoshop</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="c">
+                <input type="radio" name="q1s5" class="accent-brand-600" />
+                <span class="text-sm">Visual Studio Code</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Webflow</h4>
+            <p><strong>Webflow</strong> es una plataforma de diseño web que elimina la necesidad de escribir código manualmente, ofreciendo una interfaz visual intuitiva. Es el equivalente web a Thunkable: permite crear sitios web profesionales sin necesidad de programar nada directamente.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Registrarse en Webflow (webflow.com) y seguir los primeros tutoriales para crear una página web con elementos interactivos.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 7 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: App + Web</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Proyecto integrador</h4>
+            <p>En esta sesión trabajaremos en el proyecto final de la unidad, que combinará desarrollo móvil y web. Cada alumno o pareja deberá crear:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Una <strong>aplicación móvil</strong> en Thunkable que resuelva un problema cotidiano.</li>
+              <li>Una <strong>página web</strong> en Google Sites o Webflow que sirva como presentación del proyecto.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Presentación y evaluación</h4>
+            <p>Al final de la sesión, cada grupo presentará su proyecto al resto de la clase. Se valorará:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Funcionalidad de la aplicación móvil.</li>
+              <li>Diseño y usabilidad de la interfaz.</li>
+              <li>Calidad de la página web de presentación.</li>
+              <li>Documentación del proceso de desarrollo.</li>
+            </ul>
+          </div>
+          <div class="callout callout-consejo">
+            <p><strong>Recuerda:</strong> La evaluación del proyecto final tiene en cuenta tanto la funcionalidad técnica como el diseño y la presentación. Es importante dedicar tiempo a pulir la interfaz de la app y la calidad de la página web.</p>
+          </div>
+          <div class="quiz" data-correcta="c" data-total="3">
+            <p class="font-semibold text-ink-800 mb-2">¿Qué debe incluir el proyecto final de la unidad?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="a">
+                <input type="radio" name="q1s7" class="accent-brand-600" />
+                <span class="text-sm">Solo una aplicación móvil en Thunkable</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="b">
+                <input type="radio" name="q1s7" class="accent-brand-600" />
+                <span class="text-sm">Solo una página web en Google Sites</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-slate-100 transition" data-valor="c">
+                <input type="radio" name="q1s7" class="accent-brand-600" />
+                <span class="text-sm">Una aplicación móvil en Thunkable Y una página web de presentación</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud2.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition">
+        ← UD2 · Pensamiento Computacional
+      </a>
+      <a href="ud4.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD4 · Computación Física y Hardware →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

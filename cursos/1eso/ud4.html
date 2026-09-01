@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD4 · Fundamentos de Computación Física y Hardware · 1º ESO</title>
+  <meta name="description" content="Unidad Didáctica 4 de 1º ESO: Sistemas de computación, microcontroladores, hardware/software y seguridad eléctrica." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="1eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../1eso.html" class="hover:underline">1.º ESO</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque F</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD4 · Fundamentos de Computación Física y Hardware</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Dar el salto del software puro al ámbito físico, estudiando arquitecturas, microcontroladores y normas de seguridad eléctrica previas a la robótica.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">5 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Prácticas con Micro:bit</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque F — Fundamentos de la Computación Física</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.F.1</span> Introducción a los sistemas de computación.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.F.2</span> Concepto de microcontroladores.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.F.3</span> Introducción al Hardware y Software.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.F.4</span> Introducción a la seguridad eléctrica.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">1.1 · Sistemas de computación física</span>
+        <span class="criterio">3.1 · Construir sistemas físicos sostenibles</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+
+      <!-- SESIÓN 1 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Sistemas de computación y componentes</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un sistema de computación?</h4>
+            <p>Un <strong>sistema de computación</strong> es un conjunto de herramientas que trabajan juntas para gestionar datos. Si abres la caja de herramientas que guardas en casa, cada herramienta tiene su propósito específico. En un sistema de computación, también hay diferentes componentes, cada uno con su función particular.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes principales</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Procesador (CPU):</strong> El cerebro del sistema, que realiza los cálculos y toma decisiones.</li>
+              <li><strong>Memoria RAM:</strong> Donde se almacena temporalmente la información que el procesador necesita rápidamente.</li>
+              <li><strong>Dispositivos de entrada:</strong> Teclado, ratón, micrófono, cámara... permiten introducir datos.</li>
+              <li><strong>Dispositivos de salida:</strong> Pantalla, altavoz, impresora... muestran resultados.</li>
+              <li><strong>Dispositivos de entrada/salida:</strong> Pantallas táctiles, que permiten ambas funciones.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>¿Sabías que...?</strong>
+            El procesador (CPU) es como el cerebro del cuerpo humano: recibe información de los dispositivos de entrada, la procesa y toma decisiones. Sin él, el resto de componentes no podrían funcionar. ¡Por eso lo llamamos el "cerebro" del sistema!
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="1">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Procesador / CPU</button>
+            <button class="quiz-opcion" data-valor="b">B. Memoria RAM</button>
+            <button class="quiz-opcion" data-valor="c">C. Disco duro</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué componente es el "cerebro" del sistema?</p>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo cotidiano</h4>
+            <p>Cada vez que usas una aplicación en tu móvil, estás interactuando con un sistema de computación. El sistema procesa tus entradas (tocar la pantalla), realiza cálculos, y te muestra resultados o realiza acciones.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Identificar los componentes de un sistema de computación en un ordenador real: procesador, memoria, discos duros, puertos USB, pantalla, teclado, ratón.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 2 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Microcontroladores: cerebros electrónicos</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un microcontrolador?</h4>
+            <p>Los <strong>microcontroladores</strong> son pequeños cerebros electrónicos que podemos encontrar en multitud de aparatos. Un microcontrolador es, básicamente, un ordenador en miniatura. Está integrado en un único chip y contiene todo lo necesario para realizar tareas específicas: procesador, memoria y periféricos.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplos cotidianos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Mando a distancia:</strong> Hay un microcontrolador que procesa las pulsaciones de los botones y envía señales al televisor.</li>
+              <li><strong>Coche:</strong> Los microcontroladores controlan sistemas como la inyección de combustible, el frenado ABS o la iluminación.</li>
+              <li><strong>Juguetes interactivos:</strong> Un robot que responde a comandos de voz tiene un microcontrolador que interpreta las órdenes.</li>
+              <li><strong>Relojes inteligentes:</strong> Miden actividad física, registran ubicación y miden condiciones ambientales.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Micro:bit</h4>
+            <p>La <strong>Micro:bit</strong> es una placa microcontroladora educativa que contiene todo un universo de posibilidades. Tiene un procesador, 25 LEDs, botones, sensores (acelerómetro, magnetómetro) y conectividad Bluetooth y radio.</p>
+          </div>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/obbedhfMcMM" title="Introducción a Micro:bit" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="1">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un dispositivo de almacenamiento externo.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un ordenador en miniatura integrado en un chip.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un tipo de software para programar.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es un microcontrolador?</p>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Conocer la placa Micro:bit: identificar sus componentes, conectores y funcionalidades. Hacer parpadear los LEDs con un programa sencillo.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 3 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Hardware y Software</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Hardware: los componentes físicos</h4>
+            <p>El <strong>hardware</strong> es todo lo que podemos tocar en un sistema de computación. Piensa en el hardware como el cuerpo humano, con diferentes órganos que realizan distintas funciones:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Procesador:</strong> El cerebro que realiza cálculos.</li>
+              <li><strong>Memoria RAM:</strong> Memoria a corto plazo.</li>
+              <li><strong>Disco duro/SSD:</strong> Memoria a largo plazo.</li>
+              <li><strong>Periféricos:</strong> Teclado, ratón, pantalla.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Software: los programas</h4>
+            <p>El <strong>software</strong> es todo lo que no podemos tocar; son los programas que dan instrucciones al hardware. Si seguimos con la analogía del cuerpo humano, el software sería como la mente, que le dice al cuerpo qué hacer.</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Software de sistema:</strong> Windows, macOS, Linux, Android, iOS.</li>
+              <li><strong>Software de aplicación:</strong> Microsoft Word, Google Chrome, videojuegos.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo: hardware vs software</strong>
+            Imagina un ordenador como un cuerpo humano: el <em>hardware</em> son los órganos y huesos (lo que puedes tocar), mientras que el <em>software</em> es la mente y los pensamientos (lo que dirige y coordina todo). ¡Sin software, el hardware no sabría qué hacer; y sin hardware, el software no tendría dónde ejecutarse!
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="1">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Software de sistema</button>
+            <button class="quiz-opcion" data-valor="b">B. Software de aplicación</button>
+            <button class="quiz-opcion" data-valor="c">C. Firmware</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué tipo de software es Windows?</p>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Clasificar los elementos de un ordenador en hardware y software. Identificar qué programas están ejecutándose actualmente y qué componentes físicos están utilizando.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 4 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Seguridad eléctrica: conceptos básicos</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la electricidad?</h4>
+            <p>La <strong>electricidad</strong> es una forma de energía que fluye a través de conductores y es utilizada para alimentar todo tipo de dispositivos. Piensa en la electricidad como el agua en un río: debe fluir de manera controlada y segura; si se desborda, puede causar inundaciones y daños.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Uso correcto de enchufes</h4>
+            <p>Sobrecargar un enchufe significa conectar demasiados dispositivos a un solo enchufe o regleta, demandando más electricidad de la que puede manejar de manera segura. Esto puede provocar sobrecalentamiento e incendios. <strong>¿Cómo lo evitamos?</strong> Usando regletas con protección contra sobrecargas y repartiendo los dispositivos entre diferentes enchufes.</p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Peligro: riesgos eléctricos</strong>
+            Nunca manipules cables o enchufes con las manos mojadas. Un enchufe sobrecargado puede calentarse hasta fundir la cubierta plástica y provocar un incendio. Si notas olor a quemado, un chasquido o que un enchufe está caliente al tacto, desconéctalo inmediatamente y avisa a un adulto.
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="1">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Apagón general en el edificio</button>
+            <button class="quiz-opcion" data-valor="b">B. Daño al aparato conectado</button>
+            <button class="quiz-opcion" data-valor="c">C. Sobrecalentamiento e incendios</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué puede provocar sobrecargar un enchufe?</p>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Manejo seguro de baterías</h4>
+            <p>Las baterías no deben exponerse a altas temperaturas ni manipularse bruscamente. Si una batería se daña, puede filtrar sustancias químicas peligrosas o causar un cortocircuito. Revisar regularmente el estado de los cables: si un cable está dañado, pelado o roto, puede ser un riesgo de descarga eléctrica.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Identificar posibles riesgos eléctricos en el aula y proponer soluciones. Revisar el estado de los cables y enchufes disponibles.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 5 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Dispositivos de seguridad y prácticas con Micro:bit</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Dispositivos de seguridad eléctrica</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Fusibles:</strong> Dispositivo de seguridad que protege un circuito eléctrico. Contiene un filamento metálico que se funde si la corriente excede un nivel seguro.</li>
+              <li><strong>Disyuntores:</strong> Interruptores automáticos en el cuadro eléctrico. Después de "saltar" pueden ser restablecidos manualmente.</li>
+              <li><strong>Aislantes:</strong> Materiales que no conducen electricidad (plástico, goma) y nos protegen de descargas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante: siempre desconectar antes de trabajar</strong>
+            Antes de manipular cualquier circuito o componente eléctrico, asegúrate de desconectar la alimentación eléctrica. Incluso con voltajes bajos como los de la Micro:bit, es un buen hábito que te evitará problemas cuando trabajes con circuitos de mayor potencia en el futuro.
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="1">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Fusible</button>
+            <button class="quiz-opcion" data-valor="b">B. Aislante</button>
+            <button class="quiz-opcion" data-valor="c">C. Disyuntor</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué dispositivo de seguridad se funde si la corriente es excesiva?</p>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Práctica con Micro:bit</h4>
+            <p>Vamos a explorar los componentes de la Micro:bit y conectarle sensores y actuadores. Experimentaremos con LEDs, botones y sensores para entender cómo la programación se traduce en acciones físicas.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Proyecto práctico:</strong> Programar la Micro:bit para que, al pulsar el botón A, se encienda una secuencia de LEDs; al pulsar el botón B, se reproduzca un sonido; y al mover la placa, se muestre un patrón diferente en la matriz de LEDs.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud3.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition">
+        ← UD3 · Desarrollo Móvil y Web
+      </a>
+      <a href="ud5.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD5 · Robótica e IoT →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

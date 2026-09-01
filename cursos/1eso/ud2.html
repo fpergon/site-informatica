@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD2 · Pensamiento Computacional y Programación por Bloques · 1º ESO</title>
+  <meta name="description" content="Unidad Didáctica 2 de 1º ESO: Pensamiento computacional, algoritmos, diagramas de flujo y programación por bloques con Scratch." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="1eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../1eso.html" class="hover:underline">1.º ESO</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque A</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Pensamiento Computacional y Programación por Bloques</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Dominar los fundamentos de los algoritmos, bucles, estructuras condicionales y diseño de interfaces antes de dar el paso al desarrollo en dispositivos móviles. Aprenderemos a pensar como un programador.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">6 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: Animación o juego en Scratch</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque A — Introducción a la Programación</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.A.1</span> Introducción a los lenguajes de programación visuales. Tipos.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.A.2</span> Introducción a los lenguajes de bloques.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.A.3</span> Secuencia básica de instrucciones. Concepto de algoritmo.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.A.4</span> Reconocimiento de tareas repetitivas y condicionales.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.A.5</span> Determinación de los elementos para la interacción con el usuario.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">1.3 · Estructura de un programa</span>
+        <span class="criterio">2.1 · Resolución de problemas con programación</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- SESIÓN 1 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">¿Qué es programar? Lenguajes visuales y de bloques</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La programación es como aprender un nuevo lenguaje, pero en lugar de comunicarnos con personas, nos comunicamos con máquinas como ordenadores, tablets o incluso robots. Al igual que un director dirige una orquesta para crear música, mediante la programación nosotros «dirigimos» a los dispositivos para que hagan lo que queremos.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El pensamiento computacional</h4>
+            <p>El <strong>pensamiento computacional</strong> es una forma de pensar que nos ayuda a resolver problemas de manera lógica y estructurada, tal como lo haría un informático. Imagina que tienes que resolver un puzle complicado; en lugar de intentar resolverlo todo de una vez, clasificas las piezas (apartas las que tienen un lado plano, luego las que tienen formas identificables, luego las que son del mismo color, etc.) y vas resolviendo el problema colocando por orden las piezas del mismo tipo.</p>
+            <p class="mt-2">Las cuatro pillar fundamentales del pensamiento computacional son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Descomposición:</strong> Dividir un problema grande en partes más pequeñas y manejables.</li>
+              <li><strong>Reconocimiento de patrones:</strong> Identificar similitudes o tendencias entre problemas.</li>
+              <li><strong>Abstracción:</strong> Centrarnos en lo importante y ignorar los detalles irrelevantes.</li>
+              <li><strong>Diseño de algoritmos:</strong> Crear una secuencia de pasos para resolver cada parte del problema.</li>
+            </ul>
+          <div class="callout callout-nota">
+            <strong>Nota</strong>
+            Estos cuatro pilares no se aplican solo a la informática. También son útiles para resolver problemas en matemáticas, ciencias o incluso en la vida cotidiana. Aprender a pensar de esta forma te ayudará en cualquier asignatura.
+          </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Lenguajes de programación</h4>
+            <p>Los lenguajes de programación son el medio mediante el cual le damos órdenes a nuestros dispositivos. Existen muchos tipos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Lenguajes basados en bloques:</strong> Como Scratch, desarrollado por el MIT. Se arrastran y unen bloques que representan diferentes instrucciones. Es como construir una historia pieza por pieza.</li>
+              <li><strong>Lenguajes basados en diagramas:</strong> Usados en ingeniería, como LabVIEW.</li>
+              <li><strong>Lenguajes de bajo nivel:</strong> Más cercanos al hardware, como el ensamblador.</li>
+              <li><strong>Lenguajes de alto nivel:</strong> Más cercanos al lenguaje humano, como Python o JavaScript.</li>
+            </ul>
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/5OUb91fDKXw" title="Tutorial de Scratch 3.0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Registraros en Scratch (scratch.mit.edu) y explorar el entorno. Identificar las principales categorías de bloques (Movimiento, Apariencia, Sonido, Eventos, Control, etc.) y cómo se ensamblan.</p>
+          </div>
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">Secuencias, bucles, condicionales y clases</button>
+            <button class="quiz-opcion" data-valor="b">Descomposición, reconocimiento de patrones, abstracción y diseño de algoritmos</button>
+            <button class="quiz-opcion" data-valor="c">Hardware, software, datos y usuarios</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">¿Cuáles son las 4 pilares del pensamiento computacional?</p>
+        </div>
+      </article>
+
+      <!-- SESIÓN 2 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Secuencias e instrucciones</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Cuando queremos comunicarnos con los ordenadores, debemos hacerlo a través de órdenes claras. Dar una orden a una máquina es escribir una instrucción. Si le dices a tu hermano «gira el tapón en el otro sentido» o «pon la pieza verde sobre la roja», le estás dando una instrucción.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un algoritmo?</h4>
+            <p>A la <strong>secuencia de instrucciones</strong> ordenadas que le damos a un ordenador para que resuelva un problema en un tiempo finito, le llamamos <strong>algoritmo</strong>. Los algoritmos tienen estas características:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Finito:</strong> Debe terminar después de completar un número determinado de pasos.</li>
+              <li><strong>Definido:</strong> Cada paso debe ser claro y sin ambigüedades.</li>
+              <li><strong>Ordenado:</strong> La solución sólo se alcanzará cuando las instrucciones se ejecuten en el orden establecido.</li>
+            </ul>
+            <p class="mt-2">Un algoritmo puede ser una receta de cocina, las instrucciones de Google Maps o el manual de montaje de un mueble.</p>
+          </div>
+          <div class="callout callout-consejo">
+            <strong>Consejo</strong>
+            Los algoritmos están en todas partes: desde preparar un bocadillo hasta organizar tu habitación. Piensa en tus pasos diarios: ¿cómo los ordenarías para que fueran un buen algoritmo?
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Bloques en Scratch</h4>
+            <p>En Scratch, utilizaremos los bloques de <strong>Movimiento</strong> y <strong>Apariencia</strong> para crear secuencias lineales. Por ejemplo, mover un personaje de un punto a otro utilizando una secuencia de bloques de movimiento:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Bloque "ir a x: y:" para posicionar al personaje.</li>
+              <li>Bloque "apuntar en dirección" para orientarlo.</li>
+              <li>Bloque "mover 10 pasos" para desplazarlo.</li>
+              <li>Bloque "decir Hola durante 2 segundos" para mostrar un mensaje.</li>
+            </ul>
+          </div>
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">Una aplicación de software</button>
+            <button class="quiz-opcion" data-valor="b">Un tipo de bucle en programación</button>
+            <button class="quiz-opcion" data-valor="c">Una secuencia de instrucciones ordenadas para resolver un problema</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">¿Qué es un algoritmo?</p>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Reto:</strong> Programar un personaje en Scratch para que se mueva de un lado de la pantalla al otro, diga «¡Hola Mundo!» y luego vuelva al punto de inicio. La secuencia debe ser lineal y sin bucles.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 3 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Algoritmo y diagrama de flujo</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Representación gráfica de algoritmos</h4>
+            <p>Cuando los algoritmos son más largos o complejos, usar lenguaje natural no es buena idea. Necesitamos algún otro método que nos facilite la representación visual del algoritmo. Para ello usamos los <strong>diagramas de flujo</strong>.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Símbolos de los diagramas de flujo</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Óvalo (Inicio/Fin):</strong> Indica el inicio y el fin de un proceso.</li>
+              <li><strong>Rectángulo (Instrucción/Acción):</strong> Representa una acción o tarea que se debe realizar.</li>
+              <li><strong>Rombo (Decisión):</strong> Se utiliza para representar una pregunta o condición con dos posibles resultados: sí o no.</li>
+              <li><strong>Paralelogramo (Entrada/Salida):</strong> Muestra los pasos donde se recibe o se da información.</li>
+              <li><strong>Flechas:</strong> Conectan los diferentes símbolos y muestran el flujo de ejecución.</li>
+            </ul>
+          </div>
+          <div class="callout callout-aviso">
+            <strong>Aviso</strong>
+            Es importante usar los símbolos correctos. Si mezclas formas, tu diagrama de flujo será confuso y difícil de leer. Recuerda: rombo para decisiones, rectángulo para acciones y óvalo para inicio/fin.
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico</h4>
+            <p>Vamos a crear un diagrama de flujo para un programa que permita a un usuario multiplicar dos números positivos. El diagrama incluirá: entrada de los dos números, validación de que sean positivos, multiplicación y salida del resultado.</p>
+          </div>
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">Rectángulo</button>
+            <button class="quiz-opcion" data-valor="b">Rombo</button>
+            <button class="quiz-opcion" data-valor="c">Óvalo</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">¿Qué símbolo se usa para representar una decisión?</p>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Usando la herramienta de dibujo de Google Docs (Insertar > Dibujo > + Nuevo), crear un diagrama de flujo para un algoritmo que determine si un número es par o impar.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 4 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Bucles: repetición</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Imagina que quieres dibujar un cuadrado en Scratch. Sin bucles, necesitarías escribir «mover 100 pasos» y «girar 90 grados» cuatro veces. Con un bucle, solo necesitas escribirlo una vez y decirle al ordenador que lo repita 4 veces. Los bucles nos permiten <strong>repetir instrucciones</strong> sin tener que escribirlas una y otra vez.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de bucles</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bucle "repetir N veces":</strong> Repite las instrucciones un número fijo de veces. Ideal para tareas con un número conocido de repeticiones.</li>
+              <li><strong>Bucle "repetir":</strong> Repite las instrucciones hasta que se cumpla una condición. Se usa cuando no sabemos cuántas veces hay que repetir.</li>
+              <li><strong>Bucle "por siempre":</strong> Repite las instrucciones infinitamente. Se usa para crear animaciones continuas o juegos que están siempre «activos».</li>
+            </ul>
+          </div>
+          <div class="callout callout-consejo">
+            <strong>Consejo</strong>
+            Usa el bucle "repetir N veces" cuando sepas exactamente cuántas veces quieres repetir algo. Si necesitas repetir hasta que ocurra algo (por ejemplo, hasta que el jugador pierda), usa el bucle "repetir". Y el "por siempre" es ideal para animaciones que nunca se detienen.
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico</h4>
+            <p>Programar una animación que dibuje una espiral cuadrada usando un bucle "repetir" que aumente la distancia de movimiento en cada iteración.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Reto:</strong> Crear un programa en Scratch que haga que un personaje dé 10 vueltas completas sobre sí mismo, aumentando progresivamente la velocidad de rotación.</p>
+          </div>
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">Repetir N veces</button>
+            <button class="quiz-opcion" data-valor="b">Repetir</button>
+            <button class="quiz-opcion" data-valor="c">Por siempre</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">¿Qué bucle se usa para repetir un número fijo de veces?</p>
+        </div>
+      </article>
+
+      <!-- SESIÓN 5 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Condicionales y eventos</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las <strong>estructuras condicionales</strong> permiten que el ordenador tome decisiones. Como en la vida real, a veces necesitamos ejecutar una acción solo si se cumple una condición. Por ejemplo: «Si llueve, cojo el paraguas; si no, gafas de sol».</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El bloque "si...entonces"</h4>
+            <p>En Scratch, el bloque <strong>"si...entonces"</strong> evalúa una condición y ejecuta las instrucciones contenidas solo si la condición es verdadera. Ejemplos de condiciones:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>¿Está tocando el ratón?</li>
+              <li>¿La temperatura es mayor que 30?</li>
+              <li>¿La puntuación es igual a 100?</li>
+              <li>¿Se ha pulsado la tecla espacio?</li>
+            </ul>
+          </div>
+          <div class="callout callout-nota">
+            <strong>Nota</strong>
+            En la vida real usamos condicionales todo el tiempo: "Si hace frío, me pongo abrigo", "Si tengo hambre, como". En Scratch es igual: solo cambia una cosa si se cumple la condición.
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos: la programación interactiva</h4>
+            <p>Los <strong>eventos</strong> son acciones que desencadenan la ejecución de un programa. En Scratch, los bloques de eventos (amarillos) son los que inician la ejecución de una secuencia de bloques. Algunos eventos comunes:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>"Al presionar bandera verde": Inicia el programa principal.</li>
+              <li>"Al presionar tecla": Responde a la pulsación de una tecla.</li>
+              <li>"Al recibir mensaje": Responde a un mensaje de otro personaje.</li>
+              <li>"Al hacer clic en este objeto": El personaje reacciona al clic.</li>
+            </ul>
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/vpVxzH5vbsM" title="Eventos en Scratch" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Reto:</strong> Crear un juego donde un personaje se mueva con las teclas del cursor y, si toca el borde de la pantalla, aparezca un mensaje de "Game Over". Usar condicionales para detectar la colisión.</p>
+          </div>
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">Cuando se presiona la bandera verde</button>
+            <button class="quiz-opcion" data-valor="b">Si...entonces</button>
+            <button class="quiz-opcion" data-valor="c">Al presionar tecla</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">¿Qué bloque de Scratch se usa para que un personaje reaccione a una tecla?</p>
+        </div>
+      </article>
+
+      <!-- SESIÓN 6 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final en Scratch</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta última sesión dedicaremos el tiempo completo a trabajar en el proyecto final de la unidad. Aplicaremos todos los conceptos aprendidos: secuencias, bucles, condicionales, eventos e interacción con el usuario.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Requisitos del proyecto</h4>
+            <p>Cada alumno o pareja deberá crear un programa en Scratch que incluya como mínimo:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Al menos 2 personajes (sprites) con movimientos diferentes.</li>
+              <li>Uso de secuencias de instrucciones.</li>
+              <li>Al menos 1 bucle para repetir acciones.</li>
+              <li>Al menos 1 condicional para tomar decisiones.</li>
+              <li>Interacción con el usuario (teclado o ratón).</li>
+              <li>Un algoritmo documentado (diagrama de flujo o pseudocódigo).</li>
+            </ul>
+          </div>
+          <div class="callout callout-consejo">
+            <strong>Consejo</strong>
+            El proyecto se evaluará con esta rúbrica: 25% uso de secuencias, 25% uso de bucles y condicionales, 25% interacción con el usuario, 25% documentación del algoritmo. Planifica bien tu tiempo y no dejes la documentación para el final.
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Propuestas de proyectos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Un juego de recoger objetos que caen del cielo.</li>
+              <li>Una animación interactiva donde el usuario controla al personaje.</li>
+              <li>Un quiz de preguntas con puntuación.</li>
+              <li>Un simulador de clima donde el usuario elige la estación.</li>
+            </ul>
+          </div>
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">1 sprite, secuencias y condicionales</button>
+            <button class="quiz-opcion" data-valor="b">2 sprites, secuencias, bucles, condicionales, interacción y algoritmo documentado</button>
+            <button class="quiz-opcion" data-valor="c">3 sprites, solo bucles y eventos</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">¿Qué componentes debe incluir mínimo el proyecto?</p>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Presentación</h4>
+            <p>Al final de la sesión, cada grupo presentará su proyecto al resto de la clase. Se valorará la originalidad, el uso de conceptos programáticos y la calidad del algoritmo documentado.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud1.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition">
+        ← UD1 · Ciberseguridad
+      </a>
+      <a href="ud3.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD3 · Desarrollo Móvil y Web →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

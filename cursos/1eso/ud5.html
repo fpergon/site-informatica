@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD5 · Robótica Educativa y Sistemas Interconectados (IoT) · 1º ESO</title>
+  <meta name="description" content="Unidad Didáctica 5 de 1º ESO: Robótica educativa, componentes de robots, leyes de Asimov e Internet de las Cosas." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="1eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../1eso.html" class="hover:underline">1.º ESO</a>
+        <span>·</span>
+        <span>3.º Trimestre</span>
+        <span>·</span>
+        <span>Bloques C + B</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD5 · Robótica Educativa y Sistemas Interconectados (IoT)</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Integrar sensores, actuadores y componentes de locomoción programando sistemas físicos y conectando dispositivos a través de comunicaciones IoT.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Prácticas con Maqueen + Micro:bit</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloques C (Robótica) + B (Internet de las Cosas)</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.C.1</span> Definición de robot.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.C.2</span> Leyes de la robótica.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.C.3</span> Componentes de un robot: sensores, efectores y actuadores.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.C.4</span> Mecanismos de locomoción y manipulación.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.C.5</span> Introducción a la programación de robots.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.B.1</span> Definición y componentes IoT.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.B.2</span> Funcionamiento de IoT.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.B.3</span> Tipos de comunicaciones de dispositivos IoT.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.B.4</span> Aplicaciones de IoT.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">1.1 · Sistemas de computación física</span>
+        <span class="criterio">1.2 · Robótica en la sociedad</span>
+        <span class="criterio">1.4 · Ingeniería de robots</span>
+        <span class="criterio">2.3 · Desarrollo de apps e IoT</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+
+      <!-- SESIÓN 1 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">¿Qué es un robot? Definición y componentes</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Definición de robot</h4>
+            <p>Un <strong>robot</strong> es una máquina capaz de llevar a cabo una serie de acciones de forma automática. Lo que hace que una máquina sea considerada un robot es su <strong>capacidad de interactuar con el entorno, tomar decisiones a partir de estímulos externos mediante sus sensores y actuar en consecuencia a través de sus actuadores</strong>.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes de un robot</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Sensores:</strong> Los órganos sensoriales del robot. Detectan luz, temperatura, presión, movimiento, distancia, etc.</li>
+              <li><strong>Efectores:</strong> Las herramientas para actuar sobre el entorno. Manos robóticas, pinzas, soldadores, altavoces, luces.</li>
+              <li><strong>Actuadores:</strong> Los músculos del robot. Motores eléctricos, neumáticos o hidráulicos que permiten el movimiento.</li>
+            </ul>
+            <div class="callout callout-nota mt-4">
+              <p><strong>Nota:</strong> Los <em>sensores</em> captan información del entorno (como nuestros sentidos), mientras que los <em>actuadores</em> ejecutan acciones sobre él (como nuestros músculos). Un robot necesita ambos para funcionar: sin sensores sería "ciego", y sin actuadores sería incapaz de actuar.</p>
+            </div>
+          </div>
+          <div class="quiz mt-4" data-correcta="a" data-total="3">
+            <h4 class="font-semibold text-brand-700 mb-2">Quiz rápido</h4>
+            <p class="text-sm font-medium text-ink-800 mb-2">¿Qué componente detecta el entorno?</p>
+            <div class="space-y-2">
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="a">a) Sensores</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="b">b) Actuadores</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="c">c) Efectores</button>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo: robot aspirador</h4>
+            <p>Un robot aspirador tiene sensores que le permiten detectar obstáculos y suciedad, un cerebro electrónico que decide qué camino seguir, y ruedas motorizadas que le permiten moverse por la habitación. Todo ello sin que nosotros tengamos que dirigirlo cada segundo.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Ejercicio:</strong> Imaginar y diseñar un robot que resuelva un problema cotidiano. Describir su nombre, propósito, sensores, actuadores y características técnicas. Dibujar un esquema de sus componentes principales.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 2 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Leyes de la robótica y ética</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Las tres leyes de Asimov</h4>
+            <p>En 1942, el escritor <strong>Isaac Asimov</strong> propuso tres leyes que deberían gobernar el comportamiento de los robots inteligentes:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Primera ley:</strong> Un robot no puede hacer daño a un ser humano o, por inacción, permitir que un ser humano sufra daño.</li>
+              <li><strong>Segunda ley:</strong> Un robot debe obedecer las órdenes dadas por los seres humanos, excepto si estas órdenes entran en conflicto con la primera ley.</li>
+              <li><strong>Tercera ley:</strong> Un robot debe proteger su propia existencia, siempre que dicha protección no entre en conflicto con la primera o la segunda ley.</li>
+            </ol>
+            <div class="video-embed mt-4 aspect-video w-full overflow-hidden rounded-xl">
+              <iframe src="https://www.youtube.com/embed/7LphJVFdWdA" title="Leyes de Asimov - Explicación" class="h-full w-full border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="quiz mt-4" data-correcta="b" data-total="3">
+            <h4 class="font-semibold text-brand-700 mb-2">Quiz rápido</h4>
+            <p class="text-sm font-medium text-ink-800 mb-2">¿Cuál es la primera ley de Asimov?</p>
+            <div class="space-y-2">
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="a">a) Un robot debe obedecer las órdenes humanas</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="b">b) Un robot no puede hacer daño a un ser humano</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="c">c) Un robot debe proteger su propia existencia</button>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico</h4>
+            <p>Un robot médico programado para realizar cirugías: según la primera ley, no dañará al paciente; según la segunda, obedecerá al equipo médico a menos que perjudique al paciente; según la tercera, buscará no ponerse en peligro a sí mismo.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Ejercicio:</strong> Analizar tres escenarios hipotéticos (robot en fábrica, robot asistente en el hogar, robot explorador espacial) y determinar qué debería hacer el robot según las leyes de Asimov.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 3 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Mecanismos de locomoción y manipulación</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Locomoción robótica</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Ruedas y orugas:</strong> Eficientes y simples. Las orugas son excelentes para terrenos irregulares.</li>
+              <li><strong>Patas:</strong> Imitan a los seres vivos. Robots bípedos, cuadrúpedos o hexápodos.</li>
+              <li><strong>Propulsión:</strong> Hélices para drones, sistemas de chorro para robots acuáticos.</li>
+            </ul>
+            <div class="callout callout-consejo mt-4">
+              <p><strong>Consejo:</strong> Elige el mecanismo de locomoción según el terreno: las <em>ruedas</em> son perfectas para superficies lisas, las <em>orugas</em> para terrenos irregulares o blandos, y las <em>patas</em> permiten saltar obstáculos. Un buen ingeniero robot considera primero el entorno antes de diseñar.</p>
+            </div>
+          </div>
+          <div class="quiz mt-4" data-correcta="c" data-total="3">
+            <h4 class="font-semibold text-brand-700 mb-2">Quiz rápido</h4>
+            <p class="text-sm font-medium text-ink-800 mb-2">¿Qué mecanismo es mejor para terrenos irregulares?</p>
+            <div class="space-y-2">
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="a">a) Ruedas</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="b">b) Patas</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="c">c) Orugas</button>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Manipulación</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Brazos robóticos:</strong> Múltiples articulaciones y grados de libertad.</li>
+              <li><strong>Manos y pinzas:</strong> Diseñadas para agarrar objetos de diferentes tamaños.</li>
+              <li><strong>Herramientas especializadas:</strong> Soldadores, taladros, cortadores.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Analizar las diferentes formas de locomoción de robots y determinar qué mecanismo es más adecuado para cada entorno (casa, fábrica, espacio, agua).</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 4 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Programación de robots</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">De la programación virtual a la física</h4>
+            <p>En la UD2 aprendimos conceptos básicos de programación con Scratch. Ahora daremos un paso adelante aplicando estos conceptos a la programación de robots. Las secuencias de instrucciones ahora controlarán los movimientos y las respuestas sensoriales de un robot.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Conceptos aplicados</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Secuencias:</strong> Controlar movimientos en orden específico.</li>
+              <li><strong>Bucles:</strong> Repetir movimientos (dar vueltas, seguir una línea).</li>
+              <li><strong>Condicionales:</strong> Responder a condiciones (si detecta obstáculo, gira).</li>
+              <li><strong>Eventos:</strong> Reaccionar a cambios (al detectar luz, encender LED).</li>
+            </ul>
+            <div class="callout callout-consejo mt-4">
+              <p><strong>Consejo:</strong> Si ya usas Scratch, ¡tienes una gran ventaja! Los conceptos de secuencias, bucles y condicionales son idénticos. La diferencia es que ahora las instrucciones controlan movimientos reales en lugar de sprites en pantalla. Piensa en el robot como un Scratch que se mueve en el mundo real.</p>
+            </div>
+          </div>
+          <div class="quiz mt-4" data-correcta="b" data-total="3">
+            <h4 class="font-semibold text-brand-700 mb-2">Quiz rápido</h4>
+            <p class="text-sm font-medium text-ink-800 mb-2">¿Qué concepto de programación se usa para que un robot gire hasta detectar una línea?</p>
+            <div class="space-y-2">
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="a">a) Secuencia</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="b">b) Bucle</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="c">c) Evento</button>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Proyecto práctico con Maqueen:</strong> Programar el robot Maqueen para que siga una línea en el suelo usando los sensores de infrarrojos, evite obstáculos con el sensor de ultrasonidos y emita sonidos al completar una vuelta.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 5 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Internet de las Cosas (IoT): conceptos</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es IoT?</h4>
+            <p>El <strong>Internet de las Cosas (IoT)</strong> es un concepto que nos habla de cómo objetos de nuestro día a día pueden conectarse a internet para ofrecernos funciones adicionales. Por ejemplo, ya existen neveras que pueden avisarnos cuando nos estamos quedando sin leche, o lámparas que podemos encender o apagar desde nuestro móvil.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes del IoT</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Dispositivos:</strong> Objetos físicos conectados a internet (lámparas inteligentes, relojes).</li>
+              <li><strong>Sensores:</strong> Recogen información del entorno (temperatura, movimiento, humedad, luz).</li>
+              <li><strong>Conexión a Internet:</strong> Wi-Fi, Bluetooth, que permite la comunicación.</li>
+              <li><strong>Plataformas de IoT:</strong> Espacios en internet que recogen, almacenan y procesan los datos.</li>
+            </ul>
+            <div class="callout callout-nota mt-4">
+              <p><strong>Nota:</strong> Ya tienes dispositivos IoT en casa sin saberlo: altavoces inteligentes (Alexa, Google Home), relojes deportivos, termómetros WiFi, bombillas smart, cerraduras inteligentes... Todos recogen datos y se comunican a través de internet para ofrecerte funciones extra.</p>
+            </div>
+          </div>
+          <div class="quiz mt-4" data-correcta="a" data-total="3">
+            <h4 class="font-semibold text-brand-700 mb-2">Quiz rápido</h4>
+            <p class="text-sm font-medium text-ink-800 mb-2">¿Qué es IoT?</p>
+            <div class="space-y-2">
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="a">a) Conexión de objetos cotidianos a internet</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="b">b) Un tipo de robot autónomo</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="c">c) Un lenguaje de programación</button>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Explorar ejemplos de dispositivos IoT en el entorno del instituto y en casa. Identificar qué sensores utilizan y cómo se comunican.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 6 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-semibold text-ink-800 text-lg">Funcionamiento y comunicaciones IoT</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cómo funciona IoT</h4>
+            <p>El proceso sigue 5 pasos: <strong>1)</strong> Captación de datos con sensores. <strong>2)</strong> Envío de la información a través de internet. <strong>3)</strong> Almacenamiento en una plataforma. <strong>4)</strong> Visualización en dashboards. <strong>5)</strong> Toma de decisiones basada en los datos.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de comunicaciones</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>D2D (Dispositivo a Dispositivo):</strong> Comunicación directa entre dos dispositivos.</li>
+              <li><strong>D2C (Dispositivo a Nube):</strong> El dispositivo envía datos a una plataforma en internet.</li>
+              <li><strong>C2D (Nube a Dispositivo):</strong> La plataforma envía órdenes al dispositivo.</li>
+              <li><strong>Device-to-Gateway:</strong> Muchos dispositivos se conectan a un intermediario que gestiona la comunicación.</li>
+            </ul>
+            <div class="callout callout-aviso mt-4">
+              <p><strong>Aviso:</strong> Los dispositivos IoT recogen muchos datos personales (ubicación, hábitos, temperatura del hogar...). Es fundamental proteger la <em>privacidad</em>: usar contraseñas seguras, actualizar firmware y revisar qué datos se comparten. ¡Los datos en la nube deben tratarse con cuidado!</p>
+            </div>
+          </div>
+          <div class="quiz mt-4" data-correcta="c" data-total="3">
+            <h4 class="font-semibold text-brand-700 mb-2">Quiz rápido</h4>
+            <p class="text-sm font-medium text-ink-800 mb-2">¿Qué tipo de comunicación es cuando un dispositivo envía datos a la nube?</p>
+            <div class="space-y-2">
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="a">a) D2D</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="b">b) C2D</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="c">c) D2C</button>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Configurar la Micro:bit para enviar datos de temperatura y luz a la plataforma Smart IoT. Visualizar los datos en un dashboard.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 7 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: Robot IoT</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Proyecto integrador</h4>
+            <p>En esta sesión trabajaremos en un proyecto que combine robótica e IoT. Cada grupo deberá crear un sistema que:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Use un robot o dispositivo con sensores (Maqueen o Micro:bit).</li>
+              <li>Recopile datos del entorno (temperatura, luz, distancia).</li>
+              <li>Envíe los datos a una plataforma IoT.</li>
+              <li>Tome decisiones basadas en los datos recibidos.</li>
+            </ul>
+            <div class="callout callout-consejo mt-4">
+              <p><strong>Consejo:</strong> La evaluación del proyecto valorará: correcta integración de sensores y actuadores, envío de datos a la plataforma IoT, capacidad de toma de decisiones, y presentación oral clara. ¡Planificad bien el tiempo y repartid las tareas!</p>
+            </div>
+          </div>
+          <div class="quiz mt-4" data-correcta="b" data-total="4">
+            <h4 class="font-semibold text-brand-700 mb-2">Quiz rápido</h4>
+            <p class="text-sm font-medium text-ink-800 mb-2">¿Qué debe incluir obligatoriamente el proyecto final?</p>
+            <div class="space-y-2">
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="a">a) Un robot con ruedas que se mueva solo</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="b">b) Robot + sensores + plataforma IoT</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="c">c) Una aplicación móvil para controlar el robot</button>
+              <button class="quiz-opcion block w-full text-left rounded-lg border border-slate-200 px-4 py-2 text-sm hover:bg-brand-50 transition" data-valor="d">d) Un informe escrito de 10 páginas</button>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Presentación</h4>
+            <p>Cada grupo presentará su proyecto, explicando cómo funciona, qué sensores utiliza y cómo ha resuelto los problemas encontrados.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud4.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition">
+        ← UD4 · Computación Física y Hardware
+      </a>
+      <a href="ud6.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD6 · Datos Masivos e IA →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

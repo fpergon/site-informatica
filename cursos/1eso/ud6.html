@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD6 · Análisis de Datos Masivos e Inteligencia Artificial · 1º ESO</title>
+  <meta name="description" content="Unidad Didáctica 6 de 1º ESO: Big Data, metadatos, entrada/salida de datos e introducción a la Inteligencia Artificial." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="1eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../1eso.html" class="hover:underline">1.º ESO</a>
+        <span>·</span>
+        <span>3.º Trimestre</span>
+        <span>·</span>
+        <span>Bloques G + H</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD6 · Análisis de Datos Masivos e Inteligencia Artificial</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Comprender la captura, almacenaje y metadatos generados por los sistemas digitales, conectándolo con los principios de la IA y su dimensión ética.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Prácticas con Teachable Machine</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloques G (Datos Masivos) + H (Inteligencia Artificial)</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.G.1</span> Introducción al Big Data.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.G.2</span> Visualización, transporte y almacenaje de datos generados.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.G.3</span> Entrada y Salida de datos.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.G.4</span> Introducción a los metadatos.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.H.1</span> Definición de la Inteligencia Artificial.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.H.2</span> Ética y responsabilidad social en el uso de IA.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.H.3</span> Agentes inteligentes simples.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.H.4</span> Aprendizaje automático.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.H.5</span> Tipos de aprendizaje.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">2.3 · Desarrollo de apps e IoT</span>
+        <span class="criterio">4.1 · Análisis de datos</span>
+        <span class="criterio">4.2 · IA y aprendizaje automático</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+
+      <!-- SESIÓN 1 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción al Big Data</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es Big Data?</h4>
+            <p>El <strong>Big Data</strong> es un concepto que se refiere a la gestión y análisis de grandes volúmenes de datos que superan las capacidades de las herramientas tradicionales de procesamiento. Vivimos en un mundo donde la cantidad de información generada por segundo es inabarcable.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Las 4V del Big Data</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Volumen:</strong> Cantidad masiva de datos generados.</li>
+              <li><strong>Variedad:</strong> Los datos provienen de diversas fuentes y formatos (texto, imágenes, vídeos).</li>
+              <li><strong>Velocidad:</strong> Los datos se generan y actualizan rápidamente.</li>
+              <li><strong>Veracidad:</strong> La confianza y precisión de los datos.</li>
+            </ul>
+          </div>
+          <div class="callout callout-nota">
+            <p class="font-semibold text-accent-700">📊 ¡Datos curiosos sobre Big Data!</p>
+            <p class="mt-1 text-sm">Cada día se generan aproximadamente <strong>2,5 billones de gigabytes de datos</strong>. Cada minuto se envían 204 millones de correos electrónicos, se realizan 5 millones de búsquedas en Google y se suben 500 horas de vídeo a YouTube. ¡El Big Data ya está aquí!</p>
+          </div>
+          <div class="quiz" data-correcta="c" data-total="4">
+            <p class="font-semibold text-ink-800 mb-2">Quiz: ¿Qué NO es una de las 4V del Big Data?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="a">
+                <input type="radio" name="quiz-s1" class="accent-brand-600" />
+                <span>Volumen</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="b">
+                <input type="radio" name="quiz-s1" class="accent-brand-600" />
+                <span>Velocidad</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="c">
+                <input type="radio" name="quiz-s1" class="accent-brand-600" />
+                <span>Calidad</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="d">
+                <input type="radio" name="quiz-s1" class="accent-brand-600" />
+                <span>Variedad</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico</h4>
+            <p>Imagina que quieres saber los sabores de helado más populares. Si te sientas frente a la tienda y anotas cada compra, estás haciendo análisis de datos. Si lo haces de todas las heladerías de Europa en tiempo real, estaríamos hablando de Big Data.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Recoger datos sobre el uso del móvil de cada alumno (tiempo de pantalla, apps más usadas). Crear una hoja de cálculo y representar los datos gráficamente.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 2 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Visualización, transporte y almacenaje de datos</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Visualización de datos</h4>
+            <p>Representar los datos de manera gráfica o visual para identificar patrones, tendencias y relaciones. Algunas técnicas comunes incluyen gráficos, diagramas, mapas de calor y tablas.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Transporte de datos</h4>
+            <p>Mover datos de un lugar a otro. Las redes de comunicación, como Internet, juegan un papel fundamental. Si esto no fuera así, tareas como escuchar una canción en Spotify o ver un directo de Twitch no serían posibles.</p>
+          </div>
+          <div class="callout callout-consejo">
+            <p class="font-semibold text-green-700">💡 ¿Sabías que el streaming usa Big Data?</p>
+            <p class="mt-1 text-sm">Netflix analiza millones de datos de visualización para decidir qué series producir y qué imágenes mostrar en las portadas. Cada usuario ve una portada diferente según sus gustos, ¡todo gracias al transporte y análisis de datos en tiempo real!</p>
+          </div>
+          <div class="quiz" data-correcta="a" data-total="4">
+            <p class="font-semibold text-ink-800 mb-2">Quiz: ¿Qué permite identificar patrones en los datos?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="a">
+                <input type="radio" name="quiz-s2" class="accent-brand-600" />
+                <span>Visualización de datos</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="b">
+                <input type="radio" name="quiz-s2" class="accent-brand-600" />
+                <span>Transporte de datos</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="c">
+                <input type="radio" name="quiz-s2" class="accent-brand-600" />
+                <span>Almacenaje de datos</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="d">
+                <input type="radio" name="quiz-s2" class="accent-brand-600" />
+                <span>Compresión de datos</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <p>Dónde y cómo se guardan los datos. En el mundo del Big Data, necesitamos sistemas de almacenamiento escalables: bases de datos relacionales, sistemas de archivos distribuidos y almacenamiento en la nube.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Crear un dashboard sencillo en Google Sheets que visualice datos recogidos en la sesión anterior. Usar gráficos de barras, circulares y líneas.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 3 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Entrada, salida de datos y metadatos</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El modelo entrada-proceso-salida</h4>
+            <p>El modelo de trabajo en informática es <strong>"entrada-proceso-salida"</strong>. Los datos se introducen (teclado, sensores, cámaras), se procesan (análisis, transformación) y se muestran resultados (pantalla, informes, alertas).</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué son los metadatos?</h4>
+            <p>Los <strong>metadatos</strong> son información adicional que describe a otros datos. Por ejemplo, en una fotografía digital, los metadatos incluyen la fecha de captura, la ubicación, la cámara utilizada y la configuración de exposición.</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Metadatos descriptivos:</strong> Títulos, descripciones, palabras clave.</li>
+              <li><strong>Metadatos administrativos:</strong> Derechos de autor, permisos, fechas.</li>
+              <li><strong>Metadatos técnicos:</strong> Formato del archivo, resolución, frecuencia de muestreo.</li>
+            </ul>
+          </div>
+          <div class="callout callout-peligro">
+            <p class="font-semibold text-red-700">⚠️ ¡Cuidado con los metadatos!</p>
+            <p class="mt-1 text-sm">Los metadatos pueden revelar información personal que no queremos compartir. Una foto publicada en redes sociales puede contener la ubicación exacta donde se tomó, la fecha, el modelo del móvil y hasta datos del titular. Antes de compartir algo, considera si los metadatos podrían comprometer tu privacidad.</p>
+          </div>
+          <div class="quiz" data-correcta="b" data-total="4">
+            <p class="font-semibold text-ink-800 mb-2">Quiz: ¿Qué información incluyen los metadatos de una foto?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="a">
+                <input type="radio" name="quiz-s3" class="accent-brand-600" />
+                <span>Tamaño del archivo en megabytes</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="b">
+                <input type="radio" name="quiz-s3" class="accent-brand-600" />
+                <span>Fecha, ubicación, cámara y configuración</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="c">
+                <input type="radio" name="quiz-s3" class="accent-brand-600" />
+                <span>Nombre del fotógrafo</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="d">
+                <input type="radio" name="quiz-s3" class="accent-brand-600" />
+                <span>Aplicación usada para editarla</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <p>Usar EXIF.tools para analizar los metadatos de una fotografía. Identificar la fecha, lugar, cámara y configuración utilizada.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 4 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">¿Qué es la Inteligencia Artificial?</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Definición</h4>
+            <p>La <strong>Inteligencia Artificial (IA)</strong> es una rama de la informática que crea sistemas capaces de imitar el pensamiento y las decisiones de los humanos. Estos sistemas pueden hacer cosas que normalmente solo las personas pueden hacer, como tomar decisiones inteligentes y resolver problemas.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de IA</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>IA débil:</strong> Diseñada para una sola tarea (reconocer caras, calcular rutas).</li>
+              <li><strong>IA fuerte:</strong> Puede realizar muchas tareas diferentes y aprender de su interacción.</li>
+              <li><strong>Basada en reglas:</strong> Responde según reglas predefinidas (chatbots).</li>
+              <li><strong>Basada en aprendizaje:</strong> Aprende a partir de ejemplos.</li>
+            </ul>
+          </div>
+          <div class="video-embed">
+            <p class="font-semibold text-ink-800 mb-2">🎬 Vídeo: La IA explicada para jóvenes</p>
+            <div class="aspect-video rounded-lg overflow-hidden border border-slate-200">
+              <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" title="Inteligencia Artificial para jóvenes" class="w-full h-full" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+          </div>
+          <div class="quiz" data-correcta="a" data-total="4">
+            <p class="font-semibold text-ink-800 mb-2">Quiz: ¿Qué es la IA débil?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="a">
+                <input type="radio" name="quiz-s4" class="accent-brand-600" />
+                <span>Diseñada para una sola tarea específica</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="b">
+                <input type="radio" name="quiz-s4" class="accent-brand-600" />
+                <span>Un sistema que puede hacer cualquier cosa como un humano</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="c">
+                <input type="radio" name="quiz-s4" class="accent-brand-600" />
+                <span>Una IA que no funciona correctamente</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="d">
+                <input type="radio" name="quiz-s4" class="accent-brand-600" />
+                <span>Una IA que solo responde por escrito</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Vehículos autónomos.</li>
+              <li>Asistentes de voz (Siri, Alexa).</li>
+              <li>Traductores en tiempo real.</li>
+              <li>Editores de texto con sugerencias.</li>
+              <li>Aplicaciones de edición de imagen.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p>Probar diferentes aplicaciones de IA (Google Lens, DeepL, ChatGPT) y analizar cómo funcionan y qué tipo de tareas realizan.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 5 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Aprendizaje automático (Machine Learning)</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es el aprendizaje automático?</h4>
+            <p>Las inteligencias artificiales basadas en <strong>aprendizaje automático</strong> (machine learning) son las que aprenden de ejemplos en lugar de ser programadas directamente. No tienen todo el conocimiento desde el principio; en su lugar, aprenden durante una fase de entrenamiento con ejemplos.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de aprendizaje</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Aprendizaje supervisado:</strong> Las personas enseñan al sistema con ejemplos etiquetados (fotos de perros y gatos diciéndole cuál es cuál).</li>
+              <li><strong>Aprendizaje no supervisado:</strong> El sistema recibe ejemplos sin etiquetas y debe encontrar diferencias para crear sus propias categorías.</li>
+              <li><strong>Aprendizaje reforzado:</strong> El sistema aprende a través de la interacción con su entorno (aprender a jugar a un videojuego).</li>
+            </ul>
+          </div>
+          <div class="callout callout-consejo">
+            <p class="font-semibold text-green-700">💡 ¿Cómo usan el ML Netflix y Spotify?</p>
+            <p class="mt-1 text-sm">Netflix utiliza aprendizaje automático para recomendarte series según lo que ya has visto. Spotify crea listas de reproducción personalizadas como "Discover Weekly" analizando tus gustos y los de usuarios similares. ¡Ambos son ejemplos perfectos de aprendizaje supervisado en acción!</p>
+          </div>
+          <div class="quiz" data-correcta="b" data-total="4">
+            <p class="font-semibold text-ink-800 mb-2">Quiz: ¿Qué tipo de aprendizaje usa ejemplos etiquetados?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="a">
+                <input type="radio" name="quiz-s5" class="accent-brand-600" />
+                <span>Aprendizaje no supervisado</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="b">
+                <input type="radio" name="quiz-s5" class="accent-brand-600" />
+                <span>Aprendizaje supervisado</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="c">
+                <input type="radio" name="quiz-s5" class="accent-brand-600" />
+                <span>Aprendizaje reforzado</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="d">
+                <input type="radio" name="quiz-s5" class="accent-brand-600" />
+                <span>Deep Learning</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <p>Dentro del aprendizaje automático, el <strong>deep learning</strong> (aprendizaje profundo) usa redes neuronales con múltiples capas. Cada parte realiza una tarea simple y distinta, pasando los resultados a la siguiente parte.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong>Google Teachable Machine:</strong> Crear y entrenar un modelo de IA que sea capaz de reconocer diferentes objetos usando la cámara del ordenador.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 6 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Ética y responsabilidad en IA</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">La IA debe ser fiable</h4>
+            <p>La Comisión Europea establece que una IA debe ser:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Lícita:</strong> Respetando todas las leyes y reglamentos.</li>
+              <li><strong>Ética:</strong> Cumpliendo con principios y valores éticos.</li>
+              <li><strong>Robusta:</strong> Técnicamente y socialmente, para evitar daños accidentales.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Principios éticos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>No coaccionar, engañar o manipular a las personas.</li>
+              <li>No causar daño o empeorar situaciones existentes.</li>
+              <li>Ser equitativos y distribuir beneficios y costes de manera justa.</li>
+              <li>Ser transparentes para que las personas puedan entender y confiar en los sistemas.</li>
+            </ul>
+          </div>
+          <div class="callout callout-aviso">
+            <p class="font-semibold text-amber-700">🔍 Peligro: Deepfakes y riesgos de la IA</p>
+            <p class="mt-1 text-sm">Los <strong>deepfakes</strong> son vídeos manipulados con IA que pueden hacer parecer que una persona dice o hace algo que nunca hizo. Se usan para crear noticias falsas, estafas y manipulación. Es fundamental desarrollar pensamiento crítico y verificar siempre las fuentes antes de creer lo que vemos en internet.</p>
+          </div>
+          <div class="quiz" data-correcta="c" data-total="4">
+            <p class="font-semibold text-ink-800 mb-2">Quiz: ¿Cuál NO es un principio ético de la IA?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="a">
+                <input type="radio" name="quiz-s6" class="accent-brand-600" />
+                <span>No causar daño</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="b">
+                <input type="radio" name="quiz-s6" class="accent-brand-600" />
+                <span>Ser transparente</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="c">
+                <input type="radio" name="quiz-s6" class="accent-brand-600" />
+                <span>Maximizar beneficios económicos</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="d">
+                <input type="radio" name="quiz-s6" class="accent-brand-600" />
+                <span>Ser equitativa</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <p>Analizar casos de uso de IA y debatir sobre sus implicaciones éticas: sesgo algorítmico, privacidad, sustitución de empleos, deepfakes.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SESIÓN 7 -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: Crear tu propia IA</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Proyectos prácticos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Reconocimiento de objetos:</strong> Usar Google Teachable Machine para crear un modelo que reconozca objetos de nuestro interés.</li>
+              <li><strong>Engañar a una IA:</strong> Usar Google Scavenger Hunt para intentar confundir a un sistema de reconocimiento de imágenes.</li>
+              <li><strong>Aprendizaje con texto:</strong> Usar Machine Learning For Kids para entrenar un modelo de clasificación de texto.</li>
+            </ul>
+          </div>
+          <div class="callout callout-consejo">
+            <p class="font-semibold text-green-700">💡 Herramientas recomendadas</p>
+            <p class="mt-1 text-sm">Para este proyecto puedes usar <strong>Google Teachable Machine</strong> (reconocimiento de imágenes y sonido con la cámara/micrófono), <strong>Google Scavenger Hunt</strong> (juego para confundir a IAs de reconocimiento) o <strong>Machine Learning For Kids</strong> (entrenar modelos de texto). ¡Elige el que más te guste!</p>
+          </div>
+          <div class="quiz" data-correcta="c" data-total="4">
+            <p class="font-semibold text-ink-800 mb-2">Quiz: ¿Qué herramienta permite crear un modelo de reconocimiento de objetos con la cámara?</p>
+            <div class="space-y-2">
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="a">
+                <input type="radio" name="quiz-s7" class="accent-brand-600" />
+                <span>Google Scavenger Hunt</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="b">
+                <input type="radio" name="quiz-s7" class="accent-brand-600" />
+                <span>Machine Learning For Kids</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="c">
+                <input type="radio" name="quiz-s7" class="accent-brand-600" />
+                <span>Google Teachable Machine</span>
+              </label>
+              <label class="quiz-opcion flex items-center gap-3 rounded-lg border border-slate-200 p-3 cursor-pointer hover:bg-slate-50 transition" data-valor="d">
+                <input type="radio" name="quiz-s7" class="accent-brand-600" />
+                <span>ChatGPT</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <p>¿Cómo ha cambiado nuestra forma de entender la tecnología después de esta unidad? ¿Qué aplicaciones de IA usamos a diario sin darnos cuenta? ¿Cómo puede mejorar la IA nuestra vida y qué riesgos conlleva?</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud5.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition">
+        ← UD5 · Robótica e IoT
+      </a>
+      <span class="text-sm text-slate-400">Última unidad →</span>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>
