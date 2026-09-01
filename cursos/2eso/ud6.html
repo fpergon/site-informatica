@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD6 · Datos Masivos, IA y Ciberseguridad · 2º ESO</title>
+  <meta name="description" content="Unidad Didáctica 6 de 2º ESO: Datos Masivos, Inteligencia Artificial y Ciberseguridad. Saberes básicos BOJA, sesiones detalladas y criterios de evaluación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2eso.html" class="hover:underline">2.º ESO</a>
+        <span>·</span>
+        <span>3.º Trimestre</span>
+        <span>·</span>
+        <span>Bloques G + H + I</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD6 · Datos Masivos, IA y Ciberseguridad</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Comprender el Big Data, la Inteligencia Artificial y la Ciberseguridad como pilares fundamentales de la sociedad digital. Analizar el impacto ético de estas tecnologías y desarrollar hábitos seguros de protección de la información.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: Modelo IA con Teachable Machine + decálogo de ciberseguridad</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloques G + H + I — Datos Masivos, IA y Ciberseguridad</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">G.1</span> Concepto de Big Data y sus características.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">G.2</span> Aplicaciones del análisis de datos masivos.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">H.1</span> Definición de Inteligencia Artificial y tipos.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">H.2</span> Aprendizaje automático y Deep Learning.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">H.3</span> Ética y responsabilidad en IA.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">I.1</span> Tipologías de ciberataques.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">I.2</span> Hábitos seguros y protección de información.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">I.3</span> Malware y defensa digital.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">6.1 · Análisis de datos masivos</span>
+        <span class="criterio">6.2 · Aplicaciones de la IA</span>
+        <span class="criterio">6.3 · Hábitos de ciberseguridad</span>
+        <span class="criterio">6.4 · Protección de la información</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Big Data: las 4V de los datos masivos</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión introductoria presenta el concepto de Big Data y sus cuatro características fundamentales. Es esencial comprender el volumen de datos que generamos a diario para entender por qué el análisis de datos masivos es una de las competencias más demandadas del siglo XXI.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Cada segundo, el mundo genera una cantidad de datos impresionante: 500 horas de vídeo en YouTube, 294.000 correos electrónicos, 3,7 millones de búsquedas en Google, 1.000 fotos compartidas en Instagram. Esta avalancha de información se denomina <strong>Big Data</strong> o Datos Masivos. Pero no solo se trata de cantidad; la verdadera revolución está en cómo analizamos estos datos para extraer conocimiento útil, tomar mejores decisiones y crear nuevos servicios y productos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es Big Data?</h4>
+            <p>Big Data se refiere a conjuntos de datos tan grandes y complejos que los métodos tradicionales de procesamiento no son suficientes. Para analizar estos datos se necesitan herramientas especializadas como Hadoop, Spark o plataformas de aprendizaje automático. El análisis de Big Data permite descubrir patrones, tendencias y correlaciones que serían invisibles con métodos convencionales.</p>
+            <p class="mt-2"><strong>Las 4V del Big Data:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Volumen:</strong> La cantidad de datos generados es enorme. Se mide en terabytes, petabytes (1.000 TB) o zettabytes (1.000.000 TB). En 2024 se estima que se generaron 120 zettabytes de datos a nivel mundial.</li>
+              <li><strong>Velocidad:</strong> Los datos se generan a un ritmo vertiginoso y deben procesarse en tiempo real o casi real. Los sensores IoT, las transacciones financieras y las redes sociales producen flujos constantes de datos que requieren procesamiento inmediato.</li>
+              <li><strong>Variedad:</strong> Los datos provienen de múltiples fuentes y en diferentes formatos: texto, imágenes, vídeo, audio, datos estructurados (tablas), semiestructurados (JSON, XML) y no estructurados (redes sociales, correos electrónicos).</li>
+              <li><strong>Veracidad:</strong> La fiabilidad y calidad de los datos. No todos los datos son precisos; algunos pueden estar incompletos, contener errores o ser deliberadamente falsos. La veracidad es fundamental para que el análisis sea útil y fiable.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop" alt="Las 4V del Big Data" loading="lazy" />
+            <figcaption>Las cuatro dimensiones del Big Data: volumen, velocidad, variedad y veracidad</figcaption>
+          </figure>
+
+          <div class="callout callout-consejo">
+            <strong>Ejemplo práctico: heladerías</strong>
+            Imagina una cadena de heladerías con 200 tiendas. Cada tienda genera datos diarios: ventas por sabor, hora pico, temperatura exterior, gasto medio por cliente, devoluciones, quejas, etc. Si juntamos los datos de todas las tiendas durante un año, tenemos Big Data. Analizando estos datos podemos predecir qué sabores venderán mejor en verano, optimizar los horarios de personal y reducir el desperdicio de ingredientes.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Fuentes de Big Data</h4>
+            <p>Las principales fuentes de datos masivos son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Redes sociales:</strong> Publicaciones, likes, comentarios, fotos, vídeos, comportamiento de navegación.</li>
+              <li><strong>Dispositivos IoT:</strong> Sensores de ciudades inteligentes, hogares conectados, wearables (pulseras de actividad).</li>
+              <li><strong>Transacciones comerciales:</strong> Ventas online, pagos con tarjeta, historial de compras.</li>
+              <li><strong>Datos gubernamentales:</strong> Censos, registros meteorológicos, datos sanitarios, tráfico.</li>
+              <li><strong>Medios de comunicación:</strong> Noticias, vídeos, podcasts, publicaciones digitales.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Dato impactante</strong>
+            En 2025, se estima que el 90% de los datos del mundo se generaron en los últimos dos años. La Humanidad genera 2,5 quintillones de bytes diarios. El análisis de estos datos está transformando la medicina, el comercio, la agricultura y prácticamente todos los sectores de la economía.
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Volumen, velocidad, vitalidad, verificación.</button>
+            <button class="quiz-opcion" data-valor="b">B. Volumen, velocidad, variedad, veracidad.</button>
+            <button class="quiz-opcion" data-valor="c">C. Volumen, veracidad, validación, variedad.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuáles son las 4V del Big Data?</p>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. La velocidad a la que se transmiten los datos por Internet.</button>
+            <button class="quiz-opcion" data-valor="b">B. El número de usuarios que generan datos.</button>
+            <button class="quiz-opcion" data-valor="c">C. La calidad, fiabilidad y precisión de los datos.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué mide la «veracidad» en Big Data?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            En parejas, elegir un sector (salud, deporte, educación, agricultura) e investigar cómo se utilizan los datos masivos en ese campo. Crear una infografía que muestre: fuente de datos, tipo de análisis realizado y resultado obtenido. Presentar en 3 minutos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Inteligencia Artificial: definición y tipos</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La Inteligencia Artificial (IA) es una de las tecnologías que más están transformando nuestra sociedad. Desde los asistentes de voz que controlan nuestro hogar hasta los coches autónomos que circulan por nuestras carreteras, la IA está presente en nuestra vida cotidiana de formas que a veces ni siquiera somos capaces de detectar. En esta sesión exploraremos qué es exactamente la IA, sus diferentes tipos y aplicaciones, y cómo se relaciona con el Big Data.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la Inteligencia Artificial?</h4>
+            <p>La IA es una rama de la informática que busca crear sistemas capaces de realizar tareas que normalmente requerirían inteligencia humana: aprendizaje, razonamiento, percepción, comprensión del lenguaje y toma de decisiones. El término fue acuñado por John McCarthy en 1956 en la Conferencia de Dartmouth.</p>
+            <p class="mt-2"><strong>Tipos de IA según capacidad:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>IA débil (narrow AI):</strong> Diseñada para realizar una tarea específica. No tiene conciencia ni comprensión general. Ejemplos: asistentes virtuales (Siri, Alexa), filtros de spam, recomendaciones de Netflix y Spotify, traductores automáticos. Es la única forma de IA que existe actualmente.</li>
+              <li><strong>IA fuerte (general AI):</strong> Capacidad de comprender, aprender y aplicar la inteligencia en cualquier tarea, como un ser humano. Aún no existe y es objeto de debate científico y filosófico.</li>
+              <li><strong>Superinteligencia:</strong> IA que supera la inteligencia humana en todos los aspectos. Concepto teórico planteado por Nick Bostrom en su libro homónimo.</li>
+            </ul>
+          </div>
+
+          <!-- VÍDEO: ¿Qué es la IA? -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo para entender los fundamentos de la Inteligencia Artificial y sus aplicaciones en la vida cotidiana:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" title="¿Qué es la Inteligencia Artificial?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de IA según enfoque</h4>
+            <p>Desde el punto de vista técnico, la IA se divide en:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>IA basada en reglas (sistemas expertos):</strong> Usa reglas programadas manualmente por expertos. Ejemplo: un sistema que diagnostica enfermedades siguiendo un árbol de decisiones predefinido. Es transparente pero inflexible.</li>
+              <li><strong>IA basada en aprendizaje (machine learning):</strong> Aprende de los datos sin ser explícitamente programada. Mejora su rendimiento con más datos. Es la forma dominante de IA actual.</li>
+              <li><strong>IA por refuerzo:</strong> Aprende mediante prueba y error, recibiendo recompensas o castigos. Se usa en robots que aprenden a caminar y en juegos como el Go de AlphaGo.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplos reales de IA</h4>
+            <p>La IA está presente en numerosos ámbitos de nuestra vida:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Salud:</strong> Diagnosticar enfermedades a partir de imágenes médicas (radiografías, resonancias), descubrir nuevos fármacos, personalizar tratamientos.</li>
+              <li><strong>Educación:</strong> Plataformas adaptativas que ajustan el contenido al nivel de cada estudiante (Khan Academy, Duolingo).</li>
+              <li><strong>Transporte:</strong> Coches autónomos (Tesla, Waymo), gestión de tráfico inteligente.</li>
+              <li><strong>Entretenimiento:</strong> Recomendaciones de contenido (Netflix, YouTube), generación de música y arte con IA.</li>
+              <li><strong>Agricultura:</strong> Drones que monitorizan cultivos, sistemas de riego inteligente.</li>
+              <li><strong>Finanzas:</strong> Detección de fraude, trading algorítmico, chatbots bancarios.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="Aplicaciones de la IA" loading="lazy" />
+            <figcaption>La IA está transformando sectores como la salud, la educación y el transporte</figcaption>
+          </figure>
+
+          <div class="callout callout-nota">
+            <strong>Dato curioso</strong>
+            El asistente virtual ChatGPT alcanzó los 100 millones de usuarios en 2 meses tras su lanzamiento, convirtiéndose en la aplicación de consumo más rápida en lograrlo. Esto demuestra el impacto que la IA generativa está teniendo en la sociedad.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">IA generativa</h4>
+            <p>La <strong>IA generativa</strong> es un tipo de IA capaz de crear contenido nuevo: texto, imágenes, música, código y vídeo. Los modelos más conocidos son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>ChatGPT (OpenAI):</strong> Genera texto conversacional, responde preguntas, escribe código.</li>
+              <li><strong>DALL-E / Midjourney:</strong> Genera imágenes a partir de descripciones de texto.</li>
+              <li><strong>GitHub Copilot:</strong> Genera código de programación asistido por IA.</li>
+              <li><strong>Sora (OpenAI):</strong> Genera vídeos a partir de descripciones de texto.</li>
+            </ul>
+            <p class="mt-2">La IA generativa plantea importantes preguntas sobre derechos de autor, originalidad y veracidad del contenido generado.</p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            La IA no es infalible. Los modelos de IA pueden generar información falsa («alucinaciones»), perpetuar sesgos presentes en los datos de entrenamiento y carecer de comprensión real del contenido que generan. Siempre verificar la información proporcionada por sistemas de IA.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Aprendizaje automático y Deep Learning</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El aprendizaje automático (machine learning) es el corazón de la inteligencia artificial moderna. En esta sesión profundizaremos en cómo las máquinas aprenden de los datos, los diferentes tipos de aprendizaje automático, qué es el Deep Learning y cómo podemos crear nuestro propio modelo de IA usando herramientas accesibles como Teachable Machine de Google.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es el aprendizaje automático?</h4>
+            <p>El <strong>aprendizaje automático (machine learning)</strong> es un enfoque de la IA que permite a los sistemas aprender y mejorar a partir de la experiencia (datos) sin ser explícitamente programados para cada tarea. En lugar de seguir reglas fijas, el algoritmo identifica patrones en los datos y construye un modelo matemático que puede hacer predicciones o decisiones con nuevos datos.</p>
+            <p class="mt-2"><strong>Ejemplo cotidiano:</strong> Cuando Netflix te recomienda series, no usa reglas manuales. Un algoritmo de machine learning analiza tu historial de visualización, el de millones de usuarios similares, y aprende qué contenido te gustará probablemente.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Analogía</strong>
+            Imagina que enseñas a un niño a reconocer gatos. No le describes formalmente «cuatro patas, orejas triangulares, bigotes». Simplemente le muestras fotos de gatos hasta que aprende por sí mismo a identificarlos. El machine learning funciona de manera similar: aprende de ejemplos, no de reglas explícitas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de aprendizaje automático</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Aprendizaje supervisado:</strong> El algoritmo recibe datos etiquetados (con la respuesta correcta). Aprende a mapear entradas a salidas. Ejemplo: clasificar correos como spam o no spam basándose en ejemplos etiquetados. Algoritmos: regresión lineal, árboles de decisión, redes neuronales.</li>
+              <li><strong>Aprendizaje no supervisado:</strong> El algoritmo recibe datos sin etiquetar y debe encontrar patrones por sí mismo. Ejemplo: agrupar clientes por comportamiento de compra. Algoritmos: k-means, clustering jerárquico, análisis de componentes principales (PCA).</li>
+              <li><strong>Aprendizaje por refuerzo:</strong> El algoritmo aprende mediante prueba y error, recibiendo recompensas o castigos por sus acciones. Ejemplo: un robot que aprende a caminar sin caerse, un agente que aprende a jugar ajedrez. AlphaGo de DeepMind usó refuerzo para derrotar al campeón mundial de Go.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Deep Learning (aprendizaje profundo)</h4>
+            <p>El <strong>Deep Learning</strong> es un subconjunto del machine learning que utiliza redes neuronales artificiales con múltiples capas (de ahí «profundo»). Estas redes están inspiradas en la estructura del cerebro humano:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Redes neuronales convolucionales (CNN):</strong> Especializadas en procesamiento de imágenes. Detectan bordes, texturas y formas en capas sucesivas. Se usan en reconocimiento facial, diagnóstico médico por imagen y coches autónomos.</li>
+              <li><strong>Redes neuronales recurrentes (RNN/LSTM):</strong> Procesan secuencias de datos (texto, audio, vídeo). Se usan en traducción automática, chatbots y reconocimiento de voz.</li>
+              <li><strong>Transformadores:</strong> Arquitectura detrás de modelos como GPT y BERT. Procesan texto de forma paralela y capturan relaciones a larga distancia. Han revolucionado el procesamiento del lenguaje natural.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=400&fit=crop" alt="Redes neuronales y Deep Learning" loading="lazy" />
+            <figcaption>Las redes neuronales artificiales están inspiradas en la estructura del cerebro humano</figcaption>
+          </figure>
+
+          <div class="callout callout-nota">
+            <strong>Dato impresionante</strong>
+            La red neuronal de GPT-4 tiene aproximadamente 1 billón (un trillón en inglés) de parámetros. Para entrenar estos modelos se necesitan miles de GPUs trabajando durante meses y consumen millones de dólares en electricidad. El impacto ambiental del entrenamiento de IA es un tema creciente de preocupación.
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Usa datos etiquetados para aprender a hacer predicciones.</button>
+            <button class="quiz-opcion" data-valor="b">B. Aprende sin datos, solo con reglas programadas.</button>
+            <button class="quiz-opcion" data-valor="c">C. Aprende únicamente por recompensas y castigos.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué caracteriza al aprendizaje supervisado?</p>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un algoritmo que clasifica correos como spam.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un sistema que agrupa clientes por comportamiento.</button>
+            <button class="quiz-opcion" data-valor="c">C. Una red neuronal con múltiples capas que procesa imágenes.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es Deep Learning?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad práctica: Teachable Machine</strong>
+            Usando Teachable Machine de Google (teachablemachine.withgoogle.com), crear un modelo que clasifique imágenes en 2-3 categorías (por ejemplo: piedra, papel, tijera). Entrenar el modelo con al menos 30 imágenes por categoría, probarlo con imágenes nuevas y analizar la precisión obtenida. Reflexionar sobre qué mejora la precisión del modelo.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Ética y responsabilidad en Inteligencia Artificial</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La Inteligencia Artificial plantea desafíos éticos sin precedentes. En esta sesión analizaremos los principios éticos establecidos por la Unión Europea para la IA, los problemas del sesgo algorítmico, la transparencia y la responsabilidad. Reflexionaremos sobre cómo garantizar que la IA se desarrolle de forma responsable y beneficie a toda la sociedad.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Principios éticos de la IA en Europa</h4>
+            <p>La Unión Europea ha establecido un marco ético para la IA basado en varios principios fundamentales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong> Supervisión humana:</strong> Los sistemas de IA deben estar siempre bajo supervisión humana, especialmente en decisiones que afecten a personas. El ser humano debe poder intervenir y anular las decisiones de la IA.</li>
+              <li><strong>Transparencia:</strong> Los usuarios deben saber cuándo están interactuando con un sistema de IA. Los algoritmos deben ser explicables y comprensibles.</li>
+              <li><strong>No discriminación:</strong> La IA no debe perpetuar ni amplificar sesgos existentes en la sociedad. Los datos de entrenamiento deben ser representativos y diversificados.</li>
+              <li><strong>Seguridad:</strong> Los sistemas de IA deben ser seguros, robustos y resistentes a ataques. Deben funcionar correctamente incluso en condiciones inesperadas.</li>
+              <li><strong>Privacidad:</strong> Los datos personales utilizados por sistemas de IA deben ser tratados con estricto cumplimiento de la normativa de protección de datos (RGPD).</li>
+              <li><strong>Responsabilidad:</strong> Debe haber mecanismos claros para atribuir responsabilidad cuando un sistema de IA cause daños.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Dato real: sesgo algorítmico</strong>
+            En 2018, Amazon abandonó un sistema de IA para selección de personal porque discriminaba a las mujeres. El sistema había sido entrenado con los currículums de los últimos 10 años, predominantemente masculinos, y aprendió a penalizar las candidaturas que incluían la palabra «mujer». Este ejemplo ilustra cómo los sesgos en los datos pueden perpetuar la discriminación.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El problema del sesgo algorítmico</h4>
+            <p>El <strong>sesgo algorítmico</strong> ocurre cuando los sistemas de IA producen resultados sistemáticamente injustos o discriminatorios. Las causas principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Datos de entrenamiento sesgados:</strong> Si los datos reflejan desigualdades sociales existentes, la IA las perpetuará. Ejemplo: sistemas de reconocimiento facial con menor precisión en personas de piel oscura.</li>
+              <li><strong>Falta de diversidad en los equipos de desarrollo:</strong> Equipos homogéneos tienden a no detectar sesgos que afectan a minorías.</li>
+              <li><strong>Diseño inadecuado del algoritmo:</strong> Decisiones técnicas en el diseño del modelo pueden introducir sesgos no intencionados.</li>
+              <li><strong>Falta de auditoría:</strong> Ausencia de evaluaciones periódicas del sistema para detectar comportamientos discriminatorios.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Transparencia explicativa</h4>
+            <p>Los ciudadanos tienen derecho a entender cómo la IA toma decisiones que les afectan. Esto incluye:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Explicabilidad:</strong> Capacidad de explicar en términos comprensibles por qué la IA tomó una decisión concreta.</li>
+              <li><strong>Auditorías independientes:</strong> Evaluaciones externas de los sistemas de IA para garantizar su fiabilidad y ausencia de sesgos.</li>
+              <li><strong>Derecho a la explicación:</strong> Los ciudadanos deben poder solicitar una explicación de las decisiones automatizadas que les afecten (art. 22 del RGPD).</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?w=800&h=400&fit=crop" alt="Ética en Inteligencia Artificial" loading="lazy" />
+            <figcaption>Los principios éticos guían el desarrollo responsable de la IA</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">IA y derechos fundamentales</h4>
+            <p>El uso de la IA plantea tensiones con los derechos fundamentales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Privacidad:</strong> Sistemas de reconocimiento facial masivo, perfilado de usuarios.</li>
+              <li><strong>Libertad de expresión:</strong> Filtrado automatizado de contenido, censura algorítmica.</li>
+              <li><strong>Igualdad:</strong> Sistemas de IA que discriminan en acceso a empleo, crédito o servicios.</li>
+              <li><strong>Presunción de inocencia:</strong> Sistemas predictivos de criminalidad que pueden ser discriminatorios.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Debate grupal</strong>
+            Dividir la clase en grupos a favor y en contra de la siguiente afirmación: «La IA debe tener regulación estricta, incluso si eso ralentiza su desarrollo». Cada grupo preparará argumentos durante 5 minutos y debatirán durante 15 minutos. Al final, cada alumno escribirá una conclusión personal.
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ley Europea de IA</strong>
+            La Unión Europea aprobó en 2024 la primera ley mundial de IA (AI Act). Clasifica los sistemas de IA por nivel de riesgo: inaceptable (prohibido), alto (regulado estrictamente), limitado y mínimo. Los sistemas de reconocimiento facial en tiempo real en espacios públicos se clasifican como de alto riesgo y están sujetos a requisitos estrictos de transparencia y supervisión humana.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Ciberseguridad: tipologías y hábitos seguros</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En un mundo cada vez más conectado, la ciberseguridad se ha convertido en una competencia esencial. En esta sesión analizaremos las principales tipologías de ciberataques, los hábitos seguros que debemos adoptar y las mejores prácticas para proteger nuestra información personal y profesional. La ciberseguridad no es solo responsabilidad de las empresas; cada usuario es un eslabón fundamental en la cadena de protección.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la ciberseguridad?</h4>
+            <p>La ciberseguridad es el conjunto de técnicas, procesos y prácticas diseñadas para proteger los sistemas informáticos, redes y datos de ataques, daños y accesos no autorizados. Su objetivo es garantizar la confidencialidad (solo personas autorizadas acceden a la información), la integridad (los datos no son modificados sin autorización) y la disponibilidad (los sistemas están operativos cuando se necesitan) — el triángulo CIA.</p>
+          </div>
+
+          <!-- VÍDEO: Ciberseguridad -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo para conocer las principales amenazas de ciberseguridad y cómo protegerte:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/t5S55PmB6ck" title="Ciberseguridad: amenazas y protección" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipologías de ciberataques</h4>
+            <p>Los principales tipos de ciberataques que debemos conocer son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Phishing:</strong> Técnica de ingeniería social donde el atacante se hace pasar por una entidad legítima para robar credenciales, datos bancarios o instalar malware. Se realiza por correo electrónico, SMS (smishing) o llamadas (vishing).</li>
+              <li><strong>Malware:</strong> Software malicioso que incluye virus, gusanos, troyanos, ransomware y spyware. Se propaga mediante archivos adjuntos, descargas o dispositivos USB infectados.</li>
+              <li><strong>Ataque de denegación de servicio (DDoS):</strong> Sobrecarga un servidor con peticiones masivas para hacerlo inaccesible. Se usa contra webs de empresas, bancos o instituciones.</li>
+              <li><strong>Inyección SQL:</strong> Explota vulnerabilidades en aplicaciones web para acceder a bases de datos. Es uno de los ataques más comunes en sitios web.</li>
+              <li><strong>Man-in-the-Middle (MitM):</strong> El atacante intercepta la comunicación entre dos partes para robar o manipular información. Es común en redes WiFi públicas no seguras.</li>
+              <li><strong>Ataques de fuerza bruta:</strong> Prueba todas las combinaciones posibles de usuarios y contraseñas hasta encontrar las correctas.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop" alt="Ciberseguridad y amenazas digitales" loading="lazy" />
+            <figcaption>Las amenazas de ciberseguridad son diversas y están en constante evolución</figcaption>
+          </figure>
+
+          <div class="callout callout-peligro">
+            <strong>Dato impactante</strong>
+            En 2024, el coste medio de un ciberataque para una empresa fue de 4,45 millones de dólares. El 95% de los ciberataques se deben a error humano. La formación y los hábitos seguros son la mejor defensa.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Hábitos seguros de protección</h4>
+            <p>Para protegernos de los ciberataques debemos adoptar los siguientes hábitos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Contraseñas seguras:</strong> Mínimo 12 caracteres, mezcla de tipos, única para cada servicio. Usar gestor de contraseñas.</li>
+              <li><strong>Autenticación en dos pasos (2FA):</strong> Activarla siempre que sea posible. Preferir aplicaciones de autenticación sobre SMS.</li>
+              <li><strong>Actualizaciones:</strong> Mantener el sistema operativo, navegador y aplicaciones actualizados. Las actualizaciones corrigen vulnerabilidades de seguridad.</li>
+              <li><strong>Desconfianza:</strong> No hacer clic en enlaces sospechosos, no descargar archivos de fuentes no fiables, verificar el remitente de los correos.</li>
+              <li><strong>Redes seguras:</strong> Evitar redes WiFi públicas para operaciones sensibles. Usar VPN cuando sea necesario.</li>
+              <li><strong>Copias de seguridad:</strong> Realizar copias periódicas de los datos importantes en la nube o en discos externos.</li>
+              <li><strong>Protección de dispositivos:</strong> Usar bloqueo de pantalla, cifrado de disco y aplicaciones de localización en caso de robo.</li>
+            </ul>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Usar la misma contraseña en todos los servicios para recordarla fácilmente.</button>
+            <button class="quiz-opcion" data-valor="b">B. Activar la autenticación en dos pasos siempre que sea posible.</button>
+            <button class="quiz-opcion" data-valor="c">C. Hacer clic en los enlaces de correos que parezcan importantes.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la mejor práctica de ciberseguridad?</p>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un ataque que sobrecarga un servidor con peticiones para hacerlo inaccesible.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un virus que se propaga por USB.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un robo de datos mediante ingeniería social.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es un ataque DDoS?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Realizar un test de ciberseguridad interactivo con 10 preguntas sobre las tipologías de ataques y hábitos seguros. Después, en parejas, diseñar un cartel de concienciación sobre ciberseguridad para exhibir en el centro.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Malware y protección: virus, troyanos y ransomware</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El malware (malicious software) representa una de las amenazas más persistentes y diversas en el ciberespacio. En esta sesión analizaremos en profundidad los diferentes tipos de malware, cómo se propagan, qué daños causan y las herramientas de protección disponibles. También aprenderemos a crear contraseñas robustas y a gestionarlas de forma segura.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de malware</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Virus:</strong> Programa que se adjunta a un archivo legítimo y se replica cuando el usuario lo ejecuta. Puede dañar archivos, ralentizar el sistema o crear puertas traseras. Ejemplo: ILOVEYOU (2000), que causó pérdidas de 15.000 millones de dólares.</li>
+              <li><strong>Gusano (Worm):</strong> Similar al virus pero se propaga automáticamente a través de redes sin intervención del usuario. No necesita «huésped». Ejemplo: WannaCry (2017) infectó 200.000 ordenadores en 150 países.</li>
+              <li><strong>Troyano:</strong> Programa que se disfraza de software legítimo pero contiene código malicioso. Se instala cuando el usuario descarga algo que parece útil. Puede abrir puertas traseras, robar datos o instalar otro malware.</li>
+              <li><strong>Ransomware:</strong> Cifra los archivos del usuario y exige un rescate (generalmente en criptomonedas) a cambio de la clave de descifrado. Es uno de los malware más lucrativos: en 2024 causó pérdidas globales superiores a 20.000 millones de dólares.</li>
+              <li><strong>Spyware:</strong> Recopila información del usuario sin su conocimiento: historial de navegación, credenciales, datos bancarios, capturas de pantalla.</li>
+              <li><strong>Adware:</strong> Muestra publicidad no deseada, generalmente en forma de ventanas emergentes. Puede redirigir el navegador a sitios maliciosos.</li>
+              <li><strong>Rootkit:</strong> Se oculta en las capas más profundas del sistema operativo para mantener acceso privilegiado sin ser detectado.</li>
+              <li><strong>Keylogger:</strong> Registra todas las teclas que pulsamos, capturando contraseñas y datos confidenciales.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&h=400&fit=crop" alt="Tipos de malware" loading="lazy" />
+            <figcaption>Los diferentes tipos de malware representan amenazas diversas para nuestros dispositivos</figcaption>
+          </figure>
+
+          <div class="callout callout-peligro">
+            <strong>Caso real: WannaCry</strong>
+            En mayo de 2017, el ransomware WannaCry explotó una vulnerabilidad de Windows para infectar más de 200.000 ordenadores en 150 países. Afectó a hospitales del NHS británico, Telefónica, Renault y muchas otras organizaciones. La vulnerabilidad había sido corregida por Microsoft dos meses antes, pero muchas organizaciones no habían aplicado la actualización.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Herramientas de protección antimalware</h4>
+            <p>Para protegernos del malware debemos utilizar herramientas especializadas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Antivirus:</strong> Programa que detecta, previene y elimina malware. Utiliza firmas de malware conocidas y análisis heurístico. Ejemplos: Windows Defender (gratuito, integrado en Windows), Avast, Bitdefender.</li>
+              <li><strong>Antimalware:</strong> Similar al antivirus pero especializado en detectar amenazas más recientes y avanzadas. Ejemplo: Malwarebytes (complemento ideal junto al antivirus).</li>
+              <li><strong>Firewall:</strong> Filtra el tráfico de red entrante y saliente para bloquear conexiones no autorizadas. Windows incluye firewall integrado.</li>
+              <li><strong>Actualizaciones automáticas:</strong> Mantener el sistema operativo y el navegador siempre actualizados es la medida de protección más efectiva.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Contraseñas seguras: gestión y buenas prácticas</h4>
+            <p>Las contraseñas son la primera línea de defensa de nuestras cuentas digitales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Longitud mínima de 12 caracteres:</strong> Cuanto más larga, más tiempo tarda en descifrarse. Una contraseña de 8 caracteres puede descifrarse en minutos; una de 16 puede tardar siglos.</li>
+              <li><strong>Mezcla de caracteres:</strong> Mayúsculas, minúsculas, números y símbolos especiales (!@#$%&*).</li>
+              <li><strong>Sin datos personales:</strong> No usar nombres, fechas de nacimiento, números de teléfono ni palabras comunes del diccionario.</li>
+              <li><strong>Única para cada servicio:</strong> Nunca reutilizar contraseñas entre diferentes plataformas. Si una se filtra, las demás permanecerán seguras.</li>
+              <li><strong>Gestores de contraseñas:</strong> Herramientas como Bitwarden, KeePass o Google Password Manager almacenan todas nuestras contraseñas de forma cifrada. Solo necesitamos recordar una contraseña maestra.</li>
+              <li><strong>Frases mnemotécnicas:</strong> Crear frases fáciles de recordar pero difíciles de adivinar. Ejemplo: «Mi@Gato$Come4Peces!Cada7Noche» tiene 34 caracteres y es prácticamente imposible de descifrar.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Usa el método de las tres palabras aleatorias: combina tres palabras poco comunes con números y símbolos. Por ejemplo: «Cactus$42@Nebulosa!7Rover». Esta contraseña tiene más de 30 caracteres y combina diferentes tipos de caracteres, haciéndola extremadamente segura pero fácil de recordar.
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato importante</strong>
+            El 81% de las filtraciones de datos se deben a contraseñas débiles o reutilizadas. Usar la misma contraseña en múltiples servicios es el error más común y peligroso en ciberseguridad. Un gestor de contraseñas resuelve este problema de forma sencilla.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En esta sesión realizaremos las siguientes actividades:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Evaluar la fortaleza de nuestras contraseñas actuales usando herramientas online.</li>
+              <li>Crear una contraseña segura usando el método de las tres palabras.</li>
+              <li>Configurar un gestor de contraseñas (Bitwarden o KeePass).</li>
+              <li>Revisar la configuración de firewall y antivirus del ordenador.</li>
+              <li>Analizar un ejemplo de correo de phishing y identificar los indicadores de alerta.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: Modelo IA + decálogo de ciberseguridad</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Producto de la unidad</strong>
+            En esta sesión finalizaremos el proyecto integrador que combina dos componentes: un modelo de Inteligencia Artificial creado con Teachable Machine y un decálogo de buenas prácticas de ciberseguridad. Este proyecto demuestra la comprensión de los tres bloques temáticos de la unidad.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componente 1: Modelo de IA con Teachable Machine</h4>
+            <p>Cada alumno o grupo creará un modelo de aprendizaje automático utilizando Teachable Machine de Google. El proceso incluye:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Definición del problema:</strong> Elegir una tarea de clasificación (por ejemplo: clasificar frutas, identificar emociones, reconocer gestos, distinguir entre animales).</li>
+              <li><strong>Recolección de datos:</strong> Capturar al menos 30 imágenes por categoría usando la cámara del ordenador. Incluir variaciones de ángulo, iluminación y fondo para mejorar la robustez del modelo.</li>
+              <li><strong>Entrenamiento:</strong> Entrenar el modelo con los datos recopilados. Ajustar los parámetros de entrenamiento si es necesario.</li>
+              <li><strong>Evaluación:</strong> Probar el modelo con imágenes nuevas que no se hayan usado en el entrenamiento. Calcular la precisión (accuracy) y analizar los errores.</li>
+              <li><strong>Exportación:</strong> Exportar el modelo para uso web, poniéndolo a disposición de otros usuarios.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo para el éxito</strong>
+            La calidad de los datos de entrenamiento es fundamental. Incluir imágenes variadas (diferentes ángulos, iluminación, fondos) mejora significativamente la precisión del modelo. Un modelo entrenado con 50 imágenes variadas por categoría generalmente supera uno entrenado con 100 imágenes similares entre sí.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componente 2: Decálogo de ciberseguridad</h4>
+            <p>Cada grupo redactará un decálogo (10 normas) de buenas prácticas de ciberseguridad adaptado al contexto del centro educativo. El decálogo debe incluir:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Contraseñas:</strong> Normas para crear y gestionar contraseñas seguras.</li>
+              <li><strong>Dispositivos:</strong> Cuidado de ordenadores, tablets y móviles del centro.</li>
+              <li><strong>Red:</strong> Uso responsable de la red WiFi del centro.</li>
+              <li><strong>Correo:</strong> Cómo identificar y gestionar correos sospechosos.</li>
+              <li><strong>Redes sociales:</strong> Privacidad y comportamiento responsable.</li>
+              <li><strong>Descargas:</strong> Normas para descargar archivos de forma segura.</li>
+              <li><strong>Copias de seguridad:</strong> Importancia de guardar el trabajo periodicamente.</li>
+              <li><strong>Reporte:</strong> A quién comunicar incidentes de seguridad.</li>
+              <li><strong>Actualizaciones:</strong> Mantener los dispositivos actualizados.</li>
+              <li><strong>Educación:</strong> Aprender continuamente sobre nuevas amenazas.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructura de la presentación</h4>
+            <p>Cada grupo presentará su proyecto al resto de la clase con una duración máxima de 10 minutos:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Introducción (2 min):</strong> Presentar el problema que resuelve el modelo de IA y por qué es relevante.</li>
+              <li><strong>Demostración del modelo (3 min):</strong> Mostrar el modelo en funcionamiento con ejemplos reales. Explicar el proceso de entrenamiento y la precisión obtenida.</li>
+              <li><strong>Decálogo (3 min):</strong> Presentar las 10 normas de ciberseguridad y explicar por qué cada una es importante.</li>
+              <li><strong>Reflexión (2 min):</strong> Compartir qué han aprendido, qué dificultades han encontrado y cómo han las resuelto.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Rúbrica de evaluación</h4>
+            <p>El proyecto se evaluará según los siguientes criterios:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Modelo de IA (40%):</strong> Funcionalidad, precisión, calidad de los datos de entrenamiento y explicación del proceso.</li>
+              <li><strong>Decálogo (30%):</strong> Claridad, utilidad, originalidad y adaptación al contexto del centro.</li>
+              <li><strong>Presentación (20%):</strong> Claridad expositiva, gestión del tiempo y capacidad de responder preguntas.</li>
+              <li><strong>Documentación (10%):</strong> Incluye diagrama de flujo del modelo y texto escrito del decálogo.</li>
+            </ul>
+          </div>
+
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un modelo de IA se entrena mejor con pocos datos muy similares.</button>
+            <button class="quiz-opcion" data-valor="b">B. La precisión del modelo no depende de la calidad de los datos.</button>
+            <button class="quiz-opcion" data-valor="c">C. La variabilidad en los datos de entrenamiento mejora la robustez del modelo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué factor influye más en la calidad de un modelo de IA?</p>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Usar contraseñas cortas y fáciles de recordar.</button>
+            <button class="quiz-opcion" data-valor="b">B. Usar un gestor de contraseñas con contraseñas únicas y largas.</button>
+            <button class="quiz-opcion" data-valor="c">C. Compartir contraseñas con compañeros de confianza.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la mejor práctica de gestión de contraseñas?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Producto final</strong>
+            El decálogo grupal se imprimirá y se exhibirá en las aulas de informática del centro. Los modelos de IA se compartirán en un repositorio común para que todos los alumnos puedan probarlos. El mejor modelo y el mejor decálogo serán reconocidos en el acto de fin de curso.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud5.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 transition">
+        ← Anterior: UD5 · Robótica Educativa
+      </a>
+      <span class="text-sm text-slate-400">Última unidad</span>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

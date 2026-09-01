@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3º ESO · Computación y Robótica · IES Pintor Pedro Gómez</title>
-  <meta name="description" content="Unidades, proyectos ABP y criterios BOJA de 3º ESO. Desarrollo web, IA, Big Data, scraping, ciberseguridad y propiedad intelectual." />
+  <meta name="description" content="Unidades didácticas de 3.º ESO: programación Python, desarrollo móvil y web, computación física, IoT, robótica, datos, IA y ciberseguridad." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,81 +26,113 @@
 
   <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
 
-    <section class="rounded-2xl bg-gradient-to-br from-ink-800 to-brand-700 p-8 text-white shadow-lg">
-      <p class="text-sm font-semibold uppercase tracking-wider text-brand-200">Curso 2025/26 · 3º ESO</p>
-      <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">Aplicación, Datos e Inteligencia</h1>
-      <p class="mt-3 max-w-2xl text-white/90">Saberes básicos <span class="font-semibold">BOJA</span>: desarrollo de aplicaciones web, <span class="font-semibold">IA y Big Data</span>, scraping ético, ciberseguridad, protección de datos y propiedad intelectual. Metodología <span class="font-semibold">ABP</span>.</p>
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">Curso 2025/26 · 3.º ESO</p>
+      <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">Computación y Robótica</h1>
+      <p class="mt-3 max-w-2xl text-brand-50/90">Saberes básicos de la <span class="font-semibold">BOJA</span> organizados en 6 unidades didácticas por trimestres. Damos el salto a Python, profundizamos en desarrollo web y móvil, y abordamos robótica avanzada, IoT, datos masivos, IA y ciberseguridad.</p>
     </section>
 
     <section class="mt-8" data-tab-group>
       <div class="flex flex-wrap gap-2" role="tablist">
-        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="unidades" aria-selected="true">Unidades de trabajo</button>
-        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="proyectos" aria-selected="false">Proyectos de aula (ABP)</button>
+        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="unidades" aria-selected="true">Unidades didácticas</button>
         <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="boja" aria-selected="false">Criterios BOJA</button>
       </div>
 
       <div class="tab-panel mt-5" data-panel="unidades">
-        <div class="grid gap-4 md:grid-cols-2">
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD1 · Desarrollo de apps web</h3>
-            <p class="mt-1 text-sm text-slate-600">HTML5 semántico, CSS3 responsive y JS vanilla. Accesibilidad y usabilidad.</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD2 · Big Data e IA básica</h3>
-            <p class="mt-1 text-sm text-slate-600">Conceptos de datos masivos, aprendizaje automático y ética algorítmica.</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD3 · Scraping y tratamiento de datos</h3>
-            <p class="mt-1 text-sm text-slate-600">Obtención, limpieza y visualización de datos con herramientas libres (Python).</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD4 · Ciberseguridad y privacidad</h3>
-            <p class="mt-1 text-sm text-slate-600">RGPD/LOPDGDD, contraseñas, amenazas y hábitos digitales seguros.</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD5 · Propiedad intelectual y licencias</h3>
-            <p class="mt-1 text-sm text-slate-600">Derechos de autor, Creative Commons y cultura de código abierto.</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD6 · Proyecto integrador (ABP)</h3>
-            <p class="mt-1 text-sm text-slate-600">App web con datos reales, IA o IoT, documentada bajo licencia abierta.</p>
-          </article>
-        </div>
-      </div>
 
-      <div class="tab-panel mt-5 hidden" data-panel="proyectos">
-        <div class="rounded-xl border border-ink-800/20 bg-slate-100 p-6">
-          <h3 class="font-bold text-ink-800">Proyecto integrador · "Mi app con propósito"</h3>
-          <p class="mt-2 text-sm text-slate-700">ABP: desarrollar una aplicación web que resuelva una necesidad del centro (ej. agenda de reciclaje, mapa de sombras, consulta de datos abiertos). Incluye scraping ético, privacidad por diseño y licencia CC BY-NC 4.0.</p>
-          <ul class="mt-3 grid gap-2 text-sm text-slate-700 sm:grid-cols-2">
-            <li>✓ Fase 1 — Análisis y modelado de datos</li>
-            <li>✓ Fase 2 — Front-end accesible</li>
-            <li>✓ Fase 3 — Back-end / scraping ético</li>
-            <li>✓ Fase 4 — Ciberseguridad y licencia</li>
+        <details class="ud-card mb-4" open>
+          <summary><h3 class="font-bold text-ink-800">UD1 · Introducción a la Programación y Python</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> A · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Programa en Python con funciones y estructuras de control.</p>
+          <a href="3eso/ud1.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.A.1. Conexión de lenguajes visuales con textuales.</li>
+            <li>CYR.3.A.2. Generación de programas con bloques.</li>
+            <li>CYR.3.A.3. Secuencia de instrucciones. Implementación de algoritmos.</li>
+            <li>CYR.3.A.4. Bucles y condicionales anidadas básicas.</li>
+            <li>CYR.3.A.5. Entornos de interacción con el usuario.</li>
           </ul>
-        </div>
+          <p class="mt-2"><span class="criterio">1.3 · Estructura de un programa</span><span class="criterio">2.1 · Resolución de problemas</span><span class="criterio">2.2 · Apps móviles</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD2 · Desarrollo de Aplicaciones Móviles</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> D · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> App móvil completa con Thunkable.</p>
+          <a href="3eso/ud2.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.D.1–5. IDEs, programación orientada a eventos, sensores y E/S.</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">2.2 · Apps móviles</span><span class="criterio">2.3 · Desarrollo de apps e IoT</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD3 · Desarrollo Web</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> E · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Sitio web interactivo con HTML, CSS y JavaScript.</p>
+          <a href="3eso/ud3.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.E.1–4. Estructura web, servidores, lenguajes y animación.</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">5.1 · Aplicaciones web seguras</span><span class="criterio">5.2 · Problemas en desarrollo web</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD4 · Computación Física e IoT</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloques:</span> F + B · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Sistema IoT con ESP32 y sensores conectado a nube.</p>
+          <a href="3eso/ud4.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.F.1–4. Sistemas de computación, microcontroladores, hardware/software.</li>
+            <li>CYR.3.B.1–4. Sensores IoT, nube, protocolos (Zigbee, BLE, Z-Wave).</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">1.1 · Computación física</span><span class="criterio">2.3 · Desarrollo apps e IoT</span><span class="criterio">3.1 · Sistemas sostenibles</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD5 · Robótica y Datos Masivos</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloques:</span> C + G · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Robot programado en Python + análisis de datos con scraping.</p>
+          <a href="3eso/ud5.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.C.1–5. Grados de libertad, articulaciones, AGV, programación en texto.</li>
+            <li>CYR.3.G.1–4. Metadatos, uso, almacenamiento y data scraping.</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">1.1 · Computación física</span><span class="criterio">1.2 · Robótica en la sociedad</span><span class="criterio">1.3 · Estructura de un programa</span><span class="criterio">4.1 · Análisis de datos</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD6 · Inteligencia Artificial y Ciberseguridad</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 3.º · <span class="font-semibold">Bloques:</span> H + I · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Proyecto de IA ética + informe de ciberseguridad.</p>
+          <a href="3eso/ud6.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.H.1–5. Situación actual, ética, agentes, ML, refuerzo.</li>
+            <li>CYR.3.I.1–5. Tipologías, concienciación, malware, soluciones, propiedad intelectual.</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">4.2 · IA y aprendizaje automático</span><span class="criterio">6.1 · Protección en la red</span><span class="criterio">6.2 · Uso responsable</span><span class="criterio">6.3 · Derechos de autor</span><span class="criterio">6.4 · Seguridad activa y pasiva</span></p>
+        </details>
       </div>
 
       <div class="tab-panel mt-5 hidden" data-panel="boja">
-        <div class="space-y-3">
-          <p class="text-sm text-slate-600">Criterios de evaluación asociados (extracto BOJA Andalucía):</p>
-          <span class="criterio">CE1 · Desarrollar apps web</span>
-          <span class="criterio">CE2 · Explicar IA y Big Data</span>
-          <span class="criterio">CE3 · Obtener y tratar datos</span>
-          <span class="criterio">CE4 · Aplicar ciberseguridad</span>
-          <span class="criterio">CE5 · Respetar la privacidad</span>
-          <span class="criterio">CE6 · Reconocer licencias abiertas</span>
+        <p class="text-sm text-slate-600">Criterios de evaluación asociados (extracto BOJA · 3.º ESO):</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="criterio">1.1 · Computación física</span>
+          <span class="criterio">1.2 · Robótica en la sociedad</span>
+          <span class="criterio">1.3 · Estructura de un programa</span>
+          <span class="criterio">2.1 · Resolución de problemas</span>
+          <span class="criterio">2.2 · Apps móviles</span>
+          <span class="criterio">2.3 · Apps e IoT</span>
+          <span class="criterio">3.1 · Sistemas sostenibles</span>
+          <span class="criterio">4.1 · Análisis de datos</span>
+          <span class="criterio">4.2 · IA y aprendizaje automático</span>
+          <span class="criterio">5.1 · Aplicaciones web seguras</span>
+          <span class="criterio">5.2 · Desarrollo web</span>
+          <span class="criterio">6.1 · Protección en la red</span>
+          <span class="criterio">6.2 · Uso responsable</span>
+          <span class="criterio">6.3 · Derechos de autor</span>
+          <span class="criterio">6.4 · Seguridad activa y pasiva</span>
         </div>
-      </div>
-    </section>
-
-    <section class="mt-10 rounded-xl border border-slate-200 bg-white p-6">
-      <h2 class="text-lg font-bold text-ink-800">Recursos y herramientas libres</h2>
-      <div class="mt-3 flex flex-wrap gap-2 text-sm">
-        <span class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700">HTML5 / CSS3 / JS</span>
-        <span class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700">Python (pandas)</span>
-        <span class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700">Jupyter</span>
-        <span class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700">Licencias CC / GPL</span>
       </div>
     </section>
   </main>

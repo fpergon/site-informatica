@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD2 · Desarrollo de Aplicaciones Móviles · 2º ESO</title>
+  <meta name="description" content="Unidad Didáctica 2 de 2º ESO: Desarrollo de aplicaciones móviles. IDEs de bloques, programación orientada a eventos, sensores y proyecto final." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2eso.html" class="hover:underline">2.º ESO</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque D</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Desarrollo de Aplicaciones Móviles</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Aprender a desarrollar aplicaciones móviles utilizando entornos de desarrollo visual por bloques, comprendiendo la programación orientada a eventos, el manejo de sensores y la creación de interfaces interactivas. Esta unidad sentará las bases para el desarrollo móvil y la comprensión de cómo los dispositivos interactúan con el mundo real.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: App interactiva con Thunkable</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque D — Desarrollo Móvil</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">D.2.2</span> Desarrollo de aplicaciones móviles con entornos de bloques.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">D.2.3</span> Programación orientada a eventos y manejo de sensores.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">2.2 · Uso de IDEs de bloques para desarrollo móvil</span>
+        <span class="criterio">2.3 · Programación orientada a eventos y sensores</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">IDEs de bloques para móviles</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicial presenta los entornos de desarrollo visual por bloques que utilizaremos durante la unidad. Es fundamental que el alumnado comprenda las características compartidas antes de empezar a crear sus primeras aplicaciones.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El desarrollo de aplicaciones móviles ya no es exclusivo de programadores expertos. Gracias a los entornos de desarrollo visual por bloques, cualquier persona puede crear aplicaciones funcionales sin necesidad de escribir código complejo. En esta sesión exploraremos las principales plataformas disponibles y sus características compartidas que facilitan el proceso de creación.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Thunkable</h4>
+            <p><strong>Thunkable</strong> es una plataforma de desarrollo de aplicaciones móviles que utiliza un sistema de bloques visuales similar a Scratch. Permite crear aplicaciones para Android e iOS desde el navegador web. Sus principales ventajas incluyen una interfaz de arrastrar y soltar intuitiva, acceso directo a sensores del dispositivo, posibilidad de probar las aplicaciones en tiempo real mediante una aplicación companion, y exportación directa a tiendas de aplicaciones. Thunkable es ideal para principiantes porque ofrece plantillas prediseñadas y una curva de aprendizaje suave.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">MIT App Inventor</h4>
+            <p><strong>MIT App Inventor</strong> es un proyecto del Instituto Tecnológico de Massachusetts que permite crear aplicaciones Android completamente funcionales. Utiliza un entorno de bloques similar a Scratch pero con bloques específicos para desarrollo móvil. Destaca por su comunidad activa, documentación extensa y integración directa con servicios de Google. Es gratuito y de código abierto, lo que lo hace muy popular en el ámbito educativo. El entorno incluye un emulador integrado para probar las aplicaciones en el ordenador.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">AppyBuilder</h4>
+            <p><strong>AppyBuilder</strong> es otra plataforma de desarrollo visual que permite crear aplicaciones móviles sin programar. Ofrece una interfaz de bloques similar a App Inventor pero con algunas diferencias en la organización de los componentes. Es conocido por su facilidad de uso y por proporcionar plantillas de aplicaciones listas para personalizar. La plataforma incluye funcionalidades avanzadas como bases de datos en la nube y notificaciones push que permiten crear aplicaciones más complejas.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Características compartidas</strong>
+            Todos estos entornos comparten características esenciales: interfaz visual de arrastrar y soltar, previsualización en tiempo real del diseño, acceso directo al hardware del dispositivo (cámara, GPS, acelerómetro), bloques predefinidos para lógica y eventos, y posibilidad de exportar a tiendas de aplicaciones.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Acceso a hardware</h4>
+            <p>Una de las grandes ventajas de estos entornos es la capacidad de acceder directamente al hardware del dispositivo móvil. Podemos utilizar la cámara para capturar fotos o vídeos, el GPS para obtener la ubicación actual, el acelerómetro para detectar movimientos y orientación, el micrófono para grabar audio, y los sensores de proximidad y luz ambiental. Esta integración directa permite crear aplicaciones que interactúan con el mundo físico de manera significativa.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Bloques predefinidos</h4>
+            <p>Los bloques predefinidos constituyen la base de la programación en estos entornos. Incluyen bloques para eventos (cuando el usuario pulsa un botón), bloques de control (si-entonces, bucles), bloques de lógica (y, o, no), bloques matemáticos (sumas, restas, comparaciones), bloques de texto (unir, dividir, convertir), y bloques específicos de cada componente (cámara, sensores, almacenamiento). Esta modularidad permite construir aplicaciones complejas combinando bloques simples.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Interfaz visual de arrastrar y soltar.</button>
+            <button class="quiz-opcion" data-valor="b">B. Escribir código en lenguajes como Java o Swift.</button>
+            <button class="quiz-opcion" data-valor="c">C. Usar solo terminal de comandos.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué característica principal comparten los IDEs de bloques?</p>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. No permiten acceder a sensores del dispositivo.</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo funcionan en ordenadores de escritorio.</button>
+            <button class="quiz-opcion" data-valor="c">C. Permiten crear aplicaciones para Android e iOS.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué pueden hacer los IDEs de bloques como Thunkable?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad práctica</strong>
+            Vamos a crear una cuenta gratuita en Thunkable y explorar su interfaz. Seguiremos un tutorial paso a paso para crear una aplicación básica con un botón que muestre un mensaje al ser pulsado.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Programación orientada a eventos</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            La programación orientada a eventos es el paradigma fundamental del desarrollo móvil. Es crucial que el alumnado entienda el enfoque reactivo y las características que la definen antes de profundizar en los tipos de eventos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En el desarrollo de aplicaciones móviles, el usuario interactúa constantemente con la pantalla: pulsa botones, desliza, escribe y realiza gestos. La programación orientada a eventos es el paradigma que permite a las aplicaciones responder a estas interacciones de manera eficiente y fluida.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la programación orientada a eventos?</h4>
+            <p>La programación orientada a eventos es un paradigma de programación en el que el flujo del programa está determinado por <strong>eventos</strong>. Un evento puede ser una acción del usuario (pulso de botón, deslizamiento), una señal del sistema (inicio de la aplicación, error) o una notificación externa (mensaje recibido, cambio de ubicación). En lugar de ejecutar instrucciones de forma secuencial, el programa espera a que ocurran eventos y ejecuta el código correspondiente cuando estos se producen.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo para comprender los fundamentos de la programación orientada a eventos en desarrollo móvil:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/p8vHTwVqvWs" title="Programación orientada a eventos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Enfoque reactivo</h4>
+            <p>El enfoque reactivo significa que la aplicación <strong>reacciona</strong> a los eventos que ocurren en lugar de controlar activamente el flujo. Por ejemplo, cuando un usuario pulsa un botón, se dispara un evento "onClick" que ejecuta una función específica. Este modelo es intuitivo porque refleja cómo interactuamos con las aplicaciones en la vida real: esperamos a que algo ocurra y respondemos en consecuencia.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Características principales</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Asincronía:</strong> Los eventos pueden ocurrir en cualquier momento, sin un orden predefinido. La aplicación debe poder manejar múltiples eventos simultáneamente.</li>
+              <li><strong>Encapsulamiento:</strong> Cada evento se maneja de forma independiente. El código de respuesta a un evento no afecta directamente a otros eventos.</li>
+              <li><strong>Interfaz intuitiva:</strong> El programador solo necesita definir qué hacer cuando ocurra cada evento, sin preocuparse por el flujo general del programa.</li>
+              <li><strong>Desacoplamiento:</strong> Los componentes de la aplicación están separados, lo que facilita el mantenimiento y las modificaciones.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ventajas e inconvenientes</h4>
+            <p><strong>Ventajas:</strong> Facilita el desarrollo de interfaces de usuario interactivas, permite crear aplicaciones responsivas, simplifica la gestión de múltiples acciones simultáneas, y es más fácil de aprender para principiantes porque se parece a la forma natural de interactuar con los dispositivos.</p>
+            <p class="mt-2"><strong>Inconvenientes:</strong> Puede ser difícil de depurar cuando hay muchos eventos anidados, el flujo del programa no es lineal lo que complica la comprensión global, y puede generar código duplicado si no se gestionan correctamente las funciones de respuesta.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico</h4>
+            <p>Consideremos una aplicación sencilla con dos botones: uno para cambiar el color de fondo y otro para mostrar un mensaje. En programación orientada a eventos, definiríamos dos manejadores de eventos: uno que se ejecuta al pulsar el primer botón (cambia el color) y otro que se ejecuta al pulsar el segundo botón (muestra el mensaje). Cada evento se maneja de forma independiente.</p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Reflexión</strong>
+            ¿Qué diferencias encontráis entre programar de forma secuencial (como en Scratch básico) y programar de forma orientada a eventos? ¿En qué situaciones sería más útil cada enfoque?
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Dependencia de eventos</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            En esta sesión analizaremos cómo los eventos pueden depender unos de otros, creando cadenas de eventos. El ejemplo de TikTok ayudará a visualizar este concepto de forma práctica y familiar.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En las aplicaciones móviles, los eventos no ocurren de forma aislada. Muchas veces, un evento dispara otro, que a su vez activa otro, creando una cadena de eventos interdependientes. Comprender esta dependencia es clave para diseñar aplicaciones que funcionen correctamente en escenarios reales.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la cadena de eventos?</h4>
+            <p>Una cadena de eventos es una secuencia donde cada evento es consecuencia del anterior. Por ejemplo, al abrir una aplicación de mensajería: primero se inicia la sesión (evento 1), luego se carga la lista de contactos (evento 2), después se selecciona un contacto (evento 3) y finalmente se envía un mensaje (evento 4). Cada paso depende del anterior y sin completar el paso anterior, el siguiente no puede ejecutarse.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo: TikTok</h4>
+            <p>Tomemos como ejemplo <strong>TikTok</strong>, una aplicación que todos conocemos. Analicemos la cadena de eventos completa:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Inicio de sesión:</strong> El usuario abre la aplicación y se autentica (evento de usuario).</li>
+              <li><strong>Selección de contenido:</strong> El usuario elige si crear un nuevo vídeo o ver los existentes.</li>
+              <li><strong>Carga de recursos:</strong> Si elige crear, la aplicación accede a la cámara y al micrófono (evento de sistema).</li>
+              <li><strong>Edición:</strong> El usuario graba, añade efectos y música (eventos de usuario y sensores).</li>
+              <li><strong>Publicación:</strong> El vídeo se sube a los servidores de TikTok (evento de red).</li>
+              <li><strong>Visualización:</strong> Otros usuarios pueden ver y reaccionar al vídeo (eventos de usuario).</li>
+              <li><strong>Interacción:</strong> Los usuarios pueden comentar, compartir o dar "me gusta" (eventos de usuario).</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Observa la cadena</strong>
+            Cada paso de esta cadena depende del anterior. Si falla la conexión a Internet en el paso 5 (publicación), los pasos 6 y 7 no pueden ejecutarse. Esto demuestra la importancia de manejar correctamente las dependencias entre eventos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Gestión de errores en cadenas</h4>
+            <p>Cuando una cadena de eventos falla en algún punto, es fundamental tener un plan de contingencia. Por ejemplo, si la publicación del vídeo falla por falta de conexión, la aplicación debería guardar el vídeo localmente y intentarlo más tarde, o mostrar un mensaje de error claro al usuario. Los bloqueos en cadenas de eventos son una de las causas más comunes de problemas en aplicaciones móviles.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En grupos de 3-4 alumnos, vais a diseñar la cadena de eventos de una aplicación de música (como Spotify). Identificad al menos 5 eventos consecutivos desde que el usuario abre la aplicación hasta que reproduce una canción. Indicad qué tipo de evento es cada uno (usuario, sistema, red).</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Son eventos que ocurren al mismo tiempo.</button>
+            <button class="quiz-opcion" data-valor="b">B. Son secuencias donde cada evento es consecuencia del anterior.</button>
+            <button class="quiz-opcion" data-valor="c">C. Son eventos que no tienen relación entre sí.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es una cadena de eventos?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Cada grupo presentará su cadena de eventos de la aplicación de música al resto de la clase. Se evaluará la claridad de la secuencia y la correcta identificación de los tipos de eventos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Tipos de eventos</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión clasifica los diferentes tipos de eventos que pueden ocurrir en una aplicación móvil. Es importante que el alumnado distinga entre ellos para poder diseñar sus propias aplicaciones de manera efectiva.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los eventos en las aplicaciones móviles pueden clasificarse en varias categorías según su origen y naturaleza. Conocer estos tipos nos permite diseñar aplicaciones más robustas y preparadas para diferentes situaciones.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo para profundizar en los diferentes tipos de eventos en desarrollo móvil:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" title="Tipos de eventos en desarrollo móvil" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos de usuario</h4>
+            <p>Son los más comunes y directos. Se originan por la interacción física del usuario con el dispositivo. Incluyen pulsaciones de botones, deslizamientos en la pantalla (swipe), pellizcos para zoom, escritura en campos de texto, selección de elementos en listas, gestos personalizados como doble pulsación o pulsación larga, y navegación entre pantallas. Estos eventos son predecibles y el programador puede anticiparlos fácilmente.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos de sistema</h4>
+            <p>Son generados por el propio sistema operativo del dispositivo. Incluyen el inicio y cierre de la aplicación, cambios en la orientación de la pantalla (horizontal a vertical), recepción de llamadas o mensajes, cambios en la conexión de red (WiFi a datos móviles), bajo nivel de batería, y notificaciones de otros procesos. Estos eventos son menos predecibles y requieren manejo cuidadoso para evitar interrumpir la experiencia del usuario.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos de tiempo</h4>
+            <p>Son generados por el paso del tiempo o por temporizadores programados. Ejemplos incluyen actualizaciones periódicas de contenido, animaciones que se ejecutan cada cierto intervalo, recordatorios programados, temporizadores de cuenta atrás, y actualización de la ubicación cada N segundos. Estos eventos son útiles para mantener la aplicación actualizada sin intervención del usuario.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos de sensores</h4>
+            <p>Son generados por los sensores físicos del dispositivo. Incluyen el acelerómetro (detecta movimiento y orientación), el giroscopio (detecta rotación), el GPS (proporciona ubicación), el sensor de proximidad (detecta objetos cercanos), el sensor de luz (mide luminosidad ambiental), y el barómetro (mide presión atmosférica). Estos eventos permiten crear aplicaciones que interactúan con el entorno físico.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos de red</h4>
+            <p>Son generados por la conexión a Internet o por la ausencia de ella. Incluyen la recepción de datos de servidores, la actualización de contenido en tiempo real, la sincronización de datos entre dispositivos, la pérdida de conexión, y la reconexión automática. Estos eventos son fundamentales para aplicaciones que dependen de datos en línea como redes sociales o aplicaciones de mensajería.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tabla resumen</h4>
+            <div class="mt-2 overflow-x-auto">
+              <table class="w-full text-sm border border-slate-200">
+                <thead class="bg-brand-50">
+                  <tr>
+                    <th class="border border-slate-200 px-3 py-2 text-left">Tipo</th>
+                    <th class="border border-slate-200 px-3 py-2 text-left">Ejemplo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="border border-slate-200 px-3 py-2">Usuario</td><td class="border border-slate-200 px-3 py-2">Pulsación de botón, deslizamiento</td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2">Sistema</td><td class="border border-slate-200 px-3 py-2">Cambio de orientación, llamada entrante</td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2">Tiempo</td><td class="border border-slate-200 px-3 py-2">Temporizador, actualización periódica</td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2">Sensores</td><td class="border border-slate-200 px-3 py-2">Acelerómetro, GPS, luz ambiental</td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2">Red</td><td class="border border-slate-200 px-3 py-2">Recepción de datos, pérdida de conexión</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad práctica</strong>
+            Analizad la aplicación de cámara de vuestro móvil e identificad al menos dos eventos de cada tipo (usuario, sistema, tiempo, sensores, red) que puedan ocurrir durante su uso.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Eventos de entrada y salida (E/S)</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión profundiza en los eventos de entrada (input) y salida (output) que son fundamentales para la interacción usuario-aplicación. La tabla de ejemplo de una app de compras ayudará a visualizar estos conceptos en un contexto real.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En el desarrollo de aplicaciones móviles, la interacción se divide fundamentalmente en dos tipos: entradas (lo que el usuario proporciona a la aplicación) y salidas (lo que la aplicación muestra o comunica al usuario). Comprender esta distinción es esencial para crear interfaces intuitivas y funcionales.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos de entrada (input)</h4>
+            <p>Las entradas son las acciones que realiza el usuario para comunicarse con la aplicación. Los tipos principales incluyen:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Toques:</strong> Pulsaciones simples en botones, iconos o elementos de la interfaz.</li>
+              <li><strong>Gestos:</strong> Acciones más complejas como deslizamientos (swipe), pellizcos (pinch), rotación con dos dedos, pulsación larga, y arrastrar y soltar.</li>
+              <li><strong>Voz:</strong> Comandos de voz o dictado mediante el micrófono del dispositivo.</li>
+              <li><strong>Escritura:</strong> Introducción de texto en campos de formulario, búsqueda o mensajes.</li>
+              <li><strong>Sensores:</strong> Movimiento del dispositivo, orientación, ubicación geográfica.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos de salida (output)</h4>
+            <p>Las salidas son las respuestas que proporciona la aplicación al usuario. Los tipos principales incluyen:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Visuales:</strong> Textos, imágenes, animaciones, cambios de color, notificaciones en pantalla.</li>
+              <li><strong>Auditivas:</strong> Sonidos, vibraciones, alertas sonoras.</li>
+              <li><strong>Táctiles:</strong> Vibración del dispositivo para confirmar acciones o alertar.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tabla ejemplo: App de compras</h4>
+            <div class="mt-2 overflow-x-auto">
+              <table class="w-full text-sm border border-slate-200">
+                <thead class="bg-brand-50">
+                  <tr>
+                    <th class="border border-slate-200 px-3 py-2 text-left">Acción</th>
+                    <th class="border border-slate-200 px-3 py-2 text-left">Entrada</th>
+                    <th class="border border-slate-200 px-3 py-2 text-left">Salida</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="border border-slate-200 px-3 py-2">Buscar producto</td><td class="border border-slate-200 px-3 py-2">Toque en barra de búsqueda + escritura</td><td class="border border-slate-200 px-3 py-2">Lista de resultados visual</td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2">Añadir al carrito</td><td class="border border-slate-200 px-3 py-2">Toque en botón "Añadir"</td><td class="border border-slate-200 px-3 py-2">Animación + vibración + notificación</td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2">Confirmar compra</td><td class="border border-slate-200 px-3 py-2">Pellizco para zoom en detalles + toque</td><td class="border border-slate-200 px-3 py-2">Mensaje visual + sonido de confirmación</td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2">Error de pago</td><td class="border border-slate-200 px-3 py-2">Toque en "Pagar"</td><td class="border border-slate-200 px-3 py-2">Mensaje de error visual + vibración de alerta</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Diseño de interfaces</strong>
+            Un buen diseño de interfaces equilibra entradas y salidas. Cada acción del usuario debe recibir una retroalimentación clara (visual, auditiva o táctil) para que sepa que la aplicación ha registrado su interacción.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Diseñad la tabla de eventos de entrada y salida para una aplicación de ejercicio físico (como Strava o Nike Run Club). Identificad al menos 5 acciones diferentes con sus respectivas entradas y salidas.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Acciones del usuario (toques, gestos, voz).</button>
+            <button class="quiz-opcion" data-valor="b">B. Respuestas de la aplicación (visuales, auditivas).</button>
+            <button class="quiz-opcion" data-valor="c">C. Eventos generados por sensores.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué son los eventos de entrada (input)?</p>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Solo respuestas visuales.</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo sonidos y vibraciones.</button>
+            <button class="quiz-opcion" data-valor="c">C. Respuestas visuales, auditivas y táctiles.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué tipos de salida puede proporcionar una aplicación?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Presentar la tabla de eventos de entrada y salida de la aplicación de ejercicio. Se evaluará la completitud y la correcta clasificación de los eventos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Sensores como generadores de eventos</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Los sensores son componentes físicos del dispositivo que permiten a las aplicaciones interactuar con el entorno real. Esta sesión es fundamental para el proyecto final donde el alumnado deberá incorporar sensores en sus aplicaciones.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los dispositivos móviles modernos incluyen una variedad de sensores que miden aspectos del entorno físico. Estos sensores generan eventos que las aplicaciones pueden utilizar para crear experiencias interactivas y contextuales. Comprender cómo funcionan estos sensores es esencial para el desarrollo de aplicaciones innovadoras.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Acelerómetro</h4>
+            <p>El acelerómetro mide la aceleración del dispositivo en tres ejes (X, Y, Z). Detecta cuando el dispositivo se mueve, cambia de orientación o vibra. <strong>Ejemplos de uso:</strong> Juegos que responden al movimiento del dispositivo (como un tenis de mesa virtual), aplicaciones de fitness que cuentan pasos, detección de caídas para aplicaciones de seguridad, y control de reproducción de música con gestos del dispositivo.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Giroscopio</h4>
+            <p>El giroscopio mide la velocidad de rotación del dispositivo en tres ejes. Proporciona información más precisa que el acelerómetro para detectar rotaciones. <strong>Ejemplos de uso:</strong> Realidad aumentada donde el contenido se ajusta según la orientación del dispositivo, navegación interior en edificios, y juegos que requieren precisión en los movimientos de rotación.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">GPS (Global Positioning System)</h4>
+            <p>El GPS proporciona la ubicación geográfica exacta del dispositivo (latitud, longitud, altitud). <strong>Ejemplos de uso:</strong> Aplicaciones de mapas y navegación (Google Maps), rastreo de actividad física (registra rutas y distancias), geolocalización de fotos, y servicios basados en la ubicación (restaurantes cercanos).</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sensor de proximidad</h4>
+            <p>Detecta la presencia de objetos cercanos sin contacto físico. Normalmente se utiliza para apagar la pantalla durante las llamadas telefónicas. <strong>Ejemplos de uso:</strong> Apagar la pantalla automáticamente cuando el usuario se lleva el dispositivo al oído, activar funciones cuando el usuario se acerca al dispositivo, y detección de gestos sin contacto.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sensor de luz</h4>
+            <p>Mide la intensidad de la luz ambiental que incide sobre el dispositivo. <strong>Ejemplos de uso:</strong> Ajuste automático del brillo de la pantalla según las condiciones de iluminación, activación del modo nocturno en la oscuridad, y control inteligente del consumo de energía.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Barómetro</h4>
+            <p>Mide la presión atmosférica. Permite determinar la altitud del dispositivo. <strong>Ejemplos de uso:</strong> Aplicaciones de senderismo que muestran la altitud actual, predicción meteorológica local, y mejora de la precisión del GPS en ubicaciones verticales (edificios con múltiples plantas).</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Ejemplos reales</strong>
+            Las aplicaciones de realidad aumentada como Pokémon Go utilizan acelerómetro, giroscopio y GPS simultáneamente. Las aplicaciones de salud como Samsung Health combinan acelerómetro y giroscopio para detectar tipos de actividad física. Las aplicaciones de clima utilizan barómetro y GPS para提供 predicciones localizadas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Utilizando Thunkable o MIT App Inventor, cread una aplicación sencilla que muestre los valores actuales del acelerómetro y el sensor de luz en tiempo real. La aplicación debería actualizar los valores cada segundo y mostrar si el dispositivo está en movimiento y el nivel de luminosidad ambiental.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: App interactiva con Thunkable</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión está dedicada a la presentación y desarrollo del proyecto final de la unidad. Los alumnos aplicarán todos los conceptos aprendidos para crear una aplicación completa con interacción y sensores.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El proyecto final de esta unidad consiste en diseñar y desarrollar una aplicación móvil completa utilizando Thunkable. La aplicación debe incorporar los conceptos estudiados: programación orientada a eventos, manejo de diferentes tipos de eventos, integración de sensores, y una interfaz de usuario intuitiva y funcional.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Requisitos del proyecto</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Interfaz visual:</strong> Diseño atractivo y coherente con al menos 3 pantallas diferentes.</li>
+              <li><strong>Interacción de usuario:</strong> Uso de al menos 3 tipos de eventos de usuario (pulsaciones, deslizamientos, gestos).</li>
+              <li><strong>Sensores:</strong> Incorporación de al menos 2 sensores del dispositivo (acelerómetro, GPS, luz, etc.).</li>
+              <li><strong>Cadena de eventos:</strong> Implementación de al menos una cadena de eventos donde un evento active a otro.</li>
+              <li><strong>Eventos de salida:</strong> Uso de al menos 2 tipos de salida (visual, auditiva, táctil).</li>
+              <li><strong>Funcionalidad completa:</strong> La aplicación debe realizar una tarea concreta y útil.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplos de proyectos</h4>
+            <p>Algunas ideas de aplicaciones que cumplen estos requisitos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Aplicación de ejercicio:</strong> Registra actividad física usando acelerómetro y GPS, muestra estadísticas visuales.</li>
+              <li><strong>Juego de orientación:</strong> Usa giroscopio y acelerómetro para controlar un objeto en pantalla.</li>
+              <li><strong>Aplicación de clima local:</strong> Utiliza GPS y barómetro para proporcionar información meteorológica precisa.</li>
+              <li><strong>Instrumento musical virtual:</strong> Usa acelerómetro para generar sonidos según la orientación del dispositivo.</li>
+              <li><strong>Aplicación de seguridad:</strong> Detecta caídas con acelerómetro y envía alertas con ubicación GPS.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejos para el desarrollo</strong>
+            Comenzad con el diseño de la interfaz antes de programar. Dividid el proyecto en tareas pequeñas y probad cada funcionalidad antes de pasar a la siguiente. Documentad las decisiones de diseño y los problemas encontrados para la presentación final.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Evaluación del proyecto</h4>
+            <p>El proyecto se evaluará según los siguientes criterios:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Diseño de interfaz (20%):</strong> Coherencia visual, usabilidad, diseño atractivo.</li>
+              <li><strong>Programación de eventos (30%):</strong> Correcto uso de eventos de usuario, sistema y sensores.</li>
+              <li><strong>Funcionalidad (30%):</strong> La aplicación realiza su tarea de forma completa y correcta.</li>
+              <li><strong>Presentación (20%):</strong> Explicación clara del funcionamiento y justificación de las decisiones técnicas.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cronograma de trabajo</h4>
+            <p>Durante esta sesión finalizaremos el desarrollo y prepararemos la presentación. Cada grupo dispondrá de 30 minutos para completar su aplicación y 5 minutos para presentarla al resto de la clase.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 7 (FINAL UNIDAD) -->
+          <div class="quiz" data-correcta="b" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <button class="quiz-opcion" data-valor="a">A. Solo eventos de usuario.</button>
+            <button class="quiz-opcion" data-valor="b">B. Eventos de usuario, sensores y cadenas de eventos.</button>
+            <button class="quiz-opcion" data-valor="c">C. Solo animaciones y efectos visuales.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué debe incluir una aplicación completa según los requisitos del proyecto?</p>
+
+          <div class="quiz" data-correcta="c" data-total="4">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Solo acelerómetro.</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo GPS.</button>
+            <button class="quiz-opcion" data-valor="c">C. Al menos 2 sensores diferentes (acelerómetro, GPS, luz, etc.).</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuántos sensores debe incluir obligatoriamente el proyecto final?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Producto de la unidad</strong>
+            Cada grupo presentará su aplicación al resto de la clase. Se realizará una votación para elegir la aplicación más innovadora, la mejor diseñada y la más funcional. Las mejores aplicaciones podrán compartirse en la tienda de aplicaciones del centro.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud1.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        ← UD1 · Introducción a la Programación
+      </a>
+      <a href="ud3.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        UD3 · Desarrollo Web →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

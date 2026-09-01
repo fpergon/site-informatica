@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD5 · Robótica y Datos Masivos · 3º ESO</title>
+  <meta name="description" content="Unidad Didáctica 5 de 3º ESO: Robótica y Datos Masivos. Saberes básicos BOJA, sesiones detalladas y criterios de evaluación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="3eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../3eso.html" class="hover:underline">3.º ESO</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloques C y G</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD5 · Robótica y Datos Masivos</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Combinar los fundamentos de la robótica industrial —configuraciones morfológicas, articulaciones y programación en Python— con la recopilación y análisis de datos masivos mediante técnicas de web scraping. Esta unidad integra hardware y software en un proyecto final que incluye un robot programado y un informe de datos.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: Robot programado en Python + Análisis de datos con scraping</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque C — Robótica · Bloque G — Datos Masivos</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">ROB.1.C.1</span> Grado de libertad y articulaciones robóticas.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">ROB.1.C.2</span> Configuraciones morfológicas de robots industriales.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">ROB.1.C.3</span> AGV (Automated Guided Vehicles): análisis y aplicaciones.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">DAT.4.G.1</span> Metadatos: clasificación, uso y almacenamiento.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">DAT.4.G.2</span> Data scraping: concepto, herramientas, ética y legalidad.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">1.1 · Concepto de grado de libertad</span>
+        <span class="criterio">1.2 · Configuraciones morfológicas</span>
+        <span class="criterio">1.3 · Análisis de AGV</span>
+        <span class="criterio">4.1 · Programación de robots con Python</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Grado de libertad y articulaciones robóticas</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión establece los fundamentos teóricos de la robótica. Es esencial que el alumnado comprenda la relación entre grados de libertad y la capacidad de movimiento de un robot antes de pasar a configuraciones industriales.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La robótica es una de las disciplinas con mayor impacto en la industria moderna. En esta sesión inicial vamos a explorar qué hace que un robot sea capaz de realizar movimientos complejos: los grados de libertad y las articulaciones. Comenzaremos con una pregunta motivadora: ¿cuántos movimientos necesitaría un brazo robótico para recoger un objeto de una mesa y colocarlo en otra ubicación?</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un grado de libertad?</h4>
+            <p>El <strong>grado de libertad (GDL)</strong> de un robot se define como el número de parámetros independientes que determinan completamente la posición y orientación de un cuerpo en el espacio. En robótica, cada GDL corresponde a un movimiento independiente que puede realizar una articulación.</p>
+            <p class="mt-2">Un objeto libre en el espacio tridimensional tiene <strong>6 grados de libertad</strong>: 3 de traslación (avance en los ejes X, Y y Z) y 3 de rotación (giro alrededor de los mismos ejes). Sin embargo, los robots industriales no suelen necesitar todos ellos, ya que sus movimientos están restringidos por la naturaleza de sus articulaciones.</p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Dato clave</strong>
+            Un robot con menos de 6 GDL no puede alcanzar任意una orientación en el espacio. Cuantos más grados de libertad, mayor versatilidad del robot para realizar tareas complejas como soldadura, pick-and-place o ensamblaje.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipología de articulaciones</h4>
+            <p>Las articulaciones robóticas se clasifican según el tipo de movimiento que permiten:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Articulación prismática (lineal):</strong> Permite movimientos de traslación a lo largo de un eje. Ejemplo: un pistón neumático que extiende o retrae un elemento en línea recta.</li>
+              <li><strong>Articulación rotatoria:</strong> Permite giros alrededor de un eje fijo. Es la más utilizada en robots antropomórficos. Un robot de 6 GDL suele tener 6 articulaciones rotatorias.</li>
+              <li><strong>Articulación esférica:</strong> Permite tres movimientos de rotación simultáneos alrededor de un punto. Es menos común en robótica industrial pero se encuentra en aplicaciones de simulación.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Clasificación de robots por número de GDL</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>3 GDL:</strong> Robots-cartesianos y SCARA básicos. Movimientos en X, Y y Z. Ideales para pick-and-place simple.</li>
+              <li><strong>4 GDL:</strong> Robots SCARA con orientación. Añaden rotación alrededor del eje Z.</li>
+              <li><strong>5 GDL:</strong> Robots antropomórficos sin orientación completa. Suficientes para muchas tareas industriales.</li>
+              <li><strong>6 GDL:</strong> Robots antropomórficos completos. Capaces de alcanzar cualquier posición y orientación en el espacio de trabajo.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop" alt="Brazo robótico industrial" loading="lazy" />
+            <figcaption>Articulaciones y grados de libertad en un brazo robótico industrial de 6 ejes</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Caso práctico: Análisis de un robot</h4>
+            <p>Vamos a analizar las especificaciones de un robot industrial real (KUKA KR 10 o similar). Identificaremos: número de grados de libertad, tipo de cada articulación, alcance máximo, carga útil y precisión. En grupos de tres, completaremos una tabla comparativa que relacione el número de GDL con las aplicaciones posibles del robot.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad complementaria</strong>
+            Usando una simulación online de robots (como RoboDK o RoboAnalyzer), visualizaremos cómo cambia el espacio de trabajo al añadir o eliminar grados de libertad. Esto ayudará a comprender de forma visual la importancia de cada articulación.
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. El número de motores que tiene el robot.</button>
+            <button class="quiz-opcion" data-valor="b">B. El número de parámetros independientes que determinan la posición y orientación del robot en el espacio.</button>
+            <button class="quiz-opcion" data-valor="c">C. El peso máximo que puede manipular el robot.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es un grado de libertad en robótica?</p>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Articulación prismática: traslación lineal.</button>
+            <button class="quiz-opcion" data-valor="b">B. Articulación prismática: rotación alrededor de un eje.</button>
+            <button class="quiz-opcion" data-valor="c">C. Articulación prismática: movimiento combinado de giro y traslación.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué movimiento permite una articulación prismática?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Completar un diagrama anotado de un robot de 6 GDL indicando el tipo de cada articulación y el movimiento que permite. Se valorará la precisión terminológica y la comprensión de la relación entre GDL y capacidad de movimiento.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Configuraciones morfológicas de robots industriales</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>No todos los robots industriales tienen la misma forma ni realizan los mismos movimientos. La configuración morfológica determina la geometría del robot, su espacio de trabajo y las tareas para las que es más adecuado. En esta sesión estudiaremos las configuraciones más habituales: cartesiano, cilíndrico, esférico, SCARA y antropomórfico, analizando sus ventajas y limitaciones.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Configuraciones cartesianas (gancho)</h4>
+            <p>El robot cartesiano trabaja en un sistema de coordenadas rectangulares con tres ejes lineales perpendiculares (X, Y, Z). Su espacio de trabajo es un prisma rectangular. Se utiliza en aplicaciones de pick-and-place, ensamblaje de precisión y máquinas de fax o corte. Es el tipo más sencillo de programar ya que cada eje se mueve de forma independiente.</p>
+            <p class="mt-2"><strong>Parámetros característicos:</strong> 3 GDL, alta precisión (hasta ±0,01 mm), carga moderada, espacio de trabajo grande en comparación con su tamaño.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Configuración cilíndrica</h4>
+            <p>Combina un movimiento lineal vertical con un giro alrededor de un eje. Su espacio de trabajo es un cilindro parcial. Es ideal para operaciones de carga y descarga en máquinas-herramienta. Ofrece mayor alcance que el cartesiano con un número similar de ejes.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Configuración esférica (polar)</h4>
+            <p>Utiliza dos articulaciones rotatorias y una prismática. Su espacio de trabajo es una porción de esfera. Fue una de las primeras configuraciones industriales y se sigue usando en aplicaciones de soldadura y manipulación de piezas grandes.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Configuración SCARA</h4>
+            <p><strong>Selective Compliance Assembly Robot Arm</strong>. Tiene dos articulaciones rotatorias paralelas que le dan gran versatilidad en movimientos horizontales, pero rigidez en vertical. Su espacio de trabajo es un anillo en el plano horizontal. Es extraordinariamente rápido y preciso, lo que lo hace ideal para ensamblaje electrónico, empaquetado y montaje de componentes.</p>
+            <p class="mt-2"><strong>Parámetros:</strong> 4-5 GDL, velocidad excepcional, precisión de ±0,02 mm, excelente para movimientos de pick-and-place.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato industrial</strong>
+            Los robots SCARA representan más del 50% de los robots utilizados en la industria electrónica mundial. Su diseño les permite completar hasta 200 ciclos por minuto en aplicaciones de montaje de componentes SMD.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Configuración antropomórfica</h4>
+            <p>La más versátil y extendida en la industria. Imita la estructura del brazo humano con 6 articulaciones rotatorias (6 GDL). Su espacio de trabajo es complejo pero permite alcanzar cualquier punto dentro de su alcance con cualquier orientación. Se utiliza en soldadura, pintura, manipulación de piezas y applications de precisión.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tabla comparativa</h4>
+            <p>En grupos, completaremos una tabla comparativa de todas las configuraciones: tipo, número de GDL, espacio de trabajo, velocidad, precisión, cargas típicas y aplicaciones industriales. Esta tabla servirá como referencia para el diseño del proyecto final.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p><strong>Ejercicio 1:</strong> Dado un entorno industrial descrito (fábrica de automóviles, línea de montaje electrónico, almacén logístico), proponer qué configuración de robot sería más adecuada y justificar la elección.</p>
+            <p class="mt-2"><strong>Ejercicio 2:</strong> Usando software de simulación, diseñar una celda robótica básica con un robot SCARA para una tarea de pick-and-place.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Reflexión</strong>
+            ¿Por qué crees que los robots antropomórficos son los más utilizados en la industria automovilística? ¿Qué ventajas ofrece su parecido anatómico con el brazo humano?
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">AGV (Automated Guided Vehicles)</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Los AGV representan una de las áreas de mayor crecimiento en automatización industrial. Esta sesión conecta los conceptos teóricos de robótica con aplicaciones reales en logística y fábricas inteligentes.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los <strong>AGV (Automated Guided Vehicles)</strong> son vehículos autónomos capaces de desplazarse por un entorno sin necesidad de un operador humano, siguiendo rutas predefinidas o adaptándose dinámicamente al entorno. A diferencia de los robots industriales estáticos, los AGV se mueven libremente por la planta, lo que les convierte en soluciones ideales para la logística interna de fábricas y almacenes.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de AGV</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Remolcadores (tugs):</strong> Empujan o arrastran carretillas y remolques a lo largo de rutas fijas. Son los más simples y económicos.</li>
+              <li><strong>Plataformas (unit load):</strong> Transportan cargas completas sobre una plataforma superior. Ideales para pallets y contenedores.</li>
+              <li><strong>Forklift AGV:</strong> Versión autónoma de la carretilla elevadora. Pueden apilar y recuperar carga en estanterías.</li>
+              <li><strong>Sortación (sorting):</strong> Clasifican y distribuyen paquetes en centros logísticos.</li>
+              <li><strong>Autónomos móviles (AMR):</strong> La evolución de los AGV. No necesitan infraestructura fija, utilizan sensores y algoritmos de navegación para moverse libremente.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Industria 4.0</strong>
+            Los AGV son un pilar fundamental de la logística en la Industria 4.0. Empresas como Amazon, Zara y Tesla utilizan flotas de cientos de AGV para optimizar el flujo de materiales en sus centros de distribución y líneas de producción.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sistemas de navegación</h4>
+            <p>Los AGV pueden orientarse mediante diferentes tecnologías:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Banda magnética:</strong> Sensores en la base del vehículo siguen una cinta magnética adherida al suelo. Es el método más antiguo y fiable, pero requiere infraestructura permanente.</li>
+              <li><strong>Código QR:</strong> Se colocan códigos QR en el suelo que el AGV lee para determinar su posición. Solución económica y flexible.</li>
+              <li><strong>LiDAR y SLAM:</strong> Los más avanzados. Utilizan escáner láser para mapear el entorno y localizarse en tiempo real sin infraestructura exterior.</li>
+              <li><strong>Vision Artificial:</strong> Cámaras que identifican referencias visuales en el entorno para la navegación.</li>
+            </ul>
+          </div>
+
+          <!-- VÍDEO: AGV en acción -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo sobre AGV en entornos industriales para comprender su funcionamiento en tiempo real:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/7LphJVFdWdA" title="AGV en entornos industriales" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Aplicaciones en logística y fábricas</h4>
+            <p>Los AGV se utilizan en múltiples sectores:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Almacenes:</strong> Transporte automatizado de mercancías entre zonas de picking, empaquetado y expedición.</li>
+              <li><strong>Líneas de producción:</strong> Suministro justo a tiempo de componentes a los puestos de trabajo.</li>
+              <li><strong>Hospitales:</strong> Transporte de medicamentos, muestras y ropa de cama.</li>
+              <li><strong>Industria alimentaria:</strong> Movimiento de productos en cadena de frío y entornos controlados.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Análisis comparativo</h4>
+            <p>En parejas, compararemos un sistema de AGV con carretillas convencionales operadas por humanos. Evaluaremos: coste inicial, coste operativo anual, productividad, flexibilidad, seguridad y retorno de inversión. El objetivo es determinar en qué escenarios es rentable implementar AGV y en cuáles no.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Son robots fijos que realizan tareas de soldadura.</button>
+            <button class="quiz-opcion" data-valor="b">B. Son vehículos aéreos no tripulados para inspección.</button>
+            <button class="quiz-opcion" data-valor="c">C. Son vehículos autónomos que transportan material sin intervención humana.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué son los AGV?</p>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. LiDAR y SLAM: escáner láser para mapeado y localización autónoma.</button>
+            <button class="quiz-opcion" data-valor="b">B. Banda magnética: navegación por GPS en exteriores.</button>
+            <button class="quiz-opcion" data-valor="c">C. Código QR: sensores de temperatura en el suelo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué tecnología permite la navegación sin infraestructura fija?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Presentar un informe breve sobre un sistema de AGV real (Amazon Robotics, Kiva Systems, etc.). El informe debe incluir: tipo de AGV, sistema de navegación utilizado, sector de aplicación y ventajas sobre el método convencional.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Programación de robots con Python</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los robots necesitan un lenguaje de programación para ser controlados. En esta sesión aprenderemos a programar microcontroladores como Micro:bit o Arduino usando <strong>Python</strong>, un lenguaje de alto nivel que facilita la comprensión de conceptos de programación como secuencias, bucles y funciones. Pasaremos de los bloques de código visual al código de texto para ganar flexibilidad y potencia.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Por qué Python para robótica?</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Sintaxis clara:</strong> Python utiliza indentación en lugar de llaves o paréntesis, lo que lo hace fácil de leer y escribir.</li>
+              <li><strong>Bibliotecas丰富as:</strong> Existen librerías específicas como <code>MicroPython</code> para Micro:bit, <code>pySerial</code> para comunicación serial y <code>RPi.GPIO</code> para Raspberry Pi.</li>
+              <li><strong>Comunidad:</strong> Es el lenguaje más utilizado en educación y en prototipado rápido de sistemas robóticos.</li>
+              <li><strong>Transición:</strong> Facilita el paso de entornos visuales (Scratch, MakeCode) al código de texto.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Secuencias de instrucciones</h4>
+            <p>Una secuencia es la ejecución ordenada de instrucciones una tras otra. En Python, cada línea es una instrucción que se ejecuta en orden:</p>
+            <pre class="mt-2 rounded-lg bg-ink-900 p-4 text-xs text-brand-200 overflow-x-auto"><code># Secuencia de movimientos para un robot básico
+from microbit import *
+
+while True:
+    # Secuencia: avanzar, girar, avanzar
+    pin0.write_digital(1)  # Motor izquierdo ON
+    pin1.write_digital(1)  # Motor derecho ON
+    sleep(1000)            # Avanzar 1 segundo
+    pin0.write_digital(0)  # Motor izquierdo OFF
+    sleep(500)             # Girar (solo motor derecho activo)
+    pin0.write_digital(1)  # Reactivar motor izquierdo
+    sleep(1000)            # Avanzar 1 segundo
+    pin0.write_digital(0)  # Detener ambos motores
+    pin1.write_digital(0)</code></pre>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Concepto fundamental</strong>
+            La diferencia entre programar con bloques y con código de texto es como escribir con LEGO (piezas que encajan) vs. escribir en papel (instrucciones libres). El código de texto ofrece mayor libertad pero requiere más precisión en la sintaxis.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructuras de control</h4>
+            <p>Las estructuras de control permiten tomar decisiones y repetir acciones:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>If/else:</strong> Toma decisiones basadas en condiciones. Ejemplo: si un sensor detecta un obstáculo, el robot se detiene.</li>
+              <li><strong>For:</strong> Repite un bloque de código un número determinado de veces.</li>
+              <li><strong>While:</strong> Repite mientras se cumpla una condición. El bucle infinito <code>while True</code> es el patrón principal de los robots.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Funciones reutilizables</h4>
+            <p>Las funciones permiten agrupar código en bloques reutilizables. Esto hace el programa más legible y mantenible:</p>
+            <pre class="mt-2 rounded-lg bg-ink-900 p-4 text-xs text-brand-200 overflow-x-auto"><code>def avanzar(tiempo):
+    """Hace avanzar el robot durante 'tiempo' milisegundos"""
+    pin0.write_digital(1)
+    pin1.write_digital(1)
+    sleep(tiempo)
+
+def girar_derecha(tiempo):
+    """Gira el robot hacia la derecha"""
+    pin0.write_digital(1)
+    pin1.write_digital(0)
+    sleep(tiempo)
+    pin0.write_digital(0)
+
+def detener():
+    """Detiene ambos motores"""
+    pin0.write_digital(0)
+    pin1.write_digital(0)
+
+# Programa principal usando funciones
+avanzar(1000)
+girar_derecha(500)
+avanzar(1000)
+detener()</code></pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p><strong>Ejercicio 1:</strong> Conectar dos motores DC a un Micro:bit y programar una secuencia que haga el robot: avanzar, girar a la izquierda, avanzar, girar a la derecha y detenerse.</p>
+            <p class="mt-2"><strong>Ejercicio 2:</strong> Crear una función <code>perseguidor_linea()</code> que utilice un sensor infrarrojo para que el robot siga una línea negra sobre fondo blanco.</p>
+            <p class="mt-2"><strong>Ejercicio 3:</strong> Diseñar un laberinto y programar el robot para recorrerlo utilizando sensores de ultrasonidos para detectar obstáculos.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo de depuración</strong>
+            Cuando el robot no se comporta como esperamos, añadir comandos <code>print()</code> para enviar información al monitor serial. Esto nos permite ver qué está haciendo el programa paso a paso, igual que las variables en un depurador visual.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Metadatos: clasificación, uso y almacenamiento</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicia la segunda mitad de la unidad, centrada en Datos Masivos. Los metadatos son la base para comprender cómo se organizan, clasifican y almacenan los datos en grandes volúmenes.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>¿Qué tienen en común una foto de tu móvil, un archivo de texto y un correo electrónico? Todos contienen metadatos: información sobre la información. En esta sesión aprenderemos qué son los metadatos, cómo se clasifican y por qué son fundamentales para la gestión de grandes volúmenes de datos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué son los metadatos?</h4>
+            <p>Los <strong>metadatos</strong> son datos que describen otras datos. Proporcionan información sobre el contenido, la estructura, el contexto y la administración de un conjunto de datos. Son como las etiquetas de una maleta: nos dicen qué hay dentro, cuándo se guardó y quién lo hizo, sin necesidad de abrir la maleta.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Clasificación de los metadatos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Metadatos descriptivos:</strong> Describen el contenido del dato. Ejemplo: título de un documento, autor, fecha de creación, palabras clave, descripción de una imagen. Son los más utilizados para la búsqueda y organización.</li>
+              <li><strong>Metadatos administrativos:</strong> Se refieren a la gestión y administración del dato. Incluyen información de derechos de autor, permisos de acceso, política de retención, formato de archivo y cadena de custodia.</li>
+              <li><strong>Metadatos técnicos:</strong> Describen las características técnicas del dato: resolución de una imagen, bitrate de un vídeo, tipo de codificación, tamaño del archivo, sistema operativo donde se creó.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Ejemplo práctico</strong>
+            Una fotografía digital contiene metadatos EXIF: cámara utilizada, distancia focal, velocidad de obturación, fecha y hora, ubicación GPS, e incluso el número de serie de la cámara. Estos metadatos pueden revelar información muy personal sin que el usuario lo sepa.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Uso de metadatos en la vida real</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Búsqueda en Internet:</strong> Los motores de búsqueda utilizan metadatos (título, descripción, palabras clave) para indexar y clasificar páginas web.</li>
+              <li><strong>Bibliotecas digitales:</strong> Los catálogos de bibliotecas utilizan metadatos MARC para describir libros, artículos y recursos multimedia.</li>
+              <li><strong>Bases de datos:</strong> El esquema de una base de datos es un conjunto de metadatos que define la estructura, tipos de datos y relaciones entre tablas.</li>
+              <li><strong>Redes sociales:</strong> Etiquetas, geolocalización y marcas de tiempo son metadatos que permiten clasificar y buscar contenido.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Almacenamiento de metadatos</h4>
+            <p>Los metadatos pueden almacenarse de diferentes formas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Integrados en el archivo:</strong> Datos EXIF en fotos, propiedades de documentos en Word o PDF.</li>
+              <li><strong>Archivos separados:</strong> Ficheros XML o JSON que acompañan al archivo principal.</li>
+              <li><strong>Bases de datos de metadatos:</strong> Sistemas como Apache Atlas o Hive almacenan metadatos de grandes volúmenes de datos en plataformas Big Data.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p><strong>Ejercicio 1:</strong> Inspeccionar los metadatos EXIF de 3 fotografías diferentes usando la herramienta online "Jeffrey's Image Metadata Viewer". Identificar: cámara, fecha, ubicación GPS, resolución.</p>
+            <p class="mt-2"><strong>Ejercicio 2:</strong> Crear un documento Word y examinar sus propiedades (Archivo → Propiedades). Listar todos los metadatos disponibles: autor, fecha de creación, tamaño, palabras clave.</p>
+            <p class="mt-2"><strong>Ejercicio 3:</strong> Analizar los metadatos de 5 páginas web usando la etiqueta <code>&lt;meta&gt;</code> en el código fuente. Identificar description, keywords, author y viewport.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Metadatos administrativos: resolución y bitrate de archivos multimedia.</button>
+            <button class="quiz-opcion" data-valor="b">B. Metadatos descriptivos: título, autor, palabras clave y descripción del contenido.</button>
+            <button class="quiz-opcion" data-valor="c">C. Metadatos técnicos: permisos de acceso y derechos de autor.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué tipo de metadatos describe el contenido de un archivo?</p>
+
+          <div class="callout callout-peligro">
+            <strong>Advertencia de privacidad</strong>
+            Los metadatos pueden revelar información sensible. Una foto compartida en redes sociales puede contener tu ubicación GPS exacta, el modelo de tu cámara y la fecha exacta. Antes de compartir contenido, considera eliminar los metadatos con herramientas como <code>ExifTool</code> o <code>mat2</code>.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Data scraping: recopilación automatizada de datos</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El <strong>data scraping</strong> (o web scraping) es la técnica de extraer datos de páginas web de forma automatizada. En lugar de copiar y pegar información manualmente, utilizamos programas que leen el código HTML de un sitio web y extraen la información que necesitamos. Es una herramienta poderosa para la recopilación de datos masivos, pero debe usarse con responsabilidad.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Cómo funciona el data scraping?</h4>
+            <p>El proceso consta de tres pasos fundamentales:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Petición HTTP:</strong> El script envía una solicitud al servidor web como haría cualquier navegador. El servidor responde con el código HTML de la página.</li>
+              <li><strong>Parsing (análisis):</strong> Se analiza el código HTML para localizar los elementos que contienen la información deseada (tablas, listas, párrafos, etc.).</li>
+              <li><strong>Extracción y almacenamiento:</strong> Se extraen los datos y se guardan en un formato estructurado: CSV, JSON o base de datos.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Herramientas de data scraping</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>BeautifulSoup (Python):</strong> Librería ligera para parsear HTML y XML. Ideal para principiantes.</li>
+              <li><strong>Scrapy:</strong> Framework completo de scraping en Python. Permite crear spiders que rastrean múltiples páginas de forma eficiente.</li>
+              <li><strong>Selenium:</strong> Automatiza navegadores web. Útil para sitios que requieren interacción (clics, formularios, login).</li>
+              <li><strong>Octoparse / ParseHub:</strong> Herramientas visuales sin código para usuarios no programadores.</li>
+            </ul>
+          </div>
+
+          <!-- VÍDEO: Data scraping con Python -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este tutorial sobre data scraping con Python y BeautifulSoup para comprender la técnica en la práctica:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" title="Data scraping con Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Consideraciones éticas y legales</h4>
+            <p>El data scraping es una herramienta poderosa pero conlleva responsabilidades:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Respetar el archivo robots.txt:</strong> Este archivo indica a los bots qué páginas pueden o no rastrear. Siempre debemos consultarlo antes de iniciar un scraping.</li>
+              <li><strong>No sobrecargar servidores:</strong> Realizar peticiones demasiado rápidas puede sobrecargar el servidor y causar denegación de servicio. Usar retardos entre peticiones.</li>
+              <li><strong>Protección de datos personales:</strong> Recopilar datos personales sin consentimiento puede violar el RGPD (Reglamento General de Protección de Datos).</li>
+              <li><strong>Términos de servicio:</strong> Muchos sitios web prohíben expresamente el scraping en sus términos de uso.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Caso real</strong>
+            En 2020, LinkedIn demandó a una empresa de scraping por extraer datos de millones de usuarios. El tribunal falló a favor de LinkedIn, estableciendo que el scraping de datos personales sin autorización viola las leyes de protección de datos. Siempre verifica la legalidad antes de extraer datos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico: scraping de precios</h4>
+            <p>Vamos a crear un script sencillo que extraiga los precios de un producto en diferentes tiendas online. Usaremos BeautifulSoup para parsear el HTML y guardaremos los resultados en un archivo CSV que podremos analizar posteriormente.</p>
+            <pre class="mt-2 rounded-lg bg-ink-900 p-4 text-xs text-brand-200 overflow-x-auto"><code>import requests
+from bs4 import BeautifulSoup
+import csv
+
+url = "https://ejemplo.com/productos"
+respuesta = requests.get(url)
+soup = BeautifulSoup(respuesta.text, 'html.parser')
+
+productos = []
+for item in soup.find_all('div', class_='producto'):
+    nombre = item.find('h2').text.strip()
+    precio = item.find('span', class_='precio').text.strip()
+    productos.append({'nombre': nombre, 'precio': precio})
+
+with open('precios.csv', 'w', newline='') as f:
+    writer = csv.DictWriter(f, fieldnames=['nombre', 'precio'])
+    writer.writeheader()
+    writer.writerows(productos)</code></pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p><strong>Ejercicio 1:</strong> Instalar BeautifulSoup y requests en Python. Ejecutar el ejemplo de scraping de precios y analizar los resultados.</p>
+            <p class="mt-2"><strong>Ejercicio 2:</strong> Adaptar el script para extraer datos de una página web de noticias: titular, fecha de publicación y autor.</p>
+            <p class="mt-2"><strong>Ejercicio 3:</strong> Investigar el archivo robots.txt de 3 sitios web diferentes. ¿Permiten el scraping? ¿Qué restricciones tienen?</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Buenas prácticas</strong>
+            Siempre incluye un identificador claro en tu script (User-Agent) para que el administrador del sitio sepa quién está accediendo a sus datos. La transparencia es la base del scraping ético.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: Robot programado + Análisis de datos</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Sesión de proyecto</strong>
+            Esta sesión está dedicada a la presentación y demostración del proyecto final de la unidad, que integra los dos bloques temáticos: robótica programada en Python y análisis de datos mediante scraping.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Descripción del proyecto</h4>
+            <p>El proyecto final integra los dos bloques temáticos de la unidad en un producto completo que consta de dos partes:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Parte 1 — Robot programado en Python:</strong> Diseñar y programar un robot (Micro:bit, Arduino o simulador) que realice una tarea específica: seguir una línea, esquivar obstáculos o transportar objetos. El programa debe utilizar funciones reutilizables, estructuras de control y documentación clara.</li>
+              <li><strong>Parte 2 — Análisis de datos con scraping:</strong> Recopilar datos de una fuente web pública mediante scraping, almacenarlos en CSV y realizar un análisis básico: media, máximos, mínimos, gráficas de distribución.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Criterios de evaluación del proyecto</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Funcionamiento del robot (30%):</strong> El robot completa la tarea asignada de forma fiable.</li>
+              <li><strong>Calidad del código (25%):</strong> Código limpio, funciones bien nombradas, comentarios explicativos.</li>
+              <li><strong>Scraping y datos (25%):</strong> Extracción correcta, almacenamiento estructurado y análisis con gráficas.</li>
+              <li><strong>Presentación oral (20%):</strong> Explicación clara del funcionamiento, decisiones técnicas y conclusiones del análisis de datos.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Desarrollo en clase</h4>
+            <p>En esta última sesión, los grupos tendrán tiempo para terminar la integración de ambas partes del proyecto, preparar la demostración en vivo y ensayar la presentación. Cada grupo dispondrá de 5 minutos para presentar su proyecto al resto de la clase, seguidos de 3 minutos de preguntas.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo de presentación</strong>
+            Al presentar el proyecto, empezad mostrando el robot en funcionamiento (demostración en vivo o vídeo). Después, mostrad las gráficas de datos extraídos. Finalmente, explicad qué habéis aprendido y qué mejoras haríais.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formato de entrega</h4>
+            <p>Cada grupo entregará:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Código fuente del robot en Python (comentado).</li>
+              <li>Código fuente del script de scraping.</li>
+              <li>Archivo CSV con los datos extraídos.</li>
+              <li>Informe breve (1-2 páginas) con: justificación del diseño, resultados del análisis de datos y conclusiones.</li>
+              <li>Presentación (máximo 8 diapositivas) o vídeo demostrativo.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 7 (Quiz final de unidad) -->
+          <div class="quiz" data-correcta="a" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <button class="quiz-opcion" data-valor="a">A. El degree de libertad determina los movimientos independientes de un robot.</button>
+            <button class="quiz-opcion" data-valor="b">B. Los AGV solo funcionan con bandas magnéticas en el suelo.</button>
+            <button class="quiz-opcion" data-valor="c">C. El data scraping siempre es legal sin importar el sitio web.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué determina el grado de libertad de un robot?</p>
+
+          <div class="quiz" data-correcta="b" data-total="4">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Los metadatos descriptivos incluyen permisos de acceso y derechos de autor.</button>
+            <button class="quiz-opcion" data-valor="b">B. Los metadatos técnicos describen resolución, bitrate y formato de archivos.</button>
+            <button class="quiz-opcion" data-valor="c">C. Los metadatos administrativos son palabras clave y títulos.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué tipo de metadatos describen las características técnicas de un archivo?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Producto de la unidad</strong>
+            Los mejores proyectos serán exhibidos en la exposición de fin de curso. Los grupos que destaquen podrán presentar su robot en la jornada de puertas abiertas del centro.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud4.html" class="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-ink-800 hover:bg-slate-100 transition">
+        ← UD4 · Programación
+      </a>
+      <a href="ud6.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD6 · IA y Ciberseguridad →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

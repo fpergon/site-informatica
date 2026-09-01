@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD5 · Robótica Educativa · 2º ESO</title>
+  <meta name="description" content="Unidad Didáctica 5 de 2º ESO: Robótica Educativa. Saberes básicos BOJA, sesiones detalladas y criterios de evaluación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2eso.html" class="hover:underline">2.º ESO</a>
+        <span>·</span>
+        <span>3.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque C</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD5 · Robótica Educativa</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Comprender qué es un robot, sus componentes, clasificación y aplicaciones. Aprender a programar robots educativos como el Maqueen y desarrollar un proyecto final que integre sensores, programación y toma de decisiones autónoma.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: Robot Maqueen que siga línea y evite obstáculos</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque C — Robótica</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">C.1</span> Definición de robot, componentes y clasificación.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">C.2</span> Sensores, efectores y actuadores.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">C.3</span> Robots móviles y mecanismos de locomoción.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">C.4</span> Leyes de la robótica y ética.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">C.5</span> Programación de robots con bloques.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">1.1 · Diseña soluciones robóticas</span>
+        <span class="criterio">1.2 · Programa robots con bloques</span>
+        <span class="criterio">1.4 · Evalúa el funcionamiento de un robot</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Definición de robot y componentes básicos</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión introductoria sienta las bases de toda la unidad. Es fundamental que el alumnado comprenda la diferencia entre un robot y una máquina convencional antes de profundizar en sus componentes y aplicaciones.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>¿Qué es exactamente un robot? ¿Cómo se diferencia de una máquina simple como una lavadora o una aspiradora convencional? En esta sesión inicial vamos a explorar el concepto de robot, sus componentes fundamentales y las razones por las que los robots se han convertido en una parte esencial de nuestra vida cotidiana. Comenzaremos con una reflexión grupal sobre situaciones en las que hemos interactuado con dispositivos inteligentes, desde asistentes de voz hasta robots aspiradores, para entender qué hace especial a estos dispositivos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un robot?</h4>
+            <p>Un <strong>robot</strong> es una máquina programable capaz de realizar tareas de forma autónoma o semiautónoma, interactuando con su entorno a través de sensores y actuadores. A diferencia de una máquina convencional que ejecuta una operación fija, un robot puede adaptar su comportamiento según las condiciones del entorno. La Asociación de Robótica Industrial define el robot como «un manipulador multifuncional reprogramable, diseñado para mover材料 a través de un espacio de trabajo». En términos más sencillos, un robot percibe su entorno, procesa la información y actúa en consecuencia.</p>
+            <p class="mt-2"><strong>Diferencias entre robot y máquina:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Autonomía:</strong> Un robot puede tomar decisiones por sí mismo; una máquina sigue un proceso predefinido.</li>
+              <li><strong>Adaptabilidad:</strong> Los robots pueden modificar su comportamiento según el entorno.</li>
+              <li><strong>Reprogramabilidad:</strong> Un robot puede reprogramarse para realizar tareas diferentes; una máquina generalmente realiza una sola función.</li>
+              <li><strong>Interacción:</strong> Los robots pueden interactuar con su entorno de forma inteligente.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop" alt="Diferencia entre robot y máquina" loading="lazy" />
+            <figcaption>Un robot percibe, procesa y actúa; una máquina solo ejecuta</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes de un robot</h4>
+            <p>Todo robot está compuesto por tres elementos fundamentales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Sensores:</strong> Son los «sentidos» del robot. Permiten percibir el entorno y obtener información del mundo que le rodea. Ejemplos: sensores de luz, temperatura, distancia, sonido, presión, cámaras.</li>
+              <li><strong>Controlador:</strong> Es el «cerebro» del robot. Recibe la información de los sensores, la procesa según el programa y toma decisiones. Generalmente es un microcontrolador o un ordenador.</li>
+              <li><strong>Efectores y actuadores:</strong> Son los «músculos» del robot. Los actuadores convierten la señal eléctrica en movimiento (motores, servos). Los efectores son las herramientas que interactúan directamente con el entorno (pinzas, brazos, ruedas).</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Ejemplo práctico</strong>
+            Un robot aspirador como el Roomba usa sensores de infrarrojos y ultrasonidos para detectar obstáculos, un procesador para decidir la ruta de limpieza, y motores con cepillos y succión como efectores para limpiar. A diferencia de una aspiradora manual, el Roomba navega y limpia de forma autónoma.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El robot aspirador: caso de estudio</h4>
+            <p>Analicemos en detalle cómo funciona un robot aspirador inteligente:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Sensores de infrarrojos:</strong> Detectan la presencia de objetos cercanos y evitan caídas desde escalones.</li>
+              <li><strong>Sensor LDS (Laser Distance Sensor):</strong> Mide distancias con un láser para crear un mapa de la habitación.</li>
+              <li><strong>Giroscopio y acelerómetro:</strong> Orientan al robot y miden su inclinación.</li>
+              <li><strong>Procesador:</strong> Ejecuta algoritmos de mapeo y planificación de ruta.</li>
+              <li><strong>Motores de ruedas:</strong> Permiten la locomoción en diferentes direcciones.</li>
+              <li><strong>Motor de succión y cepillos:</strong> Efectores que realizan la limpieza.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un robot solo puede realizar una tarea predefinida.</button>
+            <button class="quiz-opcion" data-valor="b">B. Una máquina puede tomar decisiones autónomas.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un robot puede adaptar su comportamiento según el entorno.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué diferencia a un robot de una máquina convencional?</p>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Solo tiene sensores.</button>
+            <button class="quiz-opcion" data-valor="b">B. Tiene sensores, un controlador y efectores/actuadores.</button>
+            <button class="quiz-opcion" data-valor="c">C. Solo tiene motores y pinzas.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuáles son los tres componentes fundamentales de un robot?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            En parejas, investigar y dibujar el esquema de un robot aspirador identificando sus sensores, controlador y efectores. Presentar al grupo explicando cómo interactúan los componentes entre sí.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Clasificación de robots y aplicaciones</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los robots no son todos iguales ni realizan las mismas funciones. En esta sesión vamos a descubrir cómo se clasifican los robots según su diseño, capacidad de movimiento y aplicación. Desde los brazos robóticos que ensamblan coches hasta los robots que realizan cirugías, veremos la enorme variedad de robots que existen y cómo están transformando la industria y los servicios.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Clasificación por capacidad de movimiento</h4>
+            <p>Según su grado de libertad y capacidad de movimiento:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Robot cartesiano:</strong> Se mueve en tres ejes rectos (X, Y, Z). Fácil de programar pero con espacio de trabajo limitado. Se usa en pick-and-place y ensamblaje.</li>
+              <li><strong>Robot cilíndrico:</strong> Tiene un eje de rotación vertical y uno de traslación horizontal. Se usa en operaciones de mecanizado.</li>
+              <li><strong>Robot esférico (polar):</strong> Tiene dos ejes de rotación y uno de traslación. Se usa en aplicaciones de soldadura.</li>
+              <li><strong>Robot articulado (antropomórfico):</strong> Con el mayor grado de libertad (5-6 ejes), imita el brazo humano. Es el más versátil y común en la industria.</li>
+              <li><strong>Robot SCARA:</strong> Selective Compliance Assembly Robot Arm. Excelente para tareas de montaje y ensamblaje.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato curioso</strong>
+            Existen más de 3 millones de robots industriales operando en el mundo. La densidad de robots en la industria es mayor en Corea del Sur (932 robots por cada 10.000 trabajadores) seguida de Singapur y Japón.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Robots industriales</h4>
+            <p>Los robots industriales se utilizan en fábricas y líneas de producción. Sus principales aplicaciones incluyen:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Soldadura:</strong> Robots de soldadura por arco o puntos, utilizados en la industria automovilística.</li>
+              <li><strong>Pintura:</strong> Aplicación uniforme de pintura en carrocerías y piezas.</li>
+              <li><strong>Manipulación de materiales:</strong> Transporte, empaquetado y clasificación de productos.</li>
+              <li><strong>Ensamblaje:</strong> Montaje de componentes electrónicos y mecánicos.</li>
+              <li><strong>Inspección de calidad:</strong> Detección de defectos mediante visión artificial.</li>
+              <li><strong>Paletización:</strong> Colocación ordenada de productos en palés.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Robots de servicios</h4>
+            <p>Los robots de servicios se dividen en dos categorías:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Robots de servicios personales:</strong> Aspiradores robot (Roomba), robots de compañía (Aibo), asistentes domésticos (Nao, Pepper).</li>
+              <li><strong>Robots de servicios profesionales:</strong> Cirujanos robotizados (Da Vinci), robots de logística (Amazon Kiva), drones de reparto.</li>
+              <li><strong>Robots médicos:</strong> Cirugía asistida por robot, rehabilitación, diagnóstico por imagen.</li>
+              <li><strong>Robots agrícolas:</strong> Cosecha automatizada, monitorización de cultivos, control de plagas.</li>
+            </ul>
+          </div>
+
+          <!-- VÍDEO: Robots en la sociedad -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo para conocer los diferentes tipos de robots y sus aplicaciones en la sociedad actual:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/7LphJVFdWdA" title="Tipos de robots y aplicaciones" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En grupos de 3-4 alumnos, cada grupo investigará un tipo de robot industrial o de servicio. Deben preparar una presentación de 5 minutos que incluya:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Nombre y tipo de robot.</li>
+              <li>Componentes principales (sensores, actuadores).</li>
+              <li>Aplicación concreta con ejemplo real.</li>
+              <li>Ventajas e inconvenientes.</li>
+              <li>Impacto en el empleo y la sociedad.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            Reflexionar sobre el impacto de la robotización en el empleo. ¿Los robots eliminan o crean puestos de trabajo? Preparar argumentos para un debate en la siguiente sesión.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Componentes en profundidad: sensores, efectores y actuadores</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta sesión profundizaremos en los tres componentes fundamentales de cualquier robot: sensores, efectores y actuadores. Comprender cómo funciona cada uno de estos elementos es esencial para diseñar y programar robots que interactúen correctamente con su entorno. Analizaremos los tipos más comunes de cada componente y sus aplicaciones prácticas en robótica educativa e industrial.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sensores: los ojos y oídos del robot</h4>
+            <p>Los sensores permiten al robot percibir su entorno y obtener datos cuantificables. Los principales tipos son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Sensor de luz (fotodiodo):</strong> Detecta la intensidad lumínica. Se usa para seguir líneas en el suelo o detectar cambios de iluminación. Rango típico: 0-1023 (Arduino). Consumo bajo y respuesta rápida.</li>
+              <li><strong>Sensor de temperatura (NTC/PTC):</strong> Mide la temperatura ambiente o de superficies. El termistor NTC disminuye su resistencia al aumentar la temperatura. Precisión de ±0.5°C en sensores digitales como el DS18B20.</li>
+              <li><strong>Sensor de distancia por ultrasonidos (HC-SR04):</strong> Emite pulsos ultrasónicos y mide el tiempo que tardan en rebotar. Precisión de ±3mm, rango de 2cm a 4 metros. Se usa para evitar obstáculos.</li>
+              <li><strong>Sensor de distancia por infrarrojos (Sharp GP2Y0A21):</strong> Mide distancias entre 10cm y 80cm mediante triangulación con luz infrarroja. Más preciso a corta distancia que los ultrasonidos.</li>
+              <li><strong>Sensor de ultrasonidos:</strong> Funciona como el murciélago: emite ondas sonoras de alta frecuencia y mide el eco. Ideal para drones y robots móviles.</li>
+              <li><strong>PIR (Passive Infrared):</strong> Detecta movimiento mediante la radiación infrarroja emitida por cuerpos calientes. Se usa en alarmas y automatización.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Advertencia técnica</strong>
+            Los sensores de ultrasonidos no funcionan correctamente con superficies blandas ( alfombras, tejidos) que absorben las ondas sonoras. En estos casos, es mejor usar sensores por infrarrojos o láser.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Efectores: las manos del robot</h4>
+            <p>Los efectores son las herramientas que el robot utiliza para interactuar físicamente con su entorno:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Pinzas gripper:</strong> Dispositivos de agarre que pueden ser mecánicos, neumáticos o magnéticos. Los grippers de dos dedos son los más comunes en robótica educativa.</li>
+              <li><strong>Brazo robótico:</strong> Conjunto de eslabones articulados que permiten alcanzar puntos en el espacio. Los brazos de 6 ejes ofrecen gran versatilidad.</li>
+              <li><strong>Soldador:</strong> Herramienta de soldadura por puntos o arco, utilizada en industria automotriz.</li>
+              <li><strong>Extrusor de filamento:</strong> En impresoras 3D, funde y deposita plástico capa por capa.</li>
+              <li><strong>Cabezal de impresión:</strong> En impresoras 2D industriales, deposita tinta o material con precisión milimétrica.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actuadores: los músculos del robot</h4>
+            <p>Los actuadores convierten la energía eléctrica en movimiento:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Motor DC:</strong> Motor de corriente continua, simple y económico. Gira continuamente. Se controla con PWM para variar la velocidad. Ideal para ruedas y transportadores.</li>
+              <li><strong>Servo motor:</strong> Motor con sensor de posición integrado. Puede girar entre 0° y 180° con precisión. Se usa en brazos robóticos y dirección de vehículos.</li>
+              <li><strong>Motor paso a paso (stepper):</strong> Gira en incrementos fijos (pasos). Ofrece alta precisión sin sensor de retroalimentación. Se usa en impresoras 3D y máquinas CNC.</li>
+              <li><strong>Actuador neumático:</strong> Usa aire comprimido para generar movimiento. Respuesta rápida, ideal para robots industriales. Requiere compresor.</li>
+              <li><strong>Actuador hidráulico:</strong> Usa líquido a presión para generar gran fuerza. Se usa en maquinaria pesada y robots industriales grandes.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1531746790095-e5a1bec1ab98?w=800&h=400&fit=crop" alt="Componentes de un robot" loading="lazy" />
+            <figcaption>Sensores, actuadores y efectores trabajando en conjunto</figcaption>
+          </figure>
+
+          <div class="callout callout-consejo">
+            <strong>Comparativa rápida</strong>
+            Un servo motor es ideal cuando necesitas posiciones concretas (brazo robótico), un motor DC para movimiento continuo (ruedas), y un motor paso a paso para movimientos precisos y repetitivos (impresora 3D).
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Sensor de ultrasonidos o infrarrojos para detectar obstáculos.</button>
+            <button class="quiz-opcion" data-valor="b">B. Motor DC para girar continuamente.</button>
+            <button class="quiz-opcion" data-valor="c">C. Pinza gripper para recoger objetos.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué componente necesita un robot para evitar chocar contra paredes?</p>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un motor DC que gira continuamente.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un servo motor que puede girar entre 0° y 180°.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un sensor de luz que detecta la posición.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué actuador usarías para mover la pinza de un brazo robótico a una posición exacta?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Montar un circuito con Arduino que utilice al menos un sensor (ultrasonidos o infrarrojo) y un actuador (servo motor). Programar para que el servo se mueva cuando el sensor detecte un obstáculo. Entregar documentación del circuito y código.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Robots móviles: aplicaciones y mecanismos de locomoción</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los robots móviles son aquellos capaces de desplazarse por su entorno de forma autónoma o controlada. En esta sesión analizaremos los diferentes mecanismos de locomoción que existen, sus ventajas e inconvenientes, y las aplicaciones más relevantes de los robots móviles en diversos campos: desde la exploración espacial hasta la logística de almacenes.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Mecanismos de locomoción</h4>
+            <p>Los robots móviles utilizan diferentes sistemas para desplazarse:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Ruedas:</strong> El sistema más común. Ofrece velocidad y eficiencia en superficies planas. Variantes: ruedas convencionales, ruedas diferenciadas (dual drive), ruedas omnidireccionales (Mecanum). Limitación: no puede superar obstáculos ni terrenos irregulares.</li>
+              <li><strong>Orugas:</strong> Distribuyen el peso del robot sobre una superficie mayor, permitiendo desplazarse por terrenos blandos, pendientes y escombros. Se usan en robots militares (PackBot) y de exploración. Desventaja: velocidad limitada y alto consumo energético.</li>
+              <li><strong>Patas (locomoción bípeda o multípode):</strong> Imitan la marcha animal. Permiten superar obstáculos complejos y adaptarse a terrenos irregulares. El robot Atlas de Boston Dynamics puede correr, saltar y hacer acrobacias. Desventaja: complejidad mecánica y de control.</li>
+              <li><strong>Propulsión (drones y robots submarinos):</strong> Drones usan hélices para volar; robots submarinos usan hélices sumergidas para navegar bajo el agua. Se usan en inspección de infraestructuras, agricultura y rescate.</li>
+              <li><strong>Tracked locomotion:</strong> Similar a las orugas pero con segmentos independientes, ofreciendo mayor maniobrabilidad.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=400&fit=crop" alt="Mecanismos de locomoción robótica" loading="lazy" />
+            <figcaption>Diferentes sistemas de locomoción: ruedas, orugas, patas y propulsión</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Robots móviles de ruedas</h4>
+            <p>Los robots de ruedas son los más utilizados en robótica educativa y en aplicaciones industriales donde el terreno es plano:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Dual drive (diferenciado):</strong> Dos motores DC accionan las ruedas traseras. La dirección se controla variando la velocidad de cada motor. Permiten girar sobre su eje (giro cero). Ejemplo: Maqueen, mBot.</li>
+              <li><strong>Omnidireccional:</strong> Usan ruedas Mecanum o位角轮 que permiten moverse en cualquier dirección sin girar. Ideales para robots de almacén que necesitan maniobrar en espacios estrechos.</li>
+              <li><strong>Ackermann:</strong> Sistema de dirección tipo coche. Más estable a alta velocidad pero no puede girar sobre su eje.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato real</strong>
+            Los robots de logística de Amazon (Kiva) utilizan sistemas omnidireccionales para transportar estanterías completas dentro de los almacenes, reduciendo el tiempo de preparación de pedidos en un 60%.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Aplicaciones de robots móviles</h4>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Exploración espacial:</strong> Los rovers (Spirit, Opportunity, Perseverance) exploran Marte de forma autónoma, analizando suelos y buscando agua.</li>
+              <li><strong>Logística:</strong> Robots de almacén que transportan productos y optimizan rutas (Amazon Robotics).</li>
+              <li><strong>Agricultura:</strong> Drones de monitorización de cultivos y robots de cosecha selectiva.</li>
+              <li><strong>Rescate:</strong> Robots que buscan supervivientes en edificios derrumbados usando sensores térmicos y de movimiento.</li>
+              <li><strong>Limpieza:</strong> Robots aspiradores domésticos y robots de limpieza industrial de suelos.</li>
+              <li><strong>Seguridad:</strong> Robots de patrulla autónomos en aeropuertos y centros comerciales.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Reflexión</strong>
+            Si tuvieras que diseñar un robot para explorar la selva amazónica, ¿qué mecanismo de locomoción elegirías? ¿Qué sensores necesitaría? ¿Cómo se alimentaría? Discutir en parejas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Usando el kit de Maqueen, programar el robot para realizar las siguientes tareas de movimiento:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Avanzar en línea recta 50cm, girar 90° a la derecha y avanzar otros 50cm.</li>
+              <li>Realizar un cuadrado de 30cm de lado.</li>
+              <li>Girar sobre su eje 360° en ambas direcciones.</li>
+              <li>Reconocer el entorno evitando obstáculos durante 2 minutos.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Leyes de la robótica de Asimov</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La robótica no solo es una cuestión técnica; también plantea profundos dilemas éticos. En esta sesión estudiaremos las famosas leyes de la robótica formuladas por el escritor de ciencia ficción Isaac Asimov, analizaremos su vigencia en la actualidad y debatiremos sobre los desafíos éticos que plantea la robótica moderna. ¿Deberían los robots tener derechos? ¿Quién es responsable cuando un robot comete un error?</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Las tres leyes de la robótica</h4>
+            <p>Isaac Asimov formuló sus tres leyes de la robótica en 1942 en el cuento «Runaround»:</p>
+            <ol class="mt-2 space-y-3 pl-5 list-decimal">
+              <li><strong>Primera ley:</strong> Un robot no puede causar daño a un ser humano, o, por inacción, permitir que un ser humano sufra daño.</li>
+              <li><strong>Segunda ley:</strong> Un robot debe obedecer las órdenes que le den los seres humanos, excepto cuando dichas órdenes contravengan la Primera Ley.</li>
+              <li><strong>Tercera ley:</strong> Un robot debe proteger su propia existencia, siempre que dicha protección no contravenga la Primera ni la Segunda Ley.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Dato histórico</strong>
+            Asimov añadió posteriormente la Ley Zero (superior a las demás): «Un robot no puede causar daño a la humanidad, o, por inacción, permitir que la humanidad sufra daño». Esta ley apareció en las novelas «The Naked Sun» y «Robots and Empire».
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Dilemas éticos prácticos</h4>
+            <p>Las leyes de Asimov, aunque aparentemente claras, plantean numerous dilemas cuando se aplican a situaciones reales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Dilema del conductor autónomo:</strong> Si un coche sin conductor debe elegir entre chocar contra un peatón o dar un golpe que hiera al pasajero, ¿qué debe hacer? Esto es conocido como «problema del tranvía».</li>
+              <li><strong>Robots militares:</strong> ¿Deberían los robots tener autonomía para tomar decisiones de fuego en combate? Más de 30 países ya tienen robots militares operativos.</li>
+              <li><strong>Robots cuidadores:</strong> Si un robot de cuidados detecta que un anciano está en peligro pero su familia se opone a moverlo por razones religiosas, ¿a quién debe obedecer?</li>
+              <li><strong>Robots y empleo:</strong> ¿Es ético reemplazar trabajadores humanos por robots si esto genera desempleo masivo?</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ética en la robótica actual</h4>
+            <p>La Unión Europea ha establecido un marco ético para la inteligencia artificial y la robótica que incluye principios como:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Transparencia:</strong> Los sistemas robóticos deben ser explicables.</li>
+              <li><strong>Responsabilidad:</strong> Debe haber un responsable claro ante los daños causados por robots.</li>
+              <li><strong>No discriminación:</strong> Los robots no deben perpetuar sesgos humanos.</li>
+              <li><strong>Supervisión humana:</strong> Los robots autónomos deben estar siempre bajo supervisión humana en decisiones críticas.</li>
+            </ul>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un robot no puede causar daño a un ser humano.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un robot debe obedecer todas las órdenes sin excepción.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un robot debe proteger su existencia por encima de todo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la Primera Ley de la robótica de Asimov?</p>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. La Primera Ley tiene prioridad sobre todas.</button>
+            <button class="quiz-opcion" data-valor="b">B. La Segunda Ley es superior a la Tercera.</button>
+            <button class="quiz-opcion" data-valor="c">C. La Tercera Ley no puede contradecir la Primera ni la Segunda.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué dice la Tercera Ley sobre la autoconservación del robot?</p>
+
+          <div class="callout callout-consejo">
+            <strong>Debate grupal</strong>
+            En grupos de 4-5 alumnos, debatir sobre el siguiente caso: Un robot de reparto de medicinas en un hospital debe elegir entre entregar un medicamento urgente a un paciente o ayudar a una persona que ha sufrido una caída en el pasillo. ¿Qué haría el robot según las leyes de Asimov? ¿Son suficientes estas leyes en la práctica?
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Programación de robots con bloques: Maqueen</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta sesión comenzaremos a programar el robot Maqueen usando bloques en MakeCode. Aprenderemos a crear secuencias, bucles y condicionales que permitan al robot realizar tareas de forma autónoma. El Maqueen es un robot educativo basado en micro:bit que incorpora motores, sensores de ultrasonidos, sensor de luz y un zumbador, todo perfecto para aprender robótica de forma práctica y divertida.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Entorno de programación: MakeCode</h4>
+            <p>MakeCode es un entorno de programación visual de Microsoft que permite programar micro:bit usando bloques arrastrables. Las principales categorías de bloques son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Básicos:</strong> Mostrar iconos, mostrar números, pausas, LED encendido/apagado.</li>
+              <li><strong>Entrada:</strong> Botón A/B pulsado, sensor táctil, giróscopio.</li>
+              <li><strong>Motores:</strong> Control de los motores del Maqueen (avanzar, girar, velocidad).</li>
+              <li><strong>Sensores:</strong> Lectura de ultrasonidos, sensor de luz, seguidor de línea.</li>
+              <li><strong>Luces:</strong> Control del neopixel (LEDs RGB integrados).</li>
+              <li><strong>Music:</strong> Reproducir melodías con el zumbador.</li>
+            </ul>
+          </div>
+
+          <!-- VÍDEO: Programación con bloques -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este tutorial para aprender a programar el robot Maqueen con MakeCode:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/obbedhfMcMM" title="Programación de Maqueen con MakeCode" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Secuencias</h4>
+            <p>Una <strong>secuencia</strong> es una serie de instrucciones que se ejecutan en orden, una tras otra. Es el tipo de programa más básico. Ejemplo:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Mostrar un icono de coche en la pantalla LED.</li>
+              <li>Avanzar a velocidad 100 durante 2 segundos.</li>
+              <li>Detenerse durante 0.5 segundos.</li>
+              <li>Girar a la derecha 90°.</li>
+              <li>Avanzar otros 2 segundos.</li>
+            </ol>
+            <p class="mt-2">Las secuencias son útiles para tareas lineales como seguir un camino predefinido o ejecutar una serie de movimientos de baile.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Bucles (repetición)</h4>
+            <p>Los <strong>bucles</strong> permiten repetir instrucciones múltiples veces sin escribir el mismo código repetidamente:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Repetir N veces:</strong> Ejecuta un bloque de código un número determinado de veces.</li>
+              <li><strong>Por siempre (forever):</strong> Repite el código indefinidamente hasta que se apague el robot. Es el bucle principal de la mayoría de programas robóticos.</li>
+              <li><strong>Mientras (while):</strong> Repite mientras se cumpla una condición. Ejemplo: mientras la distancia > 20cm, avanzar.</li>
+            </ul>
+            <p class="mt-2">Ejemplo práctico: Un robot que patrulla un área puede usar un bucle «por siempre» que combine avanzar, detectar obstáculos y girar continuamente.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Concepto clave</strong>
+            La combinación de secuencias y bucles permite crear comportamientos complejos con código simple. Un robot aspirador, por ejemplo, usa un bucle infinito que combina: avanzar → detectar obstáculo → girar → avanzar. Esta lógica de repetición es la base de la robótica autónoma.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Condicionales (toma de decisiones)</h4>
+            <p>Los <strong>condicionales</strong> permiten al robot tomar decisiones según el entorno:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Si (entonces):</strong> Ejecuta código solo si se cumple la condición. Ejemplo: si la distancia < 15cm, girar.</li>
+              <li><strong>Si-entonces-sino:</strong> Ejecuta un código si se cumple la condición y otro si no. Ejemplo: si el sensor de luz detecta línea negra, girar; si no, avanzar.</li>
+              <li><strong>Compara:</strong> Permite comparar valores numéricos. Ejemplo: si la temperatura > 30°, encender ventilador.</li>
+            </ul>
+            <p class="mt-2">Ejemplo: Un robot que sigue una línea usa un condicional constante: si el sensor izquierdo detecta línea negra, girar a la izquierda; si el derecho detecta línea negra, girar a la derecha; si ambos detectan blanco, avanzar.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Práctica: Primer programa en Maqueen</h4>
+            <p>Crear un programa que haga lo siguiente:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Al encender el robot, mostrar un corazón en la pantalla LED.</li>
+              <li>Avanzar durante 3 segundos a velocidad 80.</li>
+              <li>Detenerse, girar 180° y volver al punto de inicio.</li>
+              <li>Al pulsar el botón A, tocar una melodía.</li>
+              <li>Si el sensor de ultrasonidos detecta un obstáculo a menos de 20cm, detenerse y retroceder.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            Antes de descargar el programa al Maqueen, simular el comportamiento en MakeCode usando la vista previa virtual. Esto permite detectar errores sin gastar batería ni arriesgar el robot.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: Robot que siga línea y evite obstáculos</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Producto de la unidad</strong>
+            En esta sesión finalizaremos el proyecto integrador de la unidad. Cada grupo programará su robot Maqueen para que realice dos tareas simultáneas: seguir una línea negra en el suelo y evitar obstáculos usando el sensor de ultrasonidos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Especificaciones del proyecto</h4>
+            <p>El robot debe cumplir los siguientes requisitos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Seguir línea:</strong> Usar el sensor de seguidor de línea inferior para seguir una pista negra sobre fondo blanco. La línea puede tener curvas y cruces.</li>
+              <li><strong>Evitar obstáculos:</strong> El sensor de ultrasonidos debe detectar obstáculos a menos de 20cm y detener o desviar al robot.</li>
+              <li><strong>Señales sonoras:</strong> El robot debe emitir un sonido al detectar un obstáculo y al completar la pista.</li>
+              <li><strong>Indicador visual:</strong> Los LEDs del neopixel deben cambiar de color según el estado (verde=avanzando, rojo=obstáculo, azul=giro).</li>
+              <li><strong>Documentación:</strong> Cada grupo debe entregar un diagrama de flujo del programa y una explicación del código.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Lógica del programa</h4>
+            <p>El programa debe seguir esta estructura lógica:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Inicio:</strong> Inicializar sensores, motores y LEDs. Mostrar icono de coche.</li>
+              <li><strong>Bucle principal (forever):</strong>
+                <ul class="mt-1 space-y-1 pl-5 list-disc">
+                  <li>Leer distancia con sensor de ultrasonidos.</li>
+                  <li>Si distancia < 20cm → detener motores, mostrar LED rojo, tocar sonido de alerta, girar 90°.</li>
+                  <li>Sino → leer sensor de línea inferior.</li>
+                  <li>Si sensor izquierdo detecta negro → girar ligeramente a la izquierda.</li>
+                  <li>Si sensor derecho detecta negro → girar ligeramente a la derecha.</li>
+                  <li>Si ambos sensores detectan blanco → avanzar recto.</li>
+                </ul>
+              </li>
+              <li><strong>Finalización:</strong> Al completar la pista, detenerse y reproducir melodía de éxito.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Rúbrica de evaluación</h4>
+            <p>El proyecto se evaluará según los siguientes criterios:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Funcionalidad (40%):</strong> El robot sigue la línea correctamente y evita obstáculos.</li>
+              <li><strong>Código (25%):</strong> Uso adecuado de secuencias, bucles y condicionales. Código bien estructurado.</li>
+              <li><strong>Documentación (20%):</strong> Diagrama de flujo claro y explicación del código.</li>
+              <li><strong>Creatividad (15%):</strong> Uso creativo de LEDs, sonidos y comportamientos adicionales.</li>
+            </ul>
+          </div>
+
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un bucle «repetir N veces» para el seguidor de línea.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un bucle «por siempre» que combine sensores y condicionales.</button>
+            <button class="quiz-opcion" data-valor="c">C. Una secuencia lineal sin repeticiones.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué tipo de bucle usarías para que el robot siga la línea continuamente?</p>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un condicional que compare la distancia leída con un umbral.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un bucle que repita el mismo movimiento siempre.</button>
+            <button class="quiz-opcion" data-valor="c">C. Una secuencia fija de movimientos.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cómo harías que el robot evite obstáculos dinámicamente?</p>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo para el éxito</strong>
+            Comenzar con una versión simple del programa (solo seguir línea) e ir añadiendo funcionalidades gradualmente. Primero la línea, luego los obstáculos, y finalmente los LEDs y sonidos. El desarrollo incremental facilita la detección de errores.
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Presentación final</strong>
+            Cada grupo presentará su robot al resto de la clase, explicando la lógica del programa, los obstáculos encontrados y las soluciones implementadas. Se valorará la claridad de la exposición y la capacidad de responder preguntas.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud4.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 transition">
+        ← Anterior: UD4
+      </a>
+      <a href="ud6.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD6 · Datos Masivos, IA y Ciberseguridad →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

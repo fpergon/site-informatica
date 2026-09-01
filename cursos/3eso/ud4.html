@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD4 · Computación Física e IoT · 3º ESO</title>
+  <meta name="description" content="Unidad Didáctica 4 de 3º ESO: Computación Física e IoT. Microcontroladores, hardware y software, seguridad eléctrica, protocolos IoT y proyecto final con ESP32." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="3eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../3eso.html" class="hover:underline">3.º ESO</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloques F + B</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD4 · Computación Física e IoT</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Comprender la computación como un fenómeno que trasciende la pantalla: desde dispositivos médicos hasta hogares inteligentes. Esta unidad conecta el software con el hardware físico, explorando microcontroladores, la Internet de las Cosas y la creación de sistemas embebidos conectados a la nube.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: Sistema IoT con ESP32 y dashboard</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloques F + B — Computación Física e IoT</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">COM.1.F.1</span> Computación física: aplicaciones médicas, automoción y domótica.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">COM.2.B.3</span> Internet de las Cosas: sensores, conectividad y servicios en la nube.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">COM.3.F.1</span> Hardware y software: clasificación de componentes y ciclo de vida del software.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">1.1 · Aplicaciones de la computación en el mundo real</span>
+        <span class="criterio">2.3 · Protocolos y conectividad en IoT</span>
+        <span class="criterio">3.1 · Hardware y ciclo de vida del software</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Sistemas de computación: aplicaciones en el mundo real</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicial busca ampliar la percepción del alumnado sobre qué es un ordenador. No todo lo que computa tiene teclado ni pantalla: los coches, los marcapasos y los electrodomésticos también son sistemas informáticos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>¿Cuántos ordenadores llevas encima ahora mismo? Probablemente piensas en tu teléfono móvil, pero si contamos microcontroladores ocultos —en tu reloj, auriculares, tarjetas bancarias o incluso la llave del coche— el número es mucho mayor. En esta sesión vamos a descubrir que la computación está en todas partes, desde los hospitales hasta nuestras propias casas.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Computación física: más allá del escritorio</h4>
+            <p>La <strong>computación física</strong> integra hardware y software en dispositivos del mundo real. A diferencia de un PC tradicional, estos sistemas están diseñados para una función específica y suelen operar de forma autónoma:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Medicina:</strong> Monitores cardíacos, bombas de insulina, resonadores magnéticos. Un marcapasos es un microcontrolador que monitorea y regula el ritmo cardíaco en tiempo real.</li>
+              <li><strong>Automoción:</strong> El motor de un coche moderno está gestionado por una ECU (Electronic Control Unit) que procesa datos de sensores de oxígeno, temperatura y presión miles de veces por segundo.</li>
+              <li><strong>Domótica:</strong> Termostatos inteligentes como Nest aprenden tus hábitos y ajustan la temperatura automáticamente. Las cerraduras inteligentes, los sistemas de riego y las luces programables son parte de esta tecnología.</li>
+              <li><strong>Industria:</strong> Robots de fabricación, sensores de calidad en línea de producción y sistemas SCADA que controlan plantas enteras.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&h=400&fit=crop" alt="Dispositivos IoT en el mundo real" loading="lazy" />
+            <figcaption>Desde relojes inteligentes hasta vehículos autónomos: la computación invisible</figcaption>
+          </figure>
+
+          <div class="callout callout-peligro">
+            <strong>Dato real</strong>
+            Se estima que para 2030 habrá más de 25.000 millones de dispositivos IoT activos en el mundo. Cada uno de ellos contiene al menos un microprocesador que ejecuta código que alguien programó.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">IoT: la extensión de la computación física</h4>
+            <p>La <strong>Internet de las Cosas (IoT)</strong> conecta estos dispositivos físicos a Internet, permitiendo que compartan datos y reciban instrucciones remotamente. Un termostato tradicional solo regula la temperatura; un termostato IoT como Nest puede ser controlado desde tu móvil mientras estás fuera de casa, aprender tus horarios y ajustarse automáticamente.</p>
+            <p class="mt-2">Ejemplos cotidianos de IoT:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Alexa o Google Home: asistentes de voz conectados a múltiples dispositivos del hogar.</li>
+              <li>Podómetros inteligentes: envían datos de actividad física a tu teléfono.</li>
+              <li>Sensores agrícolas: miden humedad del suelo y activan el riego automáticamente.</li>
+              <li>Contadores inteligentes de luz: envían el consumo a la compañía eléctrica en tiempo real.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad de inicio</strong>
+            En parejas, haced una lista de todos los dispositivos con microprocesador que encontréis en un aula. Comparad con la otra pareja: ¿quién logra más? Reflexionad: ¿todos son "ordenadores"?
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Reflexión final</h4>
+            <p>La computación ya no vive solo en el escritorio. Cuando programamos, no estamos creando solo aplicaciones web o de escritorio: estamos escribiendo instrucciones que pueden controlar una planta de energía, un robot quirúrgico o una estación meteorológica remota. Comprender este alcance es el primer paso para ser responsables con la tecnología que creamos.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Solo dispositivos con pantalla y teclado.</button>
+            <button class="quiz-opcion" data-valor="b">B. Únicamente ordenadores portátiles y de sobremesa.</button>
+            <button class="quiz-opcion" data-valor="c">C. Cualquier sistema con hardware y software que procese datos.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es un sistema de computación?</p>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Conectar dispositivos físicos a Internet para compartir datos.</button>
+            <button class="quiz-opcion" data-valor="b">B. Usar un PC para navegar por la web.</button>
+            <button class="quiz-opcion" data-valor="c">C. Instalar aplicaciones en un teléfono móvil.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es la Internet de las Cosas (IoT)?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Cada alumno presentará brevemente un ejemplo de computación física que haya encontrado en su entorno (médico, doméstico, industrial o educativo). Se valorará la capacidad de identificar componentes: sensores, procesadores y actuadores.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Microcontroladores: tipología y comparativa de placas</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión es clave para que el alumnado entienda que no todas las placas son iguales. La elección del microcontrolador adecuado depende de los requisitos del proyecto: potencia, consumo, conectividad y coste.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Un microcontrolador es un pequeño ordenador integrado en un solo chip: incluye procesador, memoria y periféricos de entrada/salida. Es el cerebro de millones de dispositivos cotidianos. En esta sesión conoceremos las placas de desarrollo más populares y aprenderemos a elegir la adecuada según el proyecto.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Las cuatro placas estrella</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Arduino Uno:</strong> La más clásica. Basada en el ATmega328P. Ideal para principiantes. Gran ecosistema de bibliotecas y comunidad. No tiene WiFi ni Bluetooth nativo. Precio: ~5 €.</li>
+              <li><strong>ESP32:</strong> Microcontrolador con WiFi y Bluetooth integrados. Mucho más potente que Arduino (procesador dual-core a 240 MHz). Perfecto para proyectos IoT. Precio: ~4 €.</li>
+              <li><strong>Micro:bit:</strong> Diseñado para educación. Tiene pantalla LED, acelerómetro, magnetómetro y radio integrados. Programable con bloques (MakeCode) o Python. Precio: ~15 €.</li>
+              <li><strong>Raspberry Pi Pico:</strong> Basado en el chip RP2040 de Raspberry Pi. Programable en MicroPython y C++. Muy versátil y económica. Precio: ~4 €.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" alt="Placas microcontroladores" loading="lazy" />
+            <figcaption>Placas de desarrollo: desde Arduino hasta Raspberry Pi Pico</figcaption>
+          </figure>
+
+          <!-- VÍDEO: Comparativa de placas -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira esta comparativa visual para entender las diferencias principales entre las placas de desarrollo más populares:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/obbedhfMcMM" title="Comparativa de placas microcontroladores" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Comparativa rápida</h4>
+            <div class="overflow-x-auto mt-2">
+              <table class="w-full text-xs border-collapse">
+                <thead>
+                  <tr class="bg-brand-100 text-brand-800">
+                    <th class="border border-slate-300 px-3 py-2 text-left">Placa</th>
+                    <th class="border border-slate-300 px-3 py-2 text-left">Procesador</th>
+                    <th class="border border-slate-300 px-3 py-2 text-left">RAM</th>
+                    <th class="border border-slate-300 px-3 py-2 text-left">WiFi/BT</th>
+                    <th class="border border-slate-300 px-3 py-2 text-left">Precio</th>
+                  </tr>
+                </thead>
+                <tbody class="text-slate-700">
+                  <tr><td class="border border-slate-300 px-3 py-2 font-semibold">Arduino Uno</td><td class="border border-slate-300 px-3 py-2">ATmega328P (16 MHz)</td><td class="border border-slate-300 px-3 py-2">2 KB</td><td class="border border-slate-300 px-3 py-2">No</td><td class="border border-slate-300 px-3 py-2">~5 €</td></tr>
+                  <tr class="bg-slate-50"><td class="border border-slate-300 px-3 py-2 font-semibold">ESP32</td><td class="border border-slate-300 px-3 py-2">Xtensa dual-core (240 MHz)</td><td class="border border-slate-300 px-3 py-2">520 KB</td><td class="border border-slate-300 px-3 py-2">Sí</td><td class="border border-slate-300 px-3 py-2">~4 €</td></tr>
+                  <tr><td class="border border-slate-300 px-3 py-2 font-semibold">Micro:bit</td><td class="border border-slate-300 px-3 py-2">nRF52833 (64 MHz)</td><td class="border border-slate-300 px-3 py-2">128 KB</td><td class="border border-slate-300 px-3 py-2">BLE</td><td class="border border-slate-300 px-3 py-2">~15 €</td></tr>
+                  <tr class="bg-slate-50"><td class="border border-slate-300 px-3 py-2 font-semibold">Pi Pico</td><td class="border border-slate-300 px-3 py-2">RP2040 dual-core (133 MHz)</td><td class="border border-slate-300 px-3 py-2">264 KB</td><td class="border border-slate-300 px-3 py-2">No*</td><td class="border border-slate-300 px-3 py-2">~4 €</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">* Existe la variante Pico W con WiFi.</p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>¿Cuándo usar cada una?</strong>
+            <strong>Arduino Uno:</strong> Prototipos simples sin necesidad de red (LEDs, motores, sensores básicos). <strong>ESP32:</strong> Proyectos IoT que requieren WiFi/Bluetooth. <strong>Micro:bit:</strong> Educación, robótica, experimentos con sensores integrados. <strong>Pi Pico:</strong> Control de bajo nivel, alta velocidad, proyectos con MicroPython.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En grupos de 3, se os asignará un escenario: monitorización de un invernadero, alarma casera o estación meteorológica. Decidid qué placa usaríais y justificad la elección considerando: tipo de sensores, necesidad de red, coste y complejidad de programación.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Hardware y Software: componentes y ciclo de vida</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Para trabajar con computación física es fundamental componer el marco teórico sobre qué es el hardware y qué es el software, y cómo ambos se relacionan. En esta sesión clasificaremos los componentes físicos de un sistema informático y profundizaremos en las fases del ciclo de vida del software.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Clasificación del hardware</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Procesadores (CPU/GPU):</strong> El cerebro del sistema. Ejecutan las instrucciones del programa. Los microcontroladores integran el procesador en el mismo chip que la memoria y los periféricos.</li>
+              <li><strong>Memoria:</strong> Almacena datos e instrucciones. RAM (volátil, datos en uso) y ROM/Flash (permanente, firmware). En un ESP32: 520 KB de RAM y 4 MB de Flash.</li>
+              <li><strong>Periféricos de entrada:</strong> Sensores de temperatura, ultrasonidos, infrarrojos, pulsadores, teclados, cámaras.</li>
+              <li><strong>Periféricos de salida:</strong> LEDs, motores, displays LCD/OLED, buzzers, servomotores.</li>
+              <li><strong>Comunicación:</strong> Módulos WiFi, Bluetooth, UART, SPI, I2C, GPS.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" alt="Componentes de hardware" loading="lazy" />
+            <figcaption>Componentes esenciales de un sistema de computación física</figcaption>
+          </figure>
+
+          <div class="callout callout-peligro">
+            <strong>Error común</strong>
+            Confundir la memoria RAM con el almacenamiento. La RAM pierde su contenido al apagar el dispositivo. La Flash mantiene los datos (como el programa que has subido al ESP32) aunque se desconecte la alimentación.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El ciclo de vida del software</h4>
+            <p>El desarrollo de software no es solo escribir código. Sigue un proceso estructurado:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Análisis:</strong> Se definen los requisitos. ¿Qué debe hacer el sistema? ¿Qué restricciones hay (hardware, coste, tiempo)?</li>
+              <li><strong>Diseño:</strong> Se planifica la arquitectura: estructura de módulos, diagramas de flujo, selección de componentes hardware.</li>
+              <li><strong>Implementación:</strong> Se escribe el código fuente. En computación física, esto incluye programar el microcontrolador.</li>
+              <li><strong>Pruebas:</strong> Se verifica que el software funciona correctamente en el hardware real. Se corrigen errores (bugs).</li>
+              <li><strong>Mantenimiento:</strong> Se actualiza el software para corregir fallos, añadir funcionalidades o adaptarse a nuevos requisitos.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            En computación física, el ciclo de vida es iterativo: programar → probar en la placa → ajustar → volver a probar. Es muy raro que el primer borrador funcione. Cada vuelta es una oportunidad de aprendizaje.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Se os proporcionará un diagrama de flujo con errores. En parejas, identificad los fallos lógicos y proponed las correcciones. Luego, implementad el flujo corregido en pseudocódigo.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Sensores, motores, displays y módulos de comunicación.</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo el procesador y la memoria.</button>
+            <button class="quiz-opcion" data-valor="c">C. Únicamente los cables y la placa base.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué componentes forman parte del hardware de un sistema IoT?</p>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Implementación → Diseño → Análisis → Pruebas → Mantenimiento.</button>
+            <button class="quiz-opcion" data-valor="b">B. Análisis → Diseño → Implementación → Pruebas → Mantenimiento.</button>
+            <button class="quiz-opcion" data-valor="c">C. Mantenimiento → Pruebas → Implementación → Diseño → Análisis.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es el orden correcto del ciclo de vida del software?</p>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Seguridad eléctrica: cortafuegos de hardware y HSM</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            La seguridad en computación física no es solo software: los dispositivos físicos tienen riesgos propios que debemos conocer y prevenir. Un incendio eléctrico o un componente dañado pueden tener consecuencias reales.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Cuando trabajamos con hardware, la seguridad tiene dos dimensiones: proteger el dispositivo de amenazas físicas (cortocircuitos, sobrecalentamiento) y proteger los datos que procesa de accesos no autorizados. Esta sesión aborda ambos aspectos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Riesgos eléctricos en desarrollo</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Cortocircuitos:</strong> Conectar un cable de alimentación en el pin equivocado puede quemar la placa instantáneamente.</li>
+              <li><strong>Sobrecalentamiento:</strong> Un motor o una resistencia conectados sin limitador de corriente pueden encenderse peligrosamente.</li>
+              <li><strong>Descargas electrostáticas (ESD):</strong> Tocar componentes sensibles con las manos puede dañarlos invisibleamente.</li>
+              <li><strong>Alimentación incorrecta:</strong> Suministrar 5V a un componente que espera 3.3V puede destruirlo.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Precaución en el laboratorio</strong>
+            Siempre verificar el voltaje de alimentación antes de conectar componentes. Nunca conectar o desconectar cables con la placa encendida. Usar una fuente de alimentación regulada y no exceder los límites de corriente del pin.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cortafuegos de hardware (Hardware Firewall)</h4>
+            <p>Un <strong>cortafuegos de hardware</strong> es un dispositivo físico que filtra el tráfico de red antes de que llegue a nuestra red interna. A diferencia del cortafuegos de software (que se ejecuta en el ordenador), este dispositivo protege a todos los dispositivos de la red simultáneamente.</p>
+            <p class="mt-2">En entornos IoT, los cortafuegos de hardware son especialmente importantes porque muchos dispositivos IoT tienen recursos limitados y no pueden ejecutar su propio software de seguridad.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Módulos de Seguridad Hardware (HSM)</h4>
+            <p>Un <strong>HSM (Hardware Security Module)</strong> es un dispositivo dedicado a gestionar claves criptográficas y realizar operaciones de cifrado de forma segura. Se usa en:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Servidores bancarios para proteger transacciones.</li>
+              <li>Dispositivos IoT de alta seguridad (certificados digitales, autenticación).</li>
+              <li>Infraestructuras críticas: hospitales, centros de datos.</li>
+            </ul>
+            <p class="mt-2">Un HSM nunca expone sus claves al exterior. Incluso si alguien accede físicamente al dispositivo, las claves no se pueden extraer.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Concepto clave</strong>
+            La seguridad en computación física combina protección física (cerraduras, temperatura, alimentación) con protección lógica (cortafuegos, cifrado, autenticación). Ambas dimensiones son inseparables.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Prevención en el aula</h4>
+            <p>Para trabajar de forma segura con placas de desarrollo:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Siempre doble-check de polaridad antes de conectar.</li>
+              <li>Usar cables de colores estándar: rojo (+), negro (−).</li>
+              <li>Trabajar sobre superficies antiestáticas.</li>
+              <li>Tener un multímetro disponible para verificar voltajes.</li>
+              <li>No dejar placas conectadas sin supervisión.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">IoT en profundidad: sensores, nube y protocolos</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión es el corazón teórico de la unidad IoT. Comprender los protocolos de comunicación es esencial para que el alumnado diseña sistemas conectados de forma fundamentada, no por ensayo y error.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Un sistema IoT completo tiene tres capas: <strong>sensores</strong> que recogen datos del entorno, <strong>conectividad</strong> que los transmite, y <strong>nube</strong> que los almacena, procesa y presenta. En esta sesión profundizaremos en cada una de estas capas.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de sensores IoT</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Temperatura y humedad:</strong> DHT11, DHT22, BME280. Miden condiciones ambientales.</li>
+              <li><strong>Ultrasonidos (HC-SR04):</strong> Miden distancias mediante ondas de sonido. Usados en aparcamientos inteligentes.</li>
+              <li><strong>Infrarrojos:</strong> Detectan movimiento (PIR) o presencia. Base de sistemas de alarma.</li>
+              <li><strong>Luz (LDR):</strong> Fotosensores para activar iluminación automática.</li>
+              <li><strong>Gas y calidad de aire:</strong> MQ-2, MQ-135. Detectan humo, CO₂ y contaminantes.</li>
+              <li><strong>Acelerómetros y giroscopios:</strong> Detectan orientación y movimiento. En smartphones y wearables.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&h=400&fit=crop" alt="Sensores IoT" loading="lazy" />
+            <figcaption>Sensores conectados: el punto de partida de cualquier sistema IoT</figcaption>
+          </figure>
+
+          <!-- VÍDEO: Protocolos IoT -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira esta explicación de los principales protocolos de comunicación en IoT para entender sus diferencias y casos de uso:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/7LphJVFdWdA" title="Protocolos de comunicación IoT" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Protocolos de comunicación</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>WiFi:</strong> Alta velocidad, amplio alcance, alto consumo. Ideal para dispositivos con alimentación permanente.</li>
+              <li><strong>Bluetooth Low Energy (BLE):</strong> Bajo consumo, corto alcance (~10 m). Perfecto para wearables y sensores portátiles.</li>
+              <li><strong>Zigbee:</strong> Redes de malla, bajo consumo, alcance medio. Usado en domótica (Philips Hue).</li>
+              <li><strong>Z-Wave:</strong> Similar a Zigbee pero con menor interferencia. Muy usado en domótica profesional.</li>
+              <li><strong>MQTT:</strong> Protocolo ligero de mensajería pub/sub. Estándar de facto para comunicación IoT con la nube.</li>
+              <li><strong>HTTP/HTTPS:</strong> El clásico. Funcional pero pesado para dispositivos con recursos limitados.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Comparativa rápida</strong>
+            <strong>WiFi:</strong> Máxima velocidad, máximo consumo. <strong>BLE:</strong> Mínimo consumo, corto alcance. <strong>Zigbee:</strong> Redes de malla, domótica. <strong>MQTT:</strong> Protocolo de aplicación, no de red — funciona sobre WiFi, Ethernet, etc.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Conexión a la nube</h4>
+            <p>Los dispositivos IoT envían sus datos a plataformas en la nube para su almacenamiento y visualización:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Adafruit IO:</strong> Plataforma gratuita para prototipos. Dashboards personalizables.</li>
+              <li><strong>ThingSpeak:</strong> Ideal para análisis de datos y visualización con MATLAB.</li>
+              <li><strong>Home Assistant:</strong> Plataforma open source para domótica completa.</li>
+              <li><strong>AWS IoT / Google Cloud IoT:</strong> Soluciones empresariales a gran escala.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En grupos, diseñad un diagrama de una red IoT para monitorizar un huerto escolar. Identificad: sensores necesarios, protocolo de comunicación recomendado y plataforma en la nube. Justificad cada decisión.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. WiFi: bajo consumo, corto alcance.</button>
+            <button class="quiz-opcion" data-valor="b">B. BLE: bajo consumo, corto alcance, ideal para wearables.</button>
+            <button class="quiz-opcion" data-valor="c">C. Zigbee: alta velocidad, ideal para streaming de vídeo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué protocolo es ideal para un dispositivo wearable con batería?</p>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. HTTP</button>
+            <button class="quiz-opcion" data-valor="b">B. Zigbee</button>
+            <button class="quiz-opcion" data-valor="c">C. MQTT</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué protocolo es el estándar de facto para mensajería IoT con la nube?</p>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Aplicaciones móviles IoT: dashboards, control y automatización</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-consejo">
+            <strong>Actividad de inicio</strong>
+            ¿Tenéis un altavoz inteligente en casa? ¿Una bombilla que se controla con el móvil? En esta sesión analizaremos cómo funcionan estas tecnologías que ya forman parte de nuestro día a día.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La mayoría de sistemas IoT se controlan desde aplicaciones móviles o paneles web (dashboards). Estas interfaces permiten visualizar datos en tiempo real, activar o desactivar dispositivos y crear automatizaciones. En esta sesión exploraremos los principales ecosistemas de hogar inteligente y las herramientas para crear nuestros propios dashboards.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ecosistemas de hogar inteligente</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Amazon Alexa:</strong> Asistente de voz que controla dispositivos compatibles mediante comandos de voz. Ecosistema amplio: bombillas, enchufes, cerraduras, cámaras, altavoces.</li>
+              <li><strong>Google Home:</strong> Similar a Alexa, integrado con servicios de Google. Permite rutinas automatizadas (ej: "Buenos días" → encender luces, dar temperatura, leer noticias).</li>
+              <li><strong>Apple HomeKit:</strong> Ecosistema Apple con énfasis en privacidad. Compatible con Siri. Control por voz y automatizaciones.</li>
+              <li><strong>Home Assistant:</strong> Plataforma open source que conecta cualquier dispositivo IoT sin depender de un fabricante. Más personalizable pero requiere más conocimiento técnico.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&h=400&fit=crop" alt="Hogar inteligente IoT" loading="lazy" />
+            <figcaption>Ecosistemas de domótica: Alexa, Google Home y más</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Dashboards IoT</h4>
+            <p>Un <strong>dashboard</strong> es un panel de control visual que muestra los datos de los sensores y permite interactuar con los dispositivos. Ejemplos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Adafruit IO:</strong> Permite crear widgets (botones, gráficas, indicadores) conectados a los datos del ESP32.</li>
+              <li><strong>Node-RED:</strong> Herramienta visual de programación de flujos de datos. Conecta sensores, APIs y servicios.</li>
+              <li><strong>Grafana:</strong> Herramienta profesional de visualización de datos. Se usa con bases de datos como InfluxDB.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Caso real: automatización del hogar</strong>
+            Un sistema domótico completo puede: encender las luces al anochecer (sensor de luz), ajustar la calefacción según la temperatura exterior (sensor DHT22), activar una alarma si detecta movimiento (sensor PIR) y notificarte en el móvil. Todo esto sin intervención manual.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Control remoto y automatización</h4>
+            <p>Las aplicaciones móviles IoT permiten:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Control remoto:</strong> Encender/apagar dispositivos desde cualquier lugar con conexión a Internet.</li>
+              <li><strong>Programación:</strong> Establecer horarios (ej: luces encendidas de 18:00 a 23:00).</li>
+              <li><strong>Automatización:</strong> Reglas condicionales (si temperatura > 30°C → encender ventilador).</li>
+              <li><strong>Notificaciones:</strong> Alertas en el móvil cuando un sensor detecta una condición anómala.</li>
+              <li><strong>Historial:</strong> Gráficas con la evolución de datos a lo largo del tiempo.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Retos de las aplicaciones IoT</strong>
+            El control remoto depende de la conexión a Internet. Si la red falla, muchos dispositivos pierden funcionalidad. Por eso es importante diseñar sistemas con modo offline y mecanismos de respaldo físico.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Cada grupo creará un mockup (prototipo visual) de una aplicación móvil para controlar un dispositivo IoT de su elección: riego automático, alarma o iluminación. Deberá incluir: pantalla principal con datos en tiempo real, botón de control y una automatización básica.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: sistema IoT con ESP32 y dashboard</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-consejo">
+            <strong>Producto de la unidad</strong>
+            Esta sesión es la culminación de todo lo trabajado. Cada grupo还将 presentar su sistema IoT completo: hardware conectado, código funcionando y dashboard de visualización en la nube.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Objetivos del proyecto</h4>
+            <p>Cada grupo de 2-3 alumnos diseñará, construirá y presentará un sistema IoT completo que incluya:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Un sensor real conectado a un ESP32 (temperatura, humedad, luz, distancia o movimiento).</li>
+              <li>Código Arduino que lea el sensor y envíe los datos a la nube vía WiFi.</li>
+              <li>Un dashboard en Adafruit IO que muestre los datos en tiempo real con gráficas y widgets.</li>
+              <li>Una automatización o control remoto (botón virtual para activar un LED o motor).</li>
+              <li>Una memoria escrita con diagrama de conexión, código comentado y capturas del dashboard.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Especificación del proyecto</h4>
+            <p><strong>Requisitos mínimos:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Lectura de al menos un sensor cada 5 segundos.</li>
+              <li>Envío de datos a Adafruit IO mediante protocolo MQTT.</li>
+              <li>Dashboard con al menos 2 widgets (un gráfico y un indicador).</li>
+              <li>Control remoto de un actuador (LED, buzzer o servo).</li>
+            </ul>
+            <p class="mt-2"><strong>Requisitos opcionales (puntos extra):</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Múltiples sensores en un mismo dashboard.</li>
+              <li>Automatización con reglas (si X entonces Y).</li>
+              <li>Notificaciones push al móvil.</li>
+              <li>Alimentación por batería con gestión de energía.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Criterios de evaluación del proyecto</strong>
+            <span class="criterio">Funcionamiento del hardware</span>
+            <span class="criterio">Calidad del código</span>
+            <span class="criterio">Diseño del dashboard</span>
+            <span class="criterio">Documentación</span>
+            <span class="criterio">Presentación oral</span>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Desarrollo en sesión</h4>
+            <p>Esta sesión se dedica a:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Montaje del hardware (10 min):</strong> Conectar sensor, cables y placa según el diagrama.</li>
+              <li><strong>Programación (15 min):</strong> Subir el código al ESP32 y verificar la lectura del sensor.</li>
+              <li><strong>Configuración del dashboard (10 min):</strong> Crear feeds en Adafruit IO y añadir widgets.</li>
+              <li><strong>Pruebas integradas (10 min):</strong> Verificar que los datos fluyen desde el sensor hasta el dashboard.</li>
+              <li><strong>Presentaciones (5 min):</strong> Cada grupo presenta brevemente su sistema.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="a" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un dispositivo que recoge datos, los envía a la nube y permite su visualización.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un ordenador de sobremesa con conexión a Internet.</button>
+            <button class="quiz-opcion" data-valor="c">C. Una aplicación móvil para controlar el teléfono.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es un sistema IoT completo?</p>
+
+          <div class="quiz" data-correcta="b" data-total="4">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. WiFi es ideal para wearables por su bajo consumo.</button>
+            <button class="quiz-opcion" data-valor="b">B. MQTT es un protocolo ligero de mensajería pub/sub para IoT.</button>
+            <button class="quiz-opcion" data-valor="c">C. Zigbee se usa para transmisión de vídeo en alta definición.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué protocolo es el estándar de facto para mensajería IoT?</p>
+
+          <div class="quiz" data-correcta="c" data-total="4">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Solo tiene WiFi integrado.</button>
+            <button class="quiz-opcion" data-valor="b">B. Es idéntico al Arduino Uno.</button>
+            <button class="quiz-opcion" data-valor="c">C. Tiene WiFi y Bluetooth, procesador dual-core y es ideal para IoT.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Por qué el ESP32 es ideal para proyectos IoT?</p>
+
+          <div class="callout callout-consejo">
+            <strong>Reflexión final de la unidad</strong>
+            La computación física conecta el mundo del código con el mundo real. Cada sensor que programamos, cada dato que enviamos a la nube y cada automatización que creamos tiene un impacto tangible. A partir de ahora, cuando veáis un dispositivo inteligente, sabréis que detrás hay alguien que diseñó el hardware, escribió el código y configuró la conectividad.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud3.html" class="rounded-lg bg-slate-200 px-4 py-2 text-sm font-semibold text-ink-800 hover:bg-slate-300 transition">
+        ← UD3 · Desarrollo Web
+      </a>
+      <a href="ud5.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD5 · Bases de Datos →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

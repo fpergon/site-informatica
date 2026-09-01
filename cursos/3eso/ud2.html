@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD2 · Desarrollo de Aplicaciones Móviles · 3º ESO</title>
+  <meta name="description" content="Unidad Didáctica 2 de 3º ESO: Desarrollo de Aplicaciones Móviles con Thunkable. IDEs de bloques, programación orientada a eventos, sensores y proyecto final." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="3eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../3eso.html" class="hover:underline">3.º ESO</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque D</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Desarrollo de Aplicaciones Móviles</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Aprenderemos a crear aplicaciones móviles reales usando entornos de bloques como Thunkable. Exploraremos la programación orientada a eventos, los sensores del móvil y la interacción completa E/S. El producto final será una app funcional con interacción avanzada.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: App móvil completa con Thunkable</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque D — Desarrollo Móvil</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.D.1</span> IDEs de bloques para el desarrollo de aplicaciones móviles.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.D.2</span> Programación orientada a eventos.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.D.3</span> Definición de eventos y sus tipos.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.D.4</span> Generadores de eventos: sensores del dispositivo.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.D.5</span> Entrada y salida de datos en aplicaciones móviles.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">2.2 · Apps móviles</span>
+        <span class="criterio">2.3 · Desarrollo de apps e IoT</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">IDEs de bloques para móviles: Thunkable, MIT App Inventor, AppyBuilder</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión presenta los entornos de desarrollo que utilizaremos a lo largo de la unidad. Es importante que los alumnos comprendan que están usando herramientas profesionales adaptadas a su nivel, no juguetes educativos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Creamos aplicaciones móviles todos los días: desde TikTok hasta Google Maps. Pero, ¿cómo se crean estas apps? Normalmente se necesitan conocimientos de programación avanzados, pero existen entornos de desarrollo que nos permiten crear apps reales sin escribir una sola línea de código. En esta sesión conocemos los tres IDEs de bloques más populares para desarrollo móvil y descubriremos qué los hace diferentes y por qué Thunkable será nuestra herramienta principal.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un IDE de bloques para móviles?</h4>
+            <p>Un <strong>IDE</strong> (Integrated Development Environment) es un entorno de desarrollo integrado. Los IDEs de bloques para móviles son plataformas que permiten diseñar y programar aplicaciones arrastrando y soltando bloques de código visual, similar a como se programa en Scratch pero con el objetivo de generar apps para Android e iOS.</p>
+            <p class="mt-2">Estas plataformas comparten características fundamentales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Editor visual:</strong> Diseñáis la interfaz de la app arrastrando botones, texto, imágenes y otros elementos.</li>
+              <li><strong>Bloques de programación:</strong> Definís el comportamiento de la app con bloques encajables.</li>
+              <li><strong>Vista previa en tiempo real:</strong> Podéis probar la app en vuestro móvil mientras la desarrolláis.</li>
+              <li><strong>Exportación a APK:</strong> Generáis un archivo instalable en Android o una app para iOS.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Comparativa de IDEs</h4>
+            <p><strong>Thunkable:</strong> Plataforma moderna con interfaz muy pulida. Ofrece componentes avanzados como bases de datos en la nube, reconocimiento de voz y realidad aumentada. Tiene una versión gratuita completa y una versión de pago con funciones premium. Su punto fuerte es la facilidad de uso y la comunidad activa.</p>
+            <p class="mt-2"><strong>MIT App Inventor:</strong> Creado por el MIT, es el pionero en este campo. Es completamente gratuito y de código abierto. Tiene una comunidad enorme con miles de tutoriales y proyectos de ejemplo. Su interfaz es algo menos moderna que Thunkable, pero es extremadamente completa. Ideal para proyectos educativos.</p>
+            <p class="mt-2"><strong>AppyBuilder:</strong> Basado en App Inventor pero con una interfaz más moderna. Ofrece plantillas predefinidas que facilitan el inicio rápido de proyectos. Es menos conocido pero tiene funcionalidades interesantes para apps comerciales.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo</strong>
+            Aunque Thunkable es nuestra herramienta principal, es bueno conocer alternativas. Cada plataforma tiene sus fortalezas y en el futuro profesional podréis elegir la que mejor se adapte a vuestras necesidades.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Características compartidas</h4>
+            <p>Todos estos IDEs comparten un patrón común de diseño:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Vista de diseño:</strong> Panel visual donde colocáis los componentes de la interfaz (botones, etiquetas, imágenes, etc.).</li>
+              <li><strong>Vista de bloques:</strong> Panel donde definís la lógica de la app usando bloques de programación.</li>
+              <li><strong>Árbol de componentes:</strong> Lista jerárquica de todos los elementos de vuestra app.</li>
+              <li><strong>Propiedades:</strong> Configuración de cada componente (color, tamaño, texto, posición).</li>
+              <li><strong>Conexión con el móvil:</strong> Podéis probar la app en tiempo real escaneando un código QR.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Son entornos de programación textual para crear apps.</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo permiten crear juegos, no apps utilitarias.</button>
+            <button class="quiz-opcion" data-valor="c">C. Permiten crear apps reales arrastrando bloques sin escribir código.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué son los IDEs de bloques para móviles?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una cuenta gratuita enThunkable y explorar la interfaz. Identificar: panel de diseño, panel de bloques, árbol de componentes y propiedades. Entregar capturas de pantalla señalando cada zona.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Programación orientada a eventos</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La programación tradicional es <strong>secuencial</strong>: el código se ejecuta línea por línea desde arriba hasta abajo. Pero las aplicaciones móviles funcionan de forma diferente: responden a lo que el usuario hace. Si pulsáis un botón, pasa algo. Si deslizáis la pantalla, cambia el contenido. Esto es la <strong>programación orientada a eventos</strong>, y es el paradigma que usan todas las apps de vuestro móvil.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un evento?</h4>
+            <p>Un <strong>evento</strong> es cualquier acción que ocurre en la app y que el programa debe procesar. Puede ser una acción del usuario (pulsar un botón, escribir texto, deslizar) o del sistema (llega un mensaje, cambia la orientación del móvil, se detecta un sensor).</p>
+            <p class="mt-2">En programación orientada a eventos, escribimos <strong>qué hacer</strong> cuando cada evento ocurre, pero no controlamos cuándo ocurren. El sistema operativo gestiona los eventos y ejecuta nuestro código cuando corresponde.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Enfoque reactivo</strong>
+            La programación orientada a eventos es fundamentalmente <strong>reactiva</strong>: el programa no inicia acciones por sí mismo, sino que reacciona a estímulos externos. Este patrón es universal en interfaces gráficas, desde una web hasta un sistema de control industrial.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Programación secuencial vs. orientada a eventos</h4>
+            <p><strong>Secuencial (scripts, Python):</strong> El código se ejecuta de arriba a abajo. El programa empieza, ejecuta sus instrucciones y termina. Ejemplo: un script que calcula la media de unas notas.</p>
+            <p class="mt-2"><strong>Orientada a eventos (apps móviles):</strong> El programa nunca "termina" mientras la app está abierta. Espera indefinidamente a que ocurran eventos y ejecuta el código correspondiente. Ejemplo: una app de calculadora que espera a que pulsemos botones.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Características</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Desacoplamiento:</strong> La interfaz y la lógica están separadas. Podéis cambiar la apariencia sin tocar el código.</li>
+              <li><strong>Asincronía:</strong> Los eventos pueden ocurrir en cualquier momento y en cualquier orden.</li>
+              <li><strong>Interactividad:</strong> La app siempre está "viva" y lista para responder.</li>
+              <li><strong>Múltiples fuentes:</strong> Los eventos pueden venir del usuario, del sistema o de servicios externos.</li>
+            </ul>
+          </div>
+
+          <!-- VÍDEO: Programación orientada a eventos -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira esta introducción a la programación orientada a eventos para comprender mejor el enfoque reactivo:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/p8vHTwVqvWs" title="Programación orientada a eventos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ventajas e inconvenientes</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Ventajas:</strong> Apps interactivas, experiencia de usuario natural, código organizado por funcionalidad, fácil de mantener y ampliar.</li>
+              <li><strong>Inconvenientes:</strong> Flujo de control menos predecible, gestión de estado compleja, posible concurrencia de eventos, depuración más difícil.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad</strong>
+            Analizar 3 apps del móvil (calculadora, reloj, galería) e identificar al menos 3 eventos en cada una. Clasificarlos: ¿son generados por el usuario o por el sistema?
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Definición de eventos: tipos comunes y bloques en Thunkable</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            En esta sesión los alumnos aprenden a identificar y crear los eventos más habituales en una app móvil. Es fundamental que practiquen con Thunkable para consolidar estos conceptos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En la sesión anterior aprendimos qué es la programación orientada a eventos. Ahora vamos a ver concretamente los tipos de eventos más comunes en aplicaciones móviles y cómo se implementan en Thunkable. Cada tipo de evento corresponde a una interacción específica del usuario o del sistema.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de eventos comunes</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Click:</strong> El usuario pulsa un botón, imagen o elemento. Es el evento más básico y frecuente.</li>
+              <li><strong>Touch / LongPress:</strong> El usuario toca la pantalla (con o sin mantención). Útil para menús contextuales.</li>
+              <li><strong>Drag:</strong> El usuario arrastra un elemento. Fundamental para juegos y interfaces táctiles.</li>
+              <li><strong>Submit:</strong> El usuario envía un formulario o confirma una acción.</li>
+              <li><strong>Change:</strong> El valor de un campo de entrada cambia (texto, selector, interruptor).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Bloques de eventos en Thunkable</h4>
+            <p>En Thunkable, los eventos se representan con bloques especiales que contienen el código que se ejecuta cuando el evento ocurre:</p>
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>// Ejemplo de evento Click en pseudocódigo de bloques
+Evento: Botón "Enviar" → Click
+Acción:Mostrar mensaje "¡Enviado!"
+Acción: Limpiar campo de texto</code></pre>
+            <p class="mt-2">Los bloques de eventos en Thunkable tienen la forma: <code class="bg-slate-100 px-1 rounded text-xs">Cuando [componente] ocurre [evento]</code>. Dentro colocáis las acciones que queréis que se ejecuten.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico: botón con evento Click</h4>
+            <p>Imaginemos una app sencilla con un botón que cambia el color de fondo al pulsarlo:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Añadid un botón al diseño con texto "Cambiar color".</li>
+              <li>En la vista de bloques, buscad el evento "Cuando Botón1 Click".</li>
+              <li>Dentro del bloque, añadid: "Establecer Screen1.BackgroundColor a Rojo".</li>
+              <li>Probad la app en el móvil. Cada vez que pulsáis el botón, el fondo cambia.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            Un mismo componente puede tener múltiples eventos. Por ejemplo, un botón puede tener un evento Click y otro LongPress, cada uno ejecutando código diferente. No debéis confundir eventos con acciones: el evento es el "cuándo" y la acción es el "qué hacer".
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Click, Touch, Drag, Submit, Change</button>
+            <button class="quiz-opcion" data-valor="b">B. Print, Input, While, For</button>
+            <button class="quiz-opcion" data-valor="c">C. Start, Stop, Pause, Resume</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuáles son los tipos de eventos más comunes en apps móviles?</p>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad</strong>
+            Crear en Thunkable una pantalla con 3 botones de colores diferentes. Cada botón debe cambiar el fondo de la pantalla a su color correspondiente cuando se pulsa. Añadir también un botón "Restablecer" que ponga el fondo blanco.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Generadores de eventos: sensores del dispositivo</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Vuestro móvil es mucho más que una pantalla táctil. Contiene docenas de sensores que detectan el entorno: aceleración, orientación, posición geográfica, nivel de luz, presión atmosférica, proximidad y más. Cada vez que estos sensores detectan un cambio, generan un evento que nuestra app puede procesar. En esta sesión descubriremos qué sensores tiene vuestro móvil y cómo usarlos en Thunkable para crear apps más inteligentes y adaptativas.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Acelerómetro</h4>
+            <p>El <strong>acelerómetro</strong> mide la aceleración del dispositivo en tres ejes (X, Y, Z). Detecta si el móvil está en movimiento, si lo inclinamos o si lo sacudimos. Se usa en juegos de carreras, apps de fitness que cuentan pasos, y para detectar gestos como agitar para deshacer.</p>
+            <p class="mt-2">En Thunkable: el evento <code class="bg-slate-100 px-1 rounded text-xs">Cuando Acelerómetro1 Cambia</code> proporciona los valores de aceleración en cada eje.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Giroscopio</h4>
+            <p>El <strong>giroscopio</strong> mide la velocidad de rotación del dispositivo. A diferencia del acelerómetro, que mide movimiento lineal, el giroscopio detecta giros y rotaciones. Se usa en realidad aumentada, juegos de orientación y estabilización de imagen en cámaras.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato curioso</strong>
+            Los smartphones modernos combinan acelerómetro y giroscopio en un chip IMU (Inertial Measurement Unit). Este sistema es el mismo que se usa en aviones y cohetes, pero a una escala microscópica.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">GPS (Ubicación)</h4>
+            <p>El <strong>GPS</strong> proporciona la posición geográfica exacta del dispositivo: latitud, longitud y altitud. Se usa en mapas, apps de geolocalización, seguimiento de rutas y servicios basados en la ubicación.</p>
+            <p class="mt-2">En Thunkable: el componente <code class="bg-slate-100 px-1 rounded text-xs">Ubicación</code> proporciona eventos de cambio de posición y valores de latitud/longitud.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Otros sensores importantes</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Proximidad:</strong> Detecta si hay un objeto cerca de la pantalla (se apaga la pantalla al hablar al teléfono).</li>
+              <li><strong>Luz ambiental:</strong> Mide la intensidad de la luz circundante (ajuste automático de brillo).</li>
+              <li><strong>Barómetro:</strong> Mide la presión atmosférica (cálculo de altitud, predicción meteorológica).</li>
+              <li><strong>Magnetómetro:</strong> Detecta el campo magnético terrestre (brújula digital).</li>
+            </ul>
+          </div>
+
+          <!-- VÍDEO: Sensores móviles -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo para entender cómo funcionan los sensores en los smartphones modernos:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" title="Sensores en smartphones" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo: nivel digital</h4>
+            <p>Usando el acelerómetro podemos crear un nivel digital sencillo que muestre si una superficie está horizontal o inclinada. Cuando el dispositivo detecta que está nivelado (aceleración cercana a 0 en todos los ejes), muestra un mensaje de confirmación.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad</strong>
+            Crear en Thunkable una app que use al menos 2 sensores diferentes. Por ejemplo: una app que muestre la orientación del móvil (acelerómetro) y la ubicación actual (GPS).
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">E/S en apps: captura de eventos y respuesta. Ejemplo: puzzles y clima</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión aplica todos los conceptos anteriores en ejemplos concretos. Los alumnos verán el flujo completo E/S en acción y podrán experimentar con apps reales.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En programación, <strong>E/S</strong> significa <strong>Entrada/Salida</strong>. En una app móvil, la entrada son los datos que recibimos del usuario o de los sensores, y la salida es lo que mostramos en pantalla, reproducimos como sonido o enviamos a un servidor. En esta sesión veremos cómo gestionar el flujo completo de E/S con dos ejemplos prácticos: una app de puzzles y una app del clima.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">App de Puzzles</h4>
+            <p>Una app de puzzles es un ejemplo perfecto del ciclo E/S:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Entrada:</strong> El usuario toca una pieza del puzzle (evento Click).</li>
+              <li><strong>Proceso:</strong> La app determina si la pieza está en la posición correcta y actualiza el estado del puzzle.</li>
+              <li><strong>Salida:</strong> La app reorganiza las piezas visualmente y, si el puzzle está completo, muestra un mensaje de felicitación.</li>
+            </ul>
+            <p class="mt-2">La clave está en mantener el <strong>estado</strong> del puzzle: qué piezas están colocadas, cuántos movimientos se han hecho, y si el juego ha terminado.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">App del Clima</h4>
+            <p>Una app del clima muestra cómo funciona la E/S con datos externos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Entrada:</strong> El usuario escribe su ciudad (evento Change en campo de texto) o la app obtiene la ubicación (evento de GPS).</li>
+              <li><strong>Proceso:</strong> La app consulta una API meteorológica (servicio externo) con la ubicación obtenida.</li>
+              <li><strong>Salida:</strong> La app muestra temperatura, humedad, condiciones del tiempo y una imagen representativa.</li>
+            </ul>
+            <p class="mt-2">Este ejemplo introduce el concepto de <strong>API</strong> (Application Programming Interface): un servicio web que nuestra app puede consultar para obtener datos en tiempo real.</p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            Las apps del clima necesitan permisos del usuario para acceder a la ubicación. En Thunkable debéis activar los permisos de ubicación en la configuración de la app.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Patrón E/S en Thunkable</h4>
+            <p>En Thunkable, el patrón E/S se implementa así:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Captura de entrada:</strong> Definís un evento que escucha la acción del usuario o sensor.</li>
+              <li><strong>Procesamiento:</strong> Dentro del evento, usáis bloques lógicos para procesar los datos.</li>
+              <li><strong>Generación de salida:</strong> Actualizáis componentes de pantalla, enviáis datos o reproducís sonidos.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Entrada = lo que el programa muestra, Salida = lo que el usuario escribe.</button>
+            <button class="quiz-opcion" data-valor="b">B. Entrada = datos que recibe (usuario, sensores), Salida = lo que muestra o envía.</button>
+            <button class="quiz-opcion" data-valor="c">C. Entrada y Salida son lo mismo en programación.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué significan Entrada y Salida en programación?</p>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad</strong>
+            Crear en Thunkable una app de puzzles sencilla (por ejemplo, un puzzle de 3x3 donde se mezclan las piezas al pulsar un botón) o una app del clima que use una API pública como OpenWeatherMap.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Dependencia de eventos: cadenas de eventos</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En las sesiones anteriores hemos visto eventos individuales: un botón que cambia el color, un sensor que detecta la orientación. Pero en las aplicaciones reales, los eventos no ocurren de forma aislada. Un evento puede desencadenar otro, que a su vez activa otro, creando una <strong>cadena de eventos</strong>. Comprender esta dependencia es clave para diseñar apps complejas y funcionales.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una cadena de eventos?</h4>
+            <p>Una <strong>cadena de eventos</strong> es una secuencia donde el resultado de un evento se convierte en el detonante del siguiente. Esto crea un flujo de ejecución que puede abarcar múltiples pantallas, servicios externos y acciones del usuario.</p>
+            <p class="mt-2">Ejemplo simplificado:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Evento 1: El usuario pulsa "Publicar".</li>
+              <li>Evento 2: La app sube la foto al servidor (evento de red).</li>
+              <li>Evento 3: El servidor confirma la subida (evento de respuesta).</li>
+              <li>Evento 4: La app muestra una notificación de éxito.</li>
+              <li>Evento 5: La pantalla se actualiza mostrando la nueva publicación.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ejemplo real: TikTok</strong>
+            TikTok es un ejemplo perfecto de cadenas de eventos complejas. Analicemos el flujo de publicar un vídeo: El usuario graba un vídeo → lo edita con efectos → pulsa "Publicar" → la app lo comprime → lo sube al servidor → el servidor lo procesa → se añade al feed → se envía notificación a los seguidores → el vídeo aparece en la pantalla de otros usuarios. Cada paso es un evento que desencadena el siguiente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Implementación en Thunkable</h4>
+            <p>Para gestionar cadenas de eventos en Thunkable, utilizamos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Variables globales:</strong> Para mantener el estado entre eventos.</li>
+              <li><strong>Eventos de respuesta:</strong> Cuando una operación asíncrona termina, dispara un nuevo evento.</li>
+              <li><strong>Funciones auxiliares:</strong> Para encapsular la lógica de cada paso de la cadena.</li>
+              <li><strong>Condiciones:</strong> Para ramificar la cadena según el resultado de cada paso.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Diagrama de flujo de eventos</h4>
+            <p>Antes de implementar una cadena de eventos, es recomendable dibujar un diagrama de flujo que muestre:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Cada evento posible.</li>
+              <li>Qué acción se ejecuta en cada evento.</li>
+              <li>Qué eventos se desencadena como resultado.</li>
+              <li>Las condiciones que pueden ramificar el flujo.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Consejo de diseño</strong>
+            Cuando diseñéis una cadena de eventos, pensad siempre en el <strong>caso de error</strong>: ¿qué pasa si la conexión a internet falla? ¿Y si el usuario cancela a mitad de proceso? Las apps robustas manejan tanto el camino feliz como los errores.
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad</strong>
+            En grupos de 3, diseñar un diagrama de flujo de eventos para una app de mensajería (como WhatsApp). Identificar al menos 5 eventos encadenados: enviar mensaje, recibir confirmación, notificar al destinatario, mostrar el mensaje en pantalla, etc.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: app completa con Thunkable</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión es la culminación de la unidad. Los alumnos aplicarán todos los conceptos aprendidos para crear una app completa. Es importante que elijan un proyecto que les motive y que puedan completar en el tiempo disponible.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Llegó el momento de poner en práctica todo lo aprendido. En esta sesión final, cada alumno o grupo diseñará y desarrollará una aplicación móvil completa usando Thunkable. La app debe demostrar dominio de los conceptos de la unidad: eventos, sensores, E/S y cadenas de eventos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Propuestas de proyecto</h4>
+            <p>Elige una de las siguientes opciones o propón tu propia idea (sujeta a aprobación del profesor):</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>App de fitness:</strong> Usa el acelerómetro para contar pasos y calcular calorías quemadas. Incluye registro de actividad y gráficas de progreso.</li>
+              <li><strong>App de trivia:</strong> Juego de preguntas con temporizador, puntuación y niveles de dificultad. Usa eventos de click y change.</li>
+              <li><strong>App del tiempo:</strong> Consulta una API meteorológica y muestra el clima actual con gráficos. Usa GPS para detectar la ubicación.</li>
+              <li><strong>App de notas:</strong> Permite crear, editar y eliminar notas con fecha y categoría. Almacena datos localmente.</li>
+              <li><strong>App de código QR:</strong> Escanea códigos QR con la cámara y muestra la información codificada. Usa sensores de cámara.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Criterios de evaluación del proyecto</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Funcionalidad (40%):</strong> La app funciona correctamente, maneja eventos, usa al menos 2 sensores o fuentes de datos.</li>
+              <li><strong>Diseño de interfaz (20%):</strong> La interfaz es clara, intuitiva y visualmente atractiva.</li>
+              <li><strong>Estructura del código (20%):</strong> Los bloques están organizados, usan nombres descriptivos y el código es reutilizable.</li>
+              <li><strong>Documentación (10%):</strong> Incluye un brief description de la app, instrucciones de uso y justificación de las decisiones de diseño.</li>
+              <li><strong>Creatividad (10%):</strong> La app aporta algo original o una perspectiva diferente.</li>
+            </ul>
+          </div>
+
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Events, sensors, E/S, event chains, Thunkable project.</button>
+            <button class="quiz-opcion" data-valor="b">B. Only click events and print statements.</button>
+            <button class="quiz-opcion" data-valor="c">C. Only GPS and accelerometer sensors.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué conceptos clave de esta unidad debes demostrar en tu proyecto final?</p>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cronograma sugerido</h4>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Minutos 0-10:</strong> Definir la idea, crear cuenta en Thunkable y empezar el diseño de la interfaz.</li>
+              <li><strong>Minutos 10-30:</strong> Implementar los eventos principales y la lógica de la app.</li>
+              <li><strong>Minutos 30-45:</strong> Probar, depurar y pulir los detalles.</li>
+              <li><strong>Minutos 45-50:</strong> Preparar la demostración para el resto de la clase.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Producto de la unidad</strong>
+            Presentar la app terminada al resto de la clase en una demostración de 2-3 minutos. Explicar qué hace, cómo funciona y qué conceptos de la unidad habéis aplicado. El mejor proyecto se elegirá como referencia para futuros cursos.
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Recuerda</strong>
+            El objetivo no es crear la app perfecta, sino demostrar que comprendéis los conceptos de programación orientada a eventos y E/S. Una app sencilla bien implementada vale más que una app compleja llena de errores.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud1.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        ← Anterior: UD1 · Introducción a Python
+      </a>
+      <span class="text-sm text-slate-400">Segunda unidad</span>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

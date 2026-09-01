@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2º ESO · Computación y Robótica · IES Pintor Pedro Gómez</title>
-  <meta name="description" content="Unidades, proyectos ABP y criterios BOJA de 2º ESO. Python, electrónica digital, Arduino, IoT y sostenibilidad." />
+  <meta name="description" content="Unidades didácticas de 2.º ESO: programación, desarrollo móvil y web, computación física, IoT, robótica, datos, IA y ciberseguridad." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,81 +26,119 @@
 
   <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
 
-    <section class="rounded-2xl bg-gradient-to-br from-accent-600 to-brand-600 p-8 text-white shadow-lg">
-      <p class="text-sm font-semibold uppercase tracking-wider text-accent-100">Curso 2025/26 · 2º ESO</p>
-      <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">Desarrollo y Sistemas Físicos</h1>
-      <p class="mt-3 max-w-2xl text-white/90">Saberes básicos <span class="font-semibold">BOJA</span>: programación textual estructurada, electrónica digital con Arduino, creación web e <span class="font-semibold">Internet de las Cosas (IoT)</span> con enfoque sostenible. Metodología <span class="font-semibold">ABP</span>.</p>
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">Curso 2025/26 · 2.º ESO</p>
+      <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">Computación y Robótica</h1>
+      <p class="mt-3 max-w-2xl text-brand-50/90">Saberes básicos de la <span class="font-semibold">BOJA</span> organizados en 6 unidades didácticas por trimestres. Profundizamos en programación, desarrollo móvil y web, computación física, robótica IoT, datos masivos/IA y ciberseguridad.</p>
     </section>
 
     <section class="mt-8" data-tab-group>
       <div class="flex flex-wrap gap-2" role="tablist">
-        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="unidades" aria-selected="true">Unidades de trabajo</button>
-        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="proyectos" aria-selected="false">Proyectos de aula (ABP)</button>
+        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="unidades" aria-selected="true">Unidades didácticas</button>
         <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="boja" aria-selected="false">Criterios BOJA</button>
       </div>
 
       <div class="tab-panel mt-5" data-panel="unidades">
-        <div class="grid gap-4 md:grid-cols-2">
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD1 · Pensamiento computacional avanzado</h3>
-            <p class="mt-1 text-sm text-slate-600">Algoritmos con selección, iteración anidada y depuración sistemática.</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD2 · Python: estructuras y funciones</h3>
-            <p class="mt-1 text-sm text-slate-600">Listas, cadenas, funciones y modularidad. Resolución de problemas reales.</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD3 · Electrónica digital y Arduino</h3>
-            <p class="mt-1 text-sm text-slate-600">Puertos E/S, sensores, actuadores y prototipado en hardware libre.</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD4 · Internet y creación web</h3>
-            <p class="mt-1 text-sm text-slate-600">HTML5/CSS3 básico, navegación y servicios de red domésticos.</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD5 · IoT y sistemas sostenibles</h3>
-            <p class="mt-1 text-sm text-slate-600">Dispositivos conectados, datos ambientales y eficiencia energética.</p>
-          </article>
-          <article class="ud-card">
-            <h3 class="font-bold text-ink-800">UD6 · Robótica y sensores</h3>
-            <p class="mt-1 text-sm text-slate-600">Control de movimiento, telemetría y toma de decisiones autónoma.</p>
-          </article>
-        </div>
-      </div>
 
-      <div class="tab-panel mt-5 hidden" data-panel="proyectos">
-        <div class="rounded-xl border border-accent-200 bg-accent-50 p-6">
-          <h3 class="font-bold text-accent-800">Proyecto integrador · "Estación ambiental conectada"</h3>
-          <p class="mt-2 text-sm text-slate-700">ABP: construir un nodo IoT que mida temperatura/humedad y publique datos en una web. Fomenta sostenibilidad y cultura libre (código y diseño hardware compartidos).</p>
-          <ul class="mt-3 grid gap-2 text-sm text-slate-700 sm:grid-cols-2">
-            <li>✓ Fase 1 — Diseño del sistema y algoritmo</li>
-            <li>✓ Fase 2 — Programación en Python/Arduino</li>
-            <li>✓ Fase 3 — Despliegue web y visualización</li>
-            <li>✓ Fase 4 — Documentación abierta (CC)</li>
+        <details class="ud-card mb-4" open>
+          <summary><h3 class="font-bold text-ink-800">UD1 · Introducción a la Programación</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> A · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Videojuego en MakeCode Arcade con algoritmo documentado.</p>
+          <a href="2eso/ud1.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.2.A.1. Lenguajes de programación visuales: ventajas e inconvenientes.</li>
+            <li>CYR.2.A.2. Elementos de los programas con lenguaje de bloques.</li>
+            <li>CYR.2.A.3. Secuencia de instrucciones. Medios de expresión de algoritmos.</li>
+            <li>CYR.2.A.4. Generación de tareas repetitivas y condicionales.</li>
+            <li>CYR.2.A.5. Pantallas de interacción con el usuario.</li>
           </ul>
-        </div>
+          <p class="mt-2"><span class="criterio">1.3 · Estructura de un programa</span><span class="criterio">2.1 · Resolución de problemas con programación</span><span class="criterio">2.2 · Apps móviles</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD2 · Desarrollo de Aplicaciones Móviles</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> D · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> App móvil interactiva en Thunkable.</p>
+          <a href="2eso/ud2.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.2.D.1. Ejemplos de IDEs de lenguajes de bloques para móviles.</li>
+            <li>CYR.2.D.2. Programación orientada a eventos: características, ventajas e inconvenientes.</li>
+            <li>CYR.2.D.3. Dependencia de eventos.</li>
+            <li>CYR.2.D.4. Tipos de eventos.</li>
+            <li>CYR.2.D.5. Descripción de eventos de E/S.</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">2.2 · Apps móviles</span><span class="criterio">2.3 · Desarrollo de apps e IoT</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD3 · Desarrollo Web</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> E · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Página web con animaciones en Webflow.</p>
+          <a href="2eso/ud3.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.2.E.1. Estructura básica de una página web.</li>
+            <li>CYR.2.E.2. Servidores web: funcionamiento.</li>
+            <li>CYR.2.E.3. Lenguajes para la edición de páginas web: diferencias.</li>
+            <li>CYR.2.E.4. Tipos de animación web.</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">5.1 · Aplicaciones web seguras</span><span class="criterio">5.2 · Problemas en desarrollo web</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD4 · Computación Física e Internet de las Cosas</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloques:</span> F + B · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Sistema IoT con Micro:bit y sensores.</p>
+          <a href="2eso/ud4.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.2.F.1–4. Microcontroladores, hardware y software.</li>
+            <li>CYR.2.B.1–4. Sensores IoT, conexiones, BLE e IoT industrial.</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">1.1 · Computación física</span><span class="criterio">2.3 · Desarrollo apps e IoT</span><span class="criterio">3.1 · Sistemas sostenibles</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD5 · Robótica Educativa</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloque:</span> C · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Robot Maqueen programado con bloques.</p>
+          <a href="2eso/ud5.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.2.C.1–5. Clasificación, aplicaciones, componentes, locomoción y programación.</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">1.1 · Computación física</span><span class="criterio">1.2 · Robótica en la sociedad</span><span class="criterio">1.4 · Ingeniería de robots</span></p>
+        </details>
+
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD6 · Datos Masivos, IA y Ciberseguridad</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 3.º · <span class="font-semibold">Bloques:</span> G + H + I · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Modelo IA con Teachable Machine + decálogo de ciberseguridad.</p>
+          <a href="2eso/ud6.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.2.G. Datos masivos.</li>
+            <li>CYR.2.H. Inteligencia Artificial.</li>
+            <li>CYR.2.I.1–5. Ciberseguridad, hábitos seguros, protección de datos.</li>
+          </ul>
+          <p class="mt-2"><span class="criterio">6.1 · Protección en la red</span><span class="criterio">6.2 · Uso responsable</span><span class="criterio">6.3 · Derechos de autor</span><span class="criterio">6.4 · Seguridad activa y pasiva</span></p>
+        </details>
       </div>
 
       <div class="tab-panel mt-5 hidden" data-panel="boja">
-        <div class="space-y-3">
-          <p class="text-sm text-slate-600">Criterios de evaluación asociados (extracto BOJA Andalucía):</p>
-          <span class="criterio">CE1 · Diseñar algoritmos complejos</span>
-          <span class="criterio">CE2 · Programar con funciones</span>
-          <span class="criterio">CE3 · Interactuar con hardware</span>
-          <span class="criterio">CE4 · Crear contenido web</span>
-          <span class="criterio">CE5 · Conectar sistemas IoT</span>
-          <span class="criterio">CE6 · Valorar sostenibilidad</span>
+        <p class="text-sm text-slate-600">Criterios de evaluación asociados (extracto BOJA · 2.º ESO):</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="criterio">1.1 · Computación física</span>
+          <span class="criterio">1.2 · Robótica en la sociedad</span>
+          <span class="criterio">1.3 · Estructura de un programa</span>
+          <span class="criterio">1.4 · Ingeniería de robots</span>
+          <span class="criterio">2.1 · Resolución de problemas</span>
+          <span class="criterio">2.2 · Apps móviles</span>
+          <span class="criterio">2.3 · Apps e IoT</span>
+          <span class="criterio">3.1 · Sistemas sostenibles</span>
+          <span class="criterio">5.1 · Apps web seguras</span>
+          <span class="criterio">5.2 · Desarrollo web</span>
+          <span class="criterio">6.1 · Protección en la red</span>
+          <span class="criterio">6.2 · Uso responsable</span>
+          <span class="criterio">6.3 · Derechos de autor</span>
+          <span class="criterio">6.4 · Seguridad activa y pasiva</span>
         </div>
-      </div>
-    </section>
-
-    <section class="mt-10 rounded-xl border border-slate-200 bg-white p-6">
-      <h2 class="text-lg font-bold text-ink-800">Recursos y herramientas libres</h2>
-      <div class="mt-3 flex flex-wrap gap-2 text-sm">
-        <span class="rounded-full bg-accent-50 px-3 py-1 font-medium text-accent-700">Python</span>
-        <span class="rounded-full bg-accent-50 px-3 py-1 font-medium text-accent-700">Arduino / ESP32</span>
-        <span class="rounded-full bg-accent-50 px-3 py-1 font-medium text-accent-700">HTML5 / CSS3</span>
-        <span class="rounded-full bg-accent-50 px-3 py-1 font-medium text-accent-700">Tinkercad</span>
       </div>
     </section>
   </main>

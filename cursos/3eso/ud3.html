@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD3 · Desarrollo Web · 3º ESO</title>
+  <meta name="description" content="Unidad Didáctica 3 de 3º ESO: Desarrollo Web con HTML, CSS y JavaScript. Análisis de estructura web, servidores, lenguajes y animación. Saberes básicos BOJA y criterios de evaluación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="3eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../3eso.html" class="hover:underline">3.º ESO</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque E</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD3 · Desarrollo Web</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Profundizar en el desarrollo web mediante el análisis de la estructura de las páginas, el funcionamiento de los servidores, los lenguajes HTML/CSS/JavaScript y las técnicas de animación. Esta unidad sentará las bases para crear sitios web interactivos y accesibles.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: Sitio web interactivo con HTML, CSS y JavaScript</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque E — Desarrollo Web</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.E.1</span> Estructura de un sitio web: organización del contenido, jerarquía visual y navegación.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.E.2</span> Funcionamiento de los servidores web y los lenguajes de programación del lado del servidor.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.E.3</span> Uso de lenguajes de marcas (HTML), hojas de estilo (CSS) y lenguajes de programación (JavaScript) para el desarrollo web.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.E.4</span> Técnicas de animación en la web: transiciones CSS, keyframes y bibliotecas de animación.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">5.1 · Aplicaciones web seguras</span>
+        <span class="criterio">5.2 · Problemas en desarrollo web</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Análisis de estructura web</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicial sienta las bases teóricas para comprender cómo se organizan y diseñan los sitios web. Es fundamental que el alumnado asimile estos conceptos antes de pasar a la práctica con HTML y CSS.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>¿Alguna vez os habéis preguntado por qué algunas webs son fáciles de usar y otras resultan confusas? En esta sesión vamos a analizar la estructura subyacente de los sitios web, desde la organización del contenido hasta la jerarquía visual que guía la mirada del usuario. Comenzaremos visitando tres sitios web muy diferentes (una tienda online, un blog de tecnología y la web de un periódico) para identificar patrones comunes y diferencias en su diseño.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Organización del contenido</h4>
+            <p>Un sitio web bien organizado sigue una estructura jerárquica que facilita la navegación. Los elementos fundamentales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Arquitectura de la información:</strong> Cómo se estructuran y categorizan los contenidos. Un buen mapa del sitio permite al usuario encontrar lo que busca en pocos clics.</li>
+              <li><strong>Navegación:</strong> El menú principal, los enlaces de pie de página y las migas de pan (breadcrumbs) son los pilares de la navegación web.</li>
+              <li><strong>Consistencia:</strong> Los elementos repetidos en todas las páginas (cabecera, pie, colores, tipografía) crean una experiencia coherente.</li>
+              <li><strong>Accesibilidad:</strong> El contenido debe ser usable por todas las personas, incluyendo aquellas con discapacidades visuales, motoras o cognitivas. Esto implica usar etiquetas semánticas, contraste suficiente y texto alternativo en imágenes.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=400&fit=crop" alt="Ejemplo de estructura web jerárquica" loading="lazy" />
+            <figcaption>Estructura jerárquica típica de un sitio web: página principal → categorías → contenidos</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Jerarquía visual</h4>
+            <p>La jerarquía visual determina el orden en que el usuario percibe los elementos de la página. Se consigue mediante:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Tamaño:</strong> Los titulares más grandes atraen la atención primero.</li>
+              <li><strong>Color y contraste:</strong> Los elementos con mayor contraste destacan sobre el resto.</li>
+              <li><strong>Espacio en blanco:</strong> Un buen uso del margen y el padding dirige la mirada del lector.</li>
+              <li><strong>Tipografía:</strong> Combinar distintos pesos y tamaños de fuente para diferenciar títulos, subtítulos y cuerpo de texto.</li>
+              <li><strong>Posición:</strong> Los elementos en la parte superior y a la izquierda suelen leerse primero en culturas occidentales.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Interactividad y experiencia de usuario</h4>
+            <p>La interactividad se refiere a todo lo que el usuario puede hacer en una web: hacer clic en botones, rellenar formularios, desplazarse, pasar el cursor por encima de elementos, etc. Una buena experiencia de usuario (UX) implica tiempos de carga rápidos, retroalimentación visual clara (hover, focus) y diseño responsive que se adapte a cualquier tamaño de pantalla.</p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            La accesibilidad web no es opcional. El 15% de la población mundial tiene alguna discapacidad. El diseño accesible beneficia a todos los usuarios, no solo a quienes tienen necesidades específicas.
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Utilizar etiquetas semánticas, contraste suficiente y texto alternativo en imágenes.</button>
+            <button class="quiz-opcion" data-valor="b">B. Usar muchos colores llamativos y animaciones en la página.</button>
+            <button class="quiz-opcion" data-valor="c">C. Limitar el contenido a una sola columna para que sea más sencillo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué implica el diseño accesible en una web?</p>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad práctica</strong>
+            En parejas, visitad tres sitios web diferentes y completad una tabla comparativa con: tipo de navegación, número de niveles de profundidad, uso de colores, presencia de elementos accesibles (alt en imágenes, contraste, labels en formularios). Comparad vuestros hallazgos con los de otros grupos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Tipos de servidores web</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión introduce el concepto de servidor web y su funcionamiento. Es clave para que el alumnado comprenda la diferencia entre contenido estático y dinámico, y cómo los servidores entregan las páginas que vemos en el navegador.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Cada vez que escribimos una URL en el navegador, se produce una comunicación entre nuestro dispositivo y un servidor web. En esta sesión vamos a entender cómo funciona ese proceso, qué tipos de servidores existen y qué diferencias hay entre servidores estáticos y dinámicos. Este conocimiento es esencial para comprender el desarrollo web completo, no solo el código que escribimos en el cliente.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un servidor web?</h4>
+            <p>Un <strong>servidor web</strong> es un programa o sistema que almacena y entrega contenido web (páginas HTML, imágenes, archivos CSS, JavaScript, etc.) a los navegadores de los usuarios cuando reciben una solicitud. El protocolo que facilita esta comunicación es <strong>HTTP/HTTPS</strong>.</p>
+            <p class="mt-2">El proceso básico es:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>El usuario escribe una URL en el navegador.</li>
+              <li>El navegador envía una solicitud HTTP al servidor.</li>
+              <li>El servidor procesa la solicitud y responde con el contenido (HTML, CSS, JS, imágenes).</li>
+              <li>El navegador interpreta el código y renderiza la página en pantalla.</li>
+            </ol>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop" alt="Servidor web en un centro de datos" loading="lazy" />
+            <figcaption>Centro de datos con servidores alojando sitios web</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de servidores por software</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Apache HTTP Server:</strong> El servidor web de código abierto más popular del mundo. Extensible mediante módulos, funciona en prácticamente cualquier sistema operativo. Es el motor detrás de millones de sitios web, incluyendo WordPress.</li>
+              <li><strong>Nginx:</strong> Conocido por su alto rendimiento y bajo consumo de recursos. Funciona con un modelo asíncrono de eventos, lo que le permite manejar miles de conexiones simultáneas. Muy usado como proxy inverso y balanceador de carga.</li>
+              <li><strong>Microsoft IIS:</strong> Servidor web integrado en Windows Server. Se configura mediante archivos web.config y es la opción natural para entornos con tecnologías Microsoft (ASP.NET).</li>
+              <li><strong>LiteSpeed:</strong> Alternativa de alto rendimiento a Apache, compatible con sus configuraciones (.htaccess) pero con menor consumo de memoria.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo para entender cómo funciona un servidor web y los diferentes tipos que existen:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/72g2CpKg0Ck" title="Tipos de servidores web" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Servidores estáticos vs. dinámicos</h4>
+            <p><strong>Contenido estático:</strong> El servidor entrega archivos tal cual están almacenados (HTML, CSS, JS, imágenes). No hay procesamiento adicional. Es rápido pero inflexible: cada visita ve exactamente lo mismo. Ejemplo: una página de presentación de una empresa.</p>
+            <p class="mt-2"><strong>Contenido dinámico:</strong> El servidor ejecuta código (PHP, Python, Node.js, etc.) antes de entregar la respuesta. Puede generar contenido personalizado, interactuar con bases de datos y adaptarse al usuario. Ejemplo: redes sociales, tiendas online, correos electrónicos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Servidores por propósito</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Servidores de archivos:</strong> Almacenan y comparten archivos en una red (FTP, NAS).</li>
+              <li><strong>Servidores de correo:</strong> Gestionan el envío y recepción de correos electrónicos (SMTP, IMAP).</li>
+              <li><strong>Servidores de bases de datos:</strong> Almacenan y procesan datos estructurados (MySQL, PostgreSQL, MongoDB).</li>
+              <li><strong>Servidores de aplicaciones:</strong> Ejecutan aplicaciones web del lado del servidor (Django, Express, Laravel).</li>
+              <li><strong>Servidores de proxies:</strong> Actúan como intermediarios entre el cliente y el servidor original, proporcionando caché, anonimato o filtrado.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Dato real</strong>
+            Apache y Nginx juntos alojan más del 60% de todos los sitios web del mundo. Conocer ambos servidores es esencial para cualquier desarrollador web.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Vamos a configurar un servidor web local con Apache (o Nginx) en nuestro ordenador:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Instalar Apache usando XAMPP o el gestor de paquetes del sistema.</li>
+              <li>Crear un archivo <code class="bg-white/50 px-1 rounded">index.html</code> en la carpeta de documentos del servidor.</li>
+              <li>Acceder a <code class="bg-white/50 px-1 rounded">http://localhost</code> desde el navegador.</li>
+              <li>Crear una segunda página y comprobar que se puede acceder a ella añadiendo la ruta.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">HTML en profundidad</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            En esta sesión profundizamos en HTML más allá de las etiquetas básicas. El dominio de las etiquetas semánticas, los formularios y los atributos esencial es fundamental para crear páginas web accesibles y estructuradas correctamente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>HTML (HyperText Markup Language) es el lenguaje de marcado que estructura el contenido de todas las páginas web. En sesiones anteriores ya hemos visto las etiquetas básicas (títulos, párrafos, enlaces, imágenes). Ahora vamos a profundizar en las etiquetas semánticas, los formularios interactivos y los atributos que hacen que HTML sea realmente potente.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Etiquetas semánticas</h4>
+            <p>HTML5 introdujo etiquetas semánticas que dan significado estructural al contenido, mejorando la accesibilidad y el SEO:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>&lt;header&gt;</strong>: Cabecera de la página o de una sección. Contiene títulos, navegación y elementos de identificación.</li>
+              <li><strong>&lt;nav&gt;</strong>: Bloque de navegación principal. Contiene los enlaces de menú.</li>
+              <li><strong>&lt;main&gt;</strong>: Contenido principal de la página. Solo debe haber uno por página.</li>
+              <li><strong>&lt;section&gt;</strong>: Sección temática del contenido. Agrupa contenido relacionado.</li>
+              <li><strong>&lt;article&gt;</strong>: Contenido independiente que puede distribuirse (noticia, entrada de blog, tarjeta).</li>
+              <li><strong>&lt;aside&gt;</strong>: Contenido complementario (barra lateral, anuncios, enlaces relacionados).</li>
+              <li><strong>&lt;footer&gt;</strong>: Pie de página o sección con información de cierre, derechos de autor y enlaces.</li>
+              <li><strong>&lt;figure&gt; y &lt;figcaption&gt;</strong>: Para incluir imágenes, diagramas o código con su pie de foto.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=400&fit=crop" alt="Estructura semántica de HTML5" loading="lazy" />
+            <figcaption>Diagrama de las etiquetas semánticas principales de HTML5</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formularios interactivos</h4>
+            <p>Los formularios permiten al usuario enviar datos al servidor. Los elementos más importantes son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>&lt;form&gt;</strong>: Contenedor principal con atributos <code class="bg-white/50 px-1 rounded">action</code> (URL de destino) y <code class="bg-white/50 px-1 rounded">method</code> (GET o POST).</li>
+              <li><strong>&lt;input&gt;</strong>: Campo de entrada con tipos: text, email, password, number, date, checkbox, radio, file, submit, range, color.</li>
+              <li><strong>&lt;textarea&gt;</strong>: Campo de texto multilínea.</li>
+              <li><strong>&lt;select&gt; y &lt;option&gt;</strong>: Menú desplegable de selección.</li>
+              <li><strong>&lt;button&gt;</strong>: Botón de acción con tipos submit, reset y button.</li>
+              <li><strong>&lt;label&gt;</strong>: Etiqueta asociada a un campo, mejora la accesibilidad al vincular el texto con el input.</li>
+              <li><strong>&lt;fieldset&gt; y &lt;legend&gt;</strong>: Agrupan campos relacionados dentro de un formulario.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Recuerda</strong>
+            Todo campo de formulario debe tener una etiqueta &lt;label&gt; asociada mediante el atributo <code class="bg-white/50 px-1 rounded">for</code>. Esto es obligatorio para la accesibilidad y permite que los lectores de pantalla identifiquen cada campo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Atributos esenciales</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>class / id:</strong> Identificadores para CSS y JavaScript.</li>
+              <li><strong>href / src:</strong> URLs de destino para enlaces e imágenes.</li>
+              <li><strong>alt:</strong> Texto alternativo para imágenes (obligatorio para accesibilidad).</li>
+              <li><strong>title:</strong> Texto emergente al pasar el cursor.</li>
+              <li><strong>data-*</strong>: Atributos de datos personalizados para JavaScript.</li>
+              <li><strong>required:</strong> Indica que un campo de formulario es obligatorio.</li>
+              <li><strong>placeholder:</strong> Texto de ejemplo dentro del campo.</li>
+              <li><strong>disabled / readonly:</strong> Deshabilita o bloquea un campo.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una página web completa de una escuela usando exclusivamente etiquetas semánticas. Debe incluir:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Cabecera con logo y navegación principal.</li>
+              <li>Sección principal con al menos 3 artículos.</li>
+              <li>Barra lateral con enlaces relacionados.</li>
+              <li>Formulario de contacto con validación básica en HTML5.</li>
+              <li>Pie de página con información de copyright.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. &lt;div&gt; es una etiqueta semántica que indica una sección temática.</button>
+            <button class="quiz-opcion" data-valor="b">B. &lt;span&gt; se usa para definir la cabecera principal de la página.</button>
+            <button class="quiz-opcion" data-valor="c">C. &lt;article&gt; define contenido independiente que puede distribuirse.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué representa la etiqueta semántica &lt;article&gt;?</p>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">CSS en profundidad</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión es fundamental para que el alumnado domine las herramientas de diseño visual de la web. CSS es el lenguaje que da estilo y vida a las páginas, y comprender su modelo de cajas, selectores y sistemas de layout es clave para el desarrollo web moderno.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>CSS (Cascading Style Sheets) es el lenguaje que controla la apariencia visual de las páginas web. Mientras HTML estructura el contenido, CSS define colores, tipografías, espaciados, posiciones y comportamiento visual. En esta sesión profundizaremos en los selectores, el modelo de cajas y los sistemas de layout modernos: Flexbox y Grid.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Selectores CSS</h4>
+            <p>Los selectores determinan a qué elementos HTML se aplican los estilos. Los principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Selector de tipo:</strong> <code class="bg-white/50 px-1 rounded">p { }</code> — Aplica a todos los párrafos.</li>
+              <li><strong>Selector de clase:</strong> <code class="bg-white/50 px-1 rounded">.card { }</code> — Aplica a todos los elementos con class="card".</li>
+              <li><strong>Selector de ID:</strong> <code class="bg-white/50 px-1 rounded">#header { }</code> — Aplica solo al elemento con id="header".</li>
+              <li><strong>Selector descendente:</strong> <code class="bg-white/50 px-1 rounded">nav a { }</code> — Aplica a todos los enlaces dentro de un nav.</li>
+              <li><strong>Selector hijo:</strong> <code class="bg-white/50 px-1 rounded">ul > li { }</code> — Aplica solo a li directos de ul.</li>
+              <li><strong>Pseudo-clases:</strong> <code class="bg-white/50 px-1 rounded">:hover</code>, <code class="bg-white/50 px-1 rounded">:focus</code>, <code class="bg-white/50 px-1 rounded">:nth-child()</code>.</li>
+              <li><strong>Pseudo-elementos:</strong> <code class="bg-white/50 px-1 rounded">::before</code>, <code class="bg-white/50 px-1 rounded">::after</code>.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Modelo de cajas (Box Model)</h4>
+            <p>Cada elemento HTML es una caja rectangular compuesta por:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Content (contenido):</strong> El área donde se muestra el texto o la imagen.</li>
+              <li><strong>Padding (relleno):</strong> Espacio entre el contenido y el borde.</li>
+              <li><strong>Border (borde):</strong> Línea que rodea el padding.</li>
+              <li><strong>Margen (margin):</strong> Espacio exterior que separa el elemento de otros.</li>
+            </ul>
+            <p class="mt-2">La propiedad <code class="bg-white/50 px-1 rounded">box-sizing: border-box</code> hace que el padding y el border se incluyan dentro del ancho total, simplificando enormemente el diseño.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Flexbox</h4>
+            <p>Flexbox es un sistema de layout unidimensional que facilita la alineación y distribución de elementos dentro de un contenedor. Propiedades principales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">display: flex</code> — Activa Flexbox en el contenedor.</li>
+              <li><code class="bg-white/50 px-1 rounded">justify-content</code> — Alineación horizontal (flex-start, center, space-between, space-around).</li>
+              <li><code class="bg-white/50 px-1 rounded">align-items</code> — Alineación vertical (flex-start, center, stretch).</li>
+              <li><code class="bg-white/50 px-1 rounded">flex-direction</code> — Dirección (row, column).</li>
+              <li><code class="bg-white/50 px-1 rounded">flex-wrap</code> — Permite saltos de línea (wrap).</li>
+              <li><code class="bg-white/50 px-1 rounded">gap</code> — Espacio entre elementos.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">CSS Grid</h4>
+            <p>Grid es un sistema de layout bidimensional que permite crear estructuras complejas de filas y columnas. Propiedades principales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">display: grid</code> — Activa Grid en el contenedor.</li>
+              <li><code class="bg-white/50 px-1 rounded">grid-template-columns</code> — Define las columnas.</li>
+              <li><code class="bg-white/50 px-1 rounded">grid-template-rows</code> — Define las filas.</li>
+              <li><code class="bg-white/50 px-1 rounded">grid-area</code> — Ubica un elemento en el grid.</li>
+              <li><code class="bg-white/50 px-1 rounded">grid-column / grid-row</span> — Ubicación por líneas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Usa Flexbox para layouts en una dimensión (una fila o una columna) y Grid para layouts en dos dimensiones (filas y columnas). Ambos se pueden combinar: un contenedor Grid puede contener elementos Flex, y viceversa.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Responsive Design</h4>
+            <p>El diseño responsive hace que las páginas se adapten a diferentes tamaños de pantalla. Las herramientas principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Media queries:</strong> <code class="bg-white/50 px-1 rounded">@media (max-width: 768px) { }</code> — Aplica estilos según el ancho del viewport.</li>
+              <li><strong>Unidades relativas:</strong> <code class="bg-white/50 px-1 rounded">rem</code>, <code class="bg-white/50 px-1 rounded">em</code>, <code class="bg-white/50 px-1 rounded">%</code>, <code class="bg-white/50 px-1 rounded">vw/vh</code> — Se adaptan al tamaño del contenedor o la ventana.</li>
+              <li><strong>Imágenes fluidas:</strong> <code class="bg-white/50 px-1 rounded">max-width: 100%</code> — Las imágenes nunca desbordan su contenedor.</li>
+              <li><strong>Viewport meta tag:</strong> <code class="bg-white/50 px-1 rounded">&lt;meta name="viewport" content="width=device-width"&gt;</code></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una landing page responsive que combine Flexbox y Grid:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Cabecera con Flexbox (logo a la izquierda, menú a la derecha).</li>
+              <li>Sección hero con imagen de fondo y texto centrado.</li>
+              <li>Cuadrícula de 3 tarjetas de servicios con CSS Grid.</li>
+              <li>Formulario de contacto con Flexbox para alinear campos.</li>
+              <li>Pie de página con 3 columnas en Grid.</li>
+              <li>Añadir media queries para que funcione en móvil.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción a JavaScript</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            JavaScript es el lenguaje que hace que las páginas web sean interactivas. Esta sesión es la puerta de entrada a la programación del lado del cliente. Es recomendable que el alumnado tenga nociones básicas de lógica (variables, condicionales) antes de esta sesión.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>HTML da estructura, CSS da estilo, pero JavaScript da <strong>vida</strong> a una página web. JavaScript permite responder a las acciones del usuario (clics, pulsaciones de teclado, scroll), validar formularios antes de enviarlos, cambiar el contenido de la página sin recargarla y crear animaciones complejas. Es el único lenguaje que se ejecuta directamente en el navegador.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira esta introducción a JavaScript para familiarizarte con los conceptos básicos antes de empezar con la práctica:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/W6NZfL5kdCg" title="Introducción a JavaScript" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Manipulación del DOM</h4>
+            <p>El <strong>DOM</strong> (Document Object Model) es una representación en forma de árbol de todos los elementos de la página. JavaScript puede leer y modificar el DOM en tiempo real:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">document.getElementById('id')</code> — Selecciona un elemento por su ID.</li>
+              <li><code class="bg-white/50 px-1 rounded">document.querySelector('.clase')</code> — Selecciona el primer elemento que coincide con el selector CSS.</li>
+              <li><code class="bg-white/50 px-1 rounded">document.querySelectorAll('p')</code> — Selecciona todos los elementos que coinciden.</li>
+              <li><code class="bg-white/50 px-1 rounded">element.textContent = 'Nuevo texto'</code> — Cambia el contenido de texto.</li>
+              <li><code class="bg-white/50 px-1 rounded">element.innerHTML = '&lt;h2&gt;Título&lt;/h2&gt;'</code> — Cambia el contenido HTML.</li>
+              <li><code class="bg-white/50 px-1 rounded">element.classList.add('activo')</code> — Añade una clase CSS.</li>
+              <li><code class="bg-white/50 px-1 rounded">element.style.color = 'red'</code> — Modifica un estilo directamente.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos</h4>
+            <p>Los eventos son señales que el navegador envía cuando ocurre algo (un clic, una pulsación de tecla, una carga de página). Se gestionan con <code class="bg-white/50 px-1 rounded">addEventListener</code>:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">click</code> — Clic del ratón.</li>
+              <li><code class="bg-white/50 px-1 rounded">keydown / keyup</code> — Pulsación de tecla.</li>
+              <li><code class="bg-white/50 px-1 rounded">submit</code> — Envío de formulario.</li>
+              <li><code class="bg-white/50 px-1 rounded">mouseover / mouseout</code> — Entrada/salida del cursor.</li>
+              <li><code class="bg-white/50 px-1 rounded">load</code> — La página ha terminado de cargar.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Validación de formularios</h4>
+            <p>JavaScript permite validar los datos del usuario antes de enviarlos al servidor. Esto evita errores y mejora la experiencia:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Comprobar que los campos obligatorios no están vacíos.</li>
+              <li>Validar que un email tiene un formato correcto.</li>
+              <li>Verificar que las contraseñas coinciden.</li>
+              <li>Mostrar mensajes de error en tiempo real junto al campo correspondiente.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo práctico:</strong> Crear un formulario de registro que valide nombre, email y contraseña, mostrando mensajes de error en rojo si los datos no son correctos.</p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Importante</strong>
+            La validación con JavaScript es útil para mejorar la experiencia del usuario, pero nunca debe ser la única medida de seguridad. Siempre se debe validar también en el servidor, ya que el usuario puede desactivar JavaScript o modificar el código.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Contenido dinámico</h4>
+            <p>Con JavaScript podemos modificar la página sin recargarla. Ejemplos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Mostrar/ocultar secciones con un botón.</li>
+              <li>Cambiar el tema de la página (modo claro/oscuro).</li>
+              <li>Cargar más contenido al hacer scroll (infinite scroll).</li>
+              <li>Crear un contador de clics en tiempo real.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una página interactiva que incluya:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Un botón que cambie el color de fondo de la página.</li>
+              <li>Un contador que muestre el número de clics realizados.</li>
+              <li>Un formulario de contacto con validación en tiempo real.</li>
+              <li>Una sección que se muestre/oculte al hacer clic en un botón.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. document.getElementById() selecciona todos los elementos de la página.</button>
+            <button class="quiz-opcion" data-valor="b">B. addEventListener permite ejecutar una función cuando ocurre un evento específico.</button>
+            <button class="quiz-opcion" data-valor="c">C. innerHTML solo funciona con texto plano, no con etiquetas HTML.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué hace addEventListener en JavaScript?</p>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Animación web</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Las animaciones web añaden dinamismo y mejoran la experiencia de usuario. Esta sesión cubre las principales técnicas de animación disponibles para el desarrollador web, desde transiciones CSS simples hasta animaciones con JavaScript y Canvas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las animaciones web son cambios visuales que ocurren de forma gradual a lo largo del tiempo. Pueden ser sutiles (un cambio de color al pasar el cursor) o complejas (animaciones de escenas enteras). En esta sesión exploraremos las diferentes técnicas disponibles y sus casos de uso.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">CSS Transitions</h4>
+            <p>Las transiciones CSS permiten animar suavemente el cambio de una propiedad de estilo a otra. Son ideales para interacciones simples:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">transition-property</code> — Qué propiedad se anima (color, transform, opacity).</li>
+              <li><code class="bg-white/50 px-1 rounded">transition-duration</code> — Duración de la transición (0.3s).</li>
+              <li><code class="bg-white/50 px-1 rounded">transition-timing-function</code> — Curva de velocidad (ease, linear, ease-in-out).</li>
+              <li><code class="bg-white/50 px-1 rounded">transition-delay</code> — Retraso antes de iniciar.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo:</strong> Un botón que cambia de color y tamaño suavemente al pasar el cursor, o una tarjeta que se eleva ligeramente al hacer hover.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">CSS Keyframes</h4>
+            <p>Las keyframes permiten crear animaciones más complejas definiendo múltiples estados intermedios:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">@keyframes</code> — Define la secuencia de la animación.</li>
+              <li><code class="bg-white/50 px-1 rounded">animation-name</code> — Nombre de la animación.</li>
+              <li><code class="bg-white/50 px-1 rounded">animation-duration</code> — Duración total.</li>
+              <li><code class="bg-white/50 px-1 rounded">animation-iteration-count</code> — Número de repeticiones (infinite para bucle).</li>
+              <li><code class="bg-white/50 px-1 rounded">animation-direction</code> — Dirección (normal, alternate).</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo:</strong> Un spinner de carga, una animación de entrada de elementos, o un personaje que camina.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Animaciones con JavaScript</h4>
+            <p>JavaScript ofrece control total sobre las animaciones, permitiendo crear efectos interactivos y dinámicos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">requestAnimationFrame()</code> — Ejecuta una función antes del siguiente frame de repintado. Es la forma más eficiente de animar con JS.</li>
+              <li><strong>Animaciones basadas en scroll:</strong> Modificar elementos según la posición del usuario al desplazarse.</li>
+              <li><strong>Animaciones interactivas:</strong> Que responden al movimiento del ratón o al tacto.</li>
+              <li><strong>Librerías:</strong> GSAP, Anime.js, Motion One — Facilitan la creación de animaciones complejas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para animaciones simples (hover, transiciones de color), usa CSS. Para animaciones complejas, interactivas o que requieran control preciso del tiempo, usa JavaScript con requestAnimationFrame. Evita animar propiedades costosas como top, left o width — usa transform y opacity que se ejecutan en la GPU.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">SVG y Canvas</h4>
+            <p><strong>SVG (Scalable Vector Graphics):</strong> Formato de gráficos vectoriales que se puede animar con CSS o JavaScript. Ideal para iconos, diagramas y gráficos que deben mantener la calidad a cualquier tamaño.</p>
+            <p class="mt-2"><strong>Canvas:</strong> Elemento HTML que permite dibujar gráficos像素 a pixels con JavaScript. Ideal para videojuegos, visualizaciones de datos y gráficos complejos que requieren renderizado en tiempo real.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Consideraciones de rendimiento</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Usa transform y opacity:</strong> Estas propiedades se ejecutan en la GPU y son mucho más eficientes que animar position, size o color.</li>
+              <li><strong>Evita reflows:</strong> Modificar el layout (width, height, margin) fuerza al navegador a recalcular la posición de todos los elementos.</li>
+              <li><strong>Debounce事件:</strong> En eventos como scroll o resize, limita la frecuencia de ejecución de la función de animación.</li>
+              <li><strong>Reduce elementos animados:</strong> Cuantos más elementos se animan simultáneamente, mayor es el consumo de recursos.</li>
+              <li><strong>Considera prefers-reduced-motion:</strong> Respeta la configuración del usuario que prefiere menos animaciones.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una galería de animaciones web que incluya:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Botones con transiciones CSS suaves.</li>
+              <li>Una animación de carga con @keyframes.</li>
+              <li>Un efecto parallax al hacer scroll con JavaScript.</li>
+              <li>Un gráfico SVG animado con CSS.</li>
+              <li>Un pequeño canvas interactivo que responda al movimiento del ratón.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: sitio web interactivo</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión está dedicada a la puesta en común y la presentación de los proyectos finales. Es un momento clave para que el alumnado demuestre lo aprendido y reciba retroalimentación de sus compañeros y el profesor.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta última sesión de la unidad, cada grupo presentará el sitio web interactivo que ha creado a lo largo de las sesiones anteriores. El proyecto debe integrar todos los conocimientos adquiridos: estructura semántica HTML, estilos con CSS (Flexbox/Grid), interactividad con JavaScript y animaciones. Utilizaremos CodePen como plataforma de desarrollo para facilitar la revisión y la compartición.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Requisitos del proyecto</h4>
+            <p>Cada sitio web interactivo debe cumplir los siguientes requisitos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>HTML semántico:</strong> Uso correcto de header, nav, main, section, article, footer y formularios con labels.</li>
+              <li><strong>CSS:</strong> Uso de Flexbox o Grid para el layout, modelo de cajas correcto y diseño responsive con media queries.</li>
+              <li><strong>JavaScript:</strong> Al menos una interacción: validación de formularios, cambio de contenido dinámico o animación.</li>
+              <li><strong>Animaciones:</strong> Al menos dos animaciones CSS (transición o keyframe) y una animación con JavaScript.</li>
+              <li><strong>Accesibilidad:</strong> Contraste de colores suficiente, texto alternativo en imágenes y etiquetas en formularios.</li>
+              <li><strong>Temática libre:</strong> Puede ser una web de una tienda, un blog, un portfolio, una landing page, etc.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop" alt="Desarrollo web en CodePen" loading="lazy" />
+            <figcaption>Ejemplo de proyecto web desarrollado en CodePen con HTML, CSS y JavaScript</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Presentación y rúbrica de evaluación</h4>
+            <p>Cada grupo dispondrá de 5 minutos para presentar su proyecto. La evaluación se realizará con la siguiente rúbrica:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Funcionalidad (30%):</strong> El sitio web funciona correctamente en diferentes navegadores y tamaños de pantalla.</li>
+              <li><strong>Diseño y estética (25%):</strong> Uso coherente de colores, tipografía, espaciado y jerarquía visual.</li>
+              <li><strong>Código (25%):</strong> HTML semántico, CSS organizado y JavaScript limpio y comentado.</li>
+              <li><strong>Accesibilidad (10%):</strong> Cumplimiento de los principios de accesibilidad web.</li>
+              <li><strong>Creatividad (10%):</strong> Originalidad del diseño y las interacciones implementadas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Entrega</strong>
+            Cada grupo debe compartir el enlace de su proyecto en CodePen junto con una breve documentación (300-500 palabras) que explique las decisiones de diseño y las tecnologías utilizadas.
+          </div>
+
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="a" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <button class="quiz-opcion" data-valor="a">A. Flexbox se usa para layouts en una dimensión, Grid para dos dimensiones.</button>
+            <button class="quiz-opcion" data-valor="b">B. Flexbox y Grid son lo mismo y se pueden usar indistintamente.</button>
+            <button class="quiz-opcion" data-valor="c">C. Grid solo funciona en navegadores antiguos y Flexbox es la alternativa moderna.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la diferencia principal entre Flexbox y CSS Grid?</p>
+
+          <div class="callout callout-consejo">
+            <strong>Producto de la unidad</strong>
+            Los mejores proyectos serán publicados en la web del curso como referencia para futuros alumnos. El alumnado también podrá compartir sus creaciones en sus portfolios digitales.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud2.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-ink-800 hover:bg-slate-100 transition">
+        ← Anterior: UD2 · Desarrollo de Aplicaciones Móviles
+      </a>
+      <a href="ud4.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD4 · Computación Física e IoT →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD6 · Inteligencia Artificial y Ciberseguridad · 3º ESO</title>
+  <meta name="description" content="Unidad Didáctica 6 de 3º ESO: Inteligencia Artificial y Ciberseguridad. Saberes básicos BOJA, sesiones detalladas y criterios de evaluación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="3eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../3eso.html" class="hover:underline">3.º ESO</a>
+        <span>·</span>
+        <span>3.º Trimestre</span>
+        <span>·</span>
+        <span>Bloques H + I</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD6 · Inteligencia Artificial y Ciberseguridad</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Comprender los fundamentos de la inteligencia artificial, su impacto ético y social, y aplicar conocimientos de ciberseguridad para protegerse en entornos digitales. Esta unidad integra los bloques de IA y Ciberseguridad del currículo de Informática.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: Informe de ciberseguridad + demo de IA</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque H — Inteligencia Artificial + Bloque I — Ciberseguridad</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">IA.1.H</span> Concepto de inteligencia artificial, aplicaciones y tendencias actuales.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">IA.2.H</span> Ética y responsabilidad en el uso de la IA.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">IA.3.H</span> Agentes inteligentes: arquitectura percepción-razonamiento-acción.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">IA.4.H</span> Aprendizaje automático, redes neuronales y aprendizaje por refuerzo.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.6.I.1</span> Tipologías de ataques informáticos y cultura de seguridad.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.6.I.2</span> Protección frente a malware y herramientas de seguridad.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.6.I.3</span> Ley de propiedad intelectual y licencias Creative Commons.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">4.2 · IA: conceptos, aplicaciones y ética</span>
+        <span class="criterio">6.1 · Tipologías de ataques y cultura de seguridad</span>
+        <span class="criterio">6.2 · Protección frente a malware</span>
+        <span class="criterio">6.3 · Propiedad intelectual y licencias</span>
+        <span class="criterio">6.4 · Hábitos seguros en la red</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Situación actual de la IA: aplicaciones reales</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión introductoria busca que el alumnado reconozca la presencia de la IA en su vida cotidiana antes de profundizar en su funcionamiento técnico. Se recomienda iniciar con una lluvia de ideas sobre aplicaciones de IA que ya conozcan.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La inteligencia artificial ya no es ciencia ficción: está presente en los asistentes virtuales que usamos a diario, en los coches que se conducen solos, en los sistemas que diagnostican enfermedades y en las recomendaciones de Netflix o Spotify. En esta sesión exploraremos el estado actual de la IA, sus aplicaciones más relevantes y las tendencias que están transformando nuestra sociedad.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la inteligencia artificial?</h4>
+            <p>La <strong>inteligencia artificial</strong> es el conjunto de técnicas y algoritmos que permiten a las máquinas realizar tareas que normalmente requieren inteligencia humana: reconocer imágenes, comprender el lenguaje natural, tomar decisiones o aprender de la experiencia.</p>
+            <p class="mt-2">Podemos clasificar la IA en dos grandes categorías:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>IA débil (narrow AI):</strong> Está diseñada para realizar una tarea específica. Ejemplos: Siri, Alexa, filtros de fotos, sistemas de recomendación. No tiene conciencia ni comprensión general.</li>
+              <li><strong>IA fuerte (general AI):</strong> Sería capaz de realizar cualquier tarea intelectual que pueda hacer un ser humano. Actualmente no existe y es objeto de debate científico y filosófico.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="Inteligencia Artificial aplicaciones" loading="lazy" />
+            <figcaption>La IA está integrada en múltiples ámbitos de nuestra vida diaria</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Aplicaciones reales de la IA</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Asistentes virtuales:</strong> Siri, Alexa, Google Assistant utilizan procesamiento de lenguaje natural para entender y responder a nuestras peticiones.</li>
+              <li><strong>Coches autónomos:</strong> Tesla, Waymo y otros fabricantes desarrollan vehículos que perciben su entorno con cámaras y sensores, y toman decisiones de conducción en tiempo real.</li>
+              <li><strong>Medicina:</strong> Sistemas como Google DeepMind pueden detectar enfermedades oculares a partir de imágenes médicas con precisión comparable a la de los especialistas.</li>
+              <li><strong>Traducción:</strong> Google Translate usa redes neuronales para traducir entre más de 100 idiomas con una calidad cada vez mayor.</li>
+              <li><strong>Arte y creatividad:</strong> Herramientas como DALL·E, Midjourney y Stable Diffusion generan imágenes a partir de descripciones de texto.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Tendencia actual</strong>
+            Los grandes modelos de lenguaje (LLM) como GPT-4, Claude o Gemini representan un salto cualitativo en IA generativa. Estos modelos pueden escribir código, crear textos, analizar datos y mantener conversaciones complejas. Comprender sus capacidades y limitaciones es clave para usarlos de forma responsable.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Impacto social de la IA</h4>
+            <p>La IA genera tanto oportunidades como desafíos. Por un lado, puede mejorar la eficiencia, la accesibilidad y la calidad de vida. Por otro, plantea preocupaciones sobre la privacidad, la sustitución de empleos, la desinformación y la toma de decisiones automatizada en ámbitos críticos como la justicia o la sanidad.</p>
+            <p class="mt-2">Es fundamental que como ciudadanos digitales conozcamos estas tecnologías para poder evaluarlas críticamente y participar en el debate sobre su uso adecuado.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad de aula</h4>
+            <p>En grupos de 3-4, identificad 5 aplicaciones de IA que utilicéis en vuestro día a día. Para cada una, determinant si es IA débil o fuerte y discutid qué pasaría si dejara de funcionar. Preparad una breve presentación de 2 minutos para exponer vuestros hallazgos al resto de la clase.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Siri, filtros de fotos y sistemas de recomendación.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un robot con conciencia propia que piensa como un humano.</button>
+            <button class="quiz-opcion" data-valor="c">C. Solo los coches que se conducen solos.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es un ejemplo de IA débil (narrow AI)?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Elaborar un mapa conceptual que relacione los tipos de IA débil y fuerte con ejemplos reales, incluyendo al menos 8 aplicaciones clasificadas correctamente.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Ética y responsabilidad en IA</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión es especialmente sensible y requiere un enfoque dialógico. Se recomienda fomentar el debate respetuoso y ofrecer ejemplos concretos para que el alumnado pueda argumentar su posición sobre dilemas éticos reales.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La IA tiene un enorme potencial, pero su uso irresponsable puede generar daños significativos. Deepfakes, sesgo algorítmico, vigilancia masiva y falta de transparencia son algunos de los problemas éticos que debemos conocer. En esta sesión analizaremos los riesgos del mal uso de la IA y los principios éticos que la Comisión Europea propone para garantizar un desarrollo responsable.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El mal uso de la IA</h4>
+            <p>La IA puede ser utilizada con fines dañinos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Deepfakes:</strong> Vídeos o audios falsos generados mediante IA que manipulan la realidad. Se han usado para desinformación política, acoso y fraude.</li>
+              <li><strong>Sesgo algorítmico:</strong> Cuando los datos de entrenamiento contienen prejuicios, los algoritmos los replican y amplifican. Ejemplo: sistemas de reconocimiento facial con menor precisión para personas con piel oscura.</li>
+              <li><strong>Privacidad:</strong> Recopilación masiva de datos personales para entrenar modelos de IA sin consentimiento explícito.</li>
+              <li><strong>Desinformación:</strong> Generación automatizada de noticias falsas y contenido engañoso a escala.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&h=400&fit=crop" alt="Ética en Inteligencia Artificial" loading="lazy" />
+            <figcaption>Los dilemas éticos de la IA requieren debate y regulación</figcaption>
+          </figure>
+
+          <div class="callout callout-peligro">
+            <strong>Dato real</strong>
+            Un estudio de la MIT Media Lab demostró que los sistemas de reconocimiento facial de IBM, Microsoft y Face++ tenían tasas de error de hasta un 34% para mujeres de piel oscura, frente a menos del 1% para hombres de piel clara. El sesgo en los datos de entrenamiento tiene consecuencias reales y discriminadoras.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Principios de la Comisión Europea para una IA fiable</h4>
+            <p>La Comisión Europea ha establecido cuatro principios fundamentales para una IA ética y responsable:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Lícita:</strong> La IA debe cumplir con la legislación vigente, incluyendo los derechos fundamentales y la legislación de protección de datos.</li>
+              <li><strong>Ética:</strong> Los sistemas de IA deben ser diseñados considerando valores como la dignidad humana, la igualdad y la no discriminación.</li>
+              <li><strong>Robusta:</strong> La IA debe ser técnicamente fiable y segura, funcionando correctamente en todas las condiciones y minimizando errores.</li>
+              <li><strong>Transparente:</strong> Los sistemas de IA deben ser explicables y auditables, permitiendo que los usuarios comprendan cómo se toman las decisiones.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo sobre los riesgos y dilemas éticos de la inteligencia artificial para profundizar en los conceptos vistos:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" title="Ética e Inteligencia Artificial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Caso práctico: debate ético</h4>
+            <p>Analicemos tres situaciones reales y debatamos en grupo:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Coche autónomo:</strong> El vehículo debe decidir entre chocar contra un peatón o contra otro coche. ¿Quién toma esta decisión? ¿El fabricante, el programador o el algoritmo?</li>
+              <li><strong>Sistema de justicia:</strong> Un algoritmo predice la reincidencia de un delincuente para fijar la fianza. ¿Es justo que una máquina influya en la libertad de una persona?</li>
+              <li><strong>Deepfake en política:</strong> Un vídeo falso de un candidato circula minutos antes de una elección. ¿Cómo debe responder la sociedad?</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            El Reglamento Europeo de IA (AI Act) entra en vigor de forma progresiva y clasifica los sistemas de IA por niveles de riesgo. Es fundamental que conozcamos esta regulación como ciudadanos digitales.
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Reflexión grupal</strong>
+            En grupos de 4, elegid uno de los principios de la Comisión Europea (lícita, ética, robusta, transparente) y diseñad un caso de uso de IA que lo cumpla y otro que lo incumpla. Presentad vuestro análisis al resto de la clase.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Agentes inteligentes simples</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión introduce conceptos técnicos de IA de forma accesible. Se recomienda utilizar ejemplos cotidianos (chatbots, asistentes de voz) para que el alumnado comprenda la arquitectura percepción-razonamiento-acción.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Un agente inteligente es cualquier entidad que percibe su entorno a través de sensores y actúa sobre él mediante actuadores para alcanzar un objetivo. Desde un simple termostato hasta un asistente virtual como ChatGPT, todos los agentes inteligentes siguen el mismo ciclo básico: percibir, razonar y actuar.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Arquitectura percepción-razonamiento-acción</h4>
+            <p>Todo agente inteligente se fundamenta en un ciclo de tres fases:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Percepción:</strong> El agente recibe información del entorno a través de sensores o interfaces. Ejemplo: un chatbot recibe el texto que escribe el usuario, un coche autónomo recibe datos de cámaras y sensores LIDAR.</li>
+              <li><strong>Razonamiento:</strong> El agente procesa la información recibida, la analiza y decide qué acción tomar según sus objetivos y reglas. Ejemplo: el asistente interpreta la intención del usuario y genera una respuesta adecuada.</li>
+              <li><strong>Acción:</strong> El agente ejecuta una respuesta o acción sobre el entorno. Ejemplo: Alexa enciende una luz, un chatbot genera una respuesta de texto, un robot se mueve en una dirección determinada.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1531746790095-e5a6e6b9c4d0?w=800&h=400&fit=crop" alt="Arquitectura de agentes inteligentes" loading="lazy" />
+            <figcaption>Ciclo percepción-razonamiento-acción de un agente inteligente</figcaption>
+          </figure>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para entender mejor el ciclo, pensad en cómo funciona Siri: primero escucha (percepción), luego interpreta qué queremos hacer (razonamiento) y finalmente ejecuta la acción (abre una aplicación, busca información, pone música).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de agentes</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Agente reactivo:</strong> Responde directamente a estímulos sin mantener memoria. Ejemplo: termostato.</li>
+              <li><strong>Agente con memoria:</strong> Almacena información del pasado para mejorar sus decisiones. Ejemplo: recomendaciones de Netflix basadas en tu historial.</li>
+              <li><strong>Agente con objetivos:</strong> Tiene un objetivo definido y planifica acciones para alcanzarlo. Ejemplo: un robot aspirador que planifica la ruta de limpieza.</li>
+              <li><strong>Agente autónomo:</strong> Combina percepción, aprendizaje y toma de decisiones sin intervención humana. Ejemplo: coches autónomos.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplos cotidianos</h4>
+            <p><strong>Chatbots:</strong> Aplicaciones como ChatGPT o los asistentes de atención al cliente utilizan procesamiento de lenguaje natural para mantener conversaciones y responder preguntas. Su ciclo de percepción-razonamiento-acción está basado en modelos de lenguaje que predicen la siguiente palabra más probable.</p>
+            <p class="mt-2"><strong>Asistentes de voz:</strong> Alexa, Google Assistant y Siri perciben comandos de voz, los convierten en texto, interpretan la intención y ejecutan acciones como buscar información, controlar dispositivos del hogar o establecer recordatorios.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Analizad el funcionamiento de un chatbot que uséis habitualmente (ChatGPT, Bard, asistente de Instagram). Identificad los elementos del ciclo percepción-razonamiento-acción en sus respuestas. ¿En qué se diferencia un chatbot simple de uno avanzado como GPT-4?</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Actuar, percibir y memorizar.</button>
+            <button class="quiz-opcion" data-valor="b">B. Percibir, razonar y actuar.</button>
+            <button class="quiz-opcion" data-valor="c">C. Razonar, actuar y aprender.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuáles son las tres fases del ciclo de un agente inteligente?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Dibujar un diagrama del ciclo percepción-razonamiento-acción para un asistente de voz que procese el comando "Pon música relajante". Identificar cada fase con ejemplos concretos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Aprendizaje automático: casos prácticos</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión aborda el aprendizaje automático de forma simplificada. Se recomienda evitar fórmulas matemáticas complejas y centrarse en conceptos intuitivos con ejemplos visuales y analogías cotidianas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El <strong>aprendizaje automático</strong> (machine learning) es una rama de la IA que permite a las máquinas aprender a partir de datos sin ser programadas explícitamente para cada tarea. En lugar de seguir reglas escritas por humanos, el sistema identifica patrones en grandes cantidades de información y usa esos patrones para hacer predicciones o tomar decisiones.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Cómo aprende una máquina?</h4>
+            <p>El proceso básico del aprendizaje automático sigue estos pasos:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Recolección de datos:</strong> Se obtienen grandes cantidades de datos relevantes para la tarea.</li>
+              <li><strong>Entrenamiento:</strong> El algoritmo analiza los datos y descubre patrones y relaciones.</li>
+              <li><strong>Evaluación:</strong> Se comprueba si el modelo funciona bien con datos nuevos que no ha visto antes.</li>
+              <li><strong>Predicción:</strong> Una vez entrenado, el modelo puede hacer predicciones sobre datos nuevos.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Analogía sencilla</strong>
+            Imaginad que enseñáis a un niño a reconocer frutas. No le dais reglas como "si tiene forma ovalada y es roja, es una manzana". Simplemente le mostráis muchas frutas y él aprende por sí solo a identificarlas. El aprendizaje automático funciona de forma similar: el algoritmo aprende de ejemplos, no de reglas programadas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Redes neuronales explicadas de forma sencilla</h4>
+            <p>Las <strong>redes neuronales</strong> están inspiradas en el funcionamiento del cerebro humano. Se componen de capas de "neuronas" artificiales que procesan información:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Capa de entrada:</strong> Recibe los datos originales (una imagen, un texto, una temperatura).</li>
+              <li><strong>Capas ocultas:</strong> Procesan la información extrayendo características cada vez más complejas. En una red para reconocer gatos, las primeras capas detectan bordes y colores, y las últimas reconocen orejas, bigotes y forma de la cara.</li>
+              <li><strong>Capa de salida:</strong> Produce el resultado final (por ejemplo, "gato" con un 95% de probabilidad).</li>
+            </ul>
+            <p class="mt-2">Las <strong>redes neuronales profundas</strong> (deep learning) tienen muchas capas ocultas, lo que les permite aprender patrones muy complejos. Son la base de los sistemas de reconocimiento facial, traducción automática y generación de imágenes.</p>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=400&fit=crop" alt="Redes neuronales y aprendizaje automático" loading="lazy" />
+            <figcaption>Las redes neuronales artificiales están inspiradas en el cerebro humano</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Aprendizaje por refuerzo</h4>
+            <p>En el <strong>aprendizaje por refuerzo</strong>, el agente aprende mediante ensayo y error, recibiendo recompensas o penalizaciones según sus acciones:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Juegos:</strong> AlphaGo de DeepMind aprendió a jugar al Go derrotando a campeones mundiales jugando millones de partidas contra sí mismo.</li>
+              <li><strong>Robótica:</strong> Robots que aprenden a camarar o manipular objetos probando diferentes estrategias.</li>
+              <li><strong>Vehículos autónomos:</strong> Los coches conductores aprenden a conducir recibiendo recompensas por mantenerse en el carril y penalizaciones por maniobras peligrosas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Dato real</strong>
+            ChatGPT, uno de los ejemplos más conocidos de IA generativa, fue entrenado con más de 570 GB de texto y utiliza una red neuronal con más de 175.000 millones de parámetros. Esto ilustra la escala necesaria para lograr capacidades de lenguaje humano.
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad práctica</strong>
+            Probad Teachable Machine de Google (teachablemachine.withgoogle.com): subid fotos de 3 categorías diferentes (por ejemplo, roca, papel, tijera) y entrenad un modelo en el navegador. Observad cómo el algoritmo aprende a clasificar imágenes nuevas en tiempo real.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Ciberseguridad: tipologías de ataques</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicia el bloque de ciberseguridad. Es importante conectar los conceptos de IA vistos anteriormente con los ciberataques actuales, ya que muchos ataques modernos aprovechan técnicas de IA para ser más sofisticados.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La ciberseguridad es la práctica de proteger sistemas, redes y programas de ataques digitales. En un mundo cada vez más conectado, comprender las amenazas y saber cómo protegernos es una competencia esencial para cualquier ciudadano digital. En esta sesión analizaremos las principales tipologías de ataques y los hábitos seguros que debemos adoptar.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipologías de ataques</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Phishing:</strong> Suplantación de entidades legítimas para robar credenciales o información sensible mediante correos o mensajes falsos.</li>
+              <li><strong>Malware:</strong> Software malicioso diseñado para dañar o acceder no autorizadamente a sistemas informáticos.</li>
+              <li><strong>Ransomware:</strong> Cifra los archivos de la víctima y exige un pago a cambio de la clave de descifrado.</li>
+              <li><strong>Ataque de denegación de servicio (DDoS):</strong> Sobrecarga un servidor con peticiones falsas para impedir que atienda a usuarios legítimos.</li>
+              <li><strong>Ingeniería social:</strong> Manipulación psicológica para que las víctimas revelen información confidencial o realicen acciones que comprometan su seguridad.</li>
+              <li><strong>Man-in-the-middle:</strong> Interceptación de comunicaciones entre dos partes para robar o manipular la información transmitida.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop" alt="Ciberseguridad amenazas" loading="lazy" />
+            <figcaption>Las principales tipologías de ciberataques que debemos conocer</figcaption>
+          </figure>
+
+          <div class="callout callout-peligro">
+            <strong>Dato real</strong>
+            Según el informe de IBM Security, el coste medio de una brecha de datos en 2024 fue de 4,88 millones de dólares. El 95% de los ciberataques se deben a errores humanos, lo que subraya la importancia de la concienciación y la formación.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Necesidad de concienciación</h4>
+            <p>La tecnología por sí sola no es suficiente para garantizar la seguridad. Las personas somos el eslabón más débil de la cadena de seguridad. La concienciación implica:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Conocer las amenazas más comunes y cómo identificarlas.</li>
+              <li>Adoptar hábitos seguros en el uso diario de dispositivos y redes.</li>
+              <li>Mantenerse actualizado sobre las nuevas técnicas de ataque.</li>
+              <li>Saber reaccionar ante un incidente de seguridad.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            La cultura de seguridad no es solo responsabilidad de las empresas o los gobiernos: cada usuario es responsable de proteger sus propios datos y los de los demás. Un solo clic en un enlace malicioso puede comprometer toda una red.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Hábitos seguros en la red</h4>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Contraseñas seguras y únicas:</strong> Usar gestores de contraseñas y activar la autenticación en dos pasos.</li>
+              <li><strong>Actualizaciones:</strong> Mantener el sistema operativo, el navegador y las aplicaciones actualizados.</li>
+              <li><strong>Cuidado con los enlaces:</strong> No hacer clic en enlaces sospechosos ni descargar archivos de fuentes no fiables.</li>
+              <li><strong>Redes Wi-Fi:</strong> Evitar redes públicas para operaciones sensibles y usar VPN cuando sea necesario.</li>
+              <li><strong>Copias de seguridad:</strong> Realizar backups periódicas en ubicaciones seguras.</li>
+              <li><strong>Verificación:</strong> Comprobar la autenticidad de correos y mensajes antes de responder o hacer clic.</li>
+            </ol>
+          </div>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/t5S55PmB6ck" title="Cápsula de Ciberseguridad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. No actualizar nunca el sistema operativo.</button>
+            <button class="quiz-opcion" data-valor="b">B. Usar la misma contraseña en todas las cuentas.</button>
+            <button class="quiz-opcion" data-valor="c">C. Activar la autenticación en dos pasos y usar contraseñas únicas.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál de estas es una buena práctica de ciberseguridad?</p>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad grupal</strong>
+            Realizar una simulación de phishing: el profesor envía un correo falso y el alumnado debe identificar los indicadores de alerta. Posteriormente, se analiza en grupo qué pistas ayudarían a detectar el engaño.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Malware, antimalware y propiedad intelectual</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión combina dos bloques temáticos: la protección frente a malware y los aspectos legales de la propiedad intelectual. Se recomienda dedicar los primeros 30 minutos al malware y los últimos 20 a las licencias Creative Commons.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El malware (software malicioso) representa una de las amenazas más persistentes en el mundo digital. Conocer sus tipos, entender cómo se propaga y saber qué herramientas de protección usar es fundamental para mantener nuestros dispositivos seguros. Además, en esta sesión abordaremos la importancia de respetar la propiedad intelectual y las licencias que regulan el uso de contenido digital.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de malware</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Virus:</strong> Se adjunta a un archivo legítimo y se replica cuando el usuario lo ejecuta. Necesita intervención humana para propagarse.</li>
+              <li><strong>Gusano (Worm):</strong> Se propaga automáticamente a través de redes sin intervención del usuario, consumiendo ancho de banda y recursos.</li>
+              <li><strong>Troyano:</strong> Se disfraza de software legítimo pero contiene código malicioso. Suele abrir puertas traseras para que los atacantes accedan al sistema.</li>
+              <li><strong>Ransomware:</strong> Cifra los archivos de la víctima y exige un rescate a cambio de la clave de descifrado. Suele afectar a empresas, hospitales y particulares.</li>
+              <li><strong>Spyware:</strong> Recopila información del usuario sin su conocimiento: contraseñas, historial de navegación, datos bancarios.</li>
+              <li><strong>Adware:</strong> Muestra publicidad no deseada y puede redirigir el navegador a sitios web maliciosos.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=400&fit=crop" alt="Malware y ciberseguridad" loading="lazy" />
+            <figcaption>Tipos de malware y su impacto en los sistemas informáticos</figcaption>
+          </figure>
+
+          <div class="callout callout-peligro">
+            <strong>Dato real</strong>
+            En 2024, se detectaron más de 60 millones de muestras de malware nuevas cada día. El ransomware sigue siendo la amenaza más lucrativa para los ciberdelincuentes, con ataques que han afectado a hospitales, escuelas y administraciones públicas en todo el mundo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Protección y herramientas</h4>
+            <p>Para protegernos frente al malware debemos combinar medidas preventivas y herramientas de detección:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Antivirus y antimalware:</strong> Herramientas como Windows Defender, Malwarebytes o Bitdefender que detectan y eliminan software malicioso.</li>
+              <li><strong>Cortafuegos (firewall):</strong> Filtra el tráfico de red para bloquear conexiones no autorizadas.</li>
+              <li><strong>Actualizaciones:</strong> Mantener el sistema operativo y el software actualizado corrige vulnerabilidades de seguridad.</li>
+              <li><strong>Copia de seguridad:</strong> Tener backups periódicas permite recuperar archivos cifrados por ransomware sin pagar el rescate.</li>
+              <li><strong>Principio de mínimo privilegio:</strong> Usar cuentas de usuario sin privilegios de administrador para tareas cotidianas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Herramienta recomendada</strong>
+            Malwarebytes ofrece una versión gratuita muy eficaz para detectar y eliminar amenazas que los antivirus tradicionales pueden pasar por alto. Es una buena complemento a Windows Defender.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ley de propiedad intelectual</h4>
+            <p>La propiedad intelectual protege las creaciones de la mente: obras literarias, artísticas, musicales, programas de ordenador y bases de datos. El uso no autorizado de contenido protegido puede tener consecuencias legales.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Licencias Creative Commons</h4>
+            <p>Las licencias Creative Commons ofrecen una alternativa flexible al copyright tradicional, permitiendo a los autores compartir sus obras bajo condiciones específicas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>BY (Atribución):</strong> Se debe reconocer la autoría de la obra.</li>
+              <li><strong>SA (Igualar):</strong> Si se modifica la obra, debe distribuirse con la misma licencia.</li>
+              <li><strong>NC (No Comercial):</strong> No se puede usar con fines comerciales.</li>
+              <li><strong>ND (Sin Derivadas):</strong> No se pueden crear obras derivadas de la original.</li>
+            </ul>
+            <p class="mt-2">Este proyecto educativo usa <strong>CC BY-NC 4.0</strong>: permite compartir y adaptar el material siempre que se atribuya la autoría y no se use con fines comerciales.</p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Recuerda</strong>
+            Descargar contenido protegido por derechos de autor sin permiso es ilegal. Utiliza fuentes legales como Pixabay, Unsplash o Wikimedia Commons para obtener imágenes y recursos libres de derechos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: informe de ciberseguridad + demo de IA</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión de proyecto final integra los dos bloques de la unidad: IA y ciberseguridad. Se recomienda dividir el tiempo en 30 minutos de trabajo en grupo y 20 minutos de presentaciones. El producto final combina un informe escrito con una demostración práctica.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta última sesión pondremos en práctica todo lo aprendido a lo largo de la unidad mediante un proyecto que integra los bloques de Inteligencia Artificial y Ciberseguridad. Trabajaremos en grupos para elaborar un informe de ciberseguridad y preparar una demostración práctica de IA utilizando herramientas accesibles.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Parte 1: Informe de ciberseguridad</h4>
+            <p>Cada grupo elaborará un informe de ciberseguridad que incluya:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Análisis de amenazas:</strong> Descripción de al menos 3 tipos de malware o ciberataques vistos en la unidad, con ejemplos reales.</li>
+              <li><strong>Política de seguridad:</strong> Recomendaciones concretas de protección (contraseñas, actualizaciones, copias de seguridad, autenticación).</li>
+              <li><strong>Simulación de ataque:</strong> Análisis de un correo de phishing o una web maliciosa, identificando los indicadores de alerta.</li>
+              <li><strong>Plan de respuesta:</strong> Protocolo a seguir si se produce un incidente de seguridad.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Plantilla sugerida</strong>
+            El informe debe tener una extensión mínima de 500 palabras e incluir al menos 2 imágenes o capturas de pantalla. Se valorará la claridad expositiva, la corrección técnica y la originalidad del análisis.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Parte 2: Demo de IA con Teachable Machine</h4>
+            <p>Cada grupo utilizará <strong>Teachable Machine</strong> de Google para crear un modelo de clasificación de imágenes que demuestre los conceptos de aprendizaje automático vistos en la unidad:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Definir el problema:</strong> Elegir 3-4 categorías para clasificar (por ejemplo: tipos de residuos, gestos, objetos del aula).</li>
+              <li><strong>Recopilar datos:</strong> Tomar fotos para cada categoría directamente en la herramienta.</li>
+              <li><strong>Entrenar el modelo:</strong> Dejar que el algoritmo aprenda a clasificar las imágenes.</li>
+              <li><strong>Probar y evaluar:</strong> Probar con imágenes nuevas y analizar la precisión del modelo.</li>
+              <li><strong>Explicar el proceso:</strong> Relacionar la demo con los conceptos de percepción-razonamiento-acción y redes neuronales.</li>
+            </ol>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop" alt="Proyecto final de IA y ciberseguridad" loading="lazy" />
+            <figcaption>El proyecto final integra los conceptos de IA y ciberseguridad de forma práctica</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Criterios de evaluación del proyecto</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Contenido técnico:</strong> Precisión en la descripción de amenazas y buenas prácticas de seguridad.</li>
+              <li><strong>Calidad de la demo:</strong> Funcionamiento correcto del modelo y explicación de su funcionamiento.</li>
+              <li><strong>Presentación:</strong> Claridad expositiva, uso adecuado del vocabulario técnico y capacidad de respuesta a preguntas.</li>
+              <li><strong>Trabajo en equipo:</strong> Distribución equitativa de tareas y cohesión del grupo.</li>
+              <li><strong>Creatividad:</strong> Originalidad en el enfoque del informe y en la elección del modelo de clasificación.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Cada grupo dispondrá de 5 minutos para presentar su proyecto al resto de la clase. Se realizará una ronda de preguntas y se valorarán tanto el informe escrito como la demostración práctica de IA.
+          </div>
+
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="a" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <button class="quiz-opcion" data-valor="a">A. Percepción-razonamiento-acción: el agente recibe datos, los procesa y ejecuta una respuesta.</button>
+            <button class="quiz-opcion" data-valor="b">B. Introducción-proceso-resultados: es el método científico aplicado a la IA.</button>
+            <button class="quiz-opcion" data-valor="c">C. Datos-entrenamiento-deploy: son las fases del desarrollo de software.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es el ciclo básico de un agente inteligente?</p>
+
+          <div class="quiz" data-correcta="b" data-total="4">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Es el mismo que un virus informático.</button>
+            <button class="quiz-opcion" data-valor="b">B. Cifra los archivos de la víctima y exige un rescate a cambio de la clave.</button>
+            <button class="quiz-opcion" data-valor="c">C. Recopila información del usuario sin su conocimiento.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es el ransomware?</p>
+
+          <div class="callout callout-consejo">
+            <strong>Producto de la unidad</strong>
+            El informe de ciberseguridad y la demo de IA se entregarán como producto final de la unidad. Se valorará la integridad del trabajo, la calidad técnica y la capacidad de reflexión crítica sobre el uso responsable de la tecnología.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud5.html" class="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-ink-800 hover:bg-slate-50 transition">
+        ← UD5
+      </a>
+      <span class="text-sm text-slate-400">Última unidad</span>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

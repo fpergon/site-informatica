@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD3 · Desarrollo Web · 2º ESO</title>
+  <meta name="description" content="Unidad Didáctica 3 de 2º ESO: Desarrollo Web. Saberes básicos BOJA, sesiones detalladas y criterios de evaluación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2eso.html" class="hover:underline">2.º ESO</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque E</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD3 · Desarrollo Web</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Comprender los fundamentos del desarrollo web, desde la estructura básica de una página HTML hasta las técnicas avanzadas de animación y diseño interactivo. Esta unidad permite al alumnado crear sus propias páginas web con contenido multimedia, estilos CSS y comportamiento dinámico con JavaScript.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: Página web interactiva</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque E — Desarrollo Web</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.5.I.1</span> Estructura y componentes de una página web.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.5.I.2</span> Lenguajes de marcado y hojas de estilo.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.5.I.3</span> Interacción del navegador con servidores web.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.5.I.4</span> Programación cliente y servidor.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.5.I.5</span> Diseño y animación web.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">5.1 · Diseño de páginas web</span>
+        <span class="criterio">5.2 · Programación web</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Estructura básica de una página web</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión es el punto de partida del desarrollo web. Es fundamental que el alumnado comprenda la diferencia entre estructura (HTML) y presentación (CSS) antes de avanzar a temas más complejos como la interacción con servidores o la animación.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>¿Alguna vez os habéis preguntado cómo se crean las páginas web que visitáis a diario? Detrás de cada sitio web hay un conjunto de tecnologías que trabajan juntas para mostrar contenido en vuestro navegador. En esta primera sesión vamos a desentrañar la estructura básica de una página web, desde el encabezado hasta el cuerpo, incluyendo elementos multimedia, enlaces y secciones que organizan la información de forma lógica y accesible.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es HTML?</h4>
+            <p><strong>HTML</strong> (HyperText Markup Language) es el lenguaje de marcado que define la estructura y el contenido de una página web. No es un lenguaje de programación, sino un sistema de etiquetas que indica al navegador cómo organizar y mostrar la información. Cada página web que visitáis está construida con HTML como base fundamental.</p>
+            <p class="mt-2">Un documento HTML se compone de <strong>etiquetas</strong> que encierran contenido. Las etiquetas se escriben entre corchetes angulares y la mayoría tienen una etiqueta de apertura y otra de cierre. Por ejemplo, <code class="bg-white/80 px-1 rounded text-xs">&lt;h1&gt;Título&lt;/h1&gt;</code> define un encabezado de primer nivel.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructura de un documento HTML</h4>
+            <p>Todo documento HTML sigue una estructura jerárquica que comienza con la declaración del tipo de documento y se organiza en dos bloques principales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>&lt;!DOCTYPE html&gt;:</strong> Indica al navegador que el documento es HTML5.</li>
+              <li><strong>&lt;html&gt;:</strong> Elemento raíz que contiene todo el documento.</li>
+              <li><strong>&lt;head&gt;:</strong> Contiene metadatos, título, enlaces a hojas de estilo y scripts.</li>
+              <li><strong>&lt;body&gt;:</strong> Contiene todo el contenido visible de la página.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Encabezados y cuerpo</h4>
+            <p>Los <strong>encabezados</strong> son elementos que organizan la información jerárquicamente. HTML ofrece seis niveles de encabezados, desde <code class="bg-white/80 px-1 rounded text-xs">&lt;h1&gt;</code> (el más importante) hasta <code class="bg-white/80 px-1 rounded text-xs">&lt;h6&gt;</code> (el menos importante). Usar encabezados correctamente mejora la accesibilidad y el posicionamiento en buscadores.</p>
+            <p class="mt-2">El <strong>cuerpo</strong> de la página (<code class="bg-white/80 px-1 rounded text-xs">&lt;body&gt;</code>) contiene todos los elementos visibles: párrafos (<code class="bg-white/80 px-1 rounded text-xs">&lt;p&gt;</code>), listas (<code class="bg-white/80 px-1 rounded text-xs">&lt;ul&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;ol&gt;</code>), imágenes (<code class="bg-white/80 px-1 rounded text-xs">&lt;img&gt;</code>), enlaces (<code class="bg-white/80 px-1 rounded text-xs">&lt;a&gt;</code>) y mucho más.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Elementos multimedia</h4>
+            <p>Las páginas web modernas incluyen contenido multimedia enriquecido. Los elementos principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Imágenes (&lt;img&gt;):</strong> Muestran fotos, ilustraciones o gráficos. Requieren atributo <code class="bg-white/80 px-1 rounded text-xs">src</code> con la ruta y <code class="bg-white/80 px-1 rounded text-xs">alt</code> con descripción para accesibilidad.</li>
+              <li><strong>Vídeos (&lt;video&gt;):</strong> Reproducen archivos de vídeo directamente en la página.</li>
+              <li><strong>Audio (&lt;audio&gt;):</strong> Reproduce contenido de sonido como podcasts o música.</li>
+              <li><strong>IFrames (&lt;iframe&gt;):</strong> Embeben contenido externo como mapas de Google o vídeos de YouTube.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Enlaces</h4>
+            <p>Los <strong>enlaces</strong> son la base de la navegación en Internet. Sin enlaces, las páginas web serían documentos aislados. El elemento <code class="bg-white/80 px-1 rounded text-xs">&lt;a&gt;</code> (anchor) permite conectar páginas entre sí. El atributo <code class="bg-white/80 px-1 rounded text-xs">href</code> especifica la dirección de destino. Los enlaces pueden ser absolutos (URL completa) o relativos (ruta dentro del mismo sitio).</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Secciones y layout</h4>
+            <p>HTML5 introdujo elementos semánticos que permiten estructurar el contenido de forma lógica: <code class="bg-white/80 px-1 rounded text-xs">&lt;header&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;nav&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;main&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;section&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;article&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;aside&gt;</code> y <code class="bg-white/80 px-1 rounded text-xs">&lt;footer&gt;</code>. Estos elementos no solo mejoran la semántica del documento, sino que facilitan el diseño y la accesibilidad.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para practicar, abrid el Bloc de Notas o VS Code y escribid una página HTML sencilla con un encabezado, un párrafo, una imagen y un enlace. Guardad el archivo como <code class="bg-white/50 px-1 rounded">index.html</code> y abridlo en vuestro navegador con doble clic. Ver cómo el navegador interpreta vuestro código es la mejor forma de aprender.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En esta sesión vais a crear vuestra primera página web. Debe incluir:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Un encabezado principal con vuestro nombre.</li>
+              <li>Un párrafo que os describa brevemente.</li>
+              <li>Una imagen con texto alternativo descriptivo.</li>
+              <li>Al menos dos enlaces a sitios web de vuestra interés.</li>
+              <li>Una sección con una lista ordenada de vuestros cinco sitios web favoritos.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Definir la estructura y el contenido de la página.</button>
+            <button class="quiz-opcion" data-valor="b">B. Definir los colores y la distribución visual.</button>
+            <button class="quiz-opcion" data-valor="c">C. Ejecutar la lógica del servidor.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué función tiene HTML en una página web?</p>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. &lt;body&gt;</button>
+            <button class="quiz-opcion" data-valor="b">B. &lt;head&gt;</button>
+            <button class="quiz-opcion" data-valor="c">C. &lt;html&gt;</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué elemento contiene los metadatos de una página web?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Entrega una captura de pantalla de vuestra primera página web abierta en el navegador junto con el código HTML fuente. Se valorará la estructura correcta, el uso de etiquetas semánticas y la inclusión de los elementos solicitados.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Servidores web: solicitud HTTP y renderizado</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Concepto clave</strong>
+            Cada vez que escribís una URL en el navegador, se desencadena una cadena compleja de eventos que involucra servidores de nombres de dominio, servidores web y el motor de renderizado del navegador. Entender este proceso es esencial para comprender cómo funciona Internet.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>¿Qué ocurre exactamente cuando escribís "www.google.com" en la barra de direcciones y pulsáis Enter? En menos de un segundo suceden decenas de procesos que van desde la resolución del nombre de dominio hasta la renderización completa de la página. En esta sesión vamos a desglosar cada uno de estos pasos para entender cómo el navegador se comunica con los servidores web.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un servidor web?</h4>
+            <p>Un <strong>servidor web</strong> es un ordenador que está encendido las 24 horas del día, 7 días a la semana, y que almacena archivos (páginas web, imágenes, vídeos, bases de datos) y los entrega a los navegadores que los solicitan. Cuando visitáis una web, en realidad estáis descargando archivos que están almacenados en un servidor remoto.</p>
+            <p class="mt-2">Los servidores web utilizan protocolos de comunicación para transferir datos. El más común es <strong>HTTP</strong> (HyperText Transfer Protocol) y su versión segura <strong>HTTPS</strong>, que cifra la comunicación entre el navegador y el servidor.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Resolución DNS</h4>
+            <p>El <strong>DNS</strong> (Domain Name System) es como una guía telefónica de Internet. Los ordenadores se comunican entre sí usando direcciones IP (números como 142.250.185.78), pero los seres humanos recordamos mejor los nombres de dominio. El DNS se encarga de traducir "www.google.com" a su dirección IP correspondiente.</p>
+            <p class="mt-2">El proceso de resolución DNS sigue estos pasos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>El navegador consulta su caché de DNS local.</li>
+              <li>Si no lo encuentra, consulta el caché del sistema operativo.</li>
+              <li>Si tampoco, consulta el servidor DNS configurado por el proveedor de Internet.</li>
+              <li>Si aún no lo resuelve, contacta con los servidores raíz de DNS de la jerarquía mundial.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Dato curioso</strong>
+            Cada día se realizan más de 5.000 millones de consultas DNS en todo el mundo. Sin el sistema DNS, tendríamos que memorizar direcciones IP numéricas para cada sitio web que quisiéramos visitar. ¡Sería imposible!
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">La solicitud HTTP</h4>
+            <p>Una vez resuelto el nombre de dominio, el navegador envía una <strong>solicitud HTTP</strong> al servidor. Esta solicitud contiene información como el tipo de navegador, las cookies, los encabezados de aceptación y el método HTTP utilizado. Los métodos principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>GET:</strong> Solicita un recurso al servidor. Es el método más común.</li>
+              <li><strong>POST:</strong> Envía datos al servidor (formularios, archivos).</li>
+              <li><strong>PUT:</strong> Actualiza un recurso existente en el servidor.</li>
+              <li><strong>DELETE:</strong> Elimina un recurso en el servidor.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Procesamiento y respuesta del servidor</h4>
+            <p>El servidor recibe la solicitud, la procesa y devuelve una <strong>respuesta HTTP</strong> que incluye un código de estado y el contenido solicitado. Los códigos de estado más conocidos son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>200 OK:</strong> La solicitud fue exitosa.</li>
+              <li><strong>301 Redirección:</strong> El recurso se ha movido permanentemente.</li>
+              <li><strong>404 Not Found:</strong> El recurso solicitado no existe.</li>
+              <li><strong>500 Error interno:</strong> El servidor encontró un error inesperado.</li>
+            </ul>
+          </div>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/72g2CpKg0Ck" title="Cómo funciona Internet - Servidores web" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Renderizado en el navegador</h4>
+            <p>El navegador recibe los archivos HTML, CSS y JavaScript y ejecuta un proceso de <strong>renderizado</strong> que convierte el código en la página visual que vemos. Este proceso incluye:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Parseo del DOM:</strong> El navegador lee el HTML y construye el Árbol del DOM (Document Object Model).</li>
+              <li><strong>Parseo del CSSOM:</strong> Se procesan las hojas de estilo para construir el Árbol de CSS.</li>
+              <li><strong>Construcción del árbol de renderizado:</strong> Se combinan DOM y CSSOM.</li>
+              <li><strong>Layout (diseño):</strong> Se calcula la posición y tamaño de cada elemento.</li>
+              <li><strong>Pintura:</strong> Se dibujan los píxeles en la pantalla.</li>
+              <li><strong>Composición:</strong> Se superponen las capas en el orden correcto.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Vamos a usar las <strong>Herramientas de Desarrollador</strong> del navegador (F12) para inspeccionar:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Abrir la pestaña <strong>Network</strong> y ver las solicitudes HTTP al cargar una página.</li>
+              <li>Inspeccionar los encabezados de la solicitud y la respuesta.</li>
+              <li>Observar el tiempo que tarda cada recurso en cargarse.</li>
+              <li>Analizar el árbol DOM generado por el navegador.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Reflexión</strong>
+            ¿Qué pasaría si el servidor de una web que utilizamos a diario se cae? ¿Cómo afectaría a los servicios que dependen de ella (correo, redes sociales, banca)? Reflexionad sobre la dependencia que tenemos de los servidores web en nuestra vida cotidiana.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Lenguajes web: HTML, CSS, PHP, JavaScript, SQL</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-aviso">
+            <strong>Concepto fundamental</strong>
+            Cada lenguaje web tiene un papel específico en el ecosistema del desarrollo web. Comprender las diferencias entre estructura, estilo, lógica de cliente, lógica de servidor y almacenamiento de datos es clave para diseñar aplicaciones web completas y eficientes.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El desarrollo web utiliza múltiples lenguajes que trabajan conjuntamente para crear experiencias completas. En esta sesión vamos a analizar las diferencias fundamentales entre los lenguajes más utilizados: HTML para la estructura, CSS para el estilo, PHP y JavaScript para la programación, y SQL para la gestión de datos. Cada uno resuelve un problema diferente y todos son necesarios para construir una aplicación web moderna.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">HTML vs CSS: Estructura vs Estilo</h4>
+            <p><strong>HTML</strong> se encarga de la estructura y el contenido. Define qué hay en la página: títulos, párrafos, imágenes, enlaces y formularios. Es como los cimientos y la estructura de un edificio.</p>
+            <p class="mt-2"><strong>CSS</strong> (Cascading Style Sheets) se encarga de la presentación visual. Define colores, fuentes, tamaños, espaciados, posicionamiento y animaciones. Es como la pintura, el mobiliario y la decoración del edificio.</p>
+            <p class="mt-2">La separación entre HTML y CSS es un principio fundamental del desarrollo web moderno. Permite modificar el aspecto visual sin alterar la estructura del contenido, y facilita el mantenimiento y la accesibilidad.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">PHP vs JavaScript: Servidor vs Cliente</h4>
+            <p><strong>PHP</strong> es un lenguaje de programación del lado del <strong>servidor</strong>. Se ejecuta en el servidor web antes de enviar la respuesta al navegador. Su principal ventaja es que puede acceder a bases de datos, generar contenido dinámico y manejar autenticación de usuarios de forma segura, ya que el código nunca se ve en el navegador.</p>
+            <p class="mt-2"><strong>JavaScript</strong> es un lenguaje de programación del lado del <strong>cliente</strong>. Se ejecuta directamente en el navegador del usuario. Permite crear interfaces interactivas, validar formularios, actualizar contenido sin recargar la página y crear animaciones. También puede ejecutarse en el servidor con Node.js.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">SQL vs NoSQL</h4>
+            <p><strong>SQL</strong> (Structured Query Language) es el lenguaje estándar para gestionar bases de datos relacionales. Los datos se organizan en tablas con filas y columnas, y las relaciones entre tablas se establecen mediante claves. Ejemplos: MySQL, PostgreSQL, SQLite.</p>
+            <p class="mt-2"><strong>NoSQL</strong> son bases de datos que no siguen el modelo relacional. Se utilizan para grandes volúmenes de datos no estructurados. Tipos principales: documentos (MongoDB), clave-valor (Redis), columnas (Cassandra) y grafos (Neo4j).</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Imaginad una aplicación web como una restaurante. El <strong>HTML</strong> es la carta (contenido), el <strong>CSS</strong> es la decoración del local (estilo), <strong>JavaScript</strong> es el camarero que interactúa con vosotros en la mesa (cliente), <strong>PHP</strong> es el cocinero que prepara los platos en la cocina (servidor), y <strong>SQL</strong> es la despensa donde se almacenan los ingredientes (datos).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad comparativa</h4>
+            <p>Completa la siguiente tabla comparativa con las características de cada lenguaje:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>HTML:</strong> Tipo de lenguaje, función principal, se ejecuta en...</li>
+              <li><strong>CSS:</strong> Tipo de lenguaje, función principal, se ejecuta en...</li>
+              <li><strong>JavaScript:</strong> Tipo de lenguaje, función principal, se ejecuta en...</li>
+              <li><strong>PHP:</strong> Tipo de lenguaje, función principal, se ejecuta en...</li>
+              <li><strong>SQL:</strong> Tipo de lenguaje, función principal, se ejecuta en...</li>
+            </ul>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. CSS define la estructura de la página.</button>
+            <button class="quiz-opcion" data-valor="b">B. HTML define la estructura y CSS define el estilo.</button>
+            <button class="quiz-opcion" data-valor="c">C. HTML y CSS hacen exactamente lo mismo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la diferencia principal entre HTML y CSS?</p>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. JavaScript se ejecuta en el navegador del usuario.</button>
+            <button class="quiz-opcion" data-valor="b">B. PHP se ejecuta en el navegador del usuario.</button>
+            <button class="quiz-opcion" data-valor="c">C. Ambos se ejecutan en el servidor.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Dónde se ejecuta JavaScript en una aplicación web tradicional?</p>
+
+          <div class="callout callout-peligro">
+            <strong>Errores comunes</strong>
+            Un error frecuente entre el alumnado es confundir los lenguajes y intentar usar CSS para añadir contenido o JavaScript para almacenar datos persistentes. Recordad: cada lenguaje tiene su función específica y no son intercambiables.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">HTML en profundidad: semántica, multimedia y formularios</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Importancia de la semántica</strong>
+            Utilizar las etiquetas semánticas correctas no es solo una cuestión de buenas prácticas. Los lectores de pantalla para personas con discapacidad visual, los motores de búsqueda y los navegadores dependen de la semántica para interpretar correctamente el contenido de una página web.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>HTML5 trajo consigo una serie de etiquetas semánticas que revolutionaron la forma en que estructuramos el contenido web. En esta sesión profundizaremos en estas etiquetas, aprenderemos a incorporar elementos multimedia de forma accesible y a crear formularios interactivos que permitan la recogida de datos del usuario.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Etiquetas semánticas</h4>
+            <p>Las etiquetas semánticas de HTML5 comunican el significado del contenido al navegador y a las herramientas de asistencia:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>&lt;header&gt;:</strong> Cabecera de la página o de una sección. Suele contener_logo, título y navegación principal.</li>
+              <li><strong>&lt;nav&gt;:</strong> Contiene los enlaces de navegación principales del sitio.</li>
+              <li><strong>&lt;main&gt;:</strong> Contenido principal de la página. Solo debe haber uno por documento.</li>
+              <li><strong>&lt;section&gt;:</strong> Sección temática del contenido, con un tema o propósito definido.</li>
+              <li><strong>&lt;article&gt;:</strong> Contenido independiente que puede distribuirse por su cuenta (noticia, entrada de blog).</li>
+              <li><strong>&lt;aside&gt;:</strong> Contenido complementario, como barra lateral o información adicional.</li>
+              <li><strong>&lt;footer&gt;:</strong> Pie de página o de sección. Contiene información de copyright, contacto, enlaces legales.</li>
+              <li><strong>&lt;figure&gt; y &lt;figcaption&gt;:</strong> Agrupan contenido ilustrativo con su leyenda.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Elementos multimedia avanzados</h4>
+            <p>HTML5 permite incorporar multimedia de forma nativa sin depender de plugins externos como Flash:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>&lt;video&gt;:</strong> Reproduce vídeos con controles nativos. Atributos: <code class="bg-white/80 px-1 rounded text-xs">controls</code>, <code class="bg-white/80 px-1 rounded text-xs">autoplay</code>, <code class="bg-white/80 px-1 rounded text-xs">loop</code>, <code class="bg-white/80 px-1 rounded text-xs">muted</code>, <code class="bg-white/80 px-1 rounded text-xs">poster</code>.</li>
+              <li><strong>&lt;audio&gt;</strong> reproduce contenido de sonido con controles integrados.</li>
+              <li><strong>&lt;source&gt;:</strong> Define múltiples formatos de archivo dentro de un vídeo o audio para compatibilidad cruzada.</li>
+              <li><strong>&lt;iframe&gt;:</strong> Embebe contenido externo como mapas, vídeos de plataformas o widgets.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formularios HTML</h4>
+            <p>Los formularios son el mecanismo principal para recoger información del usuario. Un formulario se define con <code class="bg-white/80 px-1 rounded text-xs">&lt;form&gt;</code> y contiene diferentes tipos de campos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>&lt;input type="text"&gt;:</strong> Campo de texto para entrada libre.</li>
+              <li><strong>&lt;input type="email"&gt;:</strong> Validación automática de dirección de correo electrónico.</li>
+              <li><strong>&lt;input type="password"&gt;:</strong> Campo oculto para contraseñas.</li>
+              <li><strong>&lt;input type="number"&gt;:</strong> Campo numérico con controles incrementales.</li>
+              <li><strong>&lt;input type="date"&gt;:</strong> Selector de fecha con calendario nativo.</li>
+              <li><strong>&lt;textarea&gt;:</strong> Campo de texto multilínea.</li>
+              <li><strong>&lt;select&gt; y &lt;option&gt;:</strong> Menú desplegable de selección.</li>
+              <li><strong>&lt;input type="checkbox"&gt;:</strong> Casilla de verificación.</li>
+              <li><strong>&lt;input type="radio"&gt;:</strong> Botón de opción (selección múltiple exclusiva).</li>
+              <li><strong>&lt;button type="submit"&gt;:</strong> Botón de envío del formulario.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Buena práctica</strong>
+            Siempre debéis incluir la etiqueta <code class="bg-white/50 px-1 rounded">&lt;label&gt;</code> asociada a cada campo del formulario mediante el atributo <code class="bg-white/50 px-1 rounded">for</code>. Esto mejora la accesibilidad para usuarios de lectores de pantalla y facilita la interacción en dispositivos táctiles.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una página web de perfil personal que incluya:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Estructura completa con etiquetas semánticas (<code class="bg-white/80 px-1 rounded text-xs">&lt;header&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;nav&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;main&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;section&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;footer&gt;</code>).</li>
+              <li>Un vídeo embebido de YouTube usando <code class="bg-white/80 px-1 rounded text-xs">&lt;iframe&gt;</code>.</li>
+              <li>Un formulario de contacto con al menos 5 tipos de campo diferentes.</li>
+              <li>Una galería de imágenes usando <code class="bg-white/80 px-1 rounded text-xs">&lt;figure&gt;</code> y <code class="bg-white/80 px-1 rounded text-xs">&lt;figcaption&gt;</code>.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Accesibilidad</strong>
+            Recordad que una página web bien construida debe ser accesible para todos. Incluir textos alternativos en imágenes, etiquetas en formularios y una estructura lógica de encabezados son requisitos mínimos para garantizar que todas las personas puedan acceder al contenido.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">CSS en profundidad: selectores, modelo de cajas, Flexbox y Grid</h3>
+            <p class="text-xs text-slate-500">Sesión 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Concepto esencial</strong>
+            El <strong>modelo de cajas</strong> (box model) es el pilar fundamental de CSS. Cada elemento en una página web es un rectángulo compuesto por contenido, relleno, borde y margen. Comprender este modelo es imprescindible para controlar el diseño y la distribución de elementos en la pantalla.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>CSS es el lenguaje que transforma un documento HTML plano en una página web visualmente atractiva. En esta sesión profundizaremos en los selectores que nos permiten dirigirnos a elementos específicos, el modelo de cajas que gobierna el espacio que ocupan los elementos, y los sistemas de diseño Flexbox y Grid que revolutionaron la distribución de contenido en la web moderna.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Selectores CSS</h4>
+            <p>Los selectores determinan a qué elementos se aplican los estilos. Los tipos principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Selector de elemento:</strong> <code class="bg-white/80 px-1 rounded text-xs">p { color: blue; }</code> — Aplica a todos los párrafos.</li>
+              <li><strong>Selector de clase:</strong> <code class="bg-white/80 px-1 rounded text-xs">.destacado { font-weight: bold; }</code> — Aplica a elementos con class="destacado".</li>
+              <li><strong>Selector de ID:</strong> <code class="bg-white/80 px-1 rounded text-xs">#cabecera { background: white; }</code> — Aplica al elemento con id="cabecera".</li>
+              <li><strong>Selector descendente:</strong> <code class="bg-white/80 px-1 rounded text-xs">nav a { text-decoration: none; }</code> — Aplica a enlaces dentro de nav.</li>
+              <li><strong>Selector hijo:</strong> <code class="bg-white/80 px-1 rounded text-xs">ul > li { list-style: disc; }</code> — Solo hijos directos.</li>
+              <li><strong>Pseudo-clases:</strong> <code class="bg-white/80 px-1 rounded text-xs">a:hover { color: red; }</code> — Estado especial del elemento.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Propiedades CSS fundamentales</h4>
+            <p>Las propiedades más utilizadas en el diseño web incluyen:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Tipografía:</strong> <code class="bg-white/80 px-1 rounded text-xs">font-family</code>, <code class="bg-white/80 px-1 rounded text-xs">font-size</code>, <code class="bg-white/80 px-1 rounded text-xs">font-weight</code>, <code class="bg-white/80 px-1 rounded text-xs">line-height</code>, <code class="bg-white/80 px-1 rounded text-xs">text-align</code>.</li>
+              <li><strong>Colores:</strong> <code class="bg-white/80 px-1 rounded text-xs">color</code>, <code class="bg-white/80 px-1 rounded text-xs">background-color</code>, <code class="bg-white/80 px-1 rounded text-xs">opacity</code>.</li>
+              <li><strong>Espaciado:</strong> <code class="bg-white/80 px-1 rounded text-xs">margin</code>, <code class="bg-white/80 px-1 rounded text-xs">padding</code>, <code class="bg-white/80 px-1 rounded text-xs">gap</code>.</li>
+              <li><strong>Tamaño:</strong> <code class="bg-white/80 px-1 rounded text-xs">width</code>, <code class="bg-white/80 px-1 rounded text-xs">height</code>, <code class="bg-white/80 px-1 rounded text-xs">max-width</code>, <code class="bg-white/80 px-1 rounded text-xs">min-height</code>.</li>
+              <li><strong>Bordes:</strong> <code class="bg-white/80 px-1 rounded text-xs">border</code>, <code class="bg-white/80 px-1 rounded text-xs">border-radius</code>, <code class="bg-white/80 px-1 rounded text-xs">box-shadow</code>.</li>
+              <li><strong>Posicionamiento:</strong> <code class="bg-white/80 px-1 rounded text-xs">position</code>, <code class="bg-white/80 px-1 rounded text-xs">top</code>, <code class="bg-white/80 px-1 rounded text-xs">left</code>, <code class="bg-white/80 px-1 rounded text-xs">z-index</code>.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para comprender visualmente el modelo de cajas, activad la opción "Show box model" en las Herramientas de Desarrollador del navegador (F12 → pestaña Computed). Veréis representado gráficamente el contenido, padding, border y margin de cada elemento que seleccionéis.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Flexbox</h4>
+            <p><strong>Flexbox</strong> es un sistema de diseño unidimensional que facilita la alineación y distribución de elementos dentro de un contenedor. Es ideal para diseño de filas o columnas. Las propiedades principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>En el contenedor:</strong> <code class="bg-white/80 px-1 rounded text-xs">display: flex</code>, <code class="bg-white/80 px-1 rounded text-xs">justify-content</code>, <code class="bg-white/80 px-1 rounded text-xs">align-items</code>, <code class="bg-white/80 px-1 rounded text-xs">flex-direction</code>, <code class="bg-white/80 px-1 rounded text-xs">flex-wrap</code>, <code class="bg-white/80 px-1 rounded text-xs">gap</code>.</li>
+              <li><strong>En los elementos hijos:</strong> <code class="bg-white/80 px-1 rounded text-xs">flex-grow</code>, <code class="bg-white/80 px-1 rounded text-xs">flex-shrink</code>, <code class="bg-white/80 px-1 rounded text-xs">flex-basis</code>, <code class="bg-white/80 px-1 rounded text-xs">align-self</code>, <code class="bg-white/80 px-1 rounded text-xs">order</code>.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">CSS Grid</h4>
+            <p><strong>CSS Grid</strong> es un sistema de diseño bidimensional que permite crear estructuras complejas con filas y columnas simultáneamente. Es ideal para layouts de página completa. Las propiedades principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>En el contenedor:</strong> <code class="bg-white/80 px-1 rounded text-xs">display: grid</code>, <code class="bg-white/80 px-1 rounded text-xs">grid-template-columns</code>, <code class="bg-white/80 px-1 rounded text-xs">grid-template-rows</code>, <code class="bg-white/80 px-1 rounded text-xs">grid-gap</code>.</li>
+              <li><strong>En los elementos hijos:</strong> <code class="bg-white/80 px-1 rounded text-xs">grid-column</code>, <code class="bg-white/80 px-1 rounded text-xs">grid-row</code>, <code class="bg-white/80 px-1 rounded text-xs">grid-area</code>.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Flexbox vs Grid</strong>
+            Usad <strong>Flexbox</strong> para distribuir elementos en una dimensión (una fila o una columna) y <strong>CSS Grid</strong> cuando necesitáis controlar filas y columnas simultáneamente. Ambos son complementarios y se usan frecuentemente juntos en el desarrollo web profesional.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear un layout de página web utilizando CSS Grid y Flexbox:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Diseñar una cabecera con Flexbox que centre el título y los enlaces de navegación.</li>
+              <li>Crear una rejilla de 3 columnas con CSS Grid para mostrar tarjetas de contenido.</li>
+              <li>Implementar una barra lateral que se oculte en pantallas pequeñas usando <code class="bg-white/80 px-1 rounded text-xs">@media</code>.</li>
+              <li>Aplicar al menos 5 selectores diferentes para estilos específicos.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Flexbox es bidimensional y Grid es unidimensional.</button>
+            <button class="quiz-opcion" data-valor="b">B. Flexbox y Grid son exactamente lo mismo.</button>
+            <button class="quiz-opcion" data-valor="c">C. Flexbox es unidimensional y Grid es bidimensional.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la diferencia principal entre Flexbox y Grid?</p>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Contenido, relleno, borde y margen.</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo contenido y margen.</button>
+            <button class="quiz-opcion" data-valor="c">C. Contenido, texto, imagen y enlace.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuáles son las cuatro partes del modelo de cajas en CSS?</p>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Animación web: CSS, JavaScript, SVG y Canvas</h3>
+            <p class="text-xs text-slate-500">Sesión 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Las animaciones web</strong>
+            Las animaciones no son solo decoración. Cuando se usan correctamente, mejoran la experiencia de usuario, guían la atención, proporcionan retroalimentación y hacen que las interfaces se sientan más naturales y responsivas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las animaciones son una parte fundamental del diseño web moderno. Desde una simple transición de color al pasar el cursor sobre un botón hasta complejas animaciones interactivas, las técnicas de animación web permiten crear experiencias dinámicas y envolventes. En esta sesión exploraremos las diferentes tecnologías disponibles: CSS transitions y keyframes, JavaScript, SVG, Canvas y WebGL.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">CSS Transitions</h4>
+            <p>Las <strong>transiciones CSS</strong> son la forma más sencilla de animar cambios en las propiedades de un elemento. Permiten definir una duración, una función de temporización y un retraso para la transición entre dos estados:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>transition-property:</strong> Qué propiedad se anima (color, opacity, transform...).</li>
+              <li><strong>transition-duration:</strong> Cuánto dura la transición (0.3s, 1s...).</li>
+              <li><strong>transition-timing-function:</strong> Cómo se distribuye el tiempo (ease, linear, ease-in-out).</li>
+              <li><strong>transition-delay:</strong> Cuánto tiempo espera antes de comenzar.</li>
+            </ul>
+            <p class="mt-2">Son ideales para hover effects, cambios de estado y micro-interacciones simples.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">CSS Keyframes</h4>
+            <p>Las <strong>animaciones con keyframes</strong> permiten crear secuencias de movimiento más complejas definiendo múltiples puntos intermedios (keyframes) a lo largo de la animación:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>@keyframes:</strong> Define los estilos en cada momento de la animación.</li>
+              <li><strong>animation-name:</strong> Referencia al nombre del keyframe.</li>
+              <li><strong>animation-duration:</strong> Duración total de la animación.</li>
+              <li><strong>animation-iteration-count:</strong> Cuántas veces se repite (número o infinite).</li>
+              <li><strong>animation-direction:</strong> Dirección (normal, reverse, alternate).</li>
+              <li><strong>animation-fill-mode:</strong> Qué pasa antes/después (forwards, backwards, both).</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Buena práctica</strong>
+            Para crear animaciones fluidas, animad siempre propiedades que no provoquen reflow del navegador: <code class="bg-white/50 px-1 rounded">transform</code> y <code class="bg-white/50 px-1 rounded">opacity</code>. Evitad animar propiedades como <code class="bg-white/50 px-1 rounded">width</code>, <code class="bg-white/50 px-1 rounded">height</code> o <code class="bg-white/50 px-1 rounded">margin</code>, ya que causan recálculos de diseño que afectan al rendimiento.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Animación con JavaScript</h4>
+            <p>JavaScript ofrece control total sobre las animaciones. Las principales APIs son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>requestAnimationFrame:</strong> API nativa que sincroniza las animaciones con la tasa de refresco del monitor (60 FPS). Es la forma recomendada de crear animaciones con JavaScript.</li>
+              <li><strong>Librerías:</strong> GreenSock (GSAP), Anime.js y Framer Motion ofrecen interfaces simplificadas para animaciones complejas.</li>
+              <li><strong>DOM manipulation:</strong> Modificar directamente los estilos de los elementos con <code class="bg-white/80 px-1 rounded text-xs">element.style</code>.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">SVG y Canvas</h4>
+            <p><strong>SVG</strong> (Scalable Vector Graphics) es un formato de gráficos vectoriales que se puede manipular y animar con CSS y JavaScript. Es ideal para iconos, diagramas y animaciones que necesitan escalarse sin perder calidad. Cada elemento SVG es un nodo del DOM que puede recibir estilos e interacciones.</p>
+            <p class="mt-2"><strong>Canvas</strong> es un elemento HTML que proporciona un lienzo de dibujo bidimensional. A diferencia de SVG, Canvas dibuja píxeles directamente y no mantiene una representación del DOM. Es ideal para gráficos complejos, juegos y visualizaciones de datos que requieren alto rendimiento.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">WebGL</h4>
+            <p><strong>WebGL</strong> (Web Graphics Library) es una API de JavaScript para renderizado 3D en el navegador. Permite crear gráficos tridimensionales sin plugins adicionales utilizando la aceleración por hardware de la tarjeta gráfica. Se utiliza en juegos web, visualizaciones científicas, experiencias inmersivas y aplicaciones de realidad virtual en el navegador.</p>
+          </div>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/Y7V68aMpEkI" title="Animación web con CSS y JavaScript" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Rendimiento</strong>
+            Las animaciones mal optimizadas pueden causar problemas de rendimiento significativos, especialmente en dispositivos móviles. Usad siempre las DevTools del navegador (pestaña Performance) para medir el impacto de vuestras animaciones y asegurar que se mantienen a 60 frames por segundo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una galería de animaciones que incluya:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Un botón con transición de color al pasar el cursor.</li>
+              <li>Una animación de carga (spinner) usando keyframes.</li>
+              <li>Un elemente SVG animado con CSS.</li>
+              <li>Un efecto parallax sencillo usando JavaScript y requestAnimationFrame.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Exploración</strong>
+            Visitad la web <em>CSS Tricks</em> y <em>CodePen</em> para explorar ejemplos de animaciones web. Intentad replicar al menos una animación que os llame la atención y compartid el resultado con la clase.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: página web interactiva</h3>
+            <p class="text-xs text-slate-500">Sesión 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-consejo">
+            <strong>Producto de la unidad</strong>
+            En esta sesión de cierre vais a crear vuestra propia página web interactiva aplicando todos los conocimientos adquiridos a lo largo de la unidad. Podéis elegir entre Webflow, Google Sites o código puro con editor de código.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Es el momento de poner en práctica todo lo aprendido. En esta sesión final vais a diseñar y crear una página web interactiva que demuestre vuestros conocimientos de HTML, CSS y JavaScript. El tema es libre: puede ser una página sobre vuestro hobby, un portfolio personal, un sitio sobre un tema que os apasione o una landing page para un proyecto ficticio.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Opciones de herramienta</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Webflow:</strong> Herramienta visual de diseño web profesional. Permite crear sitios web responsive sin código, pero exporta HTML, CSS y JavaScript limpio. Ideal si queréis centraros en el diseño.</li>
+              <li><strong>Google Sites:</strong> Plataforma gratuita de Google para crear sitios web sencillos. Muy fácil de usar pero con menos personalización. Ideal para proyectos rápidos.</li>
+              <li><strong>Código puro (VS Code):</strong> Escribir HTML, CSS y JavaScript desde cero. La opción más desafiante pero también la más formativa. Os permite aplicar todos los conceptos vistos en clase.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Requisitos del proyecto</h4>
+            <p>Tu página web debe incluir como mínimo:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Estructura semántica:</strong> Uso correcto de <code class="bg-white/80 px-1 rounded text-xs">&lt;header&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;nav&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;main&gt;</code>, <code class="bg-white/80 px-1 rounded text-xs">&lt;section&gt;</code> y <code class="bg-white/80 px-1 rounded text-xs">&lt;footer&gt;</code>.</li>
+              <li><strong>Contenido multimedia:</strong> Al menos una imagen con texto alternativo y un vídeo embebido.</li>
+              <li><strong>Estilos CSS:</strong> Colores coherentes, tipografía legible, espaciados consistentes y al menos un uso de Flexbox o Grid.</li>
+              <li><strong>Formulario:</strong> Un formulario de contacto funcional con al menos 4 campos.</li>
+              <li><strong>Animación:</strong> Al menos una transición o animación CSS en algún elemento.</li>
+              <li><strong>Responsive:</strong> La página debe verse bien en dispositivos móviles y de escritorio.</li>
+              <li><strong>Accesibilidad:</strong> Etiquetas en formularios, textos alternativos en imágenes y estructura lógica de encabezados.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Criterios de evaluación</strong>
+            El proyecto se evaluará con la siguiente rúbrica: estructura semántica (25%), diseño visual y CSS (25%), contenido y multimedia (20%), funcionalidad e interacción (20%), accesibilidad y buenas prácticas (10%).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Planificación del proyecto</h4>
+            <p>Antes de empezar a escribir código, dedicad unos minutos a planificar vuestra página:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Tema y audiencia:</strong> ¿De qué trata vuestra página? ¿A quién va dirigida?</li>
+              <li><strong>Estructura:</strong> ¿Qué secciones tendrá? Haced un esquema o boceto.</li>
+              <li><strong>Contenido:</strong> Recopilad textos, imágenes y vídeos antes de empezar.</li>
+              <li><strong>Diseño:</strong> Elegid paleta de colores, tipografías y estilo visual.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sesión de trabajo</h4>
+            <p>La sesión se dividirá en las siguientes fases:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>10 minutos:</strong> Planificación y boceto del diseño.</li>
+              <li><strong>25 minutos:</strong> Desarrollo de la página.</li>
+              <li><strong>10 minutos:</strong> Revisión y pulido de detalles.</li>
+              <li><strong>5 minutos:</strong> Presentación de los proyectos a la clase.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="a" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <button class="quiz-opcion" data-valor="a">A. HTML estructura, CSS estilo, JS interacción, PHP servidor.</button>
+            <button class="quiz-opcion" data-valor="b">B. HTML estilo, CSS estructura, JS servidor, PHP interacción.</button>
+            <button class="quiz-opcion" data-valor="c">C. HTML, CSS y JS son exactamente lo mismo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la función principal de cada lenguaje web?</p>
+
+          <div class="quiz" data-correcta="c" data-total="4">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. SVG es para gráficos rasterizados y Canvas para vectoriales.</button>
+            <button class="quiz-opcion" data-valor="b">B. SVG y Canvas son exactamente lo mismo.</button>
+            <button class="quiz-opcion" data-valor="c">C. SVG es para gráficos vectoriales escalables y Canvas para gráficos rasterizados por píxeles.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la diferencia principal entre SVG y Canvas?</p>
+
+          <div class="callout callout-peligro">
+            <strong>Consejo final</strong>
+            No dejéis todo para el último momento. El desarrollo web es un proceso iterativo: empezad con una versión básica funcional e id añadiendo mejoras progresivamente. Si os quedáis atascados, consultad la documentación de MDN Web Docs, la referencia más completa y fiable del desarrollo web.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud2.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-ink-800 hover:bg-slate-100 transition">
+        ← UD2 · Pensamiento Computacional
+      </a>
+      <a href="ud4.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD4 · Computación Física e IoT →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

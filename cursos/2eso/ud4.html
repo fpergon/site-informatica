@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD4 · Computación Física e IoT · 2º ESO</title>
+  <meta name="description" content="Unidad Didáctica 4 de 2º ESO: Computación Física e Internet de las Cosas. Saberes básicos BOJA, sesiones detalladas y criterios de evaluación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2eso" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2eso.html" class="hover:underline">2.º ESO</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloques F + B</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD4 · Computación Física e IoT</h1>
+      <p class="mt-3 max-w-3xl text-brand-50/90"><span class="font-semibold">Enfoque:</span> Explorar la intersección entre hardware y software, desde los componentes básicos de un sistema de computación hasta la creación de dispositivos conectados a Internet. Esta unidad permite al alumnado comprender cómo funciona la tecnología física que nos rodea y diseñar sistemas IoT con microcontroladores como el Micro:bit.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">7 sesiones</span>
+        <span class="rounded-full bg-white/20 px-3 py-1 font-medium">Producto: Sistema Micro:bit IoT</span>
+      </div>
+    </section>
+
+    <!-- SABERES BÁSICOS -->
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink-800">Saberes Básicos (BOJA)</h2>
+      <p class="mt-1 text-sm text-slate-600">Bloque F — Computación Física · Bloque B — IoT</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.1.I.1</span> Sistemas de computación: componentes y su funcionamiento.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.2.I.3</span> Microcontroladores y hardware programable.</li>
+        <li class="flex gap-3"><span class="shrink-0 rounded-full bg-brand-100 px-2.5 py-0.5 text-xs font-bold text-brand-700">CYR.3.I.1</span> Seguridad eléctrica y manejo de componentes.</li>
+      </ul>
+    </section>
+
+    <!-- CRITERIOS DE EVALUACIÓN -->
+    <section class="mt-6 rounded-xl border border-accent-200 bg-accent-50 p-6">
+      <h2 class="text-lg font-bold text-ink-800">Criterios de Evaluación</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="criterio">1.1 · Sistemas de computación</span>
+        <span class="criterio">2.3 · Microcontroladores</span>
+        <span class="criterio">3.1 · Seguridad eléctrica</span>
+      </div>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800">Desarrollo de Sesiones</h2>
+      <p class="mt-1 text-sm text-slate-600">Contenido detallado para cada sesión de la unidad.</p>
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Sistemas de computación: componentes y funcionamiento</h3>
+            <p class="text-xs text-slate-500">Sesión 1 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión sienta las bases de toda la unidad. Comprender la arquitectura de un sistema de computación es esencial para entender después cómo funcionan los microcontroladores y los dispositivos IoT. Es recomendable utilizar ejemplos cotidianos que el alumnado pueda identificar fácilmente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Cada día utilizamos docenas de dispositivos informáticos sin ser conscientes de que todos comparten una arquitectura fundamental similar. Desde el móvil que usamos para enviar mensajes hasta el ordenador con el que escribimos, todos estos dispositivos se basan en los mismos componentes básicos. En esta sesión vamos a descomponer un sistema de computación en sus partes fundamentales para entender cómo procesan y almacenan la información.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un sistema de computación?</h4>
+            <p>Un <strong>sistema de computación</strong> es cualquier dispositivo capaz de recibir datos, procesarlos y producir resultados. Para que esto sea posible, necesita una combinación de hardware (componentes físicos) y software (programas y datos). La arquitectura básica fue propuesta por John von Neumann en 1945 y sigue vigente en la mayoría de los dispositivos actuales.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes principales</h4>
+            <p>Todo sistema de computación se compone de los siguientes elementos fundamentales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>CPU (Unidad Central de Procesamiento):</strong> Es el "cerebro" del sistema. Se encarga de ejecutar las instrucciones de los programas, realizar cálculos aritméticos y lógicos, y controlar el funcionamiento del resto de componentes. Está formada por la ALU (Unidad Aritmético-Lógica), la unidad de control y los registros.</li>
+              <li><strong>RAM (Memoria de Acceso Aleatorio):</strong> Almacena temporalmente los datos y programas que la CPU está usando en ese momento. Es volátil: cuando se apaga el dispositivo, su contenido se pierde. Cuanta más RAM tenga un dispositivo, más aplicaciones podrá ejecutar simultáneamente de forma fluida.</li>
+              <li><strong>Almacenamiento permanente:</strong> Discos duros (HDD), unidades de estado sólido (SSD), tarjetas de memoria o memorias flash. A diferencia de la RAM, conserva los datos aunque se apague el dispositivo.</li>
+              <li><strong>Dispositivos de entrada (Input):</strong> Teclado, ratón, micrófono, cámara, sensor de tacto, escáner. Permiten al usuario enviar datos al sistema.</li>
+              <li><strong>Dispositivos de salida (Output):</strong> Monitor, altavoces, impresora, LED. Muestran los resultados del procesamiento al usuario.</li>
+              <li><strong>Dispositivos de entrada/salida (I/O):</strong> Pantalla táctil, router de red, dispositivo USB. Pueden tanto enviar como recibir datos.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Ejemplo cotidiano</strong>
+            Vuestro smartphone es un sistema de computación completo: el procesador (Snapdragon, A-series) es la CPU, los 6 u 8 GB de RAM son la memoria temporal, los 128 GB de almacenamiento son la memoria permanente, la pantalla táctil es dispositivo de entrada y salida, y el altavoz y la cámara son dispositivos de entrada y salida respectivamente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El ciclo de ejecución</h4>
+            <p>La CPU ejecuta instrucciones siguiendo un ciclo continuo que se repite miles de millones de veces por segundo:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Fetch (Obtención):</strong> La CPU lee la siguiente instrucción de la memoria.</li>
+              <li><strong>Decode (Decodificación):</strong> Interpreta qué operación debe realizar.</li>
+              <li><strong>Execute (Ejecución):</strong> Realiza la operación (cálculo, comparación, movimiento de datos).</li>
+              <li><strong>Store (Almacenamiento):</strong> Guarda el resultado en un registro o en la memoria.</li>
+            </ol>
+            <p class="mt-2">La velocidad a la que se ejecuta este ciclo se mide en <strong>hercios (Hz)</strong>. Un procesador moderno a 3 GHz realiza 3.000 millones de ciclos por segundo.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sistemas de computación en la vida cotidiana</h4>
+            <p>Los sistemas de computación no solo están en ordenadores y móviles. Los encontramos en:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Coches:</strong> Un coche moderno contiene entre 30 y 100 microcontroladores que gestionan el motor, la climatización, los frenos ABS y el sistema de entretenimiento.</li>
+              <li><strong>Electrodomésticos:</strong> Lavadoras, microondas y refrigeradores inteligentes incorporan sistemas de computación que controlan sus funciones.</li>
+              <li><strong>Medicina:</strong> Equipos de resonancia magnética, marcapasos y monitores de signos vitales son sistemas de computación especializados.</li>
+              <li><strong>Industria:</strong> Robots de cadena de montaje, sistemas de control de calidad y maquinaria CNC utilizan controladores industriales.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Dato impactante</strong>
+            El procesador Apple M2 Ultra contiene 134.000 millones de transistores. Cada transistor es un interruptor microscópico que puede estar encendido (1) o apagado (0), la base de todo el procesamiento digital que realizamos a diario.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Vamos a identificar los componentes de diferentes dispositivos:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>En parejas, descomponed un smartphone en sus componentes principales y clasificadlos (CPU, RAM, almacenamiento, E/S).</li>
+              <li>Comparad las prestaciones de un ordenador de sobremesa con las de una tablet. ¿Por qué tienen rendimientos diferentes?</li>
+              <li>Dibujad un esquema del flujo de datos en un sistema de computación: entrada, procesamiento y salida.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. La memoria permanente del sistema.</button>
+            <button class="quiz-opcion" data-valor="b">B. La unidad central de procesamiento que ejecuta instrucciones.</button>
+            <button class="quiz-opcion" data-valor="c">C. El dispositivo que muestra los resultados en pantalla.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es la CPU?</p>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. RAM: es volátil, almacena datos temporalmente para acceso rápido.</button>
+            <button class="quiz-opcion" data-valor="b">B. RAM: es permanente, guarda archivos para siempre.</button>
+            <button class="quiz-opcion" data-valor="c">C. RAM y almacenamiento permanente son exactamente lo mismo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la diferencia entre RAM y almacenamiento permanente?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Entrega un diagrama impreso o digital del ciclo de ejecución de la CPU (Fetch, Decode, Execute, Store) con una explicación de cada fase. Se valorará la claridad del esquema y la precisión de las descripciones.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Microcontroladores: definición, ejemplos y Micro:bit</h3>
+            <p class="text-xs text-slate-500">Sesión 2 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Concepto clave</strong>
+            Un microcontrolador es un sistema de computación completo integrado en un solo chip. A diferencia de un ordenador tradicional, está diseñado para tareas específicas y se encuentra en prácticamente todos los dispositivos electrónicos que nos rodean.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>¿Sabíais que el Micro:bit que vamos a usar en clase es más potente que los ordenadores que llevaron al hombre a la Luna? Los microcontroladores son pequeños sistemas de computación que se encuentran en infinidad de dispositivos cotidianos. En esta sesión vamos a descubrir qué son exactamente, qué los diferencia de un procesador convencional y cómo podemos programarlos para crear proyectos electrónicos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un microcontrolador?</h4>
+            <p>Un <strong>microcontrolador</strong> (MCU, Microcontroller Unit) es un circuito integrado que contiene un procesador, memoria RAM y ROM, y periféricos de entrada/salida integrados en un solo chip. A diferencia de un microprocesador (que necesita componentes externos para funcionar), un microcontrolador es un sistema autónomo y completo.</p>
+            <p class="mt-2">Las características principales de un microcontrolador son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bajo consumo energético:</strong> Puede funcionar con baterías durante meses o años.</li>
+              <li><strong>Tamaño reducido:</strong> Muchos son del tamaño de una uña.</li>
+              <li><strong>Coste reducido:</strong> Algunos cuestan menos de un euro.</li>
+              <li><strong>GPIOs (General Purpose Input/Output):</strong> Pines que pueden configurarse como entrada o salida para interactuar con sensores, LEDs, motores y otros componentes.</li>
+              <li><strong>Periféricos integrados:</strong> ADC (convertidor analógico-digital), temporizadores, comunicaciones serie, I2C, SPI.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Ejemplos cotidianos</strong>
+            Los microcontroladores están en: relojes digitales, juguetes electrónicos, controladores de HVAC (calefacción y aire acondicionado), dispositivos médicos portátiles, módulos GPS, teclados USB, ratones inalámbricos y en prácticamente todos los dispositivos IoT que veremos más adelante en la unidad.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El Micro:bit</h4>
+            <p>El <strong>Micro:bit</strong> es una placa de desarrollo diseñada específicamente para la educación. Fue creada por la BBC en 2016 y se ha convertido en una de las herramientas más populares para enseñar programación y electrónica. Sus características principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Procesador ARM Cortex-M4 a 64 MHz:</strong> Más que suficiente para proyectos educativos.</li>
+              <li><strong>256 KB de RAM y 512 KB de almacenamiento:</strong> Almacena programas de tamaño moderado.</li>
+              <li><strong>25 LEDs en matriz 5x5:</strong> Para mostrar texto, números y animaciones.</li>
+              <li><strong>2 botones programables:</strong> Entrada interactiva del usuario.</li>
+              <li><strong>Sensores integrados:</strong> Acelerómetro, magnetómetro, sensor de temperatura, sensor de luz ambiental.</li>
+              <li><strong>25 pines GPIO:</strong> Para conectar componentes externos como LEDs, servos, sensores.</li>
+              <li><strong>Conectividad:</strong> Bluetooth Low Energy (BLE) y radio de corto alcance.</li>
+              <li><strong>Alimentación:</strong> Por USB, pilas AAA o batería recargable.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Micro:bit vs ordenador tradicional</h4>
+            <p>El Micro:bit se diferencia de un ordenador en varios aspectos fundamentales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>No tiene sistema operativo complejo; ejecuta un solo programa a la vez.</li>
+              <li>No tiene pantalla, teclado ni ratón integrados (usa LEDs y botones).</li>
+              <li>Sus pines GPIO permiten controlar directamente componentes electrónicos.</li>
+              <li>Está diseñado para tareas específicas en lugar de uso general.</li>
+            </ul>
+          </div>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/obbedhfMcMM" title="Introducción al Micro:bit" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En esta sesión realizaremos los primeros pasos con el Micro:bit:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Conocer físicamente la placa: identificar todos los componentes visibles.</li>
+              <li>Programar el Micro:bit para mostrar vuestro nombre en la matriz de LEDs.</li>
+              <li>Crear una animación que recorra la pantalla de izquierda a derecha.</li>
+              <li>Programar el botón A para mostrar un número aleatorio y el botón B para mostrar un corazón.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Recursos online</strong>
+            El editor del Micro:bit está disponible en makecode.microbit.org. Utiliza programación por bloques (similar a Scratch) y también permite escribir en JavaScript o Python. Explorad las diferentes opciones de programación disponibles.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Hardware y Software: componentes físicos vs programas</h3>
+            <p class="text-xs text-slate-500">Sesión 3 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-aviso">
+            <strong>Concepto fundamental</strong>
+            Sin hardware, el software no tiene dónde ejecutarse. Sin software, el hardware es una pieza de metal inerte. Ambos son completamente interdependientes: el hardware proporciona la capacidad física de computar, y el software define qué se hace con esa capacidad.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Toda tecnología informática se compone de dos elementos inseparables: hardware y software. En esta sesión profundizaremos en las diferencias entre ambos, analizaremos los tipos de software que existen y comprenderemos cómo interactúan para hacer funcionar cualquier dispositivo, desde un simple reloj digital hasta un superordenador.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es el hardware?</h4>
+            <p>El <strong>hardware</strong> es la parte física y tangible de un sistema informático. Se refiere a todos los componentes electrónicos, mecánicos y magnéticos que se pueden tocar y ver. Se divide en:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Hardware de procesamiento:</strong> CPU, GPU, microcontroladores.</li>
+              <li><strong>Hardware de almacenamiento:</strong> Discos duros, SSD, tarjetas de memoria, memorias USB.</li>
+              <li><strong>Hardware de entrada:</strong> Teclado, ratón, micrófono, cámara, escáner, sensores.</li>
+              <li><strong>Hardware de salida:</strong> Monitor, altavoces, impresora, LED, servomotores.</li>
+              <li><strong>Hardware de comunicación:</strong> Tarjetas de red, módems, routers, adaptadores Bluetooth.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es el software?</h4>
+            <p>El <strong>software</strong> es la parte intangible del sistema: programas, datos y instrucciones que le dicen al hardware qué hacer. Se divide en dos grandes categorías:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Software de sistema:</strong> Programa que gestiona el hardware y proporciona un entorno para ejecutar otras aplicaciones. Incluye el sistema operativo (Windows, macOS, Linux, Android, iOS), controladores de dispositivos (drivers) y utilidades de mantenimiento.</li>
+              <li><strong>Software de aplicación:</strong> Programas diseñados para realizar tareas específicas para el usuario. Incluye navegadores web, procesadores de texto, hojas de cálculo, editores de imagen, videojuegos y aplicaciones móviles.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para entender la relación hardware-software, pensad en un Micro:bit: el hardware son los pines, la pantalla de LEDs, los botones y el procesador del chip. El software es el programa que escribís en MakeCode que define que al pulsar el botón A se muestre un corazón. Sin el programa, el Micro:bit no hace nada. Sin el hardware, el programa no tiene dónde ejecutarse.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Niveles de software</h4>
+            <p>El software se organiza en capas que van desde el hardware hasta el usuario:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Hardware:</strong> La base física del sistema (procesador, memoria, E/S).</li>
+              <li><strong>Firmware:</strong> Software embebido en el hardware que proporciona el nivel más básico de control. Ejemplo: BIOS o UEFI del ordenador.</li>
+              <li><strong>Sistema operativo:</strong> Gestiona los recursos del hardware y los comparte entre las aplicaciones.</li>
+              <li><strong>Aplicaciones:</strong> Programas que el usuario ejecuta para realizar tareas concretas.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Software de sistema en detalle</h4>
+            <p>Los componentes principales del software de sistema son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Núcleo (kernel):</strong> El componente central del SO que gestiona la CPU, la memoria y los dispositivos.</li>
+              <li><strong>Sistema de archivos:</strong> Organiza y almacena datos en el disco (NTFS, ext4, APFS, FAT32).</li>
+              <li><strong>Gestor de memoria:</strong> Asigna y libera RAM para los programas en ejecución.</li>
+              <li><strong>Gestor de procesos:</strong> Planifica qué programa se ejecuta en cada momento en la CPU.</li>
+              <li><strong>Drivers:</strong> Permiten al SO comunicarse con dispositivos específicos (impresora, tarjeta gráfica, webcam).</li>
+              <li><strong>Interfaz de usuario:</strong> Proporciona una forma de interactuar con el sistema (escritorio gráfico, terminal).</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Importante</strong>
+            El software de sistema es crítico para la seguridad. Un sistema operativo sin actualizar puede tener vulnerabilidades que permitan a atacantes acceder a vuestros datos o controlar vuestro dispositivo. Mantener el software siempre actualizado es una de las medidas de seguridad más importantes.
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. El software de sistema se ejecuta en el navegador.</button>
+            <button class="quiz-opcion" data-valor="b">B. El software de aplicación gestiona el hardware del ordenador.</button>
+            <button class="quiz-opcion" data-valor="c">C. El software de sistema gestiona el hardware; el software de aplicación realiza tareas para el usuario.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuál es la diferencia entre software de sistema y software de aplicación?</p>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Es el software que usamos para navegar por Internet.</button>
+            <button class="quiz-opcion" data-valor="b">B. Es software embebido en el hardware que controla su funcionamiento básico.</button>
+            <button class="quiz-opcion" data-valor="c">C. Es el tipo de software más fácil de usar.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Qué es el firmware?</p>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Completar una tabla comparativa entre hardware y software con al menos 6 filas, indicando para cada componente si es hardware o software y su función principal.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Seguridad eléctrica: electricidad, enchufes, baterías y cables</h3>
+            <p class="text-xs text-slate-500">Sesión 4 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-peligro">
+            <strong>ALERTA DE SEGURIDAD</strong>
+            La electricidad puede ser peligrosa si no se maneja correctamente. En esta sesión aprenderéis normas básicas de seguridad eléctrica que debéis aplicar siempre que manipuléis componentes electrónicos, cableado o dispositivos alimentados por baterías. La seguridad es la prioridad en cualquier proyecto de computación física.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En la unidad anterior vimos que un sistema de computación necesita electricidad para funcionar. Pero la electricidad, si no se maneja con cuidado, puede provocar descargas, incendios o daños en los componentes electrónicos. En esta sesión aprenderemos los conceptos básicos de electricidad, cómo se distribuye en los hogares, los tipos de baterías y cómo manipular cables y componentes electrónicos de forma segura.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Conceptos básicos de electricidad</h4>
+            <p>Para comprender la seguridad eléctrica es necesario conocer los conceptos fundamentales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Voltaje (V):</strong> La "presión" que empuja la corriente a través de un conductor. Se mide en voltios. En España, la corriente doméstica es de 230V.</li>
+              <li><strong>Corriente (I):</strong> La cantidad de electrones que fluyen por un conductor. Se mide en amperios (A). Tan solo 0.1A puede ser letal.</li>
+              <li><strong>Resistencia (R):</strong> La oposición de un material al paso de la corriente. Se mide en ohmios (ohm).</li>
+              <li><strong>Potencia (P):</strong> La energía consumida por un dispositivo. Se mide en vatios (W). Se calcula con P = V x I.</li>
+            </ul>
+            <p class="mt-2">La ley de Ohm establece que <strong>V = I x R</strong>, lo que permite calcular cualquiera de las tres magnitudes si conocemos las otras dos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Enchufes y tomas de corriente</h4>
+            <p>Los enchufes domésticos proporcionan corriente alterna a 230V. Es fundamental conocer las normas de seguridad:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Nunca insertar objetos metalicos</strong> en los agujeros de un enchufe.</li>
+              <li><strong>No sobrecargar</strong> los enchufes con regletas de multiples aparatos.</li>
+              <li><strong>Comprobar el estado de los cables:</strong> Si un cable esta deteriorado, pelado o tiene el aislante roto, no usarlo.</li>
+              <li><strong>Mantener los enchufes secos:</strong> El agua y la electricidad son una combinacion peligrosa.</li>
+              <li><strong>Usar protectors de sobretension</strong> para proteger aparatos sensibles.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato importante</strong>
+            El sistema electrico domestico utiliza tomacorrientes con tierra (clavija de tres patillas). La tercera patilla es la toma de tierra, que protege contra descargas electricas en caso de fallo del aislamiento. Nunca debiais manipular un enchufe sin la tercera patilla de tierra.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Baterias</h4>
+            <p>Las baterias son dispositivos de almacenamiento de energia electroquimica. Los tipos mas comunes en electronica educativa son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Alcalinas (AA, AAA):</strong> Uso general, no recargables. Tension tipica: 1.5V por celda.</li>
+              <li><strong>Recargables NiMH (AA, AAA):</strong> Reutilizables, 1.2V por celda. Ideales para proyectos con Micro:bit.</li>
+              <li><strong>LiPo (Litio-Polimero):</strong> Alta densidad energetica, recargables. Usadas en moviles y drones.</li>
+              <li><strong>CR2032 (moneda):</strong> Bateria de litio de larga duracion. Usada en relojes y pequenos dispositivos.</li>
+            </ul>
+            <p class="mt-2"><strong>Precauciones con las baterias:</strong> No mezclar baterias de diferentes tipos o estados de carga. No recargar baterias no recargables. No exponerlas a temperaturas extremas. No cortocircuitarlas. No desmontarlas.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cables y conexiones</h4>
+            <p>Los cables son los conductores que transportan corriente electrica. Los mas usados en proyectos de electronica son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Cables jumper:</strong> Conectan componentes en protoboards. Pueden ser macho-macho, hembra-hembra o macho-hembra.</li>
+              <li><strong>Cables USB:</strong> Para alimentacion y comunicacion de datos. Tipos: USB-A, USB-B, micro-USB, USB-C.</li>
+              <li><strong>Cables de alimentacion:</strong> Conectores DC para fuentes de alimentacion externas.</li>
+            </ul>
+            <p class="mt-2">Al conectar cables, siempre verificar la polaridad (+ y -) antes de establecer la conexion. Un cable conectado al reves puede danyar componentes electronicos irreversiblemente.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Norma de oro</strong>
+            Antes de conectar cualquier componente en un proyecto de electronica, siempre verificad: 1) ¿Esta el dispositivo apagado? 2) ¿Los cables estan en buen estado? 3) ¿La polaridad es correcta? 4) ¿El voltaje de alimentacion es el adecuado para el componente? Si alguna respuesta es no, no conecteis nada hasta resolverlo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad practica</h4>
+            <p>En esta sesion realizaremos una inspeccion de seguridad:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Identificar los tipos de enchufes disponibles en el aula y sus caracteristicas de seguridad.</li>
+              <li>Examinar cables jumper y verificar su estado.</li>
+              <li>Medir el voltaje de diferentes baterias con un multímetro.</li>
+              <li>Crear un registro de las normas de seguridad electrica que debemos seguir en el aula.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Protocolo de emergencia</strong>
+            En caso de contacto electrico: NO tocar directamente a la persona electrocutada. Cortar la corriente electrica lo antes posible. Si no se puede cortar, usar un material aislante (madera, plastico) para separar a la persona de la fuente electrica. Llamar al servicio de emergencias inmediatamente.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">IoT: definicion, componentes y plataformas</h3>
+            <p class="text-xs text-slate-500">Sesion 5 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Concepto transformador</strong>
+            El Internet de las Cosas (IoT) esta transformando la forma en que vivimos, trabajamos y nos relacionamos. Se estima que para 2030 habra mas de 29.000 millones de dispositivos IoT conectados en todo el mundo, lo que supone aproximadamente 3.5 dispositivos por cada persona del planeta.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introduccion</h4>
+            <p>¿Alguna vez os habeis preguntado como funciona un termometro inteligente que podeis controlar desde el movil, o como una bombilla inteligente sabe cuándo encenderse? La respuesta esta en el <strong>Internet de las Cosas</strong> (IoT, Internet of Things). En esta sesion vamos a descubrir que es el IoT, como se compone un sistema IoT y que plataformas existen para desarrollar proyectos conectados.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Que es el IoT?</h4>
+            <p>El <strong>Internet de las Cosas</strong> es una red de dispositivos fisicos cotidianos que estan conectados a Internet y pueden recopilar, intercambiar y actuar sobre datos. A diferencia de un ordenador convencional, estos dispositivos estan integrados en objetos del mundo real: electrodomesticos, ropa, vehiculos, maquinaria industrial, dispositivos medicos y sensores ambientales.</p>
+            <p class="mt-2">La idea fundamental es que cualquier objeto puede "conectarse" y "comunicarse" con otros objetos y con plataformas en la nube para crear sistemas inteligentes que mejoren nuestra calidad de vida.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes de un sistema IoT</h4>
+            <p>Todo sistema IoT se compone de los siguientes elementos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Dispositivos/Objetos:</strong> Los objetos fisicos equipados con sensores y conectividad. Pueden ser electrodomesticos, vehiculos, sensores industriales o wearables.</li>
+              <li><strong>Sensores y actuadores:</strong> Los sensores recopilan datos del entorno (temperatura, humedad, luz, movimiento, calidad del aire). Los actuadores ejecutan acciones fisicas (encender un LED, activar un motor, abrir una valvula).</li>
+              <li><strong>Conectividad:</strong> Los medios de comunicacion que permiten transmitir los datos entre dispositivos y la nube: WiFi, Bluetooth, LoRa, Zigbee, 4G/5G, Ethernet.</li>
+              <li><strong>Procesamiento:</strong> La capacidad de analizar los datos recopilados. Puede ocurrir en el propio dispositivo (edge computing) o en servidores en la nube.</li>
+              <li><strong>Plataformas IoT:</strong> Servicios en la nube que permiten gestionar dispositivos, almacenar datos y crear paneles de visualizacion. Ejemplos: Arduino IoT Cloud, Blynk, ThingsBoard, AWS IoT, Azure IoT Hub.</li>
+              <li><strong>Interfaz de usuario:</strong> Aplicaciones moviles, webs o dashboards que permiten al usuario interactuar con el sistema IoT.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Ejemplo cotidiano</strong>
+            Un sistema de riego inteligente para jardin es un ejemplo perfecto de IoT: un sensor de humedad del suelo (sensor) mide cuanta agua hay en la tierra, un microcontrolador (dispositivo) procesa esos datos, una valvula de agua (actuador) se abre o cierra segun la necesidad, una conexion WiFi (conectividad) envia los datos a la nube, y una aplicacion movil (interfaz) permite al usuario controlar el riego desde cualquier lugar.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplos de aplicaciones IoT</h4>
+            <p>El IoT se esta aplicando en multiples sectores:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Hogar inteligente:</strong> Termostatos Nest, bombillas Philips Hue, cerraduras inteligentes, aspiradoras robot.</li>
+              <li><strong>Ciudades inteligentes:</strong> Semaforos que se adaptan al trafico, contenedores de basura inteligentes, parkingometros conectados.</li>
+              <li><strong>Agricultura:</strong> Sensores de humedad y temperatura en invernaderos, drones de vigilancia de cultivos.</li>
+              <li><strong>Salud:</strong> Wearables que monitorizan signos vitales, dispositivos de telemedicina, bombas de insulina inteligentes.</li>
+              <li><strong>Industria 4.0:</strong> Sensores en maquinas que predicen averias, seguimiento de cadenas de suministro.</li>
+            </ul>
+          </div>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/7LphJVFdWdA" title="Que es el Internet de las Cosas (IoT)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Preocupacion de privacidad</strong>
+            Cada dispositivo IoT que instalamos en nuestro hogar recopila datos sobre nuestros habitos: cuando nos levantamos, cuando salimos de casa, cuanta energia consumimos. Es fundamental revisar las politicas de privacidad de estos dispositivos y configurar adecuadamente los permisos de datos antes de usarlos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad practica</h4>
+            <p>En grupos de 3-4 personas, identificad los componentes IoT de los siguientes escenarios:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Un reloj inteligente (smartwatch) que monitoriza pasos, frecuencia cardiaca y notificaciones.</li>
+              <li>Un sistema de alarma domestico con camaras y sensores de movimiento.</li>
+              <li>Un dispositivo de monitoring de calidad del aire en el aula.</li>
+            </ol>
+            <p class="mt-2">Para cada uno, debes identificar: dispositivos, sensores, actuadores, tipo de conectividad y plataforma utilizada.</p>
+          </div>
+
+          <!-- QUIZ SESION 5 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. Son dispositivos fisicos conectados a Internet que recopilan y envian datos.</button>
+            <button class="quiz-opcion" data-valor="b">B. Son exclusivamente ordenadores de sobremesa.</button>
+            <button class="quiz-opcion" data-valor="c">C. Son aplicaciones moviles sin conexion a Internet.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Que son los dispositivos IoT?</p>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. D2D: de dispositivo a nube.</button>
+            <button class="quiz-opcion" data-valor="b">B. D2C: de dispositivo a dispositivo.</button>
+            <button class="quiz-opcion" data-valor="c">C. D2C: de dispositivo a nube; C2D: de nube a dispositivo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Que significan las siglas D2C y C2D en IoT?</p>
+        </div>
+      </article>
+
+      <!-- ==================== SESION 6 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Funcionamiento IoT: 5 pasos y tipos de comunicaciones</h3>
+            <p class="text-xs text-slate-500">Sesion 6 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Ciclo de vida IoT</strong>
+            Un sistema IoT no es estatico: sigue un ciclo continuo de recopilacion de datos, transmision, procesamiento, toma de decisiones y accion. Comprender este ciclo es clave para disenar soluciones IoT eficientes y escalables.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introduccion</h4>
+            <p>En la sesion anterior vimos que es el IoT y sus componentes. Ahora profundizaremos en como funciona un sistema IoT paso a paso, desde que un sensor recopila un dato hasta que se ejecuta una accion, y analizaremos los diferentes tipos de comunicaciones que existen entre dispositivos IoT: de dispositivo a dispositivo (D2D), de dispositivo a nube (D2C) y de nube a dispositivo (C2D).</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Los 5 pasos del funcionamiento IoT</h4>
+            <p>Todo sistema IoT sigue estos cinco pasos fundamentales:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Recopilacion de datos:</strong> Los sensores miden parametros del entorno (temperatura, humedad, luz, movimiento, presion). Estos datos se convierten en señales electricas que el microcontrolador puede procesar.</li>
+              <li><strong>Transmision de datos:</strong> Los datos recopilados se envian a traves de un medio de comunicacion (WiFi, Bluetooth, LoRa, etc.) desde el dispositivo hasta la plataforma en la nube o hasta otro dispositivo.</li>
+              <li><strong>Procesamiento:</strong> Los datos recibidos se analizan y procesan. Esto puede ocurrir en la nube (con servicios como AWS Lambda o Azure Functions) o en el propio dispositivo (edge computing).</li>
+              <li><strong>Toma de decisiones:</strong> Basandose en el analisis de los datos, el sistema decide que accion tomar. Por ejemplo: si la temperatura supera los 30 grados, activar el aire acondicionado.</li>
+              <li><strong>Ejecucion de la accion:</strong> Se envia una orden al actuador correspondiente (encender un LED, activar un motor, enviar una notificacion al movil del usuario).</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de comunicaciones IoT</h4>
+            <p>Las comunicaciones en un sistema IoT se clasifican segun el sentido del flujo de datos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>D2D (Device to Device):</strong> Comunicacion directa entre dos dispositivos sin pasar por la nube. Ejemplo: dos Micro:bit que se envian datos por radio. Es la forma mas rapida y no depende de conexion a Internet.</li>
+              <li><strong>D2C (Device to Cloud):</strong> El dispositivo envia datos a una plataforma en la nube para su almacenamiento y procesamiento. Ejemplo: un sensor de temperatura que envia lecturas cada 5 minutos a Arduino IoT Cloud.</li>
+              <li><strong>C2D (Cloud to Device):</strong> La nube envia comandos o datos al dispositivo. Ejemplo: el usuario pulsa un boton en una app movil y la nube envia la orden de encender un LED al Micro:bit.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo practico</strong>
+            En vuestro proyecto final de Micro:bit IoT, utilizaréis las tres formas de comunicacion: D2D para que dos Micro:bit se comuniquen por radio, D2C para enviar datos del sensor a la plataforma en la nube, y C2D para controlar el Micro:bit remotamente desde la plataforma.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Protocolos de comunicacion IoT</h4>
+            <p>Existen diversos protocolos disenados especificamente para las necesidades del IoT:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>MQTT (Message Queuing Telemetry Transport):</strong> Protocolo ligero disenado para dispositivos con recursos limitados. Utiliza un modelo publish/subscribe. Es el mas utilizado en IoT.</li>
+              <li><strong>HTTP/HTTPS:</strong> El protocolo estandar de la web. Mas pesado pero universalmente compatible.</li>
+              <li><strong>CoAP (Constrained Application Protocol):</strong> Disenado para dispositivos con recursos muy limitados (bateria, memoria).</li>
+              <li><strong>WebSocket:</strong> Comunicacion bidireccional en tiempo real entre el navegador y el servidor.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Medios de comunicacion fisicos</h4>
+            <p>Los medios de transmision se eligen segun la distancia, el consumo energetico y la cantidad de datos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bluetooth Low Energy (BLE):</strong> Corto alcance (10-100m), bajo consumo. Ideal para wearables.</li>
+              <li><strong>WiFi:</strong> Alcance medio (50-100m), alto consumo. Ideal para dispositivos con alimentacion constante.</li>
+              <li><strong>LoRa (Long Range):</strong> Largo alcance (hasta 15 km), muy bajo consumo, poca velocidad. Ideal para sensores remotos.</li>
+              <li><strong>Zigbee:</strong> Red de malla, bajo consumo, alcance medio. Usado en domotica.</li>
+              <li><strong>4G/5G:</strong> Alcance global, alta velocidad, alto consumo. Para dispositivos moviles.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Seguridad en comunicaciones IoT</strong>
+            La mayoria de dispositivos IoT envian datos por redes inalambricas, lo que los hace vulnerables a interceptaciones. Es fundamental cifrar las comunicaciones, usar contraseñas seguras en los dispositivos IoT y actualizar regularmente su firmware para parchear vulnerabilidades conocidas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad practica</h4>
+            <p>Vamos a simular el ciclo de un sistema IoT:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Programar un Micro:bit para que lea la temperatura del sensor interno.</li>
+              <li>Enviar esos datos por radio a otro Micro:bit que actue como receptor.</li>
+              <li>El receptor mostrara la temperatura en su pantalla de LEDs.</li>
+              <li>Dibujar un diagrama del flujo de datos indicando los 5 pasos del ciclo IoT.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Exploracion</strong>
+            Investigad que protocolos utilizan los dispositivos IoT de vuestra casa (termostato, altavoces inteligentes, bombillas WiFi). ¿Usan MQTT, HTTP u otro? ¿Que medios de comunicacion utilizan (WiFi, Bluetooth)?
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESION 7 ==================== -->
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: sistema Micro:bit con sensores y plataforma IoT</h3>
+            <p class="text-xs text-slate-500">Sesion 7 · 50 minutos</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-consejo">
+            <strong>Producto de la unidad</strong>
+            En esta sesion de cierre vais a crear un sistema IoT completo utilizando un Micro:bit con sensores conectado a una plataforma de IoT en la nube. Este proyecto integra todos los conocimientos adquiridos a lo largo de la unidad: componentes de computacion, hardware, software, seguridad electrica y comunicaciones IoT.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introduccion</h4>
+            <p>Es el momento de poner en practica todo lo aprendido. En esta sesion final vais a disenar y construir un sistema IoT completo: un Micro:bit conectado a sensores del mundo real que envia datos a una plataforma en la nube y permite el control remoto del dispositivo. El proyecto combina conocimientos de hardware, programacion, comunicaciones y plataformas IoT.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Proyectos propuestos</h4>
+            <p>Elegid uno de los siguientes proyectos o proponed uno propio (sujeto a aprobacion del profesor):</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Estacion meteorologica:</strong> Sensor de temperatura y humedad que envia datos periodicamente a la plataforma. Incluye visualizacion en dashboard.</li>
+              <li><strong>Sistema de vigilancia de calidad del aire:</strong> Sensor de CO2 y particulas que monitoriza la calidad del aire del aula.</li>
+              <li><strong>Monitor de plantas:</strong> Sensor de humedad del suelo y luz que avisa cuando una planta necesita agua o mas luz.</li>
+              <li><strong>Sistema de alarma:</strong> Sensor de movimiento que envia una notificacion cuando detecta presencia.</li>
+              <li><strong>Medidor de ruido:</strong> Sensor de sonido que mide los niveles de ruido del aula y los registra en la nube.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Requisitos del proyecto</h4>
+            <p>Tu sistema IoT debe incluir como minimo:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Micro:bit programado:</strong> Codigo funcional que lea datos de al menos un sensor.</li>
+              <li><strong>Al menos un sensor externo:</strong> Conectado a los pines GPIO del Micro:bit (sensor de temperatura, ultrasonidos, LDR, potenciometro).</li>
+              <li><strong>Conectividad:</strong> Envio de datos a una plataforma IoT (Arduino IoT Cloud, Blynk o similar) mediante WiFi o Bluetooth.</li>
+              <li><strong>Actuador:</strong> Un LED, zumbador o servo que responda a los datos recibidos.</li>
+              <li><strong>Plataforma IoT:</strong> Dashboard configurado que muestre los datos recibidos en tiempo real.</li>
+              <li><strong>Control remoto:</strong> Posibilidad de controlar el Micro:bit desde la plataforma (C2D).</li>
+              <li><strong>Documentacion:</strong> Diagrama del sistema, esquema de conexiones y codigo comentado.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Criterios de evaluacion</strong>
+            El proyecto se evaluara con la siguiente rubrica: funcionalidad del hardware (25%), calidad del codigo (25%), correcta integracion con la plataforma IoT (20%), documentacion y diagramas (15%), innovacion y creatividad (15%).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Planificacion del proyecto</h4>
+            <p>Antes de empezar a construir, planificad vuestra solucion:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Objetivo:</strong> ¿Que problema resuelve vuestro sistema? ¿Que datos recopila?</li>
+              <li><strong>Componentes:</strong> ¿Que sensores y actuadores necesitais? ¿Que Micro:bit version usa?</li>
+              <li><strong>Conectividad:</strong> ¿Como enviareis los datos? ¿WiFi, Bluetooth, LoRa?</li>
+              <li><strong>Plataforma:</strong> ¿Que servicio de IoT en la nube utilizareis?</li>
+              <li><strong>Codigo:</strong> ¿Que programa necesitais? ¿Bloques, JavaScript o Python?</li>
+              <li><strong>Documentacion:</strong> ¿Como documentareis el proyecto para la evaluacion?</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sesion de trabajo</h4>
+            <p>La sesion se dividira en las siguientes fases:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>10 minutos:</strong> Planificacion y diseno del proyecto.</li>
+              <li><strong>25 minutos:</strong> Desarrollo del hardware y programacion del Micro:bit.</li>
+              <li><strong>10 minutos:</strong> Configuracion de la plataforma IoT y pruebas de conectividad.</li>
+              <li><strong>5 minutos:</strong> Presentacion de los proyectos a la clase.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="b" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <button class="quiz-opcion" data-valor="a">A. Un microcontrolador tiene mas recursos que un ordenador.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un microcontrolador es un sistema de computacion completo en un chip, disenado para tareas especificas.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un microcontrolador solo sirve para encender LEDs.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Que es un microcontrolador?</p>
+
+          <div class="quiz" data-correcta="c" data-total="4">
+            <h4>Comprueba lo aprendido</h4>
+            <button class="quiz-opcion" data-valor="a">A. El primer paso es ejecutar la accion.</button>
+            <button class="quiz-opcion" data-valor="b">B. El segundo paso es tomar decisiones.</button>
+            <button class="quiz-opcion" data-valor="c">C. El primer paso es recopilar datos y el ultimo es ejecutar la accion.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+          <p class="text-xs text-slate-500 -mt-2">Pregunta: ¿Cuales son los 5 pasos del funcionamiento IoT en orden correcto?</p>
+
+          <div class="callout callout-peligro">
+            <strong>Consejo final</strong>
+            No dejeis todo para el ultimo momento. El desarrollo de un sistema IoT requiere planificacion, pruebas y ajustes. Empezad con una version basica funcional y id anadiendo mejoras progresivamente. Si os quedais atascados, consultad la documentacion de Arduino y la comunidad de Micro:bit.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud3.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-ink-800 hover:bg-slate-100 transition">
+        ← UD3 · Desarrollo Web
+      </a>
+      <span class="text-sm text-slate-400">Última unidad</span>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>
