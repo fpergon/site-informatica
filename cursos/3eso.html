@@ -27,91 +27,248 @@
   <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
 
     <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
-      <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">Curso 2025/26 · 3.º ESO</p>
+      <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">3.º ESO</p>
       <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">Computación y Robótica</h1>
-      <p class="mt-3 max-w-2xl text-brand-50/90">Saberes básicos de la <span class="font-semibold">BOJA</span> organizados en 6 unidades didácticas por trimestres. Damos el salto a Python, profundizamos en desarrollo web y móvil, y abordamos robótica avanzada, IoT, datos masivos, IA y ciberseguridad.</p>
+      <p class="mt-3 text-brand-50/90">En este tercer curso se da el salto a la programación textual con Python, consolidando la lógica de programación con variables, funciones y estructuras de control. Se profundiza en el desarrollo de aplicaciones móviles y páginas web interactivas, se trabaja con sistemas IoT y microcontroladores como el ESP32, se aborda la robótica industrial con programación en Python, y se completan los bloques de datos masivos, web scraping, Inteligencia Artificial y ciberseguridad avanzada.</p>
     </section>
 
     <section class="mt-8" data-tab-group>
       <div class="flex flex-wrap gap-2" role="tablist">
         <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="unidades" aria-selected="true">Unidades didácticas</button>
-        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="boja" aria-selected="false">Criterios BOJA</button>
+        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="boja" aria-selected="false">Criterios de evaluación y rúbrica</button>
       </div>
 
       <div class="tab-panel mt-5" data-panel="unidades">
 
-        <details class="ud-card mb-4" open>
+        <!-- UD1 · Introducción a la Programación y Python -->
+        <details class="ud-card mb-4">
           <summary><h3 class="font-bold text-ink-800">UD1 · Introducción a la Programación y Python</h3><span class="flecha">▶</span></summary>
           <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> A · <span class="font-semibold">Duración:</span> 7 sesiones</p>
           <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Programa en Python con funciones y estructuras de control.</p>
           <a href="3eso/ud1.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
             <li>CYR.3.A.1. Conexión de lenguajes visuales con textuales.</li>
             <li>CYR.3.A.2. Generación de programas con bloques.</li>
             <li>CYR.3.A.3. Secuencia de instrucciones. Implementación de algoritmos.</li>
             <li>CYR.3.A.4. Bucles y condicionales anidadas básicas.</li>
             <li>CYR.3.A.5. Entornos de interacción con el usuario.</li>
           </ul>
-          <p class="mt-2"><span class="criterio">1.3 · Estructura de un programa</span><span class="criterio">2.1 · Resolución de problemas</span><span class="criterio">2.2 · Apps móviles</span></p>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Comprender la transición de bloques a programación textual con Python.</li>
+            <li>Implementar algoritmos secuenciales y resolver problemas paso a paso.</li>
+            <li>Aplicar bucles y condicionales para controlar el flujo de un programa.</li>
+            <li>Diseñar programas que interactúen con el usuario mediante entrada y salida de datos.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">De bloques a texto.</span> Comparación entre programación visual y textual. Entorno de Python (Thonny).</li>
+            <li><span class="font-semibold">Variables y tipos de datos.</span> Números, cadenas de texto, booleanos. Operaciones básicas.</li>
+            <li><span class="font-semibold">Entrada y salida de datos.</span> print() y input(). Formateo de cadenas.</li>
+            <li><span class="font-semibold">Condicionales.</span> if, elif, else. Operadores de comparación y lógicos.</li>
+            <li><span class="font-semibold">Bucles.</span> for y while. Rangos, listas básicas, control de flujo (break, continue).</li>
+            <li><span class="font-semibold">Funciones.</span> Definición, parámetros, retorno. Modularización de código.</li>
+            <li><span class="font-semibold">Proyecto final.</span> Programa completo que integre secuencias, condicionales, bucles y funciones.</li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">1.3 · Estructura de un programa</span><span class="criterio">2.1 · Resolución de problemas</span></p>
         </details>
 
+        <!-- UD2 · Desarrollo de Aplicaciones Móviles -->
         <details class="ud-card mb-4">
           <summary><h3 class="font-bold text-ink-800">UD2 · Desarrollo de Aplicaciones Móviles</h3><span class="flecha">▶</span></summary>
           <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> D · <span class="font-semibold">Duración:</span> 7 sesiones</p>
           <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> App móvil completa con Thunkable.</p>
           <a href="3eso/ud2.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
-            <li>CYR.3.D.1–5. IDEs, programación orientada a eventos, sensores y E/S.</li>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.D.1. IDEs de lenguajes de bloques para móviles.</li>
+            <li>CYR.3.D.2. Programación orientada a eventos: características y ventajas.</li>
+            <li>CYR.3.D.3. Dependencia de eventos.</li>
+            <li>CYR.3.D.4. Tipos de eventos.</li>
+            <li>CYR.3.D.5. Descripción de eventos de E/S.</li>
           </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Crear aplicaciones móviles funcionales utilizando entornos de bloques como Thunkable.</li>
+            <li>Comprender la programación orientada a eventos y el manejo de sensores del dispositivo.</li>
+            <li>Diseñar interfaces interactivas con controles de entrada y salida.</li>
+            <li>Publicar y probar la aplicación en un dispositivo real.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">IDEs de bloques para móviles.</span> Presentación de Thunkable y MIT App Inventor.</li>
+            <li><span class="font-semibold">Programación orientada a eventos.</span> Cadena de eventos, eventos de entrada y salida.</li>
+            <li><span class="font-semibold">Eventos de entrada y salida.</span> Sensores del móvil: acelerómetro, GPS, luz.</li>
+            <li><span class="font-semibold">Componentes de interfaz.</span> Botones, listas, navegación entre pantallas.</li>
+            <li><span class="font-semibold">Almacenamiento local.</span> Guardar datos en el dispositivo, uso de variables persistentes.</li>
+            <li><span class="font-semibold">Conectividad.</span> Llamadas HTTP, uso de APIs, envío de datos a la nube.</li>
+            <li><span class="font-semibold">Proyecto final.</span> App completa con múltiples pantallas y funcionalidades. Exposición.</li>
+          </ol>
+
           <p class="mt-2"><span class="criterio">2.2 · Apps móviles</span><span class="criterio">2.3 · Desarrollo de apps e IoT</span></p>
         </details>
 
+        <!-- UD3 · Desarrollo Web -->
         <details class="ud-card mb-4">
           <summary><h3 class="font-bold text-ink-800">UD3 · Desarrollo Web</h3><span class="flecha">▶</span></summary>
           <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> E · <span class="font-semibold">Duración:</span> 7 sesiones</p>
           <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Sitio web interactivo con HTML, CSS y JavaScript.</p>
           <a href="3eso/ud3.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
-            <li>CYR.3.E.1–4. Estructura web, servidores, lenguajes y animación.</li>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.E.1. Estructura básica de una página web.</li>
+            <li>CYR.3.E.2. Servidores web: funcionamiento.</li>
+            <li>CYR.3.E.3. Lenguajes para la edición de páginas web: diferencias.</li>
+            <li>CYR.3.E.4. Tipos de animación web.</li>
           </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Crear páginas web con estructura semántica HTML5.</li>
+            <li>Aplicar estilos CSS para diseño responsive y moderno.</li>
+            <li>Implementar interactividad con JavaScript: eventos, DOM y validación.</li>
+            <li>Comprender el funcionamiento de servidores web y despliegue de sitios.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">Estructura HTML.</span> Etiquetas semánticas, formularios, multimedia. Creación de la primera página.</li>
+            <li><span class="font-semibold">CSS: modelo de cajas y Flexbox.</span> Selectores, propiedades, layout responsivo.</li>
+            <li><span class="font-semibold">CSS: Grid y animaciones.</span> Distribución en rejilla, transiciones y keyframes.</li>
+            <li><span class="font-semibold">JavaScript básico.</span> Variables, funciones, eventos. Manipulación del DOM.</li>
+            <li><span class="font-semibold">JavaScript interactivo.</span> Validación de formularios, cambio de estilos dinámico.</li>
+            <li><span class="font-semibold">Servidores y despliegue.</span> Hosting, dominios, protocolo HTTP. Publicación del sitio.</li>
+            <li><span class="font-semibold">Proyecto final.</span> Sitio web completo con HTML + CSS + JS. Presentación y evaluación.</li>
+          </ol>
+
           <p class="mt-2"><span class="criterio">5.1 · Aplicaciones web seguras</span><span class="criterio">5.2 · Problemas en desarrollo web</span></p>
         </details>
 
+        <!-- UD4 · Computación Física e IoT -->
         <details class="ud-card mb-4">
           <summary><h3 class="font-bold text-ink-800">UD4 · Computación Física e IoT</h3><span class="flecha">▶</span></summary>
           <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloques:</span> F + B · <span class="font-semibold">Duración:</span> 7 sesiones</p>
           <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Sistema IoT con ESP32 y sensores conectado a nube.</p>
           <a href="3eso/ud4.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
-            <li>CYR.3.F.1–4. Sistemas de computación, microcontroladores, hardware/software.</li>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.F.1. Sistemas de computación: hardware y software.</li>
+            <li>CYR.3.F.2. Procesadores, memoria y almacenamiento.</li>
+            <li>CYR.3.F.3. Sistemas operativos y programación de dispositivos.</li>
+            <li>CYR.3.F.4. Microcontroladores: Arduino, ESP32, Raspberry Pi.</li>
             <li>CYR.3.B.1–4. Sensores IoT, nube, protocolos (Zigbee, BLE, Z-Wave).</li>
           </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Identificar los componentes de un sistema de computación y su arquitectura.</li>
+            <li>Comprender el funcionamiento de microcontroladores y su aplicación en IoT.</li>
+            <li>Programar un ESP32 para recopilar datos de sensores y enviarlos a la nube.</li>
+            <li>Diseñar un sistema IoT completo con visualización de datos en tiempo real.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">Arquitectura de computadores.</span> CPU, memoria, almacenamiento. Ciclo Fetch-Decode-Execute.</li>
+            <li><span class="font-semibold">Sistemas operativos.</span> Tipos, funciones, programación de dispositivos embebidos.</li>
+            <li><span class="font-semibold">Introducción a ESP32.</span> Características, entorno de desarrollo, primer programa.</li>
+            <li><span class="font-semibold">Sensores y actuadores.</span> Lectura de temperatura, luz, movimiento. Control de LEDs y motores.</li>
+            <li><span class="font-semibold">Conectividad IoT.</span> WiFi, Bluetooth, protocolos MQTT y HTTP.</li>
+            <li><span class="font-semibold">Envío de datos a la nube.</span> Plataformas IoT: ThingsBoard, Firebase. Visualización de datos.</li>
+            <li><span class="font-semibold">Proyecto final IoT.</span> Sistema completo con sensores, ESP32 y dashboard en la nube.</li>
+          </ol>
+
           <p class="mt-2"><span class="criterio">1.1 · Computación física</span><span class="criterio">2.3 · Desarrollo apps e IoT</span><span class="criterio">3.1 · Sistemas sostenibles</span></p>
         </details>
 
+        <!-- UD5 · Robótica y Datos Masivos -->
         <details class="ud-card mb-4">
           <summary><h3 class="font-bold text-ink-800">UD5 · Robótica y Datos Masivos</h3><span class="flecha">▶</span></summary>
           <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloques:</span> C + G · <span class="font-semibold">Duración:</span> 7 sesiones</p>
           <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Robot programado en Python + análisis de datos con scraping.</p>
           <a href="3eso/ud5.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
-            <li>CYR.3.C.1–5. Grados de libertad, articulaciones, AGV, programación en texto.</li>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.C.1. Grados de libertad, articulaciones y tipos de robots.</li>
+            <li>CYR.3.C.2. Sensores y actuadores en robótica.</li>
+            <li>CYR.3.C.3. Programación de robots en Python.</li>
+            <li>CYR.3.C.4. AGV y navegación autónoma.</li>
+            <li>CYR.3.C.5. Aplicaciones industriales de la robótica.</li>
             <li>CYR.3.G.1–4. Metadatos, uso, almacenamiento y data scraping.</li>
           </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Comprender los grados de libertad y la cinemática básica de robots.</li>
+            <li>Programar un robot en Python para realizar tareas de navegación y manipulación.</li>
+            <li>Introducir conceptos de Big Data: metadatos, fuentes y almacenamiento.</li>
+            <li>Realizar web scraping para recopilar y analizar datos de fuentes abiertas.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">Grados de libertad.</span> Artulaciones, robótica industrial, AGV. Tipos de robots.</li>
+            <li><span class="font-semibold">Sensores y actuadores.</span> Sensores de posición, velocidad, fuerza. Motores paso a paso.</li>
+            <li><span class="font-semibold">Programación en Python.</span> Control de robot con bibliotecas. Movimiento, sensores, retroalimentación.</li>
+            <li><span class="font-semibold">Navegación autónoma.</span> Algoritmos de避障 de obstáculos, seguimiento de línea, mapeo.</li>
+            <li><span class="font-semibold">Big Data: introducción.</span> Definición, metadatos, fuentes de datos abiertos.</li>
+            <li><span class="font-semibold">Web scraping.</span> Recopilación de datos con Python (Beautiful Soup). Limpieza y almacenamiento.</li>
+            <li><span class="font-semibold">Proyecto final integrado.</span> Robot + análisis de datos. Exposición y demostración.</li>
+          </ol>
+
           <p class="mt-2"><span class="criterio">1.1 · Computación física</span><span class="criterio">1.2 · Robótica en la sociedad</span><span class="criterio">1.3 · Estructura de un programa</span><span class="criterio">4.1 · Análisis de datos</span></p>
         </details>
 
+        <!-- UD6 · Inteligencia Artificial y Ciberseguridad -->
         <details class="ud-card mb-4">
           <summary><h3 class="font-bold text-ink-800">UD6 · Inteligencia Artificial y Ciberseguridad</h3><span class="flecha">▶</span></summary>
           <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 3.º · <span class="font-semibold">Bloques:</span> H + I · <span class="font-semibold">Duración:</span> 7 sesiones</p>
           <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Proyecto de IA ética + informe de ciberseguridad.</p>
           <a href="3eso/ud6.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
-            <li>CYR.3.H.1–5. Situación actual, ética, agentes, ML, refuerzo.</li>
-            <li>CYR.3.I.1–5. Tipologías, concienciación, malware, soluciones, propiedad intelectual.</li>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.3.H.1. Situación actual de la Inteligencia Artificial.</li>
+            <li>CYR.3.H.2. Ética y regulación de la IA.</li>
+            <li>CYR.3.H.3. Agentes inteligentes y tipos.</li>
+            <li>CYR.3.H.4. Machine Learning: aprendizaje supervisado, no supervisado, refuerzo.</li>
+            <li>CYR.3.H.5. Deep Learning y redes neuronales.</li>
+            <li>CYR.3.I.1–5. Ciberseguridad: tipologías, concienciación, malware, soluciones, propiedad intelectual.</li>
           </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Comprender los fundamentos de la Inteligencia Artificial y sus aplicaciones.</li>
+            <li>Distinguir entre aprendizaje supervisado, no supervisado y por refuerzo.</li>
+            <li>Identificar las principales amenazas de ciberseguridad y sus soluciones.</li>
+            <li>Reflexionar sobre la ética en IA y la protección de datos personales.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">Introducción a la IA.</span> Definición, historia, estado actual. IA débil vs. IA fuerte.</li>
+            <li><span class="font-semibold">Agentes inteligentes.</span> Tipos: reactivos, deliberativos, híbridos. Entorno y percepción.</li>
+            <li><span class="font-semibold">Machine Learning.</span> Aprendizaje supervisado, no supervisado, por refuerzo. Ejemplos prácticos.</li>
+            <li><span class="font-semibold">Deep Learning.</span> Redes neuronales, CNN, RNN. Uso de frameworks como TensorFlow.</li>
+            <li><span class="font-semibold">Ciberseguridad: amenazas.</span> Malware, phishing, ransomware. Tipos de ataques.</li>
+            <li><span class="font-semibold">Ciberseguridad: defensa.</span> Firewalls, antivirus, cifrado. Seguridad activa y pasiva.</li>
+            <li><span class="font-semibold">Proyecto final.</span> Proyecto de IA ética + informe de ciberseguridad. Exposición.</li>
+          </ol>
+
           <p class="mt-2"><span class="criterio">4.2 · IA y aprendizaje automático</span><span class="criterio">6.1 · Protección en la red</span><span class="criterio">6.2 · Uso responsable</span><span class="criterio">6.3 · Derechos de autor</span><span class="criterio">6.4 · Seguridad activa y pasiva</span></p>
         </details>
+
       </div>
 
       <div class="tab-panel mt-5 hidden" data-panel="boja">
@@ -133,6 +290,21 @@
           <span class="criterio">6.3 · Derechos de autor</span>
           <span class="criterio">6.4 · Seguridad activa y pasiva</span>
         </div>
+
+        <h3 class="mt-6 font-bold text-ink-800">Mapa global por trimestres</h3>
+        <table class="rubrica">
+          <thead>
+            <tr><th>Trimestre</th><th>Unidad Didáctica</th><th>Bloques</th><th>Criterios</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>1.º</th><td>UD1 · Introducción a la Programación y Python</td><td>A</td><td>1.3, 2.1</td></tr>
+            <tr><th>1.º</th><td>UD2 · Desarrollo de Aplicaciones Móviles</td><td>D</td><td>2.2, 2.3</td></tr>
+            <tr><th>1.º</th><td>UD3 · Desarrollo Web</td><td>E</td><td>5.1, 5.2</td></tr>
+            <tr><th>2.º</th><td>UD4 · Computación Física e IoT</td><td>F + B</td><td>1.1, 2.3, 3.1</td></tr>
+            <tr><th>2.º</th><td>UD5 · Robótica y Datos Masivos</td><td>C + G</td><td>1.1, 1.2, 1.3, 4.1</td></tr>
+            <tr><th>3.º</th><td>UD6 · Inteligencia Artificial y Ciberseguridad</td><td>H + I</td><td>4.2, 6.1, 6.2, 6.3, 6.4</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>

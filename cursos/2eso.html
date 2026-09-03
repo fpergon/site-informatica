@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2º ESO · Computación y Robótica · IES Pintor Pedro Gómez</title>
-  <meta name="description" content="Unidades didácticas de 2.º ESO: programación, desarrollo móvil y web, computación física, IoT, robótica, datos, IA y ciberseguridad." />
+  <meta name="description" content="Unidades didácticas de 2.º ESO: ciberseguridad, programación por bloques, desarrollo móvil y web, computación física, IoT y robótica. Saberes básicos BOJA, criterios de evaluación y rúbricas." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,119 +26,283 @@
 
   <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
 
+    <!-- CABECERA DE CURSO -->
     <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
-      <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">Curso 2025/26 · 2.º ESO</p>
+      <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">2.º ESO</p>
       <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">Computación y Robótica</h1>
-      <p class="mt-3 max-w-2xl text-brand-50/90">Saberes básicos de la <span class="font-semibold">BOJA</span> organizados en 6 unidades didácticas por trimestres. Profundizamos en programación, desarrollo móvil y web, computación física, robótica IoT, datos masivos/IA y ciberseguridad.</p>
+      <p class="mt-3 text-brand-50/90">En este segundo curso se consolida el pensamiento computacional mediante la programación por bloques y el desarrollo de aplicaciones móviles y páginas web. Se amplían los conocimientos de hardware con la introducción a la computación física y los microcontroladores, se continúa con la robótica educativa integrando sensores y actuadores, y se sientan las bases de la ciberseguridad, la protección de datos y el uso responsable de la tecnología.</p>
     </section>
 
+    <!-- TABS -->
     <section class="mt-8" data-tab-group>
       <div class="flex flex-wrap gap-2" role="tablist">
         <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="unidades" aria-selected="true">Unidades didácticas</button>
-        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="boja" aria-selected="false">Criterios BOJA</button>
+        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="boja" aria-selected="false">Criterios de evaluación y rúbrica</button>
       </div>
 
+      <!-- ============ PANEL UNIDADES ============ -->
       <div class="tab-panel mt-5" data-panel="unidades">
 
-        <details class="ud-card mb-4" open>
-          <summary><h3 class="font-bold text-ink-800">UD1 · Introducción a la Programación</h3><span class="flecha">▶</span></summary>
-          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> A · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+        <!-- UD1 · Ciberseguridad -->
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD1 · Ciberseguridad, Identidad Digital y Propiedad Intelectual</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> I (Ciberseguridad) · <span class="font-semibold">Duración:</span> 5 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Decálogo de seguridad digital + auditoría de privacidad en dispositivos personales.</p>
+          <a href="2eso/ud7.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.2.I.1. Seguridad activa y pasiva.</li>
+            <li>CYR.2.I.2. Exposición de los usuarios.</li>
+            <li>CYR.2.I.3. Peligros en Internet.</li>
+            <li>CYR.2.I.4. Interacción básica de plataformas virtuales.</li>
+            <li>CYR.2.I.5. Introducción al concepto de propiedad intelectual.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Identificar los principales riesgos en Internet y las formas de protección activa y pasiva.</li>
+            <li>Analizar la huella digital y la exposición de datos personales en plataformas virtuales.</li>
+            <li>Crear contraseñas seguras y aplicar verificación en dos pasos.</li>
+            <li>Reconocer el concepto de propiedad intelectual, licencias y derechos de autor en la red.</li>
+            <li>Redactar un decálogo de buenas prácticas de seguridad digital.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">Riesgos en Internet y seguridad pasiva.</span> Tipos de malware, phishing y suplantación de identidad. Videotutorial y caso real.</li>
+            <li><span class="font-semibold">Exposición de los usuarios y huella digital.</span> ¿Qué datos dejamos al navegar? Auditoría de la configuración de privacidad del navegador y redes sociales.</li>
+            <li><span class="font-semibold">Seguridad activa: contraseñas y verificación.</span> Generadores de contraseñas, autenticación en dos pasos (2FA). Práctica: evaluar la fortaleza de nuestras contraseñas.</li>
+            <li><span class="font-semibold">Interacción en plataformas virtuales.</span> Normas de comportamiento, ciberacoso y bulos. Análisis de noticias falsas y cadenas de mensajería.</li>
+            <li><span class="font-semibold">Propiedad intelectual y licencias.</span> Diferencia entre libre y propietario. Creative Commons. Redacción grupal del decálogo de seguridad digital.</li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">6.1 · Protección en la red</span><span class="criterio">6.2 · Seguridad y uso responsable</span><span class="criterio">6.3 · Derechos de autor</span><span class="criterio">6.4 · Seguridad activa y pasiva</span></p>
+        </details>
+
+        <!-- UD2 · Introducción a la Programación -->
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD2 · Introducción a la Programación</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> A (Programación) · <span class="font-semibold">Duración:</span> 7 sesiones</p>
           <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Videojuego en MakeCode Arcade con algoritmo documentado.</p>
           <a href="2eso/ud1.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
             <li>CYR.2.A.1. Lenguajes de programación visuales: ventajas e inconvenientes.</li>
             <li>CYR.2.A.2. Elementos de los programas con lenguaje de bloques.</li>
             <li>CYR.2.A.3. Secuencia de instrucciones. Medios de expresión de algoritmos.</li>
             <li>CYR.2.A.4. Generación de tareas repetitivas y condicionales.</li>
             <li>CYR.2.A.5. Pantallas de interacción con el usuario.</li>
           </ul>
-          <p class="mt-2"><span class="criterio">1.3 · Estructura de un programa</span><span class="criterio">2.1 · Resolución de problemas con programación</span><span class="criterio">2.2 · Apps móviles</span></p>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Distinguir lenguajes de programación visuales de los textuales y reconocer sus tipos.</li>
+            <li>Utilizar un entorno de bloques (MakeCode Arcade) para crear secuencias de instrucciones.</li>
+            <li>Definir algoritmo y representarlo mediante diagramas de flujo o pseudocódigo.</li>
+            <li>Aplicar bucles (repetición) y estructuras condicionales (selección) en un programa.</li>
+            <li>Diseñar la interacción con el usuario mediante eventos, mensajes y entradas de teclado/ratón.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">¿Qué es programar? Algoritmos y características.</span> Diferencias entre lenguajes de alto, medio y bajo nivel. Presentación de MakeCode Arcade.</li>
+            <li><span class="font-semibold">Secuencias e instrucciones.</span> Bloques de movimiento, aspecto y sonido. Reto: mover un personaje de un punto a otro.</li>
+            <li><span class="font-semibold">Algoritmo y diagrama de flujo.</span> Representación gráfica con draw.io o papel. Ejercicio: algoritmo de una receta cotidiana.</li>
+            <li><span class="font-semibold">Bucles: repetición.</span> Bloques "repetir" y "por siempre". Reto: animación que repite un patrón.</li>
+            <li><span class="font-semibold">Condicionales y eventos.</span> Bloques "si…entonces" y "al pulsar". Interacción con teclado y ratón.</li>
+            <li><span class="font-semibold">Eventos de entrada y salida.</span> Tipos de eventos, sensores y respuestas de la aplicación.</li>
+            <li><span class="font-semibold">Proyecto final en MakeCode Arcade.</span> Trabajo en parejas: crear un videojuego sencillo. Exposición y valoración entre compañeros.</li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">1.3 · Estructura de un programa</span><span class="criterio">2.1 · Resolución de problemas con programación</span></p>
         </details>
 
+        <!-- UD3 · Desarrollo de Aplicaciones Móviles y Entornos Web -->
         <details class="ud-card mb-4">
-          <summary><h3 class="font-bold text-ink-800">UD2 · Desarrollo de Aplicaciones Móviles</h3><span class="flecha">▶</span></summary>
-          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> D · <span class="font-semibold">Duración:</span> 7 sesiones</p>
-          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> App móvil interactiva en Thunkable.</p>
+          <summary><h3 class="font-bold text-ink-800">UD3 · Desarrollo de Aplicaciones Móviles y Entornos Web</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloques:</span> D (Desarrollo Móvil) + E (Desarrollo Web) · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> App móvil interactiva en Thunkable + Página web con animaciones.</p>
           <a href="2eso/ud2.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
             <li>CYR.2.D.1. Ejemplos de IDEs de lenguajes de bloques para móviles.</li>
             <li>CYR.2.D.2. Programación orientada a eventos: características, ventajas e inconvenientes.</li>
             <li>CYR.2.D.3. Dependencia de eventos.</li>
             <li>CYR.2.D.4. Tipos de eventos.</li>
             <li>CYR.2.D.5. Descripción de eventos de E/S.</li>
-          </ul>
-          <p class="mt-2"><span class="criterio">2.2 · Apps móviles</span><span class="criterio">2.3 · Desarrollo de apps e IoT</span></p>
-        </details>
-
-        <details class="ud-card mb-4">
-          <summary><h3 class="font-bold text-ink-800">UD3 · Desarrollo Web</h3><span class="flecha">▶</span></summary>
-          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> E · <span class="font-semibold">Duración:</span> 7 sesiones</p>
-          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Página web con animaciones en Webflow.</p>
-          <a href="2eso/ud3.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
             <li>CYR.2.E.1. Estructura básica de una página web.</li>
             <li>CYR.2.E.2. Servidores web: funcionamiento.</li>
             <li>CYR.2.E.3. Lenguajes para la edición de páginas web: diferencias.</li>
             <li>CYR.2.E.4. Tipos de animación web.</li>
           </ul>
-          <p class="mt-2"><span class="criterio">5.1 · Aplicaciones web seguras</span><span class="criterio">5.2 · Problemas en desarrollo web</span></p>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Crear aplicaciones móviles funcionales utilizando entornos de bloques como Thunkable.</li>
+            <li>Comprender la programación orientada a eventos y el manejo de sensores del dispositivo.</li>
+            <li>Diseñar interfaces interactivas con controles de entrada y salida.</li>
+            <li>Construir páginas web con estructura HTML, estilos CSS y comportamiento dinámico.</li>
+            <li>Aplicar técnicas de animación web para mejorar la experiencia de usuario.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">IDEs de bloques para móviles.</span> Presentación de Thunkable y MIT App Inventor. Características compartidas.</li>
+            <li><span class="font-semibold">Programación orientada a eventos.</span> Cadena de eventos, eventos de entrada y salida. Práctica con Thunkable.</li>
+            <li><span class="font-semibold">Eventos de entrada y salida.</span> Sensores del móvil: acelerómetro, GPS, luz. Tipos de respuesta de la app.</li>
+            <li><span class="font-semibold">Estructura de una página web.</span> HTML: etiquetas, elementos multimedia, enlaces. Creación de la primera página.</li>
+            <li><span class="font-semibold">CSS: estilo y diseño.</span> Selectores, propiedades, modelo de cajas. Flexbox y Grid para distribución.</li>
+            <li><span class="font-semibold">Animación web.</span> Transiciones, transformaciones y keyframes con CSS. SVG y Canvas.</li>
+            <li><span class="font-semibold">Proyecto final integrado.</span> App móvil + página web. Exposición y valoración entre compañeros.</li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">2.2 · Apps móviles</span><span class="criterio">2.3 · Desarrollo de apps e IoT</span><span class="criterio">5.1 · Aplicaciones web seguras</span><span class="criterio">5.2 · Problemas en desarrollo web</span></p>
         </details>
 
+        <!-- UD4 · Computación Física e IoT -->
         <details class="ud-card mb-4">
           <summary><h3 class="font-bold text-ink-800">UD4 · Computación Física e Internet de las Cosas</h3><span class="flecha">▶</span></summary>
           <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloques:</span> F + B · <span class="font-semibold">Duración:</span> 7 sesiones</p>
           <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Sistema IoT con Micro:bit y sensores.</p>
           <a href="2eso/ud4.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
             <li>CYR.2.F.1–4. Microcontroladores, hardware y software.</li>
             <li>CYR.2.B.1–4. Sensores IoT, conexiones, BLE e IoT industrial.</li>
           </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Identificar los componentes básicos de un sistema de computación: CPU, RAM y almacenamiento.</li>
+            <li>Distinguir entre software de sistema y software de aplicación.</li>
+            <li>Comprender el funcionamiento de los microcontroladores y su aplicación en IoT.</li>
+            <li>Montar un circuito con sensores y programar un Micro:bit para recopilar datos.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">Componentes de un sistema de computación.</span> CPU, memoria RAM, almacenamiento. Ciclo de ejecución Fetch-Decode-Execute.</li>
+            <li><span class="font-semibold">Software: sistema y aplicación.</span> Diferencias, firmware, sistemas operativos. Práctica con terminal.</li>
+            <li><span class="font-semibold">Introducción a los microcontroladores.</span> Qué es un microcontrolador, arquitecturas, Arduino y Micro:bit.</li>
+            <li><span class="font-semibold">Internet de las Cosas: conceptos básicos.</span> Definición, componentes IoT, ciclo de vida, protocolos D2C y C2D.</li>
+            <li><span class="font-semibold">Funcionamiento IoT: 5 pasos.</span> Recopilar, transmitir, almacenar, analizar y actuar. Práctica con Micro:bit.</li>
+            <li><span class="font-semibold">Conectividad IoT.</span> WiFi, Bluetooth, LoRa. Protocolos MQTT y HTTP. Integración con la nube.</li>
+            <li><span class="font-semibold">Proyecto final IoT.</span> Sistema completo con sensores, microcontrolador y visualización de datos.</li>
+          </ol>
+
           <p class="mt-2"><span class="criterio">1.1 · Computación física</span><span class="criterio">2.3 · Desarrollo apps e IoT</span><span class="criterio">3.1 · Sistemas sostenibles</span></p>
         </details>
 
+        <!-- UD5 · Robótica Educativa -->
         <details class="ud-card mb-4">
           <summary><h3 class="font-bold text-ink-800">UD5 · Robótica Educativa</h3><span class="flecha">▶</span></summary>
           <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloque:</span> C · <span class="font-semibold">Duración:</span> 7 sesiones</p>
           <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Robot Maqueen programado con bloques.</p>
           <a href="2eso/ud5.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
             <li>CYR.2.C.1–5. Clasificación, aplicaciones, componentes, locomoción y programación.</li>
           </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Definir qué es un robot y distinguirlo de una máquina convencional.</li>
+            <li>Identificar los componentes fundamentales: sensores, controlador y efectores/actuadores.</li>
+            <li>Conocer las leyes de la robótica de Asimov y su implicación ética.</li>
+            <li>Programar un robot Maqueen para seguir líneas, evitar obstáculos y reaccionar a sensores.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">¿Qué es un robot?</span> Definición, diferencia con máquinas convencionales, clasificación y aplicaciones.</li>
+            <li><span class="font-semibold">Componentes de un robot.</span> Sensores (ultrasonidos, infrarrojos), controlador, actuadores (servos, motores DC).</li>
+            <li><span class="font-semibold">Leyes de la robótica.</span> Tres leyes de Asimov, debate ético, casos prácticos.</li>
+            <li><span class="font-semibold">Sensores y actuadores en acción.</span> Montaje de circuitos con Arduino. Sensor de obstáculos y servo motor.</li>
+            <li><span class="font-semibold">Programación de robot Maqueen.</span> Seguidor de línea,避障 de obstáculos, uso de LEDs y zumbador.</li>
+            <li><span class="font-semibold">Bucles y condicionales en robótica.</span> Programación dinámica, toma de decisiones en tiempo real.</li>
+            <li><span class="font-semibold">Proyecto final de robótica.</span> Robot con múltiples funcionalidades. Exposición y demostración.</li>
+          </ol>
+
           <p class="mt-2"><span class="criterio">1.1 · Computación física</span><span class="criterio">1.2 · Robótica en la sociedad</span><span class="criterio">1.4 · Ingeniería de robots</span></p>
         </details>
 
+        <!-- UD6 · Datos Masivos e Inteligencia Artificial -->
         <details class="ud-card mb-4">
-          <summary><h3 class="font-bold text-ink-800">UD6 · Datos Masivos, IA y Ciberseguridad</h3><span class="flecha">▶</span></summary>
-          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 3.º · <span class="font-semibold">Bloques:</span> G + H + I · <span class="font-semibold">Duración:</span> 7 sesiones</p>
-          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Modelo IA con Teachable Machine + decálogo de ciberseguridad.</p>
+          <summary><h3 class="font-bold text-ink-800">UD6 · Datos Masivos e Inteligencia Artificial</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 3.º · <span class="font-semibold">Bloques:</span> G + H · <span class="font-semibold">Duración:</span> 5 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Modelo IA con Teachable Machine + análisis de datos masivos.</p>
           <a href="2eso/ud6.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
-            <li>CYR.2.G. Datos masivos.</li>
-            <li>CYR.2.H. Inteligencia Artificial.</li>
-            <li>CYR.2.I.1–5. Ciberseguridad, hábitos seguros, protección de datos.</li>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>CYR.2.G.1–4. Big Data: 4V, fuentes, visualización y metadatos.</li>
+            <li>CYR.2.H.1–5. Inteligencia Artificial: definición, tipos, machine learning, Deep Learning y ética.</li>
           </ul>
-          <p class="mt-2"><span class="criterio">6.1 · Protección en la red</span><span class="criterio">6.2 · Uso responsable</span><span class="criterio">6.3 · Derechos de autor</span><span class="criterio">6.4 · Seguridad activa y pasiva</span></p>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Comprender el concepto de Big Data y sus cuatro dimensiones: volumen, velocidad, variedad y veracidad.</li>
+            <li>Identificar las principales fuentes de datos masivos y su aplicación en distintos sectores.</li>
+            <li>Distinguir los tipos de Inteligencia Artificial: IA débil, IA fuerte y superinteligencia.</li>
+            <li>Crear un modelo de aprendizaje automático con Teachable Machine y analizar su precisión.</li>
+            <li>Reflexionar sobre los aspectos éticos del uso de IA: sesgo algorítmico, transparencia y privacidad.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Sesiones</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><span class="font-semibold">Big Data: las 4V de los datos masivos.</span> Volumen, velocidad, variedad y veracidad. Fuentes de datos y su impacto.</li>
+            <li><span class="font-semibold">Inteligencia Artificial: definición y tipos.</span> IA débil vs. IA fuerte, ejemplos reales, IA generativa.</li>
+            <li><span class="font-semibold">Aprendizaje automático y Deep Learning.</span> Tipos de aprendizaje, redes neuronales, práctica con Teachable Machine.</li>
+            <li><span class="font-semibold">Ética y responsabilidad en IA.</span> Sesgo algorítmico, transparencia, Ley Europea de IA.</li>
+            <li><span class="font-semibold">Proyecto final: Modelo IA + análisis de datos.</span> Integración de los dos bloques temáticos. Presentación y evaluación.</li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">4.1 · Análisis de datos</span><span class="criterio">4.2 · IA y aprendizaje automático</span></p>
         </details>
+
       </div>
 
+      <!-- ============ PANEL BOJA ============ -->
       <div class="tab-panel mt-5 hidden" data-panel="boja">
-        <p class="text-sm text-slate-600">Criterios de evaluación asociados (extracto BOJA · 2.º ESO):</p>
+        <p class="text-sm text-slate-600">Criterios de evaluación asociados (extracto BOJA Andalucía · Computación y Robótica 2.º ESO):</p>
         <div class="mt-3 flex flex-wrap gap-2">
           <span class="criterio">1.1 · Computación física</span>
           <span class="criterio">1.2 · Robótica en la sociedad</span>
           <span class="criterio">1.3 · Estructura de un programa</span>
           <span class="criterio">1.4 · Ingeniería de robots</span>
-          <span class="criterio">2.1 · Resolución de problemas</span>
+          <span class="criterio">2.1 · Resolución de problemas con programación</span>
           <span class="criterio">2.2 · Apps móviles</span>
-          <span class="criterio">2.3 · Apps e IoT</span>
-          <span class="criterio">3.1 · Sistemas sostenibles</span>
-          <span class="criterio">5.1 · Apps web seguras</span>
-          <span class="criterio">5.2 · Desarrollo web</span>
+          <span class="criterio">2.3 · Desarrollo de apps e IoT</span>
+          <span class="criterio">3.1 · Construir sistemas físicos sostenibles</span>
+          <span class="criterio">4.1 · Análisis de datos</span>
+          <span class="criterio">4.2 · IA y aprendizaje automático</span>
+          <span class="criterio">5.1 · Aplicaciones web seguras</span>
+          <span class="criterio">5.2 · Problemas en desarrollo web</span>
           <span class="criterio">6.1 · Protección en la red</span>
-          <span class="criterio">6.2 · Uso responsable</span>
-          <span class="criterio">6.3 · Derechos de autor</span>
+          <span class="criterio">6.2 · Seguridad y uso responsable</span>
+          <span class="criterio">6.3 · Derechos de autor en la web</span>
           <span class="criterio">6.4 · Seguridad activa y pasiva</span>
         </div>
+
+        <h3 class="mt-6 font-bold text-ink-800">Mapa global por trimestres</h3>
+        <table class="rubrica">
+          <thead>
+            <tr><th>Trimestre</th><th>Unidad Didáctica</th><th>Bloques</th><th>Criterios</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>1.º</th><td>UD1 · Ciberseguridad, Identidad Digital y Propiedad Intelectual</td><td>I</td><td>6.1, 6.2, 6.3, 6.4</td></tr>
+            <tr><th>1.º</th><td>UD2 · Introducción a la Programación</td><td>A</td><td>1.3, 2.1</td></tr>
+            <tr><th>1.º</th><td>UD3 · Desarrollo de Apps Móviles y Entornos Web</td><td>D + E</td><td>2.2, 2.3, 5.1, 5.2</td></tr>
+            <tr><th>2.º</th><td>UD4 · Computación Física e Internet de las Cosas</td><td>F + B</td><td>1.1, 2.3, 3.1</td></tr>
+            <tr><th>2.º</th><td>UD5 · Robótica Educativa</td><td>C</td><td>1.1, 1.2, 1.4</td></tr>
+            <tr><th>3.º</th><td>UD6 · Datos Masivos e Inteligencia Artificial</td><td>G + H</td><td>4.1, 4.2</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>

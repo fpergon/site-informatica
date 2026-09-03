@@ -12,18 +12,29 @@
   // para no duplicar la navegación cuando ya la aporta Google Sites.
   var modoEmbed = new URLSearchParams(window.location.search).has('embed');
 
-  // Calcula la ruta base según dónde se aloje el archivo (raíz o /cursos/).
-  // Permite reutilizar el mismo shell en index.html y en cursos/*.html.
-  var enCursos = (window.location.pathname || '').indexOf('/cursos/') !== -1;
-  var base = enCursos ? '' : 'cursos/';
-  var home = enCursos ? '../index.html' : 'index.html';
+  // Calcula la ruta base según dónde se aloje el archivo.
+  // Soporta: raíz, cursos/*.html y cursos/*/*.html (ud1, ud2, etc.)
+  var path = window.location.pathname || '';
+  var enSubdirectorioCursos = /\/cursos\/[^/]+\//.test(path);
+  var enCursos = path.indexOf('/cursos/') !== -1;
+  var base, home;
+  if (enSubdirectorioCursos) {
+    base = '../';
+    home = '../../index.html';
+  } else if (enCursos) {
+    base = '';
+    home = '../index.html';
+  } else {
+    base = 'cursos/';
+    home = 'index.html';
+  }
 
   var enlaces = [
     { id: 'inicio',  texto: 'Inicio',        href: home },
-    { id: '1eso',    texto: '1º ESO',       href: base + '1eso.html' },
-    { id: '2eso',    texto: '2º ESO',       href: base + '2eso.html' },
-    { id: '3eso',    texto: '3º ESO',       href: base + '3eso.html' },
-    { id: 'diversidad', texto: 'Diversidad', href: home + '#diversidad' },
+    { id: '1eso',    texto: '1º CyR',       href: base + '1eso.html' },
+    { id: '2eso',    texto: '2º CyR',       href: base + '2eso.html' },
+    { id: '3eso',    texto: '3º CyR',       href: base + '3eso.html' },
+    { id: 'tic',     texto: 'TIC I',         href: base + 'tic.html' },
     { id: 'licencia', texto: 'Licencia',    href: 'https://creativecommons.org/licenses/by-nc/4.0/' }
   ];
 
@@ -44,7 +55,7 @@
     +     '<a href="' + home + '" class="flex items-center gap-3">'
     +       '<span class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 font-black">P</span>'
     +       '<span class="leading-tight"><span class="block text-sm font-bold">IES Pintor Pedro Gómez</span>'
-    +       '<span class="block text-xs text-brand-200">Computación y Robótica</span></span>'
+      +       '<span class="block text-xs text-brand-200">Computación y Robótica · TIC</span></span>'
     +     '</a>'
     +     '<nav class="hidden items-center gap-1 md:flex">' + navDesktop + '</nav>'
     +     '<button id="btn-menu" aria-label="Abrir menú" aria-expanded="false" class="rounded-md p-2 text-white hover:bg-white/10 md:hidden">'
