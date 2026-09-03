@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UD1 · Introducción a la Programación · 2.º ESO</title>
-  <meta name="description" content="Unidad Didáctica 1 de 2.º ESO: Introducción a la Programación. Algoritmos, lenguajes de programación, secuencias, bucles, condicionales y proyecto final con MakeCode Arcade." />
+  <title>UD1 · Ciberseguridad, Identidad Digital y Propiedad Intelectual · 2º ESO</title>
+  <meta name="description" content="Unidad Didáctica 1 de 2º ESO: Ciberseguridad, identidad digital y propiedad intelectual. Saberes básicos BOJA, sesiones detalladas y criterios de evaluación." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -33,15 +33,11 @@
         <span>·</span>
         <span>1.º Trimestre</span>
         <span>·</span>
-        <span>Bloque A</span>
+        <span>Bloque I</span>
       </div>
-      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD1 · Introducción a la Programación</h1>
-      <p class="mt-3 text-brand-50/90">Comprender los fundamentos de la programación: algoritmos, lenguajes de programación, estructuras básicas de control (secuencia, selección e iteración) y diseño de interfaces de usuario. Se iniciará al alumnado en el pensamiento computacional mediante herramientas de programación visual como Scratch y MakeCode Arcade.</p>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD1 · Ciberseguridad, Identidad Digital y Propiedad Intelectual</h1>
+      <p class="mt-3 text-brand-50/90">Construir una base sólida sobre privacidad, prevención de riesgos y derechos en la red antes de publicar código o usar entornos en la nube. Esta unidad sentará las bases de comportamiento seguro y responsable que se aplicarán a lo largo de todo el curso.</p>
     </section>
-
-
-
-
 
     <!-- SESIONES -->
     <section class="mt-8">
@@ -51,90 +47,119 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">¿Qué es programar? Algoritmos y características</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Riesgos en Internet y seguridad pasiva</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Esta sesión es la puerta de entrada al mundo de la programación. Es fundamental que el alumnado comprenda que un algoritmo no es algo exclusivo de los ordenadores, sino una forma estructurada de resolver problemas que utilizamos en la vida cotidiana.
+            Esta sesión sienta las bases de toda la unidad. Es fundamental que el alumnado comprenda la diferencia entre seguridad activa y pasiva antes de avanzar.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>¿Alguna vez habéis seguido una receta de cocina? ¿Habéis ensamblado un mueble de IKEA siguiendo las instrucciones? En ambos casos habéis ejecutado un algoritmo: una secuencia ordenada de pasos para alcanzar un objetivo concreto. Hoy vamos a descubrir qué es exactamente un algoritmo, cuáles son sus características fundamentales y cómo se relaciona con la programación de ordenadores.</p>
-            <p class="mt-2">Comenzaremos con una actividad práctica: construir un avión de papel siguiendo instrucciones paso a paso. A partir de esta experiencia, analizaremos qué funciona, qué falla y cómo podríamos mejorar las instrucciones para que cualquier persona pueda reproducir el resultado.</p>
+            <p>En esta sesión inicial vamos a explorar el universo de las amenazas digitales que existen en Internet. Comenzaremos con una reflexión grupal: ¿cuántas horas al día pasamos conectados? ¿Qué tipo de información compartimos en línea? Esta conversación nos permitirá dimensionar la importancia de la ciberseguridad en nuestro día a día.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un algoritmo?</h4>
-            <p>Un <strong>algoritmo</strong> es un conjunto finito, ordenado y finito de instrucciones o reglas bien definidas que permiten realizar una tarea o resolver un problema concreto. La palabra proviene del matemático persa Al-Khwarizmi (siglo IX), considerado el padre del álgebra.</p>
-            <p class="mt-2">Para que un algoritmo sea válido debe cumplir tres características esenciales:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Finito:</strong> Debe terminar en algún momento. Un algoritmo que nunca termina no tiene utilidad práctica.</li>
-              <li><strong>Definido:</strong> Cada paso debe estar perfectamente especificado. No puede haber ambigüedades ni interpretaciones.</li>
-              <li><strong>Preciso:</strong> Cada instrucción debe realizar exactamente una acción concreta. No puede haber margen de duda sobre qué hacer.</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">Conceptos fundamentales</h4>
+            <p><strong>¿Qué es la seguridad pasiva?</strong> Se refiere a todas aquellas medidas y comportamientos que adoptamos para protegernos de forma preventiva, sin necesidad de detectar un ataque activamente. Incluye mantener actualizado el sistema operativo, usar antivirus, configurar correctamente la privacidad de nuestras cuentas y no descargar archivos de fuentes no fiables.</p>
+            <p class="mt-2"><strong>¿Qué es la seguridad activa?</strong> Por el contrario, la seguridad activa implica la detección y respuesta ante amenazas ya existentes. Incluye el uso de firewalls, sistemas de detección de intrusos, monitoreo de tráfico de red y la respuesta ante incidentes de seguridad.</p>
           </div>
 
           <figure>
-            <img src="https://images.unsplash.com/photo-1515879218367-8466d910afc4?w=800&h=400&fit=crop" alt="Representación visual de un algoritmo" loading="lazy" />
-            <figcaption>Los algoritmos son la base de toda la programación informática</figcaption>
+            <img src="../../assets/img/seguridad-informatica.webp" alt="Esquema de seguridad activa y pasiva" loading="lazy" />
+            <figcaption>Seguridad pasiva (prevención) vs. seguridad activa (detección y respuesta)</figcaption>
           </figure>
 
-          <div class="callout callout-consejo">
-            <strong>Actividad práctica</strong>
-            En grupos de 3-4 alumnos, escribid las instrucciones paso a paso para construir un avión de papel. Luego, intercambiad las instrucciones con otro grupo y comprobad si son lo suficientemente claras para que cualquiera pueda seguir sin dudas.
-          </div>
-
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Algoritmos en la vida cotidiana</h4>
-            <p>Los algoritmos nos rodean más de lo que parece:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de malware</h4>
+            <p>El malware (software malicioso) es cualquier programa diseñado para dañar, infiltrarse o causar daños a un sistema informático. Los tipos principales son:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Recetas de cocina:</strong> Ingredientes (datos) + pasos (instrucciones) = plato terminado (resultado).</li>
-              <li><strong>Ruta para ir al instituto:</strong> Salir de casa → girar a la derecha → cruzar el semáforo → llegar al edificio.</li>
-              <li><strong>Ordenar una baraja:</strong> Separar por palos, luego ordenar cada palo por número.</li>
-              <li><strong>Algoritmos de búsqueda:</strong> Buscar un nombre en la guía telefónica abriendo por la mitad (búsqueda binaria).</li>
+              <li><strong>Virus:</strong> Programa que se adjunta a un archivo legítimo y se replica cuando el usuario lo ejecuta.</li>
+              <li><strong>Gusano (Worm):</strong> Similar al virus pero se propaga automáticamente a través de redes sin intervención del usuario.</li>
+              <li><strong>Troyano:</strong> Programa que se disfraza de software legítimo pero contiene código malicioso.</li>
+              <li><strong>Ransomware:</strong> Software que cifra los archivos del usuario y exige un rescate a cambio de la clave de descifrado.</li>
+              <li><strong>Spyware:</strong> Programa que recopila información del usuario sin su conocimiento.</li>
+              <li><strong>Adware:</strong> Software que muestra publicidad no deseada, generalmente en forma de ventanas emergentes.</li>
             </ul>
           </div>
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">De algoritmo a programa</h4>
-            <p>Un programa informático es esencialmente un algoritmo escrito en un lenguaje que el ordenador puede entender. El proceso de creación sigue estas fases:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li><strong>Definir el problema:</strong> ¿Qué queremos resolver?</li>
-              <li><strong>Diseñar el algoritmo:</strong> Escribir los pasos en lenguaje natural o pseudocódigo.</li>
-              <li><strong>Codificar:</strong> Traducir el algoritmo a un lenguaje de programación.</li>
-              <li><strong>Probar y depurar:</strong> Ejecutar el programa y corregir errores.</li>
-              <li><strong>Mantener:</strong> Actualizar y mejorar el programa según las necesidades.</li>
-            </ol>
+          <div class="callout callout-peligro">
+            <strong>Dato real</strong>
+            En 2024, el ransomware causó pérdidas globales superiores a los 20.000 millones de dólares. El 90% de los ciberataques comienza con un correo de phishing. Mantenerse informado es la primera línea de defensa.
           </div>
 
-          <div class="callout callout-aviso">
-            <strong>Recuerda</strong>
-            Un error común es confundir un algoritmo con un programa. El algoritmo es la idea abstracta; el programa es su implementación concreta en un lenguaje de programación.
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Phishing y suplantación de identidad</h4>
+            <p>El <strong>phishing</strong> es una técnica de ingeniería social mediante la cual los atacantes se hacen pasar por entidades legítimas para engañar a las víctimas y conseguir que revelen información confidencial.</p>
+            <p class="mt-2"><strong>Cómo reconocer un intento de phishing:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>El remitente usa una dirección de correo sospechosa o con errores ortográficos.</li>
+              <li>El mensaje crea urgencia: "Tu cuenta será bloqueada en 24 horas".</li>
+              <li>Los enlaces no coinciden con la URL real al pasar el cursor por encima.</li>
+              <li>Se solicitan datos personales o financieros por correo o mensaje.</li>
+              <li>Errores gramaticales y de formato inusuales en el mensaje.</li>
+            </ul>
+            <p class="mt-3"><a href="https://securekids.es/etiqueta/que-es-phishing/" target="_blank" rel="noopener" class="text-accent-600 font-semibold hover:underline">→ Saber más sobre phishing en SecureKids</a></p>
+          </div>
+
+          <!-- VÍDEO: Cápsula de ciberseguridad -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Consejos de seguridad en Internet
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/NtDT-S6FDtM" title="Consejos de seguridad en Internet" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Caso práctico</h4>
+            <p>Vamos a analizar tres capturas de pantalla reales de intentos de phishing (correos electrónicos y mensajes de WhatsApp). En parejas, identificaréis los indicadores de alerta y decidiréis qué haríais en cada caso. Posteriormente, compartiremos las conclusiones con el grupo.</p>
+
+            <div class="mt-4 grid gap-4 sm:grid-cols-3">
+              <figure>
+                <img src="../../assets/img/captura_santander_001.png" alt="Ejemplo de correo de phishing suplantando a Banco Santander" loading="lazy" />
+                <figcaption>Correo de phishing: suplantación de Banco Santander (FU: FACUA)</figcaption>
+              </figure>
+
+              <figure>
+                <img src="../../assets/captura_sms.png" alt="Ejemplo de SMS de phishing" loading="lazy" />
+                <figcaption>SMS falso: "Tu cuenta será bloqueada si no actualizas"</figcaption>
+              </figure>
+
+              <figure>
+                <img src="../../assets/captura_instagram.png" alt="Ejemplo de Instagram de phishing" loading="lazy" />
+                <figcaption>Captura Instagram: "¡Enhorabuena! Has ganado un iPhone"</figcaption>
+              </figure>
+            </div>
           </div>
 
           <!-- QUIZ SESIÓN 1 -->
           <div class="quiz" data-correcta="b" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué es un algoritmo?</p>
-            <button class="quiz-opcion" data-valor="a">A. Un tipo de virus que afecta al ordenador.</button>
-            <button class="quiz-opcion" data-valor="b">B. Conjunto finito, ordenado y preciso de instrucciones para resolver un problema.</button>
-            <button class="quiz-opcion" data-valor="c">C. Un programa escrito en lenguaje Python.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es la seguridad pasiva?</p>
+            <button class="quiz-opcion" data-valor="a">A. Se protege contra amenazas activas mediante firewalls y monitoreo.</button>
+            <button class="quiz-opcion" data-valor="b">B. Son medidas preventivas como antivirus y actualizaciones.</button>
+            <button class="quiz-opcion" data-valor="c">C. Se refiere solo al uso de contraseñas.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
-          <div class="quiz" data-correcta="a" data-total="3">
+          <div class="quiz" data-correcta="c" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Cuáles son las tres características de un algoritmo?</p>
-            <button class="quiz-opcion" data-valor="a">A. Finito, definido y preciso.</button>
-            <button class="quiz-opcion" data-valor="b">B. Rápido, complejo y dinámico.</button>
-            <button class="quiz-opcion" data-valor="c">C. Simple, visual e interactivo.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es el ransomware?</p>
+            <button class="quiz-opcion" data-valor="a">A. Un tipo de virus que se propaga por red.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un software que muestra publicidad no deseada.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un rescate para descifrar archivos cifrados.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Responder a un cuestionario interactivo de 10 preguntas de opción múltiple sobre los conceptos vistos (malware, phishing, seguridad pasiva y activa). Se realizará en Google Forms para obtener retroalimentación inmediata.
           </div>
         </div>
       </article>
@@ -144,84 +169,72 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Lenguajes de programación: textuales vs. visuales</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Exposición de los usuarios y huella digital</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Un lenguaje de programación es un conjunto de reglas y sintaxis que permite a los programadores comunicar instrucciones a un ordenador. Existen cientos de lenguajes, cada uno con sus fortalezas y debilidades. En esta sesión distinguiremos entre lenguajes textuales y lenguajes visuales, y exploraremos dos herramientas fundamentales para iniciarnos en la programación: Scratch y MakeCode Arcade.</p>
+            <p>Cada vez que interactuamos en Internet, dejamos un rastro digital. En esta sesión vamos a descubrir qué datos generamos al navegar, usar redes sociales o instalar aplicaciones, y cómo estos datos pueden ser utilizados tanto para mejorarnos la experiencia como para explotar nuestra información personal.</p>
           </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la huella digital?</h4>
+            <p>La <strong>huella digital</strong> (o huella digital online) es el conjunto de rastros que dejamos al utilizar Internet. Incluye:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Datos activos:</strong> Información que compartimos conscientemente: publicaciones en redes sociales, comentarios, fotos, videos, mensajes en chats.</li>
+              <li><strong>Datos pasivos:</strong> Información que se recopila sin nuestro conocimiento directo: direcciones IP, cookies, historial de navegación, ubicación geográfica.</li>
+              <li><strong>Datos inferidos:</strong> Información que se deduce a partir de nuestros comportamientos: preferencias políticas, gustos musicales, hábitos de compra.</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop" alt="Huella digital en Internet" loading="lazy" />
+            <figcaption>Tipos de datos que conforman nuestra huella digital</figcaption>
+          </figure>
 
           <div class="callout callout-nota">
-            <strong>Lenguajes textuales vs. visuales</strong>
-            Los <strong>textuales</strong> (Python, Java, C++) utilizan código escrito en texto plano. Son más potentes pero tienen una curva de aprendizaje mayor. Los <strong>visuales</strong> (Scratch, Blockly) permiten construir programas arrastrando bloques, lo que reduce errores de sintaxis y facilita la comprensión de la lógica del programa.
+            <strong>Dato curioso</strong>
+            Cada día, una persona genera aproximadamente 1,7 MB de datos. A lo largo de una vida, esto equivale a millones de gigabytes de información rastreable.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Lenguajes de programación textuales</h4>
-            <p>Los lenguajes textuales son aquellos en los que escribimos código directamente como texto. Cada lenguaje tiene su propia sintaxis:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué datos dejamos al navegar?</h4>
+            <p>Cada visita a una web genera datos que se almacenan en servidores:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Python:</strong> Sintaxis sencilla y legible. Ideal para principiantes. Se usa en ciencia de datos, inteligencia artificial y desarrollo web.</li>
-              <li><strong>JavaScript:</strong> El lenguaje de la web. Permite crear páginas web interactivas. Se ejecuta en el navegador.</li>
-              <li><strong>Java:</strong> Muy utilizado en empresas y en desarrollo de aplicaciones Android. Orientado a objetos.</li>
-              <li><strong>C/C++:</strong> Lenguajes de bajo nivel para sistemas operativos, videojuegos y firmware de dispositivos.</li>
+              <li><strong>Cookies:</strong> Pequeños archivos de texto que los sitios web colocan en nuestro navegador.</li>
+              <li><strong>Dirección IP:</strong> Identificador único de nuestro dispositivo en la red.</li>
+              <li><strong>User-Agent:</strong> Cadena de texto que identifica nuestro navegador, sistema operativo y dispositivo.</li>
+              <li><strong>Historial de navegación:</strong> Registro de todas las páginas web que visitamos.</li>
+              <li><strong>Metadatos de archivos:</strong> Fotos, documentos y videos contienen información oculta (fecha, ubicación GPS, dispositivo).</li>
             </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Práctica: Auditoría de privacidad</h4>
+            <p>Vamos a realizar una auditoría de la configuración de privacidad en tres entornos:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Navegador web:</strong> Revisar la configuración de privacidad y seguridad de Chrome/Firefox.</li>
+              <li><strong>Red social (Instagram o TikTok):</strong> Acceder a la configuración de privacidad de la cuenta.</li>
+              <li><strong>Teléfono móvil:</strong> Revisar los permisos de las aplicaciones instaladas.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 2 -->
+          <div class="quiz" data-correcta="a" data-total="2">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué son los datos pasivos?</p>
+            <button class="quiz-opcion" data-valor="a">A. Datos que recopila el navegador sin que lo sepamos (IP, cookies, ubicación).</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo las publicaciones que hacemos en redes sociales.</button>
+            <button class="quiz-opcion" data-valor="c">C. La información que introducimos manualmente en formularios.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Ventajas e inconvenientes</strong>
-            <strong>Texto:</strong> Mayor control, más rápido en ejecución, amplia comunidad. Pero es más fácil cometer errores de sintaxis y es más difícil de aprender al principio.<br/>
-            <strong>Bloques:</strong> Fácil de usar, visual, ideal para aprender lógica. Pero tiene limitaciones en complejidad y rendimiento.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Scratch: programación visual</h4>
-            <p><strong>Scratch</strong> es un lenguaje de programación visual desarrollado por el MIT Media Lab. Permite crear historias interactivas, juegos y animaciones arrastrando y conectando bloques de código. Está diseñado para principiantes a partir de 8 años.</p>
-            <p class="mt-2">Características principales:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Interfaz visual con bloques de colores que representan diferentes categorías de instrucciones.</li>
-              <li>No es necesario escribir código: los bloques encajan como piezas de puzle.</li>
-              <li>Permite crear proyectos con múltiples personajes (Sprites) y escenarios.</li>
-              <li>Comunidad en línea para compartir y remixar proyectos.</li>
-              <li>Funciona en el navegador, sin necesidad de instalar software.</li>
-            </ul>
-          </div>
-
-          <!-- VÍDEO: Tutorial de Scratch -->
-          <div class="callout callout-consejo">
-            <strong>Vídeo recomendado</strong>
-            Mira este tutorial para conocer la interfaz de Scratch y crear tu primer proyecto paso a paso:
-          </div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/5OUb91fDKXw" title="Tutorial de Scratch para principiantes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">MakeCode Arcade: videojuegos por bloques</h4>
-            <p><strong>MakeCode Arcade</strong> es una plataforma de Microsoft diseñada específicamente para crear videojuegos de 8 bits. Utiliza programación por bloques similar a Scratch pero con un enfoque centrado en el desarrollo de juegos:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Editor visual con bloques, JavaScript y Python.</li>
-              <li>Sprite de juego predefinidos y editor de sprites integrado.</li>
-              <li>Simulador en tiempo real para probar los juegos.</li>
-              <li>Posibilidad de descargar el juego en formatos .hex, .uf2 para dispositivos físicos.</li>
-              <li>Recursos educativos y tutoriales integrados.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Comparativa de herramientas</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Scratch:</strong> Ideal para animaciones, historias y juegos sencillos. Comunidad masiva. Enfoque generalista.</li>
-              <li><strong>MakeCode Arcade:</strong> Enfoque específico en videojuegos. Permite exportar a hardware real. Más orientado a game design.</li>
-              <li><strong>Ambas:</strong> Gratuitas, funcionan en el navegador, uso educativo ampliamente documentado.</li>
-            </ul>
-          </div>
-
-          <div class="callout callout-aviso">
-            <strong>Actividad</strong>
-            Abrid Scratch (scratch.mit.edu) y cread un proyecto con un Sprite que se mueva al pulsar las flechas del teclado. Explorad la interfaz y experimentad con los bloques de movimiento y apariencia.
+            <strong>Reflexión grupal</strong>
+            ¿Es posible eliminar nuestra huella digital completamente? ¿Deberíamos preocuparnos por el rastreo de nuestros datos? Debate en grupos de 4 sobre el equilibrio entre comodidad y privacidad.
           </div>
         </div>
       </article>
@@ -231,83 +244,87 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Elementos de programas por bloques</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Seguridad activa: contraseñas y verificación</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            Para dominar Scratch es imprescindible conocer cada categoría de bloques y su función. Esta sesión permite al alumnado familiarizarse con la interfaz y las diferentes categorías de bloques disponibles.
-          </div>
-
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>En esta sesión vamos a explorar en profundidad la interfaz de Scratch y cada una de las categorías de bloques disponibles. Conocer estos bloques es como aprender las letras del alfabeto antes de escribir: es la base sobre la que construiremos programas cada vez más complejos.</p>
+            <p>Las contraseñas son la primera línea de defensa de nuestras cuentas digitales. En esta sesión aprenderemos a crear contraseñas seguras, a gestionarlas correctamente y a utilizar la autenticación en dos pasos como capa adicional de protección.</p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Alerta de seguridad</strong>
+            El 81% de las filtraciones de datos se deben a contraseñas débiles o reutilizadas. Usar la misma contraseña en múltiples servicios es el error más común y peligroso.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">La interfaz de Scratch</h4>
-            <p>La pantalla de Scratch se divide en varias zonas principales:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Por qué son importantes las contraseñas?</h4>
+            <p>Una contraseña débil puede ser descifrada en segundos con herramientas automatizadas. Los ataques más comunes contra contraseñas son:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Escenario (Stage):</strong> Área donde se ejecuta el programa. Tiene dimensiones de 480×360 píxeles.</li>
-              <li><strong>Panel de bloques:</strong> Categorías de bloques a la izquierda, disponibles para arrastrar al área de scripts.</li>
-              <li><strong>Área de scripts:</strong> Zona central donde se ensamblan los bloques para crear los programas.</li>
-              <li><strong>Panel de sprites:</strong> Lista de personajes u objetos del proyecto con sus propiedades.</li>
-              <li><strong>Paleta de disfraces y sonidos:</strong> Para editar la apariencia y los efectos sonoros de los Sprites.</li>
+              <li><strong>Fuerza bruta:</strong> El atacante prueba todas las combinaciones posibles hasta encontrar la correcta.</li>
+              <li><strong>Diccionario:</strong> Se prueban palabras comunes y variaciones.</li>
+              <li><strong>Credential stuffing:</strong> Se utilizan credenciales filtradas de otros servicios.</li>
+              <li><strong>Keylogging:</strong> Software malicioso que registra las teclas que pulsamos.</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Categorías de bloques</h4>
-            <p><strong>Bloques de movimiento:</strong> Permiten desplazar los Sprites por el escenario. Incluyen comandos como "mover 10 pasos", "girar 15 grados", "ir a x: y:" y "deslizar en 1 segundos". Son esenciales para cualquier animación o juego.</p>
-            <p class="mt-2"><strong>Bloques de apariencia:</strong> Controlan cómo se ven los Sprites: decir textos, cambiar de disfraz, mostrar u ocultar, cambiar el tamaño y aplicar efectos gráficos como color, ojo de pez o distort.</p>
-            <p class="mt-2"><strong>Bloques de sonido:</strong> Reproducen sonidos y efectos. Permiten ajustar el volumen, el tono y crear pistas musicales de fondo.</p>
-            <p class="mt-2"><strong>Bloques de eventos:</strong> Son los desencadenantes de la ejecución. El más usado es "al presionar bandera verde". También incluyen eventos de teclado, clic,recepción de mensajes y colisiones.</p>
-            <p class="mt-2"><strong>Bloques de control:</strong> Gestionan el flujo del programa con bucles (repetir, repetir hasta que), condicionales (si-entonces, si-entonces-sino) y espera.</p>
-            <p class="mt-2"><strong>Bloques de sensores:</strong> Detectan colisiones, posición del ratón, preguntas al usuario y condiciones del entorno.</p>
-            <p class="mt-2"><strong>Bloques de operadores:</strong> Realizan operaciones matemáticas (suma, resta, multiplicación), comparaciones (mayor que, menor que, igual) y operaciones con texto.</p>
-            <p class="mt-2"><strong>Bloques de variables:</strong> Permiten almacenar y manipular datos: crear variables, establecer valores, cambiar valores y usar listas.</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Características de una contraseña segura</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Longitud mínima de 12 caracteres:</strong> Cuanto más larga, más tiempo tarda en descifrarse.</li>
+              <li><strong>Mezcla de caracteres:</strong> Mayúsculas, minúsculas, números y símbolos especiales.</li>
+              <li><strong>Sin datos personales:</strong> No usar nombres, fechas de nacimiento ni palabras comunes.</li>
+              <li><strong>Única para cada servicio:</strong> Nunca reutilizar contraseñas entre diferentes plataformas.</li>
+              <li><strong>Fácil de recordar pero difícil de adivinar:</strong> Usar frases mnemotécnicas.</li>
+            </ul>
           </div>
-
-          <figure>
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop" alt="Categorías de bloques en Scratch" loading="lazy" />
-            <figcaption>Cada categoría de bloques en Scratch tiene un color diferente para facilitar su identificación</figcaption>
-          </figure>
 
           <div class="callout callout-consejo">
             <strong>Consejo práctico</strong>
-            Para recordar las categorías: Movimiento (azul), Apariencia (violeta), Sonido (rosa), Eventos (amarillo), Control (naranja), Sensores (celeste), Operadores (verde), Variables (rojo).
+            Usa el método de las tres palabras aleatorias: combina tres palabras poco comunes con números y símbolos. Ejemplo: <code class="bg-white/50 px-1 rounded">Manzana$74@Bicicleta!Rover</code>. Esta contraseña tiene más de 25 caracteres y es prácticamente imposible de descifrar.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Gestores de contraseñas</h4>
+            <p>Los gestores de contraseñas almacenan todas nuestras contraseñas de forma cifrada. Solo necesitamos recordar una contraseña maestra:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bitwarden:</strong> Código abierto, sincroniza entre dispositivos, versión gratuita muy completa.</li>
+              <li><strong>KeePass:</strong> Almacena las contraseñas localmente en nuestro dispositivo.</li>
+              <li><strong>Google Password Manager:</strong> Integrado en Chrome.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Autenticación en dos pasos (2FA)</h4>
+            <p>La autenticación en dos pasos añade una segunda capa de seguridad además de la contraseña. Los tipos principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>SMS:</strong> Se envía un código por mensaje de texto. Es el menos seguro.</li>
+              <li><strong>Aplicación de autenticación:</strong> Apps como Google Authenticator generan códigos temporales cada 30 segundos.</li>
+              <li><strong>Llave de seguridad física:</strong> Dispositivo USB como YubiKey. Es el método más seguro.</li>
+            </ul>
+          </div>
+
+          <!-- VÍDEO: Autenticación en dos pasos -->
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/p8vHTwVqvWs" title="Qué es el 2FA y por qué deberías activarlo YA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Crearemos un proyecto con un Sprite que:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Se mueva por el escenario usando los bloques de movimiento.</li>
-              <li>Cambie de disfraz al pulsar la barra espaciadora (bloques de apariencia y eventos).</li>
-              <li>Reproduzca un sonido al colisionar con el borde (bloques de sensores y sonido).</li>
-              <li>Use una variable "puntos" para llevar la cuenta de las interacciones.</li>
-            </ol>
+            <p><strong>Ejercicio 1:</strong> Evaluar la fortaleza de nuestras contraseñas actuales usando "How Secure Is My Password".</p>
+            <p class="mt-2"><strong>Ejercicio 2:</strong> Crear una contraseña segura usando el método de las tres palabras.</p>
+            <p class="mt-2"><strong>Ejercicio 3:</strong> Configurar la autenticación en dos pasos en la cuenta de Google personal.</p>
           </div>
 
           <!-- QUIZ SESIÓN 3 -->
-          <div class="quiz" data-correcta="c" data-total="3">
+          <div class="quiz" data-correcta="b" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué categoría de bloques desencadena la ejecución del programa?</p>
-            <button class="quiz-opcion" data-valor="a">A. Los bloques de movimiento.</button>
-            <button class="quiz-opcion" data-valor="b">B. Los bloques de apariencia.</button>
-            <button class="quiz-opcion" data-valor="c">C. Los bloques de eventos.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="a" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué bloques pertenecen a la categoría de control?</p>
-            <button class="quiz-opcion" data-valor="a">A. Repetir, repetir hasta que, si-entonces.</button>
-            <button class="quiz-opcion" data-valor="b">B. Mover, girar, ir a x: y:</button>
-            <button class="quiz-opcion" data-valor="c">C. Decir, cambiar disfraz, mostrar.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué característica define una contraseña segura?</p>
+            <button class="quiz-opcion" data-valor="a">A. 8 caracteres con solo letras.</button>
+            <button class="quiz-opcion" data-valor="b">B. 12+ caracteres con mayúsculas, minúsculas, números y símbolos.</button>
+            <button class="quiz-opcion" data-valor="c">C. Tu fecha de nacimiento y nombre.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
@@ -319,74 +336,71 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Secuencia de instrucciones y representación de algoritmos</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Interacción en plataformas virtuales</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            Los medios de expresión de algoritmos son herramientas fundamentales para comunicar la lógica de un programa antes de escribir código. Dominar el pseudocódigo y los diagramas de flujo facilita enormemente la fase de diseño.
-          </div>
-
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Antes de escribir una sola línea de código, es habitual diseñar el algoritmo utilizando herramientas de representación. En esta sesión aprenderemos tres medios de expresión de algoritmos: el lenguaje natural, el pseudocódigo y los diagramas de flujo. Cada uno tiene sus ventajas y se usa en diferentes contextos.</p>
+            <p>Las plataformas virtuales son espacios de interacción social donde se aplican normas de comportamiento similares a las del mundo presencial. En esta sesión analizaremos las normas de convivencia digital, el ciberacoso y la desinformación.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Lenguaje natural</h4>
-            <p>Es la forma más intuitiva de expresar un algoritmo: escribir los pasos en nuestro idioma habitual. Es accesible para cualquier persona, pero presenta problemas importantes:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Normas de comportamiento en línea (Netiqueta)</h4>
+            <p>La <strong>netiqueta</strong> es el conjunto de normas de cortesía y buen comportamiento en Internet:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Ambigüedad:</strong> Las palabras pueden tener diferentes interpretaciones según el contexto.</li>
-              <li><strong>Verbosidad:</strong> Requiere muchas palabras para expresar conceptos simples.</li>
-              <li><strong>Falta de precisión:</strong> No es adecuado para algoritmos complejos donde cada detalle importa.</li>
+              <li><strong>Respeto:</strong> Tratar a los demás con la misma cortesía que en persona.</li>
+              <li><strong>No gritar:</strong> Evitar el uso excesivo de mayúsculas.</li>
+              <li><strong>Pensar antes de publicar:</strong> Cualquier cosa que publiquemos puede ser vista por cualquiera.</li>
+              <li><strong>No compartir información privada:</strong> Ni la nuestra ni la de otros.</li>
+              <li><strong>Citar fuentes:</strong> Si compartimos contenido de otros, debemos atribuir la autoría.</li>
+              <li><strong>No alimentar a los trolles:</strong> Los buscapleitos buscan provocar reacciones. La mejor respuesta es ignorarlos.</li>
             </ul>
-            <p class="mt-2"><strong>Ejemplo:</strong> "Para hacer un sándwich, toma dos rebanadas de pan, pon queso en una de ellas, cubre con la otra rebanada y sirve."</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Pseudocódigo</h4>
-            <p>El pseudocódigo es una representación semiformal de un algoritmo que utiliza una combinación de lenguaje natural y elementos estructurados. No sigue una sintaxis estricta, pero es más preciso que el lenguaje natural:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Utiliza palabras clave como <code class="bg-white/50 px-1 rounded">INICIO</code>, <code class="bg-white/50 px-1 rounded">FIN</code>, <code class="bg-white/50 px-1 rounded">SI</code>, <code class="bg-white/50 px-1 rounded">ENTONCES</code>, <code class="bg-white/50 px-1 rounded">MIENTRAS</code>, <code class="bg-white/50 px-1 rounded">HACER</code>.</li>
-              <li>Es independiente del lenguaje de programación.</li>
-              <li>Facilita la traducción a cualquier lenguaje de programación.</li>
-            </ul>
-          </div>
-
-          <div class="callout callout-consejo">
-            <strong>Ejemplo de pseudocódigo</strong>
-            <code class="block bg-white/50 p-2 rounded mt-1 text-xs">INICIO<br/>
-&nbsp;&nbsp;LEER "¿Cómo te llamas?" → nombre<br/>
-&nbsp;&nbsp;SI nombre ≠ "" ENTONCES<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;ESCRIBIR "¡Hola, " + nombre + "!"<br/>
-&nbsp;&nbsp;SI NO<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;ESCRIBIR "No has introducido tu nombre"<br/>
-&nbsp;&nbsp;FIN SI<br/>
-FIN</code>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Diagrama de flujo</h4>
-            <p>Un diagrama de flujo es una representación gráfica de un algoritmo utilizando figuras geométricas conectadas con flechas. Cada forma tiene un significado específico:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Óvalo:</strong> Inicio y fin del algoritmo.</li>
-              <li><strong>Paralelogramo:</strong> Entrada o salida de datos (leer/escribir).</li>
-              <li><strong>Rectángulo:</strong> Proceso o instrucción (asignaciones, cálculos).</li>
-              <li><strong>Diamante:</strong> Decisión (pregunta con respuesta SI/NO).</li>
-              <li><strong>Flechas:</strong> Dirección del flujo de ejecución.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Dibujaremos un diagrama de flujo para resolver el problema de calcular si un número es par o impar. Luego, escribiremos el pseudocódigo correspondiente y lo compararemos con la implementación en Scratch.</p>
           </div>
 
           <div class="callout callout-aviso">
-            <strong>Actividad de evaluación</strong>
-            Cada alumno elegirá un problema cotidiano (preparar café, cruzar la calle, etc.) y lo representará en tres formatos: lenguaje natural, pseudocódigo y diagrama de flujo. Se valorará la claridad y precisión de cada representación.
+            <strong>Importante</strong>
+            El ciberacoso puede tener consecuencias psicológicas graves. Si eres víctima o conoces a alguien que lo sufre, no dudes en buscar ayuda de un adulto de confianza. Guardar siempre las pruebas (capturas de pantalla).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ciberacoso (Cyberbullying)</h4>
+            <p>El ciberacoso es el uso de tecnologías para intimidar, amenazar, humillar o acosar a otra persona. Sus características principales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Permanencia:</strong> Los contenidos pueden permanecer en la red indefinidamente.</li>
+              <li><strong>Ámbito global:</strong> Puede ocurrir en cualquier momento y lugar.</li>
+              <li><strong>Anonimato:</strong> El acosador puede ocultar su identidad tras perfiles falsos.</li>
+              <li><strong>Audiencia masiva:</strong> Un contenido humillante puede llegar a miles de personas en minutos.</li>
+            </ul>
+            <p class="mt-2"><strong>¿Qué hacer si somos víctimas?</strong> No responder, guardar pruebas, bloquear al acosador, informar a un adulto de confianza y reportar el contenido a la plataforma.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Bulos y noticias falsas</h4>
+            <p>Para identificar noticias falsas podemos aplicar el método <strong>"SIFT"</strong>:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>S — Stop (Parar):</strong> Antes de compartir, detenerse y verificar.</li>
+              <li><strong>I — Investigar la fuente:</strong> ¿Quién publica esto? ¿Es fiable?</li>
+              <li><strong>F — Find better coverage:</strong> Buscar la misma noticia en otros medios.</li>
+              <li><strong>T — Trace claims:</strong> Verificar si las fuentes originales existen.</li>
+            </ul>
+          </div>
+
+          <!-- QUIZ SESIÓN 4 -->
+          <div class="quiz" data-correcta="c" data-total="2">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué hacer si somos víctimas de ciberacoso?</p>
+            <button class="quiz-opcion" data-valor="a">A. Responder al acosador para defenderse.</button>
+            <button class="quiz-opcion" data-valor="b">B. Eliminar la cuenta de redes sociales.</button>
+            <button class="quiz-opcion" data-valor="c">C. No responder, guardar pruebas y bloquear al acosador.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad grupal</strong>
+            En grupos de 3-4 alumnos, recibiréis 5 publicaciones de redes sociales. Algunas son verdaderas y otras son bulos. Aplicad el método SIFT a cada una y presentad vuestro análisis al resto de la clase.
           </div>
         </div>
       </article>
@@ -396,264 +410,86 @@ FIN</code>
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Tareas repetitivas y condicionales</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Propiedad intelectual y licencias</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            Los bucles y las condicionales son los dos pilares fundamentales del pensamiento computacional. Dominar estas estructuras permite resolver problemas de complejidad prácticamente ilimitada.
-          </div>
-
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>¿Qué haríais si tuvierais que escribir "Hola" 100 veces? ¿Y si necesitáis comprobar si un número es mayor que otro? Estos son dos tipos de problemas que se resuelven con <strong>bucles</strong> (tareas repetitivas) y <strong>condicionales</strong> (tomas de decisión). Son las estructuras de control más importantes de cualquier lenguaje de programación.</p>
+            <p>En la última sesión de esta unidad abordaremos un tema fundamental: la propiedad intelectual y los derechos de autor. Comprender cómo se protegen las creaciones y qué licencias existen es esencial para ser ciudadanos digitales responsables.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Bucles: repetición de tareas</h4>
-            <p>Un bucle permite ejecutar un bloque de código varias veces sin tener que escribirlo repetidamente. Los dos tipos principales son:</p>
-            <p class="mt-2"><strong>Bucle FOR (para):</strong> Se usa cuando sabemos de antemano cuántas veces queremos repetir algo. En Scratch se representa con el bloque "repetir 10". Es ideal para recorrer listas, dibujar figuras o animar movimientos repetitivos.</p>
-            <p class="mt-2"><strong>Bucle WHILE (mientras):</strong> Se usa cuando no sabemos cuántas veces se repetirá, sino que depende de una condición. En Scratch se usa "repetir hasta que". El bucle se ejecuta mientras la condición sea verdadera.</p>
-          </div>
-
-          <!-- VÍDEO: Bucles -->
-          <div class="callout callout-consejo">
-            <strong>Vídeo recomendado</strong>
-            Mira este vídeo para entender visualmente cómo funcionan los bucles FOR y WHILE en programación:
-          </div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/vpVxzH5vbsM" title="Bucles FOR y WHILE explicados" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Condicionales: toma de decisiones</h4>
-            <p>Las sentencias condicionales permiten que el programa tome decisiones en función de si una condición se cumple o no:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la propiedad intelectual?</h4>
+            <p>La propiedad intelectual se refiere a las creaciones de la mente. Se divide en:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>SI - ENTONCES (IF):</strong> Ejecuta un bloque de código solo si la condición es verdadera.</li>
-              <li><strong>SI - ENTONCES - SINO (IF-ELSE):</strong> Ejecuta un bloque si la condición es verdadera y otro diferente si es falsa.</li>
-              <li><strong>SI - SINO SI - SINO (IF-ELSE IF-ELSE):</strong> Permite evaluar múltiples condiciones en cadena.</li>
-              <li><strong>SEGÚN (SWITCH/CASE):</strong> Evalúa una variable contra múltiples valores posibles. Útil cuando hay muchas opciones.</li>
+              <li><strong>Propiedad industrial:</strong> Patentes, marcas registradas y diseños industriales.</li>
+              <li><strong>Derechos de autor:</strong> Protege obras literarias, artísticas, musicales, cinematográficas, programas de ordenador y bases de datos.</li>
             </ul>
-          </div>
-
-          <div class="callout callout-consejo">
-            <strong>Ejemplo práctico en pseudocódigo</strong>
-            <code class="block bg-white/50 p-2 rounded mt-1 text-xs">INICIO<br/>
-&nbsp;&nbsp;LEER edad<br/>
-&nbsp;&nbsp;SI edad >= 18 ENTONCES<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;ESCRIBIR "Eres mayor de edad"<br/>
-&nbsp;&nbsp;SI NO<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;SI edad >= 16 ENTONCES<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ESCRIBIR "Puedes empezar a conducir"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;SI NO<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ESCRIBIR "Eres menor de edad"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;FIN SI<br/>
-&nbsp;&nbsp;FIN SI<br/>
-FIN</code>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Combinando bucles y condicionales</h4>
-            <p>La verdadera potencia aparece cuando combinamos ambas estructuras. Por ejemplo, un bucle que recorre una lista de números y una condición que comprueba si cada uno es par o impar. En MakeCode Arcade, esto es fundamental para la lógica de los juegos: detectar colisiones, gestionar puntos, controlar niveles.</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>En MakeCode Arcade, crearemos un juego simple donde:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Un personaje se mueve repetidamente por la pantalla (bucle).</li>
-              <li>Al pulsar la barra espaciadora, el personaje dispara (evento + condicional).</li>
-              <li>Si el proyectil toca un enemigo, se suma un punto (condicional).</li>
-              <li>Si se alcanzan 10 puntos, se muestra "Victoria" (condicional anidado).</li>
-            </ol>
-          </div>
-
-          <div class="callout callout-aviso">
-            <strong>Errores comunes</strong>
-            Un error frecuente es crear bucles infinitos: si la condición nunca se cumple, el programa nunca termina. En Scratch esto se puede resolver pulsando el botón de parada. Siempre verificar que la condición de salida del bucle es alcanzable.
-          </div>
-
-          <!-- QUIZ SESIÓN 5 -->
-          <div class="quiz" data-correcta="a" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Cuándo usamos un bucle FOR?</p>
-            <button class="quiz-opcion" data-valor="a">A. Cuando sabemos cuántas veces repetir.</button>
-            <button class="quiz-opcion" data-valor="b">B. Cuando queremos repetir infinitamente.</button>
-            <button class="quiz-opcion" data-valor="c">C. Solo para dibujar figuras geométricas.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="b" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué sentencia permite ejecutar un bloque si la condición es falsa?</p>
-            <button class="quiz-opcion" data-valor="a">A. SI - ENTONCES.</button>
-            <button class="quiz-opcion" data-valor="b">B. SI - ENTONCES - SINO.</button>
-            <button class="quiz-opcion" data-valor="c">C. Repetir 10 veces.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-        </div>
-      </article>
-
-      <!-- ==================== SESIÓN 6 ==================== -->
-      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
-          <div>
-            <h3 class="font-bold text-ink-800 text-lg">Pantallas de interacción con el usuario</h3>
-          </div>
-        </div>
-
-        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            El diseño de interfaces de usuario es una habilidad clave que combina programación con diseño centrado en el usuario. Un buen diseño mejora la experiencia y reduce la frustración del usuario.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Un programa no es útil si el usuario no sabe cómo interactuar con él. En esta sesión aprenderemos a diseñar pantallas de interacción intuitivas, con diferentes tipos de controles: botones, campos de texto, sliders, checkboxes y otros elementos que faciliten la comunicación entre el usuario y el programa.</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Elementos de interacción</h4>
-            <p><strong>Botones:</strong> Permiten al usuario seleccionar una acción concreta. Deben tener etiquetas claras, tamaño adecuado y Feedback visual (cambiar de color al pasar el cursor o al pulsar).</p>
-            <p class="mt-2"><strong>Campos de texto:</strong> Permiten introducir información libre. Deben tener un texto de ejemplo (placeholder) que indique qué se espera escribir y validación de errores.</p>
-            <p class="mt-2"><strong>Sliders (controles deslizantes):</strong> Permiten seleccionar un valor dentro de un rango. Ideales para ajustar volumen, velocidad, brillo u otros parámetros continuos.</p>
-            <p class="mt-2"><strong>Checkboxes (casillas de verificación):</strong> Permiten seleccionar una o varias opciones de una lista. Son alternativas a los botones de radio cuando se permite múltiple selección.</p>
-            <p class="mt-2"><strong>Botones de radio:</strong> Permiten seleccionar exactamente una opción de un grupo.</p>
           </div>
 
           <figure>
-            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=400&fit=crop" alt="Diseño de interfaces de usuario" loading="lazy" />
-            <figcaption>Buenas prácticas en el diseño de interfaces de usuario</figcaption>
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=400&fit=crop" alt="Propiedad intelectual y licencias" loading="lazy" />
+            <figcaption>Tipos de propiedad intelectual y su protección legal</figcaption>
           </figure>
 
-          <div class="callout callout-consejo">
-            <strong>Diseño centrado en el usuario</strong>
-            Antes de diseñar una interfaz, preguntad: ¿Quién la usará? ¿Qué necesita hacer? ¿Cuáles son sus conocimientos técnicos? Un buen diseño se adapta al usuario, no al revés. La usabilidad se mide por tres factores: eficacia (se puede completar la tarea), eficiencia (se hace rápidamente) y satisfacción (el usuario se siente cómodo).
-          </div>
-
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Principios de diseño de interfaces</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Software propietario vs. software libre</h4>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Consistencia:</strong> Los elementos similares deben verse y comportarse de forma similar en toda la aplicación.</li>
-              <li><strong>Feedback:</strong> El sistema debe informar al usuario sobre lo que está ocurriendo (mensajes de éxito, error, progreso).</li>
-              <li><strong>Simplicidad:</strong> Menos es más. Mostrar solo lo necesario y ocultar la complejidad innecesaria.</li>
-              <li><strong>Accesibilidad:</strong> Considerar usuarios con diferentes capacidades (tamaño de texto, contraste, navegación por teclado).</li>
-              <li><strong>Tolerancia al error:</strong> Permitir al usuario deshacer acciones y ofrecer mensajes de ayuda cuando cometa un error.</li>
+              <li><strong>Software propietario:</strong> El código fuente no está disponible. No puede ser modificado ni distribuido libremente. Ejemplos: Windows, Microsoft Office.</li>
+              <li><strong>Software libre:</strong> El código fuente está disponible y puede ser estudiado, modificado y distribuido. Las 4 libertades: usar, estudiar, distribuir y mejorar. Ejemplos: Linux, LibreOffice, GIMP.</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Diseñaremos una pantalla de configuración para un videojuego que incluya:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Licencias Creative Commons</h4>
+            <p>Creative Commons ofrece licencias gratuitas para que los autores compartan sus obras bajo condiciones específicas:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Botón para iniciar el juego.</li>
-              <li>Slider para ajustar la dificultad (fácil, medio, difícil).</li>
-              <li>Checkboxes para activar/desactivar efectos de sonido y música.</li>
-              <li>Campo de texto para introducir el nombre del jugador.</li>
-              <li>Botón de radio para elegir el color del personaje.</li>
+              <li><strong>BY (Atribución):</strong> Se debe reconocer la autoría.</li>
+              <li><strong>SA (Igualar):</strong> Si se modifica, debe distribuirse con la misma licencia.</li>
+              <li><strong>NC (No Comercial):</strong> No se puede usar con fines comerciales.</li>
+              <li><strong>ND (Sin Derivadas):</strong> No se pueden crear obras derivadas.</li>
             </ul>
+            <p class="mt-2">Este proyecto educativo usa <strong>CC BY-NC 4.0</strong>: permite compartir y adaptar el material siempre que se atribuya la autoría y no se use con fines comerciales.</p>
           </div>
 
-          <!-- QUIZ SESIÓN 6 -->
-          <div class="quiz" data-correcta="c" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Cuáles son los principios clave del diseño de interfaces?</p>
-            <button class="quiz-opcion" data-valor="a">A. Solo botones grandes y llamativos.</button>
-            <button class="quiz-opcion" data-valor="b">B. Cuantos más elementos mejor.</button>
-            <button class="quiz-opcion" data-valor="c">C. Consistencia, feedback, simplicidad y accesibilidad.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="a" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué elemento usarías para ajustar el volumen entre 0 y 100?</p>
-            <button class="quiz-opcion" data-valor="a">A. Slider.</button>
-            <button class="quiz-opcion" data-valor="b">B. Checkbox.</button>
-            <button class="quiz-opcion" data-valor="c">C. Botón de texto.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="callout callout-aviso">
-            <strong>Actividad de evaluación</strong>
-            Presentación grupal de las pantallas de configuración diseñadas. Se valorará la usabilidad, la claridad de los controles y la aplicación de los principios de diseño vistos.
-          </div>
-        </div>
-      </article>
-
-      <!-- ==================== SESIÓN 7 ==================== -->
-      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
-          <div>
-            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: videojuego en MakeCode Arcade</h3>
-          </div>
-        </div>
-
-        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            Esta sesión de proyecto integrado permite al alumnado aplicar todos los conocimientos adquiridos a lo largo de la unidad en un producto final tangible y motivador.
+            <strong>Licencia de este proyecto</strong>
+            Todos los materiales de esta web están bajo licencia <strong>CC BY-NC 4.0</strong>. Puedes copiarlos, modificarlos y redistribuirlos siempre que indiques la autoría y no los uses comercialmente.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>En la sesión de cierre de la unidad, el alumnado trabajará de forma autónoma o en parejas para crear un videojuego completo en MakeCode Arcade. El juego debe incorporar al menos tres de los conceptos vistos: secuencias de instrucciones, bucles, condicionales, eventos e interacción con el usuario. Además, deberán documentar el algoritmo de su juego en pseudocódigo.</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Requisitos del proyecto</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Al menos un Sprite controlado por el jugador</strong> que se mueva con las teclas o el ratón.</li>
-              <li><strong>Un sistema de puntuación</strong> que se actualice con eventos del juego.</li>
-              <li><strong>Al menos un bucle</strong> para tareas repetitivas (movimiento de enemigos, generación de objetos, etc.).</li>
-              <li><strong>Al menos una condición</strong> para la lógica del juego (colisiones, niveles, fin de partida).</li>
-              <li><strong>Una pantalla de inicio</strong> con instrucciones claras para el jugador.</li>
-              <li><strong>Un algoritmo documentado</strong> en pseudocódigo o diagrama de flujo.</li>
-            </ul>
-          </div>
-
-          <div class="callout callout-consejo">
-            <strong>Ideas de juegos</strong>
-            Algunos ejemplos que podéis realizar: juego de esquivar obstáculos, juego de plataformas sencillo, juego de memoria con cartas, juego tipo Breakout con ladrillos, juego de persecución espacial.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Estructura del trabajo</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Redacción del decálogo</h4>
+            <p>Como cierre de la unidad, trabajaremos en grupos para redactar un <strong>decálogo de buenas prácticas de seguridad digital</strong>:</p>
             <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li><strong>Planificación (10 min):</strong> Definir la idea del juego, los controles, las reglas y los elementos visuales.</li>
-              <li><strong>Desarrollo (30 min):</strong> Programar el juego en MakeCode Arcade, añadiendo progresivamente las funcionalidades.</li>
-              <li><strong>Documentación (10 min):</strong> Escribir el pseudocódigo del algoritmo principal del juego.</li>
+              <li>Conocer los tipos de malware y cómo protegernos.</li>
+              <li>Identificar intentos de phishing.</li>
+              <li>Gestionar correctamente nuestra huella digital.</li>
+              <li>Crear contraseñas seguras y únicas.</li>
+              <li>Activar la autenticación en dos pasos.</li>
+              <li>Respetar la netiqueta en todas las plataformas.</li>
+              <li>Reconocer y prevenir el ciberacoso.</li>
+              <li>Verificar la información antes de compartirla.</li>
+              <li>Respetar la propiedad intelectual y las licencias.</li>
+              <li>Usar software libre y hardware libre cuando sea posible.</li>
             </ol>
           </div>
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Evaluación del proyecto</h4>
-            <p>El proyecto se evaluará con la siguiente rúbrica:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Funcionalidad (40%):</strong> El juego funciona correctamente, cumple los requisitos y es jugable.</li>
-              <li><strong>Calidad del código (25%):</strong> Uso correcto de bloques, código limpio y organizado.</li>
-              <li><strong>Diseño (15%):</strong> Elementos visuales coherentes, sprites personalizados, interfaz clara.</li>
-              <li><strong>Documentación (10%):</strong> Pseudocódigo claro, correcto y completo.</li>
-              <li><strong>Creatividad (10%):</strong> Originalidad de la idea, personalización del juego.</li>
-            </ul>
-          </div>
-
-          <div class="callout callout-peligro">
-            <strong>Recuerda</strong>
-            El plazo de entrega es al final de la sesión. Asegúrate de que el proyecto está guardado en tu cuenta de MakeCode Arcade y de que has enviado el pseudocódigo al profesor.
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="b" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué característica define al software libre?</p>
+            <button class="quiz-opcion" data-valor="a">A. Software propietario: código abierto, cualquiera puede modificarlo.</button>
+            <button class="quiz-opcion" data-valor="b">B. Software libre: código abierto, se puede usar, estudiar, distribuir y mejorar.</button>
+            <button class="quiz-opcion" data-valor="c">C. Software libre y propietario son lo mismo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-consejo">
             <strong>Producto de la unidad</strong>
-            Los mejores juegos se presentarán en una exposición al resto de la clase. El alumnado podrá probar los juegos de sus compañeros y votar por su favorito.
+            El decálogo grupal se presentará al resto de la clase y se elegirá el mejor para utilizarlo como referencia durante el resto del curso.
           </div>
         </div>
       </article>
@@ -663,7 +499,7 @@ FIN</code>
     <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
       <span class="text-sm text-slate-400">← Primera unidad</span>
       <a href="ud2.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
-        Siguiente: UD2 · Desarrollo de Aplicaciones Móviles →
+        Siguiente: UD2 · Introducción a la Programación →
       </a>
     </nav>
 
