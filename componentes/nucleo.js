@@ -31,9 +31,9 @@
 
   var enlaces = [
     { id: 'inicio',  texto: 'Inicio',        href: home },
-    { id: '1eso',    texto: '1º CyR',       href: base + '1eso.html' },
-    { id: '2eso',    texto: '2º CyR',       href: base + '2eso.html' },
-    { id: '3eso',    texto: '3º CyR',       href: base + '3eso.html' },
+    { id: '1cyr',    texto: '1º CyR',       href: base + '1cyr.html' },
+    { id: '2cyr',    texto: '2º CyR',       href: base + '2cyr.html' },
+    { id: '3cyr',    texto: '3º CyR',       href: base + '3cyr.html' },
     { id: 'tic',     texto: 'TIC I',         href: base + 'tic.html' },
     { id: 'licencia', texto: 'Licencia',    href: 'https://creativecommons.org/licenses/by-nc/4.0/' }
   ];
