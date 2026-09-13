@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UD3 · Desarrollo Web · 3º ESO</title>
-  <meta name="description" content="Unidad Didáctica 3 de 3º ESO: Desarrollo Web con HTML, CSS y JavaScript. Análisis de estructura web, servidores, lenguajes y animación. Saberes básicos BOJA y criterios de evaluación." />
+  <title>UD3 · Desarrollo de Aplicaciones Móviles · 3º ESO</title>
+  <meta name="description" content="Unidad Didáctica 3 de 3º ESO: Desarrollo de Aplicaciones Móviles con Thunkable. IDEs de bloques, programación orientada a eventos, sensores y proyecto final." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -33,10 +33,10 @@
         <span>·</span>
         <span>1.º Trimestre</span>
         <span>·</span>
-        <span>Bloque E</span>
+        <span>Bloque D</span>
       </div>
-      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD3 · Desarrollo Web</h1>
-      <p class="mt-3 text-brand-50/90">Profundizar en el desarrollo web mediante el análisis de la estructura de las páginas, el funcionamiento de los servidores, los lenguajes HTML/CSS/JavaScript y las técnicas de animación. Esta unidad sentará las bases para crear sitios web interactivos y accesibles.</p>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD3 · Desarrollo de Aplicaciones Móviles</h1>
+      <p class="mt-3 text-brand-50/90">Aprenderemos a crear aplicaciones móviles reales usando entornos de bloques como Thunkable. Exploraremos la programación orientada a eventos, los sensores del móvil y la interacción completa E/S. El producto final será una app funcional con interacción avanzada.</p>
     </section>
 
     <!-- SESIONES -->
@@ -47,73 +47,71 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Análisis de estructura web</h3>
+            <h3 class="font-bold text-ink-800 text-lg">IDEs de bloques para móviles: Thunkable, MIT App Inventor, AppyBuilder</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Esta sesión inicial sienta las bases teóricas para comprender cómo se organizan y diseñan los sitios web. Es fundamental que el alumnado asimile estos conceptos antes de pasar a la práctica con HTML y CSS.
+            Esta sesión presenta los entornos de desarrollo que utilizaremos a lo largo de la unidad. Es importante que los alumnos comprendan que están usando herramientas profesionales adaptadas a su nivel, no juguetes educativos.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>¿Alguna vez os habéis preguntado por qué algunas webs son fáciles de usar y otras resultan confusas? En esta sesión vamos a analizar la estructura subyacente de los sitios web, desde la organización del contenido hasta la jerarquía visual que guía la mirada del usuario. Comenzaremos visitando tres sitios web muy diferentes (una tienda online, un blog de tecnología y la web de un periódico) para identificar patrones comunes y diferencias en su diseño.</p>
+            <p>Creamos aplicaciones móviles todos los días: desde TikTok hasta Google Maps. Pero, ¿cómo se crean estas apps? Normalmente se necesitan conocimientos de programación avanzados, pero existen entornos de desarrollo que nos permiten crear apps reales sin escribir una sola línea de código. En esta sesión conocemos los tres IDEs de bloques más populares para desarrollo móvil y descubriremos qué los hace diferentes y por qué Thunkable será nuestra herramienta principal.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Organización del contenido</h4>
-            <p>Un sitio web bien organizado sigue una estructura jerárquica que facilita la navegación. Los elementos fundamentales son:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un IDE de bloques para móviles?</h4>
+            <p>Un <strong>IDE</strong> (Integrated Development Environment) es un entorno de desarrollo integrado. Los IDEs de bloques para móviles son plataformas que permiten diseñar y programar aplicaciones arrastrando y soltando bloques de código visual, similar a como se programa en Scratch pero con el objetivo de generar apps para Android e iOS.</p>
+            <p class="mt-2">Estas plataformas comparten características fundamentales:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Arquitectura de la información:</strong> Cómo se estructuran y categorizan los contenidos. Un buen mapa del sitio permite al usuario encontrar lo que busca en pocos clics.</li>
-              <li><strong>Navegación:</strong> El menú principal, los enlaces de pie de página y las migas de pan (breadcrumbs) son los pilares de la navegación web.</li>
-              <li><strong>Consistencia:</strong> Los elementos repetidos en todas las páginas (cabecera, pie, colores, tipografía) crean una experiencia coherente.</li>
-              <li><strong>Accesibilidad:</strong> El contenido debe ser usable por todas las personas, incluyendo aquellas con discapacidades visuales, motoras o cognitivas. Esto implica usar etiquetas semánticas, contraste suficiente y texto alternativo en imágenes.</li>
-            </ul>
-          </div>
-
-          <figure>
-            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=400&fit=crop" alt="Ejemplo de estructura web jerárquica" loading="lazy" />
-            <figcaption>Estructura jerárquica típica de un sitio web: página principal → categorías → contenidos</figcaption>
-          </figure>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Jerarquía visual</h4>
-            <p>La jerarquía visual determina el orden en que el usuario percibe los elementos de la página. Se consigue mediante:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Tamaño:</strong> Los titulares más grandes atraen la atención primero.</li>
-              <li><strong>Color y contraste:</strong> Los elementos con mayor contraste destacan sobre el resto.</li>
-              <li><strong>Espacio en blanco:</strong> Un buen uso del margen y el padding dirige la mirada del lector.</li>
-              <li><strong>Tipografía:</strong> Combinar distintos pesos y tamaños de fuente para diferenciar títulos, subtítulos y cuerpo de texto.</li>
-              <li><strong>Posición:</strong> Los elementos en la parte superior y a la izquierda suelen leerse primero en culturas occidentales.</li>
+              <li><strong>Editor visual:</strong> Diseñáis la interfaz de la app arrastrando botones, texto, imágenes y otros elementos.</li>
+              <li><strong>Bloques de programación:</strong> Definís el comportamiento de la app con bloques encajables.</li>
+              <li><strong>Vista previa en tiempo real:</strong> Podéis probar la app en vuestro móvil mientras la desarrolláis.</li>
+              <li><strong>Exportación a APK:</strong> Generáis un archivo instalable en Android o una app para iOS.</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Interactividad y experiencia de usuario</h4>
-            <p>La interactividad se refiere a todo lo que el usuario puede hacer en una web: hacer clic en botones, rellenar formularios, desplazarse, pasar el cursor por encima de elementos, etc. Una buena experiencia de usuario (UX) implica tiempos de carga rápidos, retroalimentación visual clara (hover, focus) y diseño responsive que se adapte a cualquier tamaño de pantalla.</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Comparativa de IDEs</h4>
+            <p><strong>Thunkable:</strong> Plataforma moderna con interfaz muy pulida. Ofrece componentes avanzados como bases de datos en la nube, reconocimiento de voz y realidad aumentada. Tiene una versión gratuita completa y una versión de pago con funciones premium. Su punto fuerte es la facilidad de uso y la comunidad activa.</p>
+            <p class="mt-2"><strong>MIT App Inventor:</strong> Creado por el MIT, es el pionero en este campo. Es completamente gratuito y de código abierto. Tiene una comunidad enorme con miles de tutoriales y proyectos de ejemplo. Su interfaz es algo menos moderna que Thunkable, pero es extremadamente completa. Ideal para proyectos educativos.</p>
+            <p class="mt-2"><strong>AppyBuilder:</strong> Basado en App Inventor pero con una interfaz más moderna. Ofrece plantillas predefinidas que facilitan el inicio rápido de proyectos. Es menos conocido pero tiene funcionalidades interesantes para apps comerciales.</p>
           </div>
 
-          <div class="callout callout-aviso">
-            <strong>Importante</strong>
-            La accesibilidad web no es opcional. El 15% de la población mundial tiene alguna discapacidad. El diseño accesible beneficia a todos los usuarios, no solo a quienes tienen necesidades específicas.
+          <div class="callout callout-consejo">
+            <strong>Consejo</strong>
+            Aunque Thunkable es nuestra herramienta principal, es bueno conocer alternativas. Cada plataforma tiene sus fortalezas y en el futuro profesional podréis elegir la que mejor se adapte a vuestras necesidades.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Características compartidas</h4>
+            <p>Todos estos IDEs comparten un patrón común de diseño:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Vista de diseño:</strong> Panel visual donde colocáis los componentes de la interfaz (botones, etiquetas, imágenes, etc.).</li>
+              <li><strong>Vista de bloques:</strong> Panel donde definís la lógica de la app usando bloques de programación.</li>
+              <li><strong>Árbol de componentes:</strong> Lista jerárquica de todos los elementos de vuestra app.</li>
+              <li><strong>Propiedades:</strong> Configuración de cada componente (color, tamaño, texto, posición).</li>
+              <li><strong>Conexión con el móvil:</strong> Podéis probar la app en tiempo real escaneando un código QR.</li>
+            </ol>
           </div>
 
           <!-- QUIZ SESIÓN 1 -->
-          <div class="quiz" data-correcta="a" data-total="3">
+          <div class="quiz" data-correcta="c" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué implica el diseño accesible en una web?</p>
-            <button class="quiz-opcion" data-valor="a">A. Utilizar etiquetas semánticas, contraste suficiente y texto alternativo en imágenes.</button>
-            <button class="quiz-opcion" data-valor="b">B. Usar muchos colores llamativos y animaciones en la página.</button>
-            <button class="quiz-opcion" data-valor="c">C. Limitar el contenido a una sola columna para que sea más sencillo.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué son los IDEs de bloques para móviles?</p>
+            <button class="quiz-opcion" data-valor="a">A. Son entornos de programación textual para crear apps.</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo permiten crear juegos, no apps utilitarias.</button>
+            <button class="quiz-opcion" data-valor="c">C. Permiten crear apps reales arrastrando bloques sin escribir código.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
-          <div class="callout callout-consejo">
-            <strong>Actividad práctica</strong>
-            En parejas, visitad tres sitios web diferentes y completad una tabla comparativa con: tipo de navegación, número de niveles de profundidad, uso de colores, presencia de elementos accesibles (alt en imágenes, contraste, labels en formularios). Comparad vuestros hallazgos con los de otros grupos.
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una cuenta gratuita enThunkable y explorar la interfaz. Identificar: panel de diseño, panel de bloques, árbol de componentes y propiedades. Entregar capturas de pantalla señalando cada zona.
           </div>
         </div>
       </article>
@@ -123,87 +121,63 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Tipos de servidores web</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Programación orientada a eventos</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            Esta sesión introduce el concepto de servidor web y su funcionamiento. Es clave para que el alumnado comprenda la diferencia entre contenido estático y dinámico, y cómo los servidores entregan las páginas que vemos en el navegador.
-          </div>
-
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Cada vez que escribimos una URL en el navegador, se produce una comunicación entre nuestro dispositivo y un servidor web. En esta sesión vamos a entender cómo funciona ese proceso, qué tipos de servidores existen y qué diferencias hay entre servidores estáticos y dinámicos. Este conocimiento es esencial para comprender el desarrollo web completo, no solo el código que escribimos en el cliente.</p>
+            <p>La programación tradicional es <strong>secuencial</strong>: el código se ejecuta línea por línea desde arriba hasta abajo. Pero las aplicaciones móviles funcionan de forma diferente: responden a lo que el usuario hace. Si pulsáis un botón, pasa algo. Si deslizáis la pantalla, cambia el contenido. Esto es la <strong>programación orientada a eventos</strong>, y es el paradigma que usan todas las apps de vuestro móvil.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un servidor web?</h4>
-            <p>Un <strong>servidor web</strong> es un programa o sistema que almacena y entrega contenido web (páginas HTML, imágenes, archivos CSS, JavaScript, etc.) a los navegadores de los usuarios cuando reciben una solicitud. El protocolo que facilita esta comunicación es <strong>HTTP/HTTPS</strong>.</p>
-            <p class="mt-2">El proceso básico es:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>El usuario escribe una URL en el navegador.</li>
-              <li>El navegador envía una solicitud HTTP al servidor.</li>
-              <li>El servidor procesa la solicitud y responde con el contenido (HTML, CSS, JS, imágenes).</li>
-              <li>El navegador interpreta el código y renderiza la página en pantalla.</li>
-            </ol>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un evento?</h4>
+            <p>Un <strong>evento</strong> es cualquier acción que ocurre en la app y que el programa debe procesar. Puede ser una acción del usuario (pulsar un botón, escribir texto, deslizar) o del sistema (llega un mensaje, cambia la orientación del móvil, se detecta un sensor).</p>
+            <p class="mt-2">En programación orientada a eventos, escribimos <strong>qué hacer</strong> cuando cada evento ocurre, pero no controlamos cuándo ocurren. El sistema operativo gestiona los eventos y ejecuta nuestro código cuando corresponde.</p>
           </div>
 
-          <figure>
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop" alt="Servidor web en un centro de datos" loading="lazy" />
-            <figcaption>Centro de datos con servidores alojando sitios web</figcaption>
-          </figure>
+          <div class="callout callout-nota">
+            <strong>Enfoque reactivo</strong>
+            La programación orientada a eventos es fundamentalmente <strong>reactiva</strong>: el programa no inicia acciones por sí mismo, sino que reacciona a estímulos externos. Este patrón es universal en interfaces gráficas, desde una web hasta un sistema de control industrial.
+          </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Tipos de servidores por software</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Programación secuencial vs. orientada a eventos</h4>
+            <p><strong>Secuencial (scripts, Python):</strong> El código se ejecuta de arriba a abajo. El programa empieza, ejecuta sus instrucciones y termina. Ejemplo: un script que calcula la media de unas notas.</p>
+            <p class="mt-2"><strong>Orientada a eventos (apps móviles):</strong> El programa nunca "termina" mientras la app está abierta. Espera indefinidamente a que ocurran eventos y ejecuta el código correspondiente. Ejemplo: una app de calculadora que espera a que pulsemos botones.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Características</h4>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Apache HTTP Server:</strong> El servidor web de código abierto más popular del mundo. Extensible mediante módulos, funciona en prácticamente cualquier sistema operativo. Es el motor detrás de millones de sitios web, incluyendo WordPress.</li>
-              <li><strong>Nginx:</strong> Conocido por su alto rendimiento y bajo consumo de recursos. Funciona con un modelo asíncrono de eventos, lo que le permite manejar miles de conexiones simultáneas. Muy usado como proxy inverso y balanceador de carga.</li>
-              <li><strong>Microsoft IIS:</strong> Servidor web integrado en Windows Server. Se configura mediante archivos web.config y es la opción natural para entornos con tecnologías Microsoft (ASP.NET).</li>
-              <li><strong>LiteSpeed:</strong> Alternativa de alto rendimiento a Apache, compatible con sus configuraciones (.htaccess) pero con menor consumo de memoria.</li>
+              <li><strong>Desacoplamiento:</strong> La interfaz y la lógica están separadas. Podéis cambiar la apariencia sin tocar el código.</li>
+              <li><strong>Asincronía:</strong> Los eventos pueden ocurrir en cualquier momento y en cualquier orden.</li>
+              <li><strong>Interactividad:</strong> La app siempre está "viva" y lista para responder.</li>
+              <li><strong>Múltiples fuentes:</strong> Los eventos pueden venir del usuario, del sistema o de servicios externos.</li>
+            </ul>
+          </div>
+
+          <!-- VÍDEO: Programación orientada a eventos -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira esta introducción a la programación orientada a eventos para comprender mejor el enfoque reactivo:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/p8vHTwVqvWs" title="Programación orientada a eventos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ventajas e inconvenientes</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Ventajas:</strong> Apps interactivas, experiencia de usuario natural, código organizado por funcionalidad, fácil de mantener y ampliar.</li>
+              <li><strong>Inconvenientes:</strong> Flujo de control menos predecible, gestión de estado compleja, posible concurrencia de eventos, depuración más difícil.</li>
             </ul>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Vídeo recomendado</strong>
-            Mira este vídeo para entender cómo funciona un servidor web y los diferentes tipos que existen:
-          </div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/72g2CpKg0Ck" title="Tipos de servidores web" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Servidores estáticos vs. dinámicos</h4>
-            <p><strong>Contenido estático:</strong> El servidor entrega archivos tal cual están almacenados (HTML, CSS, JS, imágenes). No hay procesamiento adicional. Es rápido pero inflexible: cada visita ve exactamente lo mismo. Ejemplo: una página de presentación de una empresa.</p>
-            <p class="mt-2"><strong>Contenido dinámico:</strong> El servidor ejecuta código (PHP, Python, Node.js, etc.) antes de entregar la respuesta. Puede generar contenido personalizado, interactuar con bases de datos y adaptarse al usuario. Ejemplo: redes sociales, tiendas online, correos electrónicos.</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Servidores por propósito</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Servidores de archivos:</strong> Almacenan y comparten archivos en una red (FTP, NAS).</li>
-              <li><strong>Servidores de correo:</strong> Gestionan el envío y recepción de correos electrónicos (SMTP, IMAP).</li>
-              <li><strong>Servidores de bases de datos:</strong> Almacenan y procesan datos estructurados (MySQL, PostgreSQL, MongoDB).</li>
-              <li><strong>Servidores de aplicaciones:</strong> Ejecutan aplicaciones web del lado del servidor (Django, Express, Laravel).</li>
-              <li><strong>Servidores de proxies:</strong> Actúan como intermediarios entre el cliente y el servidor original, proporcionando caché, anonimato o filtrado.</li>
-            </ul>
-          </div>
-
-          <div class="callout callout-peligro">
-            <strong>Dato real</strong>
-            Apache y Nginx juntos alojan más del 60% de todos los sitios web del mundo. Conocer ambos servidores es esencial para cualquier desarrollador web.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Vamos a configurar un servidor web local con Apache (o Nginx) en nuestro ordenador:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Instalar Apache usando XAMPP o el gestor de paquetes del sistema.</li>
-              <li>Crear un archivo <code class="bg-white/50 px-1 rounded">index.html</code> en la carpeta de documentos del servidor.</li>
-              <li>Acceder a <code class="bg-white/50 px-1 rounded">http://localhost</code> desde el navegador.</li>
-              <li>Crear una segunda página y comprobar que se puede acceder a ella añadiendo la ruta.</li>
-            </ol>
+            <strong>Actividad</strong>
+            Analizar 3 apps del móvil (calculadora, reloj, galería) e identificar al menos 3 eventos en cada una. Clasificarlos: ¿son generados por el usuario o por el sistema?
           </div>
         </div>
       </article>
@@ -213,95 +187,72 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">HTML en profundidad</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Definición de eventos: tipos comunes y bloques en Thunkable</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            En esta sesión profundizamos en HTML más allá de las etiquetas básicas. El dominio de las etiquetas semánticas, los formularios y los atributos esencial es fundamental para crear páginas web accesibles y estructuradas correctamente.
+            En esta sesión los alumnos aprenden a identificar y crear los eventos más habituales en una app móvil. Es fundamental que practiquen con Thunkable para consolidar estos conceptos.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>HTML (HyperText Markup Language) es el lenguaje de marcado que estructura el contenido de todas las páginas web. En sesiones anteriores ya hemos visto las etiquetas básicas (títulos, párrafos, enlaces, imágenes). Ahora vamos a profundizar en las etiquetas semánticas, los formularios interactivos y los atributos que hacen que HTML sea realmente potente.</p>
+            <p>En la sesión anterior aprendimos qué es la programación orientada a eventos. Ahora vamos a ver concretamente los tipos de eventos más comunes en aplicaciones móviles y cómo se implementan en Thunkable. Cada tipo de evento corresponde a una interacción específica del usuario o del sistema.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Etiquetas semánticas</h4>
-            <p>HTML5 introdujo etiquetas semánticas que dan significado estructural al contenido, mejorando la accesibilidad y el SEO:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de eventos comunes</h4>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>&lt;header&gt;</strong>: Cabecera de la página o de una sección. Contiene títulos, navegación y elementos de identificación.</li>
-              <li><strong>&lt;nav&gt;</strong>: Bloque de navegación principal. Contiene los enlaces de menú.</li>
-              <li><strong>&lt;main&gt;</strong>: Contenido principal de la página. Solo debe haber uno por página.</li>
-              <li><strong>&lt;section&gt;</strong>: Sección temática del contenido. Agrupa contenido relacionado.</li>
-              <li><strong>&lt;article&gt;</strong>: Contenido independiente que puede distribuirse (noticia, entrada de blog, tarjeta).</li>
-              <li><strong>&lt;aside&gt;</strong>: Contenido complementario (barra lateral, anuncios, enlaces relacionados).</li>
-              <li><strong>&lt;footer&gt;</strong>: Pie de página o sección con información de cierre, derechos de autor y enlaces.</li>
-              <li><strong>&lt;figure&gt; y &lt;figcaption&gt;</strong>: Para incluir imágenes, diagramas o código con su pie de foto.</li>
-            </ul>
-          </div>
-
-          <figure>
-            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=400&fit=crop" alt="Estructura semántica de HTML5" loading="lazy" />
-            <figcaption>Diagrama de las etiquetas semánticas principales de HTML5</figcaption>
-          </figure>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Formularios interactivos</h4>
-            <p>Los formularios permiten al usuario enviar datos al servidor. Los elementos más importantes son:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>&lt;form&gt;</strong>: Contenedor principal con atributos <code class="bg-white/50 px-1 rounded">action</code> (URL de destino) y <code class="bg-white/50 px-1 rounded">method</code> (GET o POST).</li>
-              <li><strong>&lt;input&gt;</strong>: Campo de entrada con tipos: text, email, password, number, date, checkbox, radio, file, submit, range, color.</li>
-              <li><strong>&lt;textarea&gt;</strong>: Campo de texto multilínea.</li>
-              <li><strong>&lt;select&gt; y &lt;option&gt;</strong>: Menú desplegable de selección.</li>
-              <li><strong>&lt;button&gt;</strong>: Botón de acción con tipos submit, reset y button.</li>
-              <li><strong>&lt;label&gt;</strong>: Etiqueta asociada a un campo, mejora la accesibilidad al vincular el texto con el input.</li>
-              <li><strong>&lt;fieldset&gt; y &lt;legend&gt;</strong>: Agrupan campos relacionados dentro de un formulario.</li>
-            </ul>
-          </div>
-
-          <div class="callout callout-aviso">
-            <strong>Recuerda</strong>
-            Todo campo de formulario debe tener una etiqueta &lt;label&gt; asociada mediante el atributo <code class="bg-white/50 px-1 rounded">for</code>. Esto es obligatorio para la accesibilidad y permite que los lectores de pantalla identifiquen cada campo.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Atributos esenciales</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>class / id:</strong> Identificadores para CSS y JavaScript.</li>
-              <li><strong>href / src:</strong> URLs de destino para enlaces e imágenes.</li>
-              <li><strong>alt:</strong> Texto alternativo para imágenes (obligatorio para accesibilidad).</li>
-              <li><strong>title:</strong> Texto emergente al pasar el cursor.</li>
-              <li><strong>data-*</strong>: Atributos de datos personalizados para JavaScript.</li>
-              <li><strong>required:</strong> Indica que un campo de formulario es obligatorio.</li>
-              <li><strong>placeholder:</strong> Texto de ejemplo dentro del campo.</li>
-              <li><strong>disabled / readonly:</strong> Deshabilita o bloquea un campo.</li>
+              <li><strong>Click:</strong> El usuario pulsa un botón, imagen o elemento. Es el evento más básico y frecuente.</li>
+              <li><strong>Touch / LongPress:</strong> El usuario toca la pantalla (con o sin mantención). Útil para menús contextuales.</li>
+              <li><strong>Drag:</strong> El usuario arrastra un elemento. Fundamental para juegos y interfaces táctiles.</li>
+              <li><strong>Submit:</strong> El usuario envía un formulario o confirma una acción.</li>
+              <li><strong>Change:</strong> El valor de un campo de entrada cambia (texto, selector, interruptor).</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Crear una página web completa de una escuela usando exclusivamente etiquetas semánticas. Debe incluir:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Bloques de eventos en Thunkable</h4>
+            <p>En Thunkable, los eventos se representan con bloques especiales que contienen el código que se ejecuta cuando el evento ocurre:</p>
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>// Ejemplo de evento Click en pseudocódigo de bloques
+Evento: Botón "Enviar" → Click
+Acción:Mostrar mensaje "¡Enviado!"
+Acción: Limpiar campo de texto</code></pre>
+            <p class="mt-2">Los bloques de eventos en Thunkable tienen la forma: <code class="bg-slate-100 px-1 rounded text-xs">Cuando [componente] ocurre [evento]</code>. Dentro colocáis las acciones que queréis que se ejecuten.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico: botón con evento Click</h4>
+            <p>Imaginemos una app sencilla con un botón que cambia el color de fondo al pulsarlo:</p>
             <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Cabecera con logo y navegación principal.</li>
-              <li>Sección principal con al menos 3 artículos.</li>
-              <li>Barra lateral con enlaces relacionados.</li>
-              <li>Formulario de contacto con validación básica en HTML5.</li>
-              <li>Pie de página con información de copyright.</li>
+              <li>Añadid un botón al diseño con texto "Cambiar color".</li>
+              <li>En la vista de bloques, buscad el evento "Cuando Botón1 Click".</li>
+              <li>Dentro del bloque, añadid: "Establecer Screen1.BackgroundColor a Rojo".</li>
+              <li>Probad la app en el móvil. Cada vez que pulsáis el botón, el fondo cambia.</li>
             </ol>
           </div>
 
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            Un mismo componente puede tener múltiples eventos. Por ejemplo, un botón puede tener un evento Click y otro LongPress, cada uno ejecutando código diferente. No debéis confundir eventos con acciones: el evento es el "cuándo" y la acción es el "qué hacer".
+          </div>
+
           <!-- QUIZ SESIÓN 3 -->
-          <div class="quiz" data-correcta="c" data-total="3">
+          <div class="quiz" data-correcta="a" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué representa la etiqueta semántica &lt;article&gt;?</p>
-            <button class="quiz-opcion" data-valor="a">A. &lt;div&gt; es una etiqueta semántica que indica una sección temática.</button>
-            <button class="quiz-opcion" data-valor="b">B. &lt;span&gt; se usa para definir la cabecera principal de la página.</button>
-            <button class="quiz-opcion" data-valor="c">C. &lt;article&gt; define contenido independiente que puede distribuirse.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuáles son los tipos de eventos más comunes en apps móviles?</p>
+            <button class="quiz-opcion" data-valor="a">A. Click, Touch, Drag, Submit, Change</button>
+            <button class="quiz-opcion" data-valor="b">B. Print, Input, While, For</button>
+            <button class="quiz-opcion" data-valor="c">C. Start, Stop, Pause, Resume</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad</strong>
+            Crear en Thunkable una pantalla con 3 botones de colores diferentes. Cada botón debe cambiar el fondo de la pantalla a su color correspondiente cuando se pulsa. Añadir también un botón "Restablecer" que ponga el fondo blanco.
           </div>
         </div>
       </article>
@@ -311,99 +262,65 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">CSS en profundidad</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Generadores de eventos: sensores del dispositivo</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            Esta sesión es fundamental para que el alumnado domine las herramientas de diseño visual de la web. CSS es el lenguaje que da estilo y vida a las páginas, y comprender su modelo de cajas, selectores y sistemas de layout es clave para el desarrollo web moderno.
-          </div>
-
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>CSS (Cascading Style Sheets) es el lenguaje que controla la apariencia visual de las páginas web. Mientras HTML estructura el contenido, CSS define colores, tipografías, espaciados, posiciones y comportamiento visual. En esta sesión profundizaremos en los selectores, el modelo de cajas y los sistemas de layout modernos: Flexbox y Grid.</p>
+            <p>Vuestro móvil es mucho más que una pantalla táctil. Contiene docenas de sensores que detectan el entorno: aceleración, orientación, posición geográfica, nivel de luz, presión atmosférica, proximidad y más. Cada vez que estos sensores detectan un cambio, generan un evento que nuestra app puede procesar. En esta sesión descubriremos qué sensores tiene vuestro móvil y cómo usarlos en Thunkable para crear apps más inteligentes y adaptativas.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Selectores CSS</h4>
-            <p>Los selectores determinan a qué elementos HTML se aplican los estilos. Los principales son:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Selector de tipo:</strong> <code class="bg-white/50 px-1 rounded">p { }</code> — Aplica a todos los párrafos.</li>
-              <li><strong>Selector de clase:</strong> <code class="bg-white/50 px-1 rounded">.card { }</code> — Aplica a todos los elementos con class="card".</li>
-              <li><strong>Selector de ID:</strong> <code class="bg-white/50 px-1 rounded">#header { }</code> — Aplica solo al elemento con id="header".</li>
-              <li><strong>Selector descendente:</strong> <code class="bg-white/50 px-1 rounded">nav a { }</code> — Aplica a todos los enlaces dentro de un nav.</li>
-              <li><strong>Selector hijo:</strong> <code class="bg-white/50 px-1 rounded">ul > li { }</code> — Aplica solo a li directos de ul.</li>
-              <li><strong>Pseudo-clases:</strong> <code class="bg-white/50 px-1 rounded">:hover</code>, <code class="bg-white/50 px-1 rounded">:focus</code>, <code class="bg-white/50 px-1 rounded">:nth-child()</code>.</li>
-              <li><strong>Pseudo-elementos:</strong> <code class="bg-white/50 px-1 rounded">::before</code>, <code class="bg-white/50 px-1 rounded">::after</code>.</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">Acelerómetro</h4>
+            <p>El <strong>acelerómetro</strong> mide la aceleración del dispositivo en tres ejes (X, Y, Z). Detecta si el móvil está en movimiento, si lo inclinamos o si lo sacudimos. Se usa en juegos de carreras, apps de fitness que cuentan pasos, y para detectar gestos como agitar para deshacer.</p>
+            <p class="mt-2">En Thunkable: el evento <code class="bg-slate-100 px-1 rounded text-xs">Cuando Acelerómetro1 Cambia</code> proporciona los valores de aceleración en cada eje.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Modelo de cajas (Box Model)</h4>
-            <p>Cada elemento HTML es una caja rectangular compuesta por:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Content (contenido):</strong> El área donde se muestra el texto o la imagen.</li>
-              <li><strong>Padding (relleno):</strong> Espacio entre el contenido y el borde.</li>
-              <li><strong>Border (borde):</strong> Línea que rodea el padding.</li>
-              <li><strong>Margen (margin):</strong> Espacio exterior que separa el elemento de otros.</li>
-            </ul>
-            <p class="mt-2">La propiedad <code class="bg-white/50 px-1 rounded">box-sizing: border-box</code> hace que el padding y el border se incluyan dentro del ancho total, simplificando enormemente el diseño.</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Giroscopio</h4>
+            <p>El <strong>giroscopio</strong> mide la velocidad de rotación del dispositivo. A diferencia del acelerómetro, que mide movimiento lineal, el giroscopio detecta giros y rotaciones. Se usa en realidad aumentada, juegos de orientación y estabilización de imagen en cámaras.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato curioso</strong>
+            Los smartphones modernos combinan acelerómetro y giroscopio en un chip IMU (Inertial Measurement Unit). Este sistema es el mismo que se usa en aviones y cohetes, pero a una escala microscópica.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Flexbox</h4>
-            <p>Flexbox es un sistema de layout unidimensional que facilita la alineación y distribución de elementos dentro de un contenedor. Propiedades principales:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-white/50 px-1 rounded">display: flex</code> — Activa Flexbox en el contenedor.</li>
-              <li><code class="bg-white/50 px-1 rounded">justify-content</code> — Alineación horizontal (flex-start, center, space-between, space-around).</li>
-              <li><code class="bg-white/50 px-1 rounded">align-items</code> — Alineación vertical (flex-start, center, stretch).</li>
-              <li><code class="bg-white/50 px-1 rounded">flex-direction</code> — Dirección (row, column).</li>
-              <li><code class="bg-white/50 px-1 rounded">flex-wrap</code> — Permite saltos de línea (wrap).</li>
-              <li><code class="bg-white/50 px-1 rounded">gap</code> — Espacio entre elementos.</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">GPS (Ubicación)</h4>
+            <p>El <strong>GPS</strong> proporciona la posición geográfica exacta del dispositivo: latitud, longitud y altitud. Se usa en mapas, apps de geolocalización, seguimiento de rutas y servicios basados en la ubicación.</p>
+            <p class="mt-2">En Thunkable: el componente <code class="bg-slate-100 px-1 rounded text-xs">Ubicación</code> proporciona eventos de cambio de posición y valores de latitud/longitud.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">CSS Grid</h4>
-            <p>Grid es un sistema de layout bidimensional que permite crear estructuras complejas de filas y columnas. Propiedades principales:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Otros sensores importantes</h4>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-white/50 px-1 rounded">display: grid</code> — Activa Grid en el contenedor.</li>
-              <li><code class="bg-white/50 px-1 rounded">grid-template-columns</code> — Define las columnas.</li>
-              <li><code class="bg-white/50 px-1 rounded">grid-template-rows</code> — Define las filas.</li>
-              <li><code class="bg-white/50 px-1 rounded">grid-area</code> — Ubica un elemento en el grid.</li>
-              <li><code class="bg-white/50 px-1 rounded">grid-column / grid-row</span> — Ubicación por líneas.</li>
+              <li><strong>Proximidad:</strong> Detecta si hay un objeto cerca de la pantalla (se apaga la pantalla al hablar al teléfono).</li>
+              <li><strong>Luz ambiental:</strong> Mide la intensidad de la luz circundante (ajuste automático de brillo).</li>
+              <li><strong>Barómetro:</strong> Mide la presión atmosférica (cálculo de altitud, predicción meteorológica).</li>
+              <li><strong>Magnetómetro:</strong> Detecta el campo magnético terrestre (brújula digital).</li>
             </ul>
+          </div>
+
+          <!-- VÍDEO: Sensores móviles -->
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Mira este vídeo para entender cómo funcionan los sensores en los smartphones modernos:
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" title="Sensores en smartphones" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo: nivel digital</h4>
+            <p>Usando el acelerómetro podemos crear un nivel digital sencillo que muestre si una superficie está horizontal o inclinada. Cuando el dispositivo detecta que está nivelado (aceleración cercana a 0 en todos los ejes), muestra un mensaje de confirmación.</p>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Consejo práctico</strong>
-            Usa Flexbox para layouts en una dimensión (una fila o una columna) y Grid para layouts en dos dimensiones (filas y columnas). Ambos se pueden combinar: un contenedor Grid puede contener elementos Flex, y viceversa.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Responsive Design</h4>
-            <p>El diseño responsive hace que las páginas se adapten a diferentes tamaños de pantalla. Las herramientas principales son:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Media queries:</strong> <code class="bg-white/50 px-1 rounded">@media (max-width: 768px) { }</code> — Aplica estilos según el ancho del viewport.</li>
-              <li><strong>Unidades relativas:</strong> <code class="bg-white/50 px-1 rounded">rem</code>, <code class="bg-white/50 px-1 rounded">em</code>, <code class="bg-white/50 px-1 rounded">%</code>, <code class="bg-white/50 px-1 rounded">vw/vh</code> — Se adaptan al tamaño del contenedor o la ventana.</li>
-              <li><strong>Imágenes fluidas:</strong> <code class="bg-white/50 px-1 rounded">max-width: 100%</code> — Las imágenes nunca desbordan su contenedor.</li>
-              <li><strong>Viewport meta tag:</strong> <code class="bg-white/50 px-1 rounded">&lt;meta name="viewport" content="width=device-width"&gt;</code></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Crear una landing page responsive que combine Flexbox y Grid:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Cabecera con Flexbox (logo a la izquierda, menú a la derecha).</li>
-              <li>Sección hero con imagen de fondo y texto centrado.</li>
-              <li>Cuadrícula de 3 tarjetas de servicios con CSS Grid.</li>
-              <li>Formulario de contacto con Flexbox para alinear campos.</li>
-              <li>Pie de página con 3 columnas en Grid.</li>
-              <li>Añadir media queries para que funcione en móvil.</li>
-            </ol>
+            <strong>Actividad</strong>
+            Crear en Thunkable una app que use al menos 2 sensores diferentes. Por ejemplo: una app que muestre la orientación del móvil (acelerómetro) y la ubicación actual (GPS).
           </div>
         </div>
       </article>
@@ -413,103 +330,72 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Introducción a JavaScript</h3>
+            <h3 class="font-bold text-ink-800 text-lg">E/S en apps: captura de eventos y respuesta. Ejemplo: puzzles y clima</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            JavaScript es el lenguaje que hace que las páginas web sean interactivas. Esta sesión es la puerta de entrada a la programación del lado del cliente. Es recomendable que el alumnado tenga nociones básicas de lógica (variables, condicionales) antes de esta sesión.
+            Esta sesión aplica todos los conceptos anteriores en ejemplos concretos. Los alumnos verán el flujo completo E/S en acción y podrán experimentar con apps reales.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>HTML da estructura, CSS da estilo, pero JavaScript da <strong>vida</strong> a una página web. JavaScript permite responder a las acciones del usuario (clics, pulsaciones de teclado, scroll), validar formularios antes de enviarlos, cambiar el contenido de la página sin recargarla y crear animaciones complejas. Es el único lenguaje que se ejecuta directamente en el navegador.</p>
-          </div>
-
-          <div class="callout callout-consejo">
-            <strong>Vídeo recomendado</strong>
-            Mira esta introducción a JavaScript para familiarizarte con los conceptos básicos antes de empezar con la práctica:
-          </div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/W6NZfL5kdCg" title="Introducción a JavaScript" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <p>En programación, <strong>E/S</strong> significa <strong>Entrada/Salida</strong>. En una app móvil, la entrada son los datos que recibimos del usuario o de los sensores, y la salida es lo que mostramos en pantalla, reproducimos como sonido o enviamos a un servidor. En esta sesión veremos cómo gestionar el flujo completo de E/S con dos ejemplos prácticos: una app de puzzles y una app del clima.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Manipulación del DOM</h4>
-            <p>El <strong>DOM</strong> (Document Object Model) es una representación en forma de árbol de todos los elementos de la página. JavaScript puede leer y modificar el DOM en tiempo real:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">App de Puzzles</h4>
+            <p>Una app de puzzles es un ejemplo perfecto del ciclo E/S:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-white/50 px-1 rounded">document.getElementById('id')</code> — Selecciona un elemento por su ID.</li>
-              <li><code class="bg-white/50 px-1 rounded">document.querySelector('.clase')</code> — Selecciona el primer elemento que coincide con el selector CSS.</li>
-              <li><code class="bg-white/50 px-1 rounded">document.querySelectorAll('p')</code> — Selecciona todos los elementos que coinciden.</li>
-              <li><code class="bg-white/50 px-1 rounded">element.textContent = 'Nuevo texto'</code> — Cambia el contenido de texto.</li>
-              <li><code class="bg-white/50 px-1 rounded">element.innerHTML = '&lt;h2&gt;Título&lt;/h2&gt;'</code> — Cambia el contenido HTML.</li>
-              <li><code class="bg-white/50 px-1 rounded">element.classList.add('activo')</code> — Añade una clase CSS.</li>
-              <li><code class="bg-white/50 px-1 rounded">element.style.color = 'red'</code> — Modifica un estilo directamente.</li>
+              <li><strong>Entrada:</strong> El usuario toca una pieza del puzzle (evento Click).</li>
+              <li><strong>Proceso:</strong> La app determina si la pieza está en la posición correcta y actualiza el estado del puzzle.</li>
+              <li><strong>Salida:</strong> La app reorganiza las piezas visualmente y, si el puzzle está completo, muestra un mensaje de felicitación.</li>
             </ul>
+            <p class="mt-2">La clave está en mantener el <strong>estado</strong> del puzzle: qué piezas están colocadas, cuántos movimientos se han hecho, y si el juego ha terminado.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Eventos</h4>
-            <p>Los eventos son señales que el navegador envía cuando ocurre algo (un clic, una pulsación de tecla, una carga de página). Se gestionan con <code class="bg-white/50 px-1 rounded">addEventListener</code>:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">App del Clima</h4>
+            <p>Una app del clima muestra cómo funciona la E/S con datos externos:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-white/50 px-1 rounded">click</code> — Clic del ratón.</li>
-              <li><code class="bg-white/50 px-1 rounded">keydown / keyup</code> — Pulsación de tecla.</li>
-              <li><code class="bg-white/50 px-1 rounded">submit</code> — Envío de formulario.</li>
-              <li><code class="bg-white/50 px-1 rounded">mouseover / mouseout</code> — Entrada/salida del cursor.</li>
-              <li><code class="bg-white/50 px-1 rounded">load</code> — La página ha terminado de cargar.</li>
+              <li><strong>Entrada:</strong> El usuario escribe su ciudad (evento Change en campo de texto) o la app obtiene la ubicación (evento de GPS).</li>
+              <li><strong>Proceso:</strong> La app consulta una API meteorológica (servicio externo) con la ubicación obtenida.</li>
+              <li><strong>Salida:</strong> La app muestra temperatura, humedad, condiciones del tiempo y una imagen representativa.</li>
             </ul>
+            <p class="mt-2">Este ejemplo introduce el concepto de <strong>API</strong> (Application Programming Interface): un servicio web que nuestra app puede consultar para obtener datos en tiempo real.</p>
           </div>
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Validación de formularios</h4>
-            <p>JavaScript permite validar los datos del usuario antes de enviarlos al servidor. Esto evita errores y mejora la experiencia:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Comprobar que los campos obligatorios no están vacíos.</li>
-              <li>Validar que un email tiene un formato correcto.</li>
-              <li>Verificar que las contraseñas coinciden.</li>
-              <li>Mostrar mensajes de error en tiempo real junto al campo correspondiente.</li>
-            </ul>
-            <p class="mt-2"><strong>Ejemplo práctico:</strong> Crear un formulario de registro que valide nombre, email y contraseña, mostrando mensajes de error en rojo si los datos no son correctos.</p>
-          </div>
-
-          <div class="callout callout-peligro">
+          <div class="callout callout-aviso">
             <strong>Importante</strong>
-            La validación con JavaScript es útil para mejorar la experiencia del usuario, pero nunca debe ser la única medida de seguridad. Siempre se debe validar también en el servidor, ya que el usuario puede desactivar JavaScript o modificar el código.
+            Las apps del clima necesitan permisos del usuario para acceder a la ubicación. En Thunkable debéis activar los permisos de ubicación en la configuración de la app.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Contenido dinámico</h4>
-            <p>Con JavaScript podemos modificar la página sin recargarla. Ejemplos:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Mostrar/ocultar secciones con un botón.</li>
-              <li>Cambiar el tema de la página (modo claro/oscuro).</li>
-              <li>Cargar más contenido al hacer scroll (infinite scroll).</li>
-              <li>Crear un contador de clics en tiempo real.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Crear una página interactiva que incluya:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Patrón E/S en Thunkable</h4>
+            <p>En Thunkable, el patrón E/S se implementa así:</p>
             <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Un botón que cambie el color de fondo de la página.</li>
-              <li>Un contador que muestre el número de clics realizados.</li>
-              <li>Un formulario de contacto con validación en tiempo real.</li>
-              <li>Una sección que se muestre/oculte al hacer clic en un botón.</li>
+              <li><strong>Captura de entrada:</strong> Definís un evento que escucha la acción del usuario o sensor.</li>
+              <li><strong>Procesamiento:</strong> Dentro del evento, usáis bloques lógicos para procesar los datos.</li>
+              <li><strong>Generación de salida:</strong> Actualizáis componentes de pantalla, enviáis datos o reproducís sonidos.</li>
             </ol>
           </div>
 
           <!-- QUIZ SESIÓN 5 -->
           <div class="quiz" data-correcta="b" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué hace addEventListener en JavaScript?</p>
-            <button class="quiz-opcion" data-valor="a">A. document.getElementById() selecciona todos los elementos de la página.</button>
-            <button class="quiz-opcion" data-valor="b">B. addEventListener permite ejecutar una función cuando ocurre un evento específico.</button>
-            <button class="quiz-opcion" data-valor="c">C. innerHTML solo funciona con texto plano, no con etiquetas HTML.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué significan Entrada y Salida en programación?</p>
+            <button class="quiz-opcion" data-valor="a">A. Entrada = lo que el programa muestra, Salida = lo que el usuario escribe.</button>
+            <button class="quiz-opcion" data-valor="b">B. Entrada = datos que recibe (usuario, sensores), Salida = lo que muestra o envía.</button>
+            <button class="quiz-opcion" data-valor="c">C. Entrada y Salida son lo mismo en programación.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad</strong>
+            Crear en Thunkable una app de puzzles sencilla (por ejemplo, un puzzle de 3x3 donde se mezclan las piezas al pulsar un botón) o una app del clima que use una API pública como OpenWeatherMap.
           </div>
         </div>
       </article>
@@ -519,89 +405,64 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Animación web</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Dependencia de eventos: cadenas de eventos</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            Las animaciones web añaden dinamismo y mejoran la experiencia de usuario. Esta sesión cubre las principales técnicas de animación disponibles para el desarrollador web, desde transiciones CSS simples hasta animaciones con JavaScript y Canvas.
-          </div>
-
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Las animaciones web son cambios visuales que ocurren de forma gradual a lo largo del tiempo. Pueden ser sutiles (un cambio de color al pasar el cursor) o complejas (animaciones de escenas enteras). En esta sesión exploraremos las diferentes técnicas disponibles y sus casos de uso.</p>
+            <p>En las sesiones anteriores hemos visto eventos individuales: un botón que cambia el color, un sensor que detecta la orientación. Pero en las aplicaciones reales, los eventos no ocurren de forma aislada. Un evento puede desencadenar otro, que a su vez activa otro, creando una <strong>cadena de eventos</strong>. Comprender esta dependencia es clave para diseñar apps complejas y funcionales.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">CSS Transitions</h4>
-            <p>Las transiciones CSS permiten animar suavemente el cambio de una propiedad de estilo a otra. Son ideales para interacciones simples:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-white/50 px-1 rounded">transition-property</code> — Qué propiedad se anima (color, transform, opacity).</li>
-              <li><code class="bg-white/50 px-1 rounded">transition-duration</code> — Duración de la transición (0.3s).</li>
-              <li><code class="bg-white/50 px-1 rounded">transition-timing-function</code> — Curva de velocidad (ease, linear, ease-in-out).</li>
-              <li><code class="bg-white/50 px-1 rounded">transition-delay</code> — Retraso antes de iniciar.</li>
-            </ul>
-            <p class="mt-2"><strong>Ejemplo:</strong> Un botón que cambia de color y tamaño suavemente al pasar el cursor, o una tarjeta que se eleva ligeramente al hacer hover.</p>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una cadena de eventos?</h4>
+            <p>Una <strong>cadena de eventos</strong> es una secuencia donde el resultado de un evento se convierte en el detonante del siguiente. Esto crea un flujo de ejecución que puede abarcar múltiples pantallas, servicios externos y acciones del usuario.</p>
+            <p class="mt-2">Ejemplo simplificado:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Evento 1: El usuario pulsa "Publicar".</li>
+              <li>Evento 2: La app sube la foto al servidor (evento de red).</li>
+              <li>Evento 3: El servidor confirma la subida (evento de respuesta).</li>
+              <li>Evento 4: La app muestra una notificación de éxito.</li>
+              <li>Evento 5: La pantalla se actualiza mostrando la nueva publicación.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ejemplo real: TikTok</strong>
+            TikTok es un ejemplo perfecto de cadenas de eventos complejas. Analicemos el flujo de publicar un vídeo: El usuario graba un vídeo → lo edita con efectos → pulsa "Publicar" → la app lo comprime → lo sube al servidor → el servidor lo procesa → se añade al feed → se envía notificación a los seguidores → el vídeo aparece en la pantalla de otros usuarios. Cada paso es un evento que desencadena el siguiente.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">CSS Keyframes</h4>
-            <p>Las keyframes permiten crear animaciones más complejas definiendo múltiples estados intermedios:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Implementación en Thunkable</h4>
+            <p>Para gestionar cadenas de eventos en Thunkable, utilizamos:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-white/50 px-1 rounded">@keyframes</code> — Define la secuencia de la animación.</li>
-              <li><code class="bg-white/50 px-1 rounded">animation-name</code> — Nombre de la animación.</li>
-              <li><code class="bg-white/50 px-1 rounded">animation-duration</code> — Duración total.</li>
-              <li><code class="bg-white/50 px-1 rounded">animation-iteration-count</code> — Número de repeticiones (infinite para bucle).</li>
-              <li><code class="bg-white/50 px-1 rounded">animation-direction</code> — Dirección (normal, alternate).</li>
+              <li><strong>Variables globales:</strong> Para mantener el estado entre eventos.</li>
+              <li><strong>Eventos de respuesta:</strong> Cuando una operación asíncrona termina, dispara un nuevo evento.</li>
+              <li><strong>Funciones auxiliares:</strong> Para encapsular la lógica de cada paso de la cadena.</li>
+              <li><strong>Condiciones:</strong> Para ramificar la cadena según el resultado de cada paso.</li>
             </ul>
-            <p class="mt-2"><strong>Ejemplo:</strong> Un spinner de carga, una animación de entrada de elementos, o un personaje que camina.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Animaciones con JavaScript</h4>
-            <p>JavaScript ofrece control total sobre las animaciones, permitiendo crear efectos interactivos y dinámicos:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-white/50 px-1 rounded">requestAnimationFrame()</code> — Ejecuta una función antes del siguiente frame de repintado. Es la forma más eficiente de animar con JS.</li>
-              <li><strong>Animaciones basadas en scroll:</strong> Modificar elementos según la posición del usuario al desplazarse.</li>
-              <li><strong>Animaciones interactivas:</strong> Que responden al movimiento del ratón o al tacto.</li>
-              <li><strong>Librerías:</strong> GSAP, Anime.js, Motion One — Facilitan la creación de animaciones complejas.</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">Diagrama de flujo de eventos</h4>
+            <p>Antes de implementar una cadena de eventos, es recomendable dibujar un diagrama de flujo que muestre:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Cada evento posible.</li>
+              <li>Qué acción se ejecuta en cada evento.</li>
+              <li>Qué eventos se desencadena como resultado.</li>
+              <li>Las condiciones que pueden ramificar el flujo.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Consejo de diseño</strong>
+            Cuando diseñéis una cadena de eventos, pensad siempre en el <strong>caso de error</strong>: ¿qué pasa si la conexión a internet falla? ¿Y si el usuario cancela a mitad de proceso? Las apps robustas manejan tanto el camino feliz como los errores.
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Consejo práctico</strong>
-            Para animaciones simples (hover, transiciones de color), usa CSS. Para animaciones complejas, interactivas o que requieran control preciso del tiempo, usa JavaScript con requestAnimationFrame. Evita animar propiedades costosas como top, left o width — usa transform y opacity que se ejecutan en la GPU.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">SVG y Canvas</h4>
-            <p><strong>SVG (Scalable Vector Graphics):</strong> Formato de gráficos vectoriales que se puede animar con CSS o JavaScript. Ideal para iconos, diagramas y gráficos que deben mantener la calidad a cualquier tamaño.</p>
-            <p class="mt-2"><strong>Canvas:</strong> Elemento HTML que permite dibujar gráficos像素 a pixels con JavaScript. Ideal para videojuegos, visualizaciones de datos y gráficos complejos que requieren renderizado en tiempo real.</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Consideraciones de rendimiento</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Usa transform y opacity:</strong> Estas propiedades se ejecutan en la GPU y son mucho más eficientes que animar position, size o color.</li>
-              <li><strong>Evita reflows:</strong> Modificar el layout (width, height, margin) fuerza al navegador a recalcular la posición de todos los elementos.</li>
-              <li><strong>Debounce事件:</strong> En eventos como scroll o resize, limita la frecuencia de ejecución de la función de animación.</li>
-              <li><strong>Reduce elementos animados:</strong> Cuantos más elementos se animan simultáneamente, mayor es el consumo de recursos.</li>
-              <li><strong>Considera prefers-reduced-motion:</strong> Respeta la configuración del usuario que prefiere menos animaciones.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Crear una galería de animaciones web que incluya:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Botones con transiciones CSS suaves.</li>
-              <li>Una animación de carga con @keyframes.</li>
-              <li>Un efecto parallax al hacer scroll con JavaScript.</li>
-              <li>Un gráfico SVG animado con CSS.</li>
-              <li>Un pequeño canvas interactivo que responda al movimiento del ratón.</li>
-            </ol>
+            <strong>Actividad</strong>
+            En grupos de 3, diseñar un diagrama de flujo de eventos para una app de mensajería (como WhatsApp). Identificar al menos 5 eventos encadenados: enviar mensaje, recibir confirmación, notificar al destinatario, mostrar el mensaje en pantalla, etc.
           </div>
         </div>
       </article>
@@ -611,70 +472,73 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: sitio web interactivo</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: app completa con Thunkable</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Esta sesión está dedicada a la puesta en común y la presentación de los proyectos finales. Es un momento clave para que el alumnado demuestre lo aprendido y reciba retroalimentación de sus compañeros y el profesor.
+            Esta sesión es la culminación de la unidad. Los alumnos aplicarán todos los conceptos aprendidos para crear una app completa. Es importante que elijan un proyecto que les motive y que puedan completar en el tiempo disponible.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>En esta última sesión de la unidad, cada grupo presentará el sitio web interactivo que ha creado a lo largo de las sesiones anteriores. El proyecto debe integrar todos los conocimientos adquiridos: estructura semántica HTML, estilos con CSS (Flexbox/Grid), interactividad con JavaScript y animaciones. Utilizaremos CodePen como plataforma de desarrollo para facilitar la revisión y la compartición.</p>
+            <p>Llegó el momento de poner en práctica todo lo aprendido. En esta sesión final, cada alumno o grupo diseñará y desarrollará una aplicación móvil completa usando Thunkable. La app debe demostrar dominio de los conceptos de la unidad: eventos, sensores, E/S y cadenas de eventos.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Requisitos del proyecto</h4>
-            <p>Cada sitio web interactivo debe cumplir los siguientes requisitos:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Propuestas de proyecto</h4>
+            <p>Elige una de las siguientes opciones o propón tu propia idea (sujeta a aprobación del profesor):</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>HTML semántico:</strong> Uso correcto de header, nav, main, section, article, footer y formularios con labels.</li>
-              <li><strong>CSS:</strong> Uso de Flexbox o Grid para el layout, modelo de cajas correcto y diseño responsive con media queries.</li>
-              <li><strong>JavaScript:</strong> Al menos una interacción: validación de formularios, cambio de contenido dinámico o animación.</li>
-              <li><strong>Animaciones:</strong> Al menos dos animaciones CSS (transición o keyframe) y una animación con JavaScript.</li>
-              <li><strong>Accesibilidad:</strong> Contraste de colores suficiente, texto alternativo en imágenes y etiquetas en formularios.</li>
-              <li><strong>Temática libre:</strong> Puede ser una web de una tienda, un blog, un portfolio, una landing page, etc.</li>
+              <li><strong>App de fitness:</strong> Usa el acelerómetro para contar pasos y calcular calorías quemadas. Incluye registro de actividad y gráficas de progreso.</li>
+              <li><strong>App de trivia:</strong> Juego de preguntas con temporizador, puntuación y niveles de dificultad. Usa eventos de click y change.</li>
+              <li><strong>App del tiempo:</strong> Consulta una API meteorológica y muestra el clima actual con gráficos. Usa GPS para detectar la ubicación.</li>
+              <li><strong>App de notas:</strong> Permite crear, editar y eliminar notas con fecha y categoría. Almacena datos localmente.</li>
+              <li><strong>App de código QR:</strong> Escanea códigos QR con la cámara y muestra la información codificada. Usa sensores de cámara.</li>
             </ul>
           </div>
-
-          <figure>
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop" alt="Desarrollo web en CodePen" loading="lazy" />
-            <figcaption>Ejemplo de proyecto web desarrollado en CodePen con HTML, CSS y JavaScript</figcaption>
-          </figure>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Presentación y rúbrica de evaluación</h4>
-            <p>Cada grupo dispondrá de 5 minutos para presentar su proyecto. La evaluación se realizará con la siguiente rúbrica:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Criterios de evaluación del proyecto</h4>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Funcionalidad (30%):</strong> El sitio web funciona correctamente en diferentes navegadores y tamaños de pantalla.</li>
-              <li><strong>Diseño y estética (25%):</strong> Uso coherente de colores, tipografía, espaciado y jerarquía visual.</li>
-              <li><strong>Código (25%):</strong> HTML semántico, CSS organizado y JavaScript limpio y comentado.</li>
-              <li><strong>Accesibilidad (10%):</strong> Cumplimiento de los principios de accesibilidad web.</li>
-              <li><strong>Creatividad (10%):</strong> Originalidad del diseño y las interacciones implementadas.</li>
+              <li><strong>Funcionalidad (40%):</strong> La app funciona correctamente, maneja eventos, usa al menos 2 sensores o fuentes de datos.</li>
+              <li><strong>Diseño de interfaz (20%):</strong> La interfaz es clara, intuitiva y visualmente atractiva.</li>
+              <li><strong>Estructura del código (20%):</strong> Los bloques están organizados, usan nombres descriptivos y el código es reutilizable.</li>
+              <li><strong>Documentación (10%):</strong> Incluye un brief description de la app, instrucciones de uso y justificación de las decisiones de diseño.</li>
+              <li><strong>Creatividad (10%):</strong> La app aporta algo original o una perspectiva diferente.</li>
             </ul>
           </div>
 
-          <div class="callout callout-aviso">
-            <strong>Entrega</strong>
-            Cada grupo debe compartir el enlace de su proyecto en CodePen junto con una breve documentación (300-500 palabras) que explique las decisiones de diseño y las tecnologías utilizadas.
-          </div>
-
-          <!-- QUIZ FINAL UNIDAD -->
-          <div class="quiz" data-correcta="a" data-total="4">
-            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Cuál es la diferencia principal entre Flexbox y CSS Grid?</p>
-            <button class="quiz-opcion" data-valor="a">A. Flexbox se usa para layouts en una dimensión, Grid para dos dimensiones.</button>
-            <button class="quiz-opcion" data-valor="b">B. Flexbox y Grid son lo mismo y se pueden usar indistintamente.</button>
-            <button class="quiz-opcion" data-valor="c">C. Grid solo funciona en navegadores antiguos y Flexbox es la alternativa moderna.</button>
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué conceptos clave de esta unidad debes demostrar en tu proyecto final?</p>
+            <button class="quiz-opcion" data-valor="a">A. Events, sensors, E/S, event chains, Thunkable project.</button>
+            <button class="quiz-opcion" data-valor="b">B. Only click events and print statements.</button>
+            <button class="quiz-opcion" data-valor="c">C. Only GPS and accelerometer sensors.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cronograma sugerido</h4>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Minutos 0-10:</strong> Definir la idea, crear cuenta en Thunkable y empezar el diseño de la interfaz.</li>
+              <li><strong>Minutos 10-30:</strong> Implementar los eventos principales y la lógica de la app.</li>
+              <li><strong>Minutos 30-45:</strong> Probar, depurar y pulir los detalles.</li>
+              <li><strong>Minutos 45-50:</strong> Preparar la demostración para el resto de la clase.</li>
+            </ol>
+          </div>
+
           <div class="callout callout-consejo">
             <strong>Producto de la unidad</strong>
-            Los mejores proyectos serán publicados en la web del curso como referencia para futuros alumnos. El alumnado también podrá compartir sus creaciones en sus portfolios digitales.
+            Presentar la app terminada al resto de la clase en una demostración de 2-3 minutos. Explicar qué hace, cómo funciona y qué conceptos de la unidad habéis aplicado. El mejor proyecto se elegirá como referencia para futuros cursos.
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Recuerda</strong>
+            El objetivo no es crear la app perfecta, sino demostrar que comprendéis los conceptos de programación orientada a eventos y E/S. Una app sencilla bien implementada vale más que una app compleja llena de errores.
           </div>
         </div>
       </article>
@@ -683,10 +547,10 @@
     <!-- NAVEGACIÓN ENTRE UNIDADES -->
     <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
       <a href="ud2.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-ink-800 hover:bg-slate-100 transition">
-        ← Anterior: UD2 · Desarrollo de Aplicaciones Móviles
+        ← Anterior: UD2 · Introducción a Python
       </a>
       <a href="ud4.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
-        Siguiente: UD4 · Computación Física e IoT →
+        Siguiente: UD4 · Desarrollo Web →
       </a>
     </nav>
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UD4 · Computación Física e IoT · 3º ESO</title>
-  <meta name="description" content="Unidad Didáctica 4 de 3º ESO: Computación Física e IoT. Microcontroladores, hardware y software, seguridad eléctrica, protocolos IoT y proyecto final con ESP32." />
+  <title>UD4 · Desarrollo Web · 3º ESO</title>
+  <meta name="description" content="Unidad Didáctica 4 de 3º ESO: Desarrollo Web con HTML, CSS y JavaScript. Análisis de estructura web, servidores, lenguajes y animación. Saberes básicos BOJA y criterios de evaluación." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -31,12 +31,12 @@
       <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
         <a href="../3cyr.html" class="hover:underline">3.º ESO</a>
         <span>·</span>
-        <span>2.º Trimestre</span>
+        <span>1.º Trimestre</span>
         <span>·</span>
-        <span>Bloques F + B</span>
+        <span>Bloque E</span>
       </div>
-      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD4 · Computación Física e IoT</h1>
-      <p class="mt-3 text-brand-50/90">Comprender la computación como un fenómeno que trasciende la pantalla: desde dispositivos médicos hasta hogares inteligentes. Esta unidad conecta el software con el hardware físico, explorando microcontroladores, la Internet de las Cosas y la creación de sistemas embebidos conectados a la nube.</p>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD4 · Desarrollo Web</h1>
+      <p class="mt-3 text-brand-50/90">Profundizar en el desarrollo web mediante el análisis de la estructura de las páginas, el funcionamiento de los servidores, los lenguajes HTML/CSS/JavaScript y las técnicas de animación. Esta unidad sentará las bases para crear sitios web interactivos y accesibles.</p>
     </section>
 
     <!-- SESIONES -->
@@ -47,88 +47,73 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Sistemas de computación: aplicaciones en el mundo real</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Análisis de estructura web</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Esta sesión inicial busca ampliar la percepción del alumnado sobre qué es un ordenador. No todo lo que computa tiene teclado ni pantalla: los coches, los marcapasos y los electrodomésticos también son sistemas informáticos.
+            Esta sesión inicial sienta las bases teóricas para comprender cómo se organizan y diseñan los sitios web. Es fundamental que el alumnado asimile estos conceptos antes de pasar a la práctica con HTML y CSS.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>¿Cuántos ordenadores llevas encima ahora mismo? Probablemente piensas en tu teléfono móvil, pero si contamos microcontroladores ocultos —en tu reloj, auriculares, tarjetas bancarias o incluso la llave del coche— el número es mucho mayor. En esta sesión vamos a descubrir que la computación está en todas partes, desde los hospitales hasta nuestras propias casas.</p>
+            <p>¿Alguna vez os habéis preguntado por qué algunas webs son fáciles de usar y otras resultan confusas? En esta sesión vamos a analizar la estructura subyacente de los sitios web, desde la organización del contenido hasta la jerarquía visual que guía la mirada del usuario. Comenzaremos visitando tres sitios web muy diferentes (una tienda online, un blog de tecnología y la web de un periódico) para identificar patrones comunes y diferencias en su diseño.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Computación física: más allá del escritorio</h4>
-            <p>La <strong>computación física</strong> integra hardware y software en dispositivos del mundo real. A diferencia de un PC tradicional, estos sistemas están diseñados para una función específica y suelen operar de forma autónoma:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Organización del contenido</h4>
+            <p>Un sitio web bien organizado sigue una estructura jerárquica que facilita la navegación. Los elementos fundamentales son:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Medicina:</strong> Monitores cardíacos, bombas de insulina, resonadores magnéticos. Un marcapasos es un microcontrolador que monitorea y regula el ritmo cardíaco en tiempo real.</li>
-              <li><strong>Automoción:</strong> El motor de un coche moderno está gestionado por una ECU (Electronic Control Unit) que procesa datos de sensores de oxígeno, temperatura y presión miles de veces por segundo.</li>
-              <li><strong>Domótica:</strong> Termostatos inteligentes como Nest aprenden tus hábitos y ajustan la temperatura automáticamente. Las cerraduras inteligentes, los sistemas de riego y las luces programables son parte de esta tecnología.</li>
-              <li><strong>Industria:</strong> Robots de fabricación, sensores de calidad en línea de producción y sistemas SCADA que controlan plantas enteras.</li>
+              <li><strong>Arquitectura de la información:</strong> Cómo se estructuran y categorizan los contenidos. Un buen mapa del sitio permite al usuario encontrar lo que busca en pocos clics.</li>
+              <li><strong>Navegación:</strong> El menú principal, los enlaces de pie de página y las migas de pan (breadcrumbs) son los pilares de la navegación web.</li>
+              <li><strong>Consistencia:</strong> Los elementos repetidos en todas las páginas (cabecera, pie, colores, tipografía) crean una experiencia coherente.</li>
+              <li><strong>Accesibilidad:</strong> El contenido debe ser usable por todas las personas, incluyendo aquellas con discapacidades visuales, motoras o cognitivas. Esto implica usar etiquetas semánticas, contraste suficiente y texto alternativo en imágenes.</li>
             </ul>
           </div>
 
           <figure>
-            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&h=400&fit=crop" alt="Dispositivos IoT en el mundo real" loading="lazy" />
-            <figcaption>Desde relojes inteligentes hasta vehículos autónomos: la computación invisible</figcaption>
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=400&fit=crop" alt="Ejemplo de estructura web jerárquica" loading="lazy" />
+            <figcaption>Estructura jerárquica típica de un sitio web: página principal → categorías → contenidos</figcaption>
           </figure>
 
-          <div class="callout callout-peligro">
-            <strong>Dato real</strong>
-            Se estima que para 2030 habrá más de 25.000 millones de dispositivos IoT activos en el mundo. Cada uno de ellos contiene al menos un microprocesador que ejecuta código que alguien programó.
-          </div>
-
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">IoT: la extensión de la computación física</h4>
-            <p>La <strong>Internet de las Cosas (IoT)</strong> conecta estos dispositivos físicos a Internet, permitiendo que compartan datos y reciban instrucciones remotamente. Un termostato tradicional solo regula la temperatura; un termostato IoT como Nest puede ser controlado desde tu móvil mientras estás fuera de casa, aprender tus horarios y ajustarse automáticamente.</p>
-            <p class="mt-2">Ejemplos cotidianos de IoT:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Jerarquía visual</h4>
+            <p>La jerarquía visual determina el orden en que el usuario percibe los elementos de la página. Se consigue mediante:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Alexa o Google Home: asistentes de voz conectados a múltiples dispositivos del hogar.</li>
-              <li>Podómetros inteligentes: envían datos de actividad física a tu teléfono.</li>
-              <li>Sensores agrícolas: miden humedad del suelo y activan el riego automáticamente.</li>
-              <li>Contadores inteligentes de luz: envían el consumo a la compañía eléctrica en tiempo real.</li>
+              <li><strong>Tamaño:</strong> Los titulares más grandes atraen la atención primero.</li>
+              <li><strong>Color y contraste:</strong> Los elementos con mayor contraste destacan sobre el resto.</li>
+              <li><strong>Espacio en blanco:</strong> Un buen uso del margen y el padding dirige la mirada del lector.</li>
+              <li><strong>Tipografía:</strong> Combinar distintos pesos y tamaños de fuente para diferenciar títulos, subtítulos y cuerpo de texto.</li>
+              <li><strong>Posición:</strong> Los elementos en la parte superior y a la izquierda suelen leerse primero en culturas occidentales.</li>
             </ul>
           </div>
 
-          <div class="callout callout-consejo">
-            <strong>Actividad de inicio</strong>
-            En parejas, haced una lista de todos los dispositivos con microprocesador que encontréis en un aula. Comparad con la otra pareja: ¿quién logra más? Reflexionad: ¿todos son "ordenadores"?
-          </div>
-
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Reflexión final</h4>
-            <p>La computación ya no vive solo en el escritorio. Cuando programamos, no estamos creando solo aplicaciones web o de escritorio: estamos escribiendo instrucciones que pueden controlar una planta de energía, un robot quirúrgico o una estación meteorológica remota. Comprender este alcance es el primer paso para ser responsables con la tecnología que creamos.</p>
-          </div>
-
-          <!-- QUIZ SESIÓN 1 -->
-          <div class="quiz" data-correcta="c" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué es un sistema de computación?</p>
-            <button class="quiz-opcion" data-valor="a">A. Solo dispositivos con pantalla y teclado.</button>
-            <button class="quiz-opcion" data-valor="b">B. Únicamente ordenadores portátiles y de sobremesa.</button>
-            <button class="quiz-opcion" data-valor="c">C. Cualquier sistema con hardware y software que procese datos.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="a" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué es la Internet de las Cosas (IoT)?</p>
-            <button class="quiz-opcion" data-valor="a">A. Conectar dispositivos físicos a Internet para compartir datos.</button>
-            <button class="quiz-opcion" data-valor="b">B. Usar un PC para navegar por la web.</button>
-            <button class="quiz-opcion" data-valor="c">C. Instalar aplicaciones en un teléfono móvil.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
+            <h4 class="font-semibold text-brand-700 mb-1">Interactividad y experiencia de usuario</h4>
+            <p>La interactividad se refiere a todo lo que el usuario puede hacer en una web: hacer clic en botones, rellenar formularios, desplazarse, pasar el cursor por encima de elementos, etc. Una buena experiencia de usuario (UX) implica tiempos de carga rápidos, retroalimentación visual clara (hover, focus) y diseño responsive que se adapte a cualquier tamaño de pantalla.</p>
           </div>
 
           <div class="callout callout-aviso">
-            <strong>Actividad de evaluación</strong>
-            Cada alumno presentará brevemente un ejemplo de computación física que haya encontrado en su entorno (médico, doméstico, industrial o educativo). Se valorará la capacidad de identificar componentes: sensores, procesadores y actuadores.
+            <strong>Importante</strong>
+            La accesibilidad web no es opcional. El 15% de la población mundial tiene alguna discapacidad. El diseño accesible beneficia a todos los usuarios, no solo a quienes tienen necesidades específicas.
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué implica el diseño accesible en una web?</p>
+            <button class="quiz-opcion" data-valor="a">A. Utilizar etiquetas semánticas, contraste suficiente y texto alternativo en imágenes.</button>
+            <button class="quiz-opcion" data-valor="b">B. Usar muchos colores llamativos y animaciones en la página.</button>
+            <button class="quiz-opcion" data-valor="c">C. Limitar el contenido a una sola columna para que sea más sencillo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad práctica</strong>
+            En parejas, visitad tres sitios web diferentes y completad una tabla comparativa con: tipo de navegación, número de niveles de profundidad, uso de colores, presencia de elementos accesibles (alt en imágenes, contraste, labels en formularios). Comparad vuestros hallazgos con los de otros grupos.
           </div>
         </div>
       </article>
@@ -138,77 +123,87 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Microcontroladores: tipología y comparativa de placas</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Tipos de servidores web</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Esta sesión es clave para que el alumnado entienda que no todas las placas son iguales. La elección del microcontrolador adecuado depende de los requisitos del proyecto: potencia, consumo, conectividad y coste.
+            Esta sesión introduce el concepto de servidor web y su funcionamiento. Es clave para que el alumnado comprenda la diferencia entre contenido estático y dinámico, y cómo los servidores entregan las páginas que vemos en el navegador.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Un microcontrolador es un pequeño ordenador integrado en un solo chip: incluye procesador, memoria y periféricos de entrada/salida. Es el cerebro de millones de dispositivos cotidianos. En esta sesión conoceremos las placas de desarrollo más populares y aprenderemos a elegir la adecuada según el proyecto.</p>
+            <p>Cada vez que escribimos una URL en el navegador, se produce una comunicación entre nuestro dispositivo y un servidor web. En esta sesión vamos a entender cómo funciona ese proceso, qué tipos de servidores existen y qué diferencias hay entre servidores estáticos y dinámicos. Este conocimiento es esencial para comprender el desarrollo web completo, no solo el código que escribimos en el cliente.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Las cuatro placas estrella</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Arduino Uno:</strong> La más clásica. Basada en el ATmega328P. Ideal para principiantes. Gran ecosistema de bibliotecas y comunidad. No tiene WiFi ni Bluetooth nativo. Precio: ~5 €.</li>
-              <li><strong>ESP32:</strong> Microcontrolador con WiFi y Bluetooth integrados. Mucho más potente que Arduino (procesador dual-core a 240 MHz). Perfecto para proyectos IoT. Precio: ~4 €.</li>
-              <li><strong>Micro:bit:</strong> Diseñado para educación. Tiene pantalla LED, acelerómetro, magnetómetro y radio integrados. Programable con bloques (MakeCode) o Python. Precio: ~15 €.</li>
-              <li><strong>Raspberry Pi Pico:</strong> Basado en el chip RP2040 de Raspberry Pi. Programable en MicroPython y C++. Muy versátil y económica. Precio: ~4 €.</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un servidor web?</h4>
+            <p>Un <strong>servidor web</strong> es un programa o sistema que almacena y entrega contenido web (páginas HTML, imágenes, archivos CSS, JavaScript, etc.) a los navegadores de los usuarios cuando reciben una solicitud. El protocolo que facilita esta comunicación es <strong>HTTP/HTTPS</strong>.</p>
+            <p class="mt-2">El proceso básico es:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>El usuario escribe una URL en el navegador.</li>
+              <li>El navegador envía una solicitud HTTP al servidor.</li>
+              <li>El servidor procesa la solicitud y responde con el contenido (HTML, CSS, JS, imágenes).</li>
+              <li>El navegador interpreta el código y renderiza la página en pantalla.</li>
+            </ol>
           </div>
 
           <figure>
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" alt="Placas microcontroladores" loading="lazy" />
-            <figcaption>Placas de desarrollo: desde Arduino hasta Raspberry Pi Pico</figcaption>
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop" alt="Servidor web en un centro de datos" loading="lazy" />
+            <figcaption>Centro de datos con servidores alojando sitios web</figcaption>
           </figure>
 
-          <!-- VÍDEO: Comparativa de placas -->
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de servidores por software</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Apache HTTP Server:</strong> El servidor web de código abierto más popular del mundo. Extensible mediante módulos, funciona en prácticamente cualquier sistema operativo. Es el motor detrás de millones de sitios web, incluyendo WordPress.</li>
+              <li><strong>Nginx:</strong> Conocido por su alto rendimiento y bajo consumo de recursos. Funciona con un modelo asíncrono de eventos, lo que le permite manejar miles de conexiones simultáneas. Muy usado como proxy inverso y balanceador de carga.</li>
+              <li><strong>Microsoft IIS:</strong> Servidor web integrado en Windows Server. Se configura mediante archivos web.config y es la opción natural para entornos con tecnologías Microsoft (ASP.NET).</li>
+              <li><strong>LiteSpeed:</strong> Alternativa de alto rendimiento a Apache, compatible con sus configuraciones (.htaccess) pero con menor consumo de memoria.</li>
+            </ul>
+          </div>
+
           <div class="callout callout-consejo">
             <strong>Vídeo recomendado</strong>
-            Mira esta comparativa visual para entender las diferencias principales entre las placas de desarrollo más populares:
+            Mira este vídeo para entender cómo funciona un servidor web y los diferentes tipos que existen:
           </div>
           <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/obbedhfMcMM" title="Comparativa de placas microcontroladores" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/72g2CpKg0Ck" title="Tipos de servidores web" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Comparativa rápida</h4>
-            <div class="overflow-x-auto mt-2">
-              <table class="w-full text-xs border-collapse">
-                <thead>
-                  <tr class="bg-brand-100 text-brand-800">
-                    <th class="border border-slate-300 px-3 py-2 text-left">Placa</th>
-                    <th class="border border-slate-300 px-3 py-2 text-left">Procesador</th>
-                    <th class="border border-slate-300 px-3 py-2 text-left">RAM</th>
-                    <th class="border border-slate-300 px-3 py-2 text-left">WiFi/BT</th>
-                    <th class="border border-slate-300 px-3 py-2 text-left">Precio</th>
-                  </tr>
-                </thead>
-                <tbody class="text-slate-700">
-                  <tr><td class="border border-slate-300 px-3 py-2 font-semibold">Arduino Uno</td><td class="border border-slate-300 px-3 py-2">ATmega328P (16 MHz)</td><td class="border border-slate-300 px-3 py-2">2 KB</td><td class="border border-slate-300 px-3 py-2">No</td><td class="border border-slate-300 px-3 py-2">~5 €</td></tr>
-                  <tr class="bg-slate-50"><td class="border border-slate-300 px-3 py-2 font-semibold">ESP32</td><td class="border border-slate-300 px-3 py-2">Xtensa dual-core (240 MHz)</td><td class="border border-slate-300 px-3 py-2">520 KB</td><td class="border border-slate-300 px-3 py-2">Sí</td><td class="border border-slate-300 px-3 py-2">~4 €</td></tr>
-                  <tr><td class="border border-slate-300 px-3 py-2 font-semibold">Micro:bit</td><td class="border border-slate-300 px-3 py-2">nRF52833 (64 MHz)</td><td class="border border-slate-300 px-3 py-2">128 KB</td><td class="border border-slate-300 px-3 py-2">BLE</td><td class="border border-slate-300 px-3 py-2">~15 €</td></tr>
-                  <tr class="bg-slate-50"><td class="border border-slate-300 px-3 py-2 font-semibold">Pi Pico</td><td class="border border-slate-300 px-3 py-2">RP2040 dual-core (133 MHz)</td><td class="border border-slate-300 px-3 py-2">264 KB</td><td class="border border-slate-300 px-3 py-2">No*</td><td class="border border-slate-300 px-3 py-2">~4 €</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="text-xs text-slate-500 mt-1">* Existe la variante Pico W con WiFi.</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Servidores estáticos vs. dinámicos</h4>
+            <p><strong>Contenido estático:</strong> El servidor entrega archivos tal cual están almacenados (HTML, CSS, JS, imágenes). No hay procesamiento adicional. Es rápido pero inflexible: cada visita ve exactamente lo mismo. Ejemplo: una página de presentación de una empresa.</p>
+            <p class="mt-2"><strong>Contenido dinámico:</strong> El servidor ejecuta código (PHP, Python, Node.js, etc.) antes de entregar la respuesta. Puede generar contenido personalizado, interactuar con bases de datos y adaptarse al usuario. Ejemplo: redes sociales, tiendas online, correos electrónicos.</p>
           </div>
 
-          <div class="callout callout-aviso">
-            <strong>¿Cuándo usar cada una?</strong>
-            <strong>Arduino Uno:</strong> Prototipos simples sin necesidad de red (LEDs, motores, sensores básicos). <strong>ESP32:</strong> Proyectos IoT que requieren WiFi/Bluetooth. <strong>Micro:bit:</strong> Educación, robótica, experimentos con sensores integrados. <strong>Pi Pico:</strong> Control de bajo nivel, alta velocidad, proyectos con MicroPython.
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Servidores por propósito</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Servidores de archivos:</strong> Almacenan y comparten archivos en una red (FTP, NAS).</li>
+              <li><strong>Servidores de correo:</strong> Gestionan el envío y recepción de correos electrónicos (SMTP, IMAP).</li>
+              <li><strong>Servidores de bases de datos:</strong> Almacenan y procesan datos estructurados (MySQL, PostgreSQL, MongoDB).</li>
+              <li><strong>Servidores de aplicaciones:</strong> Ejecutan aplicaciones web del lado del servidor (Django, Express, Laravel).</li>
+              <li><strong>Servidores de proxies:</strong> Actúan como intermediarios entre el cliente y el servidor original, proporcionando caché, anonimato o filtrado.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Dato real</strong>
+            Apache y Nginx juntos alojan más del 60% de todos los sitios web del mundo. Conocer ambos servidores es esencial para cualquier desarrollador web.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>En grupos de 3, se os asignará un escenario: monitorización de un invernadero, alarma casera o estación meteorológica. Decidid qué placa usaríais y justificad la elección considerando: tipo de sensores, necesidad de red, coste y complejidad de programación.</p>
+            <p>Vamos a configurar un servidor web local con Apache (o Nginx) en nuestro ordenador:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Instalar Apache usando XAMPP o el gestor de paquetes del sistema.</li>
+              <li>Crear un archivo <code class="bg-white/50 px-1 rounded">index.html</code> en la carpeta de documentos del servidor.</li>
+              <li>Acceder a <code class="bg-white/50 px-1 rounded">http://localhost</code> desde el navegador.</li>
+              <li>Crear una segunda página y comprobar que se puede acceder a ella añadiendo la ruta.</li>
+            </ol>
           </div>
         </div>
       </article>
@@ -218,76 +213,93 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Hardware y Software: componentes y ciclo de vida</h3>
+            <h3 class="font-bold text-ink-800 text-lg">HTML en profundidad</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Para trabajar con computación física es fundamental componer el marco teórico sobre qué es el hardware y qué es el software, y cómo ambos se relacionan. En esta sesión clasificaremos los componentes físicos de un sistema informático y profundizaremos en las fases del ciclo de vida del software.</p>
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            En esta sesión profundizamos en HTML más allá de las etiquetas básicas. El dominio de las etiquetas semánticas, los formularios y los atributos esencial es fundamental para crear páginas web accesibles y estructuradas correctamente.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Clasificación del hardware</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>HTML (HyperText Markup Language) es el lenguaje de marcado que estructura el contenido de todas las páginas web. En sesiones anteriores ya hemos visto las etiquetas básicas (títulos, párrafos, enlaces, imágenes). Ahora vamos a profundizar en las etiquetas semánticas, los formularios interactivos y los atributos que hacen que HTML sea realmente potente.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Etiquetas semánticas</h4>
+            <p>HTML5 introdujo etiquetas semánticas que dan significado estructural al contenido, mejorando la accesibilidad y el SEO:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Procesadores (CPU/GPU):</strong> El cerebro del sistema. Ejecutan las instrucciones del programa. Los microcontroladores integran el procesador en el mismo chip que la memoria y los periféricos.</li>
-              <li><strong>Memoria:</strong> Almacena datos e instrucciones. RAM (volátil, datos en uso) y ROM/Flash (permanente, firmware). En un ESP32: 520 KB de RAM y 4 MB de Flash.</li>
-              <li><strong>Periféricos de entrada:</strong> Sensores de temperatura, ultrasonidos, infrarrojos, pulsadores, teclados, cámaras.</li>
-              <li><strong>Periféricos de salida:</strong> LEDs, motores, displays LCD/OLED, buzzers, servomotores.</li>
-              <li><strong>Comunicación:</strong> Módulos WiFi, Bluetooth, UART, SPI, I2C, GPS.</li>
+              <li><strong>&lt;header&gt;</strong>: Cabecera de la página o de una sección. Contiene títulos, navegación y elementos de identificación.</li>
+              <li><strong>&lt;nav&gt;</strong>: Bloque de navegación principal. Contiene los enlaces de menú.</li>
+              <li><strong>&lt;main&gt;</strong>: Contenido principal de la página. Solo debe haber uno por página.</li>
+              <li><strong>&lt;section&gt;</strong>: Sección temática del contenido. Agrupa contenido relacionado.</li>
+              <li><strong>&lt;article&gt;</strong>: Contenido independiente que puede distribuirse (noticia, entrada de blog, tarjeta).</li>
+              <li><strong>&lt;aside&gt;</strong>: Contenido complementario (barra lateral, anuncios, enlaces relacionados).</li>
+              <li><strong>&lt;footer&gt;</strong>: Pie de página o sección con información de cierre, derechos de autor y enlaces.</li>
+              <li><strong>&lt;figure&gt; y &lt;figcaption&gt;</strong>: Para incluir imágenes, diagramas o código con su pie de foto.</li>
             </ul>
           </div>
 
           <figure>
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" alt="Componentes de hardware" loading="lazy" />
-            <figcaption>Componentes esenciales de un sistema de computación física</figcaption>
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=400&fit=crop" alt="Estructura semántica de HTML5" loading="lazy" />
+            <figcaption>Diagrama de las etiquetas semánticas principales de HTML5</figcaption>
           </figure>
 
-          <div class="callout callout-peligro">
-            <strong>Error común</strong>
-            Confundir la memoria RAM con el almacenamiento. La RAM pierde su contenido al apagar el dispositivo. La Flash mantiene los datos (como el programa que has subido al ESP32) aunque se desconecte la alimentación.
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formularios interactivos</h4>
+            <p>Los formularios permiten al usuario enviar datos al servidor. Los elementos más importantes son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>&lt;form&gt;</strong>: Contenedor principal con atributos <code class="bg-white/50 px-1 rounded">action</code> (URL de destino) y <code class="bg-white/50 px-1 rounded">method</code> (GET o POST).</li>
+              <li><strong>&lt;input&gt;</strong>: Campo de entrada con tipos: text, email, password, number, date, checkbox, radio, file, submit, range, color.</li>
+              <li><strong>&lt;textarea&gt;</strong>: Campo de texto multilínea.</li>
+              <li><strong>&lt;select&gt; y &lt;option&gt;</strong>: Menú desplegable de selección.</li>
+              <li><strong>&lt;button&gt;</strong>: Botón de acción con tipos submit, reset y button.</li>
+              <li><strong>&lt;label&gt;</strong>: Etiqueta asociada a un campo, mejora la accesibilidad al vincular el texto con el input.</li>
+              <li><strong>&lt;fieldset&gt; y &lt;legend&gt;</strong>: Agrupan campos relacionados dentro de un formulario.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Recuerda</strong>
+            Todo campo de formulario debe tener una etiqueta &lt;label&gt; asociada mediante el atributo <code class="bg-white/50 px-1 rounded">for</code>. Esto es obligatorio para la accesibilidad y permite que los lectores de pantalla identifiquen cada campo.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">El ciclo de vida del software</h4>
-            <p>El desarrollo de software no es solo escribir código. Sigue un proceso estructurado:</p>
-            <ol class="mt-2 space-y-2 pl-5 list-decimal">
-              <li><strong>Análisis:</strong> Se definen los requisitos. ¿Qué debe hacer el sistema? ¿Qué restricciones hay (hardware, coste, tiempo)?</li>
-              <li><strong>Diseño:</strong> Se planifica la arquitectura: estructura de módulos, diagramas de flujo, selección de componentes hardware.</li>
-              <li><strong>Implementación:</strong> Se escribe el código fuente. En computación física, esto incluye programar el microcontrolador.</li>
-              <li><strong>Pruebas:</strong> Se verifica que el software funciona correctamente en el hardware real. Se corrigen errores (bugs).</li>
-              <li><strong>Mantenimiento:</strong> Se actualiza el software para corregir fallos, añadir funcionalidades o adaptarse a nuevos requisitos.</li>
-            </ol>
-          </div>
-
-          <div class="callout callout-consejo">
-            <strong>Consejo práctico</strong>
-            En computación física, el ciclo de vida es iterativo: programar → probar en la placa → ajustar → volver a probar. Es muy raro que el primer borrador funcione. Cada vuelta es una oportunidad de aprendizaje.
+            <h4 class="font-semibold text-brand-700 mb-1">Atributos esenciales</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>class / id:</strong> Identificadores para CSS y JavaScript.</li>
+              <li><strong>href / src:</strong> URLs de destino para enlaces e imágenes.</li>
+              <li><strong>alt:</strong> Texto alternativo para imágenes (obligatorio para accesibilidad).</li>
+              <li><strong>title:</strong> Texto emergente al pasar el cursor.</li>
+              <li><strong>data-*</strong>: Atributos de datos personalizados para JavaScript.</li>
+              <li><strong>required:</strong> Indica que un campo de formulario es obligatorio.</li>
+              <li><strong>placeholder:</strong> Texto de ejemplo dentro del campo.</li>
+              <li><strong>disabled / readonly:</strong> Deshabilita o bloquea un campo.</li>
+            </ul>
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Se os proporcionará un diagrama de flujo con errores. En parejas, identificad los fallos lógicos y proponed las correcciones. Luego, implementad el flujo corregido en pseudocódigo.</p>
+            <p>Crear una página web completa de una escuela usando exclusivamente etiquetas semánticas. Debe incluir:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Cabecera con logo y navegación principal.</li>
+              <li>Sección principal con al menos 3 artículos.</li>
+              <li>Barra lateral con enlaces relacionados.</li>
+              <li>Formulario de contacto con validación básica en HTML5.</li>
+              <li>Pie de página con información de copyright.</li>
+            </ol>
           </div>
 
           <!-- QUIZ SESIÓN 3 -->
-          <div class="quiz" data-correcta="a" data-total="3">
+          <div class="quiz" data-correcta="c" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué componentes forman parte del hardware de un sistema IoT?</p>
-            <button class="quiz-opcion" data-valor="a">A. Sensores, motores, displays y módulos de comunicación.</button>
-            <button class="quiz-opcion" data-valor="b">B. Solo el procesador y la memoria.</button>
-            <button class="quiz-opcion" data-valor="c">C. Únicamente los cables y la placa base.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="b" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Cuál es el orden correcto del ciclo de vida del software?</p>
-            <button class="quiz-opcion" data-valor="a">A. Implementación → Diseño → Análisis → Pruebas → Mantenimiento.</button>
-            <button class="quiz-opcion" data-valor="b">B. Análisis → Diseño → Implementación → Pruebas → Mantenimiento.</button>
-            <button class="quiz-opcion" data-valor="c">C. Mantenimiento → Pruebas → Implementación → Diseño → Análisis.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué representa la etiqueta semántica &lt;article&gt;?</p>
+            <button class="quiz-opcion" data-valor="a">A. &lt;div&gt; es una etiqueta semántica que indica una sección temática.</button>
+            <button class="quiz-opcion" data-valor="b">B. &lt;span&gt; se usa para definir la cabecera principal de la página.</button>
+            <button class="quiz-opcion" data-valor="c">C. &lt;article&gt; define contenido independiente que puede distribuirse.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
@@ -299,67 +311,98 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Seguridad eléctrica: cortafuegos de hardware y HSM</h3>
+            <h3 class="font-bold text-ink-800 text-lg">CSS en profundidad</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-aviso">
-            <strong>Importante</strong>
-            La seguridad en computación física no es solo software: los dispositivos físicos tienen riesgos propios que debemos conocer y prevenir. Un incendio eléctrico o un componente dañado pueden tener consecuencias reales.
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión es fundamental para que el alumnado domine las herramientas de diseño visual de la web. CSS es el lenguaje que da estilo y vida a las páginas, y comprender su modelo de cajas, selectores y sistemas de layout es clave para el desarrollo web moderno.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Cuando trabajamos con hardware, la seguridad tiene dos dimensiones: proteger el dispositivo de amenazas físicas (cortocircuitos, sobrecalentamiento) y proteger los datos que procesa de accesos no autorizados. Esta sesión aborda ambos aspectos.</p>
+            <p>CSS (Cascading Style Sheets) es el lenguaje que controla la apariencia visual de las páginas web. Mientras HTML estructura el contenido, CSS define colores, tipografías, espaciados, posiciones y comportamiento visual. En esta sesión profundizaremos en los selectores, el modelo de cajas y los sistemas de layout modernos: Flexbox y Grid.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Riesgos eléctricos en desarrollo</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Selectores CSS</h4>
+            <p>Los selectores determinan a qué elementos HTML se aplican los estilos. Los principales son:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Cortocircuitos:</strong> Conectar un cable de alimentación en el pin equivocado puede quemar la placa instantáneamente.</li>
-              <li><strong>Sobrecalentamiento:</strong> Un motor o una resistencia conectados sin limitador de corriente pueden encenderse peligrosamente.</li>
-              <li><strong>Descargas electrostáticas (ESD):</strong> Tocar componentes sensibles con las manos puede dañarlos invisibleamente.</li>
-              <li><strong>Alimentación incorrecta:</strong> Suministrar 5V a un componente que espera 3.3V puede destruirlo.</li>
+              <li><strong>Selector de tipo:</strong> <code class="bg-white/50 px-1 rounded">p { }</code> — Aplica a todos los párrafos.</li>
+              <li><strong>Selector de clase:</strong> <code class="bg-white/50 px-1 rounded">.card { }</code> — Aplica a todos los elementos con class="card".</li>
+              <li><strong>Selector de ID:</strong> <code class="bg-white/50 px-1 rounded">#header { }</code> — Aplica solo al elemento con id="header".</li>
+              <li><strong>Selector descendente:</strong> <code class="bg-white/50 px-1 rounded">nav a { }</code> — Aplica a todos los enlaces dentro de un nav.</li>
+              <li><strong>Selector hijo:</strong> <code class="bg-white/50 px-1 rounded">ul > li { }</code> — Aplica solo a li directos de ul.</li>
+              <li><strong>Pseudo-clases:</strong> <code class="bg-white/50 px-1 rounded">:hover</code>, <code class="bg-white/50 px-1 rounded">:focus</code>, <code class="bg-white/50 px-1 rounded">:nth-child()</code>.</li>
+              <li><strong>Pseudo-elementos:</strong> <code class="bg-white/50 px-1 rounded">::before</code>, <code class="bg-white/50 px-1 rounded">::after</code>.</li>
             </ul>
           </div>
 
-          <div class="callout callout-peligro">
-            <strong>Precaución en el laboratorio</strong>
-            Siempre verificar el voltaje de alimentación antes de conectar componentes. Nunca conectar o desconectar cables con la placa encendida. Usar una fuente de alimentación regulada y no exceder los límites de corriente del pin.
-          </div>
-
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Cortafuegos de hardware (Hardware Firewall)</h4>
-            <p>Un <strong>cortafuegos de hardware</strong> es un dispositivo físico que filtra el tráfico de red antes de que llegue a nuestra red interna. A diferencia del cortafuegos de software (que se ejecuta en el ordenador), este dispositivo protege a todos los dispositivos de la red simultáneamente.</p>
-            <p class="mt-2">En entornos IoT, los cortafuegos de hardware son especialmente importantes porque muchos dispositivos IoT tienen recursos limitados y no pueden ejecutar su propio software de seguridad.</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Módulos de Seguridad Hardware (HSM)</h4>
-            <p>Un <strong>HSM (Hardware Security Module)</strong> es un dispositivo dedicado a gestionar claves criptográficas y realizar operaciones de cifrado de forma segura. Se usa en:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Modelo de cajas (Box Model)</h4>
+            <p>Cada elemento HTML es una caja rectangular compuesta por:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Servidores bancarios para proteger transacciones.</li>
-              <li>Dispositivos IoT de alta seguridad (certificados digitales, autenticación).</li>
-              <li>Infraestructuras críticas: hospitales, centros de datos.</li>
+              <li><strong>Content (contenido):</strong> El área donde se muestra el texto o la imagen.</li>
+              <li><strong>Padding (relleno):</strong> Espacio entre el contenido y el borde.</li>
+              <li><strong>Border (borde):</strong> Línea que rodea el padding.</li>
+              <li><strong>Margen (margin):</strong> Espacio exterior que separa el elemento de otros.</li>
             </ul>
-            <p class="mt-2">Un HSM nunca expone sus claves al exterior. Incluso si alguien accede físicamente al dispositivo, las claves no se pueden extraer.</p>
-          </div>
-
-          <div class="callout callout-nota">
-            <strong>Concepto clave</strong>
-            La seguridad en computación física combina protección física (cerraduras, temperatura, alimentación) con protección lógica (cortafuegos, cifrado, autenticación). Ambas dimensiones son inseparables.
+            <p class="mt-2">La propiedad <code class="bg-white/50 px-1 rounded">box-sizing: border-box</code> hace que el padding y el border se incluyan dentro del ancho total, simplificando enormemente el diseño.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Prevención en el aula</h4>
-            <p>Para trabajar de forma segura con placas de desarrollo:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Flexbox</h4>
+            <p>Flexbox es un sistema de layout unidimensional que facilita la alineación y distribución de elementos dentro de un contenedor. Propiedades principales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">display: flex</code> — Activa Flexbox en el contenedor.</li>
+              <li><code class="bg-white/50 px-1 rounded">justify-content</code> — Alineación horizontal (flex-start, center, space-between, space-around).</li>
+              <li><code class="bg-white/50 px-1 rounded">align-items</code> — Alineación vertical (flex-start, center, stretch).</li>
+              <li><code class="bg-white/50 px-1 rounded">flex-direction</code> — Dirección (row, column).</li>
+              <li><code class="bg-white/50 px-1 rounded">flex-wrap</code> — Permite saltos de línea (wrap).</li>
+              <li><code class="bg-white/50 px-1 rounded">gap</code> — Espacio entre elementos.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">CSS Grid</h4>
+            <p>Grid es un sistema de layout bidimensional que permite crear estructuras complejas de filas y columnas. Propiedades principales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">display: grid</code> — Activa Grid en el contenedor.</li>
+              <li><code class="bg-white/50 px-1 rounded">grid-template-columns</code> — Define las columnas.</li>
+              <li><code class="bg-white/50 px-1 rounded">grid-template-rows</code> — Define las filas.</li>
+              <li><code class="bg-white/50 px-1 rounded">grid-area</code> — Ubica un elemento en el grid.</li>
+              <li><code class="bg-white/50 px-1 rounded">grid-column / grid-row</span> — Ubicación por líneas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Usa Flexbox para layouts en una dimensión (una fila o una columna) y Grid para layouts en dos dimensiones (filas y columnas). Ambos se pueden combinar: un contenedor Grid puede contener elementos Flex, y viceversa.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Responsive Design</h4>
+            <p>El diseño responsive hace que las páginas se adapten a diferentes tamaños de pantalla. Las herramientas principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Media queries:</strong> <code class="bg-white/50 px-1 rounded">@media (max-width: 768px) { }</code> — Aplica estilos según el ancho del viewport.</li>
+              <li><strong>Unidades relativas:</strong> <code class="bg-white/50 px-1 rounded">rem</code>, <code class="bg-white/50 px-1 rounded">em</code>, <code class="bg-white/50 px-1 rounded">%</code>, <code class="bg-white/50 px-1 rounded">vw/vh</code> — Se adaptan al tamaño del contenedor o la ventana.</li>
+              <li><strong>Imágenes fluidas:</strong> <code class="bg-white/50 px-1 rounded">max-width: 100%</code> — Las imágenes nunca desbordan su contenedor.</li>
+              <li><strong>Viewport meta tag:</strong> <code class="bg-white/50 px-1 rounded">&lt;meta name="viewport" content="width=device-width"&gt;</code></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una landing page responsive que combine Flexbox y Grid:</p>
             <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Siempre doble-check de polaridad antes de conectar.</li>
-              <li>Usar cables de colores estándar: rojo (+), negro (−).</li>
-              <li>Trabajar sobre superficies antiestáticas.</li>
-              <li>Tener un multímetro disponible para verificar voltajes.</li>
-              <li>No dejar placas conectadas sin supervisión.</li>
+              <li>Cabecera con Flexbox (logo a la izquierda, menú a la derecha).</li>
+              <li>Sección hero con imagen de fondo y texto centrado.</li>
+              <li>Cuadrícula de 3 tarjetas de servicios con CSS Grid.</li>
+              <li>Formulario de contacto con Flexbox para alinear campos.</li>
+              <li>Pie de página con 3 columnas en Grid.</li>
+              <li>Añadir media queries para que funcione en móvil.</li>
             </ol>
           </div>
         </div>
@@ -370,97 +413,101 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">IoT en profundidad: sensores, nube y protocolos</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción a JavaScript</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Esta sesión es el corazón teórico de la unidad IoT. Comprender los protocolos de comunicación es esencial para que el alumnado diseña sistemas conectados de forma fundamentada, no por ensayo y error.
+            JavaScript es el lenguaje que hace que las páginas web sean interactivas. Esta sesión es la puerta de entrada a la programación del lado del cliente. Es recomendable que el alumnado tenga nociones básicas de lógica (variables, condicionales) antes de esta sesión.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Un sistema IoT completo tiene tres capas: <strong>sensores</strong> que recogen datos del entorno, <strong>conectividad</strong> que los transmite, y <strong>nube</strong> que los almacena, procesa y presenta. En esta sesión profundizaremos en cada una de estas capas.</p>
+            <p>HTML da estructura, CSS da estilo, pero JavaScript da <strong>vida</strong> a una página web. JavaScript permite responder a las acciones del usuario (clics, pulsaciones de teclado, scroll), validar formularios antes de enviarlos, cambiar el contenido de la página sin recargarla y crear animaciones complejas. Es el único lenguaje que se ejecuta directamente en el navegador.</p>
           </div>
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Tipos de sensores IoT</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Temperatura y humedad:</strong> DHT11, DHT22, BME280. Miden condiciones ambientales.</li>
-              <li><strong>Ultrasonidos (HC-SR04):</strong> Miden distancias mediante ondas de sonido. Usados en aparcamientos inteligentes.</li>
-              <li><strong>Infrarrojos:</strong> Detectan movimiento (PIR) o presencia. Base de sistemas de alarma.</li>
-              <li><strong>Luz (LDR):</strong> Fotosensores para activar iluminación automática.</li>
-              <li><strong>Gas y calidad de aire:</strong> MQ-2, MQ-135. Detectan humo, CO₂ y contaminantes.</li>
-              <li><strong>Acelerómetros y giroscopios:</strong> Detectan orientación y movimiento. En smartphones y wearables.</li>
-            </ul>
-          </div>
-
-          <figure>
-            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&h=400&fit=crop" alt="Sensores IoT" loading="lazy" />
-            <figcaption>Sensores conectados: el punto de partida de cualquier sistema IoT</figcaption>
-          </figure>
-
-          <!-- VÍDEO: Protocolos IoT -->
           <div class="callout callout-consejo">
             <strong>Vídeo recomendado</strong>
-            Mira esta explicación de los principales protocolos de comunicación en IoT para entender sus diferencias y casos de uso:
+            Mira esta introducción a JavaScript para familiarizarte con los conceptos básicos antes de empezar con la práctica:
           </div>
           <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/7LphJVFdWdA" title="Protocolos de comunicación IoT" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/W6NZfL5kdCg" title="Introducción a JavaScript" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Protocolos de comunicación</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Manipulación del DOM</h4>
+            <p>El <strong>DOM</strong> (Document Object Model) es una representación en forma de árbol de todos los elementos de la página. JavaScript puede leer y modificar el DOM en tiempo real:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>WiFi:</strong> Alta velocidad, amplio alcance, alto consumo. Ideal para dispositivos con alimentación permanente.</li>
-              <li><strong>Bluetooth Low Energy (BLE):</strong> Bajo consumo, corto alcance (~10 m). Perfecto para wearables y sensores portátiles.</li>
-              <li><strong>Zigbee:</strong> Redes de malla, bajo consumo, alcance medio. Usado en domótica (Philips Hue).</li>
-              <li><strong>Z-Wave:</strong> Similar a Zigbee pero con menor interferencia. Muy usado en domótica profesional.</li>
-              <li><strong>MQTT:</strong> Protocolo ligero de mensajería pub/sub. Estándar de facto para comunicación IoT con la nube.</li>
-              <li><strong>HTTP/HTTPS:</strong> El clásico. Funcional pero pesado para dispositivos con recursos limitados.</li>
+              <li><code class="bg-white/50 px-1 rounded">document.getElementById('id')</code> — Selecciona un elemento por su ID.</li>
+              <li><code class="bg-white/50 px-1 rounded">document.querySelector('.clase')</code> — Selecciona el primer elemento que coincide con el selector CSS.</li>
+              <li><code class="bg-white/50 px-1 rounded">document.querySelectorAll('p')</code> — Selecciona todos los elementos que coinciden.</li>
+              <li><code class="bg-white/50 px-1 rounded">element.textContent = 'Nuevo texto'</code> — Cambia el contenido de texto.</li>
+              <li><code class="bg-white/50 px-1 rounded">element.innerHTML = '&lt;h2&gt;Título&lt;/h2&gt;'</code> — Cambia el contenido HTML.</li>
+              <li><code class="bg-white/50 px-1 rounded">element.classList.add('activo')</code> — Añade una clase CSS.</li>
+              <li><code class="bg-white/50 px-1 rounded">element.style.color = 'red'</code> — Modifica un estilo directamente.</li>
             </ul>
           </div>
 
-          <div class="callout callout-aviso">
-            <strong>Comparativa rápida</strong>
-            <strong>WiFi:</strong> Máxima velocidad, máximo consumo. <strong>BLE:</strong> Mínimo consumo, corto alcance. <strong>Zigbee:</strong> Redes de malla, domótica. <strong>MQTT:</strong> Protocolo de aplicación, no de red — funciona sobre WiFi, Ethernet, etc.
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Eventos</h4>
+            <p>Los eventos son señales que el navegador envía cuando ocurre algo (un clic, una pulsación de tecla, una carga de página). Se gestionan con <code class="bg-white/50 px-1 rounded">addEventListener</code>:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">click</code> — Clic del ratón.</li>
+              <li><code class="bg-white/50 px-1 rounded">keydown / keyup</code> — Pulsación de tecla.</li>
+              <li><code class="bg-white/50 px-1 rounded">submit</code> — Envío de formulario.</li>
+              <li><code class="bg-white/50 px-1 rounded">mouseover / mouseout</code> — Entrada/salida del cursor.</li>
+              <li><code class="bg-white/50 px-1 rounded">load</code> — La página ha terminado de cargar.</li>
+            </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Conexión a la nube</h4>
-            <p>Los dispositivos IoT envían sus datos a plataformas en la nube para su almacenamiento y visualización:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Validación de formularios</h4>
+            <p>JavaScript permite validar los datos del usuario antes de enviarlos al servidor. Esto evita errores y mejora la experiencia:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Adafruit IO:</strong> Plataforma gratuita para prototipos. Dashboards personalizables.</li>
-              <li><strong>ThingSpeak:</strong> Ideal para análisis de datos y visualización con MATLAB.</li>
-              <li><strong>Home Assistant:</strong> Plataforma open source para domótica completa.</li>
-              <li><strong>AWS IoT / Google Cloud IoT:</strong> Soluciones empresariales a gran escala.</li>
+              <li>Comprobar que los campos obligatorios no están vacíos.</li>
+              <li>Validar que un email tiene un formato correcto.</li>
+              <li>Verificar que las contraseñas coinciden.</li>
+              <li>Mostrar mensajes de error en tiempo real junto al campo correspondiente.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo práctico:</strong> Crear un formulario de registro que valide nombre, email y contraseña, mostrando mensajes de error en rojo si los datos no son correctos.</p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Importante</strong>
+            La validación con JavaScript es útil para mejorar la experiencia del usuario, pero nunca debe ser la única medida de seguridad. Siempre se debe validar también en el servidor, ya que el usuario puede desactivar JavaScript o modificar el código.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Contenido dinámico</h4>
+            <p>Con JavaScript podemos modificar la página sin recargarla. Ejemplos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Mostrar/ocultar secciones con un botón.</li>
+              <li>Cambiar el tema de la página (modo claro/oscuro).</li>
+              <li>Cargar más contenido al hacer scroll (infinite scroll).</li>
+              <li>Crear un contador de clics en tiempo real.</li>
             </ul>
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>En grupos, diseñad un diagrama de una red IoT para monitorizar un huerto escolar. Identificad: sensores necesarios, protocolo de comunicación recomendado y plataforma en la nube. Justificad cada decisión.</p>
+            <p>Crear una página interactiva que incluya:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Un botón que cambie el color de fondo de la página.</li>
+              <li>Un contador que muestre el número de clics realizados.</li>
+              <li>Un formulario de contacto con validación en tiempo real.</li>
+              <li>Una sección que se muestre/oculte al hacer clic en un botón.</li>
+            </ol>
           </div>
 
           <!-- QUIZ SESIÓN 5 -->
           <div class="quiz" data-correcta="b" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué protocolo es ideal para un dispositivo wearable con batería?</p>
-            <button class="quiz-opcion" data-valor="a">A. WiFi: bajo consumo, corto alcance.</button>
-            <button class="quiz-opcion" data-valor="b">B. BLE: bajo consumo, corto alcance, ideal para wearables.</button>
-            <button class="quiz-opcion" data-valor="c">C. Zigbee: alta velocidad, ideal para streaming de vídeo.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="c" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué protocolo es el estándar de facto para mensajería IoT con la nube?</p>
-            <button class="quiz-opcion" data-valor="a">A. HTTP</button>
-            <button class="quiz-opcion" data-valor="b">B. Zigbee</button>
-            <button class="quiz-opcion" data-valor="c">C. MQTT</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué hace addEventListener en JavaScript?</p>
+            <button class="quiz-opcion" data-valor="a">A. document.getElementById() selecciona todos los elementos de la página.</button>
+            <button class="quiz-opcion" data-valor="b">B. addEventListener permite ejecutar una función cuando ocurre un evento específico.</button>
+            <button class="quiz-opcion" data-valor="c">C. innerHTML solo funciona con texto plano, no con etiquetas HTML.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
@@ -472,71 +519,89 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Aplicaciones móviles IoT: dashboards, control y automatización</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Animación web</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-consejo">
-            <strong>Actividad de inicio</strong>
-            ¿Tenéis un altavoz inteligente en casa? ¿Una bombilla que se controla con el móvil? En esta sesión analizaremos cómo funcionan estas tecnologías que ya forman parte de nuestro día a día.
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Las animaciones web añaden dinamismo y mejoran la experiencia de usuario. Esta sesión cubre las principales técnicas de animación disponibles para el desarrollador web, desde transiciones CSS simples hasta animaciones con JavaScript y Canvas.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>La mayoría de sistemas IoT se controlan desde aplicaciones móviles o paneles web (dashboards). Estas interfaces permiten visualizar datos en tiempo real, activar o desactivar dispositivos y crear automatizaciones. En esta sesión exploraremos los principales ecosistemas de hogar inteligente y las herramientas para crear nuestros propios dashboards.</p>
+            <p>Las animaciones web son cambios visuales que ocurren de forma gradual a lo largo del tiempo. Pueden ser sutiles (un cambio de color al pasar el cursor) o complejas (animaciones de escenas enteras). En esta sesión exploraremos las diferentes técnicas disponibles y sus casos de uso.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Ecosistemas de hogar inteligente</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">CSS Transitions</h4>
+            <p>Las transiciones CSS permiten animar suavemente el cambio de una propiedad de estilo a otra. Son ideales para interacciones simples:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Amazon Alexa:</strong> Asistente de voz que controla dispositivos compatibles mediante comandos de voz. Ecosistema amplio: bombillas, enchufes, cerraduras, cámaras, altavoces.</li>
-              <li><strong>Google Home:</strong> Similar a Alexa, integrado con servicios de Google. Permite rutinas automatizadas (ej: "Buenos días" → encender luces, dar temperatura, leer noticias).</li>
-              <li><strong>Apple HomeKit:</strong> Ecosistema Apple con énfasis en privacidad. Compatible con Siri. Control por voz y automatizaciones.</li>
-              <li><strong>Home Assistant:</strong> Plataforma open source que conecta cualquier dispositivo IoT sin depender de un fabricante. Más personalizable pero requiere más conocimiento técnico.</li>
+              <li><code class="bg-white/50 px-1 rounded">transition-property</code> — Qué propiedad se anima (color, transform, opacity).</li>
+              <li><code class="bg-white/50 px-1 rounded">transition-duration</code> — Duración de la transición (0.3s).</li>
+              <li><code class="bg-white/50 px-1 rounded">transition-timing-function</code> — Curva de velocidad (ease, linear, ease-in-out).</li>
+              <li><code class="bg-white/50 px-1 rounded">transition-delay</code> — Retraso antes de iniciar.</li>
             </ul>
-          </div>
-
-          <figure>
-            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&h=400&fit=crop" alt="Hogar inteligente IoT" loading="lazy" />
-            <figcaption>Ecosistemas de domótica: Alexa, Google Home y más</figcaption>
-          </figure>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Dashboards IoT</h4>
-            <p>Un <strong>dashboard</strong> es un panel de control visual que muestra los datos de los sensores y permite interactuar con los dispositivos. Ejemplos:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Adafruit IO:</strong> Permite crear widgets (botones, gráficas, indicadores) conectados a los datos del ESP32.</li>
-              <li><strong>Node-RED:</strong> Herramienta visual de programación de flujos de datos. Conecta sensores, APIs y servicios.</li>
-              <li><strong>Grafana:</strong> Herramienta profesional de visualización de datos. Se usa con bases de datos como InfluxDB.</li>
-            </ul>
-          </div>
-
-          <div class="callout callout-nota">
-            <strong>Caso real: automatización del hogar</strong>
-            Un sistema domótico completo puede: encender las luces al anochecer (sensor de luz), ajustar la calefacción según la temperatura exterior (sensor DHT22), activar una alarma si detecta movimiento (sensor PIR) y notificarte en el móvil. Todo esto sin intervención manual.
+            <p class="mt-2"><strong>Ejemplo:</strong> Un botón que cambia de color y tamaño suavemente al pasar el cursor, o una tarjeta que se eleva ligeramente al hacer hover.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Control remoto y automatización</h4>
-            <p>Las aplicaciones móviles IoT permiten:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">CSS Keyframes</h4>
+            <p>Las keyframes permiten crear animaciones más complejas definiendo múltiples estados intermedios:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Control remoto:</strong> Encender/apagar dispositivos desde cualquier lugar con conexión a Internet.</li>
-              <li><strong>Programación:</strong> Establecer horarios (ej: luces encendidas de 18:00 a 23:00).</li>
-              <li><strong>Automatización:</strong> Reglas condicionales (si temperatura > 30°C → encender ventilador).</li>
-              <li><strong>Notificaciones:</strong> Alertas en el móvil cuando un sensor detecta una condición anómala.</li>
-              <li><strong>Historial:</strong> Gráficas con la evolución de datos a lo largo del tiempo.</li>
+              <li><code class="bg-white/50 px-1 rounded">@keyframes</code> — Define la secuencia de la animación.</li>
+              <li><code class="bg-white/50 px-1 rounded">animation-name</code> — Nombre de la animación.</li>
+              <li><code class="bg-white/50 px-1 rounded">animation-duration</code> — Duración total.</li>
+              <li><code class="bg-white/50 px-1 rounded">animation-iteration-count</code> — Número de repeticiones (infinite para bucle).</li>
+              <li><code class="bg-white/50 px-1 rounded">animation-direction</code> — Dirección (normal, alternate).</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo:</strong> Un spinner de carga, una animación de entrada de elementos, o un personaje que camina.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Animaciones con JavaScript</h4>
+            <p>JavaScript ofrece control total sobre las animaciones, permitiendo crear efectos interactivos y dinámicos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-white/50 px-1 rounded">requestAnimationFrame()</code> — Ejecuta una función antes del siguiente frame de repintado. Es la forma más eficiente de animar con JS.</li>
+              <li><strong>Animaciones basadas en scroll:</strong> Modificar elementos según la posición del usuario al desplazarse.</li>
+              <li><strong>Animaciones interactivas:</strong> Que responden al movimiento del ratón o al tacto.</li>
+              <li><strong>Librerías:</strong> GSAP, Anime.js, Motion One — Facilitan la creación de animaciones complejas.</li>
             </ul>
           </div>
 
-          <div class="callout callout-aviso">
-            <strong>Retos de las aplicaciones IoT</strong>
-            El control remoto depende de la conexión a Internet. Si la red falla, muchos dispositivos pierden funcionalidad. Por eso es importante diseñar sistemas con modo offline y mecanismos de respaldo físico.
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para animaciones simples (hover, transiciones de color), usa CSS. Para animaciones complejas, interactivas o que requieran control preciso del tiempo, usa JavaScript con requestAnimationFrame. Evita animar propiedades costosas como top, left o width — usa transform y opacity que se ejecutan en la GPU.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">SVG y Canvas</h4>
+            <p><strong>SVG (Scalable Vector Graphics):</strong> Formato de gráficos vectoriales que se puede animar con CSS o JavaScript. Ideal para iconos, diagramas y gráficos que deben mantener la calidad a cualquier tamaño.</p>
+            <p class="mt-2"><strong>Canvas:</strong> Elemento HTML que permite dibujar gráficos像素 a pixels con JavaScript. Ideal para videojuegos, visualizaciones de datos y gráficos complejos que requieren renderizado en tiempo real.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Consideraciones de rendimiento</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Usa transform y opacity:</strong> Estas propiedades se ejecutan en la GPU y son mucho más eficientes que animar position, size o color.</li>
+              <li><strong>Evita reflows:</strong> Modificar el layout (width, height, margin) fuerza al navegador a recalcular la posición de todos los elementos.</li>
+              <li><strong>Debounce事件:</strong> En eventos como scroll o resize, limita la frecuencia de ejecución de la función de animación.</li>
+              <li><strong>Reduce elementos animados:</strong> Cuantos más elementos se animan simultáneamente, mayor es el consumo de recursos.</li>
+              <li><strong>Considera prefers-reduced-motion:</strong> Respeta la configuración del usuario que prefiere menos animaciones.</li>
+            </ul>
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Cada grupo creará un mockup (prototipo visual) de una aplicación móvil para controlar un dispositivo IoT de su elección: riego automático, alarma o iluminación. Deberá incluir: pantalla principal con datos en tiempo real, botón de control y una automatización básica.</p>
+            <p>Crear una galería de animaciones web que incluya:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Botones con transiciones CSS suaves.</li>
+              <li>Una animación de carga con @keyframes.</li>
+              <li>Un efecto parallax al hacer scroll con JavaScript.</li>
+              <li>Un gráfico SVG animado con CSS.</li>
+              <li>Un pequeño canvas interactivo que responda al movimiento del ratón.</li>
+            </ol>
           </div>
         </div>
       </article>
@@ -546,101 +611,70 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: sistema IoT con ESP32 y dashboard</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: sitio web interactivo</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-consejo">
-            <strong>Producto de la unidad</strong>
-            Esta sesión es la culminación de todo lo trabajado. Cada grupo还将 presentar su sistema IoT completo: hardware conectado, código funcionando y dashboard de visualización en la nube.
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión está dedicada a la puesta en común y la presentación de los proyectos finales. Es un momento clave para que el alumnado demuestre lo aprendido y reciba retroalimentación de sus compañeros y el profesor.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Objetivos del proyecto</h4>
-            <p>Cada grupo de 2-3 alumnos diseñará, construirá y presentará un sistema IoT completo que incluya:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Un sensor real conectado a un ESP32 (temperatura, humedad, luz, distancia o movimiento).</li>
-              <li>Código Arduino que lea el sensor y envíe los datos a la nube vía WiFi.</li>
-              <li>Un dashboard en Adafruit IO que muestre los datos en tiempo real con gráficas y widgets.</li>
-              <li>Una automatización o control remoto (botón virtual para activar un LED o motor).</li>
-              <li>Una memoria escrita con diagrama de conexión, código comentado y capturas del dashboard.</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta última sesión de la unidad, cada grupo presentará el sitio web interactivo que ha creado a lo largo de las sesiones anteriores. El proyecto debe integrar todos los conocimientos adquiridos: estructura semántica HTML, estilos con CSS (Flexbox/Grid), interactividad con JavaScript y animaciones. Utilizaremos CodePen como plataforma de desarrollo para facilitar la revisión y la compartición.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Especificación del proyecto</h4>
-            <p><strong>Requisitos mínimos:</strong></p>
+            <h4 class="font-semibold text-brand-700 mb-1">Requisitos del proyecto</h4>
+            <p>Cada sitio web interactivo debe cumplir los siguientes requisitos:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Lectura de al menos un sensor cada 5 segundos.</li>
-              <li>Envío de datos a Adafruit IO mediante protocolo MQTT.</li>
-              <li>Dashboard con al menos 2 widgets (un gráfico y un indicador).</li>
-              <li>Control remoto de un actuador (LED, buzzer o servo).</li>
+              <li><strong>HTML semántico:</strong> Uso correcto de header, nav, main, section, article, footer y formularios con labels.</li>
+              <li><strong>CSS:</strong> Uso de Flexbox o Grid para el layout, modelo de cajas correcto y diseño responsive con media queries.</li>
+              <li><strong>JavaScript:</strong> Al menos una interacción: validación de formularios, cambio de contenido dinámico o animación.</li>
+              <li><strong>Animaciones:</strong> Al menos dos animaciones CSS (transición o keyframe) y una animación con JavaScript.</li>
+              <li><strong>Accesibilidad:</strong> Contraste de colores suficiente, texto alternativo en imágenes y etiquetas en formularios.</li>
+              <li><strong>Temática libre:</strong> Puede ser una web de una tienda, un blog, un portfolio, una landing page, etc.</li>
             </ul>
-            <p class="mt-2"><strong>Requisitos opcionales (puntos extra):</strong></p>
+          </div>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop" alt="Desarrollo web en CodePen" loading="lazy" />
+            <figcaption>Ejemplo de proyecto web desarrollado en CodePen con HTML, CSS y JavaScript</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Presentación y rúbrica de evaluación</h4>
+            <p>Cada grupo dispondrá de 5 minutos para presentar su proyecto. La evaluación se realizará con la siguiente rúbrica:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Múltiples sensores en un mismo dashboard.</li>
-              <li>Automatización con reglas (si X entonces Y).</li>
-              <li>Notificaciones push al móvil.</li>
-              <li>Alimentación por batería con gestión de energía.</li>
+              <li><strong>Funcionalidad (30%):</strong> El sitio web funciona correctamente en diferentes navegadores y tamaños de pantalla.</li>
+              <li><strong>Diseño y estética (25%):</strong> Uso coherente de colores, tipografía, espaciado y jerarquía visual.</li>
+              <li><strong>Código (25%):</strong> HTML semántico, CSS organizado y JavaScript limpio y comentado.</li>
+              <li><strong>Accesibilidad (10%):</strong> Cumplimiento de los principios de accesibilidad web.</li>
+              <li><strong>Creatividad (10%):</strong> Originalidad del diseño y las interacciones implementadas.</li>
             </ul>
           </div>
 
           <div class="callout callout-aviso">
-            <strong>Criterios de evaluación del proyecto</strong>
-            <span class="criterio">Funcionamiento del hardware</span>
-            <span class="criterio">Calidad del código</span>
-            <span class="criterio">Diseño del dashboard</span>
-            <span class="criterio">Documentación</span>
-            <span class="criterio">Presentación oral</span>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Desarrollo en sesión</h4>
-            <p>Esta sesión se dedica a:</p>
-            <ol class="mt-2 space-y-2 pl-5 list-decimal">
-              <li><strong>Montaje del hardware (10 min):</strong> Conectar sensor, cables y placa según el diagrama.</li>
-              <li><strong>Programación (15 min):</strong> Subir el código al ESP32 y verificar la lectura del sensor.</li>
-              <li><strong>Configuración del dashboard (10 min):</strong> Crear feeds en Adafruit IO y añadir widgets.</li>
-              <li><strong>Pruebas integradas (10 min):</strong> Verificar que los datos fluyen desde el sensor hasta el dashboard.</li>
-              <li><strong>Presentaciones (5 min):</strong> Cada grupo presenta brevemente su sistema.</li>
-            </ol>
+            <strong>Entrega</strong>
+            Cada grupo debe compartir el enlace de su proyecto en CodePen junto con una breve documentación (300-500 palabras) que explique las decisiones de diseño y las tecnologías utilizadas.
           </div>
 
           <!-- QUIZ FINAL UNIDAD -->
           <div class="quiz" data-correcta="a" data-total="4">
             <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué es un sistema IoT completo?</p>
-            <button class="quiz-opcion" data-valor="a">A. Un dispositivo que recoge datos, los envía a la nube y permite su visualización.</button>
-            <button class="quiz-opcion" data-valor="b">B. Un ordenador de sobremesa con conexión a Internet.</button>
-            <button class="quiz-opcion" data-valor="c">C. Una aplicación móvil para controlar el teléfono.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="b" data-total="4">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué protocolo es el estándar de facto para mensajería IoT?</p>
-            <button class="quiz-opcion" data-valor="a">A. WiFi es ideal para wearables por su bajo consumo.</button>
-            <button class="quiz-opcion" data-valor="b">B. MQTT es un protocolo ligero de mensajería pub/sub para IoT.</button>
-            <button class="quiz-opcion" data-valor="c">C. Zigbee se usa para transmisión de vídeo en alta definición.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="c" data-total="4">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Por qué el ESP32 es ideal para proyectos IoT?</p>
-            <button class="quiz-opcion" data-valor="a">A. Solo tiene WiFi integrado.</button>
-            <button class="quiz-opcion" data-valor="b">B. Es idéntico al Arduino Uno.</button>
-            <button class="quiz-opcion" data-valor="c">C. Tiene WiFi y Bluetooth, procesador dual-core y es ideal para IoT.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuál es la diferencia principal entre Flexbox y CSS Grid?</p>
+            <button class="quiz-opcion" data-valor="a">A. Flexbox se usa para layouts en una dimensión, Grid para dos dimensiones.</button>
+            <button class="quiz-opcion" data-valor="b">B. Flexbox y Grid son lo mismo y se pueden usar indistintamente.</button>
+            <button class="quiz-opcion" data-valor="c">C. Grid solo funciona en navegadores antiguos y Flexbox es la alternativa moderna.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Reflexión final de la unidad</strong>
-            La computación física conecta el mundo del código con el mundo real. Cada sensor que programamos, cada dato que enviamos a la nube y cada automatización que creamos tiene un impacto tangible. A partir de ahora, cuando veáis un dispositivo inteligente, sabréis que detrás hay alguien que diseñó el hardware, escribió el código y configuró la conectividad.
+            <strong>Producto de la unidad</strong>
+            Los mejores proyectos serán publicados en la web del curso como referencia para futuros alumnos. El alumnado también podrá compartir sus creaciones en sus portfolios digitales.
           </div>
         </div>
       </article>
@@ -648,11 +682,11 @@
 
     <!-- NAVEGACIÓN ENTRE UNIDADES -->
     <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
-      <a href="ud3.html" class="rounded-lg bg-slate-200 px-4 py-2 text-sm font-semibold text-ink-800 hover:bg-slate-300 transition">
-        ← UD3 · Desarrollo Web
+      <a href="ud3.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-ink-800 hover:bg-slate-100 transition">
+        ← Anterior: UD3 · Desarrollo de Aplicaciones Móviles
       </a>
       <a href="ud5.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
-        Siguiente: UD5 · Bases de Datos →
+        Siguiente: UD5 · Computación Física e IoT →
       </a>
     </nav>
 
