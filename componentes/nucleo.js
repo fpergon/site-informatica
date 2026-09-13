@@ -56,7 +56,7 @@
     +     '<a href="' + home + '" class="flex items-center gap-3">'
     +       '<span class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 font-black">P</span>'
     +       '<span class="leading-tight"><span class="block text-sm font-bold">IES Pintor Pedro Gómez</span>'
-      +       '<span class="block text-xs text-brand-200">Computación y Robótica · TIC</span></span>'
+      +       '<span class="block text-xs text-brand-200">Computación y Robótica · Tecnología y Digitalización · TIC</span></span>'
     +     '</a>'
     +     '<nav class="hidden items-center gap-1 md:flex">' + navDesktop + '</nav>'
     +     '<button id="btn-menu" aria-label="Abrir menú" aria-expanded="false" class="rounded-md p-2 text-white hover:bg-white/10 md:hidden">'
