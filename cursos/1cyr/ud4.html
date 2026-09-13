@@ -275,6 +275,84 @@
             <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
             <p><strong>Proyecto práctico:</strong> Programar la Micro:bit para que, al pulsar el botón A, se encienda una secuencia de LEDs; al pulsar el botón B, se reproduzca un sonido; y al mover la placa, se muestre un patrón diferente en la matriz de LEDs.</p>
           </div>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Retos Micro:bit</h4>
+            <p>Una vez dominados los conceptos básicos, ¡a por los retos! Cada reto combina diferentes componentes de la Micro:bit.</p>
+          </div>
+          <details class="ud-card mb-3">
+            <summary><h5 class="font-bold text-ink-800">Reto 1: El cartel luminoso</h5><span class="flecha">▶</span></summary>
+            <p class="text-sm text-slate-600">Mostrar tu nombre desplazándose por la matriz de LEDs (scrolling) y luego hacer parpadear un icono (corazón, estrella…).</p>
+            <p class="mt-2 text-sm font-semibold text-brand-700">Pistas:</p>
+            <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+              <li>Usa el bloque "mostrar texto" para el scrolling.</li>
+              <li>Usa "mostrar icono" y un bucle "por siempre" con retardos para el parpadeo.</li>
+            </ul>
+          </details>
+          <details class="ud-card mb-3">
+            <summary><h5 class="font-bold text-ink-800">Reto 2: El dado digital (Piedra, Papel o Tijera)</h5><span class="flecha">▶</span></summary>
+            <p class="text-sm text-slate-600">Al agitar la Micro:bit, generar un número aleatorio del 1 al 3 y mostrar el icono correspondiente: 1 = ✊ (piedra), 2 = ✋ (papel), 3 = ✌️ (tijera).</p>
+            <p class="mt-2 text-sm font-semibold text-brand-700">Pistas:</p>
+            <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+              <li>Usa el evento "al agitar".</li>
+              <li>Genera un número aleatorio con "al azar entre 1 y 3".</li>
+              <li>Usa un bloque "si…entonces…si no" para mostrar cada icono.</li>
+            </ul>
+          </details>
+          <details class="ud-card mb-3">
+            <summary><h5 class="font-bold text-ink-800">Reto 3: Alarma de mochila (Sensor de Luz)</h5><span class="flecha">▶</span></summary>
+            <p class="text-sm text-slate-600">Simula una alarma de mochila: cuando alguien la abra (la luz aumenta), suena una alarma y se muestra un icono de calavera.</p>
+            <p class="mt-2 text-sm font-semibold text-brand-700">Pistas:</p>
+            <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+              <li>Lee el valor del sensor de luz con "leer luz".</li>
+              <li>Si la luz supera un umbral, reproduce un sonido de alarma y muestra el icono.</li>
+            </ul>
+          </details>
+          <details class="ud-card mb-3">
+            <summary><h5 class="font-bold text-ink-800">Reto 4: El nivel de burbuja (Ejes X-Y)</h5><span class="flecha">▶</span></summary>
+            <p class="text-sm text-slate-600">Usa el acelerómetro para detectar la inclinación de la placa y mostrar una flecha que indica hacia dónde está inclinada (como un nivel de burbuja).</p>
+            <p class="mt-2 text-sm font-semibold text-brand-700">Pistas:</p>
+            <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+              <li>Lee los ejes X e Y con "leer aceleración en x/y".</li>
+              <li>Si X > 0 → flecha derecha; X < 0 → izquierda; Y > 0 → arriba; Y < 0 → abajo.</li>
+            </ul>
+          </details>
+          <details class="ud-card mb-3">
+            <summary><h5 class="font-bold text-ink-800">Reto 5: Termómetro inteligente</h5><span class="flecha">▶</span></summary>
+            <p class="text-sm text-slate-600">Al pulsar el botón A, mostrar la temperatura actual. Si hace calor (>25°C), mostrar icono de sol; si hace frío (<10°C), mostrar icono de nieve.</p>
+            <p class="mt-2 text-sm font-semibold text-brand-700">Pistas:</p>
+            <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+              <li>Lee la temperatura con "leer temperatura".</li>
+              <li>Usa condicionales para comparar con los umbrales.</li>
+            </ul>
+          </details>
+          <details class="ud-card mb-3">
+            <summary><h5 class="font-bold text-ink-800">Reto 6: El telégrafo (Pines táctiles)</h5><span class="flecha">▶</span></summary>
+            <p class="text-sm text-slate-600">Trabajo en parejas: cada uno tiene una Micro:bit. Al tocar simultáneamente el Pin 0 y el Pin GND, se envía un mensaje a la otra placa.</p>
+            <p class="mt-2 text-sm font-semibold text-brand-700">Pistas:</p>
+            <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+              <li>Usa la comunicación por radio de la Micro:bit.</li>
+              <li>Un grupo envía y el otro recibe el mensaje.</li>
+            </ul>
+          </details>
+          <details class="ud-card mb-3">
+            <summary><h5 class="font-bold text-ink-800">Reto final: Adivina el número secreto</h5><span class="flecha">▶</span></summary>
+            <p class="text-sm text-slate-600">Al agitar la Micro:bit, se genera un número secreto (1-20). Pulsa A para restar, B para sumar, y A+B para comprobar. Las flechas indican si es mayor o menor. Muestra el número de intentos al acertar.</p>
+            <p class="mt-2 text-sm font-semibold text-brand-700">Variables necesarias:</p>
+            <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+              <li><code>secreto</code>: número aleatorio entre 1 y 20.</li>
+              <li><code>numero</code>: la estimación del jugador (empieza en 1).</li>
+              <li><code>intentos</code>: contador de intentos.</li>
+            </ul>
+          </details>
+          <div class="callout callout-consejo mt-3">
+            <strong>¿Sin ideas? ¡Retos extra para valientes!</strong>
+            <ul class="mt-1 space-y-1 pl-5 list-disc text-sm">
+              <li><strong>Sensor de reversa:</strong> Simulador de parking con 3 niveles de proximidad usando el sensor de luz.</li>
+              <li><strong>Test de reflejos:</strong> Mide el tiempo de reacción en milisegundos.</li>
+              <li><strong>Brújula digital:</strong> Usa el magnetómetro para mostrar la dirección (N a 315-45°).</li>
+              <li><strong>Comunicación por radio:</strong> Envía mensajes inalámbricos entre dos Micro:bits.</li>
+            </ul>
+          </div>
         </div>
       </article>
     </section>
