@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD2 · Hardware y Redes Informáticas · 2º TyD</title>
+  <meta name="description" content="Unidad Didáctica 2 de 2º TyD: Componentes de un ordenador, redes de área local, montaje de hardware y configuración básica." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2tyd" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2tyd.html" class="hover:underline">2.º TyD</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque II</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Hardware y Redes Informáticas</h1>
+      <p class="mt-3 text-brand-50/90">Componentes de un ordenador, redes de área local, montaje de hardware y configuración básica. Esta unidad permitirá al alumnado comprender y manipular los componentes físicos de un sistema informático.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.D.1</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.A.3</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.A.6</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.B.1</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.D.3</span>
+      </div>
+    </section>
+
+    <section class="mt-8">
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Componentes de un ordenador</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div class="callout callout-nota">
+            <strong>Saberes básicos</strong>
+            TYD.2.D.1 · Criterio 6.1
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Un ordenador es un sistema compuesto por múltiples elementos硬件 y software que trabajan conjuntamente. En esta sesión identificaremos y describiremos cada componente, comprendiendo su función y su relación con el resto del sistema.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/componentes-ordenador.jpg" alt="Componentes principales de un ordenador" loading="lazy" class="rounded-lg w-full" />
+            <figcaption>Visión general de los componentes principales de un ordenador de escritorio</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes principales</h4>
+            <p>Todo ordenador se compone de los siguientes elementos fundamentales:</p>
+
+            <div class="mt-3 grid gap-3 sm:grid-cols-2">
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">CPU (Unidad Central de Procesamiento)</h5>
+                <p class="mt-1">El "cerebro" del ordenador. Ejecuta las instrucciones de los programas realizando operaciones lógicas, aritméticas y de control. Se mide en gigahercios (GHz) y su rendimiento depende del número de núcleos y la velocidad de reloj.</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">RAM (Memoria de Acceso Aleatorio)</h5>
+                <p class="mt-1">Memoria temporal de alta velocidad donde se almacenan los datos que el procesador está utilizando en ese momento. Se mide en gigabytes (GB). Al apagar el ordenador, su contenido se pierde.</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">Placa base</h5>
+                <p class="mt-1">Circuit impreso que conecta todos los componentes del ordenador. Sobre ella se insertan el procesador, la memoria RAM, las tarjetas de expansión y se conectan los dispositivos de almacenamiento y periféricos.</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">Almacenamiento</h5>
+                <p class="mt-1">Dispositivos donde se guardan los datos de forma permanente: discos duros (HDD), unidades de estado sólido (SSD) y unidades NVMe. Se mide en gigabytes (GB) o terabytes (TB).</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">Fuente de alimentación</h5>
+                <p class="mt-1">Convierte la corriente alterna de la red eléctrica (220V) en corriente continua de bajo voltaje (12V, 5V, 3,3V) que necesitan los componentes internos. Se mide en vatios (W).</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">Periféricos</h5>
+                <p class="mt-1">Dispositivos que permiten la interacción con el ordenador. <strong>Entrada:</strong> teclado, ratón, escáner. <strong>Salida:</strong> monitor, altavoces, impresora. <strong>Entrada/Salida:</strong> pantalla táctil, memoria USB.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Importante</strong>
+            La fuente de alimentación es uno de los componentes más críticos y menos valorados. Una fuente de mala calidad puede dañar el resto de componentes y provocar fallos inestables en el sistema.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Identificación de componentes</h4>
+            <p>Con las imágenes y la información de esta sesión, completar una tabla con los siguientes datos de cada componente:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Nombre del componente y su función principal.</li>
+              <li>Unidad de medida y ejemplo de especificación.</li>
+              <li>Conexión a la placa base (tipo de ranura o puerto).</li>
+              <li>¿Qué componente se vería afectado si falla este?</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Componentes internos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Profundizaremos en los componentes internos de un ordenador: el procesador, la memoria, la tarjeta gráfica y los dispositivos de almacenamiento. Conocer sus especificaciones nos permitirá tomar decisiones informadas al comprar o actualizar un equipo.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/componentes-internos.jpg" alt="Componentes internos de un ordenador" loading="lazy" class="rounded-lg w-full" />
+            <figcaption>Componentes internos de un ordenador de escritorio montados en la placa base</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El procesador (CPU)</h4>
+            <p>El procesador es el componente que ejecuta las instrucciones de los programas. Sus características principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Número de núcleos:</strong> Cada núcleo puede ejecutar instrucciones de forma independiente. Más núcleos = mejor rendimiento multitarea.</li>
+              <li><strong>Frecuencia de reloj:</strong> Velocidad a la que ejecuta instrucciones, medida en GHz. A mayor frecuencia, mayor velocidad de procesamiento.</li>
+              <li><strong>Caché:</strong> Memoria rápida integrada en el procesador para datos frecuentemente utilizados.</li>
+              <li><strong>TDP (Thermal Design Power):</strong> Consumo máximo de energía y calor generado. Determina el tipo de refrigeración necesaria.</li>
+            </ul>
+            <p class="mt-2"><strong>Marcas principales:</strong> Intel (Core i3, i5, i7, i9) y AMD (Ryzen 3, 5, 7, 9).</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">La memoria (RAM)</h4>
+            <p>La RAM almacena temporalmente los datos que el procesador necesita acceder rápidamente:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Capacidad:</strong> Se mide en GB. Para uso básico, 8 GB es suficiente. Para edición de vídeo o diseño, 16-32 GB.</li>
+              <li><strong>Velocidad:</strong> Se mide en MHz (DDR4: 2400-3200 MHz, DDR5: 4800-6400 MHz).</li>
+              <li><strong>Tipo:</strong> DDR4 (actualmente más común) y DDR5 (nueva generación).</li>
+              <li><strong>Canales:</strong> Configuración en doble canal duplica el ancho de banda.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">La tarjeta gráfica (GPU)</h4>
+            <p>La GPU se encarga del procesamiento de imágenes y vídeo. Es esencial para:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Gráficos integrados:</strong> Integrados en el procesador. Suficientes para ofimática y navegación.</li>
+              <li><strong>Gráficos dedicados:</strong> Tarjeta independiente con mayor potencia. Necesaria para gaming, edición de vídeo y diseño 3D.</li>
+              <li><strong>Memoria VRAM:</strong> Memoria propia de la GPU, medida en GB (4-24 GB).</li>
+              <li><strong>Marcas:</strong> NVIDIA (GeForce) y AMD (Radeon).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Dispositivos de almacenamiento</h4>
+            <p>Los dispositivos de almacenamiento guardan los datos de forma permanente:</p>
+            <table class="rubrica my-3 w-full">
+              <thead>
+                <tr>
+                  <th>Característica</th>
+                  <th>HDD</th>
+                  <th>SSD SATA</th>
+                  <th>SSD NVMe</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Velocidad de lectura</td>
+                  <td>80-160 MB/s</td>
+                  <td>500-550 MB/s</td>
+                  <td>3.000-7.000 MB/s</td>
+                </tr>
+                <tr>
+                  <td>Velocidad de arranque</td>
+                  <td>Lenta</td>
+                  <td>Rápida</td>
+                  <td>Muy rápida</td>
+                </tr>
+                <tr>
+                  <td>Resistencia a golpes</td>
+                  <td>Fragil (tiene partes móviles)</td>
+                  <td>Sólido (sin partes móviles)</td>
+                  <td>Sólido (sin partes móviles)</td>
+                </tr>
+                <tr>
+                  <td>Relación calidad/precio</td>
+                  <td>Alta capacidad, bajo precio</td>
+                  <td>Precio medio</td>
+                  <td>Mayor precio</td>
+                </tr>
+                <tr>
+                  <td>Ciclo de vida</td>
+                  <td>3-5 años</td>
+                  <td>5-10 años</td>
+                  <td>5-10 años</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para mejorar el rendimiento de un ordenador antiguo, la inversión más efectiva es sustituir el disco duro HDD por un SSD. La mejora en velocidad de arranque y apertura de programas es notable e inmediata.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Comparativa de equipos</h4>
+            <p>Investigar y comparar tres configuraciones de ordenador para diferentes usos:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Ofimática básica:</strong> Navegación, documentos, correo electrónico.</li>
+              <li><strong>Diseño gráfico:</strong> Edición de imagen y vídeo, modelado 3D.</li>
+              <li><strong>Gaming:</strong> Videojuegos de alto rendimiento.</li>
+            </ol>
+            <p class="mt-2">Para cada configuración, especificar: procesador, RAM, GPU, almacenamiento y justificar cada elección.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Redes informáticas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las redes informáticas son el backbone de la comunicación moderna. En esta sesión aprenderemos qué son, cómo se clasifican y los conceptos fundamentales que permiten la interconexión entre dispositivos.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/redes-informaticas.jpg" alt="Tipos de redes informáticas" loading="lazy" class="rounded-lg w-full" />
+            <figcaption>Esquema de los diferentes tipos de redes informáticas según su alcance geográfico</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una red informática?</h4>
+            <p>Una red informática es un conjunto de dispositivos (ordenadores, servidores, impresoras, dispositivos móviles) interconectados entre sí para compartir recursos, datos y servicios.</p>
+            <p class="mt-2"><strong>Elementos básicos de una red:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Nodos o estaciones:</strong> Dispositivos conectados a la red.</li>
+              <li><strong>Medio de transmisión:</strong> Cable (par trenzado, fibra óptica) o inalámbrico (Wi-Fi, Bluetooth).</li>
+              <li><strong>Equipos de interconexión:</strong> Switch, router, punto de acceso.</li>
+              <li><strong>Protocolos:</strong> Reglas de comunicación (TCP/IP, HTTP, FTP).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de red según su alcance</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>LAN (Local Area Network):</strong> Red de área local. Conecta dispositivos en un área geográfica limitada: un edificio, una planta, un hogar. Alto rendimiento y bajo coste.</li>
+              <li><strong>MAN (Metropolitan Area Network):</strong> Red de área metropolitana. Conecta varias LAN dentro de una ciudad o campus universitario. Alcance de hasta 50 km.</li>
+              <li><strong>WAN (Wide Area Network):</strong> Red de área amplia. Conecta redes en distancias grandes, incluso continentales. Internet es la WAN más grande del mundo.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Topologías de red</h4>
+            <p>La topología define cómo están organizados los dispositivos en la red:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bus:</strong> Todos los dispositivos comparten un cable central. Si el cable se daña, toda la red cae.</li>
+              <li><strong>Estrella:</strong> Todos los dispositivos se conectan a un nodo central (switch/router). Es la topología más utilizada actualmente.</li>
+              <li><strong>Anillo:</strong> Los dispositivos forman un círculo. Los datos viajan en una dirección.</li>
+              <li><strong>Malla:</strong> Cada dispositivo se conecta con varios otros. Alta redundancia y fiabilidad.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cableado de red</h4>
+            <p>Los cables más utilizados en redes LAN son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Par trenzado (UTP/STP):</strong> Cable de cobre más común. Categorías: Cat5e (1 Gbps), Cat6 (1-10 Gbps), Cat6a (10 Gbps).</li>
+              <li><strong>Fibra óptica:</strong> Transmite datos mediante pulsos de luz. Velocidades muy altas (hasta 100 Gbps) y larga distancia.</li>
+              <li><strong>Coaxial:</strong> Menos utilizado en redes actuales. Principalmente en conexiones de televisión e internet por cable.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato práctico</strong>
+            En un hogar típico, la red LAN está formada por el router (proporcionado por el operador), los cables Ethernet que conectan los dispositivos fijos (ordenador de sobremesa, consola) y la red Wi-Fi para dispositivos móviles (móvil, tablet, portátil).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Diagrama de red</h4>
+            <p>Dibujar el diagrama de la red del instituto o de tu hogar, incluyendo:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Todos los dispositivos conectados a la red.</li>
+              <li>El medio de conexión (cable o inalámbrico).</li>
+              <li>Los equipos de interconexión (router, switch).</li>
+              <li>La topología utilizada y justificación.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Red LAN doméstica</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Configurar y mantener una red doméstica es una habilidad práctica que todo usuario debe conocer. En esta sesión veremos los componentes de una red doméstica, cómo configurarlos y cómo resolver problemas comunes de conectividad.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/red-lan.jpg" alt="Red LAN doméstica" loading="lazy" class="rounded-lg w-full" />
+            <figcaption>Diagrama típico de una red LAN doméstica con router, dispositivos cableados e inalámbricos</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes de una red doméstica</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Router:</strong> Dispositivo que conecta la red local con Internet y dirige el tráfico entre dispositivos. Combina las funciones de router, switch y punto de acceso Wi-Fi.</li>
+              <li><strong>Cable de red (Ethernet):</strong> Cable UTP Cat5e o Cat6 que conecta dispositivos fijos al router mediante conector RJ-45.</li>
+              <li><strong>Modem:</strong> Convierte la señal del operador (ADSL, fibra, cable) en señal de red. En muchos casos, el router ya incluye el modem.</li>
+              <li><strong>Switch:</strong> Dispositivo que amplía los puertos Ethernet del router cuando no hay suficientes.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Configuración IP básica</h4>
+            <p>Cada dispositivo en una red necesita una dirección IP para comunicarse:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>IPv4:</strong> Dirección de 32 bits en notación decimal (ej: 192.168.1.100). Permite aproximadamente 4.300 millones de direcciones.</li>
+              <li><strong>Máscara de red:</strong> Define qué parte de la IP corresponde a la red y cuál al dispositivo (ej: 255.255.255.0).</li>
+              <li><strong>Puerta de enlace (Gateway):</strong> Dirección del router que conecta con Internet (generalmente 192.168.1.1).</li>
+              <li><strong>Servidor DNS:</strong> Convierte nombres de dominio (google.com) en direcciones IP.</li>
+            </ul>
+            <p class="mt-2"><strong>DHCP:</strong> Protocolo que asigna automáticamente direcciones IP a los dispositivos cuando se conectan a la red. El router actúa como servidor DHCP.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para ver la configuración de red de tu ordenador: en Windows usa el comando <code class="bg-white/50 px-1 rounded">ipconfig</code> en el símbolo del sistema. En Mac/Linux usa <code class="bg-white/50 px-1 rounded">ifconfig</code> o <code class="bg-white/50 px-1 rounded">ip addr</code> en la terminal.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Plano de red doméstico</h4>
+            <p>Un plano de red es un diagrama que representa la estructura de la red doméstica. Incluye:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>El router como nodo central.</li>
+              <li>Los dispositivos cableados (PC de sobremesa, smart TV, consola).</li>
+              <li>Los dispositivos inalámbricos (móvil, portátil, tablet).</li>
+              <li>Las direcciones IP asignadas a cada dispositivo.</li>
+              <li>La conexión a Internet (fibra, ADSL, cable).</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Resolución de problemas comunes</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>No hay conexión a Internet:</strong> Reiniciar el router (desconectar 30 segundos y reconectar).</li>
+              <li><strong>Conexión lenta:</strong> Verificar la distancia al router, interferencias, número de dispositivos conectados.</li>
+              <li><strong>Dispositivo no obtiene IP:</strong> Verificar que DHCP está activo en el router.</li>
+              <li><strong>Conexión Wi-Fi inestable:</strong> Cambiar el canal del router, actualizar el firmware.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Realizar los siguientes ejercicios en el aula:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Consultar la configuración de red del ordenador usando la línea de comandos.</li>
+              <li>Identificar la dirección IP, la máscara de red, la puerta de enlace y los servidores DNS.</li>
+              <li>Hacer ping a google.com y analizar los resultados.</li>
+              <li>Dibujar un plano de red del aula incluyendo todos los dispositivos visibles.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Montaje de ordenador</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div class="callout callout-nota">
+            <strong>Saberes básicos</strong>
+            TYD.2.A.6 · Criterio 3.1
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El montaje de un ordenador es una actividad práctica que permite comprender cómo interactúan los componentes internos. En esta sesión aprenderemos las herramientas necesarias, los pasos del montaje y las precauciones de seguridad.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/montaje-ordenador.jpg" alt="Montaje de ordenador" loading="lazy" class="rounded-lg w-full" />
+            <figcaption>Montaje de un ordenador de escritorio: herramientas y componentes preparados</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Herramientas necesarias</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Destornillador Phillips (cruz):</strong> Tamaño medio (PH1 o PH2). Para fijar la placa base, tarjetas y laterales.</li>
+              <li><strong>Destornillador de precisión:</strong> Para tornillos pequeños de componentes.</li>
+              <li><strong>Bandeja magnética:</strong> Para no perder los tornillos durante el montaje.</li>
+              <li><strong>Pinza antiestática:</strong> Para manipular componentes pequeños.</li>
+              <li><strong>Pulsera antiestática:</strong> Para descargar la electricidad estática antes de tocar componentes.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Seguridad eléctrica y antiestática</strong>
+            La electricidad estática puede dañar irreversiblemente los componentes electrónicos. Antes de manipular componentes internos, toca una superficie metálica conectada a tierra (como el chasis del ordenador con la fuente enchufada pero apagada) para descargarte. Nunca abras la fuente de alimentación.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Pasos del montaje</h4>
+            <ol class="mt-2 space-y-3 pl-5 list-decimal">
+              <li><strong>Preparación:</strong> Desenroscar los laterales de la caja. Colocar la bandeja de tornillos. Identificar todos los componentes.</li>
+              <li><strong>Montar la CPU en la placa base:</strong> Levantar la pestaña del socket, alinear la flecha del procesador con la del socket, colocar sin forzar y cerrar la pestaña.</li>
+              <li><strong>Instalar el disipador/ventilador del procesador:</strong> Aplicar pasta térmica si no viene preaplicada. Fijar el disipador siguiendo las instrucciones del fabricante. Conectar el cable del ventilador al conector CPU_FAN.</li>
+              <li><strong>Insertar la memoria RAM:</strong> Abrir las pestañas de las ranuras DIMM. Alinear la muesca de la RAM con la ranura. Presionar firmemente hasta que las pestañas cierren con un clic.</li>
+              <li><strong>Colocar la placa base en la caja:</strong> Alinear los orificios con los separadores (standoffs). Fijar con tornillos sin apretar en exceso.</li>
+              <li><strong>Instalar la fuente de alimentación:</strong> Colocarla en la posición indicada (generalmente parte inferior o superior trasera). Fijar con tornillos.</li>
+              <li><strong>Instalar discos de almacenamiento:</strong> Colocar los SSD/HDD en las bahías correspondientes. Conectar el cable SATA y el cable de alimentación.</li>
+              <li><strong>Instalar tarjetas de expansión:</strong> Insertar la tarjeta gráfica en la ranura PCIe x16. Fijar con tornillos. Conectar los cables de alimentación si es necesario.</li>
+              <li><strong>Conectar los cables:</strong> Cable de alimentación de la placa base (24 pines y 4/8 pines CPU). Cables SATA a los discos. Cables frontales (Power SW, Reset SW, HDD LED, Power LED). Cables de ventiladores.</li>
+              <li><strong>Organizar el cableado:</strong> Pasar los cables por detrás de la placa base para mejorar la circulación de aire. Usar bridas o abrazaderas para mantener el orden.</li>
+              <li><strong>Cerrar la caja y probar:</strong> Colocar los laterales. Conectar monitor, teclado, ratón y cable de red. Encender y verificar que todo funciona correctamente.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">SdA: Proyecto de montaje</h4>
+            <p>En esta Situación de Aprendizaje, los alumnos trabajarán en parejas para:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Diseñar una configuración de ordenador para un uso específico (gaming, oficina, diseño) con un presupuesto determinado.</li>
+              <li>Justificar la elección de cada componente.</li>
+              <li>Realizar el montaje práctico en el aula de informática.</li>
+              <li>Configurar el sistema operativo y verificar el rendimiento.</li>
+              <li>Presentar el proyecto al resto de la clase explicando las decisiones tomadas.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo para el montaje</strong>
+            Antes de empezar, revisa el manual de la placa base. Cada modelo tiene disposiciones diferentes de conectores y ranuras. Tener el manual a mano te evitará errores comunes como conectar los cables frontales en el orden incorrecto.
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud1.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        ← UD1 · Ofimática Básica
+      </a>
+      <a href="ud3.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD3 · Proceso de Resolución de Problemas →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../componentes/nucleo.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD5 · Materiales Técnicos · 2º TyD</title>
+  <meta name="description" content="Unidad Didáctica 5 de 2º Tecnología y Diseño: Madera, metales y sus propiedades, herramientas de trabajo, técnicas de manipulación y seguridad." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2tyd" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2tyd.html" class="hover:underline">2.º TyD</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque III</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD5 · Materiales Técnicos</h1>
+      <p class="mt-3 text-brand-50/90">Madera, metales y sus propiedades, herramientas de trabajo, técnicas de manipulación y seguridad. Conocer los materiales y sus características es esencial para elegir el material adecuado en cada proyecto de diseño y construcción.</p>
+    </section>
+
+    <section class="mt-8">
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción a los materiales técnicos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión introductoria establece el marco conceptual para toda la unidad. Es importante que el alumnado comprenda la clasificación de materiales y sus propiedades antes de profundizar en cada tipo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los materiales son la base de cualquier construcción o producto. Desde las herramientas más primitivas hasta los componentes de un satélite, todo está hecho de materiales con propiedades específicas. En esta sesión aprenderemos a clasificar los materiales, a identificar sus propiedades mecánicas y a comprender por qué elegir un material u otro es una decisión fundamental en el diseño.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Clasificación de materiales</h4>
+            <p>Los materiales técnicos se clasifican en cuatro grandes grupos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Madera:</strong> Material orgánico natural, renovable, fácil de trabajar. Se usa en construcción, mobiliario y ebanistería.</li>
+              <li><strong>Metales:</strong> Materiales inorgánicos, generalmente extraídos de minerales. Alta resistencia, conductividad y ductilidad. Incluye hierro, aluminio, cobre y sus aleaciones.</li>
+              <li><strong>Plásticos:</strong> Materiales sintéticos derivados del petróleo. Ligeros, versátiles y resistentes a la corrosión. Ejemplos: PVC, polietileno, nylon.</li>
+              <li><strong>Cerámicos:</strong> Materiales inorgánicos no metálicos. Resistentes al calor y a la corrosión, pero frágiles. Ejemplos: ladrillos, azulejos, porcelana.</li>
+            </ul>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/materiales-clasificacion.jpg" alt="Clasificación de materiales técnicos" loading="lazy" />
+            <figcaption>Los cuatro grandes grupos de materiales técnicos y sus características principales</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Propiedades mecánicas</h4>
+            <p>Las propiedades mecánicas describen cómo se comporta un material cuando se le aplican fuerzas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Resistencia:</strong> Capacidad de soportar cargas sin deformarse ni romperse.</li>
+              <li><strong>Dureza:</strong> Resistencia a la penetración o al rayado.</li>
+              <li><strong>Elasticidad:</strong> Capacidad de recuperar su forma original tras ser deformado.</li>
+              <li><strong>Ductilidad:</strong> Capacidad de estirarse en hilos sin romperse.</li>
+              <li><strong>Fragilidad:</strong> Tendencia a romperse sin deformación previa (opuesto a ductilidad).</li>
+              <li><strong>Tenacidad:</strong> Capacidad de absorber energía antes de romperse.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para recordar la diferencia entre dureza y resistencia: la dureza se refiere a la superficie (¿se raya fácilmente?), mientras que la resistencia se refiere al interior (¿aguanta peso sin romperse?). Un diamante es muy duro pero frágil; un clavo de acero es resistente y elástico.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En grupos, realizad una búsqueda de tres ejemplos reales de cada tipo de material (madera, metal, plástico, cerámica) en objetos de la vida cotidiana del centro. Anotad para qué se usa cada material y justificad por qué es la mejor opción para ese uso.</p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué propiedad describe la capacidad de un material de estirarse en hilos sin romperse?</p>
+            <button class="quiz-opcion" data-valor="a">A. Elasticidad.</button>
+            <button class="quiz-opcion" data-valor="b">B. Ductilidad.</button>
+            <button class="quiz-opcion" data-valor="c">C. Fragilidad.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">La madera</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La madera es uno de los materiales más utilizados por el ser humano desde la prehistoria. Es un material orgánico, renovable, con excelentes propiedades mecánicas y una gran versatilidad de uso. En esta sesión estudiaremos sus tipos, propiedades, defectos y aplicaciones en tecnología.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/madera.jpg" alt="Tipos de madera y sus aplicaciones" loading="lazy" />
+            <figcaption>Diferentes tipos de madera y sus aplicaciones en construcción y ebanistería</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de madera</h4>
+            <p>La madera se clasifica en dos grandes categorías:</p>
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">Madera noble (de primer uso)</p>
+              <p class="mt-1">Procede de árboles de crecimiento lento, lo que le confiere mayor dureza, resistencia y una veta más fina y atractiva. Se usa en muebles de calidad, suelos y carpintería de interior.</p>
+              <ul class="mt-1 space-y-1 pl-5 list-disc">
+                <li><strong>Roble:</strong> Muy resistente y duro. Uso en muebles y suelos.</li>
+                <li><strong>Nogal:</strong> De veta oscura y elegante. Uso en ebanistería fina.</li>
+                <li><strong>Cerezo:</strong> De color rojizo. Uso en muebles decorativos.</li>
+                <li><strong>Haya:</strong> Dura y elástica. Uso en muebles y herramientas.</li>
+              </ul>
+            </div>
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">Madera industrial (de segunda uso)</p>
+              <p class="mt-1">Procede de árboles de crecimiento rápido. Es más ligera, menos resistente y de veta más ancha. Se usa en construcción, embalajes y productos desechables.</p>
+              <ul class="mt-1 space-y-1 pl-5 list-disc">
+                <li><strong>Pino:</strong> La más común. Uso en construcción y embalajes.</li>
+                <li><strong>Abeto:</strong> Ligero y blando. Uso en construcción ligera.</li>
+                <li><strong>Spruce:</strong> Resistente y ligero. Uso en estructuras y papelería.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">La veta (grain)</h4>
+            <p>La veta es el patrón formado por las fibras de la madera. Es un factor determinante tanto estético como estructural:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Veta recta:</strong> Fibras paralelas entre sí. Mayor resistencia y estabilidad.</li>
+              <li><strong>Veta ondulada:</strong> Fibras con curvatura. Efecto decorativo atractivo.</li>
+              <li><strong>Veta irregular:</strong> Fibras en múltiples direcciones. Menos resistente pero con aspecto natural.</li>
+            </ul>
+            <p class="mt-2">La dirección de la veta afecta a la resistencia: la madera es mucho más resistente cuando la fuerza se aplica perpendicular a las fibras que cuando se aplica en la dirección de la veta.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Defectos comunes de la madera</strong>
+            Los principales defectos que debemos conocer son: <strong>nudos</strong> (restos de ramas), <strong>alabes</strong> (deformaciones por secado irregular), <strong>fendas</strong> (grietas por contracción), <strong>carcoma</strong> (daño por insectos) y <strong>podredumbre</strong> (daño por hongos). Estos defectos afectan tanto a la resistencia como a la estética de la madera.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Propiedades de la madera</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Baja conductividad térmica:</strong> Buen aislante natural.</li>
+              <li><strong>Flexibilidad:</strong> Puede doblarse sin romperse (dependiendo de la especie).</li>
+              <li><strong>Facilidad de trabajo:</strong> Se puede cortar, taladrar, lijar y unir con facilidad.</li>
+              <li><strong>Renovabilidad:</strong> Es un recurso renovable si se gestiona de forma sostenible.</li>
+              <li><strong>Higroscopicidad:</strong> Absorbe y libera humedad, lo que afecta a sus dimensiones.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Usos en tecnología</h4>
+            <p>La madera se utiliza en numerosas aplicaciones tecnológicas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Construcción:</strong> Vigas, postes, suelos, tejados.</li>
+              <li><strong>Ebanistería:</strong> Muebles, puertas, ventanas.</li>
+              <li><strong>Packaging:</strong> Cajas, palets, embalajes.</li>
+              <li><strong>Diseño industrial:</strong> Juguetes, utensilios, decoración.</li>
+              <li><strong>Energía:</strong> Biomasa como fuente de energía renovable.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Tras el análisis teórico, se realizará una práctica de identificación de maderas. Se os proporcionarán muestras de diferentes tipos de madera (pino, roble, haya, abeto). Deberéis observarlas, tocarlas, olerlas e identificar su tipo justificando la respuesta basándoos en el color, la veta, el peso y la textura.</p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de madera se clasifica como "madera noble"?</p>
+            <button class="quiz-opcion" data-valor="a">A. Pino, abeto y spruce.</button>
+            <button class="quiz-opcion" data-valor="b">B. Cualquier madera tratada químicamente.</button>
+            <button class="quiz-opcion" data-valor="c">C. Roble, nogal, cerezo y haya.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Los metales</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los metales son materiales inorgánicos con propiedades que los hacen indispensables en la industria y la construcción. Su alta resistencia, conductividad y capacidad de ser moldeados los convierten en materiales versátiles y fundamentales para el desarrollo tecnológico.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/metales.jpg" alt="Diferentes tipos de metales y sus aplicaciones" loading="lazy" />
+            <figcaption>Metales comunes: hierro, aluminio, cobre y sus aleaciones</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Metales principales</h4>
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">Hierro y acero</p>
+              <p class="mt-1">El hierro es el metal más utilizado en la industria. El acero es una aleación de hierro y carbono que ofrece mayor resistencia y dureza.</p>
+              <ul class="mt-1 space-y-1 pl-5 list-disc">
+                <li><strong>Acero al carbono:</strong> El más común. Uso en construcción, automoción, herramientas.</li>
+                <li><strong>Acero inoxidable:</strong> Aleación con cromo. Resistente a la corrosión. Uso en cubertería, cirugía, química.</li>
+                <li><strong>Hierro fundido:</strong> Fácil de moldear. Uso en tuberías, radiadores, piezas de máquinas.</li>
+              </ul>
+            </div>
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">Aluminio</p>
+              <p class="mt-1">Metal ligero (un tercio del peso del acero), resistente a la corrosión y conductor de electricidad y calor.</p>
+              <ul class="mt-1 space-y-1 pl-5 list-disc">
+                <li><strong>Uso en construcción:</strong> Ventanas, fachadas, estructuras ligeras.</li>
+                <li><strong>Uso en transportes:</strong> Carrocerías, aviones, trenes.</li>
+                <li><strong>Uso en envases:</strong> Latas, bandejas, papel de aluminio.</li>
+              </ul>
+            </div>
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">Cobre</p>
+              <p class="mt-1">Metal de color rojizo, excelente conductor de electricidad y calor. Muy maleable y resistente a la corrosión.</p>
+              <ul class="mt-1 space-y-1 pl-5 list-disc">
+                <li><strong>Uso eléctrico:</strong> Cableado, circuitos, motores.</li>
+                <li><strong>Uso en fontanería:</strong> Tuberías de agua.</li>
+                <li><strong>Uso decorativo:</strong> Esculturas, cubiertas.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Propiedades de los metales</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Resistencia mecánica:</strong> Capacidad de soportar cargas elevadas.</li>
+              <li><strong>Ductilidad:</strong> Capacidad de estirarse en hilos (cobre eléctrico).</li>
+              <li><strong>Maleabilidad:</strong> Capacidad de laminarse en láminas (aluminio para envases).</li>
+              <li><strong>Conductividad eléctrica:</strong> El cobre es el segundo mejor conductor después de la plata.</li>
+              <li><strong>Conductividad térmica:</strong> Los metales transmiten el calor eficientemente.</li>
+              <li><strong>Brillo metálico:</strong> Reflejan la luz debido a su estructura atómica.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Aleaciones</strong>
+            Una aleación es la mezcla de un metal con otros elementos (metales o no metales) para mejorar sus propiedades. Las aleaciones más comunes son: <strong>acero</strong> (hierro + carbono), <strong>latón</strong> (cobre + zinc), <strong>bronce</strong> (cobre + estaño), <strong>duraluminio</strong> (aluminio + cobre + magnesio) y <strong>inoxidable</strong> (hierro + cromo + níquel).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En el laboratorio, se os proporcionarán muestras de hierro, aluminio y cobre. Deberéis:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Comparar el peso de cada muestra (misma dimensiones).</li>
+              <li>Observar el color y la textura de cada metal.</li>
+              <li>Realizar una prueba de conductividad eléctrica con un multímetro.</li>
+              <li>Comprobar la dureza rayando cada muestra con una moneda de acero.</li>
+              <li>Registrar las observaciones en una tabla comparativa.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Seguridad en el laboratorio</strong>
+            Al manipular metales, especialmente al cortarlos o lijarlos, es obligatorio el uso de gafas de protección y guantes. Las aristas de los metales cortados pueden ser extremadamente afiladas.
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué aleación está compuesta por cobre y zinc?</p>
+            <button class="quiz-opcion" data-valor="a">A. Latón.</button>
+            <button class="quiz-opcion" data-valor="b">B. Bronce.</button>
+            <button class="quiz-opcion" data-valor="c">C. Duraluminio.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Herramientas y técnicas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Para trabajar con madera y metales necesitamos herramientas adecuadas. En esta sesión conoceremos las herramientas manuales más comunes, las máquinas básicas del taller y las normas de seguridad que debemos seguir siempre.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/herramientas.jpg" alt="Herramientas manuales del taller" loading="lazy" />
+            <figcaption>Herramientas manuales básicas para el trabajo con madera y metal</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Herramientas manuales para madera</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Sierra de mano:</strong> Para cortar piezas de madera. La sierra de dientes finos es para cortes precisos; la de dientes gruesos para cortes rápidos.</li>
+              <li><strong>Martillo:</strong> Para clavar y desclavar. El de carpintero tiene uña para sacar clavos.</li>
+              <li><strong>Destornilladores:</strong> Plano y de estrella, para tornillos de diferentes tipos.</li>
+              <li><strong>Lija:</strong> Para alisar superficies. Se clasifica por su grano (grano fino = más suave).</li>
+              <li><strong>Cincel:</strong> Para tallar y realizar cortes precisos en la madera.</li>
+              <li><strong>Gubia:</strong> Para tallar canalillos y molduras.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Herramientas manuales para metal</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Lima:</strong> Para desbastar y dar forma al metal. Se clasifica por su sección (plana, redonda, triangular) y por su grano.</li>
+              <li><strong>Sierra de arco:</strong> Para cortar metales con hoja intercambiable.</li>
+              <li><strong>Pinzas:</strong> Para sujetar, doblar y cortar alambre. Tipos: de corte, de electricista, universales.</li>
+              <li><strong>Llave adjustable:</strong> Para apretar y aflojar tuercas y tornillos de diferentes tamaños.</li>
+              <li><strong>Taladro manual:</strong> Para realizar agujeros en metal.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Normas de seguridad</strong>
+            Antes de usar cualquier herramienta, debemos: <strong>1)</strong> Inspeccionar su estado (¿está dañada?), <strong>2)</strong> Usar la herramienta adecuada para cada tarea (nunca un destornillador como palanca), <strong>3)</strong> Mantener el puesto de trabajo limpio y ordenado, <strong>4)</strong> Usar las protecciones individuales (gafas, guantes), <strong>5)</strong> Pide ayuda al profesor si no sabes usar una herramienta.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Máquinas básicas del taller</h4>
+            <p>Además de las herramientas manuales, en el taller contamos con máquinas que facilitan el trabajo:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Sierra de cinta:</strong> Para cortes continuos en madera y metal.</li>
+              <li><strong>Torno:</strong> Para piezas de revolución (cilindros, conos).</li>
+              <li><strong>Fresadora:</strong> Para tallar superficies y realizar ranuras.</li>
+              <li><strong>Taladro de pillar:</strong> Para agujeros precisos y perpendiculares.</li>
+              <li><strong>Amoladora:</strong> Para cortar y desbastar metales.</li>
+            </ul>
+            <p class="mt-2"><strong>IMPORTANTE:</strong> Las máquinas solo pueden ser utilizadas bajo supervisión directa del profesor.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Técnicas de unión</h4>
+            <p>Para ensamblar piezas de madera y metal utilizamos diferentes técnicas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Clavos:</strong> Unión rápida en madera, pero no desmontable.</li>
+              <li><strong>Tornillos:</strong> Unión firme y desmontable en madera y metal.</li>
+              <li><strong>Cola (adhesivo):</strong> Unión sin elementos metálicos, ideal para madera.</li>
+              <li><strong>Bridas y abrazaderas:</strong> Para tuberías y uniones temporales.</li>
+              <li><strong>Soldadura:</strong> Para unión permanente de metales (bajo supervisión).</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Antes de cortar una pieza, mide dos veces y corta una sola vez. Los errores de medición son la causa más frecuente de desperdicio de material en el taller.
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué herramienta se utiliza para desbastar metales y dar forma?</p>
+            <button class="quiz-opcion" data-valor="a">A. Sierra de mano.</button>
+            <button class="quiz-opcion" data-valor="b">B. Lima.</button>
+            <button class="quiz-opcion" data-valor="c">C. Martillo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Importante</strong>
+            La seguridad en el taller es responsabilidad de todos. Cualquier accidente, por pequeño que sea, debe comunicarse inmediatamente al profesor. No se permite el uso de herramientas sin supervisión hasta que se haya demostrado competencia en su uso.
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Taller práctico</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta sesión práctica pondremos en práctica todo lo aprendido sobre materiales, herramientas y técnicas. Realizaremos un proyecto sencillo que combina el trabajo con madera y metal, aplicando las técnicas de unión y las normas de seguridad estudiadas.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/taller-practico.jpg" alt="Trabajo práctico en el taller" loading="lazy" />
+            <figcaption>Proceso de manipulación y ensamblaje de piezas en el taller</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Manipulación de madera</h4>
+            <p>Para trabajar la madera correctamente, seguiremos estos pasos:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Planificación:</strong> Dibujar el diseño a escala, calcular las dimensiones de las piezas y la cantidad de material necesaria.</li>
+              <li><strong>Señalado:</strong> Marcar las líneas de corte y las posiciones de los taladros sobre la madera usando escuadra y lápiz.</li>
+              <li><strong>Corte:</strong> Utilizar la sierra de mano con movimientos largos y suaves, sin forzar. Asegurar la pieza con un tornillo de banco.</li>
+              <li><strong>Acabado:</strong> Liar las superficies con lija de grano grueso (80) primero y luego fino (220) para un acabado suave.</li>
+              <li><strong>Unión:</strong> Ensamblar las piezas con tornillos o cola de carpintero, según el diseño.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Manipulación de metal</h4>
+            <p>El trabajo con metal requiere más precisión y cuidado:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Señalado:</strong> Marcar las líneas de corte con punzón y regla.</li>
+              <li><strong>Corte:</strong> Utilizar la sierra de arco con movimientos lentos y constantes. Mantener la hoja perpendicular.</li>
+              <li><strong>Desbaste:</strong> Utilizar la lima para eliminar rebabas y dar forma a los cantos.</li>
+              <li><strong>Taladro:</strong> Marcar el centro del agujero con punzón, hacer un agujero guía y ampliar con el taladro.</li>
+              <li><strong>Acabado:</strong> Liar con lija de grano fino y, si es necesario, aplicar imprimación antirrust.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Uniones básicas</strong>
+            Las uniones más utilizables en madera son: <strong>unión a tope</strong> (la más simple, piezas rectas), <strong>unión a media madera</strong> (cada pieza tiene una muesca a la mitad de su espesor) y <strong>unión de caja y espiga</strong> (la más resistente). En metal, las uniones más comunes son <strong>tornillos y tuercas</strong> y <strong>bridas</strong>.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Proyecto: Soporte de escritorio</h4>
+            <p>El proyecto consiste en diseñar y fabricar un <strong>soporte de escritorio</strong> que combine una base de madera con un soporte metálico. Los requisitos son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Base de madera de pino de 200×100×15 mm.</li>
+              <li>Soporte metálico de aluminio o hierro que permita inclinar una tableta o libro.</li>
+              <li>Al menos dos tipos de unión diferentes (tornillos y cola, por ejemplo).</li>
+              <li>Acabado lijado de la madera y eliminación de rebabas del metal.</li>
+              <li>Seguir las normas de seguridad del taller en todo momento.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Criterios de evaluación del proyecto</h4>
+            <table class="rubrica mt-3">
+              <thead>
+                <tr>
+                  <th>Criterio</th>
+                  <th>Excelente</th>
+                  <th>Bueno</th>
+                  <th>Suficiente</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Diseño y planificación</td>
+                  <td>Boceto detallado, medidas precisas, cálculo de materiales</td>
+                  <td>Boceto correcto, medidas aproximadas</td>
+                  <td>Boceto básico, medidas incompletas</td>
+                </tr>
+                <tr>
+                  <td>Ejecución</td>
+                  <td>Cortes precisos, acabados impecables, uniones firmes</td>
+                  <td>Cortes correctos, acabados aceptables</td>
+                  <td>Cortes con errores, acabados deficientes</td>
+                </tr>
+                <tr>
+                  <td>Seguridad</td>
+                  <td>Uso constante de EPIs, puesto limpio, sin incidentes</td>
+                  <td>Uso casi siempre correcto de EPIs</td>
+                  <td>Uso irregular de EPIs, puesto desordenado</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuál es el primer paso antes de cortar una pieza de madera?</p>
+            <button class="quiz-opcion" data-valor="a">A. Coger la sierra y empezar a cortar.</button>
+            <button class="quiz-opcion" data-valor="b">B. Liar la superficie de la madera.</button>
+            <button class="quiz-opcion" data-valor="c">C. Medir, marcar y planificar el corte.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Producto de la unidad</strong>
+            El soporte de escritorio resultante será evaluado según la rúbrica anterior. Además, cada alumno deberá entregar un informe escrito describiendo el proceso de fabricación, los materiales utilizados, las dificultades encontradas y las soluciones aplicadas.
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud4.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        ← UD4 · Diseño Técnico
+      </a>
+      <a href="ud6.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD6 · Estructuras →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

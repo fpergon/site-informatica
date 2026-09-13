@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD1 · Ofimática Básica · 2º TyD</title>
+  <meta name="description" content="Unidad Didáctica 1 de 2º TyD: Procesadores de texto, formateo de documentos, presentaciones digitales y herramientas de comunicación visual." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2tyd" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2tyd.html" class="hover:underline">2.º TyD</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque I</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD1 · Ofimática Básica</h1>
+      <p class="mt-3 text-brand-50/90">Procesadores de texto, formateo de documentos, presentaciones digitales y herramientas de comunicación visual. Esta unidad sentará las bases del uso profesional de herramientas ofimáticas esenciales en el ámbito laboral y académico.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.B.3</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.B.1</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.D.2</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.D.3</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.A.2</span>
+      </div>
+    </section>
+
+    <section class="mt-8">
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Procesadores de texto: Google Docs</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div class="callout callout-nota">
+            <strong>Saberes básicos</strong>
+            TYD.2.B.3 · Criterio 4.1
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los procesadores de texto son herramientas fundamentales en cualquier entorno profesional o académico. En esta sesión descubriremos Google Docs, una plataforma de edición de documentos en la nube que permite crear, editar y compartir documentos de forma colaborativa en tiempo real.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un procesador de texto?</h4>
+            <p>Un procesador de texto es un programa informático que permite crear, editar, formatear y imprimir documentos de texto. A diferencia de un editor de texto simple, ofrece herramientas avanzadas de formato como negrita, cursiva, tablas, imágenes, encabezados y mucho más.</p>
+            <p class="mt-2">Los procesadores de texto más utilizados actualmente son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Google Docs:</strong> Gratuito, en la nube, colaborativo. Funciona desde el navegador.</li>
+              <li><strong>Microsoft Word:</strong> El más utilizado a nivel profesional. Versión de escritorio y online.</li>
+              <li><strong>LibreOffice Writer:</strong> Software libre, alternativa gratuita a Word.</li>
+              <li><strong>WPS Office:</strong> Similar a Word, con versión gratuita con anuncios.</li>
+            </ul>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/procesadores-texto.jpg" alt="Interfaces de procesadores de texto" loading="lazy" class="rounded-lg w-full" />
+            <figcaption>Comparativa de procesadores de texto: Google Docs, Word y LibreOffice Writer</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ventajas de Google Docs</h4>
+            <p>Google Docs destaca por una serie de ventajas que lo convierten en una herramienta ideal para el trabajo colaborativo:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Acceso desde cualquier dispositivo:</strong> Solo necesitas un navegador web y una cuenta de Google. Puedes trabajar desde el ordenador, la tablet o el móvil.</li>
+              <li><strong>Colaboración en tiempo real:</strong> Varios usuarios pueden editar el mismo documento simultáneamente. Se muestran los cursores de cada participante en tiempo real.</li>
+              <li><strong>Sincronización automática:</strong> Los cambios se guardan automáticamente en la nube. No hay riesgo de perder trabajo por olvidar guardar.</li>
+              <li><strong>Historial de versiones:</strong> Permite ver todas las versiones anteriores del documento y restaurar cualquiera de ellas.</li>
+              <li><strong>Compatibilidad de formatos:</strong> Puede importar y exportar documentos en formato DOCX, PDF, ODT, RTF y TXT.</li>
+              <li><strong>Comentarios y sugerencias:</strong> Sistema de revisión integrado para feedback colaborativo.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para compartir un documento en Google Docs, haz clic en el botón "Compartir" (esquina superior derecha) e introduce el correo electrónico de las personas con las que quieres colaborar. Puedes asignar permisos de edición, comentario o solo lectura.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una cuenta de Google (si no tienes una) y abrir Google Docs. Realizar los siguientes pasos:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Crear un nuevo documento en blanco.</li>
+              <li>Escribir un párrafo de presentación personal (mínimo 5 líneas).</li>
+              <li>Aplicar formato de negrita al nombre y cursiva a la ciudad de nacimiento.</li>
+              <li>Compartir el documento con un compañero y permitirle la edición.</li>
+              <li>Añadir un comentario en el documento de tu compañero.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Evaluación</strong>
+            Se valorará la correcta creación de la cuenta, la aplicación de formato básico y la capacidad de compartir y colaborar en el documento.
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Formatos de página, párrafo y carácter</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El formateo de documentos es una habilidad esencial para crear documentos profesionales y bien estructurados. En esta sesión aprenderemos a controlar la apariencia de nuestros documentos a través de tres niveles de formato: página, párrafo y carácter.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Configuración de página</h4>
+            <p>El formato de página define las características generales del documento. Antes de empezar a escribir, es importante configurar:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Tamaño del papel:</strong> A4 (210 × 297 mm) es el estándar en España.</li>
+              <li><strong>Orientación:</strong> Vertical (retrato) u horizontal (paisaje).</li>
+              <li><strong>Márgenes:</strong> Superior, inferior, izquierdo y derecho. El margen estándar es de 2,5 cm.</li>
+              <li><strong>Encabezado y pie de página:</strong> Espacios reservados para información que se repite en cada página.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formato de párrafo</h4>
+            <p>El formato de párrafo controla la apariencia de cada bloque de texto separado por un retorno de carro:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Alineación:</strong> Izquierda (predeterminada), derecha, centrada o justificada.</li>
+              <li><strong>Sangría:</strong> Espacio al inicio del párrafo. Sangría francesa: la primera línea sale y las demás quedan indentadas.</li>
+              <li><strong>Interlineado:</strong> Espacio vertical entre líneas. Puede ser sencillo, 1,5 o doble.</li>
+              <li><strong>Espaciado antes y después:</strong> Separación entre párrafos consecutivos.</li>
+              <li><strong>Saltos de línea y página:</strong> Controlan el flujo del texto entre páginas.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formato de carácter</h4>
+            <p>El formato de carácter afecta directamente al texto seleccionado:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Fuente (tipografía):</strong> Arial, Times New Roman, Calibri, Georgia, etc. La elección de fuente afecta a la legibilidad y al tono del documento.</li>
+              <li><strong>Tamaño:</strong> Se mide en puntos (pt). El estándar para texto de cuerpo es 11 o 12 pt.</li>
+              <li><strong>Estilo:</strong> Negrita (énfasis fuerte), cursiva (énfasis suave o títulos de obras), subrayado (evitar en textos digitales).</li>
+              <li><strong>Color:</strong> Usar con moderación. Mantener contraste suficiente para legibilidad.</li>
+              <li><strong>Efectos:</strong> Tachado, superíndice, subíndice, mayúsculas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Buenas prácticas</strong>
+            Un documento bien formateado debe ser coherente: usar la misma fuente en todo el documento, mantener tamaños consistentes para cada nivel de encabezado y no abusar de negritas, cursivas o colores. La simplicidad y la claridad son clave.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Formateo de documento</h4>
+            <p>Crear un documento con un artículo periodístico ficticio que contenga:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Un titular con fuente Arial 16 pt negrita centrado.</li>
+              <li>Un subtítulo con fuente Arial 12 pt cursiva.</li>
+              <li>Al menos 3 párrafos de cuerpo con texto justificado, fuente Calibri 11 pt, interlineado 1,5.</li>
+              <li>Sangría francesa en el primer párrafo.</li>
+              <li>Un recuadro con una cita textual con sangría izquierda y derecha de 2 cm.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Imágenes y tablas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las imágenes y las tablas son elementos visuales que enriquecen cualquier documento. Saber insertarlas, formatearlas y ajustarlas correctamente es fundamental para crear documentos profesionales y atractivos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Inserción de imágenes</h4>
+            <p>En Google Docs podemos insertar imágenes de diversas fuentes:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Subir desde el ordenador:</strong> Archivos JPG, PNG, GIF, SVG.</li>
+              <li><strong>Insertar por URL:</strong> Pegar el enlace directo de una imagen en Internet.</li>
+              <li><strong>Buscar en Google Imágenes:</strong> Búsqueda integrada dentro del editor.</li>
+              <li><strong>Desde Google Drive:</strong> Imágenes almacenadas en la nube.</li>
+              <li><strong>Tomar una foto:</strong> Usar la cámara del dispositivo.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formato y ajuste de imágenes</h4>
+            <p>Una vez insertada, podemos modificar la imagen de varias formas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Redimensionar:</strong> Arrastrar las esquinas para mantener la proporción.</li>
+              <li><strong>Ajuste del texto:</strong> El texto puede envolver la imagen de diferentes maneras: en línea, ajuste de texto, detrás del texto, delante del texto.</li>
+              <li><strong>Recorte:</strong> Eliminar partes no deseadas de la imagen.</li>
+              <li><strong>Filtros y ajustes:</strong> Brillo, contraste, saturación y tono.</li>
+              <li><strong>Bordes y sombras:</strong> Añadir marco visual a la imagen.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Creación de tablas</h4>
+            <p>Las tablas son ideales para organizar datos de forma estructurada:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Ir a <strong>Insertar → Tabla</strong> y seleccionar el número de filas y columnas.</li>
+              <li>Introducir los datos en cada celda.</li>
+              <li>Seleccionar la tabla y aplicar formato desde las opciones de diseño.</li>
+            </ol>
+            <p class="mt-2"><strong>Opciones de formato de tabla:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Fusión de celtas:</strong> Combinar dos o más celdas en una sola.</li>
+              <li><strong>División de celdas:</strong> Separar una celda en varias.</li>
+              <li><strong>Distribuir columnas/filas:</strong> Igualar el ancho o alto.</li>
+              <li><strong>Bordes y color:</strong> Personalizar el estilo de la tabla.</li>
+              <li><strong>Alineación del contenido:</strong> Centrado, izquierda, derecha.</li>
+            </ul>
+          </div>
+
+          <figure class="my-3">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=400&fit=crop" alt="Ejemplo de tabla de datos" loading="lazy" class="rounded-lg w-full" />
+            <figcaption>Las tablas permiten organizar datos de forma clara y visual</figcaption>
+          </figure>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Al insertar imágenes, asegúrate de que tengan buena resolución (mínimo 300 dpi para impresión) y de que el tamaño sea adecuado para el documento. Evita imágenes pixeladas o desproporcionadas que resten calidad al trabajo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear un documento que contenga:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Una imagen insertada desde Internet con ajuste de texto a la derecha.</li>
+              <li>Un párrafo descriptivo junto a la imagen.</li>
+              <li>Una tabla de al menos 4 filas × 3 columnas con datos ficticios de un inventario.</li>
+              <li>Fusionar las celdas de la primera fila para crear un encabezado de tabla.</li>
+              <li>Aplicar color de fondo al encabezado de la tabla.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Columnas y secciones</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La distribución del texto en columnas y el uso de secciones permite crear documentos más elaborados y con un diseño editorial profesional. Estas herramientas son especialmente útiles en revistas, boletines, informes técnicos y folletos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">División de texto en columnas</h4>
+            <p>Las columnas permiten dividir el espacio de la página en varias secciones verticales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Dos columnas:</strong> Ideal para artículos de revista o periódico.</li>
+              <li><strong>Tres columnas:</strong> Común en folletos y panfletos.</li>
+              <li><strong>Columnas desiguales:</strong> Una columna más ancha para el texto principal y otra más estrecha para notas o comentarios.</li>
+            </ul>
+            <p class="mt-2">En Google Docs: <strong>Formato → Columnas</strong> y seleccionar el número deseado. Se puede aplicar a todo el documento o solo a una sección.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Saltos de sección</h4>
+            <p>Los saltos de sección permiten cambiar la configuración de página a mitad del documento. Son útiles cuando necesitamos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Cambiar la orientación de una página (de vertical a horizontal).</li>
+              <li>Alterar el número de columnas en partes del documento.</li>
+              <li>Modificar los márgenes en secciones específicas.</li>
+              <li>Crear diferentes encabezados y pies de página.</li>
+            </ul>
+            <p class="mt-2"><strong>Tipos de salto de sección:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Continuo:</strong> La nueva sección comienza en la misma página.</li>
+              <li><strong>Salto de página:</strong> La nueva sección comienza en la siguiente página.</li>
+              <li><strong>Salto par/impar:</strong> La nueva sección comienza en la siguiente página par o impar.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Encabezados y pies de página</h4>
+            <p>Los encabezados y pies de página aparecen automáticamente en cada página del documento. Contienen información que se repite:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Encabezado:</strong> Título del documento, nombre del autor, fecha.</li>
+              <li><strong>Pie de página:</strong> Número de página,版权信息, referencias.</li>
+              <li><strong>Primer página diferente:</strong> Permite no mostrar encabezado en la portada.</li>
+              <li><strong>Secciones diferentes:</strong> Cada sección puede tener su propio encabezado y pie.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ejemplo práctico</strong>
+            Un boletín informativo puede tener: portada sin encabezado, encabezado con el nombre del boletín y número en las páginas interiores, y pie de página con el copyright y la fecha de publicación.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Crear un mini-boletín</h4>
+            <p>Crear un boletín informativo de una página que contenga:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Un titular principal centrado y con formato de encabezado.</li>
+              <li>Dos columnas de texto con noticias ficticias.</li>
+              <li>Un encabezado con el nombre del boletín y el número.</li>
+              <li>Un pie de página con el número de página.</li>
+              <li>Al menos una imagen con ajuste de texto en una de las columnas.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Plantillas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las plantillas son documentos prediseñados que contienen formato, estructura y contenido predefinido. Usar plantillas ahorra tiempo y garantiza un aspecto profesional y consistente en todos los documentos de una organización o proyecto.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué son las plantillas?</h4>
+            <p>Una plantilla es un modelo o molde que sirve como punto de partida para crear documentos. Contiene:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Diseño predefinido:</strong> Colores, fuentes y distribución ya configurados.</li>
+              <li><strong>Estructura de contenido:</strong> Secciones y apartados ya establecidos.</li>
+              <li><strong>Textos auxiliares:</strong> Instrucciones o ejemplos que se deben rellenar.</li>
+              <li><strong>Elementos gráficos:</strong> Logotipos, imágenes y iconos ya colocados.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cómo usar plantillas en Google Docs</h4>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Acceder a <strong>docs.google.com</strong>.</li>
+              <li>En la pantalla de inicio, hacer clic en <strong>"Galería de plantillas"</strong>.</li>
+              <li>Explorar las categorías: Cartas, CV, Informes, Educación, etc.</li>
+              <li>Seleccionar la plantilla deseada y se abrirá una copia editables.</li>
+              <li>Reemplazar el contenido de ejemplo con nuestro propio contenido.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Creación de documentos con estilo consistente</h4>
+            <p>Para mantener coherencia visual en documentos de una organización:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Estilos de texto:</strong> Definir estilos para títulos (Título, Subtítulo, Encabezado 1, 2, 3) y aplicarlos de forma consistente.</li>
+              <li><strong>Paleta de colores:</strong> Elegir 2-3 colores principales y usarlos siempre.</li>
+              <li><strong>Tipografías:</strong> Seleccionar una fuente para títulos y otra para cuerpo de texto.</li>
+              <li><strong>Logotipos e imágenes:</strong> Mantener una biblioteca de elementos gráficos autorizados.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Si creas documentos frecuentemente (informes, propuestas, newsletters), crea tu propia plantilla. Define estilos, colores y estructura una vez, y reutilízalo para siempre. Esto garantiza consistencia y ahorra tiempo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Crear una plantilla personalizada</h4>
+            <p>Crear una plantilla de informe técnico que incluya:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Portada con logo ficticio, título del informe, autor y fecha.</li>
+              <li>Estilos definidos para Título 1, Título 2 y cuerpo de texto.</li>
+              <li>Encabezado con el nombre de la asignatura y pie de página con numeración.</li>
+              <li>Estructura de secciones: Introducción, Desarrollo, Conclusiones, Bibliografía.</li>
+              <li>Guardar como plantilla para uso futuro.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Exportación e importación</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Exportar e importar documentos es una tarea cotidiana en cualquier entorno de trabajo. Conocer los diferentes formatos y sus características nos permite compartir y recibir documentos de forma compatible con cualquier plataforma.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Principales formatos de documento</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>DOCX:</strong> Formato estándar de Microsoft Word. Es el más utilizado a nivel profesional. Soporta formato complejo, tablas, imágenes y macros.</li>
+              <li><strong>PDF:</strong> Formato portable que mantiene el diseño exacto independientemente del dispositivo. Ideal para documentos finales que no deben modificarse.</li>
+              <li><strong>ODT:</strong> Formato abierto de LibreOffice. Compatible con la mayoría de procesadores de texto.</li>
+              <li><strong>RTF:</strong> Formato de texto enriquecido. Compatible con casi todos los procesadores, pero con opciones de formato limitadas.</li>
+              <li><strong>TXT:</strong> Texto plano sin formato. Útil para notas rápidas o código.</li>
+            </ul>
+          </div>
+
+          <table class="rubrica my-3 w-full">
+            <thead>
+              <tr>
+                <th>Formato</th>
+                <th>Edición</th>
+                <th>Diseño fiel</th>
+                <th>Compatibilidad</th>
+                <th>Tamaño</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>DOCX</td>
+                <td>Sí</td>
+                <td>Buena</td>
+                <td>Alta</td>
+                <td>Medio</td>
+              </tr>
+              <tr>
+                <td>PDF</td>
+                <td>No</td>
+                <td>Perfecta</td>
+                <td>Universal</td>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <td>ODT</td>
+                <td>Sí</td>
+                <td>Buena</td>
+                <td>Media</td>
+                <td>Pequeño</td>
+              </tr>
+              <tr>
+                <td>TXT</td>
+                <td>Sí</td>
+                <td>Ninguna</td>
+                <td>Universal</td>
+                <td>Muy pequeño</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Exportar desde Google Docs</h4>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Abrir el documento en Google Docs.</li>
+              <li>Ir a <strong>Archivo → Descargar</strong>.</li>
+              <li>Seleccionar el formato deseado: Microsoft Word (.docx), PDF (.pdf), ODT, etc.</li>
+              <li>El archivo se descargará automáticamente en nuestro ordenador.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Importar y convertir documentos</h4>
+            <p>Para importar un documento externo en Google Docs:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Acceder a Google Drive.</li>
+              <li>Hacer clic en <strong>"Subir archivo"</strong> o arrastrar el archivo a la ventana.</li>
+              <li>Hacer clic derecho sobre el archivo subido → <strong>Abrir con → Google Docs</strong>.</li>
+              <li>Google Docs convertirá automáticamente el documento.</li>
+            </ol>
+            <p class="mt-2"><strong>Nota:</strong> Al importar documentos complejos, algunos formatos pueden no convertirse perfectamente. Es recomendable revisar el documento tras la importación.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Cuándo usar cada formato</strong>
+            <strong>DOCX:</strong> Cuando necesitas editar el documento o enviarlo a alguien que usa Word. <strong>PDF:</strong> Para documentos finales, impresión o envío formal. <strong>ODT:</strong> Para entornos con software libre. <strong>TXT:</strong> Para notas simples o transferencia rápida de texto.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Crear un documento en Google Docs con texto e imágenes.</li>
+              <li>Exportarlo en tres formatos diferentes: DOCX, PDF y ODT.</li>
+              <li>Abrir cada archivo exportado con el programa correspondiente y comprobar que el formato se mantiene.</li>
+              <li>Importar un documento DOCX externo a Google Docs y verificar la conversión.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Presentaciones digitales</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las presentaciones digitales son herramientas visuales que complementan la comunicación oral. En esta sesión exploraremos las principales plataformas: Google Slides, Canva y Genially, y aprenderemos principios de diseño visual para crear presentaciones efectivas.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Google Slides</h4>
+            <p>Google Slides es la herramienta de presentaciones de Google, similar a PowerPoint pero en la nube:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Creación y edición de diapositivas en línea.</li>
+              <li>Colaboración en tiempo real con varios usuarios.</li>
+              <li>Amplia galería de plantillas prediseñadas.</li>
+              <li>Animaciones y transiciones entre diapositivas.</li>
+              <li>Modo presentador con notas del orador.</li>
+              <li>Exportación a PDF, PPTX y formato web.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Canva</h4>
+            <p>Canva es una plataforma de diseño gráfico online que también permite crear presentaciones:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Miles de plantillas profesionales para diferentes sectores.</li>
+              <li>Biblioteca de imágenes, iconos y elementos gráficos.</li>
+              <li>Editor visual drag-and-drop (arrastrar y soltar).</li>
+              <li>Posibilidad de añadir videos y animaciones.</li>
+              <li>Exportación en múltiples formatos: PDF, PNG, MP4.</li>
+              <li>Colaboración en equipo con comentarios y tareas.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Genially</h4>
+            <p>Genially es una herramienta para crear presentaciones interactivas y contenido visual enriquecido:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Contenido interactivo: menús, pop-ups, enlaces.</li>
+              <li>Animaciones personalizadas por elemento.</li>
+              <li>Plantillas para infografías, presentaciones, gamificación.</li>
+              <li>Integración con otras herramientas educativas.</li>
+              <li>Análisis de interacciones: saber quién interactúa con qué contenido.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo de diseño</strong>
+            Aplica la regla del <strong>6×6</strong>: máximo 6 elementos visuales por diapositiva y máximo 6 palabras por línea. Esto obliga a ser conciso y mejora la comprensión del público. Evita bloques de texto largos; usa viñetas e imágenes.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Diseño visual y animaciones</h4>
+            <p>Principios de diseño para presentaciones efectivas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Consistencia:</strong> Usar la misma plantilla, colores y fuentes en toda la presentación.</li>
+              <li><strong>Espaciado:</strong> Dejar espacio libre entre elementos. No saturar las diapositivas.</li>
+              <li><strong>Jerarquía visual:</strong> El título debe ser lo más visible, seguido del contenido principal.</li>
+              <li><strong>Contraste:</strong> Asegurar que el texto sea legible sobre el fondo.</li>
+              <li><strong>Animaciones con moderación:</strong> Usar animaciones sutilmente para guiar la atención, no para impresionar.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Colaboración en presentaciones</h4>
+            <p>Las herramientas modernas permiten trabajar en equipo de forma eficiente:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Edición simultánea de diapositivas.</li>
+              <li>Comentarios y sugerencias por diapositiva.</li>
+              <li>Historial de versiones para recuperar cambios.</li>
+              <li>Presentación a distancia con enlace compartido.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Mini-presentación</h4>
+            <p>En parejas, crear una presentación de 5 diapositivas sobre un tema de actualidad utilizando Google Slides:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Diapositiva de portada con título y autores.</li>
+              <li>3 diapositivas de contenido con imágenes y viñetas.</li>
+              <li>Diapositiva de cierre con conclusiones y bibliografía.</li>
+              <li>Aplicar una plantilla coherente y animaciones sutiles.</li>
+              <li>Compartir la presentación y presentarla al resto de la clase.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">8</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">SdA: Festival de cine por la igualdad</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div class="callout callout-nota">
+            <strong>Situación de Aprendizaje</strong>
+            TYD.2.A.2 · Criterio 1.1
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta Situación de Aprendizaje aplicaremos todo lo aprendido sobre herramientas ofimáticas a un proyecto real y significativo: la organización de un festival de cine por la igualdad. Crearemos fichas de películas en Google Docs y una presentación promocional en Genially.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/festival-cine.jpg" alt="Festival de cine por la igualdad" loading="lazy" class="rounded-lg w-full" />
+            <figcaption>Festival de cine por la igualdad: cine como herramienta de transformación social</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Contexto del proyecto</h4>
+            <p>El <strong>Festival de Cine por la Igualdad</strong> es un evento organizado por el instituto que proyectará películas que aborden temas de igualdad de género, diversidad e inclusión. Tu grupo de trabajo será el encargado de:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Seleccionar 3 películas que traten temas de igualdad.</li>
+              <li>Crear una ficha técnica y artística para cada película en Google Docs.</li>
+              <li>Diseñar una presentación promocional del festival en Genially.</li>
+              <li>Elaborar un programa del evento con horarios y descripciones.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Fase 1: Investigación</h4>
+            <p>Antes de crear los documentos, investigar sobre películas que aborden la igualdad:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Buscar información sobre películas recomendadas por organizaciones de igualdad.</li>
+              <li>Recopilar datos técnicos: director/a, año, país, duración, sinopsis.</li>
+              <li>Analizar el mensaje de igualdad que transmite cada película.</li>
+              <li>Seleccionar las 3 películas más adecuadas para el festival.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Fase 2: Creación de fichas en Google Docs</h4>
+            <p>Para cada película, crear una ficha que incluya:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Portada:</strong> Título de la película, imagen del póster, datos básicos.</li>
+              <li><strong>Sinopsis:</strong> Resumen del argumento (máximo 150 palabras).</li>
+              <li><strong>Ficha técnica:</strong> Director/a, año, duración, país, género.</li>
+              <li><strong>Mensaje de igualdad:</strong> Análisis de cómo la película aborda la igualdad.</li>
+              <li><strong>Galardones:</strong> Premios y nominaciones recibidas.</li>
+              <li><strong>Formato profesional:</strong> Aplicar formato de página, encabezados, tablas e imágenes correctamente.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Fase 3: Presentación en Genially</h4>
+            <p>Crear una presentación interactiva de 8-10 diapositivas que incluya:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Portada del festival con fecha y lugar.</li>
+              <li>Una diapositiva por película con imagen, sinopsis y enlace a tráiler.</li>
+              <li>Programa del evento con horarios.</li>
+              <li>Información práctica: ubicación, entrada gratuita, redes sociales.</li>
+              <li>Elementos interactivos: pop-ups con información adicional, enlaces.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Recursos útiles</strong>
+            Para encontrar información fiable sobre películas y igualdad: Filmaffinity, IMDb, la web del Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA), y las guías de電影 recomendadas por el Ministerio de Igualdad.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Criterios de evaluación</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Crear documentos de texto con formato profesional y estructura correcta.</li>
+              <li>Utilizar herramientas ofimáticas de forma autónoma y eficiente.</li>
+              <li>Diseñar presentaciones visuales atractivas e interactivas.</li>
+              <li>Trabajar colaborativamente en la creación de documentos compartidos.</li>
+              <li>Comunicar ideas de forma clara y visual en formato digital.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <span class="text-sm text-slate-400">← Primera unidad</span>
+      <a href="ud2.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD2 · Hardware y Redes Informáticas →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../componentes/nucleo.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

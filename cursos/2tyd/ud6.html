@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD6 · Estructuras · 2º TyD</title>
+  <meta name="description" content="Unidad Didáctica 6 de 2º Tecnología y Diseño: Tipos de estructuras, esfuerzos, resistencia, triangulación y diseño de elementos de soporte." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2tyd" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2tyd.html" class="hover:underline">2.º TyD</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque IV</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD6 · Estructuras</h1>
+      <p class="mt-3 text-brand-50/90">Tipos de estructuras, esfuerzos, resistencia, triangulación y diseño de elementos de soporte. Comprender cómo funcionan las estructuras es fundamental para diseñar construcciones seguras y eficientes.</p>
+    </section>
+
+    <section class="mt-8">
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción a las estructuras</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión introductoria establece los conceptos básicos sobre estructuras que son la base de las siguientes sesiones. Es fundamental que el alumnado comprenda la diferencia entre los tipos de estructuras antes de estudiar los esfuerzos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las estructuras son el conjunto de elementos que soportan cargas y mantienen la forma de un edificio, máquina o cualquier objeto construido. Desde un simple estante hasta un rascacielos, todo lo que el ser humano construye se basa en principios estructurales. En esta sesión aprenderemos a clasificar las estructuras y a comprender su función.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una estructura?</h4>
+            <p>Una <strong>estructura</strong> es un sistema de elementos que trabajan conjuntamente para soportar cargas y transmitirlas a los apoyos o al terreno. Su función principal es mantener la estabilidad y la forma de la construcción o el objeto.</p>
+            <p class="mt-2">Elementos fundamentales de toda estructura:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Piezas o elementos:</strong> Las partes que componen la estructura (vigas, columnas, placas).</li>
+              <li><strong>Nudos o articulaciones:</strong> Puntos donde se unen varios elementos.</li>
+              <li><strong>Apoyos:</strong> Puntos donde la estructura se conecta al terreno o a otra estructura.</li>
+              <li><strong>Cargas:</strong> Fuerzas externas que actúan sobre la estructura (peso propio, peso de personas, viento).</li>
+            </ul>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/estructura-ejemplo.jpg" alt="Elementos básicos de una estructura" loading="lazy" />
+            <figcaption>Elementos fundamentales de una estructura: piezas, nudos, apoyos y cargas</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de estructuras</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Estructuras de barras (reticuladas):</strong> Formadas por elementos alargados unidos en nudos. Los esfuerzos son轴iales (tracción o compresión). Ejemplos: puentes celosía, torres de electricidad, estructuras de edificios.</li>
+              <li><strong>Estructuras laminares:</strong> Formadas por superficies delgadas que soportan cargas mediante flexión. Ejemplos: placas de coche, techos de chapa, cascos de barco.</li>
+              <li><strong>Estructuras macizas:</strong> Formadas por bloques sólidos que soportan cargas por compresión. Ejemplos: muros de contención, presas, columnas de piedra.</li>
+              <li><strong>Estructuras mixtas:</strong> Combinación de los tipos anteriores. Ejemplos: edificios modernos, puentes mixtos.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para identificar el tipo de estructura, observa si los elementos son alargados (barras), superficies (laminares) o bloques (macizos). En la mayoría de estructuras reales encontrarás una combinación de varios tipos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Clasificación por funcionamiento</h4>
+            <p>Además de su forma, las estructuras se clasifican por cómo transmiten las cargas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Estructuras isostáticas:</strong> Las reacciones en los apoyos se pueden calcular solo con las ecuaciones de equilibrio. Son las más sencillas de analizar.</li>
+              <li><strong>Estructuras hiperestáticas:</strong> Tienen más apoyos o elementos de los necesarios para el equilibrio. Son más seguras pero más complejas de calcular.</li>
+              <li><strong>Estructuras isostáticas (mecanismos):</strong> No tienen suficientes apoyos y son inestables. No son aptas para soportar cargas.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplos en la naturaleza y la arquitectura</h4>
+            <p>La naturaleza es la mejor ingeniera estructural:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Huesos:</strong> Estructuras macizas con cavidades interiores para reducir peso.</li>
+              <li><strong>Telarañas:</strong> Estructuras reticuladas que combinan resistencia y ligereza.</li>
+              <li><strong>Colmenas:</strong> Estructuras laminares con celdas hexagonales (forma más eficiente).</li>
+              <li><strong>Árboles:</strong> Estructuras de barras con distribución ramificada de cargas.</li>
+            </ul>
+            <p class="mt-2">En arquitectura, el Palau de la Música de Barcelona (Gaudí) utiliza la triangulación y las formas hiperboloideas para crear estructuras ligeras y resistentes.</p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de estructura está formada por elementos alargados unidos en nudos?</p>
+            <button class="quiz-opcion" data-valor="a">A. Estructura laminar.</button>
+            <button class="quiz-opcion" data-valor="b">B. Estructura de barras (reticulada).</button>
+            <button class="quiz-opcion" data-valor="c">C. Estructura maciza.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Realizar un informe fotográfico de 5 estructuras observadas en el entorno del centro o de la localidad. Para cada una, identificar: tipo de estructura (barra, laminar, maciza), material predominante y función que cumple. Entregar el informe con fotos y descripción.
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Esfuerzos estructurales</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Cuando una estructura soporta cargas, los elementos que la forman experimentan diferentes tipos de esfuerzos. Comprender estos esfuerzos es esencial para diseñar estructuras seguras. En esta sesión estudiaremos los cinco esfuerzos fundamentales y cómo se comportan los materiales bajo cada uno de ellos.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/esfuerzos.jpg" alt="Los cinco esfuerzos estructurales principales" loading="lazy" />
+            <figcaption>Esquema de los esfuerzos: compresión, tracción, flexión, torsión y cortante</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Los cinco esfuerzos fundamentales</h4>
+
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">1. Compresión</p>
+              <p class="mt-1">Fuerza que tiende a acortar o aplastar un elemento. Los materiales buenos en compresión son la piedra, el hormigón y la madera (a través de las fibras). Un ejemplo es el peso que soporta una columna.</p>
+            </div>
+
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">2. Tracción</p>
+              <p class="mt-1">Fuerza que tiende a estirar o alargar un elemento. Los materiales buenos en tracción son los metales (acero, aluminio). Un ejemplo es el cable de un puente colgante.</p>
+            </div>
+
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">3. Flexión</p>
+              <p class="mt-1">Combinación de compresión y tracción debida a una carga transversal. Un elemento bajo flexión se deforma curvándose: una cara se comprime y la otra se estira. Es el esfuerzo más común en vigas y tablones.</p>
+            </div>
+
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">4. Torsión</p>
+              <p class="mt-1">Fuerza de giro que tiende a retorcer un elemento. Los materiales buenos en torsión son los metálicos. Un ejemplo es el eje de transmisión de un motor.</p>
+            </div>
+
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">5. Cortante</p>
+              <p class="mt-1">Fuerza que tiende a deslizar dos partes de un elemento una respecto a otra en un plano paralelo. Es el esfuerzo que actúa en los remaches y soldaduras.</p>
+            </div>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Comportamiento de los materiales</strong>
+            Cada material se comporta de forma diferente bajo cada esfuerzo: el hormigón es excelente en compresión pero muy malo en tracción (por eso se refuerza con varillas de acero). El acero es igualmente bueno en compresión y tracción. La madera es fuerte a lo largo de las fibras pero débil en perpendicular.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Relación esfuerzo-deformación</h4>
+            <p>Cuando aplicamos una fuerza a un material, este se deforma. La relación entre el esfuerzo aplicado y la deformación resultante se describe mediante el <strong>módulo de Young</strong> (módulo elástico):</p>
+            <p class="mt-2 text-center font-mono bg-slate-100 p-2 rounded">σ = E · ε</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>σ (sigma):</strong> Esfuerzo (fuerza por unidad de superficie, en Pascales).</li>
+              <li><strong>E:</strong> Módulo de Young (constante del material, en Pascales).</li>
+              <li><strong>ε (épsilon):</strong> Deformación unitaria (cambio de longitud dividido por longitud original).</li>
+            </ul>
+            <p class="mt-2">Un material con módulo de Young alto es más rígido (se deforma menos). Por ejemplo: el acero (200 GPa) es mucho más rígido que el aluminio (70 GPa).</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En parejas, realizad un experimento sencillo:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Tomad una regla de madera y apoyadla en dos puntos dejando un espacio entre ellos.</li>
+              <li>Colocad un peso en el centro y observad la deformación (flexión).</li>
+              <li>Intentad retorcer la regla con las manos (torsión).</li>
+              <li>Comenzad a estirarla por los extremos (tracción) — con cuidado.</li>
+              <li>Anotad qué esfuerzo produce mayor deformación y cuál resiste mejor la regla.</li>
+            </ol>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué esfuerzo combina compresión y tracción en un mismo elemento?</p>
+            <button class="quiz-opcion" data-valor="a">A. Flexión.</button>
+            <button class="quiz-opcion" data-valor="b">B. Torsión.</button>
+            <button class="quiz-opcion" data-valor="c">C. Cortante.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Este vídeo muestra simulaciones de los cinco esfuerzos estructurales en diferentes materiales, ayudando a visualizar cómo se comportan bajo carga.
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/wGoGrBW0sXI" title="Esfuerzos estructurales: compresión, tracción, flexión, torsión y cortante" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Triangulación y estabilidad</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El triángulo es la figura geométrica más estable de todas. Mientras que un rectángulo puede deformarse en un paralelogramo sin cambiar la longitud de sus lados, un triángulo solo puede cambiar de forma si uno de sus lados cambia de longitud. Esta propiedad hace que la triangulación sea la base de todas las estructuras resistentes.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/triangulacion.jpg" alt="Triangulación en estructuras y arquitectura" loading="lazy" />
+            <figcaption>Ejemplos de triangulación en puentes, torres y estructuras arquitectónicas</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Por qué el triángulo es la figura más estable?</h4>
+            <p>La estabilidad del triángulo se debe a su <strong>rigidez geométrica</strong>. Mientras que un cuadrilátero puede deformarse (como un rombo) sin que sus lados cambien de longitud, un triángulo está completamente determinado por la longitud de sus tres lados. Para que un triángulo cambie de forma, al menos uno de sus lados debe cambiar de longitud, lo que requiere una fuerza mucho mayor.</p>
+            <p class="mt-2">Demostración sencilla:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Construid un cuadrilátero con 4 palitos y conectad las esquinas con chinchetas.</li>
+              <li>Observad que se deforma fácilmente en un paralelogramo.</li>
+              <li>Añadid una diagonal para formar dos triángulos.</li>
+              <li>Intentad deformar la estructura de nuevo: ahora es rígida.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Triangulación en la naturaleza</strong>
+            La naturaleza utiliza la triangulación en múltiples estructuras: las telarañas están basadas en triángulos para maximizar la resistencia con mínimo material, los cristales de nieve tienen simetría triangular, y los caparazones de tortuga utilizan patrones de triangulación para proteger al animal.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructuras trianguladas en la arquitectura</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Puentes celosía:</strong> Utilizan triángulos para distribuir las cargas de forma eficiente. Ejemplo: Puente de Brooklyn.</li>
+              <li><strong>Torres de transmisión:</strong> La Torre Eiffel es un ejemplo icónico de triangulación estructural.</li>
+              <li><strong>Cubiertas y techos:</strong> Los cerchos triangulares permiten cubrir grandes luces sin apoyos intermedios.</li>
+              <li><strong>Grúas:</strong> Los brazos de las grúas usan triangulación para soportar cargas elevadas.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de triangulación</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Triángulo simple:</strong> La forma básica, tres barras unidas en tres nudos.</li>
+              <li><strong>Celosía de Warren:</strong> Triángulos alternos con barras diagonales.</li>
+              <li><strong>Celosía Pratt:</strong> Barras verticales en compresión y diagonales en tracción.</li>
+              <li><strong>Celosía Howe:</strong> Inverso de Pratt, con diagonales en compresión.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Experimento práctico</strong>
+            Construid con palitos de madera y pegamento dos estructuras: un cuadrado y un triángulo. Colocad un libro encima de cada una y observad cuál soporta más peso. Este experimento demostrará experimentalmente la superioridad estructural del triángulo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplos en edificios modernos</h4>
+            <p>Los arquitectos contemporáneos utilizan la triangulación de formas innovadoras:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Centre Pompidou (París):</strong> Estructura exponen con triangulación diagonal.</li>
+              <li><strong>Edificio Lloyd's (Londres):</strong> Estructura exterior triangulada.</li>
+              <li><strong>Puente de la Bahía de Sydney:</strong> Arcos triangulados que soportan el tablero.</li>
+              <li><strong>Estadios modernos:</strong> Cubiertas con estructuras trianguladas de acero.</li>
+            </ul>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Por qué el triángulo es la figura más estable?</p>
+            <button class="quiz-opcion" data-valor="a">A. Porque tiene más lados que el cuadrado.</button>
+            <button class="quiz-opcion" data-valor="b">B. Porque es más pequeño que otras figuras.</button>
+            <button class="quiz-opcion" data-valor="c">C. Porque está completamente determinado por la longitud de sus lados, lo que lo hace rígido.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            En grupos de 3-4 alumnos, construir una estructura triangulada con palitos de madera y pegamento que sea capaz de soportar el mayor peso posible. Se utilizarán clips de papel como carga. La estructura ganadora será la que soporte más peso relativo a su propio peso. Se valorará el diseño, la ejecución y la justificación de las decisiones tomadas.
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Diseño de estructuras</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta sesión final abordaremos los criterios de diseño estructural, los factores de seguridad y realizaremos experimentos prácticos para aplicar todo lo aprendido. El objetivo es diseñar y construir una estructura que cumpla con requisitos específicos.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/diseno-estructura.jpg" alt="Proceso de diseño de una estructura" loading="lazy" />
+            <figcaption>Proceso de diseño: desde la concepción hasta la construcción de una estructura</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Criterios de diseño estructural</h4>
+            <p>Al diseñar una estructura debemos considerar:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Resistencia:</strong> La estructura debe soportar las cargas previstas sin romperse.</li>
+              <li><strong>Rigidez:</strong> La deformación bajo carga debe ser aceptable (no excesiva).</li>
+              <li><strong>Estabilidad:</strong> La estructura no debe volcarse ni deslizarse.</li>
+              <li><strong>Durabilidad:</strong> La estructura debe mantener sus propiedades a lo largo del tiempo.</li>
+              <li><strong>Economía:</strong> El coste del material y la construcción debe ser razonable.</li>
+              <li><strong>Estética:</strong> En muchos casos, la apariencia visual es importante.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Factor de seguridad</strong>
+            El factor de seguridad (FS) es la relación entre la carga de rotura y la carga de trabajo. Se expresa como: <strong>FS = Carga de rotura / Carga de trabajo</strong>. Normalmente se usa un FS entre 1.5 y 3, dependiendo del tipo de estructura y sus consecuencias en caso de fallo. Por ejemplo, una estructura temporal puede tener FS = 1.5, mientras que un puente debe tener FS ≥ 3.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Método de diseño</h4>
+            <p>El proceso de diseño estructural sigue estos pasos:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Definir requisitos:</strong> ¿Qué debe soportar la estructura? ¿Qué dimensiones máximas tiene?</li>
+              <li><strong>Seleccionar material:</strong> Según los esfuerzos predominantes y las condiciones.</li>
+              <li><strong>Proponer geometría:</strong> Diseñar la forma de la estructura, aplicando triangulación si es necesario.</li>
+              <li><strong>Calcular esfuerzos:</strong> Determinar las cargas en cada elemento.</li>
+              <li><strong>Verificar dimensiones:</strong> Comprobar que cada elemento tiene la sección suficiente para resistir los esfuerzos.</li>
+              <li><strong>Aplicar factor de seguridad:</strong> Asegurar un margen adecuado.</li>
+              <li><strong>Prototipar y testear:</strong> Construir un modelo a escala y probarlo.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Experimento práctico: Puente de papel</h4>
+            <p>Construiremos un puente con papel y celo que deberá soportar el mayor peso posible:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Material:</strong> 10 hojas de papel DIN A4 y 1 metro de celo adhesivo.</li>
+              <li><strong>Vanos:</strong> El puente debe cubrir una distancia de 30 cm entre dos mesas.</li>
+              <li><strong>Reglas:</strong> No se puede usar material adicional. El peso se medirá con clips de papel.</li>
+              <li><strong>Objetivo:</strong> Maximizar la relación peso soportado / peso del puente.</li>
+            </ul>
+            <p class="mt-2"><strong>Consejo:</strong> Utilizad la triangulación para crear vigas resistentes. Enrollad el papel para crear tubos (aumenta la resistencia a flexión). Usad el celo para reforzar las uniones.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Reflexión de diseño</strong>
+            Después del experimento, cada grupo explicará por qué su diseño funciona (o no funciona). Analizaremos los errores más comunes: uso excesivo de material, falta de triangulación, uniones débiles y distribución desigual de cargas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Situaciones de aprendizaje (SdA)</h4>
+            <p>Las situaciones de aprendizaje son experiencias educativas que integran conocimientos de diferentes áreas. En esta unidad podemos conectar:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Ciencias Naturales:</strong> Propiedades de los materiales, fuerzas.</li>
+              <li><strong>Matemáticas:</strong> Geometría, cálculo de áreas y volúmenes, proporcionalidad.</li>
+              <li><strong>Plástica y Visual:</strong> Diseño estético, proporciones, simetría.</li>
+              <li><strong>Tecnología:</strong> Fabricación, herramientas, procesos constructivos.</li>
+            </ul>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">Si un cable se rompe con 100 kg y lo usamos para soportar 40 kg, ¿cuál es el factor de seguridad?</p>
+            <button class="quiz-opcion" data-valor="a">A. 0.4</button>
+            <button class="quiz-opcion" data-valor="b">B. 2.5</button>
+            <button class="quiz-opcion" data-valor="c">C. 40</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Producto de la unidad</strong>
+            Elaboración de un informe técnico completo del diseño del puente de papel, incluyendo: boceto inicial, materiales utilizados, tipo de estructura elegida, justificación del diseño, resultado de la prueba de carga y reflexión sobre posibles mejoras. El informe se complementará con la exposición oral del proceso de diseño al resto de la clase.
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud5.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        ← UD5 · Materiales Técnicos
+      </a>
+      <span class="text-sm text-slate-400">Última unidad</span>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

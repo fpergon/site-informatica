@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD3 · Proceso de Resolución de Problemas · 2º TyD</title>
+  <meta name="description" content="Unidad Didáctica 3 de 2º TyD: Método de proyectos, definición de problemas, planificación y solución paso a paso." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2tyd" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2tyd.html" class="hover:underline">2.º TyD</a>
+        <span>·</span>
+        <span>3.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque III</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD3 · Proceso de Resolución de Problemas</h1>
+      <p class="mt-3 text-brand-50/90">Método de proyectos, definición de problemas, planificación y solución paso a paso. Esta unidad desarrollará el pensamiento crítico y la capacidad de organizar soluciones de forma estructurada.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.A.1</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.A.2</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.A.8</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.B.3</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.2.A.7</span>
+      </div>
+    </section>
+
+    <section class="mt-8">
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción al método de proyectos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div class="callout callout-nota">
+            <strong>Saberes básicos</strong>
+            TYD.2.A.1 · Criterio 1.1
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El método de proyectos es una estrategia pedagógica que permite aprender haciendo. En lugar de memorizar teoría, el alumnado se enfrenta a un problema real o simulado y debe planificar, ejecutar y evaluar una solución. Esta sesión presenta las fases del método y su aplicación en el ámbito tecnológico.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/fases-metodo-proyectos.png" alt="Fases del método de proyectos" loading="lazy" class="rounded-lg w-full" />
+            <figcaption>Las cinco fases del método de proyectos: desde la identificación del problema hasta la evaluación final</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es el método de proyectos?</h4>
+            <p>El método de proyectos es un enfoque de aprendizaje en el que los alumnos trabajan de forma autónoma o en equipo para resolver un problema o responder a una pregunta compleja a lo largo de un período de tiempo determinado. Sus características principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Aprendizaje activo:</strong> El alumnado es protagonista de su propio aprendizaje.</li>
+              <li><strong>Enfoque real:</strong> Los problemas planteados tienen conexión con situaciones reales.</li>
+              <li><strong>Trabajo colaborativo:</strong> Fomenta la cooperación y la comunicación entre iguales.</li>
+              <li><strong>Autonomía:</strong> Los alumnos toman decisiones sobre cómo abordar el problema.</li>
+              <li><strong>Producto final:</strong> El proyecto concluye con un producto o presentación tangible.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Las 5 fases del método de proyectos</h4>
+            <div class="mt-3 space-y-3">
+              <div class="rounded-lg border-l-4 border-brand-500 bg-brand-50 p-3">
+                <h5 class="font-bold text-brand-700">1. Identificación del problema</h5>
+                <p>Definir con claridad qué problema se va a resolver, quién se ve afectado y por qué es importante. Se formula una pregunta de investigación o un reto concreto.</p>
+              </div>
+              <div class="rounded-lg border-l-4 border-brand-500 bg-brand-50 p-3">
+                <h5 class="font-bold text-brand-700">2. Investigación y recopilación de información</h5>
+                <p>Buscar y analizar información relevante: fuentes documentales, entrevistas, encuestas, observación directa. Comprender el contexto del problema.</p>
+              </div>
+              <div class="rounded-lg border-l-4 border-brand-500 bg-brand-50 p-3">
+                <h5 class="font-bold text-brand-700">3. Planificación y diseño de la solución</h5>
+                <p>Definir los pasos a seguir, los recursos necesarios, los plazos y los responsables. Diseñar la solución antes de implementarla.</p>
+              </div>
+              <div class="rounded-lg border-l-4 border-brand-500 bg-brand-50 p-3">
+                <h5 class="font-bold text-brand-700">4. Ejecución</h5>
+                <p>Poner en marcha el plan, crear el producto, desarrollar la solución. Registrar el proceso y los problemas encontrados.</p>
+              </div>
+              <div class="rounded-lg border-l-4 border-brand-500 bg-brand-50 p-3">
+                <h5 class="font-bold text-brand-700">5. Evaluación y presentación</h5>
+                <p>Valorar los resultados obtenidos, comparar con los objetivos iniciales, reflexionar sobre lo aprendido y presentar el proyecto al grupo.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            El método de proyectos no es solo una actividad escolar; es la forma en que se trabajan los problemas en el mundo profesional. Cada proyecto de ingeniería, desarrollo de software o diseño sigue estas mismas fases.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Primer proyecto</h4>
+            <p>En grupos de 3-4 alumnos, identificar un problema cotidiano del instituto que se pueda resolver con tecnología. Definir:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>¿Cuál es el problema? ¿A quién afecta?</li>
+              <li>¿Qué información necesitas para entenderlo mejor?</li>
+              <li>¿Cuál sería una posible solución tecnológica?</li>
+              <li>¿Qué materiales y herramientas necesitarías?</li>
+              <li>¿En cuánto tiempo podrías tener una solución?</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Definición de problemas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El primer paso para resolver un problema es definirlo con precisión. Muchos proyectos fracasan porque el problema no se identificó correctamente desde el principio. En esta sesión aprenderemos a formular problemas, buscar información relevante y analizar las causas que los originan.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cómo identificar y formular problemas</h4>
+            <p>Un problema bien formulado es la mitad de la solución. Para identificar problemas debemos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Observar:</strong> Detectar situaciones que generan incomodidad, ineficiencia o desperdicio.</li>
+              <li><strong>Preguntar:</strong> Dialogar con las personas afectadas para comprender su perspectiva.</li>
+              <li><strong>Analizar datos:</strong> Recopilar información cuantitativa (encuestas, estadísticas) que respalde la observación.</li>
+              <li><strong>Formular la pregunta:</strong> Convertir el problema en una pregunta clara y concisa que guíe la investigación.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo de formulación:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Vago:</strong> "La comida del comedor no está bien."</li>
+              <li><strong>Concreto:</strong> "¿Cómo podemos reducir el desperdicio de comida en el comedor del instituto en un 30%?"</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Búsqueda de información</h4>
+            <p>Una vez identificado el problema, es necesario recopilar información relevante:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Fuentes primarias:</strong> Encuestas, entrevistas, observación directa, experimentos.</li>
+              <li><strong>Fuentes secundarias:</strong> Artículos, libros, webs especializadas, informes técnicos.</li>
+              <li><strong>Fuentes terciarias:</strong> Enciclopedias, diccionarios, bases de datos académicas.</li>
+            </ul>
+            <p class="mt-2"><strong>Criterios de fiabilidad de las fuentes:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Autoría reconocida y verificable.</li>
+              <li>Fecha de publicación actualizada.</li>
+              <li>Referencias y bibliografía incluidas.</li>
+              <li>Dominio web fiable (.edu, .gov, .org, publicaciones científicas).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Análisis de causas</h4>
+            <p>Para comprender un problema en profundidad, es útil analizar sus causas con herramientas específicas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Diagrama de Ishikawa (espina de pescado):</strong> Identifica las causas agrupadas por categorías: método, material, mano de obra, maquinaria, medición, entorno.</li>
+              <li><strong>Diagrama de los 5 porqués:</strong> Preguntar "¿por qué?" sucesivamente hasta llegar a la causa raíz.</li>
+              <li><strong>Análisis DAFO:</strong> Identificar Debilidades, Amenazas, Fortalezas y Oportunidades relacionadas con el problema.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ejemplo del diagrama de los 5 porqués</strong>
+            <strong>Problema:</strong> Los alumnos llegan tarde a clase de informática.<br/>
+            <strong>¿Por qué?</strong> Porque no pueden acceder al aula a tiempo.<br/>
+            <strong>¿Por qué?</strong> Porque la puerta está cerrada con llave.<br/>
+            <strong>¿Por qué?</strong> Porque el profesor anterior no la dejó abierta.<br/>
+            <strong>¿Por qué?</strong> Porque no tiene_costumbre de hacerlo.<br/>
+            <strong>¿Por qué?</strong> Porque no se ha establecido un protocolo de apertura.<br/>
+            <strong>Causa raíz:</strong> Falta un protocolo de gestión de llaves del aula.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Formulación de problemas</h4>
+            <p>A partir de una situación problemática proporcionada por el profesor:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Redactar una definición clara del problema (máximo 2 frases).</li>
+              <li>Formular la pregunta de investigación principal.</li>
+              <li>Identificar 3 fuentes de información útiles y justificar su fiabilidad.</li>
+              <li>Crear un diagrama de Ishikawa o de los 5 porqués para analizar las causas.</li>
+              <li>Presentar los resultados al grupo en 3 minutos.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Planificación y diseño</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Una vez definido y analizado el problema, llega el momento de planificar la solución. Una buena planificación ahorra tiempo, recursos y frustraciones. En esta sesión aprenderemos a usar diagramas de flujo, cronogramas y criterios de evaluación para organizar nuestro trabajo.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Diagramas de flujo</h4>
+            <p>Un diagrama de flujo es una representación gráfica de un proceso o algoritmo. Utiliza símbolos estándar:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Ovalo:</strong> Inicio o fin del proceso.</li>
+              <li><strong>Rectángulo:</strong> Acción o paso del proceso.</li>
+              <li><strong>Diamante:</strong> Decisión (sí/no, verdadero/falso).</li>
+              <li><strong>Paralelogramo:</strong> Entrada o salida de datos.</li>
+              <li><strong>Flechas:</strong> Dirección del flujo.</li>
+            </ul>
+            <p class="mt-2">Los diagramas de flujo son especialmente útiles para:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Visualizar procesos complejos de forma sencilla.</li>
+              <li>Identificar cuellos de botella o pasos innecesarios.</li>
+              <li>Comunicar el plan de trabajo al equipo de forma clara.</li>
+              <li>Programar algoritmos antes de escribir código.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cronogramas</h4>
+            <p>Un cronograma es un calendario del proyecto que indica qué actividades se realizarán y en qué momento:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Diagrama de Gantt:</strong> Barras horizontales que representan la duración de cada tarea. Muy visual y fácil de interpretar.</li>
+              <li><strong>Tabla de tareas:</strong> Lista de actividades con fecha de inicio, fin y responsable.</li>
+              <li><strong>Hito (milestone):</strong> Evento importante que marca un punto de inflexión en el proyecto.</li>
+            </ul>
+            <p class="mt-2"><strong>Elementos de un cronograma:</strong></p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Lista de tareas o actividades.</li>
+              <li>Orden de ejecución (dependencias entre tareas).</li>
+              <li>Duración estimada de cada tarea.</li>
+              <li>Responsable de cada tarea.</li>
+              <li>Fecha límite (deadline) del proyecto.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Selección de materiales</h4>
+            <p>La planificación implica seleccionar los recursos adecuados:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Hardware:</strong> Componentes físicos necesarios.</li>
+              <li><strong>Software:</strong> Programas y herramientas digitales.</li>
+              <li><strong>Materiales:</strong> Papel, cartulinas, cable, componentes electrónicos, etc.</li>
+              <li><strong>Recursos humanos:</strong> Personas involucradas y sus habilidades.</li>
+              <li><strong>Presupuesto:</strong> Coste estimado de los materiales.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Criterios de evaluación</h4>
+            <p>Definir los criterios de evaluación antes de empezar el proyecto garantiza la objetividad y la transparencia:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>¿Qué se va a evaluar?</strong> Producto final, proceso, trabajo en equipo, presentación oral.</li>
+              <li><strong>¿Cómo se va a evaluar?</strong> Rúbrica, lista de cotejo, autoevaluación, coevaluación.</li>
+              <li><strong>¿Qué puntuación tendrá cada criterio?</strong> Peso relativo de cada aspecto.</li>
+            </ul>
+          </div>
+
+          <table class="rubrica my-3 w-full">
+            <thead>
+              <tr>
+                <th>Criterio</th>
+                <th>Excelente (4)</th>
+                <th>Bueno (3)</th>
+                <th>Suficiente (2)</th>
+                <th>Insuficiente (1)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Definición del problema</td>
+                <td>Formulación clara, concisa y completa</td>
+                <td>Formulación clara con alguna omisión</td>
+                <td>Formulación vaga o incompleta</td>
+                <td>No se define el problema</td>
+              </tr>
+              <tr>
+                <td>Planificación</td>
+                <td>Cronograma realista con dependencias claras</td>
+                <td>Cronograma completo pero sin dependencias</td>
+                <td>Cronograma parcial o poco realista</td>
+                <td>No hay planificación</td>
+              </tr>
+              <tr>
+                <td>Ejecución</td>
+                <td>Producto completo y bien ejecutado</td>
+                <td>Producto completo con errores menores</td>
+                <td>Producto incompleto</td>
+                <td>No se ejecuta el plan</td>
+              </tr>
+              <tr>
+                <td>Evaluación</td>
+                <td>Reflexión profunda con propuestas de mejora</td>
+                <td>Reflexión adecuada</td>
+                <td>Reflexión superficial</td>
+                <td>No hay evaluación</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Usa herramientas digitales para planificar: Google Sheets para cronogramas, Draw.io para diagramas de flujo, Trello o Notion para gestión de tareas. Estas herramientas facilitan la colaboración y el seguimiento del proyecto.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Planificar un proyecto</h4>
+            <p>A partir del problema identificado en la sesión anterior, crear:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Un diagrama de flujo que represente el proceso de solución paso a paso.</li>
+              <li>Un cronograma en formato de diagrama de Gantt para un plazo de 2 semanas.</li>
+              <li>Una lista de materiales y herramientas necesarios.</li>
+              <li>Una rúbrica de evaluación adaptada al proyecto.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">SdA EcoCocina: Resolución de problemas aplicada</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+          <div class="callout callout-nota">
+            <strong>Situación de Aprendizaje</strong>
+            TYD.2.A.8 · Criterio 2.1, 2.2, 7.1
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta Situación de Aprendizaje aplicaremos el método de proyectos a un caso real: <strong>EcoCocina</strong>, un proyecto de cocina sostenible que busca reducir el desperdicio de alimentos y promover una alimentación responsable. Los alumnos deberán identificar problemas, planificar soluciones y ejecutar un proyecto completo.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Contexto del proyecto</h4>
+            <p>El comedor del instituto genera una cantidad significativa de desperdicio de alimentos cada día. El equipo directivo ha encargado a los alumnos de 2º TyD que investiguen este problema y propongan soluciones tecnológicas y organizativas para reducirlo.</p>
+            <p class="mt-2"><strong>El reto:</strong> Diseñar e implementar un sistema que ayude a reducir el desperdicio de alimentos en el comedor del instituto en al menos un 25% en un trimestre.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Fase 1: Investigación</h4>
+            <p>Los equipos de trabajo realizarán las siguientes actividades:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Observación:</strong> Visitar el comedor en diferentes horarios y registrar los tipos de comida que más se tiran.</li>
+              <li><strong>Encuestas:</strong> Diseñar y aplicar encuestas a alumnos y personal del comedor para conocer sus hábitos.</li>
+              <li><strong>Entrevistas:</strong> Hablar con los cocineros y el personal de limpieza para obtener su perspectiva.</li>
+              <li><strong>Datos:</strong> Recopilar datos cuantitativos sobre el peso de los residuos durante una semana.</li>
+              <li><strong>Investigación documental:</strong> Buscar soluciones que hayan funcionado en otros centros o iniciativas类似.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Fase 2: Planificación</h4>
+            <p>A partir de los datos recopilados, cada equipo planificará su solución:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Definir el problema:</strong> Formular el problema específico que su equipo va a abordar.</li>
+              <li><strong>Analizar causas:</strong> Usar el diagrama de Ishikawa o los 5 porqués para llegar a la causa raíz.</li>
+              <li><strong>Proponer soluciones:</strong> Generar al menos 3 posibles soluciones y evaluar cada una con una tabla de pros/contras.</li>
+              <li><strong>Seleccionar la mejor solución:</strong> Justificar la elección con argumentos técnicos, económicos y de viabilidad.</li>
+              <li><strong>Diseñar la implementación:</strong> Crear un diagrama de flujo del proceso y un cronograma detallado.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Posibles soluciones tecnológicas</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Aplicación web/móvil:</strong> Un sistema donde los alumnos puedan indicar qué van a comer cada día, permitiendo al comedor optimizar las cantidades.</li>
+              <li><strong>Panel digital de información:</strong> Una pantalla que muestre datos en tiempo real sobre el desperdicio y su impacto ambiental.</li>
+              <li><strong>Sistema de ponderación:</strong> Un formulario que permita a los alumnos calificar la comida y proporcionar feedback a los cocineros.</li>
+              <li><strong>Campaña de concienciación:</strong> Material digital (infografías, vídeos) para sensibilizar sobre el desperdicio.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Fase 3: Ejecución</h4>
+            <p>Una vez aprobada la solución, los equipos procederán a:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Crear el producto digital (aplicación, panel, web) usando las herramientas aprendidas en unidades anteriores.</li>
+              <li>Desarrollar el material de concienciación.</li>
+              <li>Implementar una prueba piloto en el comedor durante 2 semanas.</li>
+              <li>Registrar datos antes y durante la prueba para medir el impacto.</li>
+              <li>Ajustar la solución según los resultados obtenidos.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Fase 4: Evaluación</h4>
+            <p>El proyecto se evaluará mediante:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Producto final:</strong> Calidad, funcionalidad y presentación del producto digital.</li>
+              <li><strong>Documentación:</strong> Informe completo del proyecto con fases, datos y conclusiones.</li>
+              <li><strong>Presentación oral:</strong> Exposición de 10 minutos al resto de la clase.</li>
+              <li><strong>Trabajo en equipo:</strong> Coevaluación entre miembros del equipo.</li>
+              <li><strong>Autoevaluación:</strong> Reflexión individual sobre lo aprendido y las dificultades encontradas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Recursos útiles para EcoCocina</strong>
+            - <strong>Captura de datos:</strong> Google Forms para encuestas, Google Sheets para análisis.<br/>
+            - <strong>Diseño web:</strong> Google Sites, Canva, Genially.<br/>
+            - <strong>Programación:</strong> Scratch, App Inventor, HTML/CSS básico.<br/>
+            - <strong>Presentación:</strong> Google Slides, Prezi, Genially.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Entregables del proyecto</h4>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Informe de investigación:</strong> Datos recopilados, análisis de causas y conclusiones (máximo 3 páginas).</li>
+              <li><strong>Plan de proyecto:</strong> Cronograma, diagrama de flujo, lista de materiales y rúbrica de evaluación.</li>
+              <li><strong>Producto digital:</strong> La solución tecnológica desarrollada (aplicación, web, panel).</li>
+              <li><strong>Material de concienciación:</strong> Infografía o vídeo promocional.</li>
+              <li><strong>Presentación oral:</strong> Exposición de 10 minutos con apoyo visual.</li>
+              <li><strong>Autoevaluación y coevaluación:</strong> Formularios individuales de reflexión.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Criterios de evaluación</strong>
+            <strong>1.1:</strong> Identificar y formular problemas de forma clara y concisa.<br/>
+            <strong>2.1:</strong> Buscar y seleccionar información de fuentes fiables.<br/>
+            <strong>2.2:</strong> Analizar causas de un problema usando herramientas adecuadas.<br/>
+            <strong>4.1:</strong> Diseñar soluciones prácticas y viables a problemas reales.<br/>
+            <strong>7.1:</strong> Comunicar resultados de forma clara y visual.
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud2.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        ← UD2 · Hardware y Redes
+      </a>
+      <span class="text-sm text-slate-400">Última unidad</span>
+    </nav>
+
+  </main>
+
+  <script src="../componentes/nucleo.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

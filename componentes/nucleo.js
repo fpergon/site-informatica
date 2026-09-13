@@ -34,6 +34,7 @@
     { id: '1cyr',    texto: '1º CyR',       href: base + '1cyr.html' },
     { id: '2cyr',    texto: '2º CyR',       href: base + '2cyr.html' },
     { id: '3cyr',    texto: '3º CyR',       href: base + '3cyr.html' },
+    { id: '2tyd',    texto: '2º TyD',       href: base + '2tyd.html' },
     { id: 'tic',     texto: 'TIC I',         href: base + 'tic.html' },
     { id: 'licencia', texto: 'Licencia',    href: 'https://creativecommons.org/licenses/by-nc/4.0/' }
   ];
@@ -69,7 +70,7 @@
     + '<footer class="mt-12 border-t border-slate-200 bg-white">'
     +   '<div class="mx-auto max-w-6xl px-4 py-8">'
     +     '<div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">'
-    +       '<p class="text-sm text-slate-600">© IES Pintor Pedro Gómez · Departamento de Computación y Robótica.<br>Contenidos bajo <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" class="font-semibold text-accent-600 underline">CC BY-NC 4.0</a>.</p>'
+    +       '<p class="text-sm text-slate-600">© IES Pintor Pedro Gómez · Departamento de Tecnología.<br>Contenidos bajo <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" class="font-semibold text-accent-600 underline">CC BY-NC 4.0</a>.</p>'
     +       '<div class="flex items-center gap-3 text-sm text-slate-500">'
     +         '<span class="rounded bg-brand-50 px-2 py-1 font-medium text-brand-700">Software libre</span>'
     +         '<span class="rounded bg-accent-50 px-2 py-1 font-medium text-accent-700">Hardware libre</span>'

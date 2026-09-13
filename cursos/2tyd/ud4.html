@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD4 · Diseño Técnico · 2º TyD</title>
+  <meta name="description" content="Unidad Didáctica 4 de 2º Tecnología y Diseño: Representación gráfica de piezas, vistas ortogonales, perspectivas y dibujo técnico asistido por ordenador." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="2tyd" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../2tyd.html" class="hover:underline">2.º TyD</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque II</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD4 · Diseño Técnico</h1>
+      <p class="mt-3 text-brand-50/90">Representación gráfica de piezas, vistas ortogonales, perspectivas y dibujo técnico asistido por ordenador. Esta unidad desarrolla la capacidad de interpretar y crear representaciones técnicas fundamentales para cualquier proyecto de diseño e ingeniería.</p>
+    </section>
+
+    <section class="mt-8">
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción al diseño técnico</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión introductoria es la base de toda la unidad. Es fundamental que el alumnado comprenda la diferencia entre los distintos tipos de representación antes de profundizar en las vistas ortogonales.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El diseño técnico es la disciplina que permite comunicar ideas y soluciones a través de representaciones gráficas. En ingeniería y arquitectura, la capacidad de dibujar y leer planos técnicos es tan importante como la propia construcción. En esta sesión conoceremos los fundamentos del dibujo técnico y los diferentes métodos de representación de objetos tridimensionales sobre superficies bidimensionales.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es el diseño técnico?</h4>
+            <p>El diseño técnico es el proceso de representar objetos, máquinas, componentes o estructuras de forma precisa y normalizada, utilizando convenciones gráficas que permiten su fabricación o construcción. Se aplica en campos como la arquitectura, la ingeniería mecánica, la ingeniería civil, el diseño industrial y la fabricación.</p>
+            <p class="mt-2">Un buen dibujo técnico debe ser:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Preciso:</strong> Las dimensiones y proporciones deben ser fiel al objeto real.</li>
+              <li><strong>Claro:</strong> Debe poder interpretarse sin ambigüedades.</li>
+              <li><strong>Completo:</strong> Debe incluir toda la información necesaria para fabricar la pieza.</li>
+              <li><strong>Normalizado:</strong> Debe seguir las normas UNE o ISO establecidas.</li>
+            </ul>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/diseno-tecnico.jpg" alt="Representación técnica de una pieza mecánica" loading="lazy" />
+            <figcaption>Ejemplo de representación técnica con vistas y cotas de una pieza mecánica</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de representación</h4>
+            <p>Existen varios sistemas para representar objetos tridimensionales en una superficie bidimensional:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Representación isométrica:</strong> Los tres ejes principales forman ángulos de 120° entre sí. Es fácil de dibujar y da una buena sensación de volumen, pero no permite medir directamente en todas las direcciones.</li>
+              <li><strong>Representación caballera:</strong> Un eje se dibuja perpendicular al plano del papel y los otros dos en dirección horizontal y vertical. Se usa mucho en juegos y diagramas por su simplicidad.</li>
+              <li><strong>Perspectiva cónica (cavalliere):</strong> Los ejes que se alejan del observador convergen hacia puntos de fuga. Es la más realista visualmente pero la más compleja de construir.</li>
+              <li><strong>Vistas ortogonales:</strong> Representación normalizada del objeto proyectado desde distintas direcciones perpendiculares. Es el sistema estándar en ingeniería por su precisión y facilidad de lectura.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para visualizar un objeto en isométrico, colócalo sobre una mesa y míralo desde una esquina. Observa cómo los tres ejes principales (largo, ancho y alto) se ven con la misma importancia. Esa es la esencia de la representación isométrica.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Normativa: UNE e ISO</h4>
+            <p>Las normas UNE (Una Norma Española) e ISO (Organización Internacional de Normalización) establecen las reglas para el dibujo técnico. Algunas de las más importantes son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>ISO 5456:</strong> Sistemas de representación (isométrico, caballero, cónico, ortogonal).</li>
+              <li><strong>ISO 128:</strong> Principios generales de representación de vistas.</li>
+              <li><strong>ISO 129:</strong> Acotación de dimensiones.</li>
+              <li><strong>ISO 128-50:</strong> Secciones y cortes.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Dibuja en tu cuaderno un cubo sencillo utilizando tres sistemas de representación diferentes: isométrico, caballero y perspectiva cónica. Compara visualmente los resultados y anota las ventajas e inconvenientes de cada uno.</p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Entregar un croquis en el que se represente el mismo cubo en los tres sistemas de representación vistos en clase. Se valorará la limpieza del trazado y el correcto uso de cada sistema.
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Vistas de piezas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las vistas ortogonales son la herramienta fundamental del dibujo técnico. Consisten en proyectar el objeto sobre planos perpendiculares entre sí, obteniendo imágenes que representan fielmente las dimensiones reales del objeto. Dominar las vistas es imprescindible para interpretar planos de fabricación y para comunicar diseños con precisión.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué son las vistas ortogonales?</h4>
+            <p>Las vistas ortogonales son las proyecciones del objeto sobre planos perpendiculares a las direcciones de observación. En el sistema más extendido se utilizan seis vistas posibles, aunque normalmente no son necesarias todas para representar una pieza.</p>
+            <p class="mt-2">Las vistas principales son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Vista frontal (principal):</strong> La que muestra más información sobre la pieza. Se elige como referencia.</li>
+              <li><strong>Vista superior:</strong> Vista desde arriba, situada debajo de la frontal en Primer Ángulo.</li>
+              <li><strong>Vista lateral derecha:</strong> Vista desde la derecha, situada a la izquierda de la frontal en Primer Ángulo.</li>
+              <li><strong>Vista inferior:</strong> Vista desde abajo.</li>
+              <li><strong>Vista lateral izquierda:</strong> Vista desde la izquierda.</li>
+              <li><strong>Vista posterior:</strong> Vista desde atrás.</li>
+            </ul>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/vistas-ortogonales.jpg" alt="Esquema de las seis vistas ortogonales de una pieza" loading="lazy" />
+            <figcaption>Disposición de las seis vistas ortogonales según la norma ISO</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Proyección de Primer Ángulo y Tercer Ángulo</h4>
+            <p>Existen dos sistemas de proyección principales:</p>
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">Proyección de Primer Ángulo (ISO, Europa)</p>
+              <p class="mt-1">El objeto se sitúa entre el observador y el plano de proyección. Las vistas se disponen:</p>
+              <ul class="mt-1 space-y-1 pl-5 list-disc">
+                <li>Vista superior → debajo de la vista frontal</li>
+                <li>Vista lateral derecha → a la izquierda de la vista frontal</li>
+                <li>Vista inferior → encima de la vista frontal</li>
+              </ul>
+            </div>
+            <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+              <p class="font-semibold text-ink-800">Proyección de Tercer Ángulo (ANSI, EE.UU.)</p>
+              <p class="mt-1">El plano de proyección se sitúa entre el observador y el objeto. Las vistas se disponen de forma más intuitiva:</p>
+              <ul class="mt-1 space-y-1 pl-5 list-disc">
+                <li>Vista superior → encima de la vista frontal</li>
+                <li>Vista lateral derecha → a la derecha de la vista frontal</li>
+                <li>Vista inferior → debajo de la vista frontal</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato importante</strong>
+            En España y Europa se utiliza la proyección de Primer Ángulo (norma ISO). En Estados Unidos y otros países anglosajones se usa la proyección de Tercer Ángulo (norma ANSI). Es fundamental saber identificar cuál se está utilizando en un plano para interpretarlo correctamente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Vistas necesarias para representar una pieza</h4>
+            <p>No siempre son necesarias las seis vistas. La regla general es utilizar el <strong>número mínimo de vistas</strong> que permitan representar la pieza completamente. Para la mayoría de piezas sencillas, con tres vistas (frontal, superior y lateral) es suficiente. Para piezas con cavidades internas se recurre a secciones.</p>
+            <p class="mt-2"><strong>Criterios para elegir la vista frontal:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Mostrar la mayor cantidad de detalles y forma característica.</li>
+              <li>Establecer la mayor estabilidad en la representación.</li>
+              <li>Que coincida con la posición de uso o montaje de la pieza.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Se os proporcionarán dibujos de tres piezas sencillas en perspectiva. Para cada una, debéis:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Determinar cuál es la vista frontal más adecuada.</li>
+              <li>Dibujar las vistas ortogonales necesarias en papel milimetrado.</li>
+              <li>Comprobar que con las vistas elegidas se puede construir la pieza sin ambigüedad.</li>
+            </ol>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">En la proyección de Primer Ángulo, ¿dónde se sitúa la vista superior respecto a la vista frontal?</p>
+            <button class="quiz-opcion" data-valor="a">A. Debajo de la vista frontal.</button>
+            <button class="quiz-opcion" data-valor="b">B. Encima de la vista frontal.</button>
+            <button class="quiz-opcion" data-valor="c">C. A la derecha de la vista frontal.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para recordar la disposición de las vistas en Primer Ángulo, piensa que el objeto "atraviesa" el plano de proyección: lo que ves por la derecha se proyecta a la izquierda, y lo que ves por arriba se proyecta por abajo.
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Ejercicios de vistas nivel elemental</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta sesión pondremos en práctica todo lo aprendido sobre vistas ortogonales con ejercicios de dificultad elemental. El objetivo es consolidar la capacidad de representar piezas sencillas con 2 o 3 vistas y de interpretar vistas para identificar la pieza original.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/vistas-ejercicio.jpg" alt="Ejercicio de representación de vistas" loading="lazy" />
+            <figcaption>Ejemplo de ejercicio: representar una pieza con sus vistas ortogonales correspondientes</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Reglas para el dibujo de vistas</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Las vistas deben mantener la <strong>correspondencia</strong>: los puntos de una vista se alinean con los de las otras.</li>
+              <li>Las líneas visibles se dibujan con <strong>trazo continuo</strong>.</li>
+              <li>Las líneas ocultas se dibujan con <strong>trazo discontinuo</strong> (guiones).</li>
+              <li>Las líneas de eje o simetría se dibujan con <strong>trazo largo-corto</strong>.</li>
+              <li>Las vistas deben mantener la misma <strong>escala</strong> entre sí.</li>
+              <li>Se debe respetar un <strong>espaciado uniforme</strong> entre vistas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Tipo de trazo</strong>
+            Las líneas en dibujo técnico tienen un significado específico: continuo para aristas visibles, discontinuo para aristas ocultas y largo-corto para ejes de simetría. Un error en el tipo de trazo puede cambiar completamente la interpretación de la pieza.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejercicio 1: Representar con vistas</h4>
+            <p>Dibuja las vistas necesarias (mínimo dos) para representar las siguientes piezas en papel milimetrado a escala 1:1:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>Pieza A:</strong> Un cubo de 40 mm de arista con un taladro cilíndrico de 15 mm de diámetro que lo atraviesa de lado a lado.</li>
+              <li><strong>Pieza B:</strong> Un prisma rectangular de 60×40×20 mm con una muesca rectangular de 20×10×10 mm en una de las esquinas superiores.</li>
+              <li><strong>Pieza C:</strong> Un cilindro de 30 mm de diámetro y 50 mm de altura con un taladro coaxial de 10 mm.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejercicio 2: Identificar la pieza</h4>
+            <p>A partir de las vistas proporcionadas, identifica la pieza tridimensional correspondiente y dibuja su perspectiva isométrica. Este ejercicio entrena la capacidad de visualización espacial.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo de estudio</strong>
+            Cuando dibujes vistas, empieza siempre por la vista que mejor represente la forma característica de la pieza. Después, proyecta las otras vistas a partir de ella utilizando regla paralela para mantener la correspondencia.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejercicio 3: Completar vistas</h4>
+            <p>Se os proporcionarán planos con una o dos vistas incompletas. Debéis completar las vistas que faltan y comprobar que el resultado es coherente con una pieza realizable.</p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de línea se utiliza para representar aristas ocultas en dibujo técnico?</p>
+            <button class="quiz-opcion" data-valor="a">A. Trazo continuo grueso.</button>
+            <button class="quiz-opcion" data-valor="b">B. Trazo discontinuo (guiones).</button>
+            <button class="quiz-opcion" data-valor="c">C. Trazo largo-corto.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Se realizará un control práctico en el que el alumnado deberá dibujar las vistas ortogonales de una pieza dada en perspectiva, y a partir de unas vistas proporcionadas, identificar y dibujar la pieza en isométrico. Tiempo: 45 minutos.
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Ejercicios de vistas nivel medio</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta sesión elevamos la dificultad con piezas más complejas que requieren más vistas, secciones interiores y acotación completa. Además, veremos cómo el dibujo técnico asistido por ordenador (CAD) facilita enormemente este proceso.</p>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/vistas-avanzadas.jpg" alt="Pieza compleja con múltiples vistas y secciones" loading="lazy" />
+            <figcaption>Pieza compleja representada con vistas, secciones y cotas completas</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Secciones y cortes</h4>
+            <p>Cuando una pieza tiene elementos interiores (cavidades, taladros, nervaduras), las vistas externas por sí solas no son suficientes. Las <strong>secciones</strong> permiten "cortar" imaginariamente la pieza para mostrar su interior.</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Sección completa:</strong> El plano de corte pasa por el centro de la pieza, dividiéndola en dos mitades.</li>
+              <li><strong>Sección a medias:</strong> Solo se corta la mitad de la pieza, mostrando interior y exterior en la misma vista.</li>
+              <li><strong>Sección parcial:</strong> Se corta solo una zona concreta para revelar un detalle específico.</li>
+              <li><strong>Corte:</strong> Se desplaza la parte cortada para mostrar el interior sin eliminar la vista exterior.</li>
+            </ul>
+            <p class="mt-2">Las superficies cortadas se rellenan con <strong>gratiado</strong> (líneas paralelas a 45°) según la norma ISO.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Norma de gratiado</strong>
+            El gratiado debe realizarse con líneas finas paralelas inclinadas 45° respecto a la dirección principal de la vista. El espaciado entre líneas debe ser uniforme, generalmente entre 2 y 5 mm.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Acotación y cotas</h4>
+            <p>La <strong>acotación</strong> es el proceso de indicar las dimensiones de la pieza en el dibujo. Una acotación correcta debe ser:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Completa:</strong> Todas las dimensiones necesarias para fabricar la pieza.</li>
+              <li><strong>No redundante:</strong> Sin repetir la misma dimensión.</li>
+              <li><strong>Clara:</strong> Fácil de leer sin ambigüedades.</li>
+              <li><strong>Coherente:</strong> Las cotas deben ser compatibles entre sí.</li>
+            </ul>
+            <p class="mt-2">Elementos de una cota:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Línea de cota:</strong> Línea fina con flechas en los extremos.</li>
+              <li><strong>Flechas:</strong> Indican los extremos de la dimensión.</li>
+              <li><strong>Líneas de extensión:</strong> Líneas que salen de la pieza hasta la línea de cota.</li>
+              <li><strong>Cifra:</strong> El valor numérico de la dimensión (en mm por defecto).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Dibujo técnico asistido por ordenador (CAD)</h4>
+            <p>El software CAD (Computer-Aided Design) ha revolucionado el dibujo técnico. Permite crear, modificar y almacenar planos con gran precisión y eficiencia. Los programas más utilizados son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>AutoCAD:</strong> El estándar de la industria para dibujo 2D y 3D.</li>
+              <li><strong>FreeCAD:</strong> Software libre y gratuito para modelado 3D paramétrico.</li>
+              <li><strong>SketchUp:</strong> Fácil de usar, ideal para arquitectura y diseño.</li>
+              <li><strong>SolidWorks:</strong> Referencia en diseño mecánico e ingeniería.</li>
+            </ul>
+            <p class="mt-2">Ventajas del CAD frente al dibujo manual:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Corrección de errores sin necesidad de borrar y redibujar.</li>
+              <li>Cálculo automático de áreas, volúmenes y pesos.</li>
+              <li>Facilidad para crear múltiples vistas a partir de un modelo 3D.</li>
+              <li>Almacenamiento y gestión digital de planos.</li>
+            </ul>
+          </div>
+
+          <figure class="my-3">
+            <img src="../../assets/img/moodle/cad-ejemplo.jpg" alt="Captura de pantalla de un programa CAD" loading="lazy" />
+            <figcaption>Ejemplo de diseño asistido por ordenador: pieza modelada en 3D con generación automática de vistas</figcaption>
+          </figure>
+
+          <div class="callout callout-consejo">
+            <strong>Vídeo recomendado</strong>
+            Este vídeo muestra el proceso completo de crear vistas ortogonales a partir de un modelo 3D en FreeCAD, incluyendo secciones y acotación automática.
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/rS6oEfJdOgM" title="Tutorial FreeCAD: Crear vistas ortogonales" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejercicio integrador</h4>
+            <p>Se os proporcionará el plano en perspectiva de una pieza compleja con elementos interiores. Deberéis:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Determinar el número mínimo de vistas necesarias.</li>
+              <li>Dibujar las vistas ortogonales en papel milimetrado a escala 1:2.</li>
+              <li>Incluir al menos una sección para mostrar los elementos interiores.</li>
+              <li>Acotar completamente la pieza con todas las dimensiones necesarias.</li>
+              <li>Utilizar los tipos de línea correctos (continuo, discontinuo, de eje, de cota).</li>
+            </ol>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué permite mostrar una sección en dibujo técnico?</p>
+            <button class="quiz-opcion" data-valor="a">A. La perspectiva realista de la pieza.</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo el exterior de la pieza con más detalle.</button>
+            <button class="quiz-opcion" data-valor="c">C. Los elementos interiores de la pieza (cavidades, taladros, nervaduras).</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Producto de la unidad</strong>
+            Elaboración de un plano técnico completo (vistas, secciones y acotación) de una pieza de diseño propio, utilizando software CAD (FreeCAD o similar). El plano deberá cumplir la normativa ISO y ser apto para su fabricación.
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <span class="text-sm text-slate-400">← Unidad anterior</span>
+      <a href="ud5.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD5 · Materiales Técnicos →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>
