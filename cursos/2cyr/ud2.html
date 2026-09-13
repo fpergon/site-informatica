@@ -267,11 +267,6 @@
             <p class="mt-2"><strong>Bloques de variables:</strong> Permiten almacenar y manipular datos: crear variables, establecer valores, cambiar valores y usar listas.</p>
           </div>
 
-          <figure>
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop" alt="Categorías de bloques en Scratch" loading="lazy" />
-            <figcaption>Cada categoría de bloques en Scratch tiene un color diferente para facilitar su identificación</figcaption>
-          </figure>
-
           <div class="callout callout-consejo">
             <strong>Consejo práctico</strong>
             Para recordar las categorías: Movimiento (azul), Apariencia (violeta), Sonido (rosa), Eventos (amarillo), Control (naranja), Sensores (celeste), Operadores (verde), Variables (rojo).
@@ -451,22 +446,6 @@ FIN</code>
 FIN</code>
           </div>
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Combinando bucles y condicionales</h4>
-            <p>La verdadera potencia aparece cuando combinamos ambas estructuras. Por ejemplo, un bucle que recorre una lista de números y una condición que comprueba si cada uno es par o impar. En MakeCode Arcade, esto es fundamental para la lógica de los juegos: detectar colisiones, gestionar puntos, controlar niveles.</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>En MakeCode Arcade, crearemos un juego simple donde:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Un personaje se mueve repetidamente por la pantalla (bucle).</li>
-              <li>Al pulsar la barra espaciadora, el personaje dispara (evento + condicional).</li>
-              <li>Si el proyectil toca un enemigo, se suma un punto (condicional).</li>
-              <li>Si se alcanzan 10 puntos, se muestra "Victoria" (condicional anidado).</li>
-            </ol>
-          </div>
-
           <div class="callout callout-aviso">
             <strong>Errores comunes</strong>
             Un error frecuente es crear bucles infinitos: si la condición nunca se cumple, el programa nunca termina. En Scratch esto se puede resolver pulsando el botón de parada. Siempre verificar que la condición de salida del bucle es alcanzable.
@@ -499,96 +478,6 @@ FIN</code>
       <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
-          <div>
-            <h3 class="font-bold text-ink-800 text-lg">Pantallas de interacción con el usuario</h3>
-          </div>
-        </div>
-
-        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            El diseño de interfaces de usuario es una habilidad clave que combina programación con diseño centrado en el usuario. Un buen diseño mejora la experiencia y reduce la frustración del usuario.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Un programa no es útil si el usuario no sabe cómo interactuar con él. En esta sesión aprenderemos a diseñar pantallas de interacción intuitivas, con diferentes tipos de controles: botones, campos de texto, sliders, checkboxes y otros elementos que faciliten la comunicación entre el usuario y el programa.</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Elementos de interacción</h4>
-            <p><strong>Botones:</strong> Permiten al usuario seleccionar una acción concreta. Deben tener etiquetas claras, tamaño adecuado y Feedback visual (cambiar de color al pasar el cursor o al pulsar).</p>
-            <p class="mt-2"><strong>Campos de texto:</strong> Permiten introducir información libre. Deben tener un texto de ejemplo (placeholder) que indique qué se espera escribir y validación de errores.</p>
-            <p class="mt-2"><strong>Sliders (controles deslizantes):</strong> Permiten seleccionar un valor dentro de un rango. Ideales para ajustar volumen, velocidad, brillo u otros parámetros continuos.</p>
-            <p class="mt-2"><strong>Checkboxes (casillas de verificación):</strong> Permiten seleccionar una o varias opciones de una lista. Son alternativas a los botones de radio cuando se permite múltiple selección.</p>
-            <p class="mt-2"><strong>Botones de radio:</strong> Permiten seleccionar exactamente una opción de un grupo.</p>
-          </div>
-
-          <figure>
-            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=400&fit=crop" alt="Diseño de interfaces de usuario" loading="lazy" />
-            <figcaption>Buenas prácticas en el diseño de interfaces de usuario</figcaption>
-          </figure>
-
-          <div class="callout callout-consejo">
-            <strong>Diseño centrado en el usuario</strong>
-            Antes de diseñar una interfaz, preguntad: ¿Quién la usará? ¿Qué necesita hacer? ¿Cuáles son sus conocimientos técnicos? Un buen diseño se adapta al usuario, no al revés. La usabilidad se mide por tres factores: eficacia (se puede completar la tarea), eficiencia (se hace rápidamente) y satisfacción (el usuario se siente cómodo).
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Principios de diseño de interfaces</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Consistencia:</strong> Los elementos similares deben verse y comportarse de forma similar en toda la aplicación.</li>
-              <li><strong>Feedback:</strong> El sistema debe informar al usuario sobre lo que está ocurriendo (mensajes de éxito, error, progreso).</li>
-              <li><strong>Simplicidad:</strong> Menos es más. Mostrar solo lo necesario y ocultar la complejidad innecesaria.</li>
-              <li><strong>Accesibilidad:</strong> Considerar usuarios con diferentes capacidades (tamaño de texto, contraste, navegación por teclado).</li>
-              <li><strong>Tolerancia al error:</strong> Permitir al usuario deshacer acciones y ofrecer mensajes de ayuda cuando cometa un error.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Diseñaremos una pantalla de configuración para un videojuego que incluya:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Botón para iniciar el juego.</li>
-              <li>Slider para ajustar la dificultad (fácil, medio, difícil).</li>
-              <li>Checkboxes para activar/desactivar efectos de sonido y música.</li>
-              <li>Campo de texto para introducir el nombre del jugador.</li>
-              <li>Botón de radio para elegir el color del personaje.</li>
-            </ul>
-          </div>
-
-          <!-- QUIZ SESIÓN 6 -->
-          <div class="quiz" data-correcta="c" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Cuáles son los principios clave del diseño de interfaces?</p>
-            <button class="quiz-opcion" data-valor="a">A. Solo botones grandes y llamativos.</button>
-            <button class="quiz-opcion" data-valor="b">B. Cuantos más elementos mejor.</button>
-            <button class="quiz-opcion" data-valor="c">C. Consistencia, feedback, simplicidad y accesibilidad.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="a" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué elemento usarías para ajustar el volumen entre 0 y 100?</p>
-            <button class="quiz-opcion" data-valor="a">A. Slider.</button>
-            <button class="quiz-opcion" data-valor="b">B. Checkbox.</button>
-            <button class="quiz-opcion" data-valor="c">C. Botón de texto.</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="callout callout-aviso">
-            <strong>Actividad de evaluación</strong>
-            Presentación grupal de las pantallas de configuración diseñadas. Se valorará la usabilidad, la claridad de los controles y la aplicación de los principios de diseño vistos.
-          </div>
-        </div>
-      </article>
-
-      <!-- ==================== SESIÓN 7 ==================== -->
-      <article class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
           <div>
             <h3 class="font-bold text-ink-800 text-lg">Proyecto final: videojuego en MakeCode Arcade</h3>
           </div>
