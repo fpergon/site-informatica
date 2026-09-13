@@ -75,6 +75,7 @@ details.ud-card > summary {
   gap: .5rem;
 }
 details.ud-card > summary::-webkit-details-marker { display: none; }
+details.ud-card > summary::marker { display: none; content: ''; }
 details.ud-card[open] > summary { margin-bottom: .75rem; }
 details.ud-card .flecha { transition: transform .2s ease; color: var(--brand-600); font-weight: 700; }
 details.ud-card[open] .flecha { transform: rotate(90deg); }

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD2 · Procesadores de texto · TIC I</title>
+  <meta name="description" content="Unidad Didáctica 2 de TIC I: Software de aplicación, procesadores de texto (Google Docs), formatos de página/párrafo/carácter, imágenes, tablas, columnas, secciones, estilos, índices, plantillas, exportación/importación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="tic" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../tic.html" class="hover:underline">TIC I</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque C</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Procesadores de texto</h1>
+      <p class="mt-3 text-brand-50/90">Dominar las herramientas de procesamiento de texto para crear documentos profesionales: formatos de página, párrafo y carácter, inserción de imágenes y tablas, diseño de publicaciones con columnas y secciones, uso de estilos e índices, plantillas, y exportación en múltiples formatos.</p>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article
+      <article id="sesion-1" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Introducción al software. Clasificaciones y aplicaciones</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicial contextualiza el software de aplicación dentro del ecosistema de programas. Es fundamental que el alumnado comprenda la diferencia entre software de sistema y de aplicación para situar el procesador de texto en su contexto correcto.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Antes de profundizar en los procesadores de texto, es necesario entender qué es el software y cómo se clasifica. El software es el conjunto de programas que permiten realizar tareas específicas en un ordenador. En esta sesión conoceremos las diferentes categorías de software y nos centraremos en las aplicaciones de productividad.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Clasificación del software</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Software de sistema:</strong> Gestiona el hardware y proporciona un entorno para ejecutar programas. Ejemplos: sistemas operativos (Windows, macOS, Linux), controladores, utilidades.</li>
+              <li><strong>Software de aplicación:</strong> Permite al usuario realizar tareas específicas. Ejemplos: procesadores de texto, hojas de cálculo, navegadores web, editores de imagen.</li>
+              <li><strong>Software de desarrollo:</strong> Utilizado para crear otros programas. Ejemplos: editores de código (VS Code), compiladores, IDEs.</li>
+              <li><strong>Software de entretenimiento:</strong> Videojuegos, reproductores multimedia, aplicaciones de streaming.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Aplicaciones de propósito general vs. específico</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Propósito general:</strong> Sirven para múltiples tareas (procesadores de texto, hojas de cálculo, navegadores).</li>
+              <li><strong>Propósito específico:</strong> Diseñadas para un sector o profesión concreta (software médico, CAD para ingenieros, software contable).</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Software propietario vs. libre</strong>
+            Microsoft Office es software propietario (de pago, código cerrado). Google Docs y LibreOffice son alternativas: Google Docs es gratuito y basado en la nube; LibreOffice es gratuito y de código abierto. Todos permiten crear documentos similares, pero difieren en funciones y ecosistema.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Aplicaciones de escritorio vs. web</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Escritorio:</strong> Se instalan en el ordenador. Funcionan sin conexión a Internet. Ejemplo: Microsoft Word, LibreOffice Writer.</li>
+              <li><strong>Web (nube):</strong> Se ejecutan en el navegador. Requieren conexión a Internet. Ventajas: colaboración en tiempo real, acceso desde cualquier dispositivo. Ejemplo: Google Docs.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Software colaborativo</h4>
+            <p>El software colaborativo permite que varias personas trabajen en el mismo documento simultáneamente:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Google Docs:</strong> Procesador de texto colaborativo con comentarios, sugerencias y control de versiones.</li>
+              <li><strong>Microsoft 365:</strong> Suite completa con SharePoint y OneDrive para colaboración empresarial.</li>
+              <li><strong>Notion:</strong> Herramienta todo-en-uno para documentación, wikis y gestión de proyectos.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad exploratoria</strong>
+            Abrir Google Docs (docs.google.com) y familiarizarse con la interfaz: barra de herramientas, menú de archivo, reglas, barra de estado. Crear un documento vacío y escribir un párrafo de al menos 100 palabras sobre qué esperas aprender en esta unidad.
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿A qué categoría pertenece un procesador de texto?</p>
+            <button class="quiz-opcion" data-valor="a">A. Software de aplicación</button>
+            <button class="quiz-opcion" data-valor="b">B. Software de sistema</button>
+            <button class="quiz-opcion" data-valor="c">C. Software de desarrollo</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuál es la principal ventaja de una aplicación web sobre una de escritorio?</p>
+            <button class="quiz-opcion" data-valor="a">A. Mejor rendimiento gráfico.</button>
+            <button class="quiz-opcion" data-valor="b">B. Permite colaboración en tiempo real y acceso desde cualquier dispositivo.</button>
+            <button class="quiz-opcion" data-valor="c">C. No requiere Internet para funcionar.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una tabla comparativa entre al menos 3 procesadores de texto (Word, Google Docs, LibreOffice Writer) incluyendo: precio, modo de trabajo (offline/online), funciones colaborativas y formatos de exportación.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article
+      <article id="sesion-2" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Procesadores de texto: formatos de página, párrafo y carácter</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El dominio del formato es la clave para crear documentos profesionales. En esta sesión aprenderemos a controlar cada aspecto visual de un documento: desde el tamaño del papel hasta la última coma del texto. Comenzaremos con los formatos de carácter, continuaremos con los párrafos y finalizaremos con la configuración de la página.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formatos de carácter</h4>
+            <p>Los formatos de carácter afectan directamente al texto seleccionado:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Fuente (tipografía):</strong> Arial, Times New Roman, Calibri, Verdana, Georgia. La elección influye en la legibilidad y el tono del documento.</li>
+              <li><strong>Tamaño:</strong> Se mide en puntos (pt). Un punto equivale a 1/72 de pulgada. Tamaño normal: 11-12pt. Títulos: 14-24pt.</li>
+              <li><strong>Estilo:</strong> Negrita (bold), cursiva (italic), subrayado, tachado.</li>
+              <li><strong>Color:</strong> Color del texto. Usar con moderación y contraste suficiente.</li>
+              <li><strong>Efectos:</strong> Superíndice, subíndice, sombra, contorno.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo de diseño</strong>
+            No uses más de 2-3 fuentes diferentes en un documento. Usa una fuente para títulos y otra para el cuerpo del texto. Asegúrate de que ambas sean legibles tanto en pantalla como en papel.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formatos de párrafo</h4>
+            <p>Los formatos de párrafo controlan la disposición del texto en bloque:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Alineación:</strong> Izquierda (predeterminada), centrada, derecha, justificada.</li>
+              <li><strong>Interlineado:</strong> Espacio entre líneas. Simple (1,0), 1,5 líneas, Doble (2,0).</li>
+              <li><strong>Indicación:</strong> Espacio antes y después del párrafo.</li>
+              <li><strong>Sangría:</strong> Primer línea (clásica) o francesa (todas menos la primera).</li>
+              <li><strong>Bordes y sombras:</strong> Líneas alrededor del párrafo o efecto de sombra.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formatos de página</h4>
+            <p>Estos formatos afectan a todo el documento:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Tamaño del papel:</strong> A4 (210 × 297 mm) es el estándar europeo. Carta (216 × 279 mm) en EE.UU.</li>
+              <li><strong>Orientación:</strong> Vertical (retrato) u horizontal (paisaje).</li>
+              <li><strong>Márgenes:</strong> Superior, inferior, izquierdo, derecho. Márgenes estándar: 2,5 cm.</li>
+              <li><strong>Encabezado y pie de página:</strong> Información que se repite en cada página (título, número de página, fecha).</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Regla de oro</strong>
+            Un documento profesional tiene márgenes uniformes, interlineado consistente y una jerarquía visual clara entre títulos, subtítulos y cuerpo de texto. La coherencia visual es tan importante como el contenido.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>En Google Docs, crear un documento "Carta formal" que incluya:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Formato de página A4 con márgenes de 3 cm.</li>
+              <li>Encabezado con el nombre del alumno y fecha.</li>
+              <li>Pie de página con número de página.</li>
+              <li>Un párrafo de cuerpo con interlineado 1,5 y texto justificado.</li>
+              <li>Un título con fuente de 16pt en negrita.</li>
+              <li>Un párrafo con sangría francesa.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 2 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué alineación extiende el texto hasta ambos márgenes?</p>
+            <button class="quiz-opcion" data-valor="a">A. Izquierda</button>
+            <button class="quiz-opcion" data-valor="b">B. Derecha</button>
+            <button class="quiz-opcion" data-valor="c">C. Justificada</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear un documento de al menos 2 páginas con: encabezado y pie de página, al menos 3 formatos de carácter diferentes, 2 formatos de párrafo diferentes, y márgenes personalizados.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article
+      <article id="sesion-3" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Imágenes y tablas: inserción, configuración y estilos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Un documento profesional no solo contiene texto. Las imágenes enriquecen visualmente el contenido y las tablas organizan datos de forma clara y estructurada. En esta sesión aprenderemos a insertar, configurar y dar estilo tanto a imágenes como a tablas dentro de un procesador de texto.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Inserción de imágenes</h4>
+            <p>Existen varias formas de añadir imágenes a un documento:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Desde el equipo:</strong> Seleccionar archivo de imagen (JPEG, PNG, GIF, SVG).</li>
+              <li><strong>Por URL:</strong> Insertar imagen directamente desde una dirección web.</li>
+              <li><strong>Desde la galería:</strong> Google Docs ofrece imágenes de stock gratuitas.</li>
+              <li><strong>Captura de pantalla:</strong> Insertar directamente desde el portapapeles.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Configuración de imágenes</h4>
+            <p>Una vez insertada, la imagen se puede configurar de varias maneras:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Texto alrededor:</strong> En línea, ajuste de texto (wrap), delante del texto, detrás del texto.</li>
+              <li><strong>Tamaño:</strong> Arrastrar esquinas (mantener proporciones) o definir medidas exactas.</li>
+              <li><strong>Recorte:</strong> Eliminar partes no deseadas de la imagen.</li>
+              <li><strong>Ajustes de imagen:</strong> Brillo, contraste, saturación, filtros artísticos.</li>
+              <li><strong>Posición:</strong> Alineación respecto al texto o a la página.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Buenas prácticas</strong>
+            Usa imágenes de alta resolución pero optimizadas para web (máximo 150 DPI para impresión). Añade siempre un texto alternativo descriptivo (alt text) para accesibilidad. Mantén las proporciones al redimensionar.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Inserción y configuración de tablas</h4>
+            <p>Las tablas organizan datos en filas y columnas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Crear tabla:</strong> Seleccionar número de filas y columnas (o dibujar la tabla).</li>
+              <li><strong>Fusionar celdas:</strong> Unir dos o más celdas en una sola.</li>
+              <li><strong>Dividir celdas:</strong> Separar una celda en varias.</li>
+              <li><strong>Insertar/eliminar filas y columnas:</strong> Ajustar el tamaño de la tabla.</li>
+              <li><strong>Distribuir filas/columnas:</strong> Uniformizar el tamaño.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estilos de tabla</h4>
+            <p>La apariencia visual de las tablas se puede personalizar:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bordes:</strong> Estilo (sólido, punteado, discontinuo), grosor, color.</li>
+              <li><strong>Relleno de celdas:</strong> Color de fondo para filas, columnas o celdas específicas.</li>
+              <li><strong>Estilos predefinidos:</strong> Google Docs ofrece diseños automáticos con colores alternos.</li>
+              <li><strong>Alineación en celdas:</strong> Horizontal (izquierda, centro, derecha) y vertical (arriba, centro, abajo).</li>
+              <li><strong>Dirección del texto:</strong> Horizontal o vertical dentro de la celda.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Consejo profesional</strong>
+            Para tablas con muchos datos, usa colores alternados en las filas (banding) para facilitar la lectura. El encabezado debe destacar visualmente del resto de filas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear un "Informe de inventario" que incluya:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Una imagen con texto alrededor y recorte personalizado.</li>
+              <li>Una tabla de 5×4 con encabezados con estilo y filas con colores alternos.</li>
+              <li>Una segunda tabla con celdas fusionadas en el encabezado.</li>
+              <li>Al menos 2 imágenes con diferentes configuraciones de ajuste de texto.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué opción de ajuste de texto permite que la imagen se coloque detrás del contenido?</p>
+            <button class="quiz-opcion" data-valor="a">A. En línea</button>
+            <button class="quiz-opcion" data-valor="b">B. Detrás del texto</button>
+            <button class="quiz-opcion" data-valor="c">C. Ajuste de texto</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Para qué sirve fusionar celdas en una tabla?</p>
+            <button class="quiz-opcion" data-valor="a">A. Unir dos o más celdas en una sola para crear encabezados amplios.</button>
+            <button class="quiz-opcion" data-valor="b">B. Dividir una celda en varias partes.</button>
+            <button class="quiz-opcion" data-valor="c">C. Eliminar filas de la tabla.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una tabla comparativa de 3 productos con imagen de cada uno, descripción y precio, utilizando al menos 2 estilos diferentes de tabla y formato de imagen personalizado.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article
+      <article id="sesion-4" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Columnas y secciones: diseño de publicaciones tipo revista</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los documentos más elaborados, como revistas, boletines o folletos, utilizan diseños multicolumna y secciones con formatos independientes. En esta sesión aprenderemos a crear publicaciones profesionales con el diseño visual de una revista utilizando las herramientas de columnas y secciones del procesador de texto.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Diseño en columnas</h4>
+            <p>Las columnas permiten dividir el espacio de la página en varias secciones verticales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Columnas iguales:</strong> El texto se distribuye uniformemente en 2, 3 o más columnas.</li>
+              <li><strong>Columnas desiguales:</strong> Una columna más ancha (principal) y otra más estrecha (lateral).</li>
+              <li><strong>Separación entre columnas:</strong> Espacio libre entre columnas para mayor legibilidad.</li>
+              <li><strong>Línea separadora:</strong> Opcionalmente, se puede añadir una línea vertical entre columnas.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo práctico:</strong> Un boletín informativo con 2 columnas: la izquierda con noticias principales y la derecha con información complementaria.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Diseño de revistas</strong>
+            Las revistas profesionales suelen usar diseños de 3 columnas con imágenes que "rompen" las columnas (texto alrededor). Esto crea un ritmo visual dinámico y atractivo para el lector.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Secciones</h4>
+            <p>Las secciones permiten tener diferentes formatos de página en un mismo documento:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Cambiar de sección:</strong> Insertar un salto de sección para aplicar formatos diferentes.</li>
+              <li><strong>Tipo de salto:</strong> Página siguiente, página par, página impar, continuo.</li>
+              <li><strong>Formatos independientes:</strong> Cada sección puede tener sus propios márgenes, orientación, encabezado/pie y numeración.</li>
+              <li><strong>Conexión entre secciones:</strong> Opción de "igual que la anterior" para mantener coherencia.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Elementos de diseño editorial</h4>
+            <p>Para crear publicaciones tipo revista, combinaremos varios elementos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Cabeceras destacadas:</strong> Títulos grandes con fuentes impactantes.</li>
+              <li><strong>Bajadas (subtítulos):</strong> Texto explicativo bajo el título principal.</li>
+              <li><strong>Citas destacadas:</strong> Frases enmarcadas con diseño especial.</li>
+              <li><strong>Cajas de texto:</strong> Recuadros con información complementaria.</li>
+              <li><strong>Textos de animación (drop caps):</strong> Letra capital grande al inicio del artículo.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Herramienta útil</strong>
+            Google Docs permite crear diseños en columnas desde Formato → Columnas. Para secciones, usa Insertar → Salto → Salto de sección. En LibreOffice Writer, la función es similar pero con más opciones de personalización.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Diseñar un "Boletín informativo" de 2 páginas:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Portada con título llamativo, imagen principal y bajada.</li>
+              <li>Interior con diseño de 2-3 columnas.</li>
+              <li>Al menos un artículo con imagen que rompa las columnas.</li>
+              <li>Una sección con formato diferente (por ejemplo, un recuadro de noticias rápidas).</li>
+              <li>Encabezado con el nombre del boletín y número de página.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 4 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué permite crear un salto de sección?</p>
+            <button class="quiz-opcion" data-valor="a">A. Dividir una página en partes iguales.</button>
+            <button class="quiz-opcion" data-valor="b">B. Aplicar formatos de página diferentes dentro del mismo documento.</button>
+            <button class="quiz-opcion" data-valor="c">C. Eliminar el contenido de una página.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Diseñar un boletín escolar de 3 páginas con al menos 3 columnas diferentes, una imagen que rompa columnas y un recuadro de noticias destacadas.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article
+      <article id="sesion-5" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Estilos e índices: estilos predefinidos y personalizados. Tabla de contenidos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los estilos son la herramienta más poderosa de un procesador de texto para crear documentos coherentes y profesionales. Permiten aplicar formato de forma consistente y generar automáticamente índices de contenidos. En esta sesión dominaremos el uso de estilos y la creación de tablas de contenidos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué son los estilos?</h4>
+            <p>Un estilo es un conjunto predefinido de formatos de carácter y párrafo que se aplican de forma conjunta. En lugar de formatear cada título manualmente, aplicamos un estilo que garantiza consistencia:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Título 1:</strong> Para títulos principales de capítulo.</li>
+              <li><strong>Título 2:</strong> Para secciones dentro del capítulo.</li>
+              <li><strong>Título 3:</strong> Para subsecciones.</li>
+              <li><strong>Normal:</strong> Para el cuerpo del texto.</li>
+              <li><strong>Cita:</strong> Para citas textuales.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ventaja clave</strong>
+            Si modifies el estilo "Título 1" (cambias la fuente, el tamaño o el color), todos los textos con ese estilo se actualizarán automáticamente en todo el documento. Esto ahorra tiempo y evita inconsistencias.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Crear estilos personalizados</h4>
+            <p>Además de los estilos predefinidos, puedes crear los tuyos propios:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Seleccionar un párrafo con el formato deseado.</li>
+              <li>En el panel de estilos, hacer clic en "Crear estilo".</li>
+              <li>Asignar nombre y guardar.</li>
+              <li>El nuevo estilo aparecerá en la lista para uso futuro.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tabla de contenidos automática</h4>
+            <p>Si has utilizado estilos de título correctamente, puedes generar una tabla de contenidos automática:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Colocar el cursor donde se desea insertar la tabla de contenidos.</li>
+              <li>Insertar → Tabla de contenidos.</li>
+              <li>Seleccionar el estilo deseado.</li>
+              <li>La tabla se genera automáticamente con los títulos y sus números de página.</li>
+            </ol>
+            <p class="mt-2">Para actualizar: clic derecho sobre la tabla → "Actualizar tabla de contenidos".</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Antes de crear la tabla de contenidos, revisa que todos los títulos tengan el estilo correcto asignado. Si un título no aparece en la tabla, probablemente tiene el estilo "Normal" en lugar de un estilo de título.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear un documento académico con:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Al menos 3 niveles de títulos con estilos asignados.</li>
+              <li>Un estilo personalizado para "Definición" o "Ejemplo".</li>
+              <li>Tabla de contenidos automática en la primera página.</li>
+              <li>Actualizar la tabla después de modificar algún título.</li>
+              <li>Numeración automática de páginas que empiece en la segunda página.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuál es la principal ventaja de usar estilos en un documento?</p>
+            <button class="quiz-opcion" data-valor="a">A. Permiten aplicar formato de forma coherente y generar índices automáticos.</button>
+            <button class="quiz-opcion" data-valor="b">B. Hacen que el documento se guarde más rápido.</button>
+            <button class="quiz-opcion" data-valor="c">C. Solo sirven para documentos de más de 50 páginas.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué estilo se aplica al cuerpo principal de texto en un documento?</p>
+            <button class="quiz-opcion" data-valor="a">A. Título 1</button>
+            <button class="quiz-opcion" data-valor="b">B. Cita</button>
+            <button class="quiz-opcion" data-valor="c">C. Normal</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear un documento de 3-5 páginas con tabla de contenidos automática, al menos 2 estilos personalizados y numeración de páginas personalizada.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article
+      <article id="sesion-6" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Plantillas: documentos reutilizables como punto de partida</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las plantillas son documentos prediseñados que sirven como punto de partida para crear nuevos documentos con una estructura y formato ya establecido. En esta sesión aprenderemos a utilizar plantillas existentes y a crear las nuestras propias para optimizar nuestro trabajo con procesadores de texto.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué son las plantillas?</h4>
+            <p>Una plantilla es un archivo que contiene diseño, formato, texto e incluso fórmulas predefinidas. Al crear un documento a partir de una plantilla, se genera una copia editable sin modificar el original:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Plantillas de Google Docs:</strong> Accesibles desde docs.google.com → Galería de plantillas.</li>
+              <li><strong>Plantillas de Word:</strong> Archivos .dotx que se abren como documentos nuevos.</li>
+              <li><strong>Plantillas de LibreOffice:</strong> Archivos .ott con el mismo propósito.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de plantillas habituales</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Cartas y correspondencia:</strong> Formato oficial con encabezado, dirección, cuerpo y despedida.</li>
+              <li><strong>Informes:</strong> Estructura con portada, índice, capítulos y conclusiones.</li>
+              <li><strong>CV (Curriculum Vitae):</strong> Formato con secciones de experiencia, formación y habilidades.</li>
+              <li><strong>Propuestas comerciales:</strong> Estructura persuasiva con problemas, soluciones y presupuesto.</li>
+              <li><strong>Facturas:</strong> Documentos con tablas de productos, IVA y totales.</li>
+              <li><strong>Contratos:</strong> Texto legal con cláusulas predefinidas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>¿Cuándo usar plantillas?</strong>
+            Las plantillas son ideales cuando necesitas crear documentos recurrentes con la misma estructura: informes mensuales, cartas formales, facturas o presentaciones. Ahoran tiempo y garantizan consistencia visual.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Crear una plantilla personalizada</h4>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Diseñar el documento con todos los formatos necesarios (márgenes, estilos, encabezados).</li>
+              <li>Incluir textos de ejemplo o instrucciones (marcadores de posición).</li>
+              <li>Guardar el archivo con extensión de plantilla (.dotx en Word, .ott en LibreOffice).</li>
+              <li>En Google Docs: guardar como plantilla en la carpeta de plantillas.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Marcadores de posición</h4>
+            <p>Los marcadores de posición son textos que indican dónde el usuario debe escribir contenido específico:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>[Nombre del autor]</strong></li>
+              <li><strong>[Fecha del informe]</strong></li>
+              <li><strong>[Insertar imagen aquí]</strong></li>
+              <li><strong>[Descripción del producto]</strong></li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad creativa</strong>
+            Crear una plantilla de "Informe escolar" que incluya: portada con marcadores de posición, tabla de contenidos, secciones predefinidas (Introducción, Desarrollo, Conclusiones), pie de página con numeración y espacio para imágenes.
+          </div>
+
+          <!-- QUIZ SESIÓN 6 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué ocurre cuando creas un documento a partir de una plantilla?</p>
+            <button class="quiz-opcion" data-valor="a">A. Se modifica la plantilla original.</button>
+            <button class="quiz-opcion" data-valor="b">B. Se genera una copia editable sin modificar la plantilla original.</button>
+            <button class="quiz-opcion" data-valor="c">C. Se borran todos los datos de la plantilla.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una plantilla personalizada para un tipo de documento que uses frecuentemente (carta, informe, factura) con al menos 3 marcadores de posición y estilos predefinidos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article
+      <article id="sesion-7" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Exportación e importación. Formatos: DOCX, PDF, ODT. Comentarios</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Un documento solo es útil si se puede compartir y utilizar en otros entornos. En esta sesión aprenderemos a exportar e importar documentos en diferentes formatos, y a utilizar el sistema de comentarios para la revisión y colaboración.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formatos de exportación</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>DOCX:</strong> Formato estándar de Microsoft Word. Compatible con la mayoría de procesadores. Ideal para compartir con usuarios que no usan Google Docs.</li>
+              <li><strong>PDF (Portable Document Format):</strong> Formato que preserva el diseño exacto del documento. No se puede editar directamente. Ideal para impresión y distribución oficial.</li>
+              <li><strong>ODT (OpenDocument Text):</strong> Formato abierto utilizado por LibreOffice. Compatible con múltiples plataformas.</li>
+              <li><strong>RTF (Rich Text Format):</strong> Formato de texto enriquecido compatible con casi todos los procesadores. Pierde algunas funciones avanzadas.</li>
+              <li><strong>TXT:</strong> Texto plano sin formato. Útil para notas o código.</li>
+              <li><strong>EPUB:</strong> Formato para libros electrónicos. Ideal para documentos largos destinados a lectura en dispositivos móviles.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>¿Cuándo usar cada formato?</strong>
+            <strong>DOCX:</strong> Edición colaborativa. <strong>PDF:</strong> Distribución final, impresión, envío oficial. <strong>ODT:</strong> Compatibilidad con software libre. <strong>TXT:</strong> Notas rápidas, código fuente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sistema de comentarios</h4>
+            <p>Los comentarios permiten la revisión y colaboración sin modificar el texto original:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Añadir comentario:</strong> Seleccionar texto → Comentar (o Ctrl+Alt+M).</li>
+              <li><strong>Responder:</strong> Crear hilos de conversación sobre un comentario.</li>
+              <li><strong>Aceptar/Rechazar:</strong> En modo sugerencias, aceptar o rechazar cambios propuestos.</li>
+              <li><strong>Resolver:</strong> Marcar un comentario como resuelto cuando se ha atendido.</li>
+              <li><strong>Exportar con comentarios:</strong> Al exportar a PDF, se pueden incluir o excluir los comentarios.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Flujo de trabajo recomendado</strong>
+            1. Elaborar el documento en Google Docs (nube). 2. Compartir con el profesor/compañeros para comentarios. 3. Aceptar las sugerencias. 4. Exportar a PDF para la entrega final.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Importar documentos</h4>
+            <p>También es posible importar documentos desde otros formatos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Subir un archivo DOCX, ODT o TXT a Google Drive.</li>
+              <li>Abrirlo con Google Docs (se convierte automáticamente).</li>
+              <li>Importar PDF: Google Docs permite importar el contenido de un PDF como imagen o texto.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Crear un documento en Google Docs y exportarlo a DOCX, PDF y ODT.</li>
+              <li>Abrir cada archivo exportado y verificar que se abre correctamente.</li>
+              <li>Compartir el documento con un compañero y añadir al menos 3 comentarios.</li>
+              <li>Resolver los comentarios y exportar el documento final a PDF.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué formato preserva el diseño exacto del documento y no se puede editar fácilmente?</p>
+            <button class="quiz-opcion" data-valor="a">A. DOCX</button>
+            <button class="quiz-opcion" data-valor="b">B. PDF</button>
+            <button class="quiz-opcion" data-valor="c">C. ODT</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué atajo de teclado se usa para añadir un comentario en Google Docs?</p>
+            <button class="quiz-opcion" data-valor="a">A. Ctrl+C</button>
+            <button class="quiz-opcion" data-valor="b">B. Ctrl+V</button>
+            <button class="quiz-opcion" data-valor="c">C. Ctrl+Alt+M</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Exportar el documento del proyecto final (sesión 8) a los tres formatos (DOCX, PDF, ODT) y comparar visualmente las diferencias entre ellos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 8 ==================== -->
+      <article
+      <article id="sesion-8" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">8</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: documento profesional completo con todas las funciones trabajadas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Proyecto de unidad</strong>
+            Esta sesión está dedicada al desarrollo del proyecto final de la UD2. Cada alumno deberá crear un documento profesional que integre todas las competencias trabajadas a lo largo de las 7 sesiones anteriores.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Enunciado del proyecto</h4>
+            <p>Crear un <strong>"Boletín informativo digital"</strong> de 4-6 páginas sobre un tema de actualidad tecnológica. El documento deberá incluir los siguientes elementos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Portada:</strong> Título, imagen principal, bajada, fecha y autor.</li>
+              <li><strong>Tabla de contenidos automática</strong> generada con estilos de título.</li>
+              <li><strong>Al menos 3 artículos</strong> con diseño de columnas (2-3 columnas).</li>
+              <li><strong>Imágenes</strong> con diferentes configuraciones de ajuste de texto.</li>
+              <li><strong>Al menos 2 tablas</strong> con estilos personalizados.</li>
+              <li><strong>Cita destacada</strong> con formato especial.</li>
+              <li><strong>Encabezado y pie de página</strong> con numeración.</li>
+              <li><strong>Al menos 2 estilos personalizados</strong> creados por el alumno.</li>
+              <li><strong>Formato de página:</strong> A4 con márgenes configurados.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Criterios de evaluación</strong>
+            El proyecto se evaluará en función de: correcta aplicación de formatos (25%), uso de estilos (20%), diseño visual y composición (20%), contenido y calidad del texto (20%), y uso de funciones avanzadas (15%).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Temas sugeridos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Inteligencia Artificial: presente y futuro.</li>
+              <li>Cambio climático y tecnología verde.</li>
+              <li>Las 5G y su impacto en la sociedad.</li>
+              <li>Realidad virtual y aumentada en la educación.</li>
+              <li>Ciberseguridad: amenazas y protecciones.</li>
+              <li>El comercio electrónico en España.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Entrega</h4>
+            <p>El proyecto se entregará en dos formatos:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>PDF:</strong> Versión final para impresión y evaluación.</li>
+              <li><strong>DOCX o enlace de Google Docs:</strong> Para revisión de la estructura y uso de estilos.</li>
+            </ol>
+            <p class="mt-2">Fecha de entrega: <strong>indicada por el profesorado</strong>.</p>
+          </div>
+
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="c" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué formato es el más adecuado para enviar un documento final que no debe ser modificado?</p>
+            <button class="quiz-opcion" data-valor="a">A. DOCX</button>
+            <button class="quiz-opcion" data-valor="b">B. TXT</button>
+            <button class="quiz-opcion" data-valor="c">C. PDF</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Recuerda</strong>
+            El boletín debe demostrar dominio de todas las herramientas estudiadas. No se valorará solo el contenido, sino la calidad del diseño y la correcta aplicación de las técnicas de formateo.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud1.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        ← UD1 · Sociedad de la información
+      </a>
+      <a href="ud3.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD3 · Hojas de cálculo →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

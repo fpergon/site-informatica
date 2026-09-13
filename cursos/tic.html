@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TIC I · Tecnologías de la Información y Comunicación · IES Pintor Pedro Gómez</title>
+  <meta name="description" content="Unidades didácticas de TIC I (1.º Bachillerato): procesadores de texto, hojas de cálculo, bases de datos, arquitectura de ordenadores, programación Python." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/estilos.css" />
+</head>
+<body data-pagina="tic" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">1.º Bachillerato</p>
+      <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">Tecnologías de la Información y Comunicación I</h1>
+      <p class="mt-3 text-brand-50/90">Procesadores de texto, hojas de cálculo, bases de datos, arquitectura de ordenadores, sistemas operativos e introducción a la programación con Python. Aplicaciones ofimáticas avanzadas, diseño de bases de datos relacionales con SQL y fundamentos de algoritmos y estructuras de datos.</p>
+    </section>
+
+    <section class="mt-8" data-tab-group>
+      <div class="flex flex-wrap gap-2" role="tablist">
+        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="unidades" aria-selected="true">Unidades didácticas</button>
+        <button class="tab-btn rounded-lg px-4 py-2 text-sm font-semibold" data-tab="boja" aria-selected="false">Criterios de evaluación y rúbrica</button>
+      </div>
+
+      <div class="tab-panel mt-5" data-panel="unidades">
+
+        <!-- UD1 · La sociedad de la información y la información digital -->
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD1 · La sociedad de la información y la información digital</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> A · <span class="font-semibold">Duración:</span> 6 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Infografía sobre el impacto de las TIC en la sociedad + activity hoja de cálculo con unidades de información.</p>
+          <a href="tic/ud1.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>TICO.1.A.1. Impacto de la informática.</li>
+            <li>TICO.1.A.2. Información digital.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Analizar y valorar el impacto de las TIC en la transformación de la sociedad actual.</li>
+            <li>Explicar cómo se representa digitalmente la información en secuencias binarias.</li>
+            <li>Comprender las unidades de información y la representación de números, texto, imágenes, audio y vídeo.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Contenidos</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><a href="tic/ud1.html#sesion-1" class="hover:underline"><span class="font-semibold">Sociedad de la información y del conocimiento.</span> Definición, ejemplos y exponentes.</a></li>
+            <li><a href="tic/ud1.html#sesion-2" class="hover:underline"><span class="font-semibold">Impacto social de las TIC.</span> Redes sociales, comercio electrónico, creatividad digital, protección de datos.</a></li>
+            <li><a href="tic/ud1.html#sesion-3" class="hover:underline"><span class="font-semibold">Nuevos sectores laborales y tendencias.</span> Big Data, IoT, IA, robótica, sostenibilidad.</a></li>
+            <li><a href="tic/ud1.html#sesion-4" class="hover:underline"><span class="font-semibold">Información digital: almacenamiento en binario.</span> Unidades de información (bit, byte, KB, MB, GB, TB).</a></li>
+            <li><a href="tic/ud1.html#sesion-5" class="hover:underline"><span class="font-semibold">Representación de datos.</span> Números, texto (ASCII/Unicode), imágenes, audio, vídeo. Sistema hexadecimal.</a></li>
+            <li><a href="tic/ud1.html#sesion-6" class="hover:underline"><span class="font-semibold">Compresión y archivos.</span> Compresión con y sin pérdida. Formatos de archivo.</a></li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">1.1 · Impacto de las TIC en la sociedad</span><span class="criterio">1.2 · Representación digital de la información</span></p>
+        </details>
+
+        <!-- UD2 · Procesadores de texto -->
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD2 · Procesadores de texto</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> C · <span class="font-semibold">Duración:</span> 8 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Documento de trabajo profesional con estilos, índice y formato avanzado.</p>
+          <a href="tic/ud2.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>TICO.1.C.1. Software: clasificaciones y tipologías.</li>
+            <li>TICO.1.C.2. Procesadores de texto.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Crear documentos con formato avanzado: párrafos, estilos, columnas e índices.</li>
+            <li>Insertar y configurar imágenes y tablas en un documento.</li>
+            <li>Utilizar plantillas y exportar/importar documentos en diferentes formatos.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Contenidos</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><a href="tic/ud2.html#sesion-1" class="hover:underline"><span class="font-semibold">Introducción al software.</span> Clasificaciones, aplicaciones de propósito general y específico.</a></li>
+            <li><a href="tic/ud2.html#sesion-2" class="hover:underline"><span class="font-semibold">Procesadores de texto.</span> Formatos de página, párrafo y carácter.</a></li>
+            <li><a href="tic/ud2.html#sesion-3" class="hover:underline"><span class="font-semibold">Imágenes y tablas.</span> Inserción, configuración y estilos.</a></li>
+            <li><a href="tic/ud2.html#sesion-4" class="hover:underline"><span class="font-semibold">Columnas y secciones.</span> Diseño de publicaciones tipo revista.</a></li>
+            <li><a href="tic/ud2.html#sesion-5" class="hover:underline"><span class="font-semibold">Estilos e índices.</span> Estilos predefinidos y personalizados. Tabla de contenidos.</a></li>
+            <li><a href="tic/ud2.html#sesion-6" class="hover:underline"><span class="font-semibold">Plantillas.</span> Documentos reutilizables como punto de partida.</a></li>
+            <li><a href="tic/ud2.html#sesion-7" class="hover:underline"><span class="font-semibold">Exportación e importación.</span> Formatos: DOCX, PDF, ODT. Comentarios.</a></li>
+            <li><a href="tic/ud2.html#sesion-8" class="hover:underline"><span class="font-semibold">Proyecto final.</span> Documento profesional completo con todas las funciones trabajadas.</a></li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">3.1 · Seleccionar y utilizar aplicaciones informáticas</span><span class="criterio">3.2 · Utilizar procesadores de texto de manera avanzada</span></p>
+        </details>
+
+        <!-- UD3 · Hojas de cálculo -->
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD3 · Hojas de cálculo</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 1.º · <span class="font-semibold">Bloque:</span> C · <span class="font-semibold">Duración:</span> 8 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Hoja de cálculo completa con funciones, gráficos y formato condicional.</p>
+          <a href="tic/ud3.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>TICO.1.C.3. Hojas de cálculo.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Crear y configurar hojas de cálculo con formato de celdas, referencias y funciones.</li>
+            <li>Aplicar funciones matemáticas, lógicas, de texto y estadísticas.</li>
+            <li>Crear gráficos, ordenar y filtrar datos. Exportar e importar información.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Contenidos</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><a href="tic/ud3.html#sesion-1" class="hover:underline"><span class="font-semibold">Filas, columnas, celdas y rangos.</span> Formatos de celda.</a></li>
+            <li><a href="tic/ud3.html#sesion-2" class="hover:underline"><span class="font-semibold">Referencias.</span> Relativas, absolutas y mixtas.</a></li>
+            <li><a href="tic/ud3.html#sesion-3" class="hover:underline"><span class="font-semibold">Operaciones y funciones.</span> Matemáticas, lógicas (SI, Y, O, NO), de texto y estadísticas.</a></li>
+            <li><a href="tic/ud3.html#sesion-4" class="hover:underline"><span class="font-semibold">Formato condicional.</span> Reglas de formato dinámico según valores.</a></li>
+            <li><a href="tic/ud3.html#sesion-5" class="hover:underline"><span class="font-semibold">Ordenación y filtrado.</span> Organización de datos.</a></li>
+            <li><a href="tic/ud3.html#sesion-6" class="hover:underline"><span class="font-semibold">Gráficos.</span> Barras, circular, líneas. Selección del tipo adecuado.</a></li>
+            <li><a href="tic/ud3.html#sesion-7" class="hover:underline"><span class="font-semibold">Exportación, importación y protección.</span> Formatos CSV, XLSX. Protección de hojas.</a></li>
+            <li><a href="tic/ud3.html#sesion-8" class="hover:underline"><span class="font-semibold">Proyecto final.</span> Hoja de cálculo completa con funciones, gráficos y formato condicional.</a></li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">3.1 · Seleccionar y utilizar aplicaciones informáticas</span><span class="criterio">3.3 · Utilizar hojas de cálculo de manera avanzada</span></p>
+        </details>
+
+        <!-- UD4 · Bases de datos -->
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD4 · Bases de datos</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloque:</span> C · <span class="font-semibold">Duración:</span> 8 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Base de datos relacional completa con tablas, relaciones, consultas SQL y formularios.</p>
+          <a href="tic/ud4.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>TICO.1.C.4. Bases de datos.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Comprender los sistemas gestores de bases de datos relacionales.</li>
+            <li>Diseñar esquemas con tablas, claves primarias/foráneas y relaciones.</li>
+            <li>Escribir consultas SQL básicas (SELECT, WHERE, JOIN, GROUP BY).</li>
+            <li>Crear vistas, informes y formularios.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Contenidos</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><a href="tic/ud4.html#sesion-1" class="hover:underline"><span class="font-semibold">Sistemas gestores de bases de datos relacionales.</span> Qué es un SGBD. Modelo relacional.</a></li>
+            <li><a href="tic/ud4.html#sesion-2" class="hover:underline"><span class="font-semibold">Tablas, registros y campos.</span> Tipos de datos. Estructura de una BD.</a></li>
+            <li><a href="tic/ud4.html#sesion-3" class="hover:underline"><span class="font-semibold">Claves y relaciones.</span> Clave primaria, clave foránea. Relaciones 1:N y N:M.</a></li>
+            <li><a href="tic/ud4.html#sesion-4" class="hover:underline"><span class="font-semibold">Lenguaje SQL.</span> Sentencias DDL y DML. SELECT, INSERT, UPDATE, DELETE.</a></li>
+            <li><a href="tic/ud4.html#sesion-5" class="hover:underline"><span class="font-semibold">Consultas avanzadas.</span> JOIN, WHERE, ORDER BY, GROUP BY, funciones de agregado.</a></li>
+            <li><a href="tic/ud4.html#sesion-6" class="hover:underline"><span class="font-semibold">Vistas, informes y formularios.</span> Visualización e interacción con los datos.</a></li>
+            <li><a href="tic/ud4.html#sesion-7" class="hover:underline"><span class="font-semibold">Exportación e importación.</span> Intercambio de datos entre sistemas.</a></li>
+            <li><a href="tic/ud4.html#sesion-8" class="hover:underline"><span class="font-semibold">Proyecto final.</span> Base de datos relacional completa con consultas SQL.</a></li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">3.1 · Seleccionar y utilizar aplicaciones informáticas</span><span class="criterio">3.4 · Diseñar y manipular una base de datos relacional con SQL</span></p>
+        </details>
+
+        <!-- UD5 · Arquitectura de ordenadores y sistemas operativos -->
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD5 · Arquitectura de ordenadores y sistemas operativos</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 2.º · <span class="font-semibold">Bloque:</span> B · <span class="font-semibold">Duración:</span> 7 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Presentación sobre arquitectura de un ordenador + informe de configuración de SO.</p>
+          <a href="tic/ud5.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>TICO.1.B.1. Arquitectura de ordenadores.</li>
+            <li>TICO.1.B.2. Sistemas operativos.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Identificar los componentes de un ordenador y su función.</li>
+            <li>Comprender la arquitectura clásica, la ley de Moore y los buses de comunicación.</li>
+            <li>Configurar y administrar sistemas operativos de forma básica.</li>
+            <li>Monitorizar y optimizar el rendimiento del sistema.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Contenidos</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><a href="tic/ud5.html#sesion-1" class="hover:underline"><span class="font-semibold">Hardware y software.</span> Sistemas propietarios y libres. Clasificaciones.</a></li>
+            <li><a href="tic/ud5.html#sesion-2" class="hover:underline"><span class="font-semibold">Arquitectura clásica.</span> CPU, UAL, UC. Ley de Moore.</a></li>
+            <li><a href="tic/ud5.html#sesion-3" class="hover:underline"><span class="font-semibold">Memoria y almacenamiento.</span> Memoria principal, almacenamiento secundario. Estructura física y lógica.</a></li>
+            <li><a href="tic/ud5.html#sesion-4" class="hover:underline"><span class="font-semibold">Sistemas de entrada/salida.</span> Periféricos. Clasificación. Periféricos de nueva generación.</a></li>
+            <li><a href="tic/ud5.html#sesion-5" class="hover:underline"><span class="font-semibold">Buses de comunicación.</span> Datos, control y direcciones.</a></li>
+            <li><a href="tic/ud5.html#sesion-6" class="hover:underline"><span class="font-semibold">Sistemas operativos.</span> Arquitecturas, funciones, licencias, interfaces de usuario.</a></li>
+            <li><a href="tic/ud5.html#sesion-7" class="hover:underline"><span class="font-semibold">Gestión del SO.</span> Procesos, archivos, usuarios, dispositivos. Instalación y configuración.</a></li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">2.1 · Funcionamiento de ordenadores y subsistemas</span><span class="criterio">2.2 · Configurar y administrar sistemas operativos</span></p>
+        </details>
+
+        <!-- UD6 · Introducción a la programación -->
+        <details class="ud-card mb-4">
+          <summary><h3 class="font-bold text-ink-800">UD6 · Introducción a la programación</h3><span class="flecha">▶</span></summary>
+          <p class="text-sm text-slate-600"><span class="font-semibold">Trimestre:</span> 3.º · <span class="font-semibold">Bloque:</span> E · <span class="font-semibold">Duración:</span> 9 sesiones</p>
+          <p class="mt-2 text-sm text-slate-600"><span class="font-semibold">Producto:</span> Programa en Python que resuelva un problema real usando estructuras de control y datos.</p>
+          <a href="tic/ud6.html" class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline">Ver contenido completo de la unidad →</a>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Saberes Básicos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>TICO.1.E.1. Fundamentos de programación.</li>
+            <li>TICO.1.E.2. Diseño de software y resolución de problemas.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Objetivos</p>
+          <ul class="mt-1 list-disc pl-5 text-sm text-slate-700">
+            <li>Comprender la sintaxis y semántica de un lenguaje de programación.</li>
+            <li>Analizar la estructura de programas y desarrollar pequeñas aplicaciones.</li>
+            <li>Dividir problemas en subproblemas y definir algoritmos.</li>
+            <li>Utilizar pseudocódigo y diagramas de flujo.</li>
+          </ul>
+
+          <p class="mt-2 text-sm font-semibold text-brand-700">Contenidos</p>
+          <ol class="sesiones text-sm text-slate-700">
+            <li><a href="tic/ud6.html#sesion-1" class="hover:underline"><span class="font-semibold">Algoritmos y diagramas de flujo.</span> Definición, tipos de figuras, convenciones.</a></li>
+            <li><a href="tic/ud6.html#sesion-2" class="hover:underline"><span class="font-semibold">De los bloques al código.</span> Transición de programación visual a textual.</a></li>
+            <li><a href="tic/ud6.html#sesion-3" class="hover:underline"><span class="font-semibold">Tipos de datos y variables.</span> int, float, str, bool. Constantes, operadores, expresiones.</a></li>
+            <li><a href="tic/ud6.html#sesion-4" class="hover:underline"><span class="font-semibold">Interacción con el usuario.</span> print(), input(), conversión de tipos.</a></li>
+            <li><a href="tic/ud6.html#sesion-5" class="hover:underline"><span class="font-semibold">Estructuras de control.</span> Condicionales (if/elif/else). Bucles (for, while).</a></li>
+            <li><a href="tic/ud6.html#sesion-6" class="hover:underline"><span class="font-semibold">Estructuras de datos.</span> Listas, tuplas, diccionarios. Métodos básicos.</a></li>
+            <li><a href="tic/ud6.html#sesion-7" class="hover:underline"><span class="font-semibold">Funciones.</span> Definición, parámetros, retorno. Modularización.</a></li>
+            <li><a href="tic/ud6.html#sesion-8" class="hover:underline"><span class="font-semibold">Depuración.</span> Errores comunes, depuración paso a paso.</a></li>
+            <li><a href="tic/ud6.html#sesion-9" class="hover:underline"><span class="font-semibold">Proyecto final.</span> Programa completo que integre todos los conceptos.</a></li>
+          </ol>
+
+          <p class="mt-2"><span class="criterio">5.1 · Sintaxis y semántica de un lenguaje de programación</span><span class="criterio">5.2 · Analizar y resolver problemas con algoritmos</span></p>
+        </details>
+
+      </div>
+
+      <div class="tab-panel mt-5 hidden" data-panel="boja">
+        <p class="text-sm text-slate-600">Criterios de evaluación asociados (extracto BOJA · 1.º Bachillerato TIC I):</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="criterio">1.1 · Impacto de las TIC en la sociedad</span>
+          <span class="criterio">1.2 · Representación digital de la información</span>
+          <span class="criterio">2.1 · Funcionamiento de ordenadores</span>
+          <span class="criterio">2.2 · Configurar sistemas operativos</span>
+          <span class="criterio">3.1 · Aplicaciones informáticas</span>
+          <span class="criterio">3.2 · Procesadores de texto avanzados</span>
+          <span class="criterio">3.3 · Hojas de cálculo avanzadas</span>
+          <span class="criterio">3.4 · Bases de datos con SQL</span>
+          <span class="criterio">4.1 · Funcionamiento de Internet</span>
+          <span class="criterio">4.2 · Búsqueda y evaluación de recursos digitales</span>
+          <span class="criterio">5.1 · Sintaxis de un lenguaje de programación</span>
+          <span class="criterio">5.2 · Resolución de problemas con algoritmos</span>
+        </div>
+
+        <h3 class="mt-6 font-bold text-ink-800">Mapa global por trimestres</h3>
+        <table class="rubrica">
+          <thead>
+            <tr><th>Trimestre</th><th>Unidad Didáctica</th><th>Bloques</th><th>Criterios</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>1.º</th><td>UD1 · La sociedad de la información y la información digital</td><td>A</td><td>1.1, 1.2</td></tr>
+            <tr><th>1.º</th><td>UD2 · Procesadores de texto</td><td>C</td><td>3.1, 3.2</td></tr>
+            <tr><th>1.º</th><td>UD3 · Hojas de cálculo</td><td>C</td><td>3.1, 3.3</td></tr>
+            <tr><th>2.º</th><td>UD4 · Bases de datos</td><td>C</td><td>3.1, 3.4</td></tr>
+            <tr><th>2.º</th><td>UD5 · Arquitectura de ordenadores y sistemas operativos</td><td>B</td><td>2.1, 2.2</td></tr>
+            <tr><th>3.º</th><td>UD6 · Introducción a la programación</td><td>E</td><td>5.1, 5.2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="../componentes/nucleo.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

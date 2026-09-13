@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD4 · Bases de datos · TIC I</title>
+  <meta name="description" content="Unidad Didáctica 4 de TIC I: Sistemas gestores de bases de datos relacionales, tablas/registros/campos, tipos de datos, claves y relaciones, SQL (DDL/DML), consultas con JOIN/WHERE/GROUP BY, vistas, informes, formularios, exportación/importación." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="tic" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../tic.html" class="hover:underline">TIC I</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque C</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD4 · Bases de datos</h1>
+      <p class="mt-3 text-brand-50/90">Comprender el modelo relacional de bases de datos: diseño de tablas, tipos de datos, claves primarias y foráneas, relaciones entre tablas, lenguaje SQL para consulta y manipulación de datos, vistas, informes, formularios, y exportación de datos entre sistemas.</p>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article
+      <article id="sesion-1" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Sistemas gestores de bases de datos relacionales. Qué es un SGBD. Modelo relacional</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicial establece las bases conceptuales del modelo relacional. Es fundamental que el alumnado comprenda qué es un SGBD, por qué se usa el modelo relacional y cuáles son sus ventajas antes de manipular datos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las bases de datos están en todas partes: desde los registros médicos de un hospital hasta el catálogo de productos de una tienda online. En esta sesión aprenderemos qué son las bases de datos, por qué son importantes y cómo funciona el modelo relacional, el más utilizado en el mundo.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una base de datos?</h4>
+            <p>Una <strong>base de datos (BD)</strong> es un conjunto organizado de datos estructurados que se almacenan electrónicamente para facilitar su acceso, gestión y actualización. No es simplemente una lista de datos, sino una estructura diseñada para responder preguntas de forma eficiente.</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Datos:</strong> Hechos brutos (nombres, números, fechas).</li>
+              <li><strong>Información:</strong> Datos procesados y organizados con sentido.</li>
+              <li><strong>Conocimiento:</strong> Información interpretada para la toma de decisiones.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un SGBD?</h4>
+            <p>Un <strong>Sistema Gestor de Bases de Datos (SGBD)</strong> es el software que permite crear, administrar y manipular bases de datos. Actúa como intermediario entre el usuario y los datos almacenados:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Crear:</strong> Definir la estructura de la base de datos (tablas, campos, tipos de datos).</li>
+              <li><strong>Manipular:</strong> Insertar, modificar, eliminar y consultar datos.</li>
+              <li><strong>Gestionar:</strong> Controlar acceso, seguridad, integridad y recuperación.</li>
+            </ul>
+            <p class="mt-2"><strong>SGBD relacionales más utilizados:</strong> MySQL, PostgreSQL, Microsoft SQL Server, Oracle, SQLite.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El modelo relacional</h4>
+            <p>El modelo relacional organiza los datos en <strong>tablas</strong> (también llamadas relaciones). Cada tabla tiene:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Nombre:</strong> Identifica la tabla (ej: Alumnos, Pedidos).</li>
+              <li><strong>Campos (columnas):</strong> Cada columna representa un tipo de dato (nombre, apellido, fecha_nacimiento).</li>
+              <li><strong>Registros (filas):</strong> Cada fila representa un elemento concreto (un alumno, un pedido).</li>
+              <li><strong>Clave primaria:</strong> Campo que identifica de forma única cada registro.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ejemplo cotidiano</strong>
+            Una tabla de "Contactos" del teléfono móvil es una base de datos simple: cada contacto es un registro, y campos como "Nombre", "Teléfono" y "Email" son las columnas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ventajas del modelo relacional</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Integridad:</strong> Los datos son consistentes y fiables.</li>
+              <li><strong>Redundancia mínima:</strong> Los datos se almacenan una sola vez.</li>
+              <li><strong>Flexibilidad:</strong> Se pueden hacer consultas complejas entre tablas.</li>
+              <li><strong>Seguridad:</strong> Control granular de acceso a datos.</li>
+              <li><strong>Independencia:</strong> La estructura de la BD es independiente de las aplicaciones que la usan.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad exploratoria</strong>
+            Abrir SQLite Online (sqliteonline.com) y familiarizarse con la interfaz. Crear una tabla de prueba con 3 campos (id, nombre, email) e insertar 3 registros con INSERT.
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es un SGBD?</p>
+            <button class="quiz-opcion" data-valor="a">A. Un tipo de base de datos.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un software que permite crear y gestionar bases de datos.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un lenguaje de programación.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué identifica de forma única cada registro en una tabla?</p>
+            <button class="quiz-opcion" data-valor="a">A. La clave primaria</button>
+            <button class="quiz-opcion" data-valor="b">B. La clave foránea</button>
+            <button class="quiz-opcion" data-valor="c">C. El nombre del campo</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Diseñar en papel una base de datos para un biblioteca escolar: identificar las tablas necesarias, los campos de cada tabla y la clave primaria de cada una.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article
+      <article id="sesion-2" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Tablas, registros y campos. Tipos de datos. Estructura de una BD</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En esta sesión profundizaremos en la estructura de una base de datos relacional: cómo se diseñan las tablas, qué tipos de datos existen y cómo se organizan los registros para garantizar la integridad y eficiencia de los datos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructura de una tabla</h4>
+            <p>Cada tabla relacional debe seguir estas reglas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Cada tabla tiene un nombre único</strong> dentro de la base de datos.</li>
+              <li><strong>Cada campo tiene un tipo de datos</strong> que define qué información puede contener.</li>
+              <li><strong>Cada registro es único</strong> (garantizado por la clave primaria).</li>
+              <li><strong>Los valores de una columna son del mismo tipo</strong> (no mezclar texto y números en la misma columna).</li>
+              <li><strong>El orden de filas y columnas no importa</strong> (la estructura es lógica, no física).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de datos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>INTEGER (INT):</strong> Números enteros. Para IDs, cantidades, edades.</li>
+              <li><strong>FLOAT / DOUBLE:</strong> Números con decimales. Para precios, pesos, medidas.</li>
+              <li><strong>VARCHAR(n):</strong> Texto variable de hasta n caracteres. Para nombres, emails, descripciones.</li>
+              <li><strong>TEXT:</strong> Texto largo sin límite de caracteres. Para comentarios, biografías.</li>
+              <li><strong>DATE:</strong> Fechas en formato YYYY-MM-DD.</li>
+              <li><strong>DATETIME / TIMESTAMP:</strong> Fecha y hora.</li>
+              <li><strong>BOOLEAN (BOOL):</strong> Verdadero o falo (0 o 1).</li>
+              <li><strong>DECIMAL(p,s):</strong> Números con precisión exacta (para dinero).</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Elección del tipo de datos</strong>
+            Usa el tipo más apropiado para cada campo: no uses VARCHAR para números, no uses INTEGER para fechas. Una buena elección de tipos ahorra espacio y mejora la eficiencia de las consultas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Restricciones</h4>
+            <p>Las restricciones garantizan la integridad de los datos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>PRIMARY KEY:</strong> Clave primaria. Identifica cada registro de forma única. No puede ser NULL ni duplicada.</li>
+              <li><strong>NOT NULL:</strong> El campo no puede estar vacío.</li>
+              <li><strong>UNIQUE:</strong> Todos los valores del campo deben ser diferentes.</li>
+              <li><strong>DEFAULT(valor):</strong> Si no se proporciona un valor, se usa el predeterminado.</li>
+              <li><strong>CHECK(condición):</strong> El valor debe cumplir una condición específica.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Diseño de una base de datos</h4>
+            <p>El proceso de diseño sigue estos pasos:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Identificar entidades:</strong> ¿Qué objetos del mundo real necesitamos representar? (Alumnos, Asignaturas, Profesores).</li>
+              <li><strong>Identificar atributos:</strong> ¿Qué información guardamos de cada entidad? (nombre, email, fecha_nacimiento).</li>
+              <li><strong>Definir claves primarias:</strong> ¿Qué campo identifica de forma única cada registro? (id_alumno, id_asignatura).</li>
+              <li><strong>Establecer relaciones:</strong> ¿Cómo se conectan las entidades entre sí?</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad práctica</strong>
+            Crear en SQLite Online una tabla "Alumnos" con campos: id (INTEGER PRIMARY KEY), nombre (VARCHAR 50), apellido1 (VARCHAR 50), apellido2 (VARCHAR 50), fecha_nacimiento (DATE), email (VARCHAR 100). Insertar al menos 5 registros.
+          </div>
+
+          <!-- QUIZ SESIÓN 2 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de datos se usaría para almacenar el precio de un producto?</p>
+            <button class="quiz-opcion" data-valor="a">A. INTEGER</button>
+            <button class="quiz-opcion" data-valor="b">B. VARCHAR</button>
+            <button class="quiz-opcion" data-valor="c">C. DECIMAL</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué restricción impide que un campo esté vacío?</p>
+            <button class="quiz-opcion" data-valor="a">A. UNIQUE</button>
+            <button class="quiz-opcion" data-valor="b">B. NOT NULL</button>
+            <button class="quiz-opcion" data-valor="c">C. DEFAULT</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Diseñar y crear en SQLite una tabla "Productos" con al menos 6 campos de diferentes tipos de datos, incluyendo PRIMARY KEY, NOT NULL y DEFAULT.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article
+      <article id="sesion-3" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Claves y relaciones. Clave primaria, clave foránea. Relaciones 1:N y N:M</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La verdadera potencia de las bases de datos relacionales reside en la capacidad de conectar tablas entre sí mediante claves. En esta sesión estudiaremos los tipos de claves, las relaciones entre tablas y cómo se implementan en el modelo relacional.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de claves</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Clave primaria (PK):</strong> Campo (o combinación de campos) que identifica de forma única cada registro. Ejemplo: id_alumno en la tabla Alumnos.</li>
+              <li><strong>Clave foránea (FK):</strong> Campo en una tabla que hace referencia a la clave primaria de otra tabla. Establece la relación entre ambas. Ejemplo: id_alumno en la tabla Matriculas.</li>
+              <li><strong>Clave candidata:</strong> Campo que podría ser clave primaria (tiene UNIQUE y NOT NULL).</li>
+              <li><strong>Clave compuesta:</strong> Combinación de dos o más campos que forman la clave primaria.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Regla fundamental</strong>
+            La clave primaria nunca puede ser NULL y debe ser única. La clave foránea debe coincidir con un valor existente en la tabla referenciada (integridad referencial) o ser NULL.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Relaciones 1:N (Uno a Muchos)</h4>
+            <p>Es el tipo de relación más común. Un registro de la tabla A se relaciona con varios registros de la tabla B:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Un profesor imparte varias asignaturas.</strong> La clave foránea va en la tabla "Muchos" (Asignaturas).</li>
+              <li><strong>Un cliente realiza varios pedidos.</strong> FK id_cliente en la tabla Pedidos.</li>
+              <li><strong>Un departamento tiene varios empleados.</strong> FK id_departamento en la tabla Empleados.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Relaciones N:M (Muchos a Muchos)</h4>
+            <p>Un registro de la tabla A se relaciona con varios de B, y viceversa. Se resuelve con una <strong>tabla intermedia</strong> (también llamada tabla de unión o asociación):</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Alumnos se matriculan en varias Asignaturas</strong> (y cada Asignatura tiene varios Alumnos). Tabla intermedia: Matriculas con FK id_alumno y FK id_asignatura.</li>
+              <li><strong>Productos se incluyen en varios Pedidos</strong> (y cada Pedido tiene varios Productos). Tabla intermedia: DetallePedido.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Diagrama de ejemplo</strong>
+            Para una BD de biblioteca: Libros (1) → (N) Prestamos ← (N) Socios. La tabla Prestamos tiene FK id_libro y FK id_socio, resolviendo la relación N:M entre Libros y Socios.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Integridad referencial</h4>
+            <p>La integridad referencial garantiza que las relaciones entre tablas sean válidas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>RESTRICT:</strong> Impide eliminar un registro si tiene registros dependientes.</li>
+              <li><strong>CASCADE:</strong> Al eliminar un registro, elimina también los dependientes.</li>
+              <li><strong>SET NULL:</strong> Al eliminar un registro, pone a NULL las FK dependientes.</li>
+              <li><strong>SET DEFAULT:</strong> Al eliminar, asigna un valor predeterminado a las FK.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear en SQLite las tablas "Alumnos" y "Asignaturas" con una tabla intermedia "Matriculas" que establezca la relación N:M. Insertar datos y verificar que la integridad referencial funciona correctamente.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿En qué tabla se coloca la clave foránea en una relación 1:N?</p>
+            <button class="quiz-opcion" data-valor="a">A. En la tabla "Uno".</button>
+            <button class="quiz-opcion" data-valor="b">B. En la tabla "Muchos".</button>
+            <button class="quiz-opcion" data-valor="c">C. En ambas tablas.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cómo se resuelve una relación N:M entre dos tablas?</p>
+            <button class="quiz-opcion" data-valor="a">A. Añadiendo una FK en una de las tablas.</button>
+            <button class="quiz-opcion" data-valor="b">B. Creando una vista.</button>
+            <button class="quiz-opcion" data-valor="c">C. Creando una tabla intermedia con FKs a ambas tablas.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Diseñar un diagrama entité-relación para una base de datos de tienda online con al menos 4 tablas y 2 relaciones. Implementarlo en SQLite.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article
+      <article id="sesion-4" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Lenguaje SQL. Sentencias DDL y DML. SELECT, INSERT, UPDATE, DELETE</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>SQL (Structured Query Language) es el lenguaje estándar para interactuar con bases de datos relacionales. Permite crear estructuras, insertar datos, modificar registros y realizar consultas complejas. En esta sesión aprenderemos las sentencias fundamentales de SQL.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sentencias DDL (Data Definition Language)</h4>
+            <p>DDL se utiliza para definir y modificar la estructura de la base de datos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>CREATE TABLE:</strong> Crea una nueva tabla.</li>
+              <li><strong>ALTER TABLE:</strong> Modifica la estructura de una tabla existente.</li>
+              <li><strong>DROP TABLE:</strong> Elimina una tabla completamente.</li>
+              <li><strong>CREATE INDEX:</strong> Crea un índice para búsquedas rápidas.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo CREATE TABLE:</strong></p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">CREATE TABLE Alumnos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nombre VARCHAR(50) NOT NULL,
+  apellido VARCHAR(50) NOT NULL,
+  email VARCHAR(100) UNIQUE,
+  fecha_nac DATE
+);</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sentencias DML (Data Manipulation Language)</h4>
+            <p>DML se utiliza para manipular los datos dentro de las tablas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>SELECT:</strong> Consulta y recupera datos.</li>
+              <li><strong>INSERT INTO:</strong> Añade nuevos registros.</li>
+              <li><strong>UPDATE:</strong> Modifica registros existentes.</li>
+              <li><strong>DELETE:</strong> Elimina registros.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">INSERT INTO</h4>
+            <p>Para insertar datos en una tabla:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">INSERT INTO Alumnos (nombre, apellido, email, fecha_nac)
+VALUES ('Ana', 'García', 'ana@email.com', '2005-03-15');
+
+INSERT INTO Alumnos (nombre, apellido, email, fecha_nac)
+VALUES
+  ('Carlos', 'López', 'carlos@email.com', '2004-11-20'),
+  ('María', 'Martínez', 'maria@email.com', '2005-07-08');</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">SELECT (consultas básicas)</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">-- Seleccionar todos los campos
+SELECT * FROM Alumnos;
+
+-- Seleccionar campos específicos
+SELECT nombre, apellido FROM Alumnos;
+
+-- Con condición WHERE
+SELECT * FROM Alumnos WHERE fecha_nac > '2005-01-01';
+
+-- Ordenar resultados
+SELECT * FROM Alumnos ORDER BY apellido ASC;
+
+-- Limitar resultados
+SELECT * FROM Alumnos LIMIT 5;</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">UPDATE y DELETE</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">-- Actualizar un registro
+UPDATE Alumnos
+SET email = 'ana.nuevo@email.com'
+WHERE id = 1;
+
+-- Eliminar un registro
+DELETE FROM Alumnos WHERE id = 3;</pre>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Cuidado con DELETE</strong>
+            Sin una cláusula WHERE, DELETE elimina TODOS los registros de la tabla. Siempre incluye WHERE a menos que quieras vaciar la tabla completamente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una tabla "Libros" con campos id, titulo, autor, genero, anio_publicacion, precio. Insertar al menos 8 libros y realizar las siguientes consultas:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Mostrar todos los libros.</li>
+              <li>Mostrar solo los libros de un género específico.</li>
+              <li>Mostrar los libros ordenados por año de publicación.</li>
+              <li>Actualizar el precio de un libro.</li>
+              <li>Eliminar un libro específico.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 4 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué sentencia SQL se usa para añadir datos a una tabla?</p>
+            <button class="quiz-opcion" data-valor="a">A. INSERT INTO</button>
+            <button class="quiz-opcion" data-valor="b">B. SELECT</button>
+            <button class="quiz-opcion" data-valor="c">C. UPDATE</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué hace la sentencia DELETE sin cláusula WHERE?</p>
+            <button class="quiz-opcion" data-valor="a">A. Elimina el último registro insertado.</button>
+            <button class="quiz-opcion" data-valor="b">B. Elimina la tabla.</button>
+            <button class="quiz-opcion" data-valor="c">C. Elimina todos los registros de la tabla.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Realizar 10 operaciones SQL diferentes (2 CREATE, 3 INSERT, 2 SELECT, 2 UPDATE, 1 DELETE) en una base de datos de inventario.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article
+      <article id="sesion-5" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Consultas avanzadas. JOIN, WHERE, ORDER BY, GROUP BY, funciones de agregado</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las consultas avanzadas permiten extraer información compleja de múltiples tablas. Los JOIN son esenciales para combinar datos relacionados, y las funciones de agregado permiten resumir grandes volúmenes de datos en valores significativos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">JOIN (Unión de tablas)</h4>
+            <p>Los JOIN permiten combinar registros de dos o más tablas basándose en una relación:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>INNER JOIN:</strong> Devuelve solo los registros que tienen coincidencia en ambas tablas.</li>
+              <li><strong>LEFT JOIN:</strong> Devuelve todos los registros de la tabla izquierda y los coincidentes de la derecha.</li>
+              <li><strong>RIGHT JOIN:</strong> Devuelve todos los registros de la tabla derecha y los coincidentes de la izquierda.</li>
+              <li><strong>CROSS JOIN:</strong> Combina cada registro de una tabla con cada registro de otra (producto cartesiano).</li>
+            </ul>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">SELECT A.nombre, A.apellido, M.nota
+FROM Alumnos A
+INNER JOIN Matriculas M ON A.id = M.id_alumno
+WHERE M.nota >= 6
+ORDER BY M.nota DESC;</pre>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>INNER JOIN vs LEFT JOIN</strong>
+            INNER JOIN solo muestra alumnos matriculados. LEFT JOIN muestra TODOS los alumnos, incluyendo los que no tienen matrícula (con NULL en las columnas de la tabla derecha).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Funciones de agregado</h4>
+            <p>Estas funciones resumen datos de múltiples registros:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>COUNT(*):</strong> Cuenta el número de registros.</li>
+              <li><strong>SUM(campo):</strong> Suma todos los valores.</li>
+              <li><strong>AVG(campo):</strong> Calcula la media.</li>
+              <li><strong>MAX(campo):</strong> Devuelve el valor máximo.</li>
+              <li><strong>MIN(campo):</strong> Devuelve el valor mínimo.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">GROUP BY y HAVING</h4>
+            <p>GROUP BY agrupa registros con valores iguales en un campo, para usar con funciones de agregado:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">-- Contar alumnos por género
+SELECT genero, COUNT(*) as num_alumnos
+FROM Alumnos
+GROUP BY genero;
+
+-- Media de nota por asignatura (solo notas ≥ 6)
+SELECT id_asignatura, AVG(nota) as media
+FROM Matriculas
+GROUP BY id_asignatura
+HAVING AVG(nota) >= 6;</pre>
+            <p class="mt-2"><strong>Diferencia WHERE vs HAVING:</strong> WHERE filtra antes de agrupar, HAVING filtra después de agrupar.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para consultas complejas, constrúyelas paso a paso: primero el FROM, luego el JOIN, después el WHERE, luego el GROUP BY, después el HAVING, y finalmente el SELECT y ORDER BY.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear las tablas Alumnos, Asignaturas y Matriculas (con nota). Realizar las siguientes consultas:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Listar alumnos con sus notas usando INNER JOIN.</li>
+              <li>Mostrar todos los alumnos incluyendo los no matriculados (LEFT JOIN).</li>
+              <li>Contar cuántos alumnos hay por asignatura.</li>
+              <li>Calcular la nota media por asignatura.</li>
+              <li>Mostrar solo las asignaturas con nota media superior a 7.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué JOIN devuelve solo los registros que coinciden en ambas tablas?</p>
+            <button class="quiz-opcion" data-valor="a">A. LEFT JOIN</button>
+            <button class="quiz-opcion" data-valor="b">B. INNER JOIN</button>
+            <button class="quiz-opcion" data-valor="c">C. RIGHT JOIN</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué función de agregado cuenta el número de registros?</p>
+            <button class="quiz-opcion" data-valor="a">A. COUNT(*)</button>
+            <button class="quiz-opcion" data-valor="b">B. SUM()</button>
+            <button class="quiz-opcion" data-valor="c">C. AVG()</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Realizar 5 consultas SQL avanzadas que incluyan al menos 2 JOIN, 1 GROUP BY con HAVING, y 2 funciones de agregado diferentes.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article
+      <article id="sesion-6" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Vistas, informes y formularios. Visualización e interacción con los datos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las vistas, informes y formularios son herramientas que facilitan la visualización e interacción con los datos de una base de datos. Mientras las vistas simplifican consultas complejas, los informes presentan datos de forma imprimible y los formularios permiten una fácil entrada de datos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Vistas (Views)</h4>
+            <p>Una vista es una consulta almacenada que se comporta como una tabla virtual:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>No almacena datos:</strong> Ejecuta la consulta cada vez que se accede.</li>
+              <li><strong>Simplifica consultas complejas:</strong> Un JOIN complicado se convierte en "SELECT * FROM vista".</li>
+              <li><strong>Seguridad:</strong> Puede ocultar columnas sensibles (como contraseñas o salarios).</li>
+              <li><strong>Consistencia:</strong> Garantiza que todos los usuarios ven los datos de la misma forma.</li>
+            </ul>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">CREATE VIEW VistaAlumnosNotas AS
+SELECT A.nombre, A.apellido, Asig.nombre as asignatura, M.nota
+FROM Alumnos A
+INNER JOIN Matriculas M ON A.id = M.id_alumno
+INNER JOIN Asignaturas Asig ON M.id_asignatura = Asig.id;
+
+-- Ahora se puede consultar como una tabla normal
+SELECT * FROM VistaAlumnosNotas WHERE nota >= 6;</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Informes</h4>
+            <p>Los informes presentan datos de forma estructurada y lista para imprimir:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Encabezado:</strong> Título del informe, fecha, logo.</li>
+              <li><strong>Cuerpo:</strong> Tablas de datos organizados.</li>
+              <li><strong>Pie:</strong> Totales, promedios, información de pie de página.</li>
+              <li><strong>Agrupaciones:</strong> Datos agrupados por categoría (ej: alumnos por clase).</li>
+            </ul>
+            <p class="mt-2"><strong>Herramientas:</strong> Microsoft Access, LibreOffice Base, JasperReports.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formularios</h4>
+            <p>Los formularios facilitan la entrada y edición de datos con una interfaz gráfica amigable:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Campo de texto:</strong> Para introducir datos alfanuméricos.</li>
+              <li><strong>Desplegable:</strong> Para seleccionar de una lista predefinida.</li>
+              <li><strong>Casilla de verificación:</strong> Para valores verdadero/falso.</li>
+              <li><strong>Botones:</strong> Guardar, eliminar, buscar, imprimir.</li>
+              <li><strong>Validación:</strong> Comprobar que los datos cumplen un formato antes de guardar.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>¿Cuándo usar cada uno?</strong>
+            <strong>Vista:</strong> Para simplificar consultas recurrentes. <strong>Informe:</strong> Para imprimir o exportar datos formateados. <strong>Formulario:</strong> Para entrada y edición de datos por parte de usuarios no técnicos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Usando la base de datos de la sesión anterior:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Crear una vista que muestre solo los alumnos aprobados con sus notas.</li>
+              <li>Diseñar un formulario sencillo en papel para introducir nuevos alumnos.</li>
+              <li>Diseñar un informe en papel que muestre las calificaciones agrupadas por asignatura.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 6 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es una vista en una base de datos?</p>
+            <button class="quiz-opcion" data-valor="a">A. Una consulta almacenada que se comporta como una tabla virtual.</button>
+            <button class="quiz-opcion" data-valor="b">B. Una tabla que almacena datos temporalmente.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un informe listo para imprimir.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear al menos 2 vistas SQL que simplifiquen consultas complejas y justificar por qué son útiles.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article
+      <article id="sesion-7" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Exportación e importación. Intercambio de datos entre sistemas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las bases de datos no trabajan aisladas. En esta sesión aprenderemos a exportar e importar datos entre diferentes sistemas y formatos, una habilidad esencial en el mundo real donde los datos provienen de múltiples fuentes.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formatos de exportación</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>CSV:</strong> Texto plano con valores separados por comas. Universal, ligero, sin formato.</li>
+              <li><strong>SQL:</strong> Script con sentencias SQL para recrear la estructura y datos.</li>
+              <li><strong>JSON:</strong> Formato de intercambio web, jerárquico, legible por máquinas.</li>
+              <li><strong>XML:</strong> Formato de marcado para intercambio de datos estructurados.</li>
+              <li><strong>XLSX:</strong> Hoja de cálculo de Excel.</li>
+              <li><strong>PDF:</strong> Para distribución e impresión.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Exportar desde SQLite</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>.output archivo.csv:</strong> Redirige la salida a un archivo.</li>
+              <li><strong>.mode csv:</strong> Establece el modo de salida CSV.</li>
+              <li><strong>SELECT * FROM tabla;</strong> Genera los datos en el formato seleccionado.</li>
+              <li><strong>.quit:</strong> Cierra la sesión y guarda el archivo.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Intercambio con hojas de cálculo</strong>
+            Un flujo de trabajo común es: exportar datos de la BD a CSV → importar en Google Sheets/Excel para análisis → exportar el resultado → importar de nuevo en la BD.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Importar datos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Desde CSV:</strong> .import archivo.csv nombre_tabla (en SQLite CLI).</li>
+              <li><strong>Desde otro SGBD:</strong> Exportar en SQL e importar en el nuevo sistema.</li>
+              <li><strong>Desde APIs:</strong> Usar scripts (Python, Node.js) para conectar con servicios web.</li>
+              <li><strong>Desde archivos:</strong> Programas como DB Browser for SQLite permiten importar visualmente.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Buenas prácticas de intercambio</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Verificar la integridad:</strong> Comprobar que los datos se importaron correctamente.</li>
+              <li><strong>Codificación de caracteres:</strong> Usar UTF-8 para compatibilidad con tildes y caracteres especiales.</li>
+              <li><strong>Respaldo:</strong> Siempre hacer una copia de seguridad antes de importar datos masivos.</li>
+              <li><strong>Validación:</strong> Comprobar tipos de datos, formato de fechas y valores nulos.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad práctica</strong>
+            Exportar la base de datos de alumnos a un archivo CSV, abrirlo en Google Sheets, modificar algunos datos, guardar como CSV e importar de nuevo a SQLite. Verificar que los cambios se reflejan correctamente.
+          </div>
+
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué formato es el más adecuado para intercambiar datos puros entre diferentes sistemas?</p>
+            <button class="quiz-opcion" data-valor="a">A. XLSX</button>
+            <button class="quiz-opcion" data-valor="b">B. CSV</button>
+            <button class="quiz-opcion" data-valor="c">C. PDF</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué codificación de caracteres se recomienda para intercambiar datos con tildes?</p>
+            <button class="quiz-opcion" data-valor="a">A. ASCII</button>
+            <button class="quiz-opcion" data-valor="b">B. ISO-8859-1</button>
+            <button class="quiz-opcion" data-valor="c">C. UTF-8</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Exportar datos a CSV, importarlos en Google Sheets, crear un gráfico con los datos, y volver a importar el resultado en una nueva tabla de la BD.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 8 ==================== -->
+      <article
+      <article id="sesion-8" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">8</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: base de datos relacional completa con consultas SQL</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Proyecto de unidad</strong>
+            Esta sesión está dedicada al desarrollo del proyecto final de la UD4. Cada alumno deberá crear una base de datos relacional completa que integre todas las competencias trabajadas a lo largo de las 7 sesiones anteriores.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Enunciado del proyecto</h4>
+            <p>Crear una <strong>"Base de datos de Gestión de una Biblioteca Escolar"</strong> con los siguientes elementos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Tablas:</strong> Socios, Libros, Prestamos, Categorias (mínimo 4 tablas).</li>
+              <li><strong>Relaciones:</strong> Claves primarias y foráneas correctamente definidas. Al menos 2 relaciones 1:N y 1 N:M.</li>
+              <li><strong>Datos:</strong> Insertar al menos 10 registros en cada tabla principal.</li>
+              <li><strong>Consultas SQL:</strong> Crear al menos 8 consultas diferentes incluyendo JOIN, WHERE, GROUP BY, funciones de agregado.</li>
+              <li><strong>Vistas:</strong> Crear al menos 2 vistas que simplifiquen consultas frecuentes.</li>
+              <li><strong>Exportación:</strong> Exportar los datos de una consulta a CSV.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Criterios de evaluación</strong>
+            Diseño de tablas y tipos de datos (20%), relaciones e integridad referencial (20%), calidad y variedad de consultas SQL (25%), uso de vistas (15%), documentación y presentación (20%).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructura de la BD</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Socios:</strong> id, nombre, apellido, email, telefono, fecha_alta.</li>
+              <li><strong>Categorias:</strong> id, nombre, descripcion.</li>
+              <li><strong>Libros:</strong> id, titulo, autor, id_categoria, anio, isbn, disponibilidad.</li>
+              <li><strong>Prestamos:</strong> id, id_socio, id_libro, fecha_prestamo, fecha_devolucion, devuelto.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Consultas sugeridas</h4>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Listar todos los libros disponibles con su categoría.</li>
+              <li>Mostrar los préstamos activos con datos del socio y del libro.</li>
+              <li>Contar cuántos libros hay por categoría.</li>
+              <li>Mostrar los socios que nunca han realizado un préstamo.</li>
+              <li>Calcular el número total de préstamos por mes.</li>
+              <li>Listar los libros más prestados (top 5).</li>
+              <li>Mostrar los préstamos vencidos (fecha_devolución pasada y no devueltos).</li>
+              <li>Calcular la media de días de préstamo por categoría.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Recuerda</strong>
+            Documenta tu base de datos: incluye un diagrama entité-relación, explica las decisiones de diseño y documenta cada consulta SQL con un comentario que explique qué hace.
+          </div>
+
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="a" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de JOIN devuelve todos los registros de la tabla izquierda, incluso sin coincidencia?</p>
+            <button class="quiz-opcion" data-valor="a">A. LEFT JOIN</button>
+            <button class="quiz-opcion" data-valor="b">B. INNER JOIN</button>
+            <button class="quiz-opcion" data-valor="c">C. RIGHT JOIN</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Entrega del proyecto</strong>
+            Subir el archivo .db de SQLite junto con un documento que contenga el diagrama E-R, el script SQL completo con comentarios y las capturas de los resultados de las consultas.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud3.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        ← UD3 · Hojas de cálculo
+      </a>
+      <a href="ud5.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD5 · Arquitectura de ordenadores →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

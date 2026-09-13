@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD3 · Hojas de cálculo · TIC I</title>
+  <meta name="description" content="Unidad Didáctica 3 de TIC I: Hojas de cálculo (Google Sheets), filas/columnas/celdas/rangos, formatos, referencias, funciones (matemáticas, lógicas, texto, estadísticas), formato condicional, ordenación, filtrado, gráficos, exportación, importación y protección." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="tic" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../tic.html" class="hover:underline">TIC I</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque C</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD3 · Hojas de cálculo</h1>
+      <p class="mt-3 text-brand-50/90">Dominar las hojas de cálculo para organizar, analizar y visualizar datos: estructura de filas, columnas, celdas y rangos, formatos de celda, tipos de referencias, funciones matemáticas, lógicas, de texto y estadísticas, formato condicional, ordenación y filtrado, gráficos, y exportación protegida.</p>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article
+      <article id="sesion-1" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Filas, columnas, celdas y rangos. Formatos de celda</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión sienta las bases del manejo de hojas de cálculo. Es esencial que el alumnado comprenda la estructura de una hoja (filas, columnas, celdas, rangos) antes de avanzar hacia funciones y fórmulas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las hojas de cálculo son herramientas fundamentales para trabajar con datos: desde una lista de la compra hasta un análisis financiero complejo. Google Sheets es una hoja de cálculo en la nube, gratuita y colaborativa. En esta sesión familiarizaremos con su interfaz y estructura básica.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructura de una hoja de cálculo</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Filas:</strong> Disposición horizontal, numeradas (1, 2, 3...). En Google Sheets, hasta 10 millones de filas.</li>
+              <li><strong>Columnas:</strong> Disposición vertical, etiquetadas con letras (A, B, C... Z, AA, AB...). Hasta 18.278 columnas.</li>
+              <li><strong>Celdas:</strong> Intersección de una fila y una columna. Se identifican por su dirección: A1, B3, C10.</li>
+              <li><strong>Rangos:</strong> Grupo de celdas adyacentes. Se definen indicando la celda inicial y final separadas por dos puntos: A1:D5 (desde A1 hasta D5).</li>
+              <li><strong>Hoja (tab):</strong> Cada pestaña inferior es una hoja independiente dentro del mismo libro.</li>
+              <li><strong>Libro:</strong> El archivo completo que contiene una o más hojas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Convención de rangos</strong>
+            A1:D5 incluye todas las celdas desde la columna A hasta la D y desde la fila 1 hasta la 5. A1:D1 es una fila completa. A1:A10 es una columna completa.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formatos de celda</h4>
+            <p>Cada celda puede tener un formato específico que determina cómo se muestra el contenido:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Texto:</strong> Cualquier cadena de caracteres. Alineación izquierda por defecto.</li>
+              <li><strong>Número:</strong> Valores numéricos. Alineación derecha por defecto.</li>
+              <li><strong>Moneda:</strong> Número con símbolo de moneda (€, $) y 2 decimales.</li>
+              <li><strong>Porcentaje:</strong> Número multiplicado por 100 con símbolo %.</li>
+              <li><strong>Fecha/Hora:</strong> Valores de fecha y hora con formato específico.</li>
+              <li><strong>Científico:</strong> Notación científica para números muy grandes o pequeños.</li>
+              <li><strong>Personalizado:</strong> Formato definido por el usuario con códigos específicos.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formato de celdas avanzado</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bordes:</strong> Líneas alrededor de la celda (sólidas, punteadas, discontinuas).</li>
+              <li><strong>Relleno:</strong> Color de fondo de la celda.</li>
+              <li><strong>Fuente:</strong> Tipo, tamaño, color, negrita, cursiva.</li>
+              <li><strong>Alineación:</strong> Horizontal (izquierda, centro, derecha) y vertical (arriba, centro, abajo).</li>
+              <li><strong>Fusión de celdas:</strong> Unir varias celdas en una sola.</li>
+              <li><strong>Ajuste de texto:</strong> Texto automático en varias líneas dentro de la celda.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Atajos útiles</strong>
+            <strong>Ctrl+1:</strong> Abrir formato de celdas. <strong>Ctrl+B:</strong> Negrita. <strong>Ctrl+Shift+%:</strong> Formato porcentaje. <strong>Ctrl+Shift+$:</strong> Formato moneda. <strong>Ctrl+Z:</strong> Deshacer.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una "Lista de la compra" en Google Sheets:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Crear encabezados en la fila 1: Producto, Cantidad, Precio unitario, Total.</li>
+              <li>Introducir al menos 8 productos con sus precios.</li>
+              <li>Aplicar formato de moneda (€) a las columnas de precios.</li>
+              <li>Añadir bordes a todas las celdas con datos.</li>
+              <li>Aplicar color de fondo diferente a los encabezados.</li>
+              <li>Ajustar el ancho de las columnas al contenido.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cómo se identifica la celda en la columna C, fila 5?</p>
+            <button class="quiz-opcion" data-valor="a">A. 5C</button>
+            <button class="quiz-opcion" data-valor="b">B. C5</button>
+            <button class="quiz-opcion" data-valor="c">C. C:5</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué formato de celda se aplica automáticamente a los números?</p>
+            <button class="quiz-opcion" data-valor="a">A. Alineación derecha</button>
+            <button class="quiz-opcion" data-valor="b">B. Alineación izquierda</button>
+            <button class="quiz-opcion" data-valor="c">C. Alineación centrada</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una tabla de 10×5 con diferentes tipos de datos (texto, números, fechas, porcentajes) y aplicar formato personalizado a cada columna.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article
+      <article id="sesion-2" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Referencias: relativas, absolutas y mixtas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las referencias de celdas son la base de cualquier fórmula en una hoja de cálculo. Entender la diferencia entre referencias relativas, absolutas y mixtas es crucial para crear fórmulas que se puedan copiar y arrastrar correctamente. Esta sesión es fundamental para el resto de la unidad.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Referencias relativas</h4>
+            <p>Una referencia relativa cambia cuando se copia o arrastra la fórmula a otra celda. Es el tipo de referencia predeterminado:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Ejemplo:</strong> Si en B2 tienes =A1+1 y arrastras la fórmula a B3, se convierte en =A2+1.</li>
+              <li><strong>Uso:</strong> Cuando necesitas que la fórmula haga referencia a celdas que cambian posición relativa.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Referencias absolutas</h4>
+            <p>Una referencia absoluta se mantiene fija cuando se copia la fórmula. Se marca con el signo $ antes de la letra de columna y/o el número de fila:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>$A$1:</strong> Referencia absoluta completa. No cambia ni la columna ni la fila.</li>
+              <li><strong>Ejemplo:</strong> Si en B2 tienes =$A$1*0,21 y arrastras a B3, se mantiene =$A$1*0,21.</li>
+              <li><strong>Uso:</strong> Cuando necesitas que la fórmula siempre apunte a la misma celda (por ejemplo, un porcentaje de IVA almacenado en una celda fija).</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Truco rápido</strong>
+            Pulsa la tecla <strong>F4</strong> mientras editas una referencia de celda para alternar entre relativa (A1), absoluta ($A$1), mixta ($A1 y A$1). Es muy útil para configurar referencias rápidamente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Referencias mixtas</h4>
+            <p>Una referencia mixta fija solo la columna o solo la fila:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>$A1:</strong> Fija la columna (A), la fila (1) es relativa. Al copiar horizontalmente, la columna no cambia; al copiar verticalmente, la fila sí.</li>
+              <li><strong>A$1:</strong> Fija la fila (1), la columna (A) es relativa. Al copiar verticalmente, la fila no cambia; al copiar horizontalmente, la columna sí.</li>
+            </ul>
+            <p class="mt-2"><strong>Caso de uso:</strong> Tabla de multiplicar. Las filas y columnas del encabezado deben mantenerse fijos al arrastrar la fórmula.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tabla resumen</h4>
+            <div class="mt-2 overflow-x-auto">
+              <table class="w-full text-xs border-collapse">
+                <thead>
+                  <tr class="bg-brand-50">
+                    <th class="border border-slate-300 px-3 py-1.5 text-left">Tipo</th>
+                    <th class="border border-slate-300 px-3 py-1.5 text-left">Sintaxis</th>
+                    <th class="border border-slate-300 px-3 py-1.5 text-left">¿Cambia al copiar?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Relativa</td>
+                    <td class="border border-slate-300 px-3 py-1.5">A1</td>
+                    <td class="border border-slate-300 px-3 py-1.5">Sí (columna y fila)</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Absoluta</td>
+                    <td class="border border-slate-300 px-3 py-1.5">$A$1</td>
+                    <td class="border border-slate-300 px-3 py-1.5">No</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Mixta (columna fija)</td>
+                    <td class="border border-slate-300 px-3 py-1.5">$A1</td>
+                    <td class="border border-slate-300 px-3 py-1.5">Solo la fila</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Mixta (fila fija)</td>
+                    <td class="border border-slate-300 px-3 py-1.5">A$1</td>
+                    <td class="border border-slate-300 px-3 py-1.5">Solo la columna</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una tabla de multiplicar del 1 al 10:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Colocar los números 1-10 en la fila 1 (B1:K1) y en la columna A (A2:A11).</li>
+              <li>En B2, escribir la fórmula: =$A2*B$1 (referencia mixta).</li>
+              <li>Arrastrar la fórmula hasta K11.</li>
+              <li>Verificar que todas las multiplicaciones son correctas.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 2 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de referencia se mantiene completamente fija al copiar una fórmula?</p>
+            <button class="quiz-opcion" data-valor="a">A. Absoluta ($A$1)</button>
+            <button class="quiz-opcion" data-valor="b">B. Relativa (A1)</button>
+            <button class="quiz-opcion" data-valor="c">C. Mixta ($A1)</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tecla se usa para alternar entre tipos de referencia?</p>
+            <button class="quiz-opcion" data-valor="a">A. Enter</button>
+            <button class="quiz-opcion" data-valor="b">B. Tab</button>
+            <button class="quiz-opcion" data-valor="c">C. F4</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una tabla de IVA donde los productos tengan precios diferentes y el porcentaje de IVA esté en una celda fija. Usar referencias absolutas para el IVA y relativas para los precios.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article
+      <article id="sesion-3" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Operaciones y funciones. Matemáticas, lógicas, de texto y estadísticas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las funciones son fórmulas predefinidas que realizan cálculos específicos. Dominar las funciones más utilizadas permite automatizar cálculos complejos y ahorrar enormes cantidades de tiempo. En esta sesión estudiaremos las funciones matemáticas, lógicas, de texto y estadísticas más importantes.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Funciones matemáticas básicas</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>=SUMA(A1:A10):</strong> Suma todos los valores del rango.</li>
+              <li><strong>=RESTA(A1,B1):</strong> Resta B1 de A1.</li>
+              <li><strong>=MULTIPLICAR(A1,B1):</strong> Multiplica dos valores.</li>
+              <li><strong>=DIVIDIR(A1,B1):</strong> Divide A1 entre B1.</li>
+              <li><strong>=PROMEDIO(A1:A10):</strong> Calcula la media aritmética.</li>
+              <li><strong>=MAX(A1:A10):</strong> Devuelve el valor máximo.</li>
+              <li><strong>=MIN(A1:A10):</strong> Devuelve el valor mínimo.</li>
+              <li><strong>=CONTAR(A1:A10):</strong> Cuenta cuántas celdas contienen números.</li>
+              <li><strong>=CONTARA(A1:A10):</strong> Cuenta cuántas celdas no están vacías.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Funciones lógicas</h4>
+            <p>Las funciones lógicas permiten tomar decisiones en función de condiciones:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>=SI(condición, valor_verdadero, valor_falso):</strong> Evalúa una condición y devuelve un valor u otro.</li>
+              <li><strong>=Y(condición1, condición2, ...):</strong> Devuelve VERDADERO si todas las condiciones se cumplen.</li>
+              <li><strong>=O(condición1, condición2, ...):</strong> Devuelve VERDADERO si al menos una condición se cumple.</li>
+              <li><strong>=NO(condición):</strong> Invierte el valor lógico.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo:</strong> =SI(A1>=6,"Aprobado","Suspenso") — Si la nota en A1 es mayor o igual a 6, muestra "Aprobado"; en caso contrario, "Suspenso".</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ejemplo combinado</strong>
+            =SI(Y(A1>=6,B1>=6),"Aprobado en ambas partes","Revisar") — Evalúa si el alumno tiene nota≥6 en dos partes del examen.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Funciones de texto</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>=LARGO(A1):</strong> Devuelve el número de caracteres del texto.</li>
+              <li><strong>=IZQUIERDA(A1,5):</strong> Devuelve los 5 primeros caracteres.</li>
+              <li><strong>=DERECHA(A1,3):</strong> Devuelve los 3 últimos caracteres.</li>
+              <li><strong>=EXTRAE(A1,2,4):</strong> Extrae 4 caracteres empezando desde la posición 2.</li>
+              <li><strong>=CONCATENAR(A1," ",B1):</strong> Une dos textos con un espacio.</li>
+              <li><strong>=MAYUSC(A1):</strong> Convierte a mayúsculas.</li>
+              <li><strong>=MINUSC(A1):</strong> Convierte a minúsculas.</li>
+              <li><strong>=REEMPLAZAR(A1,2,3,"X"):*</strong> Sustituye 3 caracteres desde la posición 2 por "X".</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Funciones estadísticas</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>=PROMEDIO(A1:A10):</strong> Media aritmética.</li>
+              <li><strong>=MEDIANA(A1:A10):</strong> Valor central de un conjunto ordenado.</li>
+              <li><strong>=MODA(A1:A10):</strong> Valor que más se repite.</li>
+              <li><strong>=DESVEST(A1:A10):</strong> Desviación estándar (mide la dispersión).</li>
+              <li><strong>=VAR(A1:A10):</strong> Varianza.</li>
+              <li><strong>=CONTAR.SI(A1:A10,">5"):</strong> Cuenta celdas que cumplen una condición.</li>
+              <li><strong>=SUMA.SI(A1:A10,">5",B1:B10):</strong> Suma valores de B cuando A cumple la condición.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Para conocer todas las funciones disponibles, escribe = en una celda y usa el asistente de Google Sheets que aparece a la derecha. También puedes buscar funciones desde el menú Funciones (∑).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una hoja de "Calificaciones del trimestre" con:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Tabla con alumnos y 4 notas (Exam1, Exam2, Trabajo, Práctica).</li>
+              <li>Columna "Nota media" con =PROMEDIO.</li>
+              <li>Columna "Nota final" con ponderación (30%, 30%, 20%, 20%).</li>
+              <li>Columna "Resultado" con =SI (Aprobado/Suspenso).</li>
+              <li>Fila de estadísticas al final: Máxima, Mínima, Media, Alumnos aprobados.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué función lógica se usa para tomar una decisión según una condición?</p>
+            <button class="quiz-opcion" data-valor="a">A. SI</button>
+            <button class="quiz-opcion" data-valor="b">B. Y</button>
+            <button class="quiz-opcion" data-valor="c">C. O</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué función cuenta las celdas no vacías de un rango?</p>
+            <button class="quiz-opcion" data-valor="a">A. CONTAR</button>
+            <button class="quiz-opcion" data-valor="b">B. CONTARA</button>
+            <button class="quiz-opcion" data-valor="c">C. SUMA</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una hoja de cálculo que resuelva 5 problemas diferentes usando al menos 4 funciones diferentes (SI, PROMEDIO, CONTAR.SI, CONCATENAR).
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article
+      <article id="sesion-4" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Formato condicional: reglas de formato dinámico según valores</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El formato condicional cambia automáticamente la apariencia de las celdas en función de su contenido. Es una herramienta visual muy poderosa para identificar rápidamente patrones, valores extremos o condiciones específicas en una tabla de datos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es el formato condicional?</h4>
+            <p>Permite definir reglas que se evalúan para cada celda del rango seleccionado. Si la condición se cumple, se aplica un formato específico (color de fondo, color de texto, borde, etc.):</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Reglas simples:</strong> Resaltar celdas con un valor superior/inferior a un umbral.</li>
+              <li><strong>Rangos de color:</strong> Asignar colores según una escala (de rojo a verde).</li>
+              <li><strong>Barras de datos:</strong> Mostrar una barra proporcional al valor dentro de la celda.</li>
+              <li><strong>Iconos:</strong> Flechas, semáforos o estrellas según el valor.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de reglas comunes</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Resaltar celdas con valor mayor que:</strong> Por ejemplo, notas superiores a 9.</li>
+              <li><strong>Resaltar celdas con valor menor que:</strong> Por ejemplo, notas inferiores a 5.</li>
+              <li><strong>Resaltar celdas iguales a:</strong> Por ejemplo, el valor "Pendiente".</li>
+              <li><strong>Resaltar celdas entre dos valores:</strong> Por ejemplo, fechas de un rango específico.</li>
+              <li><strong>Resaltar filas completas:</strong> Usando una fórmula que evalúe la primera columna.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ejemplo: colores en notas</strong>
+            Aplicar formato condicional a una columna de notas: verde para notas ≥ 9, amarillo para 7-8,9, naranja para 5-6,9, y rojo para notas &lt; 5. Esto permite identificar visualmente el rendimiento de los alumnos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formato condicional avanzado con fórmulas</h4>
+            <p>Las reglas más potentes usan fórmulas personalizadas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>=A1=TODAY():</strong> Resaltar celdas con la fecha de hoy.</li>
+              <li><strong>=FILA()=3:</strong> Resaltar toda la fila 3.</li>
+              <li><strong>=$A1="Urgente":</strong> Resaltar filas donde la columna A contenga "Urgente".</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una "Tabla de seguimiento de notas" con:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Tabla con 10 alumnos y 5 evaluaciones.</li>
+              <li>Formato condicional: verde para notas ≥ 8, rojo para notas &lt; 5.</li>
+              <li>Barra de datos en la columna de nota media.</li>
+              <li>Escala de colores (rojo-amarillo-verde) en la columna de nota final.</li>
+              <li>Regla personalizada para resaltar filas de alumnos con nota media inferior a 6.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 4 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de formato condicional muestra una barra proporcional al valor?</p>
+            <button class="quiz-opcion" data-valor="a">A. Escala de colores</button>
+            <button class="quiz-opcion" data-valor="b">B. Barras de datos</button>
+            <button class="quiz-opcion" data-valor="c">C. Iconos</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Aplicar formato condicional a una tabla de inventario: resaltar en rojo los productos con stock inferior a 5, en verde los superiores a 20, y aplicar una escala de colores a la columna de precio.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article
+      <article id="sesion-5" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Ordenación y filtrado de datos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Cuando una hoja de cálculo contiene muchos datos, necesitamos herramientas para organizarlos y encontrar información específica. La ordenación y el filtrado son dos funciones esenciales para gestionar grandes conjuntos de datos de forma eficiente.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ordenación de datos</h4>
+            <p>La ordenación reorganiza las filas según los valores de una o más columnas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Orden ascendente:</strong> De menor a mayor (A-Z, 0-9, fecha más antigua primero).</li>
+              <li><strong>Orden descendente:</strong> De mayor a menor (Z-A, 9-0, fecha más reciente primero).</li>
+              <li><strong>Orden por múltiples columnas:</strong> Primero ordenar por una columna, y en caso de empate, por otra.</li>
+            </ul>
+            <p class="mt-2"><strong>Cómo aplicar:</strong> Seleccionar los datos → Datos → Ordenar por columna → Ascendente/Descendente.</p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Cuidado al ordenar</strong>
+            Asegúrate de seleccionar TODOS los datos de la tabla (incluyendo encabezados) antes de ordenar. Si solo ordenas una columna, los datos se desincronizarán y perderás la correspondencia fila-dato.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Filtrado de datos</h4>
+            <p>El filtro oculta las filas que no cumplen determinadas condiciones, mostrando solo las relevantes:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Filtro básico:</strong> Datos → Crear filtro. Aparecen triángulos en los encabezados.</li>
+              <li><strong>Filtro por valor:</strong> Seleccionar qué valores mostrar (por ejemplo, solo "Aprobados").</li>
+              <li><strong>Filtro por condición:</strong> Definir condiciones personalizadas (mayor que, contiene, entre...).</li>
+              <li><strong>Filtro por color:</strong> Mostrar solo celdas con un color de fondo específico.</li>
+              <li><strong>Filtros múltiples:</strong> Aplicar filtros a varias columnas simultáneamente.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Filtros avanzados</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Filtro por rango de fechas:</strong> Mostrar solo datos de un período específico.</li>
+              <li><strong>Filtro por texto:</strong> "Contiene", "Empieza por", "Termina en", "No contiene".</li>
+              <li><strong>Filtro por número:</strong> "Mayor que", "Menor que", "Entre", "Igual a".</li>
+              <li><strong>Filtro vacío/no vacío:</strong> Mostrar u ocultar celdas vacías.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Combina formato condicional con filtros. Por ejemplo, filtra solo los alumnos con nota media inferior a 6 y aplica formato rojo para identificar rápidamente quiénes necesitan refuerzo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Usar la hoja de calificaciones de la sesión anterior:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Ordenar la tabla por nota media de mayor a menor.</li>
+              <li>Crear un filtro para mostrar solo alumnos aprobados.</li>
+              <li>Filtrar por nombre que contiene la letra "a".</li>
+              <li>Filtrar alumnos con nota de examen 1 superior a 7.</li>
+              <li>Quitar todos los filtros y verificar que se muestran todos los datos.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué debe hacerse antes de ordenar una tabla por una columna?</p>
+            <button class="quiz-opcion" data-valor="a">A. Seleccionar todos los datos de la tabla incluyendo encabezados.</button>
+            <button class="quiz-opcion" data-valor="b">B. Solo seleccionar la columna a ordenar.</button>
+            <button class="quiz-opcion" data-valor="c">C. No es necesario seleccionar nada.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué hace un filtro de datos?</p>
+            <button class="quiz-opcion" data-valor="a">A. Elimina las filas que no cumplen la condición.</button>
+            <button class="quiz-opcion" data-valor="b">B. Oculta las filas que no cumplen la condición.</button>
+            <button class="quiz-opcion" data-valor="c">C. Reordena las filas alfabéticamente.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Con una tabla de datos inventarios de al menos 15 productos, aplicar ordenación por precio y filtrado por categoría, mostrando solo los productos de una categoría específica.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article
+      <article id="sesion-6" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Gráficos: barras, circular, líneas. Selección del tipo adecuado</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los gráficos permiten visualizar datos de forma gráfica, facilitando la comprensión de tendencias, comparaciones y distribuciones. Elegir el tipo de gráfico adecuado según los datos es una habilidad fundamental en el análisis de datos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de gráficos principales</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Gráfico de barras:</strong> Compara cantidades entre categorías. Ideal para mostrar rankings o comparar elementos independientes.</li>
+              <li><strong>Gráfico de columnas:</strong> Similar al de barras pero con columnas verticales.</li>
+              <li><strong>Gráfico circular (tarta):</strong> Muestra proporciones de un todo. Ideal para porcentajes que suman 100%.</li>
+              <li><strong>Gráfico de líneas:</strong> Muestra tendencias a lo largo del tiempo. Ideal para series temporales.</li>
+              <li><strong>Gráfico de dispersión:</strong> Muestra la relación entre dos variables numéricas.</li>
+              <li><strong>Gráfico de áreas:</strong> Similar al de líneas pero con el área rellena. Muestra acumulación.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Regla para elegir gráfico</strong>
+            <strong>Comparar categorías:</strong> Barras/columnas. <strong>Mostrar partes de un todo:</strong> Circular/tarta. <strong>Tendencia temporal:</strong> Líneas. <strong>Relación entre variables:</strong> Dispersión. <strong>Acumulación:</strong> Áreas apiladas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cómo crear un gráfico en Google Sheets</h4>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Seleccionar los datos (incluyendo encabezados).</li>
+              <li>Insertar → Gráfico.</li>
+              <li>En el editor de gráficos, seleccionar el tipo deseado.</li>
+              <li>Personalizar: título, etiquetas de ejes, colores, leyenda.</li>
+              <li>Opcionalmente, insertar el gráfico como imagen o como objeto vinculado.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Personalización de gráficos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Título:</strong> Descriptivo y claro.</li>
+              <li><strong>Etiquetas de ejes:</strong> Unidades y nombres de las variables.</li>
+              <li><strong>Leyenda:</strong> Identifica las series de datos.</li>
+              <li><strong>Colores:</strong> Usar colores consistentes y accesibles.</li>
+              <li><strong>Línea de tendencia:</strong> Muestra la tendencia general de los datos.</li>
+              <li><strong>Valores de datos:</strong> Mostrar los números directamente en el gráfico.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Errores comunes</strong>
+            No usar gráfico circular si hay más de 6-7 categorías (se vuelve ilegible). No usar gráfico de líneas si los datos no son temporales o secuenciales. Siempre incluir un título descriptivo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear 3 gráficos diferentes a partir de una tabla de datos de ventas mensuales:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Gráfico de barras comparando ventas por producto.</li>
+              <li>Gráfico de líneas mostrando la tendencia mensual.</li>
+              <li>Gráfico circular con la cuota de mercado por producto.</li>
+              <li>Personalizar cada gráfico con títulos, leyendas y colores apropiados.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 6 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de gráfico es más adecuado para mostrar tendencias de ventas a lo largo de un año?</p>
+            <button class="quiz-opcion" data-valor="a">A. Circular</button>
+            <button class="quiz-opcion" data-valor="b">B. Barras</button>
+            <button class="quiz-opcion" data-valor="c">C. Líneas</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué gráfico muestra la proporción de cada parte respecto al total?</p>
+            <button class="quiz-opcion" data-valor="a">A. Circular (tarta)</button>
+            <button class="quiz-opcion" data-valor="b">B. Barras</button>
+            <button class="quiz-opcion" data-valor="c">C. Dispersión</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear al menos 3 gráficos diferentes con datos reales o inventados, seleccionando el tipo de gráfico más adecuado para cada caso y justificando la elección.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article
+      <article id="sesion-7" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Exportación, importación y protección. Formatos CSV, XLSX. Protección de hojas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las hojas de cálculo no son islas: necesitamos exportar datos a otros programas, importar datos externos y proteger la información sensible. En esta sesión aprenderemos los formatos de intercambio más utilizados y cómo asegurar nuestras hojas de cálculo.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formatos de exportación</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>XLSX:</strong> Formato estándar de Microsoft Excel. Conserva fórmulas, formatos, gráficos y funciones avanzadas. Ideal para compartir con usuarios de Excel.</li>
+              <li><strong>CSV (Comma-Separated Values):</strong> Texto plano con valores separados por comas. Universal, pero pierde formato, fórmulas y gráficos. Ideal para intercambio de datos puros.</li>
+              <li><strong>ODS:</strong> Formato abierto de LibreOffice Calc.</li>
+              <li><strong>PDF:</strong> Para impresión y distribución. Preserva el formato visual.</li>
+              <li><strong>TSV:</strong> Similar a CSV pero con tabuladores como separador.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>CSV vs. XLSX</strong>
+            <strong>CSV:</strong> Universal, ligero, pero solo texto (sin formato ni fórmulas). <strong>XLSX:</strong> Conserva todo (formatos, fórmulas, gráficos), pero solo se abre con compatibles con Excel.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Importación de datos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Importar CSV:</strong> Datos → Importar → Subir archivo → Seleccionar separador (coma, punto y coma, tabulador).</li>
+              <li><strong>Importar XLSX:</strong> Abrir con Google Sheets desde Google Drive.</li>
+              <li><strong>Importar desde URL:</strong> ImportRange para combinar datos de diferentes hojas de cálculo.</li>
+              <li><strong>Conectar con fuentes externas:</strong> Google Sheets permite conectar con bases de datos, APIs y servicios web.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Protección de hojas</h4>
+            <p>Para evitar modificaciones no deseadas, se pueden proteger hojas y rangos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Proteger hoja completa:</strong> Datos → Hoja protegida. Solo los editores autorizados pueden modificar.</li>
+              <li><strong>Proteger rangos específicos:</strong> Proteger solo las celdas con fórmulas o datos críticos.</li>
+              <li><strong>Permisos de edición:</strong> Seleccionar qué usuarios pueden editar rangos protegidos.</li>
+              <li><strong>Contraseña:</strong> Añadir contraseña para desproteger la hoja.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Buenas prácticas</strong>
+            Protege siempre las celdas con fórmulas importantes. Comparte hojas protegidas con compañeros para que solo puedan editar las celdas que les corresponden. Usa el formato CSV solo para datos puros, nunca para hojas con fórmulas complejas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Exportar la hoja de calificaciones a XLSX y CSV.</li>
+              <li>Abrir el archivo CSV en un editor de texto y observar su estructura.</li>
+              <li>Importar un archivo CSV de datos ficticios a Google Sheets.</li>
+              <li>Proteger la hoja de calificaciones para que solo el profesor pueda editar las notas.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué formato de archivo pierde las fórmulas y formatos al exportar?</p>
+            <button class="quiz-opcion" data-valor="a">A. XLSX</button>
+            <button class="quiz-opcion" data-valor="b">B. CSV</button>
+            <button class="quiz-opcion" data-valor="c">C. ODS</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué opción permite evitar que otros usuarios modifiquen determinadas celdas?</p>
+            <button class="quiz-opcion" data-valor="a">A. Proteger hoja/rango</button>
+            <button class="quiz-opcion" data-valor="b">B. Ordenar datos</button>
+            <button class="quiz-opcion" data-valor="c">C. Formato condicional</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Exportar un archivo a CSV, importarlo en un editor de texto, modificar un valor y volver a importarlo. Comparar el archivo original con el modificado.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 8 ==================== -->
+      <article
+      <article id="sesion-8" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">8</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: hoja de cálculo completa con funciones, gráficos y formato condicional</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Proyecto de unidad</strong>
+            Esta sesión está dedicada al desarrollo del proyecto final de la UD3. Cada alumno deberá crear una hoja de cálculo completa que integre todas las competencias trabajadas a lo largo de las 7 sesiones anteriores.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Enunciado del proyecto</h4>
+            <p>Crear una <strong>"Gestión de presupuesto personal mensual"</strong> con los siguientes elementos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Tabla de ingresos:</strong> Concepto, cantidad, fecha, tipo (fijo/variable).</li>
+              <li><strong>Tabla de gastos:</strong> Categoría, concepto, cantidad, fecha, forma de pago.</li>
+              <li><strong>Resumen mensual:</strong> Total de ingresos, total de gastos, balance neto.</li>
+              <li><strong>Funciones:</strong> SUMA, SI, CONTAR.SI, PROMEDIO, MAX, MIN.</li>
+              <li><strong>Formato condicional:</strong> Resaltar gastos superiores a 100€ en rojo, ingresos en verde.</li>
+              <li><strong>Al menos 2 gráficos:</strong> Distribución de gastos por categoría (circular) y evolución mensual (líneas).</li>
+              <li><strong>Filtros:</strong> Para buscar gastos por categoría o rango de fechas.</li>
+              <li><strong>Protección:</strong> Proteger las celdas con fórmulas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Criterios de evaluación</strong>
+            Correcta aplicación de funciones (25%), uso de referencias y formato (20%), gráficos adecuados y personalizados (20%), formato condicional y filtros (20%), presentación y organización (15%).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructura sugerida</h4>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Hoja 1 - Ingresos:</strong> Tabla con todos los ingresos del mes.</li>
+              <li><strong>Hoja 2 - Gastos:</strong> Tabla con todos los gastos del mes.</li>
+              <li><strong>Hoja 3 - Resumen:</strong> Tabla resumen con fórmulas que referencian las otras hojas.</li>
+              <li><strong>Hoja 4 - Gráficos:</strong> Gráficos que visualizan los datos del resumen.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Entrega</h4>
+            <p>El proyecto se entregará en dos formatos:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Enlace de Google Sheets:</strong> Para revisión interactiva y verificación de fórmulas.</li>
+              <li><strong>PDF:</strong> Capturas de las diferentes hojas para evaluación visual.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="c" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué función cuentas las celdas que cumplen una condición específica?</p>
+            <button class="quiz-opcion" data-valor="a">A. CONTAR</button>
+            <button class="quiz-opcion" data-valor="b">B. SUMA.SI</button>
+            <button class="quiz-opcion" data-valor="c">C. CONTAR.SI</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Recuerda</strong>
+            El proyecto debe demostrar dominio de todas las herramientas estudiadas. La coherencia entre las hojas (usar referencias entre hojas) es un aspecto que se valorará especialmente.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud2.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        ← UD2 · Procesadores de texto
+      </a>
+      <a href="ud4.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD4 · Bases de datos →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

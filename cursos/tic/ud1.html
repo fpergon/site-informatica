@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD1 · La sociedad de la información y la información digital · TIC I</title>
+  <meta name="description" content="Unidad Didáctica 1 de TIC I: Sociedad de la información y del conocimiento, impacto de las TIC, nuevos sectores laborales, Big Data, IoT, IA, robótica, sostenibilidad. Información digital: almacenamiento en binario, unidades de información, representación de datos, sistema hexadecimal, compresión." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="tic" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../tic.html" class="hover:underline">TIC I</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque A</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD1 · La sociedad de la información y la información digital</h1>
+      <p class="mt-3 text-brand-50/90">Comprender la sociedad de la información y del conocimiento, el impacto de las TIC en todos los ámbitos, los nuevos sectores laborales y tendencias tecnológicas, así como los fundamentos de la información digital: almacenamiento en binario, unidades de información, representación de datos, sistema hexadecimal y compresión.</p>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article
+      <article id="sesion-1" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Sociedad de la información y del conocimiento. Definición, ejemplos y exponentes</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicial establece el marco conceptual de toda la unidad. Es fundamental que el alumnado distinga claramente entre "sociedad de la información" y "sociedad del conocimiento", ya que estos conceptos guiarán el resto del curso.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Vivimos en un mundo transformado por la tecnología. Desde cómo nos comunicamos hasta cómo trabajamos, estudiamos o nos entretenemos, las tecnologías de la información y la comunicación (TIC) han cambiado radicalmente nuestra forma de vida. En esta sesión inicial vamos a explorar qué significa pertenecer a la sociedad de la información y cómo ha evolucionado hacia la sociedad del conocimiento.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la sociedad de la información?</h4>
+            <p>La <strong>sociedad de la información</strong> es un modelo socioeconómico en el que la creación, distribución y manipulación de la información se convierte en la actividad económica y cultural más significativa. Se caracteriza por:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Digitalización:</strong> La información se almacena y transmite en formato digital (0 y 1).</li>
+              <li><strong>Conectividad:</strong> Las redes de comunicación conectan personas y dispositivos en todo el mundo.</li>
+              <li><strong>Acceso universal:</strong> El acceso a la información se considera un derecho fundamental.</li>
+              <li><strong>Innovación tecnológica:</strong> El desarrollo tecnológico impulsado por la demanda de información.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato histórico</strong>
+            El término "sociedad de la información" fue popularizado por el informe de la Unión Europea "La sociedad europea de la información" (1996). Sin embargo, fue el sociólogo Manuel Castolls quien mejor definió este concepto en su obra "La era de la información" (1996-1998).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">De la información al conocimiento</h4>
+            <p>La <strong>sociedad del conocimiento</strong> es la evolución natural de la sociedad de la información. No basta con tener acceso a datos, sino que es necesario transformarlos en información útil y, finalmente, en conocimiento aplicable. Esta transición sigue la pirámide:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Datos:</strong> Hechos brutos sin contexto (un número, una palabra, una cifra).</li>
+              <li><strong>Información:</strong> Datos organizados y con significado (una tabla con ventas mensuales).</li>
+              <li><strong>Conocimiento:</strong> Información interpretada y aplicada a un contexto (estrategia basada en las ventas).</li>
+              <li><strong>Sabiduría:</strong> Capacidad de tomar decisiones correctas basadas en el conocimiento acumulado.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Exponentes y ejemplos</h4>
+            <p>Los principales exponentes de esta transformación incluyen:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Empresas tecnológicas:</strong> Google, Apple, Microsoft, Amazon, Meta (antigua Facebook). Estas empresas han revolucionado industrias completas.</li>
+              <li><strong>Instituciones:</strong> Organismos internacionales como la UIT (Unión Internacional de Telecomunicaciones) y la ONU promueven el acceso universal a las TIC.</li>
+              <li><strong>Ejemplos cotidianos:</strong> El comercio electrónico (Amazon, eBay), las redes sociales (Instagram, TikTok), el teletrabajo (Zoom, Teams) y la educación en línea (Google Classroom, Moodle).</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad grupal</strong>
+            En grupos de 3-4 alumnos, identificad 5 ejemplos de cómo las TIC han cambiado un sector tradicional (educación, sanidad, comercio, transporte o banca). Preparad una presentación breve de 3 minutos para exponer vuestras conclusiones.
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es la sociedad de la información?</p>
+            <button class="quiz-opcion" data-valor="a">A. Un modelo donde solo los expertos acceden a la información.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un modelo socioeconómico donde la información es la actividad económica más significativa.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un periodo histórico que comenzó con la invención de la imprenta.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuál es el siguiente nivel en la pirámide de la información después de los datos?</p>
+            <button class="quiz-opcion" data-valor="a">A. Información</button>
+            <button class="quiz-opcion" data-valor="b">B. Conocimiento</button>
+            <button class="quiz-opcion" data-valor="c">C. Sabiduría</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Redactar un párrafo de 150-200 palabras explicando la diferencia entre sociedad de la información y sociedad del conocimiento, con al menos dos ejemplos reales.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article
+      <article id="sesion-2" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Impacto social de las TIC. Redes sociales, comercio electrónico, creatividad digital, protección de datos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las TIC han transformado todos los aspectos de la vida social: cómo nos comunicamos, cómo compramos, cómo trabajamos y cómo nos expresamos creativamente. En esta sesión analizaremos el impacto positivo y negativo de esta transformación, así como la importancia de proteger nuestros datos personales en la era digital.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Impacto de las redes sociales</h4>
+            <p>Las redes sociales se han convertido en el medio de comunicación dominante del siglo XXI. Plataformas como Instagram, TikTok, X (antes Twitter) o LinkedIn han cambiado la forma en que nos relacionamos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Impacto positivo:</strong> Conexión global, movilización social, acceso a información, oportunidades laborales, expresión artística y creativa.</li>
+              <li><strong>Impacto negativo:</strong> Adicción digital, comparación social, ciberacoso, desinformación, pérdida de privacidad, efecto burbuja (solo vemos contenido que confirma nuestras creencias).</li>
+              <li><strong>Datos relevantes:</strong> Más de 4.900 millones de personas usan redes sociales en el mundo. El usuario medio dedica 2 horas y media diarias a estas plataformas.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Dato preocupante</strong>
+            Según un estudio de la OMS (2024), el 15% de los adolescentes entre 13 y 15 años ha sufrido ciberacoso. Las redes sociales, aunque útiles, pueden ser un espacio hostil si no se usan de forma responsable.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Comercio electrónico</h4>
+            <p>El comercio electrónico (e-commerce) ha revolucionado el sector retail. En España, las ventas online representan ya más del 15% del comercio total. Los principales modelos son:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>B2C (Business to Consumer):</strong> Venta directa al consumidor final (Amazon, El Corte Inglés Online).</li>
+              <li><strong>B2B (Business to Business):</strong> Ventas entre empresas (Alibaba, proveedores mayoristas).</li>
+              <li><strong>C2C (Consumer to Consumer):</strong> Ventas entre particulares (Wallapop, eBay, Vinted).</li>
+              <li><strong>Marketplace:</strong> Plataformas que conectan vendedores y compradores (Amazon Marketplace, Etsy).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Creatividad digital</h4>
+            <p>Las herramientas digitales han democratizado la creación de contenido. Cualquier persona puede crear y compartir:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Diseño gráfico:</strong> Canva, Adobe Express, Figma.</li>
+              <li><strong>Edición de vídeo:</strong> DaVinci Resolve, CapCut, iMovie.</li>
+              <li><strong>Música:</strong> GarageBand, LMMS, BandLab.</li>
+              <li><strong>Fotografía:</strong> Snapseed, Lightroom Mobile.</li>
+              <li><strong>Escritura:</strong> Blogs, WordPress, Medium.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>_CREATORS ECONOMY</strong>
+            La economía de creadores mueve más de 100.000 millones de dólares anuales. Plataformas como YouTube, TikTok y Twitch permiten monetizar el contenido creativo, creando nuevos modelos de negocio y profesiones inéditas hace una década.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Protección de datos</h4>
+            <p>El <strong>Reglamento General de Protección de Datos (RGPD)</strong> de la Unión Europea regula cómo se recogen, almacenan y utilizan los datos personales. Derechos principales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Derecho de acceso:</strong> Conocer qué datos tenemos almacenados sobre ti.</li>
+              <li><strong>Derecho de rectificación:</strong> Corregir datos inexactos.</li>
+              <li><strong>Derecho de supresión:</strong> Solicitar la eliminación de tus datos ("derecho al olvido").</li>
+              <li><strong>Derecho de portabilidad:</strong> Recibir tus datos en un formato estructurado.</li>
+              <li><strong>Derecho de oposición:</strong> Oponerte al tratamiento de tus datos para fines específicos.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Revisa periódicamente la configuración de privacidad en tus redes sociales. En Instagram, ve a Configuración → Privacidad y revisa quién puede ver tus publicaciones, etiquetarte o enviarte mensajes.
+          </div>
+
+          <!-- QUIZ SESIÓN 2 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué modelo de comercio electrónico representa Wallapop?</p>
+            <button class="quiz-opcion" data-valor="a">A. B2C</button>
+            <button class="quiz-opcion" data-valor="b">B. B2B</button>
+            <button class="quiz-opcion" data-valor="c">C. C2C</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué derecho permite eliminar tus datos personales de un servicio?</p>
+            <button class="quiz-opcion" data-valor="a">A. Derecho de acceso</button>
+            <button class="quiz-opcion" data-valor="b">B. Derecho de supresión</button>
+            <button class="quiz-opcion" data-valor="c">C. Derecho de portabilidad</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Investigar y exponer en parejas un caso real de impacto de las TIC en un sector (sanidad, educación, banca o agricultura), analizando ventajas, inconvenientes y medidas de protección de datos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article
+      <article id="sesion-3" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Nuevos sectores laborales y tendencias. Big Data, IoT, IA, robótica, sostenibilidad</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La revolución digital no solo ha creado nuevas formas de comunicación, sino que ha generado sectores laborales enteramente nuevos. Profesiones que no existían hace 20 años son hoy las más demandadas del mercado. En esta sesión exploraremos las principales tendencias tecnológicas que están moldeando el futuro del trabajo.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Big Data y analítica de datos</h4>
+            <p>El <strong>Big Data</strong> se refiere al análisis de conjuntos de datos masivos para encontrar patrones, tendencias y correlaciones. Su importancia radica en que permite a las empresas tomar decisiones basadas en datos reales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Volumen:</strong> Se generan 2,5 quintillones de datos al día en el mundo.</li>
+              <li><strong>Velocidad:</strong> Los datos se procesan en tiempo real (redes sociales, sensores IoT).</li>
+              <li><strong>Variiedad:</strong> Datos estructurados (tablas), semiestructurados (JSON) y no estructurados (imágenes, texto).</li>
+              <li><strong>Profesiones:</strong> Data Scientist, Data Analyst, Data Engineer, Business Intelligence Specialist.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato curioso</strong>
+            En 2025, se estima que el 70% de las empresas medianas y grandes utilizarán alguna forma de analítica de datos avanzada para la toma de decisiones estratégicas. El Data Science se ha convertido en una de las carreras más demandadas del siglo XXI.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Internet de las Cosas (IoT)</h4>
+            <p>El <strong>Internet of Things (IoT)</strong> conecta dispositivos cotidianos a Internet para que recopilen y compartan datos automáticamente:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Dispositivos wearables:</strong> Smartwatches, pulseras de actividad que monitorizan salud.</li>
+              <li><strong>Hogar inteligente:</strong> Termostatos Nest, bombillas Philips Hue, cerraduras inteligentes.</li>
+              <li><strong>Ciudades inteligentes:</strong> Semáforos inteligentes, contenedores con sensores, aparcamiento conectado.</li>
+              <li><strong>Agricultura de precisión:</strong> Sensores de humedad, drones de vigilancia, riego automatizado.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Inteligencia Artificial</h4>
+            <p>La <strong>IA</strong> simula procesos de inteligencia humana en máquinas. Aplicaciones actuales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Procesamiento de lenguaje natural:</strong> ChatGPT, asistentes virtuales (Siri, Alexa).</li>
+              <li><strong>Visión por computadora:</strong> Reconocimiento facial, coches autónomos.</li>
+              <li><strong>Medicina:</strong> Diagnóstico asistido por IA, descubrimiento de fármacos.</li>
+              <li><strong>Profesiones:</strong> AI Engineer, Machine Learning Engineer, AI Ethics Specialist.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Reflexión crítica</strong>
+            La IA generativa (como ChatGPT, DALL-E o Midjourney) está transformando sectores creativos y profesionales. Es importante conocer sus limitaciones: puede generar información falsa ("alucinaciones"), sesgos inherentes a los datos de entrenamiento y cuestiones éticas sobre autoría y derechos de autor.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Robótica y sostenibilidad</h4>
+            <p>La robótica avanza rápidamente y se aplica en múltiples sectores:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Industria:</strong> Robots de ensamblaje en fábricas (automoción, electrónica).</li>
+              <li><strong>Sanidad:</strong> Cirugía robótica (Da Vinci), robots de rehabilitación.</li>
+              <li><strong>Exploración:</strong> Drones de inspección, robots submarinos, exploración espacial.</li>
+            </ul>
+            <p class="mt-2">En cuanto a la <strong>sostenibilidad</strong>, las TIC contribuyen a:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Energías renovables:</strong> Gestión inteligente de redes eléctricas.</li>
+              <li><strong>Economía circular:</strong> Plataformas de reutilización y reciclaje.</li>
+              <li><strong>Reducción de emisiones:</strong> Teletrabajo, optimización logística,监控 ambiental.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad grupal</strong>
+            En equipos de 4, investigad una de estas tendencias (Big Data, IoT, IA, robótica o sostenibilidad) y diseñad un "perfil profesional del futuro" que combine tecnología con un sector específico. Preparad un cartel informativo con herramientas, habilidades requeridas y ejemplos reales de aplicaciones.
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué son las "3 V" del Big Data?</p>
+            <button class="quiz-opcion" data-valor="a">A. Verdad, Verificación, Validación</button>
+            <button class="quiz-opcion" data-valor="b">B. Volumen, Velocidad, Variiedad</button>
+            <button class="quiz-opcion" data-valor="c">C. Valor, Verificación, Visualización</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es el IoT (Internet of Things)?</p>
+            <button class="quiz-opcion" data-valor="a">A. Conexión de dispositivos cotidianos a Internet para recopilar datos.</button>
+            <button class="quiz-opcion" data-valor="b">B. Una red social exclusiva para empresas tecnológicas.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un protocolo de seguridad para redes domésticas.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Investigar y presentar una profesión emergente relacionada con la tecnología (Data Scientist, AI Engineer, IoT Specialist, etc.), describiendo sus funciones, herramientas que utiliza y formación necesaria.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article
+      <article id="sesion-4" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Información digital: almacenamiento en binario. Unidades de información</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Todo lo que vemos en una pantalla, escuchamos a través de un altavoz o imprimimos en papel procede de una secuencia de ceros y unos. En esta sesión profundizaremos en el sistema binario, la base de todo el procesamiento digital, y en las unidades que utilizamos para medir la información.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>¿Por qué binario?</strong>
+            Los ordenadores utilizan circuitos electrónicos que pueden estar en dos estados: encendido (1) o apagado (0). Esta simplicidad hace que el sistema binario sea la base natural del procesamiento digital. Cada dígito binario se llama <strong>bit</strong> (binary digit).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El sistema binario</h4>
+            <p>El sistema binario es un sistema de numeración en base 2. Solo utiliza dos dígitos: 0 y 1. Cada posición representa una potencia de 2:</p>
+            <div class="mt-2 overflow-x-auto">
+              <table class="w-full text-xs border-collapse">
+                <thead>
+                  <tr class="bg-brand-50">
+                    <th class="border border-slate-300 px-3 py-1.5 text-left">Posición</th>
+                    <th class="border border-slate-300 px-3 py-1.5">7</th>
+                    <th class="border border-slate-300 px-3 py-1.5">6</th>
+                    <th class="border border-slate-300 px-3 py-1.5">5</th>
+                    <th class="border border-slate-300 px-3 py-1.5">4</th>
+                    <th class="border border-slate-300 px-3 py-1.5">3</th>
+                    <th class="border border-slate-300 px-3 py-1.5">2</th>
+                    <th class="border border-slate-300 px-3 py-1.5">1</th>
+                    <th class="border border-slate-300 px-3 py-1.5">0</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Potencia de 2</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">128</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">64</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">32</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">16</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">8</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">4</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">2</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-2"><strong>Ejemplo:</strong> El número binario 1011 equivale a: (1×8) + (0×4) + (1×2) + (1×1) = 8 + 0 + 2 + 1 = <strong>11</strong> en decimal.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Unidades de información</h4>
+            <p>Para medir la cantidad de información utilizamos las siguientes unidades:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bit:</strong> La unidad más pequeña. Un solo 0 o 1.</li>
+              <li><strong>Byte (B):</strong> Grupo de 8 bits. Puede representar 256 valores diferentes (0-255).</li>
+              <li><strong>Kilobyte (KB):</strong> 1 KB = 1.024 bytes (aproximadamente 1.000 bytes).</li>
+              <li><strong>Megabyte (MB):</strong> 1 MB = 1.024 KB = 1.048.576 bytes.</li>
+              <li><strong>Gigabyte (GB):</strong> 1 GB = 1.024 MB = 1.073.741.824 bytes.</li>
+              <li><strong>Terabyte (TB):</strong> 1 TB = 1.024 GB = 1.099.511.627.776 bytes.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Tabla de referencia</strong>
+            Para orientar las capacidades de almacenamiento: un mensaje de texto ocupa aproximadamente 1 KB; una canción MP3 de alta calidad ocupa entre 5-10 MB; una película en HD ocupa entre 2-5 GB; un disco duro moderno tiene capacidad de 1-5 TB.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cálculo de capacidades</h4>
+            <p>Para calcular cuántos valores se pueden representar con <em>n</em> bits, se utiliza la fórmula:</p>
+            <p class="mt-1 text-center font-mono text-lg font-bold bg-brand-50 rounded-lg py-2">Valores posibles = 2ⁿ</p>
+            <p class="mt-2">Con 1 byte (8 bits): 2⁸ = 256 valores. Con 2 bytes (16 bits): 2¹⁶ = 65.536 valores.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Convertir los siguientes números binarios a decimal:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>1101</li>
+              <li>10000000</li>
+              <li>11111111</li>
+              <li>01010101</li>
+            </ol>
+            <p class="mt-2">Calcular cuántos valores diferentes se pueden representar con:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal" start="5">
+              <li>4 bits</li>
+              <li>12 bits</li>
+              <li>24 bits (color RGB)</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 4 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuántos bits tiene un byte?</p>
+            <button class="quiz-opcion" data-valor="a">A. 4 bits</button>
+            <button class="quiz-opcion" data-valor="b">B. 8 bits</button>
+            <button class="quiz-opcion" data-valor="c">C. 16 bits</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué valor decimal equivale al binario 1010?</p>
+            <button class="quiz-opcion" data-valor="a">A. 8</button>
+            <button class="quiz-opcion" data-valor="b">B. 11</button>
+            <button class="quiz-opcion" data-valor="c">C. 10</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Realizar un ejercicio de conversión binario-decimal y decimal-binario con 10 números. Explicar el proceso paso a paso y justificar cada conversión.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article
+      <article id="sesion-5" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Representación de datos. Números, texto, imágenes, audio, vídeo. Sistema hexadecimal</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La información digital se representa de diferentes maneras según su tipo. Números, texto, imágenes, sonidos y vídeos se almacenan todos en binario, pero cada tipo de dato tiene su propia forma de codificación. En esta sesión estudiaremos cómo se representan estos distintos tipos de información y el sistema hexadecimal como forma abreviada de representar datos binarios.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Representación numérica</h4>
+            <p>Los números se almacenan en el ordenador en sistema binario. Para representar números negativos se utiliza la <strong>complemento a dos</strong>:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Enteros sin signo:</strong> Solo representan valores positivos. Un byte sin signo va de 0 a 255.</li>
+              <li><strong>Enteros con signo:</strong> Un bit se reserva para el signo (0 positivo, 1 negativo). Un byte con signo va de -128 a 127.</li>
+              <li><strong>Números reales:</strong> Se representan en formato de punto flotante (IEEE 754), que incluye signo, exponente y mantisa.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Representación de texto</h4>
+            <p>Cada carácter se asigna a un número mediante tablas de codificación:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>ASCII:</strong> American Standard Code for Information Interchange. Utiliza 7 bits (128 caracteres): letras, números, símbolos de puntuación y caracteres de control.</li>
+              <li><strong>ISO-8859-1 (Latin-1):</strong> Extensión de ASCII con 8 bits (256 caracteres). Incluye caracteres acentuados y especiales del español.</li>
+              <li><strong>Unicode:</strong> Estándar universal con más de 143.000 caracteres. Incluye todos los alfabetos del mundo, emoticonos y símbolos especiales.</li>
+              <li><strong>UTF-8:</strong> La codificación Unicode más utilizada. Es de longitud variable: los caracteres ASCII ocupan 1 byte, los acentuados 2-3 bytes, etc.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo:</strong> La letra "A" en ASCII es 65 (01000001 en binario, 41 en hexadecimal).</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Dato curioso</strong>
+            El primer emoji fue creado en 1999 por Shigetaka Kurita en Japón. Hoy, Unicode incluye más de 3.600 emojis. El emoji más usado en el mundo es el "cara con lágrimas de alegría" 😂.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Representación de imágenes</h4>
+            <p>Las imágenes digitales se componen de <strong>píxeles</strong> (puntos de color). Cada píxel se almacena como una combinación de colores:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Escala de grises:</strong> 1 byte por píxel (256 tonos posibles).</li>
+              <li><strong>Color RGB:</strong> 3 bytes por píxel (1 byte por canal: Rojo, Verde, Azul). Permite 16,7 millones de colores.</li>
+              <li><strong>RGBA:</strong> 4 bytes por píxel. Incluye un canal de transparencia (Alpha).</li>
+              <li><strong>Resolución:</strong> Una imagen de 1920×1080 píxeles (Full HD) tiene 2.073.600 píxeles.</li>
+            </ul>
+            <p class="mt-2"><strong>Formatos principales:</strong></p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>JPEG:</strong> Compresión con pérdida. Ideal para fotos.</li>
+              <li><strong>PNG:</strong> Sin pérdida, soporta transparencia. Ideal para gráficos y logos.</li>
+              <li><strong>GIF:</strong> Animaciones simples, 256 colores.</li>
+              <li><strong>SVG:</strong> Formato vectorial. Se scala sin perder calidad.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Representación de audio</h4>
+            <p>El sonido se digitaliza mediante <strong>muestreo</strong>: se mide la amplitud de la onda sonora a intervalos regulares:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Frecuencia de muestreo:</strong> Cuántas muestras por segundo. CD: 44.100 Hz. Calidad de voz: 8.000 Hz.</li>
+              <li><strong>Profundidad de bits:</strong> Precisión de cada muestra. CD: 16 bits (65.536 niveles posibles).</li>
+              <li><strong>Canales:</strong> Mono (1) o estéreo (2).</li>
+              <li><strong>Formatos:</strong> WAV (sin compresión), MP3 (con pérdida), FLAC (sin pérdida), OGG.</li>
+            </ul>
+            <p class="mt-2"><strong>Cálculo:</strong> Un minuto de CD de audio: 44.100 muestras/s × 16 bits × 2 canales × 60 s = 10.584.000 bits ≈ 10,5 MB.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Representación de vídeo</h4>
+            <p>El vídeo es una secuencia de imágenes (fotogramas) reproducidas rápidamente junto con audio:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Tasa de fotogramas:</strong> 24 fps (cine), 30 fps (televisión), 60 fps (videojuegos).</li>
+              <li><strong>Resolución:</strong> HD (1280×720), Full HD (1920×1080), 4K (3840×2160), 8K (7680×4320).</li>
+              <li><strong>Compresión:</strong> H.264, H.265 (HEVC), VP9, AV1.</li>
+              <li><strong>Formatos:</strong> MP4, MKV, AVI, MOV.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sistema hexadecimal</h4>
+            <p>El sistema hexadecimal (base 16) se utiliza como forma abreviada de representar datos binarios. Cada dígito hexadecimal equivale exactamente a 4 bits:</p>
+            <div class="mt-2 overflow-x-auto">
+              <table class="w-full text-xs border-collapse">
+                <thead>
+                  <tr class="bg-brand-50">
+                    <th class="border border-slate-300 px-3 py-1.5">Hexadecimal</th>
+                    <th class="border border-slate-300 px-3 py-1.5">0</th>
+                    <th class="border border-slate-300 px-3 py-1.5">1</th>
+                    <th class="border border-slate-300 px-3 py-1.5">2</th>
+                    <th class="border border-slate-300 px-3 py-1.5">3</th>
+                    <th class="border border-slate-300 px-3 py-1.5">4</th>
+                    <th class="border border-slate-300 px-3 py-1.5">5</th>
+                    <th class="border border-slate-300 px-3 py-1.5">6</th>
+                    <th class="border border-slate-300 px-3 py-1.5">7</th>
+                    <th class="border border-slate-300 px-3 py-1.5">8</th>
+                    <th class="border border-slate-300 px-3 py-1.5">9</th>
+                    <th class="border border-slate-300 px-3 py-1.5">A</th>
+                    <th class="border border-slate-300 px-3 py-1.5">B</th>
+                    <th class="border border-slate-300 px-3 py-1.5">C</th>
+                    <th class="border border-slate-300 px-3 py-1.5">D</th>
+                    <th class="border border-slate-300 px-3 py-1.5">E</th>
+                    <th class="border border-slate-300 px-3 py-1.5">F</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Decimal</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">0</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">2</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">3</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">4</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">5</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">6</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">7</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">8</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">9</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">10</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">11</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">12</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">13</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">14</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">15</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Binario</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">0000</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">0001</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">0010</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">0011</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">0100</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">0101</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">0110</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">0111</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1000</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1001</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1010</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1011</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1100</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1101</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1110</td>
+                    <td class="border border-slate-300 px-3 py-1.5 text-center">1111</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-2"><strong>Ejemplo:</strong> El byte 11010110 en binario equivale a D6 en hexadecimal (1101 = D, 0110 = 6).</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>¿Para qué sirve el hexadecimal?</strong>
+            Se usa en direcciones MAC, colores web (#FF5733), codificación de archivos y depuración de程序. Es mucho más compacto y legible que el binario para los humanos.
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuántos colores diferentes puede representar un píxel RGB de 8 bits por canal?</p>
+            <button class="quiz-opcion" data-valor="a">A. 16,7 millones</button>
+            <button class="quiz-opcion" data-valor="b">B. 256</button>
+            <button class="quiz-opcion" data-valor="c">C. 65.536</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué equivalencia tiene el carácter "A" en ASCII?</p>
+            <button class="quiz-opcion" data-valor="a">A. 97 en decimal</button>
+            <button class="quiz-opcion" data-valor="b">B. 48 en decimal</button>
+            <button class="quiz-opcion" data-valor="c">C. 65 en decimal</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Representar en binario, hexadecimal y decimal: la letra "Z", el color rojo puro (#FF0000) y calcular el tamaño en bytes de una imagen de 800×600 píxeles en escala de grises.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article
+      <article id="sesion-6" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Compresión y archivos. Compresión con y sin pérdida. Formatos de archivo</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los archivos digitales pueden ocupar mucho espacio en disco. La compresión permite reducir su tamaño para ahorrar almacenamiento y acelerar las transmisiones. En esta sesión estudiaremos los dos tipos principales de compresión y los formatos de archivo más utilizados.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es la compresión?</h4>
+            <p>La compresión es el proceso de reducir el tamaño de un archivo eliminando redundancias en los datos. Existen dos tipos fundamentales:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Compresión sin pérdida:</strong> El archivo original se puede reconstruir exactamente igual. No se pierde ningún dato.</li>
+              <li><strong>Compresión con pérdida:</strong> Se eliminan datos considerados menos importantes para lograr una mayor reducción del tamaño. No se puede recuperar el archivo original exactamente.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Clave para recordar</strong>
+            Usa compresión <strong>sin pérdida</strong> para documentos de texto, código fuente y datos críticos. Usa compresión <strong>con pérdida</strong> para imágenes, audio y vídeo donde la pérdida de calidad es imperceptible.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Compresión sin pérdida</h4>
+            <p>Los algoritmos de compresión sin pérdida eliminan redundancias sin perder información:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>LZW (Lempel-Ziv-Welch):</strong> Utilizado en GIF y TIFF. Sustituye patrones repetidos por referencias.</li>
+              <li><strong>Huffman:</strong> Asigna códigos más cortos a los caracteres más frecuentes.</li>
+              <li><strong>DEFLATE:</strong> Combina LZ77 y Huffman. Utilizado en ZIP, PNG y GZIP.</li>
+              <li><strong>LZMA/LZMA2:</strong> Algoritmo avanzado de 7-Zip. Mejor ratio de compresión que DEFLATE.</li>
+            </ul>
+            <p class="mt-2"><strong>Formatos de archivo comprimido:</strong> ZIP, 7Z, TAR.GZ, RAR. Estos formatos agrupan varios archivos en uno solo y los comprimen.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Compresión con pérdida</h4>
+            <p>Estos algoritmos eliminan información que el oído humano o el ojo humano no percibe fácilmente:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>JPEG:</strong> Compresión de imágenes. Elimina frecuencias de color que el ojo no distingue bien. Ajustable: mayor compresión = menor calidad.</li>
+              <li><strong>MP3/AAC:</strong> Compresión de audio. Elimina sonidos fuera del rango perceptible por el oído humano.</li>
+              <li><strong>H.264/H.265:</strong> Compresión de vídeo. EliminaFrames similares y detallos de movimiento rápido.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Ejemplo práctico</strong>
+            Una foto de 10 MB en formato RAW puede comprimirse a 2 MB en JPEG (80% de reducción) con una pérdida de calidad casi imperceptible para el ojo humano. Sin embargo, si guardas esa foto JPEG y la vuelves a comprimir varias veces, la degradación acumulada será visible.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formatos de archivo principales</h4>
+            <div class="mt-2 overflow-x-auto">
+              <table class="w-full text-xs border-collapse">
+                <thead>
+                  <tr class="bg-brand-50">
+                    <th class="border border-slate-300 px-3 py-1.5 text-left">Tipo</th>
+                    <th class="border border-slate-300 px-3 py-1.5 text-left">Formatos</th>
+                    <th class="border border-slate-300 px-3 py-1.5 text-left">Características</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Texto</td>
+                    <td class="border border-slate-300 px-3 py-1.5">TXT, DOCX, PDF, ODT, RTF</td>
+                    <td class="border border-slate-300 px-3 py-1.5">Documentos con formato y estilos</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Imagen</td>
+                    <td class="border border-slate-300 px-3 py-1.5">JPEG, PNG, GIF, SVG, BMP, TIFF</td>
+                    <td class="border border-slate-300 px-3 py-1.5">Fotos, gráficos, iconos, ilustraciones</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Audio</td>
+                    <td class="border border-slate-300 px-3 py-1.5">MP3, WAV, FLAC, AAC, OGG</td>
+                    <td class="border border-slate-300 px-3 py-1.5">Música, voz, efectos de sonido</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Vídeo</td>
+                    <td class="border border-slate-300 px-3 py-1.5">MP4, MKV, AVI, MOV, WEBM</td>
+                    <td class="border border-slate-300 px-3 py-1.5">Películas, clips, streaming</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Comprimido</td>
+                    <td class="border border-slate-300 px-3 py-1.5">ZIP, 7Z, RAR, TAR.GZ</td>
+                    <td class="border border-slate-300 px-3 py-1.5">Archivos agrupados y comprimidos</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 px-3 py-1.5 font-semibold">Ejecutable</td>
+                    <td class="border border-slate-300 px-3 py-1.5">EXE, APK, DMG, APP</td>
+                    <td class="border border-slate-300 px-3 py-1.5">Programas instalables</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Realizar las siguientes tareas:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Tomar una imagen JPEG de alta calidad y comprimirla a diferentes niveles (25%, 50%, 75%). Comparar el tamaño y la calidad visual.</li>
+              <li>Crear un archivo de texto de al menos 1 KB, comprimirlo en ZIP y 7Z, y comparar los tamaños resultantes.</li>
+              <li>Grabar un audio de 10 segundos en WAV y convertirlo a MP3 con diferentes calidades. Comparar tamaños.</li>
+              <li>Investigar: ¿por qué los archivos RAW de fotografía son mucho más pesados que los JPEG?</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 6 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de compresión se utiliza en archivos ZIP?</p>
+            <button class="quiz-opcion" data-valor="a">A. Sin pérdida</button>
+            <button class="quiz-opcion" data-valor="b">B. Con pérdida</button>
+            <button class="quiz-opcion" data-valor="c">C. Ambas</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué formato de imagen es ideal para logos y gráficos que necesitan transparencia?</p>
+            <button class="quiz-opcion" data-valor="a">A. JPEG</button>
+            <button class="quiz-opcion" data-valor="b">B. PNG</button>
+            <button class="quiz-opcion" data-valor="c">C. BMP</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Producto de la unidad</strong>
+            Como cierre de la UD1, cada alumno deberá crear un "Glosario Digital" que incluya todas las unidades de información, tipos de compresión, formatos de archivo y sistemas numéricos estudiados, con al menos 20 definiciones y ejemplos prácticos.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <span class="text-sm text-slate-400">← Primera unidad</span>
+      <a href="ud2.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD2 · Procesadores de texto →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

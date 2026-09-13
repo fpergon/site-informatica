@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD6 · Introducción a la programación · TIC I</title>
+  <meta name="description" content="Unidad Didáctica 6 de TIC I: Algoritmos y diagramas de flujo, de bloques a código Python, tipos de datos, variables, constantes, operadores, expresiones, interacción con el usuario (print/input), estructuras de control (if/elif/else, for, while), estructuras de datos (listas, tuplas, diccionarios), funciones, depuración." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="tic" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../tic.html" class="hover:underline">TIC I</a>
+        <span>·</span>
+        <span>3.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque E</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD6 · Introducción a la programación</h1>
+      <p class="mt-3 text-brand-50/90">Aprender los fundamentos de la programación: algoritmos y diagramas de flujo, transición de programación visual a código Python, tipos de datos, variables, constantes, operadores, expresiones, interacción con el usuario, estructuras de control, estructuras de datos, funciones y depuración.</p>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article
+      <article id="sesion-1" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Algoritmos y diagramas de flujo. Definición, tipos de figuras, convenciones</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicial es la puerta de entrada al mundo de la programación. Es fundamental que el alumnado comprenda que programar no es "escribir código", sino "resolver problemas de forma lógica y estructurada". Los algoritmos y diagramas de flujo son herramientas de pensamiento que van más allá de cualquier lenguaje de programación.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Programar es dar instrucciones a un ordenador para que resuelva un problema. Pero antes de escribir código, necesitamos planificar la solución. Los algoritmos y los diagramas de flujo son las herramientas fundamentales para esta planificación. En esta sesión aprenderemos a diseñar algoritmos y a representarlos gráficamente.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un algoritmo?</h4>
+            <p>Un <strong>algoritmo</strong> es un conjunto finito, ordenado y bien definido de instrucciones o pasos que permiten resolver un problema o realizar una tarea. Ejemplos cotidianos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Receta de cocina:</strong> Lista ordenada de pasos para preparar un plato.</li>
+              <li><strong>Montaje de muebles:</strong> Instrucciones paso a paso de IKEA.</li>
+              <li><strong>GPS:</strong> Instrucciones de navegación desde origen hasta destino.</li>
+              <li><strong>Protocolo médico:</strong> Secuencia de pasos para realizar un diagnóstico.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Características de un buen algoritmo</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Finite (finito):</strong> Debe terminar en algún momento.</li>
+              <li><strong>Preciso:</strong> Cada paso debe estar claramente definido.</li>
+              <li><strong>Bien definido:</strong> No debe haber ambigüedades.</li>
+              <li><strong>Con entrada:</strong> Recibe datos iniciales.</li>
+              <li><strong>Con salida:</strong> Produce un resultado.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Pseudocódigo</strong>
+            El pseudocódigo es una representación textual de un algoritmo que usa lenguaje natural combinado con estructuras de programación. No es código ejecutable, pero ayuda a planificar la solución antes de escribir código real.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Diagramas de flujo</h4>
+            <p>Un <strong>diagrama de flujo</strong> es la representación gráfica de un algoritmo. Utiliza figuras con significados específicos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Óvalo (Terminal):</strong> Inicio y fin del algoritmo.</li>
+              <li><strong>Paralelogramo (Entrada/Salida):</strong> Leer datos o mostrar resultados.</li>
+              <li><strong>Rectángulo (Proceso):</strong> Operación, cálculo o asignación.</li>
+              <li><strong>Diamante (Decisión):</strong> Pregunta con respuesta sí/no. Conduce a dos caminos diferentes.</li>
+              <li><strong>Flechas (Flujo):</strong> Conectan las figuras mostrando el orden de ejecución.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo: Algoritmo para calcular el área de un rectángulo</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">INICIO
+  Leer base
+  Leer altura
+  area ← base × altura
+  Mostrar area
+FIN</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Dibujar diagramas de flujo para resolver estos problemas:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Calcular el área de un círculo (π × radio²).</li>
+              <li>Determinar si un número es par o impar.</li>
+              <li>Encontrar el mayor de tres números.</li>
+              <li>Calcular la nota media de 3 exámenes.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué figura se usa en un diagrama de flujo para representar una decisión?</p>
+            <button class="quiz-opcion" data-valor="a">A. Rectángulo</button>
+            <button class="quiz-opcion" data-valor="b">B. Diamante</button>
+            <button class="quiz-opcion" data-valor="c">C. Paralelogramo</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué característica debe tener un algoritmo para ser válido?</p>
+            <button class="quiz-opcion" data-valor="a">A. Debe ser finito (terminar en algún momento).</button>
+            <button class="quiz-opcion" data-valor="b">B. Debe tener más de 10 pasos.</button>
+            <button class="quiz-opcion" data-valor="c">C. Debe usar solo números.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Diseñar un diagrama de flujo completo para un algoritmo que pida la temperatura en grados Celsius y la convierta a Fahrenheit (F = C × 9/5 + 32).
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article
+      <article id="sesion-2" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">De los bloques al código. Transición de programación visual a textual</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Muchos alumnos han utilizado herramientas de programación visual como Scratch, Blockly o App Inventor. En esta sesión haremos la transición de estos bloques visuales al código textual en Python, demostrando que la lógica es la misma, solo cambia la sintaxis.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Programación visual vs. textual</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bloques (Scratch):</strong> Arrastrar y soltar piezas de código. No hay errores de sintaxis. Visual e intuitivo.</li>
+              <li><strong>Código textual (Python):</strong> Escribir líneas de código con teclado. Requiere sintaxis correcta. Más potente y flexible.</li>
+              <li><strong>La lógica es la misma:</strong> Secuencia, decisión (si...entonces), repetición (mientras...), variables, funciones.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Por qué Python</h4>
+            <p>Python es el lenguaje ideal para comenzar a programar:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Sintaxis simple y legible:</strong> Se parece al pseudocódigo y al inglés.</li>
+              <li><strong>Amplia comunidad:</strong> Miles de tutoriales, foros y recursos gratuitos.</li>
+              <li><strong>Múltiples aplicaciones:</strong> Web, ciencia de datos, inteligencia artificial, automatización.</li>
+              <li><strong>Alto nivel:</strong> El programador se enfoca en la lógica, no en detalles del hardware.</li>
+              <li><strong>Uso educativo:</strong> Utilizado en la mayoría de cursos introductorios a la programación.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Ejemplo: Scratch vs. Python</strong>
+            En Scratch: bloque "decir Hola mundo". En Python: <code class="bg-white/50 px-1 rounded">print("Hola mundo")</code>. La lógica es idéntica: ejecutar una acción que muestra un mensaje.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Entorno de desarrollo</h4>
+            <p>Para escribir y ejecutar código Python necesitamos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Intérprete Python:</strong> El programa que ejecuta el código.</li>
+              <li><strong>IDLE:</strong> Entorno incluido con Python. Sencillo para empezar.</li>
+              <li><strong>Visual Studio Code:</strong> Editor potente con extensiones para Python.</li>
+              <li><strong>Google Colab:</strong> Entorno online de Python (no necesita instalación).</li>
+              <li><strong>Replit:</strong> Entorno online con Python preinstalado.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Primer programa</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Mi primer programa en Python
+print("¡Hola, mundo!")
+print("Bienvenido a Python")
+print("Estoy aprendiendo a programar")</pre>
+            <p class="mt-2"><strong>Salida:</strong></p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">¡Hola, mundo!
+Bienvenido a Python
+Estoy aprendiendo a programar</pre>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad guiada</strong>
+            Abrir Google Colab (colab.research.google.com) y crear un nuevo cuaderno. Escribir y ejecutar los 5 primeros programas de la unidad, observando la salida en cada caso.
+          </div>
+
+          <!-- QUIZ SESIÓN 2 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué función se usa en Python para mostrar texto por pantalla?</p>
+            <button class="quiz-opcion" data-valor="a">A. echo()</button>
+            <button class="quiz-opcion" data-valor="b">B. show()</button>
+            <button class="quiz-opcion" data-valor="c">C. print()</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Por qué se recomienda Python para aprender a programar?</p>
+            <button class="quiz-opcion" data-valor="a">A. Porque es el más rápido del mundo.</button>
+            <button class="quiz-opcion" data-valor="b">B. Porque su sintaxis es simple y se parece al pseudocódigo.</button>
+            <button class="quiz-opcion" data-valor="c">C. Porque solo funciona en Windows.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear 5 programas en Python que utilicen solo print() para mostrar diferentes mensajes, incluyendo uno que muestre una tabla de multiplicar en texto.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article
+      <article id="sesion-3" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Tipos de datos y variables. int, float, str, bool. Constantes, operadores, expresiones</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las variables son los contenedores de datos de un programa. Entender los tipos de datos, las variables, las constantes y los operadores es fundamental para escribir código funcional. En esta sesión aprenderemos a almacenar y manipular datos en Python.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una variable?</h4>
+            <p>Una <strong>variable</strong> es un espacio en la memoria del ordenador donde se almacena un dato. Tiene un nombre, un tipo y un valor:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">nombre = "Ana"          # str (cadena de texto)
+edad = 16               # int (entero)
+altura = 1.65           # float (decimal)
+es_mayor = True         # bool (booleano)</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de datos básicos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>int (entero):</strong> Números sin decimales. Ej: 42, -7, 0, 1000000.</li>
+              <li><strong>float (decimal):</strong> Números con punto decimal. Ej: 3.14, -0.5, 2.0.</li>
+              <li><strong>str (string/cadena):</strong> Texto entre comillas. Ej: "Hola", 'Python', "123".</li>
+              <li><strong>bool (booleano):</strong> Verdadero o falso. Ej: True, False.</li>
+            </ul>
+            <p class="mt-2"><strong>Verificar tipo:</strong> <code class="bg-white/50 px-1 rounded">type(variable)</code></p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Convenciones de nombres</strong>
+            En Python: los nombres de variables empiezan por minúscula, usan guión bajo (_) para separar palabras (edad_alumno), no pueden empezar por número, no pueden ser palabras reservadas (if, for, while, print...).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Asignación de valores</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Asignación simple
+nombre = "Carlos"
+
+# Asignación múltiple
+x, y, z = 10, 20, 30
+
+# Intercambio de valores
+a, b = 5, 10
+a, b = b, a   # Ahora a=10, b=5
+
+# Asignación con operación
+edad = 2026 - 2010   # edad = 16</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Constantes</h4>
+            <p>En Python no hay constantes técnicas (el lenguaje no lo impide), pero por convención se usan nombres en MAYÚSCULAS:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">PI = 3.14159
+IMPUESTO = 0.21
+MAX IntentOS = 3</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Operadores</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Aritméticos:</strong> + (suma), - (resta), * (multiplicación), / (división), // (división entera), % (módulo), ** (potencia).</li>
+              <li><strong>Comparación:</strong> == (igual), != (diferente), > (mayor), < (menor), >= (mayor o igual), <= (menor o igual).</li>
+              <li><strong>Lógicos:</strong> and (Y), or (O), not (NO).</li>
+              <li><strong>Asignación:</strong> =, +=, -=, *=, /=.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Expresiones</h4>
+            <p>Una <strong>expresión</strong> es combinación de valores, variables y operadores que se evalúa para producir un resultado:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">radio = 5
+area = PI * radio ** 2   # Expresión: 3.14159 × 25 = 78.54
+
+temperatura_c = 25
+temperatura_f = temperatura_c * 9 / 5 + 32  # 77.0
+
+es_positivo = (area > 0) and (temperatura_c > 0)  # True</pre>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad práctica</strong>
+            Crear un programa que pida el radio de un círculo (input), calcule el área y el perímetro, y muestre los resultados. Usar la constante PI = 3.14159.
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de dato es 3.14?</p>
+            <button class="quiz-opcion" data-valor="a">A. float</button>
+            <button class="quiz-opcion" data-valor="b">B. int</button>
+            <button class="quiz-opcion" data-valor="c">C. str</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué operador se usa para la potencia en Python?</p>
+            <button class="quiz-opcion" data-valor="a">A. ^</button>
+            <button class="quiz-opcion" data-valor="b">B. **</button>
+            <button class="quiz-opcion" data-valor="c">C. ^^</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear un programa que calcule el área de un triángulo (base × altura / 2) pidiendo los datos al usuario y mostrando el resultado con un mensaje formateado.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article
+      <article id="sesion-4" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Interacción con el usuario. print(), input(), conversión de tipos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Un programa interactivo se comunica con el usuario: le pide datos, procesa información y muestra resultados. Las funciones print() e input() son las bases de esta interacción. En esta sesión profundizaremos en su uso y aprenderemos a manejar la conversión entre tipos de datos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">La función print()</h4>
+            <p>Muestra información por pantalla. Puede recibir múltiples argumentos:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Impresión básica
+print("Hola mundo")
+
+# Múltiples argumentos (se separan por espacio)
+print("Nombre:", "Ana", "Edad:", 16)
+
+# Cambiar el separador
+print("Python", "es", "genial", sep="-")
+
+# Final de línea (por defecto es \n)
+print("Hola", end=" ")
+print("mundo")  # Salida: Hola mundo (en la misma línea)
+
+# Impresión con formato (f-strings)
+nombre = "Ana"
+edad = 16
+print(f"Me llamo {nombre} y tengo {edad} años")</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">La función input()</h4>
+            <p>Pide al usuario que introduzca datos por teclado. Siempre devuelve una cadena de texto (str):</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Input básico
+nombre = input("¿Cómo te llamas? ")
+print(f"Hola, {nombre}")
+
+# Input con mensaje
+edad = input("¿Cuántos años tienes? ")
+# Nota: edad es un string, no un número</pre>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>¡Importante!</strong>
+            input() SIEMPRE devuelve un string. Si necesitas un número, debes convertirlo explícitamente con int() o float(). Si el usuario escribe "abc" cuando esperabas un número, obtendrás un error ValueError.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Conversión de tipos (casting)</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># String → Entero
+edad = int(input("Edad: "))
+
+# String → Decimal
+altura = float(input("Altura: "))
+
+# Número → String
+precio = 19.99
+print("El precio es: " + str(precio))
+
+# Verificar tipo
+print(type(edad))   # &lt;class 'int'&gt;
+print(type(altura)) # &lt;class 'float'&gt;</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formato de salida avanzado</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># F-strings (Python 3.6+) — la forma moderna
+nombre = "Ana"
+nota = 8.5
+print(f"Alumna: {nombre}, Nota: {nota:.1f}")
+
+# Métodos de formato
+precio = 1234.56
+print(f"Precio: {precio:,.2f} €")  # 1,234.56 €
+
+# Alineación
+for i in range(1, 6):
+    print(f"Ejercicio {i:2d}: Nota {i*1.5:.1f}")</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear un programa "Calculadora de edad" que:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Pida al usuario su nombre.</li>
+              <li>Pida su año de nacimiento.</li>
+              <li>Calcule su edad aproximada.</li>
+              <li>Muestre un mensaje personalizado con la edad calculada.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 4 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de dato devuelve siempre input()?</p>
+            <button class="quiz-opcion" data-valor="a">A. int</button>
+            <button class="quiz-opcion" data-valor="b">B. float</button>
+            <button class="quiz-opcion" data-valor="c">C. str (cadena de texto)</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué función convierte un string a un entero?</p>
+            <button class="quiz-opcion" data-valor="a">A. int()</button>
+            <button class="quiz-opcion" data-valor="b">B. str()</button>
+            <button class="quiz-opcion" data-valor="c">C. float()</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear un conversor de temperatura que pida al usuario la temperatura en Celsius y la muestre en Fahrenheit y Kelvin, con mensajes descriptivos y formato adecuado.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article
+      <article id="sesion-5" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Estructuras de control. Condicionales (if/elif/else). Bucles (for con range(), while)</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las estructuras de control permiten que un programa tome decisiones y repita acciones. Sin ellas, los programas serían una secuencia lineal de instrucciones. En esta sesión estudiaremos las estructuras condicionales y los bucles, los dos pilares de la lógica de programación.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Condicionales: if / elif / else</h4>
+            <p>Permiten ejecutar código solo si se cumple una condición:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Estructura básica
+nota = float(input("Introduce tu nota: "))
+
+if nota >= 9:
+    print("Sobresaliente")
+elif nota >= 7:
+    print("Notable")
+elif nota >= 5:
+    print("Aprobado")
+else:
+    print("Suspenso")</pre>
+            <p class="mt-2"><strong>Regla clave:</strong> La indentación (4 espacios) define el bloque de código que se ejecuta. Python usa sangría en lugar de llaves {}.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Importante: elif vs. else</strong>
+            elif permite evaluar múltiples condiciones en secuencia. else captura el caso por defecto (si ninguna condición se cumple). El orden importa: las condiciones se evalúan de arriba a abajo.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Bucle for</h4>
+            <p>Repite un bloque de código un número determinado de veces:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># For con range()
+for i in range(5):        # 0, 1, 2, 3, 4
+    print(i)
+
+for i in range(1, 11):    # 1 al 10
+    print(f"Tabla del 2: 2 × {i} = {2*i}")
+
+# For con lista
+frutas = ["manzana", "plátano", "naranja"]
+for fruta in frutas:
+    print(f"Me gusta la {fruta}")</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Bucle while</h4>
+            <p>Repite mientras se cumpla una condición:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Contador
+contador = 0
+while contador < 5:
+    print(f"Contador: {contador}")
+    contador += 1
+
+# Validación de entrada
+while True:
+    nota = float(input("Nota (0-10): "))
+    if 0 <= nota <= 10:
+        break   # Sale del bucle
+    print("Error: introduce un valor entre 0 y 10")</pre>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Bucles infinitos</strong>
+            Un while True sin break es un bucle infinito que nunca termina. Siempre asegúrate de tener una condición de salida o usa break para salir del bucle.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear un programa "Adivina el número": el ordenador elige un número entre 1 y 100, el usuario intenta adivinarlo recibiendo pistas ("mayor" o "menor") hasta acertar. Contar el número de intentos.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué bucle se usa cuando se sabe el número de iteraciones?</p>
+            <button class="quiz-opcion" data-valor="a">A. while</button>
+            <button class="quiz-opcion" data-valor="b">B. for</button>
+            <button class="quiz-opcion" data-valor="c">C. do-while</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué hace la sentencia break en un bucle?</p>
+            <button class="quiz-opcion" data-valor="a">A. Salta a la siguiente iteración.</button>
+            <button class="quiz-opcion" data-valor="b">B. Reinicia el bucle desde el principio.</button>
+            <button class="quiz-opcion" data-valor="c">C. Sale completamente del bucle.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear un programa que pida notas hasta que el usuario escriba "fin", calcule la media y muestre el resultado. Usar while y validación de entrada.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article
+      <article id="sesion-6" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Estructuras de datos. Listas, tuplas, diccionarios</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las estructuras de datos permiten almacenar múltiples valores en una sola variable. En esta sesión estudiaremos las tres estructuras principales de Python: listas (mutables), tuplas (inmutables) y diccionarios (pares clave-valor).</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Listas (lists)</h4>
+            <p>Colecciones ordenadas y <strong>mutables</strong> de elementos:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Crear una lista
+notas = [8, 7, 9, 6, 10]
+nombres = ["Ana", "Carlos", "María"]
+mezcla = [1, "hola", 3.14, True]  # Tipos mixtos
+
+# Acceder por índice (empieza en 0)
+print(nombres[0])      # Ana
+print(nombres[-1])     # María (último)
+
+# Modificar
+notas[0] = 9           # Cambia el primer elemento
+
+# Métodos útiles
+notas.append(7)        # Añadir al final
+notas.remove(8)        # Eliminar el primer 8
+notas.insert(1, 5)     # Insertar 5 en la posición 1
+notas.pop()            # Eliminar y devolver el último
+len(notas)             # Longitud de la lista
+sum(notas)             # Suma de todos los elementos
+notas.sort()           # Ordenar de menor a mayor</pre>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Lista vacía</strong>
+            Para crear una lista vacía: <code class="bg-white/50 px-1 rounded">lista = []</code> o <code class="bg-white/50 px-1 rounded">lista = list()</code>. Es útil para ir añadiendo elementos dinámicamente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tuplas (tuples)</h4>
+            <p>Colecciones ordenadas e <strong>inmutables</strong>. No se pueden modificar después de crearlas:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Crear una tupla
+coordenadas = (40.4168, -3.7038)
+colores = ("rojo", "verde", "azul")
+
+# Acceder (igual que las listas)
+print(coordenadas[0])   # 40.4168
+
+# Las tuplas NO se pueden modificar
+# coordenadas[0] = 50   # ¡Error! TypeError
+
+# Desempaquetar
+lat, lon = coordenadas
+print(f"Latitud: {lat}, Longitud: {lon}")</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Diccionarios (dict)</h4>
+            <p>Colecciones de pares <strong>clave:valor</strong>. No tienen orden definido (en versiones antiguas de Python):</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Crear un diccionario
+alumno = {
+    "nombre": "Ana",
+    "edad": 16,
+    "nota_media": 8.5,
+    "aprobado": True
+}
+
+# Acceder por clave
+print(alumno["nombre"])        # Ana
+print(alumno.get("email", "No disponible"))  # Valor por defecto
+
+# Modificar
+alumno["edad"] = 17
+alumno["email"] = "ana@email.com"
+
+# Métodos útiles
+alumno.keys()       # Todas las claves
+alumno.values()     # Todos los valores
+alumno.items()      # Todos los pares clave-valor
+
+# Eliminar
+del alumno["email"]</pre>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>¿Cuándo usar cada uno?</strong>
+            <strong>Lista:</strong> Colección de elementos del mismo tipo que puede cambiar. <strong>Tupla:</strong> Datos fijos que no deben modificarse (coordenadas, fechas). <strong>Diccionario:</strong> Datos con significado semántico (perfil de usuario, registro de base de datos).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear un programa "Gestor de contactos" que almacene contactos en una lista de diccionarios. Cada contacto tendrá nombre, teléfono y email. Permitir añadir, buscar y eliminar contactos.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 6 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué estructura de datos es inmutable?</p>
+            <button class="quiz-opcion" data-valor="a">A. Tupla</button>
+            <button class="quiz-opcion" data-valor="b">B. Lista</button>
+            <button class="quiz-opcion" data-valor="c">C. Diccionario</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cómo se accede al valor de un diccionario?</p>
+            <button class="quiz-opcion" data-valor="a">A. Por índice numérico</button>
+            <button class="quiz-opcion" data-valor="b">B. Por clave</button>
+            <button class="quiz-opcion" data-valor="c">C. Por posición</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una lista de 5 diccionarios de alumnos (nombre, edad, notas) y usar un bucle for para mostrar solo los alumnos aprobados (nota media ≥ 5).
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article
+      <article id="sesion-7" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Funciones. Definición, parámetros, retorno. Modularización de código</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las funciones permiten organizar el código en bloques reutilizables. En lugar de escribir el mismo código varias veces, lo encapsulamos en una función que podemos llamar cuantas veces necesitemos. Las funciones son la base de la programación modular y el código limpio.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una función?</h4>
+            <p>Una <strong>función</strong> es un bloque de código con un nombre que realiza una tarea específica:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Definición de función
+def saludar(nombre):
+    """Saluda a una persona."""
+    print(f"¡Hola, {nombre}! Bienvenido.")
+
+# Llamada a la función
+saludar("Ana")      # ¡Hola, Ana! Bienvenido.
+saludar("Carlos")   # ¡Hola, Carlos! Bienvenido.</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Parámetros y argumentos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Parámetro:</strong> Variable en la definición de la función.</li>
+              <li><strong>Argumento:</strong> Valor real que se pasa al llamar a la función.</li>
+              <li><strong>Parámetros por defecto:</strong> Valor que toma el parámetro si no se proporciona.</li>
+              <li><strong>Parámetros posicionales:</strong> Se asignan por orden.</li>
+              <li><strong>Parámetros con nombre (keyword):</strong> Se asignan por nombre.</li>
+            </ul>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Parámetro por defecto
+def calcularnota(examen, trabajo=0.3):
+    return examen * (1 - trabajo) + trabajo * 10
+
+# Llamadas
+print(calcularnota(8))              # Usando valor por defecto
+print(calcularnota(8, 0.4))         # Valor explícito
+print(calcularnota(trabajo=0.4, examen=8))  # Con nombre</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Retorno de valores</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Función con return
+def calcular_area(base, altura):
+    """Calcula el área de un rectángulo."""
+    return base * altura
+
+area = calcular_area(5, 3)
+print(f"Área: {area}")  # Área: 15
+
+# Múltiples valores de retorno
+def min_max(lista):
+    return min(lista), max(lista)
+
+minimo, maximo = min_max([3, 1, 4, 1, 5, 9])
+print(f"Mín: {minimo}, Máx: {maximo}")  # Mín: 1, Máx: 9</pre>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Docstrings</strong>
+            El docstring (cadena de texto triple entre comillas) documenta qué hace la función. Se accede con help(funcion) o funcion.__doc__. Es una buena práctica incluirlo siempre.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Alcance de variables</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Variable local:</strong> Existe solo dentro de la función.</li>
+              <li><strong>Variable global:</strong> Existe en todo el programa. Se puede acceder desde cualquier función, pero es mejor evitar modificarlas.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear un módulo de funciones matemáticas con las siguientes funciones:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>area_circulo(radio) → retorna el área.</li>
+              <li>perimetro_circulo(radio) → retorna el perímetro.</li>
+              <li>es_par(numero) → retorna True/False.</li>
+              <li>media(valores) → retorna la media de una lista.</li>
+              <li>factorial(n) → retorna el factorial de n.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué palabra clave se usa para definir una función en Python?</p>
+            <button class="quiz-opcion" data-valor="a">A. def</button>
+            <button class="quiz-opcion" data-valor="b">B. function</button>
+            <button class="quiz-opcion" data-valor="c">C. func</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué hace la sentencia return en una función?</p>
+            <button class="quiz-opcion" data-valor="a">A. Imprime un valor por pantalla.</button>
+            <button class="quiz-opcion" data-valor="b">B. Termina el programa.</button>
+            <button class="quiz-opcion" data-valor="c">C. Devuelve un valor y termina la ejecución de la función.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una función que reciba una lista de diccionarios de alumnos y devuelva una lista con los nombres de los aprobados (nota media ≥ 5).
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 8 ==================== -->
+      <article
+      <article id="sesion-8" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">8</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Depuración. Errores comunes, depuración paso a paso</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Todo programador se encuentra con errores. Depurar es el proceso de encontrar y corregir errores en el código. Es una habilidad tan importante como escribir código. En esta sesión aprenderemos a identificar los tipos de errores más comunes y a usar técnicas de depuración.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de errores</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Errores de sintaxis (SyntaxError):</strong> El código no sigue las reglas del lenguaje. Ejemplo: print("Hola" (falta paréntesis de cierre).</li>
+              <li><strong>Errores en tiempo de ejecución (Exceptions):</strong> El código tiene sintaxis correcta pero falla al ejecutarse. Ejemplo: división por cero, variable no definida.</li>
+              <li><strong>Errores lógicos:</strong> El programa funciona pero produce un resultado incorrecto. Ejemplo: usar + en lugar de * en un cálculo.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Los errores más comunes en principiantes</strong>
+            1. Olvidar los dos puntos (:) después de if, for, while, def. 2. Error de indentación (mezclar espacios y tabulaciones). 3. Usar = en lugar de == en condiciones. 4. Olvidar convertir el resultado de input() a número.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Excepciones comunes</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>TypeError:</strong> Operación con tipos incompatibles. Ej: "hola" + 5.</li>
+              <li><strong>ValueError:</strong> Valor incorrecto. Ej: int("abc").</li>
+              <li><strong>NameError:</strong> Variable no definida. Ej: print(variable_inexistente).</li>
+              <li><strong>IndexError:</strong> Índice fuera de rango. Ej: lista[100] con 5 elementos.</li>
+              <li><strong>KeyError:</strong> Clave no encontrada en diccionario.</li>
+              <li><strong>ZeroDivisionError:</strong> División por cero.</li>
+              <li><strong>FileNotFoundError:</strong> Archivo no encontrado.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Técnicas de depuración</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Print de depuración:</strong> Añadir print() para ver el valor de variables en puntos clave.</li>
+              <li><strong>Depurador paso a paso:</strong> Ejecutar el código línea por línea (pdb en Python, depurador de VS Code).</li>
+              <li><strong>Método de mitad:</strong> Añadir un print a mitad del programa para ver si el error está antes o después.</li>
+              <li><strong>Leer el traceback:</strong> Python muestra información detallada del error: tipo, línea y mensaje.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Manejo de errores con try/except</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Manejo de excepciones
+try:
+    nota = float(input("Introduce tu nota: "))
+    resultado = 10 / nota
+    print(f"Resultado: {resultado}")
+except ValueError:
+    print("Error: Debes introducir un número.")
+except ZeroDivisionError:
+    print("Error: No se puede dividir por cero.")
+except Exception as e:
+    print(f"Error inesperado: {e}")
+finally:
+    print("Este código se ejecuta siempre.")</pre>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Cuando tu código no funciona: 1) Lee el mensaje de error completo. 2) Identifica la línea exacta. 3) Comprueba la sintaxis de esa línea. 4) Añade print() para ver los valores de las variables. 5) Si no encuentras el error, pide a alguien que lea tu código con otros ojos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>El siguiente código tiene 5 errores. Encuentra y corrige todos los errores:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">def calcular_media(numeros)
+    suma = 0
+    for n in numeros
+        suma += n
+    media = suma / len(numeros)
+    return media
+
+notas = [8, 7, 9, "10", 6]
+print("Media:", calcular_media(notas))</pre>
+          </div>
+
+          <!-- QUIZ SESIÓN 8 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de error ocurre cuando el código tiene sintaxis correcta pero falla al ejecutarse?</p>
+            <button class="quiz-opcion" data-valor="a">A. Error de sintaxis</button>
+            <button class="quiz-opcion" data-valor="b">B. Excepción (error en tiempo de ejecución)</button>
+            <button class="quiz-opcion" data-valor="c">C. Error lógico</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué excepción se produce al dividir entre cero?</p>
+            <button class="quiz-opcion" data-valor="a">A. ZeroDivisionError</button>
+            <button class="quiz-opcion" data-valor="b">B. ValueError</button>
+            <button class="quiz-opcion" data-valor="c">C. TypeError</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Encontrar y corregir los errores en un código proporcionado por el profesor, explicando qué tipo de error es cada uno y cómo se corrige.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 9 ==================== -->
+      <article
+      <article id="sesion-9" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">9</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: programa completo que integre todos los conceptos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Proyecto de unidad</strong>
+            Esta sesión está dedicada al desarrollo del proyecto final de la UD6 y de toda la asignatura. Cada alumno deberá crear un programa completo en Python que integre todos los conceptos trabajados a lo largo de las 8 sesiones anteriores.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Enunciado del proyecto</h4>
+            <p>Crear un <strong>"Sistema de Gestión de Calificaciones"</strong> que permita:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Menú principal:</strong> Opciones para añadir alumnos, introducir notas, ver estadísticas, listar alumnos y salir.</li>
+              <li><strong>Añadir alumnos:</strong> Pide nombre y almacena en una lista de diccionarios.</li>
+              <li><strong>Introducir notas:</strong> Permite asignar notas a un alumno específico.</li>
+              <li><strong>Ver estadísticas:</strong> Media general, nota máxima, nota mínima, número de aprobados/suspensos.</li>
+              <li><strong>Listar alumnos:</strong> Muestra todos los alumnos con sus notas y media.</li>
+              <li><strong>Funciones:</strong> Cada operación debe ser una función independiente.</li>
+              <li><strong>Validación:</strong> Manejar errores de entrada con try/except.</li>
+              <li><strong>Estructuras de datos:</strong> Usar listas de diccionarios.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Criterios de evaluación</strong>
+            Funcionamiento correcto (30%), uso de funciones (20%), estructuras de datos (15%), manejo de errores (15%), calidad del código y comentarios (10%), interfaz de usuario (10%).
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructura sugerida del programa</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono"># Funciones
+def agregar_alumno(alumnos):
+    ...
+
+def introducir_nota(alumnos):
+    ...
+
+def ver_estadisticas(alumnos):
+    ...
+
+def listar_alumnos(alumnos):
+    ...
+
+# Programa principal
+alumnos = []
+
+while True:
+    print("\n--- MENÚ ---")
+    print("1. Agregar alumno")
+    print("2. Introducir nota")
+    print("3. Ver estadísticas")
+    print("4. Listar alumnos")
+    print("5. Salir")
+
+    opcion = input("Elige una opción: ")
+
+    if opcion == "1":
+        agregar_alumno(alumnos)
+    elif opcion == "2":
+        introducir_nota(alumnos)
+    elif opcion == "3":
+        ver_estadisticas(alumnos)
+    elif opcion == "4":
+        listar_alumnos(alumnos)
+    elif opcion == "5":
+        print("¡Hasta luego!")
+        break
+    else:
+        print("Opción no válida")</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Entrega</h4>
+            <p>El proyecto se entregará como:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Archivo .py:</strong> Código fuente comentado.</li>
+              <li><strong>Capturas de pantalla:</strong> Ejecución del programa mostrando todas las funcionalidades.</li>
+              <li><strong>Documentación:</strong> Breve explicación del diseño y decisiones tomadas.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="c" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué estructura de datos es más adecuada para almacenar el perfil de un alumno con nombre, edad y notas?</p>
+            <button class="quiz-opcion" data-valor="a">A. Lista</button>
+            <button class="quiz-opcion" data-valor="b">B. Tupla</button>
+            <button class="quiz-opcion" data-valor="c">C. Diccionario</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Recuerda</strong>
+            El proyecto final debe demostrar dominio de todos los conceptos: variables, tipos de datos, entrada/salida, condicionales, bucles, estructuras de datos, funciones y manejo de errores. ¡Demuestra todo lo que has aprendido!
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>¡Enhorabuena!</strong>
+            Si has llegado hasta aquí, ya tienes las bases fundamentales de la programación. Estos conceptos son universales y se aplican en cualquier lenguaje de programación. ¡Sigue practicando y construyendo proyectos!
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud5.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        ← UD5 · Arquitectura de ordenadores
+      </a>
+      <span class="text-sm text-slate-400">Última unidad →</span>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

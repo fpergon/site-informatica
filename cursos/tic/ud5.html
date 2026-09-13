@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD5 · Arquitectura de ordenadores y sistemas operativos · TIC I</title>
+  <meta name="description" content="Unidad Didáctica 5 de TIC I: Hardware y software, sistemas propietarios y libres, arquitectura clásica, ley de Moore, CPU, memoria, almacenamiento, periféricos, buses de comunicación, sistemas operativos, gestión de procesos/archivos/usuarios/dispositivos, instalación y configuración." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#e6f7f6',100:'#c2ecea',200:'#86d8d4',300:'#46bdb7',400:'#1ea39c',500:'#0d857f',600:'#0a6b66',700:'#085652',800:'#084541',900:'#073731'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="tic" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+    <!-- CABECERA DE UNIDAD -->
+    <section class="rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../tic.html" class="hover:underline">TIC I</a>
+        <span>·</span>
+        <span>2.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque B</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD5 · Arquitectura de ordenadores y sistemas operativos</h1>
+      <p class="mt-3 text-brand-50/90">Comprender la arquitectura de los sistemas informáticos: hardware y software, sistemas propietarios y libres, la arquitectura clásica de von Neumann, la ley de Moore, los componentes principales (CPU, memoria, almacenamiento), periféricos, buses de comunicación, y el funcionamiento de los sistemas operativos.</p>
+    </section>
+
+    <!-- SESIONES -->
+    <section class="mt-8">
+
+      <!-- ==================== SESIÓN 1 ==================== -->
+      <article
+      <article id="sesion-1" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Hardware y software. Sistemas propietarios y libres. Clasificaciones</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Esta sesión inicial sitúa las bases conceptuales de la unidad: la distinción entre hardware y software, y la diferencia entre sistemas propietarios y libres. Estos conceptos son fundamentales para entender el resto de la unidad.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Todo sistema informático se compone de dos partes fundamentales: el hardware (componentes físicos) y el software (programas que los hacen funcionar). En esta sesión exploraremos ambas dimensiones y conoceremos las diferentes filosofías de desarrollo de software.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Hardware vs. Software</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Hardware:</strong> Componentes físicos y tangibles del ordenador. Se puede tocar: placa base, procesador, memoria RAM, disco duro, monitor, teclado, ratón.</li>
+              <li><strong>Software:</strong> Conjunto de programas e instrucciones que permiten realizar tareas. Es intangible: sistemas operativos, aplicaciones, controladores, utilidades.</li>
+            </ul>
+            <p class="mt-2"><strong>Relación:</strong> El hardware sin software es inútil (un teléfono sin sistema operativo no sirve). El software sin hardware es imposible ejecutarse (un juego necesita un ordenador para funcionar).</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Clasificación del hardware</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Unidad Central de Procesamiento (CPU):</strong> El "cerebro" del ordenador. Procesa instrucciones y ejecuta cálculos.</li>
+              <li><strong>Memoria:</strong> Almacena datos temporalmente (RAM) o permanentemente (ROM, disco).</li>
+              <li><strong>Almacenamiento:</strong> Disco duro (HDD), unidad de estado sólido (SSD), tarjetas SD, discos externos.</li>
+              <li><strong>Periféricos:</strong> Dispositivos de entrada (teclado, ratón, micrófono) y salida (monitor, altavoces, impresora).</li>
+              <li><strong>Placa base:</strong> Componente que conecta todos los demás elementos.</li>
+              <li><strong>Fuente de alimentación:</strong> Proporciona energía eléctrica al sistema.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Clasificación por tamaño</strong>
+            <strong>Supercomputadoras:</strong> Miles de procesadores, cálculos científicos. <strong>Mainframes:</strong> Empresas grandes, alta capacidad de procesamiento. <strong>Minicomputadoras:</strong> Servidores medianos. <strong>Microcomputadoras:</strong> PC, portátiles, tablets. <strong>Smartphones:</strong> Dispositivos móviles.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Software propietario vs. software libre</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Software propietario:</strong> Código fuente cerrado. No se puede copiar, modificar ni redistribuir. Licencia de uso. Ejemplos: Windows, macOS, Microsoft Office.</li>
+              <li><strong>Software libre (free software):</strong> Código fuente abierto. Cualquiera puede usar, estudiar, modificar y distribuir. Licencias como GPL, MIT, Apache. Ejemplos: Linux, LibreOffice, GIMP, Firefox.</li>
+              <li><strong>Software freeware:</strong> Gratuito pero con código cerrado. No se puede modificar. Ejemplos: Skype, Adobe Reader.</li>
+              <li><strong>Software shareware:</strong> Versión de prueba gratuita con limitaciones. Hay que pagar para desbloquear todas las funciones.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Las 4 libertades del software libre</strong>
+            1. Libertad de usar el programa con cualquier propósito. 2. Libertad de estudiar cómo funciona y modificarlo. 3. Libertad de redistribuir copias. 4. Libertad de distribuir copias de versiones modificadas.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Realizar una auditoría del ordenador o dispositivo que estás usando: identificar al menos 10 componentes de hardware y 5 programas de software. Clasificar cada programa como propietario, libre o freeware.
+            </p>
+          </div>
+
+          <!-- QUIZ SESIÓN 1 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es el hardware?</p>
+            <button class="quiz-opcion" data-valor="a">A. Componentes físicos y tangibles del ordenador.</button>
+            <button class="quiz-opcion" data-valor="b">B. Los programas que se ejecutan en el ordenador.</button>
+            <button class="quiz-opcion" data-valor="c">C. La conexión a Internet del dispositivo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué libertad NO permite el software libre?</p>
+            <button class="quiz-opcion" data-valor="a">A. Usar el programa con cualquier propósito.</button>
+            <button class="quiz-opcion" data-valor="b">B. Vender el código fuente como producto propio.</button>
+            <button class="quiz-opcion" data-valor="c">C. Modificar y redistribute el código.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear una tabla comparativa entre 3 sistemas operativos (Windows, macOS, Linux) incluyendo: precio, tipo de software, interfaz, hardware compatible, ventajas e inconvenientes.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 2 ==================== -->
+      <article
+      <article id="sesion-2" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Arquitectura clásica. CPU, UAL, UC. Ley de Moore</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La arquitectura de von Neumann es el diseño fundamental de los ordenadores modernos. Todos los sistemas informáticos actuales, desde un smartphone hasta un supercomputador, se basan en esta arquitectura. En esta sesión estudiaremos sus componentes principales y la ley que ha impulsado su evolución.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Arquitectura de von Neumann</h4>
+            <p>Propuesta por John von Neumann en 1945, establece que un ordenador se compone de:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Unidad Central de Procesamiento (CPU):</strong> Procesa las instrucciones.</li>
+              <li><strong>Memoria:</strong> Almacena datos e instrucciones.</li>
+              <li><strong>Entrada/Salida:</strong> Dispositivos para interactuar con el exterior.</li>
+              <li><strong>Bus de datos:</strong> Canal por el que fluyen los datos entre componentes.</li>
+            </ul>
+            <p class="mt-2"><strong>Principio clave:</strong> Programas y datos se almacenan en la misma memoria. La CPU lee instrucciones de memoria, las decodifica y las ejecuta secuencialmente.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Diagrama simplificado</strong>
+            Memoria ←→ CPU (UAL + UC) ←→ E/S. La CPU se comunica con la memoria a través del bus de direcciones y datos, y con los dispositivos de entrada/salida a través del bus de control.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Componentes de la CPU</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Unidad de Control (UC):</strong> Lee, decodifica y coordina la ejecución de instrucciones. Dirige el flujo de datos entre la CPU, la memoria y los dispositivos.</li>
+              <li><strong>Unidad Aritmético-Lógica (UAL):</strong> Realiza operaciones aritméticas (suma, resta, multiplicación) y lógicas (AND, OR, comparaciones).</li>
+              <li><strong>Registros:</strong> Pequeñas memorias ultra-rápidas dentro de la CPU para almacenar datos temporales.</li>
+              <li><strong>Caché:</strong> Memoria de alta velocidad que almacena datos frecuentemente usados para acelerar el acceso.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El ciclo de ejecución</h4>
+            <p>Cada instrucción sigue este ciclo:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Fetch (Obtener):</strong> La UC lee la siguiente instrucción de la memoria.</li>
+              <li><strong>Decode (Decodificar):</strong> La UC interpreta qué operación debe realizarse.</li>
+              <li><strong>Execute (Ejecutar):</strong> La UAL ejecuta la operación (cálculo, comparación).</li>
+              <li><strong>Store (Almacenar):</strong> El resultado se guarda en un registro o en la memoria.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ley de Moore</h4>
+            <p>Enunciada por Gordon Moore en 1965, establece que <strong>el número de transistores en un microprocesador se duplica aproximadamente cada 2 años</strong>, lo que implica un aumento exponencial de la potencia de cálculo:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>1971 (Intel 4004):</strong> 2.300 transistores.</li>
+              <li><strong>1990 (Intel 486):</strong> 1,2 millones de transistores.</li>
+              <li><strong>2000 (Pentium 4):</strong> 42 millones de transistores.</li>
+              <li><strong>2020 (Apple M1):</strong> 16.000 millones de transistores.</li>
+              <li><strong>2024:</strong> Los procesadores más avanzados superan los 100.000 millones de transistores.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Límites de la ley de Moore</strong>
+            La ley de Moore no es una ley física, sino una observación empírica. Se ha mantenido durante décadas, pero ahora enfrenta límites físicos: el tamaño de los transistores se acerca al límite atómico, y el calor generado es cada vez más difícil de disipar.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Investigar y comparar las especificaciones de un procesador moderno (Intel Core i7, Apple M3 o AMD Ryzen 9): número de núcleos, frecuencia, tamaño del chip, número de transistores, consumo energético y rendimiento en benchmarks.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 2 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué componente de la CPU realiza las operaciones aritméticas y lógicas?</p>
+            <button class="quiz-opcion" data-valor="a">A. Unidad de Control (UC)</button>
+            <button class="quiz-opcion" data-valor="b">B. Unidad Aritmético-Lógica (UAL)</button>
+            <button class="quiz-opcion" data-valor="c">C. Registros</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué establece la ley de Moore?</p>
+            <button class="quiz-opcion" data-valor="a">A. La velocidad de Internet se duplica cada año.</button>
+            <button class="quiz-opcion" data-valor="b">B. El almacenamiento se reduce a la mitad cada 5 años.</button>
+            <button class="quiz-opcion" data-valor="c">C. El número de transistores en un chip se duplica aproximadamente cada 2 años.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Dibujar el esquema de la arquitectura de von Neumann e identificar cada componente con un ejemplo concreto de un ordenador moderno.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 3 ==================== -->
+      <article
+      <article id="sesion-3" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Memoria y almacenamiento. Memoria principal, almacenamiento secundario. Estructura física y lógica</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>La memoria y el almacenamiento son componentes esenciales de cualquier sistema informático. Aunque a menudo se confunden, son conceptos muy diferentes en cuanto a velocidad, capacidad y función. En esta sesión estudiaremos las diferencias y el funcionamiento de cada tipo.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Memoria principal (RAM)</h4>
+            <p>La <strong>RAM (Random Access Memory)</strong> es la memoria de trabajo del ordenador. Almacena temporalmente los datos e instrucciones que la CPU está utilizando activamente:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Volátil:</strong> Se borra al apagar el ordenador.</li>
+              <li><strong>Rápida:</strong> Tiempo de acceso de nanosegundos.</li>
+              <li><strong>Capacidad:</strong> Los ordenadores actuales tienen entre 8 GB y 64 GB.</li>
+              <li><strong>Tipos:</strong> DDR4 (actual), DDR5 (nueva generación), GDDR (para tarjetas gráficas).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Memoria ROM</h4>
+            <p>La <strong>ROM (Read-Only Memory)</strong> almacena datos permanentes que no se pueden modificar:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>No volátil:</strong> Mantiene los datos sin energía.</li>
+              <li><strong>Contiene:</strong> El firmware (BIOS/UEFI) que inicia el ordenador.</li>
+              <li><strong>Tipos:</strong> PROM, EPROM, EEPROM, Flash ROM.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>RAM vs. Almacenamiento</strong>
+            La RAM es como la memoria a corto plazo del cerebro: rápida pero temporal. El almacenamiento es como la memoria a largo plazo: más lento pero permanente. Un programa se carga del disco a la RAM para ejecutarse.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Almacenamiento secundario</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>HDD (Hard Disk Drive):</strong> Disco mecánico con platos giratorios y cabezales de lectura/escritura. Alta capacidad (hasta 20 TB), bajo coste, más lento.</li>
+              <li><strong>SSD (Solid State Drive):</strong> Almacenamiento electrónico sin partes móviles. Mucho más rápido, silencioso, resistente a golpes. Menor capacidad por euro.</li>
+              <li><strong>NVMe:</strong> SSD de alta velocidad que se conecta directamente al bus PCIe. Velocidades de lectura/escritura de hasta 7.000 MB/s.</li>
+              <li><strong>Almacenamiento externo:</strong> Discos portátiles USB, tarjetas SD, memorias USB.</li>
+              <li><strong>Almacenamiento en la nube:</strong> Google Drive, OneDrive, Dropbox. Acceso desde cualquier dispositivo.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Jerarquía de memoria</h4>
+            <p>Los sistemas informáticos organizan la memoria en una jerarquía de velocidad y capacidad:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Registros de la CPU:</strong> La más rápida y pequeña.</li>
+              <li><strong>Caché L1/L2/L3:</strong> Memoria ultra-rápida dentro de la CPU.</li>
+              <li><strong>RAM:</strong> Memoria principal, rápida pero volátil.</li>
+              <li><strong>SSD/NVMe:</strong> Almacenamiento rápido, no volátil.</li>
+              <li><strong>HDD:</strong> Almacenamiento lento pero de gran capacidad.</li>
+              <li><strong>Nube:</strong> Acceso remoto, velocidad depende de la conexión.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Si tu ordenador va lento, la primera mejora más efectiva es cambiar un HDD por un SSD. El tiempo de arranque y la aplicación de programas mejora drásticamente.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Investigar las especificaciones de tu ordenador: capacidad de RAM, tipo de SSD/HDD, y comparar los tiempos de lectura/escritura de ambos. Explicar por qué un SSD es más rápido que un HDD.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de memoria se borra al apagar el ordenador?</p>
+            <button class="quiz-opcion" data-valor="a">A. RAM</button>
+            <button class="quiz-opcion" data-valor="b">B. ROM</button>
+            <button class="quiz-opcion" data-valor="c">C. SSD</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué almacenamiento es más rápido, un HDD o un SSD?</p>
+            <button class="quiz-opcion" data-valor="a">A. HDD</button>
+            <button class="quiz-opcion" data-valor="b">B. SSD</button>
+            <button class="quiz-opcion" data-valor="c">C. Ambos tienen la misma velocidad.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Comparar las especificaciones de 3 ordenadores diferentes (un portátil económico, uno de gama media y uno de gama alta) en cuanto a RAM, tipo de almacenamiento, capacidad y precio.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article
+      <article id="sesion-4" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Sistemas de entrada/salida. Periféricos. Clasificación. Periféricos de nueva generación</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los periféricos son los dispositivos que permiten la interacción entre el usuario y el ordenador. Sin ellos, sería imposible introducir datos o visualizar resultados. En esta sesión estudiaremos su clasificación, funcionamiento y los dispositivos más innovadores.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Periféricos de entrada</h4>
+            <p>Envían datos al ordenador:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Teclado:</strong> Dispositivo de entrada alfanumérico más utilizado.</li>
+              <li><strong>Ratón/Touchpad:</strong> Dispositivo apuntador para seleccionar y manipular elementos en pantalla.</li>
+              <li><strong>Micrófono:</strong> Captura de audio para voz, música, videollamadas.</li>
+              <li><strong>Cámara web:</strong> Captura de vídeo en tiempo real.</li>
+              <li><strong>Escáner:</strong> Digitaliza documentos e imágenes impresas.</li>
+              <li><strong>Lector de código de barras:</strong> Lee códigos de productos.</li>
+              <li><strong>Teclado Braille:</strong> Permite a personas ciegas escribir texto.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Periféricos de salida</h4>
+            <p>Reciben datos del ordenador:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Monitor:</strong> Dispositivo de visualización principal.</li>
+              <li><strong>Impresora:</strong> Imprime documentos en papel.</li>
+              <li><strong>Altavoces/Auriculares:</strong> Reproducen audio.</li>
+              <li><strong>Proyector:</strong> Proyecta la imagen en una pantalla grande.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Periféricos de entrada/salida (E/S)</h4>
+            <p>Combinan ambas funciones:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Monitor táctil (touchscreen):</strong> Muestra información y permite interactuar tocando la pantalla.</li>
+              <li><strong>Memoria USB:</strong> Almacena datos y permite su transferencia.</li>
+              <li><strong>Tarjeta de red:</strong> Envía y recibe datos a través de la red.</li>
+              <li><strong>Adaptador Bluetooth:</strong> Comunicación inalámbrica bidireccional.</li>
+              <li><strong>Consola de videojuegos:</strong> Recibe input del mando y genera output de vídeo/audio.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Periféricos de nueva generación</strong>
+            <strong>Sensores biométricos:</strong> Reconocimiento de huella dactilar, facial o de iris. <strong>Dispositivos de realidad virtual:</strong> Gafas VR con seguimiento de movimiento. <strong>Dispositivos de realidad aumentada:</strong> Lentes AR que superponen información digital. <strong>Wearables:</strong> Smartwatches, pulseras de actividad. <strong>Drones:</strong> Vehículos aéreos no tripulados con cámaras.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Clasificación por conexión</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Cableados:</strong> USB, HDMI, DisplayPort, Thunderbolt, Ethernet.</li>
+              <li><strong>Inalámbricos:</strong> Bluetooth, Wi-Fi, NFC, Infrarrojos, Radiofrecuencia.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad exploratoria</strong>
+            Hacer un inventario de todos los periféricos conectados a tu ordenador o dispositivo móvil. Clasificar cada uno como de entrada, salida o E/S, e identificar si es cableado o inalámbrico.
+          </div>
+
+          <!-- QUIZ SESIÓN 4 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué periférico permite tanto entrada como salida de datos?</p>
+            <button class="quiz-opcion" data-valor="a">A. Impresora</button>
+            <button class="quiz-opcion" data-valor="b">B. Teclado</button>
+            <button class="quiz-opcion" data-valor="c">C. Monitor táctil</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de conexión es el Bluetooth?</p>
+            <button class="quiz-opcion" data-valor="a">A. Inalámbrico</button>
+            <button class="quiz-opcion" data-valor="b">B. Cableado</button>
+            <button class="quiz-opcion" data-valor="c">C. Híbrido</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Investigar un periférico de nueva generación (gafas VR, drone, smartwatch) y explicar su funcionamiento, componentes principales y aplicaciones prácticas.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 5 ==================== -->
+      <article
+      <article id="sesion-5" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Buses de comunicación. Datos, control y direcciones</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los buses son los canales de comunicación por los que viajan los datos entre los componentes de un ordenador. Son como las autopistas del sistema informático: cuantos más carriles tienen y a mayor velocidad, mejor es el rendimiento del equipo.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un bus?</h4>
+            <p>Un <strong>bus</strong> es un conjunto de líneas de comunicación (cables o pistas en la placa base) que permiten la transmisión de información entre componentes. Se clasifican en tres tipos:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bus de datos:</strong> Transporta los datos propiamente dichos. Su anchura (número de líneas) determina cuántos bits se transfieren simultáneamente.</li>
+              <li><strong>Bus de direcciones:</strong> Indica dónde están los datos de origen y destino (direcciones de memoria o dispositivos).</li>
+              <li><strong>Bus de control:</strong> Emite señales de sincronización, petición, lectura/escritura y confirmación.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Analogía</strong>
+            Piensa en una oficina de correos: el <strong>bus de datos</strong> son las cartas, el <strong>bus de direcciones</strong> es la dirección del remitente y destinatario, y el <strong>bus de control</strong> es el empleado que gestiona el envío y confirmación de recepción.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de buses según su alcance</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bus interno:</strong> Conecta los componentes dentro de la CPU o entre CPU y memoria. Es el más rápido.</li>
+              <li><strong>Bus del sistema:</strong> Conecta la CPU con la memoria principal y los dispositivos de la placa base.</li>
+              <li><strong>Bus externo:</strong> Conecta periféricos externos (USB, Thunderbolt, HDMI).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Buses comunes</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>USB (Universal Serial Bus):</strong> El bus más utilizado para periféricos. Versiones: USB 2.0 (480 Mbps), USB 3.0 (5 Gbps), USB 3.2 (20 Gbps), USB4 (40 Gbps).</li>
+              <li><strong>PCIe (Peripheral Component Interconnect Express):</strong> Bus de alta velocidad para componentes internos (tarjetas gráficas, SSD NVMe). PCIe 5.0: 64 GB/s.</li>
+              <li><strong>SATA:</strong> Para discos duros y SSD. SATA III: 6 Gbps.</li>
+              <li><strong>Ethernet:</strong> Para redes cableadas. 1 Gbps, 10 Gbps.</li>
+              <li><strong>Thunderbolt:</strong> Combina datos, vídeo y energía en un solo puerto. Thunderbolt 4: 40 Gbps.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Rendimiento de los buses</h4>
+            <p>El rendimiento de un bus depende de:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Anchura de banda:</strong> Número de bits que se transfieren en paralelo.</li>
+              <li><strong>Frecuencia:</strong> Número de transferencias por segundo.</li>
+              <li><strong>Protocolo:</strong> Reglas de comunicación que optimizan la transmisión.</li>
+            </ul>
+            <p class="mt-2"><strong>Fórmula:</strong> Rendimiento = Anchura × Frecuencia × Número de ciclos.</p>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Evolución</strong>
+            Los buses han evolucionado de paralelos (ISA, PCI) a seriales (USB, PCIe). Paradójicamente, los seriales modernos son mucho más rápidos porque permiten mayores frecuencias y menos interferencias.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Investigar los puertos de tu ordenador: identificar cada tipo de bus disponible (USB, HDMI, Thunderbolt, etc.), sus versiones y velocidades máximas. Comparar con las especificaciones de un portátil moderno.</p>
+          </div>
+
+          <!-- QUIZ SESIÓN 5 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué bus transporta los datos propiamente dichos?</p>
+            <button class="quiz-opcion" data-valor="a">A. Bus de direcciones</button>
+            <button class="quiz-opcion" data-valor="b">B. Bus de datos</button>
+            <button class="quiz-opcion" data-valor="c">C. Bus de control</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué bus USB ofrece una velocidad de 20 Gbps?</p>
+            <button class="quiz-opcion" data-valor="a">A. USB 3.2</button>
+            <button class="quiz-opcion" data-valor="b">B. USB 2.0</button>
+            <button class="quiz-opcion" data-valor="c">C. USB 1.1</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Crear un diagrama que muestre los diferentes buses de un sistema informático y sus velocidades máximas, comparando al menos 4 buses diferentes.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 6 ==================== -->
+      <article
+      <article id="sesion-6" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Sistemas operativos. Arquitecturas, funciones, licencias, interfaces de usuario</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>El sistema operativo (SO) es el software más importante de un ordenador. Actúa como intermediario entre el usuario y el hardware, gestionando todos los recursos del sistema. Sin un SO, el hardware sería inutilizable. En esta sesión estudiaremos las funciones, tipos e interfaces de los sistemas operativos.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un sistema operativo?</h4>
+            <p>Un <strong>sistema operativo</strong> es el conjunto de programas que gestiona los recursos hardware y software del ordenador, proporcionando servicios a las aplicaciones y una interfaz al usuario:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Gestión de procesos:</strong> Planifica qué procesos se ejecutan y en qué orden.</li>
+              <li><strong>Gestión de memoria:</strong> Asigna y libera memoria RAM a los procesos.</li>
+              <li><strong>Gestión de archivos:</strong> Organiza, almacena y recupera archivos en el almacenamiento.</li>
+              <li><strong>Gestión de dispositivos:</strong> Controla periféricos mediante controladores (drivers).</li>
+              <li><strong>Seguridad:</strong> Control de acceso, autenticación de usuarios, protección contra malware.</li>
+              <li><strong>Interfaz de usuario:</strong> Proporciona una forma de interactuar con el sistema.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Tipos de interfaces</strong>
+            <strong>CLI (Command Line Interface):</strong> Interfaz de línea de comandos. El usuario escribe comandos de texto. Ejemplo: Terminal de Linux, CMD de Windows. Es rápida y potente pero requiere conocimientos. <strong>GUI (Graphical User Interface):</strong> Interfaz gráfica con ventanas, iconos y menús. Es intuitiva pero más lenta de ejecutar.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Principales sistemas operativos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Windows:</strong> El más usado en PC de escritorio. Propietario, interfaz gráfica, amplia compatibilidad de hardware.</li>
+              <li><strong>macOS:</strong> Sistema de Apple para Mac. Propietario, optimizado para hardware Apple, interfaz pulida.</li>
+              <li><strong>Linux:</strong> Kernel de código abierto. Múltiples distribuciones: Ubuntu, Fedora, Debian, Arch. Gratuito, seguro, personalizable.</li>
+              <li><strong>Android:</strong> Basado en Linux, para dispositivos móviles. Desarrollado por Google.</li>
+              <li><strong>iOS:</strong> Sistema de Apple para iPhone/iPad. Propietario, optimizado para hardware Apple.</li>
+              <li><strong>ChromeOS:</strong> Sistema de Google basado en navegador web. Ligero, para Chromebooks.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Licencias de software</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Propietaria:</strong> El código fuente no está disponible. Pago por licencia. Ejemplo: Windows.</li>
+              <li><strong>Open Source:</strong> Código abierto, cualquier persona puede modificarlo. Ejemplo: Linux (GPL).</li>
+              <li><strong>Freeware:</strong> Gratuito pero con código cerrado. Ejemplo: Skype.</li>
+              <li><strong>Shareware:</strong> Versión de prueba con limitaciones temporales.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad comparativa</strong>
+            Crear una tabla comparativa de Windows, macOS y Linux: precio, licencia, interfaz por defecto, distribución de mercado, hardware compatible, fortalezas y debilidades.
+          </div>
+
+          <!-- QUIZ SESIÓN 6 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué función NO realiza un sistema operativo?</p>
+            <button class="quiz-opcion" data-valor="a">A. Gestión de procesos</button>
+            <button class="quiz-opcion" data-valor="b">B. Renderizado de gráficos 3D para videojuegos</button>
+            <button class="quiz-opcion" data-valor="c">C. Gestión de archivos</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué interfaz permite interactuar con el sistema mediante comandos de texto?</p>
+            <button class="quiz-opcion" data-valor="a">A. GUI</button>
+            <button class="quiz-opcion" data-valor="b">B. API</button>
+            <button class="quiz-opcion" data-valor="c">C. CLI</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Instalar una distribución de Linux (Ubuntu o Fedora) en una máquina virtual y explorar su interfaz, menú de aplicaciones y terminal.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 7 ==================== -->
+      <article
+      <article id="sesion-7" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Gestión del SO. Procesos, archivos, usuarios, dispositivos. Instalación y configuración</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Proyecto de unidad</strong>
+            Esta sesión integra todo lo aprendido sobre arquitectura y sistemas operativos. El alumnado aplicará los conocimientos teóricos en un ejercicio práctico de gestión del sistema.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Gestión de procesos</h4>
+            <p>Un <strong>proceso</strong> es un programa en ejecución. El SO gestiona múltiples procesos simultáneamente mediante la planificación:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Estado de un proceso:</strong> Nuevo, listo, ejecutando, esperando, terminado.</li>
+              <li><strong>Planificación:</strong> El SO decide qué proceso se ejecuta en cada momento (round-robin, prioridades).</li>
+              <li><strong>Multitarea:</strong> El SO alterna rápidamente entre procesos, dando la ilusión de ejecución simultánea.</li>
+              <li><strong>Administrador de tareas:</strong> Herramienta para ver y finalizar procesos (Ctrl+Alt+Supr en Windows, htop en Linux).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Gestión de archivos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Sistema de archivos:</strong> NTFS (Windows), APFS (macOS), ext4 (Linux), FAT32, exFAT.</li>
+              <li><strong>Estructura de carpetas:</strong> Árbol jerárquico de directorios.</li>
+              <li><strong>Permisos:</strong> Lectura, escritura, ejecución. Para propietario, grupo y otros.</li>
+              <li><strong>Respaldo:</strong> Copias de seguridad regulares. Tipos: completa, incremental, diferencial.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Gestión de usuarios</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Usuarios:</strong> Cada persona tiene su propia cuenta con permisos específicos.</li>
+              <li><strong>Administrador:</strong> Usuario con permisos totales para configurar el sistema.</li>
+              <li><strong>Grupo:</strong> Conjunto de usuarios con los mismos permisos.</li>
+              <li><strong>Autenticación:</strong> Contraseña, biométrica, doble factor (2FA).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Gestión de dispositivos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Controladores (drivers):</strong> Software que permite al SO comunicarse con cada hardware.</li>
+              <li><strong>Device Manager (Windows):</strong> Herramienta para administrar dispositivos y controladores.</li>
+              <li><strong>Actualizaciones:</strong> Mantener los controladores actualizados para mejor rendimiento y seguridad.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Consejo práctico</strong>
+            Si un dispositivo no funciona correctamente, la primera solución suele ser actualizar o reinstalar su controlador desde el administrador de dispositivos.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Instalación de un sistema operativo</h4>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li><strong>Preparar:</strong> Verificar requisitos del hardware, hacer copia de seguridad.</li>
+              <li><strong>Crear medio de instalación:</strong> USB booteable con la imagen ISO del SO.</li>
+              <li><strong>Arrancar desde USB:</strong> Configurar el BIOS/UEFI para arrancar desde el USB.</li>
+              <li><strong>Instalar:</strong> Seguir el asistente de instalación (particionar disco, configurar usuario).</li>
+              <li><strong>Configurar:</strong> Instalar controladores, actualizaciones, software adicional.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad integradora</h4>
+            <p>En grupos, simular la gestión de un sistema informático escolar:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Crear 3 usuarios con diferentes permisos (admin, profesor, alumno).</li>
+              <li>Crear una estructura de carpetas compartida.</li>
+              <li>Investigar qué controladores se necesitan para los dispositivos del centro.</li>
+              <li>Planificar un sistema de copias de seguridad semanal.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ FINAL UNIDAD -->
+          <div class="quiz" data-correcta="a" data-total="4">
+            <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es un proceso en un sistema operativo?</p>
+            <button class="quiz-opcion" data-valor="a">A. Un programa en ejecución.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un archivo guardado en el disco.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un dispositivo conectado al ordenador.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-peligro">
+            <strong>Producto de la unidad</strong>
+            El producto final es un informe técnico que describa la arquitectura completa de un sistema informático (procesador, memoria, almacenamiento, buses, periféricos y SO), justificando las decisiones de diseño.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE UNIDADES -->
+    <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
+      <a href="ud4.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        ← UD4 · Bases de datos
+      </a>
+      <a href="ud6.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
+        Siguiente: UD6 · Introducción a la programación →
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>
