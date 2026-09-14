@@ -35,6 +35,7 @@
     { id: '2cyr',    texto: '2º CyR',       href: base + '2cyr.html' },
     { id: '3cyr',    texto: '3º CyR',       href: base + '3cyr.html' },
     { id: '2tyd',    texto: '2º TyD',       href: base + '2tyd.html' },
+    { id: '3tyd',    texto: '3º TyD',       href: base + '3tyd.html' },
     { id: 'tic',     texto: 'TIC I',         href: base + 'tic.html' },
     { id: 'licencia', texto: 'Licencia',    href: 'https://creativecommons.org/licenses/by-nc/4.0/' }
   ];
