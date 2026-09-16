@@ -205,35 +205,12 @@ function crearFormularioEvaluacion() {
     .setTitle('¿Qué diferencia hay entre una variable y una constante? Da un ejemplo de cada una.')
     .setRequired(true);
 
-  // ===================== MARCAR RESPUESTAS CORRECTAS =====================
-  var items = form.getItems();
-  var respuestasCorrectas = [
-    { idx: 1, respuesta: 'B. La desigualdad en el acceso y uso de las tecnologías de la información.' },
-    { idx: 2, respuesta: 'C. La imprenta de Gutenberg.' },
-    { idx: 3, respuesta: 'A. Crear, editar y formatear documentos de texto.' },
-    { idx: 4, respuesta: 'B. XLSX' },
-    { idx: 5, respuesta: 'C. Referencia relativa.' },
-    { idx: 6, respuesta: 'D. Para cambiar el aspecto de las celdas según sus valores.' },
-    { idx: 7, respuesta: 'A. Un campo que identifica de forma única cada registro de una tabla.' },
-    { idx: 8, respuesta: 'B. SELECT' },
-    { idx: 9, respuesta: 'C. Ejecutar instrucciones y procesar datos.' },
-    { idx: 10, respuesta: 'A. La RAM es volátil y rápida; el SSD es permanente y más lento.' },
-    { idx: 11, respuesta: 'B. Una secuencia ordenada de pasos para resolver un problema.' },
-    { idx: 12, respuesta: 'D. 15' },
-    { idx: 13, respuesta: 'C. for / while' }
-  ];
-
-  respuestasCorrectas.forEach(function(r) {
-    var item = items[r.idx];
-    if (item.getType() === FormApp.ItemType.MULTIPLE_CHOICE) {
-      var mcItem = item.asMultipleChoiceItem();
-      mcItem.setPoints(1);
-      mcItem.setCorrectAnswer(r.respuesta);
-    }
-  });
-
   Logger.log('=== EVALUACIÓN INICIAL TIC I ===');
   Logger.log('Formulario creado con 20 preguntas (13 test + 7 desarrollo)');
   Logger.log('URL del formulario: ' + form.getPublishedUrl());
   Logger.log('URL de edición: ' + form.getEditUrl());
+  Logger.log('');
+  Logger.log('Marcas las respuestas correctas en el editor del formulario:');
+  Logger.log('  P1: B | P2: C | P3: A | P4: B | P5: C | P6: D');
+  Logger.log('  P7: A | P8: B | P9: C | P10: A | P11: B | P12: D | P13: C');
 }
