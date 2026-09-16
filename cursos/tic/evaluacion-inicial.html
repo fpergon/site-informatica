@@ -46,25 +46,10 @@
     </section>
 
     <div class="no-print mt-6 flex flex-wrap gap-3">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSenwsxjSR2VR5ADDGyGLod82MuwlqmZf4C_ok9iVTiiqSDodA/viewform" target="_blank" rel="noopener" class="rounded-lg bg-accent-600 px-6 py-3 text-sm font-bold text-white hover:bg-accent-700 transition">📋 Abrir cuestionario en Google Forms →</a>
       <button onclick="window.print()" class="rounded-lg bg-rose-500 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-600 transition">Imprimir cuestionario</button>
-      <button onclick="corregirTodo()" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">Corregir todo</button>
-      <button onclick="enviarRespuestas()" class="rounded-lg bg-accent-600 px-4 py-2 text-sm font-semibold text-white hover:bg-accent-700 transition">Enviar respuestas al profesor</button>
+      <button onclick="corregirTodo()" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">Corregir test (autoevaluación)</button>
     </div>
-
-    <!-- Datos del alumno -->
-    <section class="no-print mt-6 rounded-xl border border-slate-200 bg-white p-6">
-      <h2 class="font-bold text-ink-800 text-lg">Datos del alumno/a</h2>
-      <div class="mt-4 grid gap-4 sm:grid-cols-2">
-        <div>
-          <label for="nombre" class="block text-sm font-semibold text-slate-700">Nombre y apellidos</label>
-          <input type="text" id="nombre" name="nombre" class="mt-1 w-full rounded-lg border border-slate-300 p-2 text-sm" placeholder="Ej: María García López" />
-        </div>
-        <div>
-          <label for="email" class="block text-sm font-semibold text-slate-700">Email (tu cuenta g.educaand.es)</label>
-          <input type="email" id="email" name="email" class="mt-1 w-full rounded-lg border border-slate-300 p-2 text-sm" placeholder="Ej: maria.garcia@educaand.es" />
-        </div>
-      </div>
-    </section>
 
     <!-- ==================== BLOQUE 1: Sociedad de la información ==================== -->
     <section class="mt-8">
@@ -343,50 +328,6 @@
         if (corregirTest(t)) correctas++;
       });
       alert('Has acertado ' + correctas + ' de ' + tests.length + ' preguntas tipo test.\nLas preguntas de desarrollo deben ser revisadas por el profesor.');
-    }
-
-    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxLJjlveVggyuxUrIXVDYQM-if1j5Ct8zdqEwDtmFjyBRN64l0uNrFgEcucBxtqrGI/exec';
-
-    function enviarRespuestas() {
-      var nombre = document.getElementById('nombre').value.trim();
-      var email = document.getElementById('email').value.trim();
-
-      if (!nombre || !email) {
-        alert('Por favor, rellena tu nombre y email antes de enviar.');
-        return;
-      }
-
-      var respuestasTest = {};
-      document.querySelectorAll('.test').forEach(function(test, i) {
-        var seleccion = test.querySelector('input[type=radio]:checked');
-        respuestasTest['p' + (i + 1)] = seleccion ? seleccion.closest('.test-opcion').dataset.valor : '';
-      });
-
-      var respuestasDesarrollo = {};
-      document.querySelectorAll('.desarrollo textarea').forEach(function(ta, i) {
-        respuestasDesarrollo['d' + (i + 1)] = ta.value.trim();
-      });
-
-      var datos = {
-        nombre: nombre,
-        email: email,
-        fecha: new Date().toISOString(),
-        test: respuestasTest,
-        desarrollo: respuestasDesarrollo
-      };
-
-      fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(datos)
-      })
-      .then(function() {
-        alert('Respuestas enviadas correctamente. Gracias, ' + nombre + '!');
-      })
-      .catch(function(err) {
-        alert('Error al enviar: ' + err.message);
-      });
     }
   </script>
 </body>
