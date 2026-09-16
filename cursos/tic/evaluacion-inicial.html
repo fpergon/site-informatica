@@ -19,8 +19,17 @@
     }
   </script>
   <link rel="stylesheet" href="../assets/css/estilos.css" />
+  <style>
+    .pregunta { counter-increment: pregunta; }
+    .pregunta::before { content: counter(pregunta) ". "; font-weight: 700; }
+    .test-opcion { display: block; padding: .5rem .75rem; margin: .25rem 0; border: 1px solid #e2e8f0; border-radius: .5rem; cursor: pointer; transition: all .15s; }
+    .test-opcion:hover { background: #ecfdf5; border-color: #10b981; }
+    .test-opcion.seleccionada { background: #d1fae5; border-color: #059669; font-weight: 600; }
+    textarea { resize: vertical; min-height: 80px; }
+    @media print { .no-print { display: none; } body { font-size: 11pt; } }
+  </style>
 </head>
-<body data-pagina="tic" class="bg-slate-50 text-ink-900 font-sans antialiased">
+<body data-pagina="tic" class="bg-slate-50 text-ink-900 font-sans antialiased" style="counter-reset: pregunta;">
 
   <div id="shell-header"></div>
 
@@ -28,7 +37,7 @@
 
     <section class="rounded-2xl bg-gradient-to-br from-rose-400 to-rose-600 p-8 text-white shadow-lg">
       <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
-        <a href="../tic.html" class="hover:underline">TIC I</a>
+        <a href="tic.html" class="hover:underline">TIC I</a>
         <span>·</span>
         <span>Evaluación Inicial</span>
       </div>
@@ -36,38 +45,240 @@
       <p class="mt-3 text-brand-50/90">Este cuestionario tiene como objetivo conocer tus conocimientos previos sobre los temas que trabajaremos a lo largo del curso. No se califica, pero nos ayudará a adaptar el aprendizaje a tu nivel.</p>
     </section>
 
-    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-8 text-center">
-      <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-rose-100 text-3xl">📋</div>
-      <h2 class="text-xl font-bold text-ink-800">Evaluación inicial de TIC I</h2>
-      <p class="mt-3 text-slate-600">El cuestionario contiene preguntas sobre los 6 bloques temáticos del curso. Tardarás aproximadamente 15-20 minutos.</p>
+    <div class="no-print mt-6 flex flex-wrap gap-3">
+      <button onclick="window.print()" class="rounded-lg bg-rose-500 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-600 transition">Imprimir cuestionario</button>
+      <button onclick="corregirTodo()" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">Corregir todo</button>
+    </div>
 
-      <div class="mt-6 space-y-2 text-left text-sm text-slate-600">
-        <p><span class="font-semibold">Contenido:</span></p>
-        <ul class="list-disc pl-5 space-y-1">
-          <li>UD1 · Sociedad de la información e información digital</li>
-          <li>UD2 · Procesadores de texto</li>
-          <li>UD3 · Hojas de cálculo</li>
-          <li>UD4 · Bases de datos</li>
-          <li>UD5 · Arquitectura de ordenadores</li>
-          <li>UD6 · Programación con Python</li>
-        </ul>
+    <!-- ==================== BLOQUE 1: Sociedad de la información ==================== -->
+    <section class="mt-8">
+      <h2 class="text-xl font-bold text-ink-800 border-b-2 border-rose-400 pb-2">Bloque 1 · Sociedad de la información y del conocimiento</h2>
+
+      <div class="mt-6 space-y-6">
+
+        <div class="test" data-correcta="b">
+          <p class="pregunta font-semibold text-ink-800">¿Qué es la "brecha digital"?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p1" class="mr-2" />A. La velocidad de conexión a internet.</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p1" class="mr-2" />B. La desigualdad en el acceso y uso de las tecnologías de la información.</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p1" class="mr-2" />C. Un tipo de virus informático.</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p1" class="mr-2" />D. Una red social popular.</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="test" data-correcta="c">
+          <p class="pregunta font-semibold text-ink-800">¿Cuál de estos NO es un exponente de la Sociedad de la Información?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p2" class="mr-2" />A. Comercio electrónico.</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p2" class="mr-2" />B. Teletrabajo.</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p2" class="mr-2" />C. La imprenta de Gutenberg.</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p2" class="mr-2" />D. Redes sociales.</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="desarrollo">
+          <p class="pregunta font-semibold text-ink-800">Explica con tus palabras qué es la "huella digital" y da un ejemplo de información que dejamos al navegar por internet.</p>
+          <textarea class="mt-2 w-full rounded-lg border border-slate-300 p-3 text-sm" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+        </div>
+
       </div>
+    </section>
 
-      <div class="callout callout-info mt-6 text-left">
-        <strong>Instrucciones</strong>
-        <ul class="mt-1 list-disc pl-5">
-          <li>Rellena tu nombre y curso al inicio del formulario.</li>
-          <li>Responde todas las preguntas sin consultar materiales.</li>
-          <li>Si no conoces una respuesta, selecciona o escribe "No lo sé todavía".</li>
-          <li>Al terminar, pulsa "Enviar". Tus respuestas se guardarán automáticamente.</li>
-        </ul>
+    <!-- ==================== BLOQUE 2: Procesadores de texto ==================== -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink-800 border-b-2 border-rose-400 pb-2">Bloque 2 · Procesadores de texto</h2>
+
+      <div class="mt-6 space-y-6">
+
+        <div class="test" data-correcta="a">
+          <p class="pregunta font-semibold text-ink-800">¿Cuál es la función principal de un procesador de texto?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p3" class="mr-2" />A. Crear, editar y formatear documentos de texto.</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p3" class="mr-2" />B. Calcular fórmulas matemáticas complejas.</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p3" class="mr-2" />C. Almacenar grandes cantidades de datos.</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p3" class="mr-2" />D. Navegar por internet.</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="test" data-correcta="b">
+          <p class="pregunta font-semibold text-ink-800">¿Qué formato de archivo NO es un formato de procesador de texto?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p4" class="mr-2" />A. DOCX</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p4" class="mr-2" />B. XLSX</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p4" class="mr-2" />C. PDF</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p4" class="mr-2" />D. ODT</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="desarrollo">
+          <p class="pregunta font-semibold text-ink-800">Menciona al menos 3 opciones de formato que ofrece un procesador de texto para dar formato a un párrafo (ej: alineación, interlineado...).</p>
+          <textarea class="mt-2 w-full rounded-lg border border-slate-300 p-3 text-sm" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+        </div>
+
       </div>
+    </section>
 
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSenwsxjSR2VR5ADDGyGLod82MuwlqmZf4C_ok9iVTiiqSDodA/viewform" target="_blank" rel="noopener" class="mt-8 inline-block rounded-lg bg-rose-500 px-8 py-3 text-lg font-bold text-white shadow hover:bg-rose-600 transition">
-        Abrir cuestionario en Google Forms →
-      </a>
+    <!-- ==================== BLOQUE 3: Hojas de cálculo ==================== -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink-800 border-b-2 border-rose-400 pb-2">Bloque 3 · Hojas de cálculo</h2>
 
-      <p class="mt-4 text-xs text-slate-400">Se abrirá en una nueva pestaña. Necesitas estar conectado con tu cuenta @g.educaand.es.</p>
+      <div class="mt-6 space-y-6">
+
+        <div class="test" data-correcta="c">
+          <p class="pregunta font-semibold text-ink-800">¿Qué tipo de referencia se actualiza automáticamente al copiar una fórmula a otra celda?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p5" class="mr-2" />A. Referencia absoluta.</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p5" class="mr-2" />B. Referencia mixta.</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p5" class="mr-2" />C. Referencia relativa.</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p5" class="mr-2" />D. Referencia circular.</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="test" data-correcta="d">
+          <p class="pregunta font-semibold text-ink-800">¿Para qué sirve el formato condicional?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p6" class="mr-2" />A. Para crear gráficos automáticamente.</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p6" class="mr-2" />B. Para ordenar los datos alfabéticamente.</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p6" class="mr-2" />C. Para proteger la hoja de cálculo.</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p6" class="mr-2" />D. Para cambiar el aspecto de las celdas según sus valores.</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="desarrollo">
+          <p class="pregunta font-semibold text-ink-800">Escribe la fórmula que escribirías en una hoja de cálculo para sumar los valores de las celdas A1, A2 y A3.</p>
+          <textarea class="mt-2 w-full rounded-lg border border-slate-300 p-3 text-sm" rows="2" placeholder="Escribe tu respuesta aquí..."></textarea>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== BLOQUE 4: Bases de datos ==================== -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink-800 border-b-2 border-rose-400 pb-2">Bloque 4 · Bases de datos</h2>
+
+      <div class="mt-6 space-y-6">
+
+        <div class="test" data-correcta="a">
+          <p class="pregunta font-semibold text-ink-800">¿Qué es una clave primaria en una base de datos relacional?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p7" class="mr-2" />A. Un campo que identifica de forma única cada registro de una tabla.</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p7" class="mr-2" />B. Una contraseña para acceder a la base de datos.</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p7" class="mr-2" />C. Un campo que almacena números telefónicos.</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p7" class="mr-2" />D. Un tipo de consulta SQL.</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="test" data-correcta="b">
+          <p class="pregunta font-semibold text-ink-800">¿Qué sentencia SQL se utiliza para obtener datos de una tabla?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p8" class="mr-2" />A. INSERT</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p8" class="mr-2" />B. SELECT</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p8" class="mr-2" />C. DELETE</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p8" class="mr-2" />D. UPDATE</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="desarrollo">
+          <p class="pregunta font-semibold text-ink-800">Explica la diferencia entre una relación 1:N y una relación N:M en una base de datos. Pon un ejemplo de cada una.</p>
+          <textarea class="mt-2 w-full rounded-lg border border-slate-300 p-3 text-sm" rows="4" placeholder="Escribe tu respuesta aquí..."></textarea>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== BLOQUE 5: Arquitectura de ordenadores ==================== -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink-800 border-b-2 border-rose-400 pb-2">Bloque 5 · Arquitectura de ordenadores</h2>
+
+      <div class="mt-6 space-y-6">
+
+        <div class="test" data-correcta="c">
+          <p class="pregunta font-semibold text-ink-800">¿Cuál es la función principal de la CPU?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p9" class="mr-2" />A. Almacenar archivos permanentemente.</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p9" class="mr-2" />B. Mostrar imágenes en el monitor.</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p9" class="mr-2" />C. Ejecutar instrucciones y procesar datos.</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p9" class="mr-2" />D. Conectar el ordenador a internet.</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="test" data-correcta="a">
+          <p class="pregunta font-semibold text-ink-800">¿Qué diferencia hay entre memoria RAM y un disco duro SSD?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p10" class="mr-2" />A. La RAM es volátil y rápida; el SSD es permanente y más lento.</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p10" class="mr-2" />B. La RAM almacena el sistema operativo; el SSD solo guarda documentos.</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p10" class="mr-2" />C. No hay diferencia, son lo mismo.</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p10" class="mr-2" />D. El SSD es volátil; la RAM es permanente.</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="desarrollo">
+          <p class="pregunta font-semibold text-ink-800">Nombra al menos 4 componentes internos de un ordenador de sobremesa y explica brevemente la función de cada uno.</p>
+          <textarea class="mt-2 w-full rounded-lg border border-slate-300 p-3 text-sm" rows="4" placeholder="Escribe tu respuesta aquí..."></textarea>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== BLOQUE 6: Programación ==================== -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink-800 border-b-2 border-rose-400 pb-2">Bloque 6 · Programación con Python</h2>
+
+      <div class="mt-6 space-y-6">
+
+        <div class="test" data-correcta="b">
+          <p class="pregunta font-semibold text-ink-800">¿Qué es un algoritmo?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p11" class="mr-2" />A. Un lenguaje de programación.</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p11" class="mr-2" />B. Una secuencia ordenada de pasos para resolver un problema.</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p11" class="mr-2" />C. Un tipo de variable en Python.</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p11" class="mr-2" />D. Un programa informático completo.</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="test" data-correcta="d">
+          <p class="pregunta font-semibold text-ink-800">¿Qué resultado muestra el siguiente código Python?<br /><code class="bg-slate-100 px-1 rounded">x = 5<br />y = 3<br />print(x * y)</code></p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p12" class="mr-2" />A. 8</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p12" class="mr-2" />B. 53</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p12" class="mr-2" />C. "5 * 3"</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p12" class="mr-2" />D. 15</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="test" data-correcta="c">
+          <p class="pregunta font-semibold text-ink-800">¿Qué estructura de control se utiliza para repetir una acción varias veces?</p>
+          <label class="test-opcion" data-valor="a"><input type="radio" name="p13" class="mr-2" />A. if</label>
+          <label class="test-opcion" data-valor="b"><input type="radio" name="p13" class="mr-2" />B. elif</label>
+          <label class="test-opcion" data-valor="c"><input type="radio" name="p13" class="mr-2" />C. for / while</label>
+          <label class="test-opcion" data-valor="d"><input type="radio" name="p13" class="mr-2" />D. print()</label>
+          <div class="test-resultado mt-2 text-sm font-semibold"></div>
+        </div>
+
+        <div class="desarrollo">
+          <p class="pregunta font-semibold text-ink-800">Escribe un programa en Python que pida al usuario su nombre y lo salude por pantalla. (Ejemplo de salida: "¡Hola, María!").</p>
+          <textarea class="mt-2 w-full rounded-lg border border-slate-300 p-3 text-sm font-mono" rows="4" placeholder="# Escribe tu código aquí..."></textarea>
+        </div>
+
+        <div class="desarrollo">
+          <p class="pregunta font-semibold text-ink-800">¿Qué diferencia hay entre una variable y una constante? Da un ejemplo de cada una.</p>
+          <textarea class="mt-2 w-full rounded-lg border border-slate-300 p-3 text-sm" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== RESUMEN ==================== -->
+    <section class="mt-10 rounded-xl border border-slate-200 bg-white p-6">
+      <h2 class="font-bold text-ink-800 text-lg">Resumen del cuestionario</h2>
+      <div class="mt-4 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <thead>
+            <tr class="bg-rose-500 text-white">
+              <th class="border border-rose-600 px-3 py-2 text-left">Bloque</th>
+              <th class="border border-rose-600 px-2 py-2 text-center">Test</th>
+              <th class="border border-rose-600 px-2 py-2 text-center">Desarrollo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-slate-200 px-3 py-2">1. Sociedad de la información</td><td class="border border-slate-200 px-2 py-2 text-center">2</td><td class="border border-slate-200 px-2 py-2 text-center">1</td></tr>
+            <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2">2. Procesadores de texto</td><td class="border border-slate-200 px-2 py-2 text-center">2</td><td class="border border-slate-200 px-2 py-2 text-center">1</td></tr>
+            <tr><td class="border border-slate-200 px-3 py-2">3. Hojas de cálculo</td><td class="border border-slate-200 px-2 py-2 text-center">2</td><td class="border border-slate-200 px-2 py-2 text-center">1</td></tr>
+            <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2">4. Bases de datos</td><td class="border border-slate-200 px-2 py-2 text-center">2</td><td class="border border-slate-200 px-2 py-2 text-center">1</td></tr>
+            <tr><td class="border border-slate-200 px-3 py-2">5. Arquitectura de ordenadores</td><td class="border border-slate-200 px-2 py-2 text-center">2</td><td class="border border-slate-200 px-2 py-2 text-center">1</td></tr>
+            <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2">6. Programación con Python</td><td class="border border-slate-200 px-2 py-2 text-center">3</td><td class="border border-slate-200 px-2 py-2 text-center">2</td></tr>
+            <tr class="font-bold bg-rose-50"><td class="border border-slate-200 px-3 py-2">Total</td><td class="border border-slate-200 px-2 py-2 text-center">13</td><td class="border border-slate-200 px-2 py-2 text-center">7</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
   </main>
@@ -75,5 +286,48 @@
   <div id="shell-footer"></div>
   <script src="../componentes/nucleo.js"></script>
   <script src="../assets/js/app.js"></script>
+  <script>
+    // Selección de opciones test
+    document.querySelectorAll('.test-opcion').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var test = this.closest('.test');
+        test.querySelectorAll('.test-opcion').forEach(function(o) { o.classList.remove('seleccionada'); });
+        this.classList.add('seleccionada');
+        this.querySelector('input[type=radio]').checked = true;
+      });
+    });
+
+    // Corregir un test
+    function corregirTest(test) {
+      var correcta = test.dataset.correcta;
+      var seleccion = test.querySelector('input[type=radio]:checked');
+      var resultado = test.querySelector('.test-resultado');
+      if (!seleccion) {
+        resultado.textContent = 'No respondido';
+        resultado.className = 'test-resultado mt-2 text-sm font-semibold text-slate-500';
+        return null;
+      }
+      var valor = seleccion.closest('.test-opcion').dataset.valor;
+      if (valor === correcta) {
+        resultado.textContent = '✓ Correcto';
+        resultado.className = 'test-resultado mt-2 text-sm font-semibold text-green-600';
+        return true;
+      } else {
+        resultado.textContent = '✗ Incorrecto';
+        resultado.className = 'test-resultado mt-2 text-sm font-semibold text-red-600';
+        return false;
+      }
+    }
+
+    // Corregir todo
+    function corregirTodo() {
+      var tests = document.querySelectorAll('.test');
+      var correctas = 0;
+      tests.forEach(function(t) {
+        if (corregirTest(t)) correctas++;
+      });
+      alert('Has acertado ' + correctas + ' de ' + tests.length + ' preguntas tipo test.\nLas preguntas de desarrollo deben ser revisadas por el profesor.');
+    }
+  </script>
 </body>
 </html>
