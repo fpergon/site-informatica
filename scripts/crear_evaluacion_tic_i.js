@@ -31,7 +31,6 @@ function crearEvaluacionInicial() {
 
   // === DATOS DEL ALUMNO ===
   formulario.addTextItem().setTitle('Nombre y apellidos').setRequired(true);
-  formulario.addTextItem().setTitle('Curso y grupo').setHelpText('Ejemplo: 1.º Bachillerato A').setRequired(true);
 
   var n = 0;
 
