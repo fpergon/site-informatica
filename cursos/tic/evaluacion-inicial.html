@@ -314,7 +314,8 @@
         resultado.className = 'test-resultado mt-2 text-sm font-semibold text-green-600';
         return true;
       } else {
-        resultado.textContent = '✗ Incorrecto';
+        var textoCorrecta = test.querySelector('[data-valor="' + correcta + '"]').textContent.trim();
+        resultado.textContent = '✗ Incorrecto — La respuesta correcta es: ' + textoCorrecta;
         resultado.className = 'test-resultado mt-2 text-sm font-semibold text-red-600';
         return false;
       }
