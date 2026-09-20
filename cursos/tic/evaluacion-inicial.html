@@ -46,14 +46,12 @@
     </section>
 
     <div class="no-print mt-6 flex flex-wrap gap-3">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkdHvoy5l6qxrXXyTu3sSRuGLRtRtf_jIgeTteBJ8Jc3-oZA/viewform" target="_blank" rel="noopener" class="rounded-lg bg-accent-600 px-6 py-3 text-sm font-bold text-white hover:bg-accent-700 transition">📋 Abrir cuestionario en Google Forms →</a>
       <button onclick="window.print()" class="rounded-lg bg-rose-500 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-600 transition">Imprimir cuestionario</button>
-      <button onclick="corregirTodo()" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">Corregir test (autoevaluación)</button>
-      <button onclick="enviarRespuestas()" class="rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700 transition">📤 Enviar respuestas al profesor</button>
+      <button id="btn-corregir" onclick="corregirTodo()" class="hidden rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">Corregir test (autoevaluación)</button>
     </div>
 
     <!-- Datos del alumno -->
-    <section class="no-print mt-6 rounded-xl border border-slate-200 bg-white p-6">
+    <section id="datos-alumno" class="no-print mt-6 rounded-xl border border-slate-200 bg-white p-6 hidden">
       <h2 class="font-bold text-ink-800 text-lg">Datos del alumno/a</h2>
       <div class="mt-4 grid gap-4 sm:grid-cols-2">
         <div>
@@ -298,6 +296,10 @@
       </div>
     </section>
 
+    <div class="no-print mt-6 flex flex-wrap gap-3">
+      <button onclick="enviarRespuestas()" class="rounded-lg bg-green-600 px-6 py-3 text-sm font-bold text-white hover:bg-green-700 transition">📤 Enviar respuestas al profesor</button>
+    </div>
+
   </main>
 
   <div id="shell-footer"></div>
@@ -350,6 +352,15 @@
     var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxPNPjRiayRKfX5qBy9s9iHpdd8oPpAoSRzMWQz5HhfPJc61s2dtQhuk8dADlbWhc4WNQ/exec';
 
     function enviarRespuestas() {
+      var seccionDatos = document.getElementById('datos-alumno');
+
+      // Primera vez: mostrar formulario de datos
+      if (seccionDatos.classList.contains('hidden')) {
+        seccionDatos.classList.remove('hidden');
+        document.getElementById('nombre').focus();
+        return;
+      }
+
       var nombre = document.getElementById('nombre').value.trim();
       var email = document.getElementById('email').value.trim();
 
@@ -385,6 +396,7 @@
       })
       .then(function() {
         alert('Respuestas enviadas correctamente. Gracias, ' + nombre + '!');
+        document.getElementById('btn-corregir').classList.remove('hidden');
       })
       .catch(function(err) {
         alert('Error al enviar: ' + err.message);
