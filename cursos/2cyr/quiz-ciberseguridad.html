@@ -226,9 +226,13 @@
       }
 
       var respuestasTest = {};
+      var correctas = 0;
+      var respuestasCorrectas = ['c','b','d','a','c','b','d','a','c','b'];
       document.querySelectorAll('.test').forEach(function(test, i) {
         var seleccion = test.querySelector('input[type=radio]:checked');
-        respuestasTest['p' + (i + 1)] = seleccion ? seleccion.closest('.test-opcion').dataset.valor : '';
+        var valor = seleccion ? seleccion.closest('.test-opcion').dataset.valor : '';
+        respuestasTest['p' + (i + 1)] = valor;
+        if (valor === respuestasCorrectas[i]) correctas++;
       });
 
       var datos = {
@@ -236,6 +240,7 @@
         email: email,
         fecha: new Date().toISOString(),
         cuestionario: 'Quiz Ciberseguridad UD1',
+        total: correctas + '/10',
         test: respuestasTest
       };
 
