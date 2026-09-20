@@ -41,7 +41,7 @@
 
     <div class="no-print mt-6 flex flex-wrap gap-3">
       <button onclick="window.print()" class="rounded-lg bg-rose-500 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-600 transition">Imprimir cuestionario</button>
-      <button onclick="corregirTodo()" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">Corregir test (autoevaluación)</button>
+      <button id="btn-corregir" onclick="corregirTodo()" class="hidden rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">Corregir test (autoevaluación)</button>
     </div>
 
     <!-- Datos del alumno -->
@@ -253,6 +253,7 @@
       .then(function() {
         alert('Respuestas enviadas correctamente. Gracias, ' + nombre + '!');
         document.getElementById('datos-alumno').classList.add('hidden');
+        document.getElementById('btn-corregir').classList.remove('hidden');
       })
       .catch(function(err) {
         alert('Error al enviar: ' + err.message);
