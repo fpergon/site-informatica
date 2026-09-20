@@ -396,6 +396,7 @@
       })
       .then(function() {
         alert('Respuestas enviadas correctamente. Gracias, ' + nombre + '!');
+        document.getElementById('datos-alumno').classList.add('hidden');
         document.getElementById('btn-corregir').classList.remove('hidden');
       })
       .catch(function(err) {
