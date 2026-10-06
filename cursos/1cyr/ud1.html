@@ -221,13 +221,38 @@
             </ul>
           </div>
 
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Herramientas prácticas para auditar tu huella digital</h4>
+            <p>Existen herramientas gratuitas que nos permiten comprobar en tiempo real qué información personal está disponible públicamente en Internet:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>AmIUnique:</strong> Analiza la <em>fingerprint</em> (huella técnica) de tu navegador: versión, sistema operativo, fuentes instaladas, zona horaria, idioma y más. Comprueba si tu navegador es único y, por tanto, rastreable. <a href="https://amiunique.org" target="_blank" rel="noopener" class="font-semibold text-accent-600 underline hover:text-accent-700">amiunique.org</a></li>
+              <li><strong>WhatsMyName:</strong> Introduce tu nombre de usuario o alias y la herramienta comprueba en cientos de sitios web si está registrado, revelando todos los perfiles asociados a esa identidad. <a href="https://whatsmyname.app" target="_blank" rel="noopener" class="font-semibold text-accent-600 underline hover:text-accent-700">whatsmyname.app</a></li>
+            </ul>
+            <div class="callout callout-nota mt-3">
+              <strong>¿Por qué importa?</strong>
+              Si un atacante conoce tu alias, WhatsMyName le muestra todos tus perfiles públicos. Si tu navegador es único según AmIUnique, cualquier web puede rastrearte entre sesiones aunque borres las cookies.
+            </div>
+          </div>
+
           <div class="actividad">
             <h4 class="font-semibold text-brand-700 mb-1">Práctica: Auditoría de privacidad</h4>
-            <p>Vamos a realizar una auditoría de la configuración de privacidad en tres entornos:</p>
+            <p>Vamos a realizar una auditoría de la configuración de privacidad en cuatro puntos:</p>
             <ol class="mt-2 space-y-2 pl-5 list-decimal">
-              <li><strong>Navegador web:</strong> Revisar la configuración de privacidad y seguridad de Chrome/Firefox.</li>
-              <li><strong>Red social (Instagram o TikTok):</strong> Acceder a la configuración de privacidad de la cuenta.</li>
-              <li><strong>Teléfono móvil:</strong> Revisar los permisos de las aplicaciones instaladas.</li>
+              <li><strong>Navegador web:</strong> Revisar la configuración de privacidad y seguridad de Chrome/Firefox y comprobar en <a href="https://amiunique.org" target="_blank" rel="noopener" class="font-semibold text-accent-600 underline hover:text-accent-700">AmIUnique</a> si tu navegador es rastreable.</li>
+              <li><strong>Identidad digital:</strong> Introducir tu alias habitual en <a href="https://whatsmyname.app" target="_blank" rel="noopener" class="font-semibold text-accent-600 underline hover:text-accent-700">WhatsMyName</a> y anotar todos los perfiles públicos que descubras.</li>
+              <li>
+                <strong>Búsqueda avanzada de tu nombre (Google Dorks)</strong><br />
+                Abre una ventana de navegación de incógnito y utiliza operadores exactos en Google para ver qué información pública aparece sobre ti:
+                <ul class="mt-1 space-y-1 pl-5 list-disc">
+                  <li><code class="bg-white/70 px-1.5 py-0.5 rounded">"Nombre Apellidos"</code> (entre comillas exactas para evitar resultados dispersos).</li>
+                  <li><code class="bg-white/70 px-1.5 py-0.5 rounded">"Nombre Apellidos" filetype:pdf</code> (localiza documentos oficiales, listas de admisiones, multas o publicaciones públicas).</li>
+                  <li><code class="bg-white/70 px-1.5 py-0.5 rounded">site:redsocial.com "Nombre o Usuario"</code> (filtra los resultados exclusivamente en una red específica).</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Comprobar si tus datos han sido filtrados</strong><br />
+                Consulta el sitio <a href="https://haveibeenpwned.com" target="_blank" rel="noopener" class="font-semibold text-accent-600 underline hover:text-accent-700">HaveIBeenPwned.com</a> e introduce tus correos electrónicos habituales o número de teléfono. La plataforma te mostrará en segundos si tu información personal ha aparecido en filtraciones de seguridad (data breaches) de páginas o servicios que utilizaste en el pasado.
+              </li>
             </ol>
           </div>
 
@@ -324,7 +349,7 @@
 
           <div class="actividad">
             <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p><strong>Ejercicio 1:</strong> Evaluar la fortaleza de nuestras contraseñas actuales usando "How Secure Is My Password".</p>
+            <p><strong>Ejercicio 1:</strong> Evaluar la fortaleza de nuestras contraseñas actuales usando <a href="https://www.security.org/how-secure-is-my-password/" target="_blank" rel="noopener" class="font-semibold text-accent-600 underline hover:text-accent-700">How Secure Is My Password</a>.</p>
             <p class="mt-2"><strong>Ejercicio 2:</strong> Crear una contraseña segura usando el método de las tres palabras.</p>
             <p class="mt-2"><strong>Ejercicio 3:</strong> Configurar la autenticación en dos pasos en la cuenta de Google personal.</p>
           </div>
@@ -409,9 +434,9 @@
             <p class="quiz-score"></p>
           </div>
 
-          <div class="callout callout-consejo">
-            <strong>Actividad grupal</strong>
-            En grupos de 3-4 alumnos, recibiréis 5 publicaciones de redes sociales. Algunas son verdaderas y otras son bulos. Aplicad el método SIFT a cada una y presentad vuestro análisis al resto de la clase.
+          <div class="actividad">
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+            <p><strong><a href="https://maldita.es" target="_blank" rel="noopener">Maldita.es</a></strong> es un proyecto periodístico independiente sin ánimo de lucro y una de las plataformas de verificación de hechos (fact-checking) referentes en España. Elegid 3 artículos o verificaciones publicados recientemente y presentad al resto de la clase: el bulo o afirmación que se verificó, la conclusión a la que llegó Maldita.es y las fuentes que utilizaron para llegar a ella.</p>
           </div>
         </div>
       </article>
