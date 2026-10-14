@@ -137,58 +137,74 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Generación de programas: código fuente a código máquina</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Secuencia de instrucciones y representación de algoritmos</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Los medios de expresión de algoritmos son herramientas fundamentales para comunicar la lógica de un programa antes de escribir código. Dominar el pseudocódigo y los diagramas de flujo facilita enormemente la fase de diseño.
+          </div>
+
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Cuando escribís un programa en Python, estáis creando <strong>código fuente</strong>: un archivo de texto que contiene instrucciones legibles para los humanos. Pero el procesador de vuestro ordenador no entiende Python ni ningún otro lenguaje de alto nivel. Solo entiende código máquina, una secuencia de unos y ceros. En esta sesión vamos a descubrir cómo se transforma vuestro código en algo que el ordenador pueda ejecutar realmente.</p>
+            <p>Antes de escribir una sola línea de código, es habitual diseñar el algoritmo utilizando herramientas de representación. En esta sesión aprenderemos tres medios de expresión de algoritmos: el lenguaje natural, el pseudocódigo y los diagramas de flujo. Cada uno tiene sus ventajas y se usa en diferentes contextos.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">El proceso de generación de un programa</h4>
-            <p>Cuando ejecutáis un programa en Python, ocurre lo siguiente:</p>
-            <ol class="mt-2 space-y-2 pl-5 list-decimal">
-              <li><strong>Código fuente:</strong> Escribís el programa en un archivo <code class="bg-slate-100 px-1 rounded text-xs">.py</code>.</li>
-              <li><strong>Intérprete/Compilador:</strong> Python lee el código fuente, verifica que la sintaxis sea correcta y lo traduce a un formato intermedio.</li>
-              <li><strong>Código byte (interpretado):</strong> En Python, el código se compila a código byte, un formato intermedio que el intérprete puede ejecutar.</li>
-              <li><strong>Ejecución:</strong> La máquina virtual de Python (CPython) ejecuta el código byte instrucción por instrucción.</li>
-            </ol>
-            <p class="mt-2">Python es un lenguaje <strong>interpretado</strong>, no compilado al uso tradicional. La diferencia es que un compilador tradicional (como C o Java) genera un ejecutable completo antes de ejecutar, mientras que Python traduce y ejecuta línea por línea.</p>
-          </div>
-
-          <div class="callout callout-nota">
-            <strong>Dato curioso</strong>
-            Python usa un sistema de ejecución intermedio: el código se compila a código byte (<code class="bg-white/50 px-1 rounded text-xs">.pyc</code>) que luego ejecuta una máquina virtual. Esto combina la portabilidad de la interpretación con parte de la eficiencia de la compilación.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Estructura de un programa: E/S/P</h4>
-            <p>Todo programa, sin importar su complejidad, sigue la estructura básica <strong>Entrada → Proceso → Salida</strong>:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Lenguaje natural</h4>
+            <p>Es la forma más intuitiva de expresar un algoritmo: escribir los pasos en nuestro idioma habitual. Es accesible para cualquier persona, pero presenta problemas importantes:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Entrada (Input):</strong> Datos que el programa recibe del usuario o de fuentes externas. En Python: <code class="bg-slate-100 px-1 rounded text-xs">input()</code>.</li>
-              <li><strong>Proceso:</strong> Operaciones que el programa realiza con los datos: cálculos, comparaciones, decisiones, bucles.</li>
-              <li><strong>Salida (Output):</strong> Resultados que el programa muestra al usuario. En Python: <code class="bg-slate-100 px-1 rounded text-xs">print()</code>.</li>
+              <li><strong>Ambigüedad:</strong> Las palabras pueden tener diferentes interpretaciones según el contexto.</li>
+              <li><strong>Verbosidad:</strong> Requiere muchas palabras para expresar conceptos simples.</li>
+              <li><strong>Falta de precisión:</strong> No es adecuado para algoritmos complejos donde cada detalle importa.</li>
             </ul>
-            <p class="mt-2">Esta estructura es universal. Desde un简单的 calculador hasta un sistema de inteligencia artificial, todos los programas siguen este flujo de información.</p>
+            <p class="mt-2"><strong>Ejemplo:</strong> "Para hacer un sándwich, toma dos rebanadas de pan, pon queso en una de ellas, cubre con la otra rebanada y sirve."</p>
           </div>
 
-          <div class="actividad">
-            <h4 class="font-semibold text-brand-700 mb-1">Práctica: flujo E/S/P</h4>
-            <p>Cread un programa que:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Pida al usuario su nombre (<code class="bg-slate-100 px-1 rounded text-xs">input()</code>).</li>
-              <li>Pida su edad (<code class="bg-slate-100 px-1 rounded text-xs">int(input())</code>).</li>
-              <li>Calcule en qué año cumplirá 100 años.</li>
-              <li>Muestre el resultado con un mensaje (<code class="bg-slate-100 px-1 rounded text-xs">print()</code>).</li>
-            </ol>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Pseudocódigo</h4>
+            <p>El pseudocódigo es una representación semiformal de un algoritmo que utiliza una combinación de lenguaje natural y elementos estructurados. No sigue una sintaxis estricta, pero es más preciso que el lenguaje natural:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Utiliza palabras clave como <code class="bg-white/50 px-1 rounded">INICIO</code>, <code class="bg-white/50 px-1 rounded">FIN</code>, <code class="bg-white/50 px-1 rounded">SI</code>, <code class="bg-white/50 px-1 rounded">ENTONCES</code>, <code class="bg-white/50 px-1 rounded">MIENTRAS</code>, <code class="bg-white/50 px-1 rounded">HACER</code>.</li>
+              <li>Es independiente del lenguaje de programación.</li>
+              <li>Facilita la traducción a cualquier lenguaje de programación.</li>
+            </ul>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Reflexión</strong>
-            Si Python es interpretado, ¿por qué no usamos siempre Python en lugar de C o C++? La respuesta es eficiencia: los lenguajes compilados generan código máquina directo y son mucho más rápidos en tareas críticas como videojuegos 3D o sistemas operativos.
+            <strong>Ejemplo de pseudocódigo</strong>
+            <code class="block bg-white/50 p-2 rounded mt-1 text-xs">INICIO<br/>
+&nbsp;&nbsp;LEER "¿Cómo te llamas?" → nombre<br/>
+&nbsp;&nbsp;SI nombre ≠ "" ENTONCES<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;ESCRIBIR "¡Hola, " + nombre + "!"<br/>
+&nbsp;&nbsp;SI NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;ESCRIBIR "No has introducido tu nombre"<br/>
+&nbsp;&nbsp;FIN SI<br/>
+FIN</code>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Diagrama de flujo</h4>
+            <p>Un diagrama de flujo es una representación gráfica de un algoritmo utilizando figuras geométricas conectadas con flechas. Cada forma tiene un significado específico:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Óvalo:</strong> Inicio y fin del algoritmo.</li>
+              <li><strong>Paralelogramo:</strong> Entrada o salida de datos (leer/escribir).</li>
+              <li><strong>Rectángulo:</strong> Proceso o instrucción (asignaciones, cálculos).</li>
+              <li><strong>Diamante:</strong> Decisión (pregunta con respuesta SI/NO).</li>
+              <li><strong>Flechas:</strong> Dirección del flujo de ejecución.</li>
+            </ul>
+          </div>
+
+          <div class="actividad">
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Dibujaremos un diagrama de flujo para resolver el problema de calcular si un número es par o impar. Luego, escribiremos el pseudocódigo correspondiente y lo compararemos con la implementación en Scratch.</p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Cada alumno elegirá un problema cotidiano (preparar café, cruzar la calle, etc.) y lo representará en tres formatos: lenguaje natural, pseudocódigo y diagrama de flujo. Se valorará la claridad y precisión de cada representación.
           </div>
         </div>
       </article>
