@@ -36,7 +36,7 @@
         <span>Bloque A</span>
       </div>
       <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Introducción a la Programación y Python</h1>
-      <p class="mt-3 text-brand-50/90">Damos el salto de los lenguajes de bloques a la programación textual con Python. Los alumnos ya conocen programación visual (Scratch, App Inventor). Ahora aprenderán a escribir, ejecutar y depurar código Python, comprendiendo la estructura de un programa, tipos de datos, operadores y estructuras de control.</p>
+      <p class="mt-3 text-brand-50/90">Damos el salto de la programación visual a la programación textual con Python, partiendo de un conocimiento básico de Scratch. Aprenderán a escribir, ejecutar y depurar código Python, comprendiendo la estructura de un programa, tipos de datos, operadores, estructuras condicionales y bucles.</p>
     </section>
 
     <!-- SESIONES -->
@@ -218,67 +218,184 @@ FIN</code>
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Tipos de datos: variables, identificador, tipo y valor</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Primer contacto con Python: del bloque al código</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Los tipos de datos son la base de toda programación. Es crucial que los alumnos entiendan que en Python las variables no necesitan declarar su tipo explícitamente, pero el tipo siempre existe internamente.
+            Es posible que solo hayáis tocado Scratch un poquito, o incluso que no lo recuerdeis: no pasa nada. Solo necesitamos la idea básica de que programar es dar instrucciones a un ordenador, y ahora lo haremos escribiendo texto en Python.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>En Scratch, si lo habéis visto, se programa <strong>arrastrando bloques de colores</strong> y encajándolos unos con otros: cada bloque es una instrucción y encaja porque el programa sabe qué va después. En <strong>Python</strong> hacemos exactamente lo mismo, pero <strong>escribiendo el código con el teclado</strong>. La lógica es la misma; cambia la forma de expresarla.</p>
+            <p class="mt-2">Lo bueno de Python es que su código se parece bastante a lo que leerías en castellano, así que en muy pocas sesiones podréis escribir programas de verdad.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">La misma idea, dos formas de programar</h4>
+            <p>Si algún día habéis abierto Scratch, estas son las equivalencias que necesitáis. Si no lo habéis visto, esta tabla os sirve igualmente para ver qué hace cada cosa en Python:</p>
+            <div class="mt-3 overflow-x-auto">
+              <table class="w-full border-collapse text-sm">
+                <thead>
+                  <tr class="bg-brand-600 text-white">
+                    <th class="border border-brand-700 px-3 py-2 text-left">Queremos…</th>
+                    <th class="border border-brand-700 px-3 py-2 text-left">En Scratch (si lo recuerdas)</th>
+                    <th class="border border-brand-700 px-3 py-2 text-left">En Python</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Mostrar un mensaje</td><td class="border border-slate-200 px-3 py-2">Bloque "decir Hola"</td><td class="border border-slate-200 px-3 py-2"><code class="bg-slate-100 px-1 rounded text-xs">print("Hola")</code></td></tr>
+                  <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Crear una variable</td><td class="border border-slate-200 px-3 py-2">Botón "Variables"</td><td class="border border-slate-200 px-3 py-2"><code class="bg-slate-100 px-1 rounded text-xs">nombre = "Lucía"</code></td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Preguntar al usuario</td><td class="border border-slate-200 px-3 py-2">Bloque "preguntar y esperar"</td><td class="border border-slate-200 px-3 py-2"><code class="bg-slate-100 px-1 rounded text-xs">respuesta = input("¿Cuál es tu nombre? ")</code></td></tr>
+                  <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Tomar una decisión</td><td class="border border-slate-200 px-3 py-2">Bloque "si…entonces" (rombo)</td><td class="border border-slate-200 px-3 py-2"><code class="bg-slate-100 px-1 rounded text-xs">if condicion:</code></td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Repetir algo</td><td class="border border-slate-200 px-3 py-2">Bloque "repetir 10 veces"</td><td class="border border-slate-200 px-3 py-2"><code class="bg-slate-100 px-1 rounded text-xs">for i in range(10):</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El entorno de trabajo: Thonny</h4>
+            <p>Escribiremos nuestro código en <strong>Thonny</strong>, un editor sencillo y gratuito. Su uso básico es muy fácil:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Escribir:</strong> se teclea el código en el área superior.</li>
+              <li><strong>Ejecutar:</strong> se pulsa el botón ▶ (o F5) y el resultado aparece abajo.</li>
+              <li><strong>Leer errores:</strong> si algo falla, Thonny marca la línea en rojo y explica el problema. Fallar es parte de aprender: todos los programadores depuran errores a diario.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Comentarios</h4>
+            <p>Un comentario es texto que <strong>el ordenador ignora</strong>; solo sirve para que quien lea el código entienda qué hace:</p>
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code># Esto es un comentario de una línea
+print("Hola")  # También se puede comentar al final</code></pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Función print(): mostrar por pantalla</h4>
+            <p><code class="bg-slate-100 px-1 rounded text-xs">print()</code> muestra información por pantalla. Es lo más parecido al bloque "decir" de Scratch:</p>
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>print("Hola mundo")
+print("Nombre:", "Lucía", "Edad:", 15)</code></pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Función input(): leer datos del usuario</h4>
+            <p><code class="bg-slate-100 px-1 rounded text-xs">input()</code> detiene el programa y espera a que el usuario escriba algo. <strong>Siempre devuelve texto</strong>, aunque escriba números:</p>
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>nombre = input("¿Cómo te llamas? ")
+edad = int(input("¿Cuántos años tienes? "))  # convertir a número</code></pre>
+            <p class="mt-2">Si vamos a hacer cálculos, debemos convertir con <code class="bg-slate-100 px-1 rounded text-xs">int()</code> o <code class="bg-slate-100 px-1 rounded text-xs">float()</code>; si no, Python tratará los números como texto.</p>
+          </div>
+
+          <!-- VÍDEO: Tutorial Python -->
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" title="Tutorial completo de Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Tutorial completo de Python</p>
+
+          <div class="actividad">
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica: vuestro primer programa</h4>
+            <p>Abre Thonny y escribe un programa que haga esto:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Pregunte el nombre con <code class="bg-slate-100 px-1 rounded text-xs">input()</code>.</li>
+              <li>Pregunte la edad y conviértela a número con <code class="bg-slate-100 px-1 rounded text-xs">int()</code>.</li>
+              <li>Muestre un saludo personalizado con <code class="bg-slate-100 px-1 rounded text-xs">print()</code>.</li>
+              <li>Guarda el archivo como <code class="bg-slate-100 px-1 rounded text-xs">mi_primer_programa.py</code>.</li>
+            </ol>
+          </div>
+
+          <!-- QUIZ SESIÓN 3 -->
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué función se usa para mostrar un mensaje por pantalla en Python?</p>
+            <button class="quiz-opcion" data-valor="a">A. input()</button>
+            <button class="quiz-opcion" data-valor="b">B. mostrar()</button>
+            <button class="quiz-opcion" data-valor="c">C. print()</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Entregar captura de pantalla del programa ejecutado en Thonny. El programa debe pedir al menos 2 datos con <code class="bg-white/50 px-1 rounded">input()</code> y mostrar un mensaje con <code class="bg-white/50 px-1 rounded">print()</code>.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 4 ==================== -->
+      <article id="sesion-4" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Variables y tipos de datos</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Si en Scratch habíais usado el botón "Variables" para guardar una puntuación, ya conocéis el concepto. En Python es igual, solo que la variable se crea con una sola línea: <code>nombre = valor</code>.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una variable?</h4>
-            <p>Una <strong>variable</strong> es un espacio en memoria donde almacenamos un dato. Se le asigna un nombre (identificador) y un valor. Podemos imaginarlo como una caja etiquetada: la etiqueta es el nombre y lo que hay dentro es el valor.</p>
-            <p class="mt-2">En Python, para crear una variable simplemente escribimos:</p>
+            <p>Una <strong>variable</strong> es un espacio en memoria donde guardamos un dato. Pensad en una <strong>caja etiquetada</strong>: la etiqueta es el nombre y lo que hay dentro es el valor.</p>
+            <p class="mt-2">En Python basta con escribir:</p>
             <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>nombre = "Lucía"
 edad = 15
 altura = 1.68
 es_mayor = True</code></pre>
-            <p class="mt-2">No hace falta indicar el tipo de dato. Python lo infiere automáticamente a partir del valor asignado. A esto se le llama <strong>tipado dinámico</strong>.</p>
+            <p class="mt-2">No hace falta indicar el tipo: Python lo deduce solo. A esto se le llama <strong>tipado dinámico</strong>.</p>
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Identificador, tipo y valor</h4>
-            <p>Cada variable tiene tres componentes:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Identificador:</strong> El nombre de la variable. Debe empezar con letra o guión bajo, puede contener letras, números y guión bajo, y es case-sensitive (<code class="bg-slate-100 px-1 rounded text-xs">nombre</code> ≠ <code class="bg-slate-100 px-1 rounded text-xs">Nombre</code>).</li>
-              <li><strong>Tipo:</strong> El tipo de dato que almacena. En Python se determina automáticamente.</li>
-              <li><strong>Valor:</strong> El dato concreto almacenado en la variable.</li>
+              <li><strong>Identificador:</strong> el nombre. Empieza por letra o <code class="bg-slate-100 px-1 rounded text-xs">_</code>, puede llevar letras, números y guiones bajos, y distingue mayúsculas (<code class="bg-slate-100 px-1 rounded text-xs">nombre</code> ≠ <code class="bg-slate-100 px-1 rounded text-xs">Nombre</code>).</li>
+              <li><strong>Tipo:</strong> qué clase de dato guarda (en Python se detecta automáticamente).</li>
+              <li><strong>Valor:</strong> el dato concreto guardado.</li>
             </ul>
           </div>
 
           <div class="callout callout-aviso">
             <strong>Importante</strong>
-            En Python no se puede usar una variable antes de asignarle un valor. Si intentáis imprimir una variable no definida, obtendréis un error <code class="bg-white/50 px-1 rounded">NameError</code>.
+            No se puede usar una variable antes de darle un valor. Si imprimís una variable no definida, obtendréis un error <code class="bg-white/50 px-1 rounded">NameError</code>.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Tipos de datos principales</h4>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Números enteros (int):</strong> <code class="bg-slate-100 px-1 rounded text-xs">edad = 15</code>, <code class="bg-slate-100 px-1 rounded text-xs">año = 2026</code>.</li>
-              <li><strong>Números decimales (float):</strong> <code class="bg-slate-100 px-1 rounded text-xs">altura = 1.68</code>, <code class="bg-slate-100 px-1 rounded text-xs">nota = 8.75</code>.</li>
-              <li><strong>Cadenas de texto (str):</strong> <code class="bg-slate-100 px-1 rounded text-xs">nombre = "Lucía"</code>, <code class="bg-slate-100 px-1 rounded text-xs">curso = '3º ESO'</code>.</li>
-              <li><strong>Booleanos (bool):</strong> <code class="bg-slate-100 px-1 rounded text-xs">aprobado = True</code>, <code class="bg-slate-100 px-1 rounded text-xs">repetido = False</code>.</li>
-              <li><strong>Listas (list):</strong> <code class="bg-slate-100 px-1 rounded text-xs">mascotas = ["Luna", "Max", "Nala"]</code>. Colección ordenada de elementos.</li>
+              <li><strong>Enteros (int):</strong> <code class="bg-slate-100 px-1 rounded text-xs">edad = 15</code>.</li>
+              <li><strong>Decimales (float):</strong> <code class="bg-slate-100 px-1 rounded text-xs">altura = 1.68</code>.</li>
+              <li><strong>Texto (str):</strong> <code class="bg-slate-100 px-1 rounded text-xs">nombre = "Lucía"</code>.</li>
+              <li><strong>Booleanos (bool):</strong> <code class="bg-slate-100 px-1 rounded text-xs">aprobado = True</code> o <code class="bg-slate-100 px-1 rounded text-xs">False</code>.</li>
+              <li><strong>Listas (list):</strong> <code class="bg-slate-100 px-1 rounded text-xs">mascotas = ["Luna", "Max"]</code>, colección ordenada.</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo con mascotas</h4>
-            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code># Lista de mascotas
-mascotas = ["Luna", "Max", "Nala", "Rocky"]
+            <h4 class="font-semibold text-brand-700 mb-1">Mostrar variables con f-strings</h4>
+            <p>Las f-strings permiten insertar el valor de una variable dentro de un texto usando llaves <code class="bg-slate-100 px-1 rounded text-xs">{}</code>:</p>
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>nombre = "Lucía"
+edad = 15
+
+print(f"Me llamo {nombre} y tengo {edad} años")
+print(f"El doble de mi edad es {edad * 2}")</code></pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo con una lista</h4>
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>mascotas = ["Luna", "Max", "Nala", "Rocky"]
 print(f"Tengo {len(mascotas)} mascotas")
 print(f"La primera se llama {mascotas[0]}")
-print(f"La última se llama {mascotas[-1]}")
 
-# Añadir una mascota
 mascotas.append("Bella")
 print(f"Ahora tengo {len(mascotas)} mascotas")</code></pre>
           </div>
 
-          <!-- QUIZ SESIÓN 3 -->
+          <!-- QUIZ SESIÓN 4 -->
           <div class="quiz" data-correcta="c" data-total="3">
             <h4>Comprueba lo aprendido</h4>
             <p class="font-semibold text-slate-700 mb-2">¿Qué es una variable?</p>
@@ -291,89 +408,7 @@ print(f"Ahora tengo {len(mascotas)} mascotas")</code></pre>
 
           <div class="callout callout-consejo">
             <strong>Actividad de evaluación</strong>
-            Crear un programa que declare al menos 5 variables de diferentes tipos (int, float, str, bool, list) con información sobre vuestras mascotas, y muestre todos los datos por pantalla.
-          </div>
-        </div>
-      </article>
-
-      <!-- ==================== SESIÓN 4 ==================== -->
-      <article id="sesion-4" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
-          <div>
-            <h3 class="font-bold text-ink-800 text-lg">Operadores: aritméticos, relacionales y lógicos</h3>
-          </div>
-        </div>
-
-        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Los operadores son símbolos especiales que realizan operaciones sobre datos. Son las herramientas fundamentales para procesar información dentro de un programa. En esta sesión aprenderemos los tres tipos principales: aritméticos, relacionales y lógicos.</p>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Operadores aritméticos</h4>
-            <p>Realizan operaciones matemáticas básicas:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-slate-100 px-1 rounded text-xs">+</code> Suma: <code class="bg-slate-100 px-1 rounded text-xs">5 + 3 → 8</code></li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">-</code> Resta: <code class="bg-slate-100 px-1 rounded text-xs">5 - 3 → 2</code></li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">*</code> Multiplicación: <code class="bg-slate-100 px-1 rounded text-xs">5 * 3 → 15</code></li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">/</code> División: <code class="bg-slate-100 px-1 rounded text-xs">5 / 2 → 2.5</code></li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">%</code> Módulo (resto): <code class="bg-slate-100 px-1 rounded text-xs">5 % 2 → 1</code></li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">//</code> División entera: <code class="bg-slate-100 px-1 rounded text-xs">5 // 2 → 2</code></li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">**</code> Potencia: <code class="bg-slate-100 px-1 rounded text-xs">5 ** 2 → 25</code></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Operadores relacionales</h4>
-            <p>Comparan dos valores y devuelven <code class="bg-slate-100 px-1 rounded text-xs">True</code> o <code class="bg-slate-100 px-1 rounded text-xs">False</code>:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-slate-100 px-1 rounded text-xs">></code> Mayor que</li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs"><</code> Menor que</li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">>=</code> Mayor o igual que</li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs"><=</code> Menor o igual que</li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">==</code> Igual a (comparación, NO asignación)</li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">!=</code> Distinto de</li>
-            </ul>
-            <p class="mt-2">Cuidado: <code class="bg-slate-100 px-1 rounded text-xs">=</code> es asignación, <code class="bg-slate-100 px-1 rounded text-xs">==</code> es comparación. Es el error más común entre principiantes.</p>
-          </div>
-
-          <div class="callout callout-aviso">
-            <strong>Atención</strong>
-            En Python 2 existía un operador de división entera distinto. En Python 3, <code class="bg-white/50 px-1 rounded">/</code> siempre devuelve un decimal y <code class="bg-white/50 px-1 rounded">//</code> devuelve la parte entera.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Operadores lógicos</h4>
-            <p>Combinan expresiones booleanas:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><code class="bg-slate-100 px-1 rounded text-xs">and</code> AND: Verdadero solo si ambas condiciones son verdaderas.</li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">or</code> OR: Verdadero si al menos una condición es verdadera.</li>
-              <li><code class="bg-slate-100 px-1 rounded text-xs">not</code> NOT: Invierte el valor booleano.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico</h4>
-            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code># Calculadora básica
-a = 10
-b = 3
-
-print(f"Suma: {a} + {b} = {a + b}")
-print(f"Resta: {a} - {b} = {a - b}")
-print(f"Multiplicación: {a} * {b} = {a * b}")
-print(f"División: {a} / {b} = {a / b}")
-print(f"Módulo: {a} % {b} = {a % b}")
-
-# Comparaciones
-print(f"¿{a} es mayor que {b}? {a > b}")
-print(f"¿{a} es igual a {b}? {a == b}")</code></pre>
-          </div>
-
-          <div class="callout callout-consejo">
-            <strong>Actividad</strong>
-            Crear un programa que pida dos números al usuario y muestre todas las operaciones aritméticas, relacionales y lógicas posibles.
+            Crear un programa que declare al menos 5 variables de diferentes tipos (int, float, str, bool, list) con información sobre vuestras mascotas, y muestre todos los datos por pantalla con f-strings.
           </div>
         </div>
       </article>
@@ -383,103 +418,86 @@ print(f"¿{a} es igual a {b}? {a == b}")</code></pre>
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Introducción a Python: palabras reservadas, comentarios, print(), input(), f-strings</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Operadores: aritméticos, relacionales y lógicos</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-          <div class="callout callout-nota">
-            <strong>Nota didáctica</strong>
-            Esta sesión consolida los fundamentos del lenguaje Python. Es la sesión donde los alumnos aprenden a escribir código Python de forma autónoma, combinando entrada, proceso y salida de datos.
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Los <strong>operadores</strong> son los símbolos con los que procesamos datos. Si en Scratch las comparaciones y las operaciones matemáticas eran bloques especiales, en Python se escriben directamente: son casi los mismos símbolos que usáis en la calculadora.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Palabras reservadas</h4>
-            <p>Python tiene un conjunto de <strong>palabras reservadas</strong> que no pueden usarse como nombres de variables. Estas palabras tienen significados especiales en el lenguaje. Algunas de las más importantes:</p>
-            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>False   class    finally    is        return
-None    continue for        lambda    try
-True    def      from       nonlocal  while
-and     del      global     not       with
-as      elif     if         or        yield
-assert  else     import     pass
-break   except   in         raise</code></pre>
-            <p class="mt-2">Podéis ver la lista completa con <code class="bg-slate-100 px-1 rounded text-xs">import keyword; print(keyword.kwlist)</code>.</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Operadores aritméticos</h4>
+            <div class="mt-3 overflow-x-auto">
+              <table class="w-full border-collapse text-sm">
+                <thead>
+                  <tr class="bg-brand-600 text-white">
+                    <th class="border border-brand-700 px-3 py-2 text-left">Operador</th>
+                    <th class="border border-brand-700 px-3 py-2 text-left">Significado</th>
+                    <th class="border border-brand-700 px-3 py-2 text-left">Ejemplo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="border border-slate-200 px-3 py-2"><code>+</code></td><td class="border border-slate-200 px-3 py-2">Suma</td><td class="border border-slate-200 px-3 py-2"><code>5 + 3 → 8</code></td></tr>
+                  <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2"><code>-</code></td><td class="border border-slate-200 px-3 py-2">Resta</td><td class="border border-slate-200 px-3 py-2"><code>5 - 3 → 2</code></td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2"><code>*</code></td><td class="border border-slate-200 px-3 py-2">Multiplicación</td><td class="border border-slate-200 px-3 py-2"><code>5 * 3 → 15</code></td></tr>
+                  <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2"><code>/</code></td><td class="border border-slate-200 px-3 py-2">División</td><td class="border border-slate-200 px-3 py-2"><code>5 / 2 → 2.5</code></td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2"><code>%</code></td><td class="border border-slate-200 px-3 py-2">Módulo (resto)</td><td class="border border-slate-200 px-3 py-2"><code>5 % 2 → 1</code></td></tr>
+                  <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2"><code>//</code></td><td class="border border-slate-200 px-3 py-2">División entera</td><td class="border border-slate-200 px-3 py-2"><code>5 // 2 → 2</code></td></tr>
+                  <tr><td class="border border-slate-200 px-3 py-2"><code>**</code></td><td class="border border-slate-200 px-3 py-2">Potencia</td><td class="border border-slate-200 px-3 py-2"><code>5 ** 2 → 25</code></td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Comentarios</h4>
-            <p>Los comentarios son texto ignorado por el intérprete. Sirven para explicar qué hace el código:</p>
-            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code># Esto es un comentario de una línea
-# El intérprete lo ignora completamente
-
-print("Hola")  # También se puede comentar al final de una línea
-
-"""
-Esto es un comentario
-de varias líneas (docstring).
-Se usa para documentar funciones y módulos.
-"""</code></pre>
+            <h4 class="font-semibold text-brand-700 mb-1">Operadores relacionales</h4>
+            <p>Comparan dos valores y devuelven <code class="bg-slate-100 px-1 rounded text-xs">True</code> (verdadero) o <code class="bg-slate-100 px-1 rounded text-xs">False</code> (falso):</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-slate-100 px-1 rounded text-xs">></code> mayor que · <code class="bg-slate-100 px-1 rounded text-xs">&lt;</code> menor que</li>
+              <li><code class="bg-slate-100 px-1 rounded text-xs">>=</code> mayor o igual · <code class="bg-slate-100 px-1 rounded text-xs">&lt;=</code> menor o igual</li>
+              <li><code class="bg-slate-100 px-1 rounded text-xs">==</code> igual a (comparar) · <code class="bg-slate-100 px-1 rounded text-xs">!=</code> distinto de</li>
+            </ul>
+            <p class="mt-2">Cuidado: <code class="bg-slate-100 px-1 rounded text-xs">=</code> <strong>asigna</strong> un valor y <code class="bg-slate-100 px-1 rounded text-xs">==</code> <strong>compara</strong>. Es el error más común de los principiantes.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Función print()</h4>
-            <p><code class="bg-slate-100 px-1 rounded text-xs">print()</code> muestra información por pantalla. Es la forma más básica de salida:</p>
-            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>print("Hola mundo")
-print("Nombre:", "Lucía", "Edad:", 15)
-print("Salto de línea\nAquí abajo")
-print("Sin salto", end=" ")
-print("en la misma línea")</code></pre>
+            <h4 class="font-semibold text-brand-700 mb-1">Operadores lógicos</h4>
+            <p>Sirven para combinar varias condiciones:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><code class="bg-slate-100 px-1 rounded text-xs">and</code>: verdadero solo si <strong>ambas</strong> condiciones son verdaderas.</li>
+              <li><code class="bg-slate-100 px-1 rounded text-xs">or</code>: verdadero si <strong>al menos una</strong> es verdadera.</li>
+              <li><code class="bg-slate-100 px-1 rounded text-xs">not</code>: invierte el resultado.</li>
+            </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Función input()</h4>
-            <p><code class="bg-slate-100 px-1 rounded text-xs">input()</code> lee datos del teclado. Siempre devuelve una cadena de texto (str):</p>
-            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>nombre = input("¿Cómo te llamas? ")
-edad = int(input("¿Cuántos años tienes? "))
-altura = float(input("¿Cuánto mides? "))</code></pre>
-            <p class="mt-2">Nunca olvidéis convertir los números con <code class="bg-slate-100 px-1 rounded text-xs">int()</code> o <code class="bg-slate-100 px-1 rounded text-xs">float()</code>. Si no lo hacéis, operaréis con texto en lugar de números.</p>
-          </div>
+            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo práctico</h4>
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>a = 10
+b = 3
 
-          <!-- VÍDEO: Tutorial Python -->
-          <div class="callout callout-consejo">
-            <strong>Vídeo recomendado</strong>
-            Mira este tutorial completo de Python para repasar todos los conceptos vistos hasta ahora:
-          </div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" title="Tutorial completo de Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p class="text-xs text-slate-500 italic text-center mt-1">Tutorial completo de Python</p>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">f-strings (cadenas formateadas)</h4>
-            <p>Las f-strings permiten insertar valores de variables directamente en un texto, usando llaves <code class="bg-slate-100 px-1 rounded text-xs">{}</code>:</p>
-            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>nombre = "Lucía"
-edad = 15
-
-# Sin f-strings (antes)
-print("Me llamo " + nombre + " y tengo " + str(edad) + " años")
-
-# Con f-strings (ahora)
-print(f"Me llamo {nombre} y tengo {edad} años")
-
-# Operaciones dentro de f-strings
-print(f"El doble de mi edad es {edad * 2}")</code></pre>
+print(f"Suma: {a} + {b} = {a + b}")
+print(f"División: {a} / {b} = {a / b}")
+print(f"¿{a} es mayor que {b}? {a > b}")
+print(f"¿{a} es igual a {b}? {a == b}")</code></pre>
           </div>
 
           <!-- QUIZ SESIÓN 5 -->
           <div class="quiz" data-correcta="a" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Cómo se inserta una variable en un texto con f-strings?</p>
-            <button class="quiz-opcion" data-valor="a">A. Usar llaves {} para insertar valores: f"Hola {nombre}"</button>
-            <button class="quiz-opcion" data-valor="b">B. Usar comillas dobles con +: "Hola" + nombre</button>
-            <button class="quiz-opcion" data-valor="c">C. Usar el operador % como en C: "Hola %s"</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué operador comprueba si dos valores son iguales?</p>
+            <button class="quiz-opcion" data-valor="a">A. ==</button>
+            <button class="quiz-opcion" data-valor="b">B. =</button>
+            <button class="quiz-opcion" data-valor="c">C. !=</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
-          <div class="callout callout-aviso">
-            <strong>Actividad de evaluación</strong>
-            Crear un programa interactivo que pida al usuario nombre, edad y color favorito, y muestre un mensaje personalizado usando f-strings. Guardar como <code class="bg-white/50 px-1 rounded">datos_personales.py</code>.
+          <div class="callout callout-consejo">
+            <strong>Actividad</strong>
+            Crear un programa que pida dos números al usuario y muestre por pantalla todas las operaciones aritméticas, relacionales y lógicas posibles.
           </div>
         </div>
       </article>
@@ -496,7 +514,7 @@ print(f"El doble de mi edad es {edad * 2}")</code></pre>
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Los programas deben tomar decisiones. En Scratch, ya usabais el bloque "si...entonces" con una forma de rombo. En Python, la estructura equivalente es <code class="bg-slate-100 px-1 rounded text-xs">if</code>, pero en lugar de arrastrar bloques, escribiremos código con una regla fundamental: <strong>la sangría</strong> (indentación) determina qué código se ejecuta condicionalmente.</p>
+            <p>Los programas deben <strong>tomar decisiones</strong>: si llueve llevo paraguas, si no, no. En Scratch eso era el bloque "si…entonces" con forma de rombo; en Python la sentencia es <code class="bg-slate-100 px-1 rounded text-xs">if</code>. Lo único nuevo es que Python marca qué código pertenece al <code class="bg-slate-100 px-1 rounded text-xs">if</code> mediante la <strong>sangría</strong> (el espacio de la izquierda), no con bloques encajados.</p>
           </div>
 
           <div>
@@ -509,21 +527,20 @@ if edad >= 18:
 else:
     print("Eres menor de edad")
     print("Aún no puedes votar")</code></pre>
-            <p class="mt-2">Fijaos en dos cosas clave:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Después de la condición siempre hay dos puntos (<code class="bg-slate-100 px-1 rounded text-xs">:</code>).</li>
-              <li>El código que se ejecuta condicionalmente va indentado (4 espacios).</li>
+              <li>Tras la condición van <strong>dos puntos</strong> (<code class="bg-slate-100 px-1 rounded text-xs">:</code>).</li>
+              <li>El código de dentro va <strong>indentado</strong> (4 espacios).</li>
             </ul>
           </div>
 
           <div class="callout callout-aviso">
-            <strong>Importante: Sangría en Python</strong>
-            La indentación no es opcional en Python, es obligatoria. Si no indentáis correctamente, obtendréis un error de indentación. Usad siempre 4 espacios (no mezcléis tabs y espacios). Esto diferencia Python de otros lenguajes como Java o C, que usan llaves <code class="bg-white/50 px-1 rounded">{}</code> para delimitar bloques de código.
+            <strong>Importante: la sangría</strong>
+            En Python la indentación no es opcional: marca el principio y el fin de cada bloque. Si no indentáis bien, obtendréis un error de indentación. Usad siempre 4 espacios y no mezcléis tabs con espacios.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">elif: múltiples condiciones</h4>
-            <p>Cuando tenéis más de dos opciones, usáis <code class="bg-slate-100 px-1 rounded text-xs">elif</code> (abreviación de "else if"):</p>
+            <h4 class="font-semibold text-brand-700 mb-1">elif: varias condiciones</h4>
+            <p>Cuando hay más de dos opciones se usa <code class="bg-slate-100 px-1 rounded text-xs">elif</code> (de "else if"):</p>
             <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>nota = float(input("Introduce tu nota (0-10): "))
 
 if nota >= 9:
@@ -532,34 +549,38 @@ elif nota >= 7:
     print("Notable")
 elif nota >= 5:
     print("Aprobado")
-elif nota >= 4:
-    print("Insuficiente")
 else:
-    print("Muy deficiente")</code></pre>
+    print("Suspenso")</code></pre>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Operadores and / or en condiciones</h4>
-            <p>Podéis combinar varias condiciones en una misma sentencia:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Combinar condiciones con and / or</h4>
             <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>edad = int(input("Edad: "))
-tiene_permiso = input("¿Tienes permiso? (s/n): ") == "s"
+llueve = input("¿Llueve? (s/n): ") == "s"
 
-if edad >= 16 and tiene_permiso:
-    print("Puedes conducir")
-elif edad >= 16 and not tiene_permiso:
-    print("Necesitas permiso de tus padres")
+if edad >= 16 and not llueve:
+    print("Puedes salir en bici")
+elif llueve:
+    print("Mejor quédate en casa")
 else:
     print("Eres demasiado joven")</code></pre>
+            <p class="mt-2">Podéis anidar un <code class="bg-slate-100 px-1 rounded text-xs">if</code> dentro de otro, pero evitad pasar de 2 niveles: el código se vuelve difícil de leer.</p>
           </div>
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Condiciones anidadas</h4>
-            <p>Podéis incluir un <code class="bg-slate-100 px-1 rounded text-xs">if</code> dentro de otro <code class="bg-slate-100 px-1 rounded text-xs">if</code>. Pero evitad más de 2 niveles de anidación porque el código se vuelve difícil de leer.</p>
+          <!-- QUIZ SESIÓN 6 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué marca en Python qué código se ejecuta dentro de un if?</p>
+            <button class="quiz-opcion" data-valor="a">A. Las llaves {}</button>
+            <button class="quiz-opcion" data-valor="b">B. La sangría (indentación)</button>
+            <button class="quiz-opcion" data-valor="c">C. Los paréntesis ()</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-consejo">
             <strong>Actividad</strong>
-            Crear un programa que pida la temperatura actual y muestre recomendaciones: si hace mucho frío, abrigo; si está agradable, ropa ligera; si hace calor, gafas de sol y crema solar. Añadir una segunda condición sobre si llueve.
+            Crear un programa que pida la temperatura actual y muestre recomendaciones: si hace frío, abrigo; si está agradable, ropa ligera; si hace calor, gafas de sol. Añadir una segunda condición sobre si llueve.
           </div>
         </div>
       </article>
@@ -569,109 +590,88 @@ else:
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Bucles while y for, range(), iterar listas. Funciones con def</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Bucles y funciones: repetir y reutilizar código</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Los bucles y las funciones son los dos pilares que convierten un script simple en un programa real. En esta sesión cerramos la unidad unificando todos los conceptos aprendidos.
+            Si en Scratch existían los bloques "repetir N veces" y "por siempre", aquí veremos sus equivalentes: los bucles <code>for</code> y <code>while</code>. Con ellos y las funciones cerramos la unidad uniendo todo lo aprendido.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Bucle while</h4>
-            <p>El bucle <code class="bg-slate-100 px-1 rounded text-xs">while</code> repite un bloque de código mientras una condición sea verdadera:</p>
-            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>intentos = 0
-password = ""
+            <h4 class="font-semibold text-brand-700 mb-1">Bucle while: repetir mientras se cumpla</h4>
+            <p>El bucle <code class="bg-slate-100 px-1 rounded text-xs">while</code> repite un bloque <strong>mientras una condición sea verdadera</strong>:</p>
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>password = ""
 
 while password != "python123":
     password = input("Introduce la contraseña: ")
-    intentos += 1
 
-print(f"Correcto. Intentos: {intentos}")</code></pre>
-            <p class="mt-2">Cuidado: si la condición nunca se hace falsa, el bucle se ejecuta para siempre (bucle infinito). Siempre debéis tener una forma de salir.</p>
+print("¡Correcto!")</code></pre>
+            <p class="mt-2">Si la condición nunca se hace falsa, el bucle no acaba nunca. Siempre debe existir una forma de salir.</p>
           </div>
 
           <div class="callout callout-peligro">
             <strong>Peligro</strong>
-            Un bucle infinito puede congelar vuestro programa. Si os ocurre, pulsad Ctrl+C en la terminal para detenerlo. Siempre verificar que la condición del while puede hacerse falsa.
+            Un bucle infinito puede congelar vuestro programa. Si os ocurre, pulsad Ctrl+C en la terminal para detenerlo.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Bucle for y range()</h4>
-            <p>El bucle <code class="bg-slate-100 px-1 rounded text-xs">for</code> recorre una secuencia de valores. Es ideal para repetir algo un número conocido de veces:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Bucle for y range(): repetir un número de veces</h4>
+            <p>El <code class="bg-slate-100 px-1 rounded text-xs">for</code> recorre una secuencia de valores; es el equivalente al bloque "repetir N veces":</p>
             <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code># Contar del 1 al 5
 for i in range(1, 6):
     print(i)
 
 # Tabla del 7
 for i in range(1, 11):
-    print(f"7 x {i} = {7 * i}")
-
-# Invertir un rango
-for i in range(10, 0, -1):
-    print(i)
-print("¡Despegue!")</code></pre>
+    print(f"7 x {i} = {7 * i}")</code></pre>
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Iterar listas</h4>
-            <p>También podemos recorrer elementos de una lista directamente:</p>
-            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>mascotas = ["Luna", "Max", "Nala", "Rocky"]
+            <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>mascotas = ["Luna", "Max", "Nala"]
 
 for mascota in mascotas:
-    print(f"Mi mascota se llama {mascota}")
-
-# Con índices
-for i in range(len(mascotas)):
-    print(f"Mascota {i + 1}: {mascotas[i]}")</code></pre>
+    print(f"Mi mascota se llama {mascota}")</code></pre>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Funciones con def</h4>
-            <p>Las funciones permiten agrupar código reutilizable. Definís una función con <code class="bg-slate-100 px-1 rounded text-xs">def</code>, le dais un nombre, podéis pasarle parámetros y devolver un resultado con <code class="bg-slate-100 px-1 rounded text-xs">return</code>:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Funciones con def: código reutilizable</h4>
+            <p>Las funciones agrupan código con un nombre para reutilizarlo tantas veces como haga falta. Se definen con <code class="bg-slate-100 px-1 rounded text-xs">def</code> y pueden devolver un resultado con <code class="bg-slate-100 px-1 rounded text-xs">return</code>:</p>
             <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>def saludar(nombre):
-    """Saluda a una persona."""
     print(f"¡Hola, {nombre}! Bienvenido a Python.")
 
 def calcular_area(base, altura):
-    """Calcula el área de un rectángulo."""
     return base * altura
 
-# Usar las funciones
 saludar("Lucía")
-area = calcular_area(5, 3)
-print(f"El área es: {area}")</code></pre>
+print(f"El área es: {calcular_area(5, 3)}")</code></pre>
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Ejercicio resuelto: adivina el número</h4>
             <pre class="bg-slate-800 text-slate-100 rounded-lg p-3 text-xs overflow-x-auto"><code>import random
 
-def adivina_el_numero():
-    secreto = random.randint(1, 20)
-    intentos = 0
-    adivinado = False
+secreto = random.randint(1, 20)
+intentos = 0
 
-    print("¡Adivina el número entre 1 y 20!")
+print("¡Adivina el número entre 1 y 20!")
 
-    while not adivinado and intentos < 5:
-        num = int(input("Tu intento: "))
-        intentos += 1
+while intentos &lt; 5:
+    num = int(input("Tu intento: "))
+    intentos += 1
 
-        if num == secreto:
-            adivinado = True
-            print(f"¡Correcto! Lo lograste en {intentos} intentos")
-        elif num < secreto:
-            print("Demasiado bajo")
-        else:
-            print("Demasiado alto")
-
-    if not adivinado:
-        print(f"Perdiste. El número era {secreto}")
-
-adivina_el_numero()</code></pre>
+    if num == secreto:
+        print(f"¡Correcto en {intentos} intentos!")
+        break
+    elif num &lt; secreto:
+        print("Demasiado bajo")
+    else:
+        print("Demasiado alto")
+else:
+    print("Perdiste. El número era", secreto)</code></pre>
           </div>
 
           <!-- QUIZ SESIÓN 7 -->
