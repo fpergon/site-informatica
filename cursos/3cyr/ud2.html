@@ -47,80 +47,87 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Conexión entre lenguajes visuales y textuales: de bloques a código Python</h3>
+            <h3 class="font-bold text-ink-800 text-lg">¿Qué es programar? Algoritmos y características</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Esta sesión inicial es fundamental para que los alumnos comprendan que Python no es algo completamente nuevo: es la evolución lógica de lo que ya conocen en Scratch. Partimos de lo que saben para construir sobre ello.
+            Esta sesión es la puerta de entrada al mundo de la programación. Es fundamental que el alumnado comprenda que un algoritmo no es algo exclusivo de los ordenadores, sino una forma estructurada de resolver problemas que utilizamos en la vida cotidiana.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>En 3º ESO ya habéis programado con bloques visuales en Scratch o App Inventor. Habéis creado juegos, animaciones y quizás incluso apps sencillas. Pero alguna vez os habéis preguntado: ¿cómo funciona realmente el código que escriben los programadores profesionales? En esta sesión vamos a descubrir que la programación textual es simplemente otra forma de expresar las mismas ideas que ya domináis. Python será nuestro primer lenguaje textual, y veréis que muchos conceptos os resultarán familiares desde el primer momento.</p>
+            <p>¿Alguna vez habéis seguido una receta de cocina? ¿Habéis ensamblado un mueble de IKEA siguiendo las instrucciones? En ambos casos habéis ejecutado un algoritmo: una secuencia ordenada de pasos para alcanzar un objetivo concreto. Hoy vamos a descubrir qué es exactamente un algoritmo, cuáles son sus características fundamentales y cómo se relaciona con la programación de ordenadores.</p>
+            <p class="mt-2">Comenzaremos con una actividad práctica: construir un avión de papel siguiendo instrucciones paso a paso. A partir de esta experiencia, analizaremos qué funciona, qué falla y cómo podríamos mejorar las instrucciones para que cualquier persona pueda reproducir el resultado.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Lenguajes visuales vs. textuales</h4>
-            <p>Un <strong>lenguaje visual de programación</strong> como Scratch utiliza bloques de colores encajables para representar instrucciones. Cada bloque corresponde a una instrucción concreta: mover un personaje, reproducir un sonido o comprobar una condición. La principal ventaja es que elimina la sintaxis: no podéis escribir mal un bloque porque simplemente encaja o no encaja.</p>
-            <p class="mt-2">Un <strong>lenguaje textual</strong> como Python utiliza palabras y símbolos escritos con un teclado. Debéis escribir el código con una sintaxis estricta: cada carácter importa, las mayúsculas se distinguen de las minúsculas y el orden de las palabras determina qué hace el programa. A cambio, tenéis mucha más potencia y flexibilidad.</p>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un algoritmo?</h4>
+            <p>Un <strong>algoritmo</strong> es un conjunto finito, ordenado y finito de instrucciones o reglas bien definidas que permiten realizar una tarea o resolver un problema concreto. La palabra proviene del matemático persa Al-Khwarizmi (siglo IX), considerado el padre del álgebra.</p>
+            <p class="mt-2">Para que un algoritmo sea válido debe cumplir tres características esenciales:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Ventajas de los bloques:</strong> Eliminan errores de sintaxis, son intuitivos, permiten centrarse en la lógica.</li>
-              <li><strong>Inconvenientes de los bloques:</strong> Limitados a lo que el entorno permite, difícil de exportar, no se usa en la industria.</li>
-              <li><strong>Ventajas del código textual:</strong> Potencia ilimitada, estándar profesional, multiplataforma, bibliotecas extensas.</li>
-              <li><strong>Inconvenientes del código textual:</strong> Curva de aprendizaje de la sintaxis, más fácil cometer errores, requiere atención al detalle.</li>
+              <li><strong>Finito:</strong> Debe terminar en algún momento. Un algoritmo que nunca termina no tiene utilidad práctica.</li>
+              <li><strong>Definido:</strong> Cada paso debe estar perfectamente especificado. No puede haber ambigüedades ni interpretaciones.</li>
+              <li><strong>Preciso:</strong> Cada instrucción debe realizar exactamente una acción concreta. No puede haber margen de duda sobre qué hacer.</li>
             </ul>
           </div>
 
+
+
           <div class="callout callout-consejo">
-            <strong>Consejo</strong>
-            No tenéis miedo de cometer errores al escribir código. Todos los programadores profesionales cometen errores constantemente. Lo importante es saber encontrarlos y corregirlos.
+            <strong>Actividad práctica</strong>
+            En parejas de 2 alumnos, escribid las instrucciones paso a paso para construir un avión de papel. Luego, intercambiad las instrucciones con otro grupo y comprobad si son lo suficientemente claras para que cualquiera pueda seguir sin dudas.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Ejemplo comparativo: Scratch vs. Python</h4>
-            <p>Comparemos un programa sencillo: hacer que un personaje diga "Hola mundo" y se mueva 10 pasos.</p>
-            <p class="mt-2"><strong>En Scratch:</strong> Arrastráis el bloque "decir Hola mundo" y debajo el bloque "mover 10 pasos". No hay forma de equivocarse.</p>
-            <p class="mt-2"><strong>En Python:</strong> Escribís <code class="bg-slate-100 px-1 rounded text-xs">print("Hola mundo")</code> en una línea y <code class="bg-slate-100 px-1 rounded text-xs">print("Me muevo 10 pasos")</code> en la siguiente. Si os falla una comilla o ponéis un paréntesis de más, el programa no funcionará.</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Algoritmos en la vida cotidiana</h4>
+            <p>Los algoritmos nos rodean más de lo que parece:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Recetas de cocina:</strong> Ingredientes (datos) + pasos (instrucciones) = plato terminado (resultado).</li>
+              <li><strong>Ruta para ir al instituto:</strong> Salir de casa → girar a la derecha → cruzar el semáforo → llegar al edificio.</li>
+              <li><strong>Ordenar una baraja:</strong> Separar por palos, luego ordenar cada palo por número.</li>
+              <li><strong>Algoritmos de búsqueda:</strong> Buscar un nombre en la guía telefónica abriendo por la mitad (búsqueda binaria).</li>
+            </ul>
           </div>
 
-          <!-- VÍDEO: Introducción a Python -->
-          <div class="callout callout-consejo">
-            <strong>Vídeo recomendado</strong>
-            Mira esta introducción a Python para familiarizarte con el lenguaje y su historia:
-          </div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/kqtD5dpn9C8" title="Introducción a Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p class="text-xs text-slate-500 italic text-center mt-1">Introducción a Python</p>
-
-          <div class="actividad">
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Abrid el editor de Python (Thonny o IDLE) y escribid vuestro primer programa:</p>
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">De algoritmo a programa</h4>
+            <p>Un programa informático es esencialmente un algoritmo escrito en un lenguaje que el ordenador puede entender. El proceso de creación sigue estas fases:</p>
             <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Escribid <code class="bg-slate-100 px-1 rounded text-xs">print("Mi nombre es [vuestro nombre]")</code></li>
-              <li>Ejecutad el programa pulsando F5 o el botón "Run".</li>
-              <li>Añadid dos líneas más: una con vuestro curso y otra con vuestra afición favorita.</li>
-              <li>Guardad el archivo como <code class="bg-slate-100 px-1 rounded text-xs">mi_primer_programa.py</code></li>
+              <li><strong>Definir el problema:</strong> ¿Qué queremos resolver?</li>
+              <li><strong>Diseñar el algoritmo:</strong> Escribir los pasos en lenguaje natural o pseudocódigo.</li>
+              <li><strong>Codificar:</strong> Traducir el algoritmo a un lenguaje de programación.</li>
+              <li><strong>Probar y depurar:</strong> Ejecutar el programa y corregir errores.</li>
+              <li><strong>Mantener:</strong> Actualizar y mejorar el programa según las necesidades.</li>
             </ol>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Recuerda</strong>
+            Un error común es confundir un algoritmo con un programa. El algoritmo es la idea abstracta; el programa es su implementación concreta en un lenguaje de programación.
           </div>
 
           <!-- QUIZ SESIÓN 1 -->
           <div class="quiz" data-correcta="b" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Cuál es la diferencia principal entre lenguajes visuales y textuales?</p>
-            <button class="quiz-opcion" data-valor="a">A. Un lenguaje textual es siempre más fácil que uno visual.</button>
-            <button class="quiz-opcion" data-valor="b">B. Los lenguajes visuales eliminan errores de sintaxis, los textuales ofrecen más potencia.</button>
-            <button class="quiz-opcion" data-valor="c">C. Scratch y Python son exactamente iguales.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es un algoritmo?</p>
+            <button class="quiz-opcion" data-valor="a">A. Un tipo de virus que afecta al ordenador.</button>
+            <button class="quiz-opcion" data-valor="b">B. Conjunto finito, ordenado y preciso de instrucciones para resolver un problema.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un programa escrito en lenguaje Python.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
-          <div class="callout callout-aviso">
-            <strong>Actividad de evaluación</strong>
-            Entregar captura de pantalla del programa ejecutado en Thonny. El programa debe contener al menos 3 sentencias print() con información personal.
+          <div class="quiz" data-correcta="a" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuáles son las tres características de un algoritmo?</p>
+            <button class="quiz-opcion" data-valor="a">A. Finito, definido y preciso.</button>
+            <button class="quiz-opcion" data-valor="b">B. Rápido, complejo y dinámico.</button>
+            <button class="quiz-opcion" data-valor="c">C. Simple, visual e interactivo.</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
           </div>
         </div>
       </article>
