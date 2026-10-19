@@ -80,6 +80,13 @@
     +   '</div>'
     + '</footer>';
 
+  // Favicon (pestaña del navegador) en todas las páginas
+  var favicon = document.createElement('link');
+  favicon.rel = 'icon';
+  favicon.type = 'image/svg+xml';
+  favicon.href = home.replace('index.html', 'assets/favicon.svg');
+  document.head.appendChild(favicon);
+
   if (modoEmbed) return; // Sin cabecera ni pie dentro del embed
 
   document.getElementById('shell-header').innerHTML = header;
