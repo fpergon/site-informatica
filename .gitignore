@@ -4,3 +4,6 @@
 # Sistema
 .DS_Store
 Thumbs.db
+
+# Materiales personales (no forman parte de la web)
+assets/cuestionarios/
