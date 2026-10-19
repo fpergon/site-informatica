@@ -141,85 +141,78 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Lenguajes de programación: textuales vs. visuales</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Secuencia de instrucciones y representación de algoritmos</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div class="callout callout-nota">
+            <strong>Nota didáctica</strong>
+            Los medios de expresión de algoritmos son herramientas fundamentales para comunicar la lógica de un programa antes de escribir código. Dominar el pseudocódigo y los diagramas de flujo facilita enormemente la fase de diseño.
+          </div>
+
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Un lenguaje de programación es un conjunto de reglas y sintaxis que permite a los programadores comunicar instrucciones a un ordenador. Existen cientos de lenguajes, cada uno con sus fortalezas y debilidades. En esta sesión distinguiremos entre lenguajes textuales y lenguajes visuales, y exploraremos Makecode Arcade, una herramienta de programación de bloques que nos hará recordar los conocimientos aprendidos en el curso anterior.</p>
-          </div>
-
-          <div class="callout callout-nota">
-            <strong>Lenguajes textuales vs. visuales</strong>
-            Los <strong>textuales</strong> (Python, Java, C++) utilizan código escrito en texto plano. Son más potentes pero tienen una curva de aprendizaje mayor. Los <strong>visuales</strong> (Scratch, Blockly) permiten construir programas arrastrando bloques, lo que reduce errores de sintaxis y facilita la comprensión de la lógica del programa.
+            <p>Antes de escribir una sola línea de código, es habitual diseñar el algoritmo utilizando herramientas de representación. En esta sesión aprenderemos tres medios de expresión de algoritmos: el lenguaje natural, el pseudocódigo y los diagramas de flujo. Cada uno tiene sus ventajas y se usa en diferentes contextos.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Lenguajes de programación textuales</h4>
-            <p>Los lenguajes textuales son aquellos en los que escribimos código directamente como texto. Cada lenguaje tiene su propia sintaxis:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Lenguaje natural</h4>
+            <p>Es la forma más intuitiva de expresar un algoritmo: escribir los pasos en nuestro idioma habitual. Es accesible para cualquier persona, pero presenta problemas importantes:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Python:</strong> Sintaxis sencilla y legible. Ideal para principiantes. Se usa en ciencia de datos, inteligencia artificial y desarrollo web.</li>
-              <li><strong>JavaScript:</strong> El lenguaje de la web. Permite crear páginas web interactivas. Se ejecuta en el navegador.</li>
-              <li><strong>Java:</strong> Muy utilizado en empresas y en desarrollo de aplicaciones Android. Orientado a objetos.</li>
-              <li><strong>C/C++:</strong> Lenguajes de bajo nivel para sistemas operativos, videojuegos y firmware de dispositivos.</li>
+              <li><strong>Ambigüedad:</strong> Las palabras pueden tener diferentes interpretaciones según el contexto.</li>
+              <li><strong>Verbosidad:</strong> Requiere muchas palabras para expresar conceptos simples.</li>
+              <li><strong>Falta de precisión:</strong> No es adecuado para algoritmos complejos donde cada detalle importa.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo:</strong> "Para hacer un sándwich, toma dos rebanadas de pan, pon queso en una de ellas, cubre con la otra rebanada y sirve."</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Pseudocódigo</h4>
+            <p>El pseudocódigo es una representación semiformal de un algoritmo que utiliza una combinación de lenguaje natural y elementos estructurados. No sigue una sintaxis estricta, pero es más preciso que el lenguaje natural:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Utiliza palabras clave como <code class="bg-white/50 px-1 rounded">INICIO</code>, <code class="bg-white/50 px-1 rounded">FIN</code>, <code class="bg-white/50 px-1 rounded">SI</code>, <code class="bg-white/50 px-1 rounded">ENTONCES</code>, <code class="bg-white/50 px-1 rounded">MIENTRAS</code>, <code class="bg-white/50 px-1 rounded">HACER</code>.</li>
+              <li>Es independiente del lenguaje de programación.</li>
+              <li>Facilita la traducción a cualquier lenguaje de programación.</li>
             </ul>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Ventajas e inconvenientes</strong>
-            <strong>Texto:</strong> Mayor control, más rápido en ejecución, amplia comunidad. Pero es más fácil cometer errores de sintaxis y es más difícil de aprender al principio.<br/>
-            <strong>Bloques:</strong> Fácil de usar, visual, ideal para aprender lógica. Pero tiene limitaciones en complejidad y rendimiento.
+            <strong>Ejemplo de pseudocódigo</strong>
+            <code class="block bg-white/50 p-2 rounded mt-1 text-xs">INICIO<br/>
+&nbsp;&nbsp;LEER "¿Cómo te llamas?" → nombre<br/>
+&nbsp;&nbsp;SI nombre ≠ "" ENTONCES<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;ESCRIBIR "¡Hola, " + nombre + "!"<br/>
+&nbsp;&nbsp;SI NO<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;ESCRIBIR "No has introducido tu nombre"<br/>
+&nbsp;&nbsp;FIN SI<br/>
+FIN</code>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Scratch: programación visual</h4>
-            <p><strong>Scratch</strong> es un lenguaje de programación visual desarrollado por el MIT Media Lab. Permite crear historias interactivas, juegos y animaciones arrastrando y conectando bloques de código. Está diseñado para principiantes a partir de 8 años.</p>
-            <p class="mt-2">Características principales:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Diagrama de flujo</h4>
+            <p>Un diagrama de flujo es una representación gráfica de un algoritmo utilizando figuras geométricas conectadas con flechas. Cada forma tiene un significado específico:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Interfaz visual con bloques de colores que representan diferentes categorías de instrucciones.</li>
-              <li>No es necesario escribir código: los bloques encajan como piezas de puzle.</li>
-              <li>Permite crear proyectos con múltiples personajes (Sprites) y escenarios.</li>
-              <li>Comunidad en línea para compartir y remixar proyectos.</li>
-              <li>Funciona en el navegador, sin necesidad de instalar software.</li>
+              <li><strong>Óvalo:</strong> Inicio y fin del algoritmo.</li>
+              <li><strong>Paralelogramo:</strong> Entrada o salida de datos (leer/escribir).</li>
+              <li><strong>Rectángulo:</strong> Proceso o instrucción (asignaciones, cálculos).</li>
+              <li><strong>Diamante:</strong> Decisión (pregunta con respuesta SI/NO).</li>
+              <li><strong>Flechas:</strong> Dirección del flujo de ejecución.</li>
             </ul>
+            <figure class="my-3">
+              <img src="../../assets/img/diagrama.png" alt="Ejemplo de diagrama de flujo" loading="lazy" class="rounded-lg max-h-[70vh] w-auto mx-auto" />
+              <figcaption class="text-center">Ejemplo de diagrama de flujo</figcaption>
+            </figure>
           </div>
 
-          <!-- VÍDEO: Tutorial de Scratch -->
-          <div class="callout callout-consejo">
-            <strong>Vídeo recomendado</strong>
-            Mira este tutorial para conocer la interfaz de Scratch y crear tu primer proyecto paso a paso:
-          </div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/5OUb91fDKXw" title="Tutorial de Scratch para principiantes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p class="text-xs text-slate-500 italic text-center mt-1">Tutorial de Scratch para principiantes</p>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">MakeCode Arcade: videojuegos por bloques</h4>
-            <p><strong>MakeCode Arcade</strong> es una plataforma de Microsoft diseñada específicamente para crear videojuegos de 8 bits. Utiliza programación por bloques similar a Scratch pero con un enfoque centrado en el desarrollo de juegos:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li>Editor visual con bloques, JavaScript y Python.</li>
-              <li>Sprite de juego predefinidos y editor de sprites integrado.</li>
-              <li>Simulador en tiempo real para probar los juegos.</li>
-              <li>Posibilidad de descargar el juego en formatos .hex, .uf2 para dispositivos físicos.</li>
-              <li>Recursos educativos y tutoriales integrados.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Comparativa de herramientas</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Scratch:</strong> Ideal para animaciones, historias y juegos sencillos. Comunidad masiva. Enfoque generalista.</li>
-              <li><strong>MakeCode Arcade:</strong> Enfoque específico en videojuegos. Permite exportar a hardware real. Más orientado a game design.</li>
-              <li><strong>Ambas:</strong> Gratuitas, funcionan en el navegador, uso educativo ampliamente documentado.</li>
-            </ul>
+          <div class="actividad">
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Dibujaremos un diagrama de flujo para resolver el problema de calcular si un número es par o impar. Luego, escribiremos el pseudocódigo correspondiente y lo compararemos con la implementación en Scratch.</p>
           </div>
 
           <div class="callout callout-aviso">
-            <strong>Actividad</strong>
-            Abrid Scratch (scratch.mit.edu) y cread un proyecto con un Sprite que se mueva al pulsar las flechas del teclado. Explorad la interfaz y experimentad con los bloques de movimiento y apariencia.
+            <strong>Actividad de evaluación</strong>
+            Cada alumno elegirá un problema cotidiano (preparar café, cruzar la calle, etc.) y lo representará en tres formatos: lenguaje natural, pseudocódigo y diagrama de flujo. Se valorará la claridad y precisión de cada representación.
           </div>
         </div>
       </article>
