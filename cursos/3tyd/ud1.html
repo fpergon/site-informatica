@@ -414,6 +414,163 @@
       </div>
     </article>
 
+    <!-- EJERCICIO: CUESTIONARIO INTERACTIVO -->
+    <article id="ejercicio-cuestionario" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">?</span>
+        <div>
+          <h3 class="font-bold text-ink-800 text-lg">Ejercicio: Cuestionario de Revoluciones Tecnológicas</h3>
+        </div>
+      </div>
+
+      <!-- Cuestionario Interactivo: Línea Temporal de las Revoluciones Tecnológicas -->
+      <div id="quiz-container" style="max-width: 650px; margin: 20px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; color: #1a202c;">
+
+        <h2 style="text-align: center; color: #2b6cb0; margin-bottom: 8px;">Cuestionario: Revoluciones Tecnológicas</h2>
+        <p style="text-align: center; color: #4a5568; font-size: 0.95em; margin-bottom: 24px;">Ponte a prueba sobre los grandes inventos e hitos de la historia tecnológica.</p>
+
+        <div id="quiz-body">
+          <!-- Las preguntas se cargarán dinámicamente -->
+        </div>
+
+        <div id="quiz-controls" style="margin-top: 20px; text-align: right;">
+          <button id="next-btn" onclick="nextQuestion()" style="display: none; background-color: #3182ce; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background 0.2s;">Siguiente Pregunta</button>
+        </div>
+
+        <div id="quiz-results" style="display: none; text-align: center; padding: 20px 0;">
+          <h3 style="color: #2b6cb0; font-size: 1.5em; margin-bottom: 10px;">¡Cuestionario Finalizado!</h3>
+          <p id="score-text" style="font-size: 1.2em; font-weight: bold; color: #2d3748;"></p>
+          <button onclick="restartQuiz()" style="margin-top: 15px; background-color: #38a169; color: white; border: none; padding: 10px 22px; border-radius: 6px; font-weight: bold; cursor: pointer;">Reiniciar Cuestionario</button>
+        </div>
+
+      </div>
+
+      <script>
+      const questions = [
+        {
+          question: "¿En qué periodo histórico surge la máquina de vapor y el telégrafo eléctrico como impulsores de la industria y el transporte?",
+          options: ["2.ª Revolución Industrial", "1.ª Revolución Industrial", "3.ª Revolución Electrónica", "Edad Media y Renacimiento"],
+          answer: 1,
+          explanation: "La 1.ª Revolución Industrial (iniciada hacia 1789) tuvo como motores principales la máquina de vapor, la fabricación en serie y el telégrafo eléctrico."
+        },
+        {
+          question: "¿Qué avance revolucionó las telecomunicaciones e iluminación durante la 2.ª Revolución Industrial (1870)?",
+          options: ["Teléfono y lámpara incandescente (bombilla)", "Computación e Internet", "Redes de fibra óptica", "Imprenta de tipos móviles"],
+          answer: 0,
+          explanation: "Durante la 2.ª Revolución Industrial destacaron la invención del teléfono (1876) y la bombilla incandescente / electrificación (1879), además del desarrollo del motor de gasolina."
+        },
+        {
+          question: "Los transistores, los primeros ordenadores programables y el microprocesador son hitos clave de la:",
+          options: ["4.ª Revolución", "1.ª Revolución Industrial", "3.ª Revolución Electrónica", "Antiguas Civilizaciones"],
+          answer: 2,
+          explanation: "La 3.ª Revolución Electrónica (a partir de 1940) se caracteriza por el nacimiento de la computación, los semiconductores, el microprocesador y la automatización."
+        },
+        {
+          question: "¿Cuál de las siguientes tecnologías es propia de la 4.ª Revolución (a partir de 1990)?",
+          options: ["El ferrocarril eléctrico", "La máquina de vapor", "Internet de las Cosas (IoT), Inteligencia Artificial y Big Data", "El telégrafo inalámbrico"],
+          answer: 2,
+          explanation: "La 4.ª Revolución destaca por la conectividad global (WWW, IoT, redes móviles) e innovaciones emergentes como la IA, el Big Data y la impresión 3D."
+        },
+        {
+          question: "¿En qué etapa se extendió la imprenta de tipos móviles de Gutenberg (~1440)?",
+          options: ["Edad Media y Renacimiento", "Antiguas Civilizaciones", "Prehistoria", "1.ª Revolución Industrial"],
+          answer: 0,
+          explanation: "La imprenta de tipos móviles permitió la difusión masiva del conocimiento durante la transición entre la Edad Media y el Renacimiento."
+        }
+      ];
+
+      let currentQuestion = 0;
+      let score = 0;
+
+      function loadQuestion() {
+        const quizBody = document.getElementById("quiz-body");
+        const q = questions[currentQuestion];
+
+        let optionsHTML = "";
+        q.options.forEach((opt, index) => {
+          optionsHTML += `
+            <button onclick="selectOption(${index})" class="option-btn" id="btn-${index}" style="display: block; width: 100%; text-align: left; background: #f7fafc; border: 2px solid #e2e8f0; padding: 12px 16px; margin-bottom: 10px; border-radius: 8px; cursor: pointer; font-size: 0.95em; transition: all 0.2s; color: #2d3748;">
+              ${opt}
+            </button>`;
+        });
+
+        quizBody.innerHTML = `
+          <div style="font-size: 0.85em; color: #718096; margin-bottom: 8px; font-weight: bold;">Pregunta ${currentQuestion + 1} de ${questions.length}</div>
+          <div style="font-size: 1.1em; font-weight: 600; margin-bottom: 16px; color: #1a202c;">${q.question}</div>
+          <div>${optionsHTML}</div>
+          <div id="explanation" style="display: none; margin-top: 15px; padding: 12px; border-radius: 6px; font-size: 0.9em;"></div>
+        `;
+        document.getElementById("next-btn").style.display = "none";
+      }
+
+      function selectOption(selectedIndex) {
+        const q = questions[currentQuestion];
+        const buttons = document.querySelectorAll(".option-btn");
+        buttons.forEach(btn => btn.disabled = true);
+
+        const expDiv = document.getElementById("explanation");
+        expDiv.style.display = "block";
+
+        if (selectedIndex === q.answer) {
+          score++;
+          document.getElementById(`btn-${selectedIndex}`).style.background = "#c6f6d5";
+          document.getElementById(`btn-${selectedIndex}`).style.borderColor = "#38a169";
+          expDiv.style.background = "#e6fffa";
+          expDiv.style.color = "#234e52";
+          expDiv.innerHTML = "<strong>¡Correcto!</strong> " + q.explanation;
+        } else {
+          document.getElementById(`btn-${selectedIndex}`).style.background = "#fed7d7";
+          document.getElementById(`btn-${selectedIndex}`).style.borderColor = "#e53e3e";
+          document.getElementById(`btn-${q.answer}`).style.background = "#c6f6d5";
+          document.getElementById(`btn-${q.answer}`).style.borderColor = "#38a169";
+          expDiv.style.background = "#fff5f5";
+          expDiv.style.color = "#742a2a";
+          expDiv.innerHTML = "<strong>Incorrecto.</strong> " + q.explanation;
+        }
+
+        if (currentQuestion < questions.length - 1) {
+          document.getElementById("next-btn").style.display = "inline-block";
+        } else {
+          document.getElementById("next-btn").innerText = "Ver Resultados";
+          document.getElementById("next-btn").style.display = "inline-block";
+        }
+      }
+
+      function nextQuestion() {
+        if (currentQuestion < questions.length - 1) {
+          currentQuestion++;
+          document.getElementById("next-btn").innerText = "Siguiente Pregunta";
+          loadQuestion();
+        } else {
+          showResults();
+        }
+      }
+
+      function showResults() {
+        document.getElementById("quiz-body").style.display = "none";
+        document.getElementById("quiz-controls").style.display = "none";
+        const resultsDiv = document.getElementById("quiz-results");
+        resultsDiv.style.display = "block";
+
+        const percentage = Math.round((score / questions.length) * 100);
+        document.getElementById("score-text").innerHTML = `Has acertado <strong>${score}</strong> de <strong>${questions.length}</strong> preguntas (${percentage}%).`;
+      }
+
+      function restartQuiz() {
+        currentQuestion = 0;
+        score = 0;
+        document.getElementById("quiz-body").style.display = "block";
+        document.getElementById("quiz-controls").style.display = "block";
+        document.getElementById("quiz-results").style.display = "none";
+        document.getElementById("next-btn").innerText = "Siguiente Pregunta";
+        loadQuestion();
+      }
+
+      // Inicializar el cuestionario al cargar
+      loadQuestion();
+      </script>
+    </article>
+
   </main>
 
   <div id="shell-footer"></div>
