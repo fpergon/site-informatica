@@ -1,9 +1,40 @@
 # Archivos temporales de Microsoft Office
 ~$*
+*.docx
 
 # Sistema
 .DS_Store
 Thumbs.db
 
-# Materiales personales (no forman parte de la web)
+# Materiales que no forman parte de la web (solo locales)
+*.mbz
+Saberes*.pdf
+assets/cronologia_inventos.xlsx
 assets/cuestionarios/
+scripts/crear_evaluacion_tici.js
+assets/img/arquitectura-bioclimatica.jpg
+assets/img/coeficiente-gini.png
+assets/img/economia-circular.png
+assets/img/evolucion_revoluciones_tecnologicas.png
+assets/img/ods-agenda-2030.png
+assets/img/phishing-santander.jpg
+assets/img/phishing-santander.webp
+assets/img/recolector-agua-lluvia.jpg
+assets/img/revoluciones-industriales-old.jpg
+assets/img/revoluciones-industriales.png
+assets/img/moodle/activ-estructuras.pdf
+assets/img/moodle/activ-materiales.pdf
+assets/img/moodle/componentes-internos.png
+assets/img/moodle/componentes-ordenador.png
+assets/img/moodle/festival-cine-actividad.jpg
+assets/img/moodle/festival-cine-igualdad.png
+assets/img/moodle/festival-cine-peliculas.png
+assets/img/moodle/festival-cine-poster.jpg
+assets/img/moodle/festival-cine-votacion.png
+assets/img/moodle/grecia-screen.png
+assets/img/moodle/herramientas-montaje.png
+assets/img/moodle/montaje-ordenador.png
+assets/img/moodle/plano-red-lan.png
+assets/img/moodle/portada-periodico.pdf
+assets/img/moodle/ppt-piedra-papel-tijera.aia
+assets/img/moodle/red-informatica.png
