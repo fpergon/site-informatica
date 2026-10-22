@@ -61,8 +61,65 @@
           <p class="text-xs text-slate-500 italic text-center mt-1">¿Cómo funciona un PC y que hace cada pieza? · Nate Gentile</p>
 
           <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Las unidades funcionales de un ordenador</h4>
+            <p>Antes de mirar las piezas de placa, conviene ver la lógica del ordenador: trabaja como un equipo formado por varias <strong>unidades funcionales</strong>, cada una especializada en una tarea y conectada con las demás. Son estas:</p>
+
+            <div class="mt-3 grid gap-3 sm:grid-cols-2">
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">UC — Unidad de Control</h5>
+                <p class="mt-1">La «jefa» del ordenador: lee las instrucciones del programa desde la memoria, las descifra y da las órdenes al resto de unidades. Sin la UC, nadie sabe qué tiene que hacer.</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">ULA — Unidad Lógico-Aritmética</h5>
+                <p class="mt-1">La «calculadora»: realiza todas las operaciones aritméticas (sumas, restas, multiplicaciones) y lógicas (comparar: ¿es mayor?, ¿es igual?).</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">Memorias</h5>
+                <p class="mt-1">Guardan datos e instrucciones: la <strong>memoria principal</strong> (RAM) mientras trabajamos, la <strong>memoria secundaria</strong> (SSD o HDD) de forma permanente y una pequeña memoria de arranque (ROM/UEFI).</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <h5 class="font-bold text-brand-700">Unidades de entrada y salida (E/S)</h5>
+                <p class="mt-1">El puente con el exterior: la <strong>entrada</strong> (teclado, ratón, tarjeta de red) envía datos al ordenador, y la <strong>salida</strong> (monitor, altavoces) muestra los resultados.</p>
+              </div>
+            </div>
+
+            <p class="mt-3">La <strong>UC</strong> y la <strong>ULA</strong> juntas forman lo que llamamos procesador o <strong>CPU</strong>. Así se entiende mejor la frase «el procesador es el cerebro del ordenador»: la UC da las órdenes y la ULA hace los cálculos.</p>
+          </div>
+
+          <figure>
+            <img src="../../assets/img/unidades-funcionales-buses.svg" alt="Esquema: CPU con UC y ULA, memorias y unidades de entrada/salida conectadas por los buses de datos, direcciones y control" class="mx-auto w-full max-w-3xl rounded-lg border border-slate-200 bg-white" />
+            <figcaption class="mt-1 text-center text-xs text-slate-500 italic">Las unidades funcionales se comunican entre sí mediante tres buses</figcaption>
+          </figure>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Cómo se comunican: los buses</h4>
+            <p>Las unidades no hablan entre sí de cualquier manera: usan <strong>buses</strong>, que son conjuntos de caminos electrónicos paralelos por los que circula la información, como una autopista con varios carriles. Hay tres:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Bus de datos:</strong> por aquí viajan los datos y valores (el resultado de una suma, la letra que has escrito). Es <strong>bidireccional</strong>: va de la CPU a la memoria y vuelve.</li>
+              <li><strong>Bus de direcciones:</strong> la UC indica en él <strong>qué dirección de memoria</strong> o qué dispositivo quiere leer o escribir (como el número de una casa). Va de la CPU hacia la memoria o los periféricos.</li>
+              <li><strong>Bus de control:</strong> circulan las órdenes de sincronización: leer, escribir, interrupciones… para que todas las unidades sepan cuándo actuar.</li>
+            </ul>
+            <p class="mt-2">Ejemplo del día a día: cuando escribes una letra, el teclado (E/S) envía el dato; la UC lo recibe, la ULA puede procesarlo y se guarda en la RAM. Al guardar el archivo, los datos viajan por los buses hasta el disco.</p>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Buses que sí puedes tocar</strong>
+            <p class="mt-1">Las ranuras y puertos de un PC son buses reales: <strong>PCIe</strong> (tarjetas gráficas y SSD NVMe), <strong>SATA</strong> (discos) y <strong>USB</strong> (periféricos). Cuanto más anchos y rápidos son los buses, mejor se comunica el ordenador: por eso un SSD NVMe es muchísimo más rápido que un disco duro antiguo.</p>
+          </div>
+
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Cuál es la función del bus de direcciones?</p>
+            <button class="quiz-opcion" data-valor="a">A. Transportar los datos de un sitio a otro</button>
+            <button class="quiz-opcion" data-valor="b">B. Indicar qué memoria o dispositivo quiere acceder la CPU</button>
+            <button class="quiz-opcion" data-valor="c">C. Alimentar eléctricamente la placa base</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div>
             <h4 class="font-semibold text-brand-700 mb-1">Componentes principales</h4>
-            <p>Todo ordenador se compone de los siguientes elementos fundamentales:</p>
+            <p>Las unidades funcionales se materializan en piezas físicas. Todo ordenador se compone de los siguientes elementos fundamentales:</p>
 
             <div class="mt-3 grid gap-3 sm:grid-cols-2">
               <div class="rounded-lg border border-slate-200 p-3">
@@ -105,6 +162,7 @@
               <li>Unidad de medida y ejemplo de especificación.</li>
               <li>Conexión a la placa base (tipo de ranura o puerto).</li>
               <li>¿Qué componente se vería afectado si falla este?</li>
+              <li>Dibuja el esquema de las unidades funcionales (UC, ULA, memorias y E/S) y etiqueta los tres buses, señalando con flechas la dirección de cada uno.</li>
             </ol>
           </div>
         </div>
