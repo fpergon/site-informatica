@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" font-family="Inter, Segoe UI, system-ui, sans-serif">
+  <rect width="760" height="260" fill="#ffffff" rx="12"/>
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#047857">De monómeros a polímero</text>
+
+  <text x="120" y="62" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">Monómeros</text>
+  <text x="120" y="80" text-anchor="middle" font-size="11" fill="#64748b">(piezas sueltas, moléculas pequeñas)</text>
+  <circle cx="62" cy="130" r="24" fill="#4f46e5"/>
+  <text x="62" y="136" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">M</text>
+  <circle cx="124" cy="130" r="24" fill="#4f46e5"/>
+  <text x="124" y="136" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">M</text>
+  <circle cx="186" cy="130" r="24" fill="#4f46e5"/>
+  <text x="186" y="136" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">M</text>
+  <circle cx="155" cy="196" r="24" fill="#4f46e5"/>
+  <text x="155" y="202" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">M</text>
+
+  <text x="272" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#047857">Polimerización</text>
+  <text x="272" y="128" text-anchor="middle" font-size="11" fill="#64748b">(se unen en cadena)</text>
+  <line x1="232" y1="150" x2="308" y2="150" stroke="#059669" stroke-width="4"/>
+  <polygon points="308,150 296,143 296,157" fill="#059669"/>
+
+  <text x="560" y="62" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">Polímero</text>
+  <text x="560" y="80" text-anchor="middle" font-size="11" fill="#64748b">(cadena larga unida)</text>
+  <line x1="356" y1="130" x2="644" y2="130" stroke="#334155" stroke-width="5"/>
+  <circle cx="348" cy="130" r="22" fill="#059669"/>
+  <text x="348" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">M</text>
+  <circle cx="404" cy="130" r="22" fill="#059669"/>
+  <text x="404" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">M</text>
+  <circle cx="460" cy="130" r="22" fill="#059669"/>
+  <text x="460" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">M</text>
+  <circle cx="516" cy="130" r="22" fill="#059669"/>
+  <text x="516" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">M</text>
+  <circle cx="572" cy="130" r="22" fill="#059669"/>
+  <text x="572" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">M</text>
+  <circle cx="628" cy="130" r="22" fill="#059669"/>
+  <text x="628" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">M</text>
+  <text x="488" y="186" text-anchor="middle" font-size="11" fill="#64748b">En la cadena caben miles y miles de monómeros</text>
+
+  <rect x="140" y="212" width="480" height="34" rx="8" fill="#ecfdf5" stroke="#a7f3d0"/>
+  <text x="380" y="234" text-anchor="middle" font-size="12.5" font-weight="600" fill="#047857">Analogía: monómero = cuenta de un collar · polímero = el collar completo</text>
+</svg>

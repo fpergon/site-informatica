@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 180" font-family="Inter, Segoe UI, system-ui, sans-serif">
+  <rect width="980" height="180" fill="#ffffff" rx="12"/>
+  <text x="490" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#047857">Del diseño a la pieza impresa en 3D</text>
+
+  <rect x="20" y="52" width="160" height="70" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <circle cx="40" cy="72" r="12" fill="#059669"/>
+  <text x="40" y="77" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">1</text>
+  <text x="100" y="80" text-anchor="middle" font-size="12.5" font-weight="700" fill="#065f46">Diseñas en Tinkercad</text>
+  <text x="100" y="98" text-anchor="middle" font-size="10.5" fill="#334155">3D en el ordenador</text>
+
+  <line x1="182" y1="87" x2="208" y2="87" stroke="#059669" stroke-width="3.5"/>
+  <polygon points="208,87 197,80 197,94" fill="#059669"/>
+
+  <rect x="210" y="52" width="160" height="70" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <circle cx="230" cy="72" r="12" fill="#059669"/>
+  <text x="230" y="77" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">2</text>
+  <text x="290" y="80" text-anchor="middle" font-size="12.5" font-weight="700" fill="#065f46">Exportas el .STL</text>
+  <text x="290" y="98" text-anchor="middle" font-size="10.5" fill="#334155">archivo 3D</text>
+
+  <line x1="372" y1="87" x2="398" y2="87" stroke="#059669" stroke-width="3.5"/>
+  <polygon points="398,87 387,80 387,94" fill="#059669"/>
+
+  <rect x="400" y="52" width="160" height="70" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <circle cx="420" cy="72" r="12" fill="#059669"/>
+  <text x="420" y="77" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">3</text>
+  <text x="480" y="80" text-anchor="middle" font-size="12.5" font-weight="700" fill="#065f46">Laminas en Cura</text>
+  <text x="480" y="98" text-anchor="middle" font-size="10.5" fill="#334155">lo partes en capas</text>
+
+  <line x1="562" y1="87" x2="588" y2="87" stroke="#059669" stroke-width="3.5"/>
+  <polygon points="588,87 577,80 577,94" fill="#059669"/>
+
+  <rect x="590" y="52" width="160" height="70" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <circle cx="610" cy="72" r="12" fill="#059669"/>
+  <text x="610" y="77" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">4</text>
+  <text x="670" y="80" text-anchor="middle" font-size="12.5" font-weight="700" fill="#065f46">Genera el G-code</text>
+  <text x="670" y="98" text-anchor="middle" font-size="10.5" fill="#334155">instrucciones de la máquina</text>
+
+  <line x1="752" y1="87" x2="778" y2="87" stroke="#059669" stroke-width="3.5"/>
+  <polygon points="778,87 767,80 767,94" fill="#059669"/>
+
+  <rect x="780" y="52" width="180" height="70" rx="10" fill="#d1fae5" stroke="#047857" stroke-width="2.5"/>
+  <circle cx="800" cy="72" r="12" fill="#047857"/>
+  <text x="800" y="77" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">5</text>
+  <text x="875" y="80" text-anchor="middle" font-size="12.5" font-weight="700" fill="#065f46">La impresora imprime</text>
+  <text x="875" y="98" text-anchor="middle" font-size="10.5" fill="#334155">capa a capa, hasta la pieza</text>
+
+  <text x="490" y="156" text-anchor="middle" font-size="12" fill="#64748b">El G-code es un archivo de texto con los movimientos exactos: la impresora solo tiene que leerlo y seguir las instrucciones</text>
+</svg>

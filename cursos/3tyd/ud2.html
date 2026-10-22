@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UD2 · Materiales técnicos: plásticos y materiales de construcción · 3º TyD</title>
-  <meta name="description" content="Unidad Didáctica 2 de 3º TyD: origen y tipos de plásticos, técnicas de fabricación, materiales de construcción y análisis de materiales." />
+  <title>UD2 · Del plástico al diseño e impresión 3D · 3º TyD</title>
+  <meta name="description" content="UD2 de 3º TyD: plásticos y técnicas de fabricación explicados de forma práctica; diseño 3D con Tinkercad e impresión 3D con la impresora del aula; proyecto final de pieza impresa." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,8 +34,8 @@
         <span>·</span>
         <span>Bloque A</span>
       </div>
-      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Materiales técnicos: plásticos y materiales de construcción</h1>
-      <p class="mt-3 text-brand-50/90">Los materiales técnicos en el entorno: origen y tipos de plásticos (polímeros termoplásticos, termoestables y elastómeros), técnicas de fabricación, materiales de construcción (pétreos, cerámicos, vidrio y conglomerantes), nuevos materiales y su análisis.</p>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Del plástico al diseño e impresión 3D</h1>
+      <p class="mt-3 text-brand-50/90">Aprendemos qué son los plásticos, de dónde vienen y cómo se fabrican las cosas, y damos el salto al diseño 3D: modelamos piezas en Tinkercad e imprimimos en 3D con la impresora del aula. Contenido muy práctico, con vídeos, talleres y un proyecto final.</p>
       <div class="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
         <span class="rounded-full bg-white/20 px-3 py-1">TYD.3.A.1. Estrategias de resolución de problemas.</span>
         <span class="rounded-full bg-white/20 px-3 py-1">TYD.3.A.2. Búsqueda crítica de información.</span>
@@ -49,63 +49,60 @@
       <div class="flex items-center gap-3 mb-4">
         <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
         <div>
-          <h3 class="font-bold text-ink-800 text-lg">Materiales técnicos: introducción y sostenibilidad</h3>
+          <h3 class="font-bold text-ink-800 text-lg">El origen de los plásticos</h3>
         </div>
       </div>
 
       <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Materiales y entorno</h4>
-          <p>Seguro que alguna vez has visitado una localidad en la que los edificios se han construido utilizando <strong>materiales de la zona</strong>, como pizarra, adobe, madera, cal o granito. Estos municipios atesoran conocimiento acumulado durante siglos sobre cómo aprovechar los recursos disponibles para prosperar en su clima y entorno.</p>
-          <p class="mt-2">Esto les permitió resolver el problema de la <strong>sostenibilidad</strong>: la mejor manera de aprovechar un recurso es reutilizarlo tantas veces como sea posible. Frente a la filosofía de «usar y tirar», un material podría usarse tantas veces como seamos capaces de imaginar.</p>
+          <p>¿Alguna vez has pensado de qué están hechos el bolígrafo con el que escribes, la botella de agua o los auriculares? Todos son objetos de <strong>plástico</strong>. La palabra viene de su gran cualidad: <strong>poder moldearse</strong>. El nombre técnico de estos materiales es <strong>polímeros</strong>.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">¿Siempre ha habido plásticos?</h4>
+          <div class="mt-3 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+              <p class="font-bold text-brand-800">Plásticos naturales</p>
+              <p class="mt-1 text-sm">Antes de los plásticos actuales ya existían materiales como el algodón, el caucho (la goma) o el carey. Con ellos se hacían botones, peinetas o juguetes.</p>
+            </div>
+            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+              <p class="font-bold text-brand-800">Plásticos sintéticos</p>
+              <p class="mt-1 text-sm">Los fabrican las personas en laboratorios e industrias. El primero fue la baquelita (1907). Después de la II Guerra Mundial aparecieron el nylon, el polietileno… y llegó el «boom» del plástico.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">¿De dónde salen hoy?</h4>
+          <p>La mayoría de los plásticos sintéticos vienen del <strong>petróleo</strong> y del gas natural. En la refinería el petróleo se calienta y se separan sus componentes (<strong>destilación fraccionada</strong>). Con ellos se consiguen moléculas pequeñitas llamadas <strong>monómeros</strong>, que se unen para formar el polímero. El resultado son unas <strong>bolitas o gránulos</strong> que cada fábrica funde y moldea como necesita.</p>
         </div>
 
         <div class="callout callout-nota">
-          <strong>¿Tú qué piensas?</strong>
-          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-            <li>¿Tienen alguna relación los materiales de construcción y su entorno?</li>
-            <li>¿Qué procesos se siguen para transformar los recursos?</li>
-            <li>¿Qué materiales son más respetuosos con el medioambiente?</li>
-          </ul>
+          <strong>Dato curioso</strong>
+          <p class="mt-1">No todos los plásticos vienen del petróleo: el <strong>PLA</strong>, el que usamos en la impresora 3D del aula, se fabrica a partir del almidón del maíz o de la caña de azúcar. Por eso se dice que es «bioplástico».</p>
         </div>
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Dos familias de materiales técnicos</h4>
-          <div class="mt-3 grid gap-3 sm:grid-cols-2">
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Los materiales plásticos</p>
-              <p class="mt-1 text-sm">Polímeros que pueden moldearse y deformarse. Se obtienen de fuentes naturales o sintéticas (petroquímica).</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Los materiales de construcción</p>
-              <p class="mt-1 text-sm">Pétreos, cerámicos, vidrio y conglomerantes: la base de toda obra a lo largo de la historia.</p>
-            </div>
+          <div class="video-embed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nIxq9mfhSGc" title="¿Qué son los Polímeros?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-        </div>
-
-        <div>
-          <h4 class="font-semibold text-brand-700 mb-1">ODS relacionados</h4>
-          <div class="mt-2 flex flex-wrap gap-2 text-xs font-semibold">
-            <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1">ODS 9 · Industria, innovación e infraestructura</span>
-            <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1">ODS 11 · Ciudades y comunidades sostenibles</span>
-            <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1">ODS 12 · Producción y consumo responsables</span>
-          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Vídeo: «¿Qué son los Polímeros?» · El Maestro Yona</p>
         </div>
 
         <div class="quiz" data-correcta="b" data-total="3">
           <h4>Comprueba lo aprendido</h4>
-          <p class="font-semibold text-slate-700 mb-2">¿Cuál es la mejor manera de aprovechar un recurso según la filosofía sostenible?</p>
-          <button class="quiz-opcion" data-valor="a">A. Usarlo una sola vez y tirarlo</button>
-          <button class="quiz-opcion" data-valor="b">B. Reutilizarlo tantas veces como sea posible</button>
-          <button class="quiz-opcion" data-valor="c">C. Importarlo de otro país</button>
+          <p class="font-semibold text-slate-700 mb-2">¿De qué material salen la mayoría de los plásticos que usamos?</p>
+          <button class="quiz-opcion" data-valor="a">A. De la madera</button>
+          <button class="quiz-opcion" data-valor="b">B. Del petróleo</button>
+          <button class="quiz-opcion" data-valor="c">C. Del vidrio</button>
           <div class="quiz-resultado"></div>
           <p class="quiz-score"></p>
         </div>
 
         <div class="actividad">
           <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
-          <p>Observa un edificio cercano de tu localidad e identifica los materiales con los que está construido. ¿Proceden de la zona? ¿Serían adecuados hoy en día? Escribe 5-6 líneas con tus observaciones.</p>
+          <p>Busca en tu casa <strong>5 objetos de plástico</strong>. Para cada uno escribe: (1) de qué crees que está hecho (petróleo, maíz…), (2) si crees que se puede reciclar fundiéndolo otra vez. Trae la lista a clase.</p>
         </div>
       </div>
     </article>
@@ -115,84 +112,49 @@
       <div class="flex items-center gap-3 mb-4">
         <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
         <div>
-          <h3 class="font-bold text-ink-800 text-lg">El origen de los plásticos</h3>
+          <h3 class="font-bold text-ink-800 text-lg">Monómeros y polímeros</h3>
         </div>
       </div>
 
       <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un plástico?</h4>
-          <p>La palabra «plástico» indica la propiedad que tienen algunos materiales de <strong>adquirir y conservar cierta forma por medio de técnicas de moldeo y deformación</strong>. Su denominación técnica más apropiada es <strong>polímeros</strong>.</p>
+          <p>Imagina un collar: está formado por muchas <strong>cuentas</strong> iguales unidas. Pues eso mismo es un polímero:</p>
+          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+            <li><strong>Monómero</strong> (del griego <em>mono</em>: uno): una molécula pequeñita, una sola «cuenta».</li>
+            <li><strong>Polímero</strong> (del griego <em>polys</em>: muchos): millones de monómeros unidos en una cadena larga.</li>
+            <li><strong>Polimerización</strong>: el proceso de unir los monómeros para fabricar el polímero.</li>
+          </ul>
         </div>
 
+        <figure>
+          <img src="../../assets/img/monomeros-polimeros.svg" alt="Diagrama: monómeros sueltos se unen por polimerización para formar un polímero en cadena" class="mx-auto w-full max-w-2xl rounded-lg border border-slate-200 bg-white" />
+          <figcaption class="mt-1 text-center text-xs text-slate-500 italic">De piezas sueltas a una cadena larga: la polimerización</figcaption>
+        </figure>
+
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Origen natural y artificial</h4>
-          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-            <li><strong>Polímeros naturales:</strong> resina de los árboles, lana de las ovejas, seda de los gusanos, celulosa, látex…</li>
-            <li><strong>Polímeros sintéticos:</strong> se obtienen por procesos industriales. El primero fue la <strong>baquelita (1907)</strong>; antes se patentó el celuloide (1860).</li>
-          </ul>
-          <p class="mt-2">Durante la <strong>Segunda Guerra Mundial</strong> se produjeron los mayores cambios: al escasear la seda, el algodón, el látex y la lana, la ciencia desarrolló el <strong>nailon</strong>, las fibras acrílicas, el <strong>neopreno</strong> y el <strong>polietileno</strong>.</p>
+          <h4 class="font-semibold text-brand-700 mb-1">Ejemplo real</h4>
+          <p>El <strong>eteno</strong> es un gas (monómero) que, al polimerizar, se convierte en <strong>polietileno</strong>: la bolsa de la compra. Truco para reconocerlos: el monómero suele terminar en <strong>-eno</strong> y el polímero en <strong>-ileno</strong> (eteno → polietileno, propileno → polipropileno).</p>
         </div>
 
         <div class="callout callout-nota">
-          <strong>Del petróleo al plástico: la destilación fraccionada</strong>
-          La base de la mayoría de los polímeros es el <strong>carbono</strong>, y el petróleo es su principal materia prima. Al calentarlo en una columna de destilación (400 °C), se separan los compuestos por temperatura:
-          <div class="mt-3 overflow-x-auto">
-            <table class="w-full border-collapse text-sm">
-              <thead>
-                <tr class="bg-brand-600 text-white">
-                  <th class="border border-brand-700 px-3 py-2 text-left">Temperatura</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">Productos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">20 °C – 150 °C</td><td class="border border-slate-200 px-3 py-2">Gases: metano, etano, propano, butano.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">150 °C – 300 °C</td><td class="border border-slate-200 px-3 py-2">Líquidos: naftas, gasolinas, queroseno, gasóleo.</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">300 °C – 350 °C</td><td class="border border-slate-200 px-3 py-2">Aceites, lubricantes y asfaltos.</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <strong>¿Por qué importa esto?</strong>
+          <p class="mt-1">Las cadenas pueden ser cortas, largas, retorcidas o planas… Y de eso dependen las propiedades del plástico: si es flexible, duro, transparente o resiste el calor. En el siguiente contenido veremos los tres grandes tipos.</p>
         </div>
 
-        <div class="quiz" data-correcta="c" data-total="3">
+        <div class="quiz" data-correcta="a" data-total="3">
           <h4>Comprueba lo aprendido</h4>
-          <p class="font-semibold text-slate-700 mb-2">¿De dónde se obtiene la mayoría de los polímeros artificiales?</p>
-          <button class="quiz-opcion" data-valor="a">A. De los minerales</button>
-          <button class="quiz-opcion" data-valor="b">B. Del agua del mar</button>
-          <button class="quiz-opcion" data-valor="c">C. Del petróleo</button>
+          <p class="font-semibold text-slate-700 mb-2">¿Cómo se llama el proceso de unir monómeros para formar un polímero?</p>
+          <button class="quiz-opcion" data-valor="a">A. Polimerización</button>
+          <button class="quiz-opcion" data-valor="b">B. Destilación fraccionada</button>
+          <button class="quiz-opcion" data-valor="c">C. Laminación</button>
           <div class="quiz-resultado"></div>
           <p class="quiz-score"></p>
         </div>
 
         <div class="actividad">
-          <h4 class="font-semibold text-brand-700 mb-1">Actividad: línea de tiempo</h4>
-          <p>Crea una línea de tiempo con los siguientes polímeros y el año en que fueron sintetizados o comercializados. Después responde: <strong>¿en qué década se dio el mayor número de invenciones?</strong></p>
-          <div class="mt-3 overflow-x-auto">
-            <table class="w-full border-collapse text-sm">
-              <thead>
-                <tr class="bg-brand-600 text-white">
-                  <th class="border border-brand-700 px-3 py-2 text-left">Año</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">Polímero</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">1845</td><td class="border border-slate-200 px-3 py-2">Nitrocelulosa</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">1868</td><td class="border border-slate-200 px-3 py-2">Celuloide</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">1907</td><td class="border border-slate-200 px-3 py-2">Baquelita</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">1908</td><td class="border border-slate-200 px-3 py-2">Rayón</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">1920</td><td class="border border-slate-200 px-3 py-2">Celofán</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">1926</td><td class="border border-slate-200 px-3 py-2">Policloruro de vinilo (PVC)</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">1931</td><td class="border border-slate-200 px-3 py-2">Neopreno</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">1935</td><td class="border border-slate-200 px-3 py-2">Nailon</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">1936</td><td class="border border-slate-200 px-3 py-2">Polietileno</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">1938</td><td class="border border-slate-200 px-3 py-2">Teflón</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">1949</td><td class="border border-slate-200 px-3 py-2">Tupperware</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">1966</td><td class="border border-slate-200 px-3 py-2">Kevlar</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">1979</td><td class="border border-slate-200 px-3 py-2">Poliesteramidas</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+          <p>Dibuja un polímero formado por <strong>8 monómeros</strong> circulares unidos (como un collar). Ponle nombre inventado al monómero y al polímero resultante (por ejemplo: «bolita» → «bolitero»).</p>
         </div>
       </div>
     </article>
@@ -202,50 +164,74 @@
       <div class="flex items-center gap-3 mb-4">
         <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
         <div>
-          <h3 class="font-bold text-ink-800 text-lg">Monómeros y polímeros</h3>
+          <h3 class="font-bold text-ink-800 text-lg">Tipos de polímeros</h3>
         </div>
       </div>
 
       <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
 
-        <div>
-          <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un polímero?</h4>
-          <p>Un <strong>polímero</strong> es una molécula de gran tamaño formada por la unión, acumulación y repetición de unidades estructurales llamadas <strong>monómeros</strong>. Esta reacción química se denomina <strong>polimerización</strong>.</p>
-        </div>
+        <p>Según cómo reaccionan al calor, los polímeros se dividen en <strong>tres grandes familias</strong>:</p>
 
-        <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Ejemplos de polimerización</h4>
-          <div class="mt-3 overflow-x-auto">
-            <table class="w-full border-collapse text-sm">
-              <thead>
-                <tr class="bg-brand-600 text-white">
-                  <th class="border border-brand-700 px-3 py-2 text-left">Monómero</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">Fórmula</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">Polímero resultante</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Eteno (etileno)</td><td class="border border-slate-200 px-3 py-2">H₂C=CH₂</td><td class="border border-slate-200 px-3 py-2">Polietileno (PE)</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Propeno (propileno)</td><td class="border border-slate-200 px-3 py-2">CH₃-CH=CH₂</td><td class="border border-slate-200 px-3 py-2">Polipropileno (PP)</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Cloroeteno (cloruro de vinilo)</td><td class="border border-slate-200 px-3 py-2">CH₂=CHCl</td><td class="border border-slate-200 px-3 py-2">PVC</td></tr>
-              </tbody>
-            </table>
+        <div class="mt-3 grid gap-3 sm:grid-cols-3">
+          <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+            <p class="font-bold text-brand-800">Termoplásticos</p>
+            <p class="mt-1 text-sm">Se funden al calentarlos y se solidifican al enfriarlos. Se pueden reciclar muchas veces fundiéndolos.</p>
+            <p class="mt-2 text-xs font-semibold text-brand-700">Botella PET · bolsa · tubería PVC</p>
+          </div>
+          <div class="rounded-lg bg-amber-50 p-3 border border-amber-200">
+            <p class="font-bold text-amber-800">Termoestables</p>
+            <p class="mt-1 text-sm">Al curarlos (con calor o químicos) se endurecen para siempre. Aguantan el calor, pero no se funden otra vez.</p>
+            <p class="mt-2 text-xs font-semibold text-amber-700">Cascos · vajilla melamina · resinas</p>
+          </div>
+          <div class="rounded-lg bg-sky-50 p-3 border border-sky-200">
+            <p class="font-bold text-sky-800">Elastómeros</p>
+            <p class="mt-1 text-sm">Son las gomas: se estiran mucho y vuelven a su forma original.</p>
+            <p class="mt-2 text-xs font-semibold text-sky-700">Neumáticos · gomas · guantes</p>
           </div>
         </div>
 
-        <div class="quiz" data-correcta="a" data-total="3">
+        <figure>
+          <img src="../../assets/img/termoplasticos-ciclo.svg" alt="Diagrama comparando el ciclo reversible de los termoplásticos y el irreversible de los termoestables" class="mx-auto w-full max-w-2xl rounded-lg border border-slate-200 bg-white" />
+          <figcaption class="mt-1 text-center text-xs text-slate-500 italic">Termoplásticos: ciclo que se repite · Termoestables: no vuelven atrás</figcaption>
+        </figure>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Plásticos que ves todos los días</h4>
+          <table class="mt-2 w-full border-collapse text-sm">
+            <thead>
+              <tr class="bg-brand-600 text-white">
+                <th class="border border-brand-700 px-3 py-1.5 text-left">Plástico</th>
+                <th class="border border-brand-700 px-3 py-1.5 text-left">¿Dónde lo ves?</th>
+                <th class="border border-brand-700 px-3 py-1.5 text-left">Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="border border-slate-200 px-3 py-1.5">PET</td><td class="border border-slate-200 px-3 py-1.5">Botellas de agua y refrescos</td><td class="border border-slate-200 px-3 py-1.5">Termoplástico</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5">Polietileno (PE)</td><td class="border border-slate-200 px-3 py-1.5">Bolsas de la compra</td><td class="border border-slate-200 px-3 py-1.5">Termoplástico</td></tr>
+              <tr><td class="border border-slate-200 px-3 py-1.5">PVC</td><td class="border border-slate-200 px-3 py-1.5">Tuberías del agua</td><td class="border border-slate-200 px-3 py-1.5">Termoplástico</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5">Melamina</td><td class="border border-slate-200 px-3 py-1.5">Platos y vajilla de campamentos</td><td class="border border-slate-200 px-3 py-1.5">Termoestable</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-nota">
+          <strong>Clave para el taller de impresión 3D</strong>
+          <p class="mt-1">Los filamentos de la impresora (el <strong>PLA</strong> y el <strong>ABS</strong>) son <strong>termoplásticos</strong>. Por eso la boquilla puede fundirlos y la pieza se solidifica al enfriar. Si fueran termoestables, la impresora no podría funcionar.</p>
+        </div>
+
+        <div class="quiz" data-correcta="c" data-total="3">
           <h4>Comprueba lo aprendido</h4>
-          <p class="font-semibold text-slate-700 mb-2">¿Cómo se llama la reacción química que forma los polímeros?</p>
-          <button class="quiz-opcion" data-valor="a">A. Polimerización</button>
-          <button class="quiz-opcion" data-valor="b">B. Destilación fraccionada</button>
-          <button class="quiz-opcion" data-valor="c">C. Vitrificación</button>
+          <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de polímero se puede fundir y reciclar varias veces?</p>
+          <button class="quiz-opcion" data-valor="a">A. El termoestable</button>
+          <button class="quiz-opcion" data-valor="b">B. El termoestable y el elastómero</button>
+          <button class="quiz-opcion" data-valor="c">C. El termoplástico</button>
           <div class="quiz-resultado"></div>
           <p class="quiz-score"></p>
         </div>
 
         <div class="actividad">
           <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
-          <p>Existen monómeros naturales y sintéticos. Busca y describe <strong>tres ejemplos de cada uno</strong>, indicando de qué se obtienen y en qué polímero se convierten.</p>
+          <p>Clasifica estos objetos en la tabla: bolígrafo, neumático de bici, plato de campamento, bolsa de patatas, casco de bici, asa de sartén. Marca para cada uno: termoplástico, termoestable o elastómero. ¿Cuál te cuesta más decidir?</p>
         </div>
       </div>
     </article>
@@ -255,127 +241,58 @@
       <div class="flex items-center gap-3 mb-4">
         <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
         <div>
-          <h3 class="font-bold text-ink-800 text-lg">Tipos de polímeros</h3>
+          <h3 class="font-bold text-ink-800 text-lg">Técnicas de fabricación con plásticos</h3>
         </div>
       </div>
 
       <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
 
-        <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Clasificación por origen</h4>
-          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-            <li><strong>Naturales:</strong> producidos por organismos vivos (queratina de las uñas, celulosa).</li>
-            <li><strong>Sintéticos:</strong> obtenidos por procesos industriales.</li>
-            <li><strong>Copolímeros:</strong> contienen dos o más tipos de monómeros.</li>
-          </ul>
-        </div>
+        <p>Las industrias trabajan los termoplásticos siempre igual al principio: <strong>calientan las bolitas hasta que se ponen blandas</strong>. Lo que cambia es cómo les dan la forma final.</p>
 
-        <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Clasificación por estructura interna</h4>
-        </div>
-
-        <div class="grid gap-3 sm:grid-cols-3">
+        <div class="mt-3 grid gap-3 sm:grid-cols-2">
           <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-            <p class="font-bold text-brand-800">Termoplásticos</p>
-            <p class="mt-1 text-sm">Cadenas lineales que se funden al calentar y solidifican al enfriar. Se pueden moldear muchas veces → <strong>buenos para reciclar</strong>.</p>
+            <p class="font-bold text-brand-800">Extrusión</p>
+            <p class="mt-1 text-sm">Se empuja el plástico fundido por un agujero (troquel) y sale en forma continua: tubos, láminas, pajitas, bolsas. Como exprimir pasta dental.</p>
           </div>
           <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-            <p class="font-bold text-brand-800">Termoestables</p>
-            <p class="mt-1 text-sm">Cadenas entrelazadas en 3D. El curado es <strong>irreversible</strong>: si se vuelve a calentar, se degradan. Difíciles de reciclar.</p>
+            <p class="font-bold text-brand-800">Inyección</p>
+            <p class="mt-1 text-sm">Se inyecta dentro de un molde cerrado y se queda con su forma exacta: juguetes, tapones, teclas, carcasas. Como una jeringa.</p>
           </div>
           <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-            <p class="font-bold text-brand-800">Elastómeros</p>
-            <p class="mt-1 text-sm">Alta elasticidad y baja dureza. Recuperan su forma al cesar la fuerza (caucho, silicona, neopreno).</p>
+            <p class="font-bold text-brand-800">Soplado</p>
+            <p class="mt-1 text-sm">Se sopla aire dentro de una bolsa de plástico caliente dentro de un molde y se estira hasta dar la forma hueca: botellas de agua.</p>
+          </div>
+          <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+            <p class="font-bold text-brand-800">Conformado al vacío</p>
+            <p class="mt-1 text-sm">Se calienta una lámina y se le hace aire por debajo para que se pegue al molde: bandejas de comida, vasos, bandejas de herramientas.</p>
           </div>
         </div>
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Termoplásticos más habituales</h4>
-          <div class="mt-3 overflow-x-auto">
-            <table class="w-full border-collapse text-sm">
-              <thead>
-                <tr class="bg-brand-600 text-white">
-                  <th class="border border-brand-700 px-3 py-2 text-left">Polímero</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">Propiedades</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">Usos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">PET</td><td class="border border-slate-200 px-3 py-2">Transparente, resistente, impermeable, buen aislante de CO₂.</td><td class="border border-slate-200 px-3 py-2">Botellas, tejidos, cuerdas.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">PVC</td><td class="border border-slate-200 px-3 py-2">Blanco, no inflamable. Rígido o flexible.</td><td class="border border-slate-200 px-3 py-2">Tuberías, mangueras, ropa, juguetes.</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">PP</td><td class="border border-slate-200 px-3 py-2">Rigidez, alta resistencia térmica y química.</td><td class="border border-slate-200 px-3 py-2">Muebles de jardín, piezas de coche, envases.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">PE-HD</td><td class="border border-slate-200 px-3 py-2">Traslúcido, ligero, flexible, resistente a impactos.</td><td class="border border-slate-200 px-3 py-2">Envases, tuberías de agua, cascos.</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">PE-LD</td><td class="border border-slate-200 px-3 py-2">Blanquecino, más flexible que el PE-HD.</td><td class="border border-slate-200 px-3 py-2">Bolsas, menaje desechable, films agrícolas.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">PS</td><td class="border border-slate-200 px-3 py-2">Buen aislante térmico, se deforma a partir de 80 °C.</td><td class="border border-slate-200 px-3 py-2">Embalajes, carcasas, EPS (corcho blanco).</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Teflón</td><td class="border border-slate-200 px-3 py-2">Resistente químicamente (-270 °C a +270 °C), antiadherente.</td><td class="border border-slate-200 px-3 py-2">Sartenes, tubos, tejidos.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Metacrilato</td><td class="border border-slate-200 px-3 py-2">El más transparente, resistente al impacto pero se raya.</td><td class="border border-slate-200 px-3 py-2">Sustituto del vidrio, acuarios, vitrinas.</td></tr>
-              </tbody>
-            </table>
+          <div class="video-embed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YjXeNshXfWA" title="Así se fabrican las botellas de plástico" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Vídeo: «Así se fabrican las botellas de plástico · Proceso completo» · Inside The Process</p>
         </div>
 
-        <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Termoestables más habituales</h4>
-          <div class="mt-3 grid gap-3 sm:grid-cols-2">
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Baquelita</p>
-              <p class="mt-1 text-sm">Primer plástico totalmente sintético. Excelente aislante eléctrico y térmico. Usos: carcasas, mandos, asas.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Resina de melamina</p>
-              <p class="mt-1 text-sm">Resistente al calor, la luz y los golpes. Usos: vajillas, gomas de borrar, aislantes.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Resina de poliéster</p>
-              <p class="mt-1 text-sm">Rígida, frágil, resistente a la humedad. Se refuerza con fibra de vidrio. Usos: tuberías, piscinas, piezas de automóvil.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Resina epoxi</p>
-              <p class="mt-1 text-sm">Muy buena aislante eléctrica, más resistente que el poliéster. Usos: adhesivos, sellados, refuerzos.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Poliuretano</p>
-              <p class="mt-1 text-sm">Habitualmente espuma, flexible o rígida. Buen aislante térmico. Usos: colchones, embalajes, aislantes.</p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Elastómeros más habituales</h4>
-          <div class="mt-3 grid gap-3 sm:grid-cols-3">
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Caucho</p>
-              <p class="mt-1 text-sm">Natural (látex) o sintético (polibutadieno). Usos: neumáticos, suelas, juguetes.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Silicona</p>
-              <p class="mt-1 text-sm">Incluye silicio y oxígeno. Flexible, inerte, larga vida útil. Usos: selladores, prótesis, moldes.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Neopreno</p>
-              <p class="mt-1 text-sm">Caucho sintético (policloropreno). Aislante térmico y acústico. Usos: ropa de frío, ortopedia, juntas.</p>
-            </div>
-          </div>
+        <div class="callout callout-nota">
+          <strong>Puente hacia el diseño 3D</strong>
+          <p class="mt-1">Todas estas técnicas necesitan <strong>un molde</strong>, y los moldes son caros. La <strong>impresión 3D</strong> es distinta: no usa molde y añade el material capa a capa hasta formar la pieza (se llama <strong>fabricación aditiva</strong>). Es la técnica que usaremos en los dos últimos contenidos.</p>
         </div>
 
         <div class="quiz" data-correcta="b" data-total="3">
           <h4>Comprueba lo aprendido</h4>
-          <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de polímero se puede fundir y moldear muchas veces?</p>
-          <button class="quiz-opcion" data-valor="a">A. Termoestable</button>
-          <button class="quiz-opcion" data-valor="b">B. Termoplástico</button>
-          <button class="quiz-opcion" data-valor="c">C. Elastómero</button>
+          <p class="font-semibold text-slate-700 mb-2">¿Con qué técnica se fabrican las botellas de plástico?</p>
+          <button class="quiz-opcion" data-valor="a">A. Extrusión</button>
+          <button class="quiz-opcion" data-valor="b">B. Soplado</button>
+          <button class="quiz-opcion" data-valor="c">C. Conformado al vacío</button>
           <div class="quiz-resultado"></div>
           <p class="quiz-score"></p>
         </div>
 
         <div class="actividad">
-          <h4 class="font-semibold text-brand-700 mb-1">Actividad: clasificación práctica</h4>
-          <p>Clasifica los siguientes polímeros en natural o sintético, y después indica si son termoplásticos, termoestables o elastómeros: <strong>Polipropileno · Almidón · Policarbonato · Celulosa · Inulina · Nailon · Teflón · Polisacárido · PVC · PET · Quitina · Poliestireno</strong>.</p>
-        </div>
-
-        <div class="actividad">
-          <h4 class="font-semibold text-brand-700 mb-1">Actividad: reflexiona</h4>
-          <p>El <strong>PET</strong> es uno de los plásticos más empleados en la industria alimentaria. Investiga sus propiedades y métodos de reciclado, y expón en el cuaderno tus conclusiones sobre cómo debemos usar este material tan común.</p>
+          <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+          <p>Elige 5 objetos de tu mochila o de tu casa hechos de plástico y di con qué técnica crees que se fabricaron (extrusión, inyección, soplado o vacío). Justifica en una frase cada uno: ¿es hueco?, ¿tiene forma complicada?, ¿es una lámina?</p>
         </div>
       </div>
     </article>
@@ -385,60 +302,59 @@
       <div class="flex items-center gap-3 mb-4">
         <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
         <div>
-          <h3 class="font-bold text-ink-800 text-lg">Técnicas de fabricación con plásticos</h3>
+          <h3 class="font-bold text-ink-800 text-lg">Diseño 3D con Tinkercad</h3>
         </div>
       </div>
 
       <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Principio general</h4>
-          <p>Para producir piezas de plástico con la forma deseada, <strong>se calienta el material</strong> antes de meterlo en un molde. El polímero suele venir triturado, en polvo o en bolitas.</p>
+          <p>Antes de imprimir cualquier cosa en 3D hay que <strong>dibujarla en el ordenador</strong>. A eso le llamamos <strong>diseño 3D</strong>: crear un modelo con medidas reales (en milímetros) que después la impresora podrá fabricar. Es como hacer un plano, pero en tres dimensiones.</p>
         </div>
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Las técnicas más empleadas</h4>
-          <div class="mt-3 overflow-x-auto">
-            <table class="w-full border-collapse text-sm">
-              <thead>
-                <tr class="bg-brand-600 text-white">
-                  <th class="border border-brand-700 px-3 py-2 text-left">Técnica</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">¿En qué consiste?</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">Productos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Extrusión</td><td class="border border-slate-200 px-3 py-2">Se fuerza el plástico fundido a pasar por una boquilla con la forma deseada.</td><td class="border border-slate-200 px-3 py-2">Láminas, tubos y perfiles.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Inyección</td><td class="border border-slate-200 px-3 py-2">El fundido se introduce a presión en un molde; se enfría y se retira la rebaba.</td><td class="border border-slate-200 px-3 py-2">Juguetes, piezas de coche, envases.</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Calandrado</td><td class="border border-slate-200 px-3 py-2">Rodillos calientes presionan el material reduciendo su espesor gradualmente.</td><td class="border border-slate-200 px-3 py-2">Planchas y láminas de PVC.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Soplado</td><td class="border border-slate-200 px-3 py-2">Se introduce aire a presión en la preforma para adoptar la forma del molde.</td><td class="border border-slate-200 px-3 py-2">Botellas de agua y refrescos (PET).</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Compresión</td><td class="border border-slate-200 px-3 py-2">El material se vierte en un molde de dos partes y se somete a calor y presión.</td><td class="border border-slate-200 px-3 py-2">Solo termoestables: interruptores, asas.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Conformación al vacío</td><td class="border border-slate-200 px-3 py-2">Una lámina caliente se adapta al molde por acción de una bomba de vacío.</td><td class="border border-slate-200 px-3 py-2">Bandejas, carcasas.</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Moldeo rotacional</td><td class="border border-slate-200 px-3 py-2">El molde gira en dos ejes dentro de un horno (250-450 °C) con el polímero en polvo.</td><td class="border border-slate-200 px-3 py-2">Tanques, contenedores grandes.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Mecanizado</td><td class="border border-slate-200 px-3 py-2">Fresado y torneado: arranque de viruta con fresa o cuchilla.</td><td class="border border-slate-200 px-3 py-2">Piezas con acabado preciso.</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <h4 class="font-semibold text-brand-700 mb-1">Tinkercad: el taller de diseño del aula</h4>
+          <ul class="mt-1 space-y-1.5 pl-5 list-disc">
+            <li><strong>Gratuito</strong> y funciona en el navegador de cualquier ordenador (sin instalar nada): <a href="https://www.tinkercad.com" target="_blank" rel="noopener" class="font-semibold text-emerald-600 hover:underline">tinkercad.com</a></li>
+            <li>Muy sencillo: partimos de <strong>formas básicas</strong> (cubo, cilindro, esfera) que movemos, giramos y cambiamos de tamaño.</li>
+            <li>Dos operaciones mágicas: <strong>agrupar</strong> (unir varias formas en una sola pieza) y <strong>hueco</strong> (marcar una forma para que sirva de agujero al agrupar).</li>
+            <li>Todo se mide en <strong>milímetros (mm)</strong>, igual que las medidas reales de la pieza.</li>
+          </ul>
         </div>
 
-        <div class="quiz" data-correcta="c" data-total="3">
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Cómo se hace (taller paso a paso)</h4>
+          <ol class="mt-1 space-y-1.5 pl-5 list-decimal">
+            <li>Entra en tinkercad.com e inicia sesión con la cuenta del centro.</li>
+            <li>Pulsa <strong>Crear → Diseño 3D</strong>.</li>
+            <li>Arrastra una forma desde el panel derecho hasta el lienzo.</li>
+            <li>Selecciona la forma y cambia su tamaño escribiendo números (¡en mm!) o arrastrando los manejadores.</li>
+            <li>Añade una forma marcada como <strong>Hueco</strong> donde quieras un agujero.</li>
+            <li>Selecciona todo y pulsa <strong>Agrupar</strong> (Ctrl + G): ya tienes tu pieza.</li>
+            <li>En <strong>Enviar → Descargar → Archivo .STL</strong> para guardarlo e imprimirlo.</li>
+          </ol>
+        </div>
+
+        <div>
+          <div class="video-embed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0qzWMvn2dZs" title="Tutorial COMPLETO de Tinkercad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Vídeo: «Tutorial COMPLETO de Tinkercad [Guía para Principiantes 2025 de Diseño 3D]» · OBO We Teach Robotics</p>
+        </div>
+
+        <div class="quiz" data-correcta="a" data-total="3">
           <h4>Comprueba lo aprendido</h4>
-          <p class="font-semibold text-slate-700 mb-2">¿Qué técnica se usa para fabricar botellas de refresco de PET?</p>
-          <button class="quiz-opcion" data-valor="a">A. Calandrado</button>
-          <button class="quiz-opcion" data-valor="b">B. Compresión</button>
-          <button class="quiz-opcion" data-valor="c">C. Soplado</button>
+          <p class="font-semibold text-slate-700 mb-2">¿En qué unidades se miden los diseños 3D en Tinkercad?</p>
+          <button class="quiz-opcion" data-valor="a">A. En milímetros (mm)</button>
+          <button class="quiz-opcion" data-valor="b">B. En pulgadas</button>
+          <button class="quiz-opcion" data-valor="c">C. No se miden, es a ojo</button>
           <div class="quiz-resultado"></div>
           <p class="quiz-score"></p>
         </div>
 
         <div class="actividad">
-          <h4 class="font-semibold text-brand-700 mb-1">Actividad: mapa mental</h4>
-          <p>Elabora un esquema o mapa mental con las técnicas de fabricación con plásticos. Acompaña cada técnica de <strong>imágenes de dos objetos</strong> fabricados con ella y anota <strong>una ventaja y un inconveniente</strong> de cada técnica.</p>
-        </div>
-
-        <div class="actividad">
-          <h4 class="font-semibold text-brand-700 mb-1">Actividad: identifica la técnica</h4>
-          <p>Mira a tu alrededor y elige 5 objetos de plástico (una botella, una sartén, un juguete, una tubería…). Indica <strong>qué técnica de fabricación</strong> se habría usado y <strong>de qué polímero</strong> está hecho cada uno.</p>
+          <h4 class="font-semibold text-brand-700 mb-1">Taller 1 · Tu primera pieza</h4>
+          <p>Diseña en Tinkercad una <strong>placa con tu nombre</strong> (un cubo achatado de 100 × 30 × 4 mm con las letras de tu nombre en hueco) o un <strong>llavero</strong> sencillo. Exporta el .STL y guárdalo en tu carpeta: lo imprimirás en el contenido 6.</p>
         </div>
       </div>
     </article>
@@ -448,90 +364,80 @@
       <div class="flex items-center gap-3 mb-4">
         <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
         <div>
-          <h3 class="font-bold text-ink-800 text-lg">Los materiales de construcción</h3>
+          <h3 class="font-bold text-ink-800 text-lg">La impresora 3D del aula</h3>
         </div>
       </div>
 
       <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Materiales pétreos</h4>
-          <p>Proceden de las rocas y se utilizan con pocas modificaciones, directamente de las canteras. Las rocas se clasifican en:</p>
-          <div class="mt-3 grid gap-3 sm:grid-cols-3">
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Ígneas o eruptivas</p>
-              <p class="mt-1 text-sm">Formadas a partir del magma.</p>
-              <p class="mt-1 text-sm"><strong>Granito:</strong> cuarzo, feldespato y mica. Muy resistente e impermeable.</p>
-              <p class="mt-1 text-sm"><strong>Basalto:</strong> roca volcánica, densa y dura. Uso decorativo.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Metamórficas</p>
-              <p class="mt-1 text-sm">Transformadas a partir de las ígneas.</p>
-              <p class="mt-1 text-sm"><strong>Pizarra:</strong> se divide en láminas finas. Impermeable, para tejados.</p>
-              <p class="mt-1 text-sm"><strong>Mármol:</strong> de rocas calizas. Estético, pero frágil y poroso.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Sedimentarias</p>
-              <p class="mt-1 text-sm">Formadas por acumulación de sedimentos.</p>
-              <p class="mt-1 text-sm"><strong>Caliza, arenisca, grava:</strong> para conglomerantes, sillería y bases de carreteras.</p>
-            </div>
-          </div>
+          <p>Llegamos a la máquina que hace realidad los diseños. Nuestra impresora usa la tecnología <strong>FDM</strong>: funde un filamento de plástico (PLA) y lo deposita <strong>capa a capa</strong> hasta construir la pieza entera.</p>
+        </div>
+
+        <figure>
+          <img src="../../assets/img/capas-impresion3d.svg" alt="Esquema de una impresora 3D FDM: filamento, boquilla a 200 grados, cama caliente y capas de material" class="mx-auto w-full max-w-2xl rounded-lg border border-slate-200 bg-white" />
+          <figcaption class="mt-1 text-center text-xs text-slate-500 italic">Filamento, boquilla caliente y capas de 0,2 mm</figcaption>
+        </figure>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">El recorrido completo: del diseño a la pieza</h4>
+          <figure>
+            <img src="../../assets/img/flujo-impresion3d.svg" alt="Flujo de cinco pasos: diseñar en Tinkercad, exportar STL, laminar en Cura, generar G-code e imprimir" class="w-full rounded-lg border border-slate-200 bg-white" />
+            <figcaption class="mt-1 text-center text-xs text-slate-500 italic">Los 5 pasos: Tinkercad → .STL → Cura → G-code → impresora</figcaption>
+          </figure>
+          <p class="mt-2">El programa intermedio es el <strong>laminador</strong>: usamos <strong>Cura</strong> (gratuito). Cura recorta el modelo en capas finas y genera el <strong>G-code</strong>, un archivo de instrucciones que la impresora lee y sigue al pie de la letra.</p>
         </div>
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Materiales cerámicos</h4>
-          <p>Empleados desde el Neolítico. Se modelan con arcilla y se someten a <strong>cocción</strong> en horno:</p>
-          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-            <li><strong>Cerámica porosa:</strong> ladrillos y tejas. La temperatura no alcanza la vitrificación. Dureza, resistencia y aislamiento térmico.</li>
-            <li><strong>Cerámica impermeable:</strong> azulejos y lozas sanitarias. Sí sufren vitrificación; pueden llevar esmalte exterior.</li>
+          <h4 class="font-semibold text-brand-700 mb-1">Ajustes importantes en Cura</h4>
+          <ul class="mt-1 space-y-1.5 pl-5 list-disc">
+            <li><strong>Altura de capa:</strong> 0,2 mm (equilibrio entre velocidad y calidad).</li>
+            <li><strong>Relleno:</strong> 15-20 % (por dentro no es sólido, tiene una estructura de panal: ahorra material y tiempo).</li>
+            <li><strong>Soportes:</strong> solo si hay partes que «vuelan» sin debajo (voladizos); son columnas que se rompen después.</li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">El vidrio</h4>
-          <p>Se obtiene por la <strong>fusión de arena, silicatos y óxidos metálicos</strong>, moldeados antes del enfriamiento. Transparente, aísla térmica y acústicamente. Se conoce desde el antiguo Egipto.</p>
-        </div>
-
-        <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Materiales conglomerantes</h4>
-          <div class="mt-3 grid gap-3 sm:grid-cols-3">
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Yeso</p>
-              <p class="mt-1 text-sm">De la deshidratación del yeso mineral. Fragua al secarse. Buena adherencia, baja resistencia mecánica. Usos: enlucir paredes, placas.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Cemento</p>
-              <p class="mt-1 text-sm">Mezcla de caliza, arcilla y mineral de hierro. Fragua al contacto con agua y aire. Alta resistencia a compresión. Base de mortero y hormigón.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Mortero</p>
-              <p class="mt-1 text-sm">Cemento + arena + agua (sin áridos gruesos). Usos: unir elementos y enlucir.</p>
-            </div>
-            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
-              <p class="font-bold text-brand-800">Hormigón</p>
-              <p class="mt-1 text-sm">Cemento + áridos + agua. Muy resistente a compresión, poco a tracción. Con barras de acero → <strong>hormigón armado</strong>.</p>
-            </div>
-          </div>
+          <h4 class="font-semibold text-brand-700 mb-1">Pasos para imprimir</h4>
+          <ol class="mt-1 space-y-1.5 pl-5 list-decimal">
+            <li>El profe laminador tu .STL en Cura y genera el G-code.</li>
+            <li>Se copia el G-code a la tarjeta o USB de la impresora.</li>
+            <li>En la pantalla de la impresora: <strong>Seleccionar archivo → Imprimir</strong>.</li>
+            <li>Se espera (una pieza pequeña tarda unos 30-60 minutos).</li>
+            <li>Con la pieza fría, se retira con cuidado y se quitan los soportes.</li>
+          </ol>
         </div>
 
         <div class="callout callout-nota">
-          <strong>Aglomerantes vs. conglomerantes</strong>
-          Los <strong>aglomerantes</strong> (como la arcilla) se endurecen al secar sin cambios químicos: si se añade agua, vuelven al estado pastoso. Los <strong>conglomerantes</strong> (yeso, cemento) sufren transformaciones químicas al fraguar: una vez secos, no se deshacen con agua.
+          <strong>Seguridad y cuidados (imprescindible)</strong>
+          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+            <li>La <strong>boquilla está a ≈ 200 °C</strong> y la cama a ≈ 60 °C: <strong>nunca se tocan</strong> mientras imprime.</li>
+            <li>No dejar la impresora funcionando sin supervisión del profe.</li>
+            <li>Retirar la pieza solo cuando esté fría y con ayuda del profe si está pegada.</li>
+            <li>Si algo falla (se despega, hace ruidos raros), <strong>se para y se avisa</strong>: no se fuerza nada.</li>
+          </ul>
         </div>
 
-        <div class="quiz" data-correcta="a" data-total="3">
+        <div>
+          <div class="video-embed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Sx5oCKnqlZI" title="Así funciona una impresora 3D, explicado fácilmente" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Vídeo: «Así funciona una impresora 3D, explicado fácilmente» · Soy Thelma Castillo</p>
+        </div>
+
+        <div class="quiz" data-correcta="b" data-total="3">
           <h4>Comprueba lo aprendido</h4>
-          <p class="font-semibold text-slate-700 mb-2">¿Qué material conglomerante se obtiene de la deshidratación del yeso mineral?</p>
-          <button class="quiz-opcion" data-valor="a">A. El yeso</button>
-          <button class="quiz-opcion" data-valor="b">B. El cemento</button>
-          <button class="quiz-opcion" data-valor="c">C. El mortero</button>
+          <p class="font-semibold text-slate-700 mb-2">¿A qué temperatura aproximada sale fundido el PLA por la boquilla?</p>
+          <button class="quiz-opcion" data-valor="a">A. A unos 60 °C (la cama)</button>
+          <button class="quiz-opcion" data-valor="b">B. A unos 200 °C</button>
+          <button class="quiz-opcion" data-valor="c">C. A más de 1000 °C</button>
           <div class="quiz-resultado"></div>
           <p class="quiz-score"></p>
         </div>
 
         <div class="actividad">
           <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
-          <p>Dibuja en detalle el exterior de una vivienda o edificio cercano e <strong>identifica todos los materiales</strong> con los que se construyó (piedra, ladrillo, vidrio, hormigón…). Después responde: ¿seleccionarías esos materiales si el edificio se ubicara en una zona con un clima diferente?</p>
+          <p>Dibuja en tu cuaderno una impresora 3D con sus partes etiquetadas (filamento, boquilla, cama, capas) y explica con tus palabras qué es el <strong>relleno</strong> y por qué no se imprime todo sólido por dentro.</p>
         </div>
       </div>
     </article>
@@ -541,121 +447,62 @@
       <div class="flex items-center gap-3 mb-4">
         <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
         <div>
-          <h3 class="font-bold text-ink-800 text-lg">Nuevos materiales y análisis de materiales de construcción</h3>
+          <h3 class="font-bold text-ink-800 text-lg">Proyecto: diseñamos e imprimimos en 3D</h3>
         </div>
       </div>
 
       <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Nuevos materiales para la construcción</h4>
-          <div class="mt-3 overflow-x-auto">
-            <table class="w-full border-collapse text-sm">
-              <thead>
-                <tr class="bg-brand-600 text-white">
-                  <th class="border border-brand-700 px-3 py-2 text-left">Material</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">Características</th>
-                  <th class="border border-brand-700 px-3 py-2 text-left">Usos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Hormigón UHPC</td><td class="border border-slate-200 px-3 py-2">Muy alta resistencia, densidad y durabilidad, baja permeabilidad.</td><td class="border border-slate-200 px-3 py-2">Puentes, fachadas, elementos estructurales.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Hormigón translúcido</td><td class="border border-slate-200 px-3 py-2">Permite el paso de la luz manteniendo resistencia.</td><td class="border border-slate-200 px-3 py-2">Paneles y pavimentos con iluminación natural.</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Aerogel transparente</td><td class="border border-slate-200 px-3 py-2">Ultraligero, altamente aislante, transparencia excepcional.</td><td class="border border-slate-200 px-3 py-2">Aislamiento en ventanas, techos y paredes.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Bambú</td><td class="border border-slate-200 px-3 py-2">Renovable, ligero, fuerte, crecimiento rápido, baja huella de carbono.</td><td class="border border-slate-200 px-3 py-2">Estructuras, revestimientos y muebles.</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Cubiertas y fachadas vegetales</td><td class="border border-slate-200 px-3 py-2">Retienen 40-50 % del agua de lluvia y mejoran el aislamiento.</td><td class="border border-slate-200 px-3 py-2">Edificios sostenibles.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">CFRP (fibra de carbono)</td><td class="border border-slate-200 px-3 py-2">Alta resistencia y rigidez, ligeros, resistentes a la corrosión.</td><td class="border border-slate-200 px-3 py-2">Refuerzo de estructuras existentes.</td></tr>
-                <tr><td class="border border-slate-200 px-3 py-2 font-semibold">Materiales fotocatalíticos</td><td class="border border-slate-200 px-3 py-2">Descomponen contaminantes atmosféricos.</td><td class="border border-slate-200 px-3 py-2">Revestimientos de fachadas y pavimentos.</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-2 font-semibold">Impresión 3D</td><td class="border border-slate-200 px-3 py-2">Reduce tiempos y optimiza recursos.</td><td class="border border-slate-200 px-3 py-2">Bloques de construcción impresos.</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <p><strong>Objetivo:</strong> en <strong>parejas</strong>, diseñar en Tinkercad e imprimir una <strong>pieza útil</strong> para el aula o para casa: porta-gomas, llavero, soporte de móvil, etiqueta de material, ficha de memoria, porta-cable…</p>
         </div>
 
         <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Propiedades clave de los materiales</h4>
-          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-            <li><strong>Ópticas:</strong> textura, color, transparencia, translucidez, opacidad y reflexión.</li>
-            <li><strong>Mecánicas:</strong> dureza (oposición a rayarse), fragilidad, densidad, resistencia a compresión y tracción.</li>
-            <li><strong>Resistencia a la corrosión:</strong> destrucción gradual por agentes externos (oxígeno, agua, humedad, diferencia de potencial).</li>
-          </ul>
-        </div>
-
-        <div class="callout callout-aviso">
-          <strong>Dato importante</strong>
-          Los materiales de construcción presentan, en general, <strong>mayor resistencia a la compresión que a la tracción o la flexión</strong>. Por eso al hormigón se le añaden barras de acero (hormigón armado), que resisten la tracción.
-        </div>
-
-        <div class="quiz" data-correcta="b" data-total="3">
-          <h4>Comprueba lo aprendido</h4>
-          <p class="font-semibold text-slate-700 mb-2">¿Qué propiedad mide la oposición de un material a ser rayado?</p>
-          <button class="quiz-opcion" data-valor="a">A. La fragilidad</button>
-          <button class="quiz-opcion" data-valor="b">B. La dureza</button>
-          <button class="quiz-opcion" data-valor="c">C. La densidad</button>
-          <div class="quiz-resultado"></div>
-          <p class="quiz-score"></p>
-        </div>
-
-        <div class="actividad">
-          <h4 class="font-semibold text-brand-700 mb-1">Actividad: análisis de materiales</h4>
-          <p>Elige un objeto cotidiano fabricado con uno de los materiales estudiados (cerámica, acero, hormigón, vidrio, plástico…). Investiga y resume en una ficha:</p>
-          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-            <li><strong>Identificación</strong> del material y su tipo.</li>
-            <li><strong>Propiedades físicas</strong> (densidad, porosidad, absorción de agua).</li>
-            <li><strong>Propiedades mecánicas</strong> (resistencia a compresión y tracción).</li>
-            <li><strong>Propiedades químicas y térmicas</strong> (durabilidad, conductividad térmica).</li>
-            <li><strong>¿Qué propiedad mejorarías</strong> si pudieras?</li>
-          </ul>
-        </div>
-      </div>
-    </article>
-
-    <!-- CONTENIDO 8 -->
-    <article id="contenido-8" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
-      <div class="flex items-center gap-3 mb-4">
-        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">8</span>
-        <div>
-          <h3 class="font-bold text-ink-800 text-lg">Proyecto: Construimos un huerto vertical con materiales reciclados</h3>
-        </div>
-      </div>
-
-      <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-
-        <div>
-          <h4 class="font-semibold text-brand-700 mb-1">Objetivo</h4>
-          <p>Diseñar y construir un <strong>huerto urbano vertical</strong> e instalarlo en el centro, para cosechar plantas en cualquier época del año, en poco espacio y de forma sostenible, aplicando lo aprendido sobre materiales y técnicas de fabricación.</p>
-        </div>
-
-        <div class="callout callout-nota">
-          <strong>Ruta de trabajo</strong>
-          <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-            <li><strong>Recopilad materiales:</strong> botellas o garrafas de plástico vacías y limpias, cuerda o alambre, tubos y codos de PVC (20-35 mm), sustrato, plantas o semillas, tijeras y rotuladores.</li>
-            <li><strong>Seleccionad las plantas</strong> que mejor se adapten a vuestro clima y a la época del año.</li>
-            <li><strong>Escoged la ubicación</strong> teniendo en cuenta las horas de sol, las necesidades de las plantas y el acceso al agua.</li>
-            <li><strong>Repartid el trabajo:</strong> un equipo prepara las botellas (corta la base, hace huecos y agujeros), otro confecciona las columnas unidas con cuerda, y el resto construye el bastidor de PVC.</li>
-            <li><strong>Montad las columnas</strong> en el bastidor y rellenadlas de sustrato hasta el hueco lateral.</li>
-            <li><strong>Sembrad</strong> las semillas o trasplantad los plantel.</li>
-            <li><strong>Riegad</strong> desde la botella superior para que el agua baje por toda la columna. Ajustad cantidad y frecuencia.</li>
+          <h4 class="font-semibold text-brand-700 mb-1">Ruta del proyecto</h4>
+          <ol class="mt-1 space-y-1.5 pl-5 list-decimal">
+            <li><strong>Idea y boceto:</strong> escribe en el cuaderno qué problema resuelve tu pieza y sus medidas (que sea <strong>pequeña: menos de 5 cm</strong>, así imprime rápido).</li>
+            <li><strong>Modelado en Tinkercad:</strong> constrúyela con formas básicas; paredes de al menos 2 mm de grosor.</li>
+            <li><strong>Revisión:</strong> comparad el diseño entre vosotros y con el profe. ¿Es útil? ¿Se puede imprimir sin desmoronarse?</li>
+            <li><strong>Exportar</strong> el archivo .STL.</li>
+            <li><strong>Laminar en Cura</strong> con el profe (relleno 15 %, soportes solo si hace falta).</li>
+            <li><strong>Imprimir por turnos</strong> (la pieza pequeña tarda unos 30-60 minutos).</li>
+            <li><strong>Acabo y presentación:</strong> retira soportes, limpia la pieza y preséntala en 3 minutos: problema que resuelve, cómo la diseñasteis, tiempo de impresión y qué mejoraríais.</li>
           </ol>
         </div>
 
-        <div class="callout callout-consejo">
-          <strong>Reflexión final</strong>
-          En esta unidad has aprendido cómo son los materiales técnicos más habituales, el origen, los tipos y las propiedades de los plásticos, cómo se producen y se manipulan, qué materiales se utilizan en la construcción y cómo seleccionarlos en función de sus propiedades. ¿Qué materiales has usado en el proyecto? ¿Por qué son sostenibles?
+        <div class="callout callout-nota">
+          <strong>Consejo de taller</strong>
+          <p class="mt-1">El primer diseño no tiene por qué ser perfecto. Una pieza <strong>pequeña y bien hecha</strong> siempre gana a una grande y a medias. Si algo no sale bien, se corrige y se vuelve a imprimir: eso también es diseñar.</p>
         </div>
 
-        <div class="callout callout-info">
-          <strong>Criterios de evaluación</strong>
-          <p class="mt-1"><span class="criterio">1.1</span> Definir problemas y buscar información crítica.</p>
-          <p class="mt-1"><span class="criterio">1.2</span> Analizar productos tecnológicos mediante el método científico.</p>
-          <p class="mt-1"><span class="criterio">2.1</span> Diseñar soluciones eficaces e innovadoras.</p>
-          <p class="mt-1"><span class="criterio">2.2</span> Planificar materiales y tareas de manera cooperativa.</p>
-          <p class="mt-1"><span class="criterio">3.1</span> Fabricar objetos aplicando fundamentos de electricidad y seguridad.</p>
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Criterios de evaluación</h4>
+          <table class="mt-2 w-full border-collapse text-sm">
+            <thead>
+              <tr class="bg-brand-600 text-white">
+                <th class="border border-brand-700 px-3 py-1.5 text-left">Criterio</th>
+                <th class="border border-brand-700 px-3 py-1.5 text-left">Qué se valora</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="border border-slate-200 px-3 py-1.5 font-semibold">Diseño original y útil</td><td class="border border-slate-200 px-3 py-1.5">Resuelve un problema real; es original, no copiado.</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5 font-semibold">Dimensiones correctas</td><td class="border border-slate-200 px-3 py-1.5">Menos de 5 cm; paredes de al menos 2 mm.</td></tr>
+              <tr><td class="border border-slate-200 px-3 py-1.5 font-semibold">STL correcto</td><td class="border border-slate-200 px-3 py-1.5">El archivo abre bien en Cura y la forma es la deseada.</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5 font-semibold">Laminado correcto</td><td class="border border-slate-200 px-3 py-1.5">Relleno y soportes adecuados; se explica por qué.</td></tr>
+              <tr><td class="border border-slate-200 px-3 py-1.5 font-semibold">Normas de seguridad</td><td class="border border-slate-200 px-3 py-1.5">Se respeta todo lo de la impresora; turnos ordenados.</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5 font-semibold">Presentación</td><td class="border border-slate-200 px-3 py-1.5">Se usa el vocabulario técnico; 3 minutos por pareja.</td></tr>
+            </tbody>
+          </table>
         </div>
 
         <div class="actividad">
           <h4 class="font-semibold text-brand-700 mb-1">Entrega</h4>
-          <p>El huerto vertical se expondrá en el centro con una <strong>presentación breve (5 minutos)</strong> explicando: materiales empleados y por qué se eligieron, técnicas de fabricación aplicadas, y resultados del crecimiento de las plantas.</p>
+          <p>Entregad una <strong>foto de vuestra pieza impresa</strong> (junto a una regla para ver el tamaño) y presentadla en clase. Al final, contestad por escrito: <em>¿qué cambiaríais del diseño? ¿Cuánto tiempo tardó en imprimirse y cuánto se va a usar?</em></p>
+        </div>
+
+        <div class="callout callout-nota">
+          <strong>Reflexión final de la unidad</strong>
+          <p class="mt-1">Has pasado de los plásticos del petróleo a diseñar y fabricar tu propia pieza. ¿En qué se parecen y en qué se diferencian la impresión 3D y las técnicas industriales del contenido 4 (inyección, soplado…)? Escribe 4-5 líneas.</p>
         </div>
       </div>
     </article>
