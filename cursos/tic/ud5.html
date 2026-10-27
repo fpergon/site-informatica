@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UD5 · Arquitectura de ordenadores y sistemas operativos · TIC I</title>
-  <meta name="description" content="Unidad Didáctica 5 de TIC I: Hardware y software, sistemas propietarios y libres, arquitectura clásica, ley de Moore, CPU, memoria, almacenamiento, periféricos, buses de comunicación, sistemas operativos, gestión de procesos/archivos/usuarios/dispositivos, instalación y configuración." />
+  <title>UD5 · Bases de datos · TIC I</title>
+  <meta name="description" content="Unidad Didáctica 5 de TIC I: Sistemas gestores de bases de datos relacionales, tablas/registros/campos, tipos de datos, claves y relaciones, SQL (DDL/DML), consultas con JOIN/WHERE/GROUP BY, vistas, informes, formularios, exportación/importación." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -33,13 +33,12 @@
         <span>·</span>
         <span>2.º Trimestre</span>
         <span>·</span>
-        <span>Bloque B</span>
+        <span>Bloque C</span>
       </div>
-      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD5 · Arquitectura de ordenadores y sistemas operativos</h1>
-      <p class="mt-3 text-brand-50/90">Comprender la arquitectura de los sistemas informáticos: hardware y software, sistemas propietarios y libres, la arquitectura clásica de von Neumann, la ley de Moore, los componentes principales (CPU, memoria, almacenamiento), periféricos, buses de comunicación, y el funcionamiento de los sistemas operativos.</p>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD5 · Bases de datos</h1>
+      <p class="mt-3 text-brand-50/90">Comprender el modelo relacional de bases de datos: diseño de tablas, tipos de datos, claves primarias y foráneas, relaciones entre tablas, lenguaje SQL para consulta y manipulación de datos, vistas, informes, formularios, y exportación de datos entre sistemas.</p>
       <div class="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
-        <span class="rounded-full bg-white/20 px-3 py-1">TICO.1.D.1. Programación de computadores.</span>
-        <span class="rounded-full bg-white/20 px-3 py-1">TICO.1.D.2. Lenguajes de programación.</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TICO.1.C.4. Bases de datos.</span>
       </div>
     </section>
 
@@ -52,92 +51,98 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Hardware y software. Sistemas propietarios y libres. Clasificaciones</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Sistemas gestores de bases de datos relacionales. Qué es un SGBD. Modelo relacional</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Nota didáctica</strong>
-            Esta sesión inicial sitúa las bases conceptuales de la unidad: la distinción entre hardware y software, y la diferencia entre sistemas propietarios y libres. Estos conceptos son fundamentales para entender el resto de la unidad.
+            Esta sesión inicial establece las bases conceptuales del modelo relacional. Es fundamental que el alumnado comprenda qué es un SGBD, por qué se usa el modelo relacional y cuáles son sus ventajas antes de manipular datos.
           </div>
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Todo sistema informático se compone de dos partes fundamentales: el hardware (componentes físicos) y el software (programas que los hacen funcionar). En esta sesión exploraremos ambas dimensiones y conoceremos las diferentes filosofías de desarrollo de software.</p>
+            <p>Las bases de datos están en todas partes: desde los registros médicos de un hospital hasta el catálogo de productos de una tienda online. En esta sesión aprenderemos qué son las bases de datos, por qué son importantes y cómo funciona el modelo relacional, el más utilizado en el mundo.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Hardware vs. Software</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una base de datos?</h4>
+            <p>Una <strong>base de datos (BD)</strong> es un conjunto organizado de datos estructurados que se almacenan electrónicamente para facilitar su acceso, gestión y actualización. No es simplemente una lista de datos, sino una estructura diseñada para responder preguntas de forma eficiente.</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Hardware:</strong> Componentes físicos y tangibles del ordenador. Se puede tocar: placa base, procesador, memoria RAM, disco duro, monitor, teclado, ratón.</li>
-              <li><strong>Software:</strong> Conjunto de programas e instrucciones que permiten realizar tareas. Es intangible: sistemas operativos, aplicaciones, controladores, utilidades.</li>
+              <li><strong>Datos:</strong> Hechos brutos (nombres, números, fechas).</li>
+              <li><strong>Información:</strong> Datos procesados y organizados con sentido.</li>
+              <li><strong>Conocimiento:</strong> Información interpretada para la toma de decisiones.</li>
             </ul>
-            <p class="mt-2"><strong>Relación:</strong> El hardware sin software es inútil (un teléfono sin sistema operativo no sirve). El software sin hardware es imposible ejecutarse (un juego necesita un ordenador para funcionar).</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Clasificación del hardware</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un SGBD?</h4>
+            <p>Un <strong>Sistema Gestor de Bases de Datos (SGBD)</strong> es el software que permite crear, administrar y manipular bases de datos. Actúa como intermediario entre el usuario y los datos almacenados:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Unidad Central de Procesamiento (CPU):</strong> El "cerebro" del ordenador. Procesa instrucciones y ejecuta cálculos.</li>
-              <li><strong>Memoria:</strong> Almacena datos temporalmente (RAM) o permanentemente (ROM, disco).</li>
-              <li><strong>Almacenamiento:</strong> Disco duro (HDD), unidad de estado sólido (SSD), tarjetas SD, discos externos.</li>
-              <li><strong>Periféricos:</strong> Dispositivos de entrada (teclado, ratón, micrófono) y salida (monitor, altavoces, impresora).</li>
-              <li><strong>Placa base:</strong> Componente que conecta todos los demás elementos.</li>
-              <li><strong>Fuente de alimentación:</strong> Proporciona energía eléctrica al sistema.</li>
+              <li><strong>Crear:</strong> Definir la estructura de la base de datos (tablas, campos, tipos de datos).</li>
+              <li><strong>Manipular:</strong> Insertar, modificar, eliminar y consultar datos.</li>
+              <li><strong>Gestionar:</strong> Controlar acceso, seguridad, integridad y recuperación.</li>
+            </ul>
+            <p class="mt-2"><strong>SGBD relacionales más utilizados:</strong> MySQL, PostgreSQL, Microsoft SQL Server, Oracle, SQLite.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">El modelo relacional</h4>
+            <p>El modelo relacional organiza los datos en <strong>tablas</strong> (también llamadas relaciones). Cada tabla tiene:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Nombre:</strong> Identifica la tabla (ej: Alumnos, Pedidos).</li>
+              <li><strong>Campos (columnas):</strong> Cada columna representa un tipo de dato (nombre, apellido, fecha_nacimiento).</li>
+              <li><strong>Registros (filas):</strong> Cada fila representa un elemento concreto (un alumno, un pedido).</li>
+              <li><strong>Clave primaria:</strong> Campo que identifica de forma única cada registro.</li>
             </ul>
           </div>
 
           <div class="callout callout-nota">
-            <strong>Clasificación por tamaño</strong>
-            <strong>Supercomputadoras:</strong> Miles de procesadores, cálculos científicos. <strong>Mainframes:</strong> Empresas grandes, alta capacidad de procesamiento. <strong>Minicomputadoras:</strong> Servidores medianos. <strong>Microcomputadoras:</strong> PC, portátiles, tablets. <strong>Smartphones:</strong> Dispositivos móviles.
+            <strong>Ejemplo cotidiano</strong>
+            Una tabla de "Contactos" del teléfono móvil es una base de datos simple: cada contacto es un registro, y campos como "Nombre", "Teléfono" y "Email" son las columnas.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Software propietario vs. software libre</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Ventajas del modelo relacional</h4>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Software propietario:</strong> Código fuente cerrado. No se puede copiar, modificar ni redistribuir. Licencia de uso. Ejemplos: Windows, macOS, Microsoft Office.</li>
-              <li><strong>Software libre (free software):</strong> Código fuente abierto. Cualquiera puede usar, estudiar, modificar y distribuir. Licencias como GPL, MIT, Apache. Ejemplos: Linux, LibreOffice, GIMP, Firefox.</li>
-              <li><strong>Software freeware:</strong> Gratuito pero con código cerrado. No se puede modificar. Ejemplos: Skype, Adobe Reader.</li>
-              <li><strong>Software shareware:</strong> Versión de prueba gratuita con limitaciones. Hay que pagar para desbloquear todas las funciones.</li>
+              <li><strong>Integridad:</strong> Los datos son consistentes y fiables.</li>
+              <li><strong>Redundancia mínima:</strong> Los datos se almacenan una sola vez.</li>
+              <li><strong>Flexibilidad:</strong> Se pueden hacer consultas complejas entre tablas.</li>
+              <li><strong>Seguridad:</strong> Control granular de acceso a datos.</li>
+              <li><strong>Independencia:</strong> La estructura de la BD es independiente de las aplicaciones que la usan.</li>
             </ul>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Las 4 libertades del software libre</strong>
-            1. Libertad de usar el programa con cualquier propósito. 2. Libertad de estudiar cómo funciona y modificarlo. 3. Libertad de redistribuir copias. 4. Libertad de distribuir copias de versiones modificadas.
-          </div>
-
-          <div class="actividad">
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Realizar una auditoría del ordenador o dispositivo que estás usando: identificar al menos 10 componentes de hardware y 5 programas de software. Clasificar cada programa como propietario, libre o freeware.
-            </p>
+            <strong>Actividad exploratoria</strong>
+            Abrir SQLite Online (sqliteonline.com) y familiarizarse con la interfaz. Crear una tabla de prueba con 3 campos (id, nombre, email) e insertar 3 registros con INSERT.
           </div>
 
           <!-- QUIZ SESIÓN 1 -->
-          <div class="quiz" data-correcta="a" data-total="3">
+          <div class="quiz" data-correcta="b" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué es el hardware?</p>
-            <button class="quiz-opcion" data-valor="a">A. Componentes físicos y tangibles del ordenador.</button>
-            <button class="quiz-opcion" data-valor="b">B. Los programas que se ejecutan en el ordenador.</button>
-            <button class="quiz-opcion" data-valor="c">C. La conexión a Internet del dispositivo.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es un SGBD?</p>
+            <button class="quiz-opcion" data-valor="a">A. Un tipo de base de datos.</button>
+            <button class="quiz-opcion" data-valor="b">B. Un software que permite crear y gestionar bases de datos.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un lenguaje de programación.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
-          <div class="quiz" data-correcta="b" data-total="3">
+          <div class="quiz" data-correcta="a" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué libertad NO permite el software libre?</p>
-            <button class="quiz-opcion" data-valor="a">A. Usar el programa con cualquier propósito.</button>
-            <button class="quiz-opcion" data-valor="b">B. Vender el código fuente como producto propio.</button>
-            <button class="quiz-opcion" data-valor="c">C. Modificar y redistribute el código.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué identifica de forma única cada registro en una tabla?</p>
+            <button class="quiz-opcion" data-valor="a">A. La clave primaria</button>
+            <button class="quiz-opcion" data-valor="b">B. La clave foránea</button>
+            <button class="quiz-opcion" data-valor="c">C. El nombre del campo</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-aviso">
             <strong>Actividad de evaluación</strong>
-            Crear una tabla comparativa entre 3 sistemas operativos (Windows, macOS, Linux) incluyendo: precio, tipo de software, interfaz, hardware compatible, ventajas e inconvenientes.
+            Diseñar en papel una base de datos para un biblioteca escolar: identificar las tablas necesarias, los campos de cada tabla y la clave primaria de cada una.
           </div>
         </div>
       </article>
@@ -148,100 +153,99 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Arquitectura clásica. CPU, UAL, UC. Ley de Moore</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Tablas, registros y campos. Tipos de datos. Estructura de una BD</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>La arquitectura de von Neumann es el diseño fundamental de los ordenadores modernos. Todos los sistemas informáticos actuales, desde un smartphone hasta un supercomputador, se basan en esta arquitectura. En esta sesión estudiaremos sus componentes principales y la ley que ha impulsado su evolución.</p>
+            <p>En esta sesión profundizaremos en la estructura de una base de datos relacional: cómo se diseñan las tablas, qué tipos de datos existen y cómo se organizan los registros para garantizar la integridad y eficiencia de los datos.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Arquitectura de von Neumann</h4>
-            <p>Propuesta por John von Neumann en 1945, establece que un ordenador se compone de:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructura de una tabla</h4>
+            <p>Cada tabla relacional debe seguir estas reglas:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Unidad Central de Procesamiento (CPU):</strong> Procesa las instrucciones.</li>
-              <li><strong>Memoria:</strong> Almacena datos e instrucciones.</li>
-              <li><strong>Entrada/Salida:</strong> Dispositivos para interactuar con el exterior.</li>
-              <li><strong>Bus de datos:</strong> Canal por el que fluyen los datos entre componentes.</li>
+              <li><strong>Cada tabla tiene un nombre único</strong> dentro de la base de datos.</li>
+              <li><strong>Cada campo tiene un tipo de datos</strong> que define qué información puede contener.</li>
+              <li><strong>Cada registro es único</strong> (garantizado por la clave primaria).</li>
+              <li><strong>Los valores de una columna son del mismo tipo</strong> (no mezclar texto y números en la misma columna).</li>
+              <li><strong>El orden de filas y columnas no importa</strong> (la estructura es lógica, no física).</li>
             </ul>
-            <p class="mt-2"><strong>Principio clave:</strong> Programas y datos se almacenan en la misma memoria. La CPU lee instrucciones de memoria, las decodifica y las ejecuta secuencialmente.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de datos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>INTEGER (INT):</strong> Números enteros. Para IDs, cantidades, edades.</li>
+              <li><strong>FLOAT / DOUBLE:</strong> Números con decimales. Para precios, pesos, medidas.</li>
+              <li><strong>VARCHAR(n):</strong> Texto variable de hasta n caracteres. Para nombres, emails, descripciones.</li>
+              <li><strong>TEXT:</strong> Texto largo sin límite de caracteres. Para comentarios, biografías.</li>
+              <li><strong>DATE:</strong> Fechas en formato YYYY-MM-DD.</li>
+              <li><strong>DATETIME / TIMESTAMP:</strong> Fecha y hora.</li>
+              <li><strong>BOOLEAN (BOOL):</strong> Verdadero o falo (0 o 1).</li>
+              <li><strong>DECIMAL(p,s):</strong> Números con precisión exacta (para dinero).</li>
+            </ul>
           </div>
 
           <div class="callout callout-nota">
-            <strong>Diagrama simplificado</strong>
-            Memoria ←→ CPU (UAL + UC) ←→ E/S. La CPU se comunica con la memoria a través del bus de direcciones y datos, y con los dispositivos de entrada/salida a través del bus de control.
+            <strong>Elección del tipo de datos</strong>
+            Usa el tipo más apropiado para cada campo: no uses VARCHAR para números, no uses INTEGER para fechas. Una buena elección de tipos ahorra espacio y mejora la eficiencia de las consultas.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Componentes de la CPU</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Restricciones</h4>
+            <p>Las restricciones garantizan la integridad de los datos:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Unidad de Control (UC):</strong> Lee, decodifica y coordina la ejecución de instrucciones. Dirige el flujo de datos entre la CPU, la memoria y los dispositivos.</li>
-              <li><strong>Unidad Aritmético-Lógica (UAL):</strong> Realiza operaciones aritméticas (suma, resta, multiplicación) y lógicas (AND, OR, comparaciones).</li>
-              <li><strong>Registros:</strong> Pequeñas memorias ultra-rápidas dentro de la CPU para almacenar datos temporales.</li>
-              <li><strong>Caché:</strong> Memoria de alta velocidad que almacena datos frecuentemente usados para acelerar el acceso.</li>
+              <li><strong>PRIMARY KEY:</strong> Clave primaria. Identifica cada registro de forma única. No puede ser NULL ni duplicada.</li>
+              <li><strong>NOT NULL:</strong> El campo no puede estar vacío.</li>
+              <li><strong>UNIQUE:</strong> Todos los valores del campo deben ser diferentes.</li>
+              <li><strong>DEFAULT(valor):</strong> Si no se proporciona un valor, se usa el predeterminado.</li>
+              <li><strong>CHECK(condición):</strong> El valor debe cumplir una condición específica.</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">El ciclo de ejecución</h4>
-            <p>Cada instrucción sigue este ciclo:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Diseño de una base de datos</h4>
+            <p>El proceso de diseño sigue estos pasos:</p>
             <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li><strong>Fetch (Obtener):</strong> La UC lee la siguiente instrucción de la memoria.</li>
-              <li><strong>Decode (Decodificar):</strong> La UC interpreta qué operación debe realizarse.</li>
-              <li><strong>Execute (Ejecutar):</strong> La UAL ejecuta la operación (cálculo, comparación).</li>
-              <li><strong>Store (Almacenar):</strong> El resultado se guarda en un registro o en la memoria.</li>
+              <li><strong>Identificar entidades:</strong> ¿Qué objetos del mundo real necesitamos representar? (Alumnos, Asignaturas, Profesores).</li>
+              <li><strong>Identificar atributos:</strong> ¿Qué información guardamos de cada entidad? (nombre, email, fecha_nacimiento).</li>
+              <li><strong>Definir claves primarias:</strong> ¿Qué campo identifica de forma única cada registro? (id_alumno, id_asignatura).</li>
+              <li><strong>Establecer relaciones:</strong> ¿Cómo se conectan las entidades entre sí?</li>
             </ol>
           </div>
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Ley de Moore</h4>
-            <p>Enunciada por Gordon Moore en 1965, establece que <strong>el número de transistores en un microprocesador se duplica aproximadamente cada 2 años</strong>, lo que implica un aumento exponencial de la potencia de cálculo:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>1971 (Intel 4004):</strong> 2.300 transistores.</li>
-              <li><strong>1990 (Intel 486):</strong> 1,2 millones de transistores.</li>
-              <li><strong>2000 (Pentium 4):</strong> 42 millones de transistores.</li>
-              <li><strong>2020 (Apple M1):</strong> 16.000 millones de transistores.</li>
-              <li><strong>2024:</strong> Los procesadores más avanzados superan los 100.000 millones de transistores.</li>
-            </ul>
-          </div>
-
-          <div class="callout callout-peligro">
-            <strong>Límites de la ley de Moore</strong>
-            La ley de Moore no es una ley física, sino una observación empírica. Se ha mantenido durante décadas, pero ahora enfrenta límites físicos: el tamaño de los transistores se acerca al límite atómico, y el calor generado es cada vez más difícil de disipar.
-          </div>
-
-          <div class="actividad">
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Investigar y comparar las especificaciones de un procesador moderno (Intel Core i7, Apple M3 o AMD Ryzen 9): número de núcleos, frecuencia, tamaño del chip, número de transistores, consumo energético y rendimiento en benchmarks.</p>
+          <div class="callout callout-consejo">
+            <strong>Actividad práctica</strong>
+            Crear en SQLite Online una tabla "Alumnos" con campos: id (INTEGER PRIMARY KEY), nombre (VARCHAR 50), apellido1 (VARCHAR 50), apellido2 (VARCHAR 50), fecha_nacimiento (DATE), email (VARCHAR 100). Insertar al menos 5 registros.
           </div>
 
           <!-- QUIZ SESIÓN 2 -->
-          <div class="quiz" data-correcta="b" data-total="3">
+          <div class="quiz" data-correcta="c" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué componente de la CPU realiza las operaciones aritméticas y lógicas?</p>
-            <button class="quiz-opcion" data-valor="a">A. Unidad de Control (UC)</button>
-            <button class="quiz-opcion" data-valor="b">B. Unidad Aritmético-Lógica (UAL)</button>
-            <button class="quiz-opcion" data-valor="c">C. Registros</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de datos se usaría para almacenar el precio de un producto?</p>
+            <button class="quiz-opcion" data-valor="a">A. INTEGER</button>
+            <button class="quiz-opcion" data-valor="b">B. VARCHAR</button>
+            <button class="quiz-opcion" data-valor="c">C. DECIMAL</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
-          <div class="quiz" data-correcta="c" data-total="3">
+          <div class="quiz" data-correcta="b" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué establece la ley de Moore?</p>
-            <button class="quiz-opcion" data-valor="a">A. La velocidad de Internet se duplica cada año.</button>
-            <button class="quiz-opcion" data-valor="b">B. El almacenamiento se reduce a la mitad cada 5 años.</button>
-            <button class="quiz-opcion" data-valor="c">C. El número de transistores en un chip se duplica aproximadamente cada 2 años.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué restricción impide que un campo esté vacío?</p>
+            <button class="quiz-opcion" data-valor="a">A. UNIQUE</button>
+            <button class="quiz-opcion" data-valor="b">B. NOT NULL</button>
+            <button class="quiz-opcion" data-valor="c">C. DEFAULT</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-aviso">
             <strong>Actividad de evaluación</strong>
-            Dibujar el esquema de la arquitectura de von Neumann e identificar cada componente con un ejemplo concreto de un ordenador moderno.
+            Diseñar y crear en SQLite una tabla "Productos" con al menos 6 campos de diferentes tipos de datos, incluyendo PRIMARY KEY, NOT NULL y DEFAULT.
           </div>
         </div>
       </article>
@@ -252,100 +256,95 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Memoria y almacenamiento. Memoria principal, almacenamiento secundario. Estructura física y lógica</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Claves y relaciones. Clave primaria, clave foránea. Relaciones 1:N y N:M</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>La memoria y el almacenamiento son componentes esenciales de cualquier sistema informático. Aunque a menudo se confunden, son conceptos muy diferentes en cuanto a velocidad, capacidad y función. En esta sesión estudiaremos las diferencias y el funcionamiento de cada tipo.</p>
+            <p>La verdadera potencia de las bases de datos relacionales reside en la capacidad de conectar tablas entre sí mediante claves. En esta sesión estudiaremos los tipos de claves, las relaciones entre tablas y cómo se implementan en el modelo relacional.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Memoria principal (RAM)</h4>
-            <p>La <strong>RAM (Random Access Memory)</strong> es la memoria de trabajo del ordenador. Almacena temporalmente los datos e instrucciones que la CPU está utilizando activamente:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Tipos de claves</h4>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Volátil:</strong> Se borra al apagar el ordenador.</li>
-              <li><strong>Rápida:</strong> Tiempo de acceso de nanosegundos.</li>
-              <li><strong>Capacidad:</strong> Los ordenadores actuales tienen entre 8 GB y 64 GB.</li>
-              <li><strong>Tipos:</strong> DDR4 (actual), DDR5 (nueva generación), GDDR (para tarjetas gráficas).</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Memoria ROM</h4>
-            <p>La <strong>ROM (Read-Only Memory)</strong> almacena datos permanentes que no se pueden modificar:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>No volátil:</strong> Mantiene los datos sin energía.</li>
-              <li><strong>Contiene:</strong> El firmware (BIOS/UEFI) que inicia el ordenador.</li>
-              <li><strong>Tipos:</strong> PROM, EPROM, EEPROM, Flash ROM.</li>
+              <li><strong>Clave primaria (PK):</strong> Campo (o combinación de campos) que identifica de forma única cada registro. Ejemplo: id_alumno en la tabla Alumnos.</li>
+              <li><strong>Clave foránea (FK):</strong> Campo en una tabla que hace referencia a la clave primaria de otra tabla. Establece la relación entre ambas. Ejemplo: id_alumno en la tabla Matriculas.</li>
+              <li><strong>Clave candidata:</strong> Campo que podría ser clave primaria (tiene UNIQUE y NOT NULL).</li>
+              <li><strong>Clave compuesta:</strong> Combinación de dos o más campos que forman la clave primaria.</li>
             </ul>
           </div>
 
           <div class="callout callout-nota">
-            <strong>RAM vs. Almacenamiento</strong>
-            La RAM es como la memoria a corto plazo del cerebro: rápida pero temporal. El almacenamiento es como la memoria a largo plazo: más lento pero permanente. Un programa se carga del disco a la RAM para ejecutarse.
+            <strong>Regla fundamental</strong>
+            La clave primaria nunca puede ser NULL y debe ser única. La clave foránea debe coincidir con un valor existente en la tabla referenciada (integridad referencial) o ser NULL.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Almacenamiento secundario</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Relaciones 1:N (Uno a Muchos)</h4>
+            <p>Es el tipo de relación más común. Un registro de la tabla A se relaciona con varios registros de la tabla B:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>HDD (Hard Disk Drive):</strong> Disco mecánico con platos giratorios y cabezales de lectura/escritura. Alta capacidad (hasta 20 TB), bajo coste, más lento.</li>
-              <li><strong>SSD (Solid State Drive):</strong> Almacenamiento electrónico sin partes móviles. Mucho más rápido, silencioso, resistente a golpes. Menor capacidad por euro.</li>
-              <li><strong>NVMe:</strong> SSD de alta velocidad que se conecta directamente al bus PCIe. Velocidades de lectura/escritura de hasta 7.000 MB/s.</li>
-              <li><strong>Almacenamiento externo:</strong> Discos portátiles USB, tarjetas SD, memorias USB.</li>
-              <li><strong>Almacenamiento en la nube:</strong> Google Drive, OneDrive, Dropbox. Acceso desde cualquier dispositivo.</li>
+              <li><strong>Un profesor imparte varias asignaturas.</strong> La clave foránea va en la tabla "Muchos" (Asignaturas).</li>
+              <li><strong>Un cliente realiza varios pedidos.</strong> FK id_cliente en la tabla Pedidos.</li>
+              <li><strong>Un departamento tiene varios empleados.</strong> FK id_departamento en la tabla Empleados.</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Jerarquía de memoria</h4>
-            <p>Los sistemas informáticos organizan la memoria en una jerarquía de velocidad y capacidad:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li><strong>Registros de la CPU:</strong> La más rápida y pequeña.</li>
-              <li><strong>Caché L1/L2/L3:</strong> Memoria ultra-rápida dentro de la CPU.</li>
-              <li><strong>RAM:</strong> Memoria principal, rápida pero volátil.</li>
-              <li><strong>SSD/NVMe:</strong> Almacenamiento rápido, no volátil.</li>
-              <li><strong>HDD:</strong> Almacenamiento lento pero de gran capacidad.</li>
-              <li><strong>Nube:</strong> Acceso remoto, velocidad depende de la conexión.</li>
-            </ol>
+            <h4 class="font-semibold text-brand-700 mb-1">Relaciones N:M (Muchos a Muchos)</h4>
+            <p>Un registro de la tabla A se relaciona con varios de B, y viceversa. Se resuelve con una <strong>tabla intermedia</strong> (también llamada tabla de unión o asociación):</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Alumnos se matriculan en varias Asignaturas</strong> (y cada Asignatura tiene varios Alumnos). Tabla intermedia: Matriculas con FK id_alumno y FK id_asignatura.</li>
+              <li><strong>Productos se incluyen en varios Pedidos</strong> (y cada Pedido tiene varios Productos). Tabla intermedia: DetallePedido.</li>
+            </ul>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Consejo práctico</strong>
-            Si tu ordenador va lento, la primera mejora más efectiva es cambiar un HDD por un SSD. El tiempo de arranque y la aplicación de programas mejora drásticamente.
+            <strong>Diagrama de ejemplo</strong>
+            Para una BD de biblioteca: Libros (1) → (N) Prestamos ← (N) Socios. La tabla Prestamos tiene FK id_libro y FK id_socio, resolviendo la relación N:M entre Libros y Socios.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Integridad referencial</h4>
+            <p>La integridad referencial garantiza que las relaciones entre tablas sean válidas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>RESTRICT:</strong> Impide eliminar un registro si tiene registros dependientes.</li>
+              <li><strong>CASCADE:</strong> Al eliminar un registro, elimina también los dependientes.</li>
+              <li><strong>SET NULL:</strong> Al eliminar un registro, pone a NULL las FK dependientes.</li>
+              <li><strong>SET DEFAULT:</strong> Al eliminar, asigna un valor predeterminado a las FK.</li>
+            </ul>
           </div>
 
           <div class="actividad">
             <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Investigar las especificaciones de tu ordenador: capacidad de RAM, tipo de SSD/HDD, y comparar los tiempos de lectura/escritura de ambos. Explicar por qué un SSD es más rápido que un HDD.</p>
+            <p>Crear en SQLite las tablas "Alumnos" y "Asignaturas" con una tabla intermedia "Matriculas" que establezca la relación N:M. Insertar datos y verificar que la integridad referencial funciona correctamente.</p>
           </div>
 
           <!-- QUIZ SESIÓN 3 -->
-          <div class="quiz" data-correcta="a" data-total="3">
+          <div class="quiz" data-correcta="b" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de memoria se borra al apagar el ordenador?</p>
-            <button class="quiz-opcion" data-valor="a">A. RAM</button>
-            <button class="quiz-opcion" data-valor="b">B. ROM</button>
-            <button class="quiz-opcion" data-valor="c">C. SSD</button>
+            <p class="font-semibold text-slate-700 mb-2">¿En qué tabla se coloca la clave foránea en una relación 1:N?</p>
+            <button class="quiz-opcion" data-valor="a">A. En la tabla "Uno".</button>
+            <button class="quiz-opcion" data-valor="b">B. En la tabla "Muchos".</button>
+            <button class="quiz-opcion" data-valor="c">C. En ambas tablas.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
-          <div class="quiz" data-correcta="b" data-total="3">
+          <div class="quiz" data-correcta="c" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué almacenamiento es más rápido, un HDD o un SSD?</p>
-            <button class="quiz-opcion" data-valor="a">A. HDD</button>
-            <button class="quiz-opcion" data-valor="b">B. SSD</button>
-            <button class="quiz-opcion" data-valor="c">C. Ambos tienen la misma velocidad.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Cómo se resuelve una relación N:M entre dos tablas?</p>
+            <button class="quiz-opcion" data-valor="a">A. Añadiendo una FK en una de las tablas.</button>
+            <button class="quiz-opcion" data-valor="b">B. Creando una vista.</button>
+            <button class="quiz-opcion" data-valor="c">C. Creando una tabla intermedia con FKs a ambas tablas.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-aviso">
             <strong>Actividad de evaluación</strong>
-            Comparar las especificaciones de 3 ordenadores diferentes (un portátil económico, uno de gama media y uno de gama alta) en cuanto a RAM, tipo de almacenamiento, capacidad y precio.
+            Diseñar un diagrama entité-relación para una base de datos de tienda online con al menos 4 tablas y 2 relaciones. Implementarlo en SQLite.
           </div>
         </div>
       </article>
@@ -356,95 +355,128 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Sistemas de entrada/salida. Periféricos. Clasificación. Periféricos de nueva generación</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Lenguaje SQL. Sentencias DDL y DML. SELECT, INSERT, UPDATE, DELETE</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Los periféricos son los dispositivos que permiten la interacción entre el usuario y el ordenador. Sin ellos, sería imposible introducir datos o visualizar resultados. En esta sesión estudiaremos su clasificación, funcionamiento y los dispositivos más innovadores.</p>
+            <p>SQL (Structured Query Language) es el lenguaje estándar para interactuar con bases de datos relacionales. Permite crear estructuras, insertar datos, modificar registros y realizar consultas complejas. En esta sesión aprenderemos las sentencias fundamentales de SQL.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Periféricos de entrada</h4>
-            <p>Envían datos al ordenador:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Sentencias DDL (Data Definition Language)</h4>
+            <p>DDL se utiliza para definir y modificar la estructura de la base de datos:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Teclado:</strong> Dispositivo de entrada alfanumérico más utilizado.</li>
-              <li><strong>Ratón/Touchpad:</strong> Dispositivo apuntador para seleccionar y manipular elementos en pantalla.</li>
-              <li><strong>Micrófono:</strong> Captura de audio para voz, música, videollamadas.</li>
-              <li><strong>Cámara web:</strong> Captura de vídeo en tiempo real.</li>
-              <li><strong>Escáner:</strong> Digitaliza documentos e imágenes impresas.</li>
-              <li><strong>Lector de código de barras:</strong> Lee códigos de productos.</li>
-              <li><strong>Teclado Braille:</strong> Permite a personas ciegas escribir texto.</li>
+              <li><strong>CREATE TABLE:</strong> Crea una nueva tabla.</li>
+              <li><strong>ALTER TABLE:</strong> Modifica la estructura de una tabla existente.</li>
+              <li><strong>DROP TABLE:</strong> Elimina una tabla completamente.</li>
+              <li><strong>CREATE INDEX:</strong> Crea un índice para búsquedas rápidas.</li>
+            </ul>
+            <p class="mt-2"><strong>Ejemplo CREATE TABLE:</strong></p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">CREATE TABLE Alumnos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nombre VARCHAR(50) NOT NULL,
+  apellido VARCHAR(50) NOT NULL,
+  email VARCHAR(100) UNIQUE,
+  fecha_nac DATE
+);</pre>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Sentencias DML (Data Manipulation Language)</h4>
+            <p>DML se utiliza para manipular los datos dentro de las tablas:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>SELECT:</strong> Consulta y recupera datos.</li>
+              <li><strong>INSERT INTO:</strong> Añade nuevos registros.</li>
+              <li><strong>UPDATE:</strong> Modifica registros existentes.</li>
+              <li><strong>DELETE:</strong> Elimina registros.</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Periféricos de salida</h4>
-            <p>Reciben datos del ordenador:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Monitor:</strong> Dispositivo de visualización principal.</li>
-              <li><strong>Impresora:</strong> Imprime documentos en papel.</li>
-              <li><strong>Altavoces/Auriculares:</strong> Reproducen audio.</li>
-              <li><strong>Proyector:</strong> Proyecta la imagen en una pantalla grande.</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">INSERT INTO</h4>
+            <p>Para insertar datos en una tabla:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">INSERT INTO Alumnos (nombre, apellido, email, fecha_nac)
+VALUES ('Ana', 'García', 'ana@email.com', '2005-03-15');
+
+INSERT INTO Alumnos (nombre, apellido, email, fecha_nac)
+VALUES
+  ('Carlos', 'López', 'carlos@email.com', '2004-11-20'),
+  ('María', 'Martínez', 'maria@email.com', '2005-07-08');</pre>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Periféricos de entrada/salida (E/S)</h4>
-            <p>Combinan ambas funciones:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Monitor táctil (touchscreen):</strong> Muestra información y permite interactuar tocando la pantalla.</li>
-              <li><strong>Memoria USB:</strong> Almacena datos y permite su transferencia.</li>
-              <li><strong>Tarjeta de red:</strong> Envía y recibe datos a través de la red.</li>
-              <li><strong>Adaptador Bluetooth:</strong> Comunicación inalámbrica bidireccional.</li>
-              <li><strong>Consola de videojuegos:</strong> Recibe input del mando y genera output de vídeo/audio.</li>
-            </ul>
-          </div>
+            <h4 class="font-semibold text-brand-700 mb-1">SELECT (consultas básicas)</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">-- Seleccionar todos los campos
+SELECT * FROM Alumnos;
 
-          <div class="callout callout-nota">
-            <strong>Periféricos de nueva generación</strong>
-            <strong>Sensores biométricos:</strong> Reconocimiento de huella dactilar, facial o de iris. <strong>Dispositivos de realidad virtual:</strong> Gafas VR con seguimiento de movimiento. <strong>Dispositivos de realidad aumentada:</strong> Lentes AR que superponen información digital. <strong>Wearables:</strong> Smartwatches, pulseras de actividad. <strong>Drones:</strong> Vehículos aéreos no tripulados con cámaras.
+-- Seleccionar campos específicos
+SELECT nombre, apellido FROM Alumnos;
+
+-- Con condición WHERE
+SELECT * FROM Alumnos WHERE fecha_nac > '2005-01-01';
+
+-- Ordenar resultados
+SELECT * FROM Alumnos ORDER BY apellido ASC;
+
+-- Limitar resultados
+SELECT * FROM Alumnos LIMIT 5;</pre>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Clasificación por conexión</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Cableados:</strong> USB, HDMI, DisplayPort, Thunderbolt, Ethernet.</li>
-              <li><strong>Inalámbricos:</strong> Bluetooth, Wi-Fi, NFC, Infrarrojos, Radiofrecuencia.</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">UPDATE y DELETE</h4>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">-- Actualizar un registro
+UPDATE Alumnos
+SET email = 'ana.nuevo@email.com'
+WHERE id = 1;
+
+-- Eliminar un registro
+DELETE FROM Alumnos WHERE id = 3;</pre>
           </div>
 
-          <div class="callout callout-consejo">
-            <strong>Actividad exploratoria</strong>
-            Hacer un inventario de todos los periféricos conectados a tu ordenador o dispositivo móvil. Clasificar cada uno como de entrada, salida o E/S, e identificar si es cableado o inalámbrico.
+          <div class="callout callout-peligro">
+            <strong>Cuidado con DELETE</strong>
+            Sin una cláusula WHERE, DELETE elimina TODOS los registros de la tabla. Siempre incluye WHERE a menos que quieras vaciar la tabla completamente.
+          </div>
+
+          <div class="actividad">
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Crear una tabla "Libros" con campos id, titulo, autor, genero, anio_publicacion, precio. Insertar al menos 8 libros y realizar las siguientes consultas:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Mostrar todos los libros.</li>
+              <li>Mostrar solo los libros de un género específico.</li>
+              <li>Mostrar los libros ordenados por año de publicación.</li>
+              <li>Actualizar el precio de un libro.</li>
+              <li>Eliminar un libro específico.</li>
+            </ol>
           </div>
 
           <!-- QUIZ SESIÓN 4 -->
-          <div class="quiz" data-correcta="c" data-total="3">
+          <div class="quiz" data-correcta="a" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué periférico permite tanto entrada como salida de datos?</p>
-            <button class="quiz-opcion" data-valor="a">A. Impresora</button>
-            <button class="quiz-opcion" data-valor="b">B. Teclado</button>
-            <button class="quiz-opcion" data-valor="c">C. Monitor táctil</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué sentencia SQL se usa para añadir datos a una tabla?</p>
+            <button class="quiz-opcion" data-valor="a">A. INSERT INTO</button>
+            <button class="quiz-opcion" data-valor="b">B. SELECT</button>
+            <button class="quiz-opcion" data-valor="c">C. UPDATE</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
-          <div class="quiz" data-correcta="a" data-total="3">
+          <div class="quiz" data-correcta="c" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de conexión es el Bluetooth?</p>
-            <button class="quiz-opcion" data-valor="a">A. Inalámbrico</button>
-            <button class="quiz-opcion" data-valor="b">B. Cableado</button>
-            <button class="quiz-opcion" data-valor="c">C. Híbrido</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué hace la sentencia DELETE sin cláusula WHERE?</p>
+            <button class="quiz-opcion" data-valor="a">A. Elimina el último registro insertado.</button>
+            <button class="quiz-opcion" data-valor="b">B. Elimina la tabla.</button>
+            <button class="quiz-opcion" data-valor="c">C. Elimina todos los registros de la tabla.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-aviso">
             <strong>Actividad de evaluación</strong>
-            Investigar un periférico de nueva generación (gafas VR, drone, smartwatch) y explicar su funcionamiento, componentes principales y aplicaciones prácticas.
+            Realizar 10 operaciones SQL diferentes (2 CREATE, 3 INSERT, 2 SELECT, 2 UPDATE, 1 DELETE) en una base de datos de inventario.
           </div>
         </div>
       </article>
@@ -455,96 +487,106 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Buses de comunicación. Datos, control y direcciones</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Consultas avanzadas. JOIN, WHERE, ORDER BY, GROUP BY, funciones de agregado</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Los buses son los canales de comunicación por los que viajan los datos entre los componentes de un ordenador. Son como las autopistas del sistema informático: cuantos más carriles tienen y a mayor velocidad, mejor es el rendimiento del equipo.</p>
+            <p>Las consultas avanzadas permiten extraer información compleja de múltiples tablas. Los JOIN son esenciales para combinar datos relacionados, y las funciones de agregado permiten resumir grandes volúmenes de datos en valores significativos.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un bus?</h4>
-            <p>Un <strong>bus</strong> es un conjunto de líneas de comunicación (cables o pistas en la placa base) que permiten la transmisión de información entre componentes. Se clasifican en tres tipos:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">JOIN (Unión de tablas)</h4>
+            <p>Los JOIN permiten combinar registros de dos o más tablas basándose en una relación:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Bus de datos:</strong> Transporta los datos propiamente dichos. Su anchura (número de líneas) determina cuántos bits se transfieren simultáneamente.</li>
-              <li><strong>Bus de direcciones:</strong> Indica dónde están los datos de origen y destino (direcciones de memoria o dispositivos).</li>
-              <li><strong>Bus de control:</strong> Emite señales de sincronización, petición, lectura/escritura y confirmación.</li>
+              <li><strong>INNER JOIN:</strong> Devuelve solo los registros que tienen coincidencia en ambas tablas.</li>
+              <li><strong>LEFT JOIN:</strong> Devuelve todos los registros de la tabla izquierda y los coincidentes de la derecha.</li>
+              <li><strong>RIGHT JOIN:</strong> Devuelve todos los registros de la tabla derecha y los coincidentes de la izquierda.</li>
+              <li><strong>CROSS JOIN:</strong> Combina cada registro de una tabla con cada registro de otra (producto cartesiano).</li>
             </ul>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">SELECT A.nombre, A.apellido, M.nota
+FROM Alumnos A
+INNER JOIN Matriculas M ON A.id = M.id_alumno
+WHERE M.nota >= 6
+ORDER BY M.nota DESC;</pre>
           </div>
 
           <div class="callout callout-nota">
-            <strong>Analogía</strong>
-            Piensa en una oficina de correos: el <strong>bus de datos</strong> son las cartas, el <strong>bus de direcciones</strong> es la dirección del remitente y destinatario, y el <strong>bus de control</strong> es el empleado que gestiona el envío y confirmación de recepción.
+            <strong>INNER JOIN vs LEFT JOIN</strong>
+            INNER JOIN solo muestra alumnos matriculados. LEFT JOIN muestra TODOS los alumnos, incluyendo los que no tienen matrícula (con NULL en las columnas de la tabla derecha).
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Tipos de buses según su alcance</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Funciones de agregado</h4>
+            <p>Estas funciones resumen datos de múltiples registros:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Bus interno:</strong> Conecta los componentes dentro de la CPU o entre CPU y memoria. Es el más rápido.</li>
-              <li><strong>Bus del sistema:</strong> Conecta la CPU con la memoria principal y los dispositivos de la placa base.</li>
-              <li><strong>Bus externo:</strong> Conecta periféricos externos (USB, Thunderbolt, HDMI).</li>
+              <li><strong>COUNT(*):</strong> Cuenta el número de registros.</li>
+              <li><strong>SUM(campo):</strong> Suma todos los valores.</li>
+              <li><strong>AVG(campo):</strong> Calcula la media.</li>
+              <li><strong>MAX(campo):</strong> Devuelve el valor máximo.</li>
+              <li><strong>MIN(campo):</strong> Devuelve el valor mínimo.</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Buses comunes</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>USB (Universal Serial Bus):</strong> El bus más utilizado para periféricos. Versiones: USB 2.0 (480 Mbps), USB 3.0 (5 Gbps), USB 3.2 (20 Gbps), USB4 (40 Gbps).</li>
-              <li><strong>PCIe (Peripheral Component Interconnect Express):</strong> Bus de alta velocidad para componentes internos (tarjetas gráficas, SSD NVMe). PCIe 5.0: 64 GB/s.</li>
-              <li><strong>SATA:</strong> Para discos duros y SSD. SATA III: 6 Gbps.</li>
-              <li><strong>Ethernet:</strong> Para redes cableadas. 1 Gbps, 10 Gbps.</li>
-              <li><strong>Thunderbolt:</strong> Combina datos, vídeo y energía en un solo puerto. Thunderbolt 4: 40 Gbps.</li>
-            </ul>
-          </div>
+            <h4 class="font-semibold text-brand-700 mb-1">GROUP BY y HAVING</h4>
+            <p>GROUP BY agrupa registros con valores iguales en un campo, para usar con funciones de agregado:</p>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">-- Contar alumnos por género
+SELECT genero, COUNT(*) as num_alumnos
+FROM Alumnos
+GROUP BY genero;
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Rendimiento de los buses</h4>
-            <p>El rendimiento de un bus depende de:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Anchura de banda:</strong> Número de bits que se transfieren en paralelo.</li>
-              <li><strong>Frecuencia:</strong> Número de transferencias por segundo.</li>
-              <li><strong>Protocolo:</strong> Reglas de comunicación que optimizan la transmisión.</li>
-            </ul>
-            <p class="mt-2"><strong>Fórmula:</strong> Rendimiento = Anchura × Frecuencia × Número de ciclos.</p>
+-- Media de nota por asignatura (solo notas ≥ 6)
+SELECT id_asignatura, AVG(nota) as media
+FROM Matriculas
+GROUP BY id_asignatura
+HAVING AVG(nota) >= 6;</pre>
+            <p class="mt-2"><strong>Diferencia WHERE vs HAVING:</strong> WHERE filtra antes de agrupar, HAVING filtra después de agrupar.</p>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Evolución</strong>
-            Los buses han evolucionado de paralelos (ISA, PCI) a seriales (USB, PCIe). Paradójicamente, los seriales modernos son mucho más rápidos porque permiten mayores frecuencias y menos interferencias.
+            <strong>Consejo práctico</strong>
+            Para consultas complejas, constrúyelas paso a paso: primero el FROM, luego el JOIN, después el WHERE, luego el GROUP BY, después el HAVING, y finalmente el SELECT y ORDER BY.
           </div>
 
           <div class="actividad">
             <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Investigar los puertos de tu ordenador: identificar cada tipo de bus disponible (USB, HDMI, Thunderbolt, etc.), sus versiones y velocidades máximas. Comparar con las especificaciones de un portátil moderno.</p>
+            <p>Crear las tablas Alumnos, Asignaturas y Matriculas (con nota). Realizar las siguientes consultas:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Listar alumnos con sus notas usando INNER JOIN.</li>
+              <li>Mostrar todos los alumnos incluyendo los no matriculados (LEFT JOIN).</li>
+              <li>Contar cuántos alumnos hay por asignatura.</li>
+              <li>Calcular la nota media por asignatura.</li>
+              <li>Mostrar solo las asignaturas con nota media superior a 7.</li>
+            </ol>
           </div>
 
           <!-- QUIZ SESIÓN 5 -->
           <div class="quiz" data-correcta="b" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué bus transporta los datos propiamente dichos?</p>
-            <button class="quiz-opcion" data-valor="a">A. Bus de direcciones</button>
-            <button class="quiz-opcion" data-valor="b">B. Bus de datos</button>
-            <button class="quiz-opcion" data-valor="c">C. Bus de control</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué JOIN devuelve solo los registros que coinciden en ambas tablas?</p>
+            <button class="quiz-opcion" data-valor="a">A. LEFT JOIN</button>
+            <button class="quiz-opcion" data-valor="b">B. INNER JOIN</button>
+            <button class="quiz-opcion" data-valor="c">C. RIGHT JOIN</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
           <div class="quiz" data-correcta="a" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué bus USB ofrece una velocidad de 20 Gbps?</p>
-            <button class="quiz-opcion" data-valor="a">A. USB 3.2</button>
-            <button class="quiz-opcion" data-valor="b">B. USB 2.0</button>
-            <button class="quiz-opcion" data-valor="c">C. USB 1.1</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué función de agregado cuenta el número de registros?</p>
+            <button class="quiz-opcion" data-valor="a">A. COUNT(*)</button>
+            <button class="quiz-opcion" data-valor="b">B. SUM()</button>
+            <button class="quiz-opcion" data-valor="c">C. AVG()</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-aviso">
             <strong>Actividad de evaluación</strong>
-            Crear un diagrama que muestre los diferentes buses de un sistema informático y sus velocidades máximas, comparando al menos 4 buses diferentes.
+            Realizar 5 consultas SQL avanzadas que incluyan al menos 2 JOIN, 1 GROUP BY con HAVING, y 2 funciones de agregado diferentes.
           </div>
         </div>
       </article>
@@ -555,85 +597,88 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Sistemas operativos. Arquitecturas, funciones, licencias, interfaces de usuario</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Vistas, informes y formularios. Visualización e interacción con los datos</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>El sistema operativo (SO) es el software más importante de un ordenador. Actúa como intermediario entre el usuario y el hardware, gestionando todos los recursos del sistema. Sin un SO, el hardware sería inutilizable. En esta sesión estudiaremos las funciones, tipos e interfaces de los sistemas operativos.</p>
+            <p>Las vistas, informes y formularios son herramientas que facilitan la visualización e interacción con los datos de una base de datos. Mientras las vistas simplifican consultas complejas, los informes presentan datos de forma imprimible y los formularios permiten una fácil entrada de datos.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es un sistema operativo?</h4>
-            <p>Un <strong>sistema operativo</strong> es el conjunto de programas que gestiona los recursos hardware y software del ordenador, proporcionando servicios a las aplicaciones y una interfaz al usuario:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Vistas (Views)</h4>
+            <p>Una vista es una consulta almacenada que se comporta como una tabla virtual:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Gestión de procesos:</strong> Planifica qué procesos se ejecutan y en qué orden.</li>
-              <li><strong>Gestión de memoria:</strong> Asigna y libera memoria RAM a los procesos.</li>
-              <li><strong>Gestión de archivos:</strong> Organiza, almacena y recupera archivos en el almacenamiento.</li>
-              <li><strong>Gestión de dispositivos:</strong> Controla periféricos mediante controladores (drivers).</li>
-              <li><strong>Seguridad:</strong> Control de acceso, autenticación de usuarios, protección contra malware.</li>
-              <li><strong>Interfaz de usuario:</strong> Proporciona una forma de interactuar con el sistema.</li>
+              <li><strong>No almacena datos:</strong> Ejecuta la consulta cada vez que se accede.</li>
+              <li><strong>Simplifica consultas complejas:</strong> Un JOIN complicado se convierte en "SELECT * FROM vista".</li>
+              <li><strong>Seguridad:</strong> Puede ocultar columnas sensibles (como contraseñas o salarios).</li>
+              <li><strong>Consistencia:</strong> Garantiza que todos los usuarios ven los datos de la misma forma.</li>
             </ul>
-          </div>
+            <pre class="mt-2 bg-slate-100 p-3 rounded-lg text-xs overflow-x-auto font-mono">CREATE VIEW VistaAlumnosNotas AS
+SELECT A.nombre, A.apellido, Asig.nombre as asignatura, M.nota
+FROM Alumnos A
+INNER JOIN Matriculas M ON A.id = M.id_alumno
+INNER JOIN Asignaturas Asig ON M.id_asignatura = Asig.id;
 
-          <div class="callout callout-nota">
-            <strong>Tipos de interfaces</strong>
-            <strong>CLI (Command Line Interface):</strong> Interfaz de línea de comandos. El usuario escribe comandos de texto. Ejemplo: Terminal de Linux, CMD de Windows. Es rápida y potente pero requiere conocimientos. <strong>GUI (Graphical User Interface):</strong> Interfaz gráfica con ventanas, iconos y menús. Es intuitiva pero más lenta de ejecutar.
+-- Ahora se puede consultar como una tabla normal
+SELECT * FROM VistaAlumnosNotas WHERE nota >= 6;</pre>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Principales sistemas operativos</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Informes</h4>
+            <p>Los informes presentan datos de forma estructurada y lista para imprimir:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Windows:</strong> El más usado en PC de escritorio. Propietario, interfaz gráfica, amplia compatibilidad de hardware.</li>
-              <li><strong>macOS:</strong> Sistema de Apple para Mac. Propietario, optimizado para hardware Apple, interfaz pulida.</li>
-              <li><strong>Linux:</strong> Kernel de código abierto. Múltiples distribuciones: Ubuntu, Fedora, Debian, Arch. Gratuito, seguro, personalizable.</li>
-              <li><strong>Android:</strong> Basado en Linux, para dispositivos móviles. Desarrollado por Google.</li>
-              <li><strong>iOS:</strong> Sistema de Apple para iPhone/iPad. Propietario, optimizado para hardware Apple.</li>
-              <li><strong>ChromeOS:</strong> Sistema de Google basado en navegador web. Ligero, para Chromebooks.</li>
+              <li><strong>Encabezado:</strong> Título del informe, fecha, logo.</li>
+              <li><strong>Cuerpo:</strong> Tablas de datos organizados.</li>
+              <li><strong>Pie:</strong> Totales, promedios, información de pie de página.</li>
+              <li><strong>Agrupaciones:</strong> Datos agrupados por categoría (ej: alumnos por clase).</li>
             </ul>
+            <p class="mt-2"><strong>Herramientas:</strong> Microsoft Access, LibreOffice Base, JasperReports.</p>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Licencias de software</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Formularios</h4>
+            <p>Los formularios facilitan la entrada y edición de datos con una interfaz gráfica amigable:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Propietaria:</strong> El código fuente no está disponible. Pago por licencia. Ejemplo: Windows.</li>
-              <li><strong>Open Source:</strong> Código abierto, cualquier persona puede modificarlo. Ejemplo: Linux (GPL).</li>
-              <li><strong>Freeware:</strong> Gratuito pero con código cerrado. Ejemplo: Skype.</li>
-              <li><strong>Shareware:</strong> Versión de prueba con limitaciones temporales.</li>
+              <li><strong>Campo de texto:</strong> Para introducir datos alfanuméricos.</li>
+              <li><strong>Desplegable:</strong> Para seleccionar de una lista predefinida.</li>
+              <li><strong>Casilla de verificación:</strong> Para valores verdadero/falso.</li>
+              <li><strong>Botones:</strong> Guardar, eliminar, buscar, imprimir.</li>
+              <li><strong>Validación:</strong> Comprobar que los datos cumplen un formato antes de guardar.</li>
             </ul>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Actividad comparativa</strong>
-            Crear una tabla comparativa de Windows, macOS y Linux: precio, licencia, interfaz por defecto, distribución de mercado, hardware compatible, fortalezas y debilidades.
+            <strong>¿Cuándo usar cada uno?</strong>
+            <strong>Vista:</strong> Para simplificar consultas recurrentes. <strong>Informe:</strong> Para imprimir o exportar datos formateados. <strong>Formulario:</strong> Para entrada y edición de datos por parte de usuarios no técnicos.
+          </div>
+
+          <div class="actividad">
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
+            <p>Usando la base de datos de la sesión anterior:</p>
+            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
+              <li>Crear una vista que muestre solo los alumnos aprobados con sus notas.</li>
+              <li>Diseñar un formulario sencillo en papel para introducir nuevos alumnos.</li>
+              <li>Diseñar un informe en papel que muestre las calificaciones agrupadas por asignatura.</li>
+            </ol>
           </div>
 
           <!-- QUIZ SESIÓN 6 -->
-          <div class="quiz" data-correcta="b" data-total="3">
+          <div class="quiz" data-correcta="a" data-total="3">
             <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué función NO realiza un sistema operativo?</p>
-            <button class="quiz-opcion" data-valor="a">A. Gestión de procesos</button>
-            <button class="quiz-opcion" data-valor="b">B. Renderizado de gráficos 3D para videojuegos</button>
-            <button class="quiz-opcion" data-valor="c">C. Gestión de archivos</button>
-            <div class="quiz-resultado"></div>
-            <p class="quiz-score"></p>
-          </div>
-
-          <div class="quiz" data-correcta="c" data-total="3">
-            <h4>Comprueba lo aprendido</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué interfaz permite interactuar con el sistema mediante comandos de texto?</p>
-            <button class="quiz-opcion" data-valor="a">A. GUI</button>
-            <button class="quiz-opcion" data-valor="b">B. API</button>
-            <button class="quiz-opcion" data-valor="c">C. CLI</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué es una vista en una base de datos?</p>
+            <button class="quiz-opcion" data-valor="a">A. Una consulta almacenada que se comporta como una tabla virtual.</button>
+            <button class="quiz-opcion" data-valor="b">B. Una tabla que almacena datos temporalmente.</button>
+            <button class="quiz-opcion" data-valor="c">C. Un informe listo para imprimir.</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
           <div class="callout callout-aviso">
             <strong>Actividad de evaluación</strong>
-            Instalar una distribución de Linux (Ubuntu o Fedora) en una máquina virtual y explorar su interfaz, menú de aplicaciones y terminal.
+            Crear al menos 2 vistas SQL que simplifiquen consultas complejas y justificar por qué son útiles.
           </div>
         </div>
       </article>
@@ -644,97 +689,173 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Gestión del SO. Procesos, archivos, usuarios, dispositivos. Instalación y configuración</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Exportación e importación. Intercambio de datos entre sistemas</h3>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
+            <p>Las bases de datos no trabajan aisladas. En esta sesión aprenderemos a exportar e importar datos entre diferentes sistemas y formatos, una habilidad esencial en el mundo real donde los datos provienen de múltiples fuentes.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Formatos de exportación</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>CSV:</strong> Texto plano con valores separados por comas. Universal, ligero, sin formato.</li>
+              <li><strong>SQL:</strong> Script con sentencias SQL para recrear la estructura y datos.</li>
+              <li><strong>JSON:</strong> Formato de intercambio web, jerárquico, legible por máquinas.</li>
+              <li><strong>XML:</strong> Formato de marcado para intercambio de datos estructurados.</li>
+              <li><strong>XLSX:</strong> Hoja de cálculo de Excel.</li>
+              <li><strong>PDF:</strong> Para distribución e impresión.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Exportar desde SQLite</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>.output archivo.csv:</strong> Redirige la salida a un archivo.</li>
+              <li><strong>.mode csv:</strong> Establece el modo de salida CSV.</li>
+              <li><strong>SELECT * FROM tabla;</strong> Genera los datos en el formato seleccionado.</li>
+              <li><strong>.quit:</strong> Cierra la sesión y guarda el archivo.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-nota">
+            <strong>Intercambio con hojas de cálculo</strong>
+            Un flujo de trabajo común es: exportar datos de la BD a CSV → importar en Google Sheets/Excel para análisis → exportar el resultado → importar de nuevo en la BD.
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Importar datos</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Desde CSV:</strong> .import archivo.csv nombre_tabla (en SQLite CLI).</li>
+              <li><strong>Desde otro SGBD:</strong> Exportar en SQL e importar en el nuevo sistema.</li>
+              <li><strong>Desde APIs:</strong> Usar scripts (Python, Node.js) para conectar con servicios web.</li>
+              <li><strong>Desde archivos:</strong> Programas como DB Browser for SQLite permiten importar visualmente.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Buenas prácticas de intercambio</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Verificar la integridad:</strong> Comprobar que los datos se importaron correctamente.</li>
+              <li><strong>Codificación de caracteres:</strong> Usar UTF-8 para compatibilidad con tildes y caracteres especiales.</li>
+              <li><strong>Respaldo:</strong> Siempre hacer una copia de seguridad antes de importar datos masivos.</li>
+              <li><strong>Validación:</strong> Comprobar tipos de datos, formato de fechas y valores nulos.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout-consejo">
+            <strong>Actividad práctica</strong>
+            Exportar la base de datos de alumnos a un archivo CSV, abrirlo en Google Sheets, modificar algunos datos, guardar como CSV e importar de nuevo a SQLite. Verificar que los cambios se reflejan correctamente.
+          </div>
+
+          <!-- QUIZ SESIÓN 7 -->
+          <div class="quiz" data-correcta="b" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué formato es el más adecuado para intercambiar datos puros entre diferentes sistemas?</p>
+            <button class="quiz-opcion" data-valor="a">A. XLSX</button>
+            <button class="quiz-opcion" data-valor="b">B. CSV</button>
+            <button class="quiz-opcion" data-valor="c">C. PDF</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="quiz" data-correcta="c" data-total="3">
+            <h4>Comprueba lo aprendido</h4>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué codificación de caracteres se recomienda para intercambiar datos con tildes?</p>
+            <button class="quiz-opcion" data-valor="a">A. ASCII</button>
+            <button class="quiz-opcion" data-valor="b">B. ISO-8859-1</button>
+            <button class="quiz-opcion" data-valor="c">C. UTF-8</button>
+            <div class="quiz-resultado"></div>
+            <p class="quiz-score"></p>
+          </div>
+
+          <div class="callout callout-aviso">
+            <strong>Actividad de evaluación</strong>
+            Exportar datos a CSV, importarlos en Google Sheets, crear un gráfico con los datos, y volver a importar el resultado en una nueva tabla de la BD.
+          </div>
+        </div>
+      </article>
+
+      <!-- ==================== SESIÓN 8 ==================== -->
+      <article
+      <article id="sesion-8" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">8</span>
+          <div>
+            <h3 class="font-bold text-ink-800 text-lg">Proyecto final: base de datos relacional completa con consultas SQL</h3>
           </div>
         </div>
 
         <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
           <div class="callout callout-nota">
             <strong>Proyecto de unidad</strong>
-            Esta sesión integra todo lo aprendido sobre arquitectura y sistemas operativos. El alumnado aplicará los conocimientos teóricos en un ejercicio práctico de gestión del sistema.
+            Esta sesión está dedicada al desarrollo del proyecto final de la UD5. Cada alumno deberá crear una base de datos relacional completa que integre todas las competencias trabajadas a lo largo de las 7 sesiones anteriores.
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Gestión de procesos</h4>
-            <p>Un <strong>proceso</strong> es un programa en ejecución. El SO gestiona múltiples procesos simultáneamente mediante la planificación:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Enunciado del proyecto</h4>
+            <p>Crear una <strong>"Base de datos de Gestión de una Biblioteca Escolar"</strong> con los siguientes elementos:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Estado de un proceso:</strong> Nuevo, listo, ejecutando, esperando, terminado.</li>
-              <li><strong>Planificación:</strong> El SO decide qué proceso se ejecuta en cada momento (round-robin, prioridades).</li>
-              <li><strong>Multitarea:</strong> El SO alterna rápidamente entre procesos, dando la ilusión de ejecución simultánea.</li>
-              <li><strong>Administrador de tareas:</strong> Herramienta para ver y finalizar procesos (Ctrl+Alt+Supr en Windows, htop en Linux).</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Gestión de archivos</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Sistema de archivos:</strong> NTFS (Windows), APFS (macOS), ext4 (Linux), FAT32, exFAT.</li>
-              <li><strong>Estructura de carpetas:</strong> Árbol jerárquico de directorios.</li>
-              <li><strong>Permisos:</strong> Lectura, escritura, ejecución. Para propietario, grupo y otros.</li>
-              <li><strong>Respaldo:</strong> Copias de seguridad regulares. Tipos: completa, incremental, diferencial.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Gestión de usuarios</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Usuarios:</strong> Cada persona tiene su propia cuenta con permisos específicos.</li>
-              <li><strong>Administrador:</strong> Usuario con permisos totales para configurar el sistema.</li>
-              <li><strong>Grupo:</strong> Conjunto de usuarios con los mismos permisos.</li>
-              <li><strong>Autenticación:</strong> Contraseña, biométrica, doble factor (2FA).</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Gestión de dispositivos</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Controladores (drivers):</strong> Software que permite al SO comunicarse con cada hardware.</li>
-              <li><strong>Device Manager (Windows):</strong> Herramienta para administrar dispositivos y controladores.</li>
-              <li><strong>Actualizaciones:</strong> Mantener los controladores actualizados para mejor rendimiento y seguridad.</li>
+              <li><strong>Tablas:</strong> Socios, Libros, Prestamos, Categorias (mínimo 4 tablas).</li>
+              <li><strong>Relaciones:</strong> Claves primarias y foráneas correctamente definidas. Al menos 2 relaciones 1:N y 1 N:M.</li>
+              <li><strong>Datos:</strong> Insertar al menos 10 registros en cada tabla principal.</li>
+              <li><strong>Consultas SQL:</strong> Crear al menos 8 consultas diferentes incluyendo JOIN, WHERE, GROUP BY, funciones de agregado.</li>
+              <li><strong>Vistas:</strong> Crear al menos 2 vistas que simplifiquen consultas frecuentes.</li>
+              <li><strong>Exportación:</strong> Exportar los datos de una consulta a CSV.</li>
             </ul>
           </div>
 
           <div class="callout callout-consejo">
-            <strong>Consejo práctico</strong>
-            Si un dispositivo no funciona correctamente, la primera solución suele ser actualizar o reinstalar su controlador desde el administrador de dispositivos.
+            <strong>Criterios de evaluación</strong>
+            Diseño de tablas y tipos de datos (20%), relaciones e integridad referencial (20%), calidad y variedad de consultas SQL (25%), uso de vistas (15%), documentación y presentación (20%).
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Instalación de un sistema operativo</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Estructura de la BD</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Socios:</strong> id, nombre, apellido, email, telefono, fecha_alta.</li>
+              <li><strong>Categorias:</strong> id, nombre, descripcion.</li>
+              <li><strong>Libros:</strong> id, titulo, autor, id_categoria, anio, isbn, disponibilidad.</li>
+              <li><strong>Prestamos:</strong> id, id_socio, id_libro, fecha_prestamo, fecha_devolucion, devuelto.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Consultas sugeridas</h4>
             <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li><strong>Preparar:</strong> Verificar requisitos del hardware, hacer copia de seguridad.</li>
-              <li><strong>Crear medio de instalación:</strong> USB booteable con la imagen ISO del SO.</li>
-              <li><strong>Arrancar desde USB:</strong> Configurar el BIOS/UEFI para arrancar desde el USB.</li>
-              <li><strong>Instalar:</strong> Seguir el asistente de instalación (particionar disco, configurar usuario).</li>
-              <li><strong>Configurar:</strong> Instalar controladores, actualizaciones, software adicional.</li>
+              <li>Listar todos los libros disponibles con su categoría.</li>
+              <li>Mostrar los préstamos activos con datos del socio y del libro.</li>
+              <li>Contar cuántos libros hay por categoría.</li>
+              <li>Mostrar los socios que nunca han realizado un préstamo.</li>
+              <li>Calcular el número total de préstamos por mes.</li>
+              <li>Listar los libros más prestados (top 5).</li>
+              <li>Mostrar los préstamos vencidos (fecha_devolución pasada y no devueltos).</li>
+              <li>Calcular la media de días de préstamo por categoría.</li>
             </ol>
           </div>
 
-          <div class="actividad">
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad integradora</h4>
-            <p>En grupos, simular la gestión de un sistema informático escolar:</p>
-            <ol class="mt-2 space-y-1.5 pl-5 list-decimal">
-              <li>Crear 3 usuarios con diferentes permisos (admin, profesor, alumno).</li>
-              <li>Crear una estructura de carpetas compartida.</li>
-              <li>Investigar qué controladores se necesitan para los dispositivos del centro.</li>
-              <li>Planificar un sistema de copias de seguridad semanal.</li>
-            </ol>
+          <div class="callout callout-peligro">
+            <strong>Recuerda</strong>
+            Documenta tu base de datos: incluye un diagrama entité-relación, explica las decisiones de diseño y documenta cada consulta SQL con un comentario que explique qué hace.
           </div>
 
           <!-- QUIZ FINAL UNIDAD -->
           <div class="quiz" data-correcta="a" data-total="4">
             <h4>Comprueba lo aprendido (quiz final de la unidad)</h4>
-            <p class="font-semibold text-slate-700 mb-2">¿Qué es un proceso en un sistema operativo?</p>
-            <button class="quiz-opcion" data-valor="a">A. Un programa en ejecución.</button>
-            <button class="quiz-opcion" data-valor="b">B. Un archivo guardado en el disco.</button>
-            <button class="quiz-opcion" data-valor="c">C. Un dispositivo conectado al ordenador.</button>
+            <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de JOIN devuelve todos los registros de la tabla izquierda, incluso sin coincidencia?</p>
+            <button class="quiz-opcion" data-valor="a">A. LEFT JOIN</button>
+            <button class="quiz-opcion" data-valor="b">B. INNER JOIN</button>
+            <button class="quiz-opcion" data-valor="c">C. RIGHT JOIN</button>
             <div class="quiz-resultado"></div>
             <p class="quiz-score"></p>
           </div>
 
-          <div class="callout callout-peligro">
-            <strong>Producto de la unidad</strong>
-            El producto final es un informe técnico que describa la arquitectura completa de un sistema informático (procesador, memoria, almacenamiento, buses, periféricos y SO), justificando las decisiones de diseño.
+          <div class="callout callout-aviso">
+            <strong>Entrega del proyecto</strong>
+            Subir el archivo .db de SQLite junto con un documento que contenga el diagrama E-R, el script SQL completo con comentarios y las capturas de los resultados de las consultas.
           </div>
         </div>
       </article>
@@ -743,7 +864,7 @@
     <!-- NAVEGACIÓN ENTRE UNIDADES -->
     <nav class="mt-10 flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4">
       <a href="ud4.html" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
-        ← UD4 · Bases de datos
+        ← UD4 · Hojas de cálculo
       </a>
       <a href="ud6.html" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">
         Siguiente: UD6 · Introducción a la programación →
