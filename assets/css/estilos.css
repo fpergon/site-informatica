@@ -100,8 +100,7 @@ details.ud-card[open] .flecha { transform: rotate(90deg); }
   line-height: 1.6;
   border-left: 4px solid;
 }
-.callout > strong,
-.callout > p > strong:first-child { display: block; margin-bottom: .25rem; }
+.callout > strong { display: block; margin-bottom: .25rem; }
 
 /* Callout consejo (verde) */
 .callout-consejo {
