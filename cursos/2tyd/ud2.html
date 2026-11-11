@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UD2 · Hardware y Redes Informáticas · 2º TyD</title>
-  <meta name="description" content="Unidad Didáctica 2 de 2º TyD: Componentes de un ordenador, redes de área local, montaje de hardware y configuración básica." />
+  <title>UD2 · Hardware y seguridad · 2º TyD</title>
+  <meta name="description" content="Unidad Didáctica 2 de 2º TyD: componentes de un ordenador, lectura de la ficha del equipo, copias de seguridad y uso seguro de Internet." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,8 +34,8 @@
         <span>·</span>
         <span>Bloque D + A</span>
       </div>
-      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Hardware y Redes Informáticas</h1>
-      <p class="mt-3 text-brand-50/90">Componentes de un ordenador, redes de área local, montaje de hardware y configuración básica. Esta unidad permitirá al alumnado comprender y manipular los componentes físicos de un sistema informático.</p>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Hardware y seguridad</h1>
+      <p class="mt-3 text-brand-50/90">Componentes de un ordenador, ficha del equipo, copias de seguridad y navegación segura. Esta unidad permitirá al alumnado conocer su equipo, proteger sus trabajos y usar Internet con cabeza.</p>
     </section>
 
     <section class="mt-8">
@@ -331,7 +331,7 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Redes informáticas</h3>
+            <h3 class="font-bold text-ink-800 text-lg">¿Qué lleva dentro? Leer la ficha de mi equipo</h3>
           </div>
         </div>
 
@@ -339,70 +339,67 @@
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Las redes informáticas son el backbone de la comunicación moderna. En esta sesión aprenderemos qué son, cómo se clasifican y los conceptos fundamentales que permiten la interconexión entre dispositivos.</p>
+            <p>Cada ordenador tiene una «ficha» con sus datos: procesador, memoria RAM, gráfica y disco. Saber leerla te ayuda a saber si tu equipo aguanta un programa o un juego. En esta sesión abrimos la ficha de nuestro equipo en educaandos y aprendemos a comprobar si cumple los requisitos de un programa.</p>
           </div>
 
-          <figure class="my-3">
-            <img src="../../assets/img/moodle/redes-informaticas.jpg" alt="Tipos de redes informáticas" loading="lazy" class="rounded-lg w-full" />
-            <figcaption>Esquema de los diferentes tipos de redes informáticas según su alcance geográfico</figcaption>
-          </figure>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/GcVkOsYes60" title="Cómo ver las características de tu PC en Ubuntu: CPU, RAM, gráfica y almacenamiento" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Cómo ver las características de tu PC en Ubuntu: CPU, RAM, gráfica y almacenamiento · MundoPC</p>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">¿Qué es una red informática?</h4>
-            <p>Una red informática es un conjunto de dispositivos (ordenadores, servidores, impresoras, dispositivos móviles) interconectados entre sí para compartir recursos, datos y servicios.</p>
-            <p class="mt-2"><strong>Elementos básicos de una red:</strong></p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Nodos o estaciones:</strong> Dispositivos conectados a la red.</li>
-              <li><strong>Medio de transmisión:</strong> Cable (par trenzado, fibra óptica) o inalámbrico (Wi-Fi, Bluetooth).</li>
-              <li><strong>Equipos de interconexión:</strong> Switch, router, punto de acceso.</li>
-              <li><strong>Protocolos:</strong> Reglas de comunicación (TCP/IP, HTTP, FTP).</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">Paso 1: abrir la ficha del equipo</h4>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Abre el menú <strong>Ajustes</strong> (el icono del engranaje).</li>
+              <li>Entra en <strong>Sistema → Información del equipo</strong>.</li>
+              <li>Anota en tu ficha: <strong>procesador</strong>, <strong>memoria RAM</strong>, <strong>gráfica</strong>, <strong>disco</strong> y <strong>versión de educaandos</strong>.</li>
+              <li>Haz una <strong>captura de pantalla</strong> de esa ventana.</li>
+            </ol>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Tipos de red según su alcance</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Paso 2: ver el equipo trabajando</h4>
+            <p>Abre el <strong>Monitor del sistema</strong> (búscalo en el menú de aplicaciones) y mira la pestaña <strong>Recursos</strong>:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>LAN (Local Area Network):</strong> Red de área local. Conecta dispositivos en un área geográfica limitada: un edificio, una planta, un hogar. Alto rendimiento y bajo coste.</li>
-              <li><strong>MAN (Metropolitan Area Network):</strong> Red de área metropolitana. Conecta varias LAN dentro de una ciudad o campus universitario. Alcance de hasta 50 km.</li>
-              <li><strong>WAN (Wide Area Network):</strong> Red de área amplia. Conecta redes en distancias grandes, incluso continentales. Internet es la WAN más grande del mundo.</li>
+              <li>Abre el navegador y observa cómo <strong>sube el uso de la CPU y de la memoria</strong>.</li>
+              <li>Cierra el navegador y mira cómo <strong>vuelve a bajar</strong>.</li>
+              <li>En la pestaña <strong>Sistemas de archivos</strong> verás el <strong>espacio libre</strong> de tu disco.</li>
             </ul>
           </div>
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Topologías de red</h4>
-            <p>La topología define cómo están organizados los dispositivos en la red:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Bus:</strong> Todos los dispositivos comparten un cable central. Si el cable se daña, toda la red cae.</li>
-              <li><strong>Estrella:</strong> Todos los dispositivos se conectan a un nodo central (switch/router). Es la topología más utilizada actualmente.</li>
-              <li><strong>Anillo:</strong> Los dispositivos forman un círculo. Los datos viajan en una dirección.</li>
-              <li><strong>Malla:</strong> Cada dispositivo se conecta con varios otros. Alta redundancia y fiabilidad.</li>
-            </ul>
+          <div class="callout callout-consejo">
+            <strong>Solo si te atreves: la terminal (opcional)</strong>
+            <p class="mt-1">Con la aplicación <strong>Terminal</strong> puedes ver lo mismo escribiendo comandos: <code class="bg-white/50 px-1 rounded">lscpu</code> (procesador), <code class="bg-white/50 px-1 rounded">free -h</code> (memoria) y <code class="bg-white/50 px-1 rounded">lsblk</code> (discos). Es un reto extra; no es obligatorio.</p>
           </div>
 
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Cableado de red</h4>
-            <p>Los cables más utilizados en redes LAN son:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Par trenzado (UTP/STP):</strong> Cable de cobre más común. Categorías: Cat5e (1 Gbps), Cat6 (1-10 Gbps), Cat6a (10 Gbps).</li>
-              <li><strong>Fibra óptica:</strong> Transmite datos mediante pulsos de luz. Velocidades muy altas (hasta 100 Gbps) y larga distancia.</li>
-              <li><strong>Coaxial:</strong> Menos utilizado en redes actuales. Principalmente en conexiones de televisión e internet por cable.</li>
-            </ul>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/xYcWXw9NOIs" title="Comandos de terminal para conocer tu equipo y componentes en Linux" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
-
-          <div class="callout callout-nota">
-            <strong>Dato práctico</strong>
-            En un hogar típico, la red LAN está formada por el router (proporcionado por el operador), los cables Ethernet que conectan los dispositivos fijos (ordenador de sobremesa, consola) y la red Wi-Fi para dispositivos móviles (móvil, tablet, portátil).
-          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Comandos de terminal para conocer tu equipo y componentes en Linux · Máquinas Linuxeras (opcional)</p>
 
           <div class="actividad">
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad: Diagrama de red</h4>
-            <p>Dibujar el diagrama de la red del instituto o de tu hogar, incluyendo:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: la ficha de mi equipo</h4>
             <ol class="mt-2 space-y-2 pl-5 list-decimal">
-              <li>Todos los dispositivos conectados a la red.</li>
-              <li>El medio de conexión (cable o inalámbrico).</li>
-              <li>Los equipos de interconexión (router, switch).</li>
-              <li>La topología utilizada y justificación.</li>
+              <li>Rellena la ficha de tu equipo: procesador, memoria RAM, gráfica, disco y versión de educaandos.</li>
+              <li>Pega la captura de pantalla de <strong>Información del equipo</strong>.</li>
+              <li>Elige un programa o juego y mira sus <strong>requisitos mínimos</strong> en la web del fabricante. Rellena la tabla: en «Lo que pide el programa» escribe sus requisitos; en «Lo que tiene mi equipo», los de tu ficha; al final, <strong>sí</strong> o <strong>no</strong> según lo cumplas.</li>
             </ol>
+            <table class="rubrica my-3 w-full">
+              <thead>
+                <tr>
+                  <th>Característica</th>
+                  <th>Lo que pide el programa</th>
+                  <th>Lo que tiene mi equipo</th>
+                  <th>¿Lo cumple?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Procesador</td><td></td><td></td><td>sí / no</td></tr>
+                <tr><td>Memoria RAM</td><td></td><td></td><td>sí / no</td></tr>
+                <tr><td>Espacio en disco</td><td></td><td></td><td>sí / no</td></tr>
+              </tbody>
+            </table>
+            <p>En parejas, comparad las fichas de vuestros equipos: ¿cuál es más potente y por qué?</p>
           </div>
         </div>
       </article>
@@ -411,7 +408,7 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Red LAN doméstica</h3>
+            <h3 class="font-bold text-ink-800 text-lg">No pierdo mis trabajos: copias de seguridad</h3>
           </div>
         </div>
 
@@ -419,72 +416,85 @@
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>Configurar y mantener una red doméstica es una habilidad práctica que todo usuario debe conocer. En esta sesión veremos los componentes de una red doméstica, cómo configurarlos y cómo resolver problemas comunes de conectividad.</p>
+            <p>Se puede perder un trabajo de muchas formas. Lo bueno: casi todas tienen solución si tienes una <strong>copia de seguridad</strong>. En esta sesión aprendemos a guardar una copia en el ordenador y otra en Google Drive.</p>
           </div>
 
-          <figure class="my-3">
-            <img src="../../assets/img/moodle/red-lan.jpg" alt="Red LAN doméstica" loading="lazy" class="rounded-lg w-full" />
-            <figcaption>Diagrama típico de una red LAN doméstica con router, dispositivos cableados e inalámbricos</figcaption>
-          </figure>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/d140cH3uauw" title="¿Qué es un Backup y para qué sirve? Copias de seguridad explicadas" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">¿Qué es un Backup y para qué sirve? Copias de seguridad explicadas · DanVb</p>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Componentes de una red doméstica</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">¿Cómo se pierde un trabajo?</h4>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Router:</strong> Dispositivo que conecta la red local con Internet y dirige el tráfico entre dispositivos. Combina las funciones de router, switch y punto de acceso Wi-Fi.</li>
-              <li><strong>Cable de red (Ethernet):</strong> Cable UTP Cat5e o Cat6 que conecta dispositivos fijos al router mediante conector RJ-45.</li>
-              <li><strong>Modem:</strong> Convierte la señal del operador (ADSL, fibra, cable) en señal de red. En muchos casos, el router ya incluye el modem.</li>
-              <li><strong>Switch:</strong> Dispositivo que amplía los puertos Ethernet del router cuando no hay suficientes.</li>
+              <li>Lo <strong>borras sin querer</strong> (o vacías la papelera pensando que ya no lo necesitas).</li>
+              <li>Pierdes o rompes la <strong>memoria USB</strong> donde lo guardabas.</li>
+              <li>Un <strong>virus bloquea tus archivos</strong> y ya no puedes abrirlos.</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Configuración IP básica</h4>
-            <p>Cada dispositivo en una red necesita una dirección IP para comunicarse:</p>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>IPv4:</strong> Dirección de 32 bits en notación decimal (ej: 192.168.1.100). Permite aproximadamente 4.300 millones de direcciones.</li>
-              <li><strong>Máscara de red:</strong> Define qué parte de la IP corresponde a la red y cuál al dispositivo (ej: 255.255.255.0).</li>
-              <li><strong>Puerta de enlace (Gateway):</strong> Dirección del router que conecta con Internet (generalmente 192.168.1.1).</li>
-              <li><strong>Servidor DNS:</strong> Convierte nombres de dominio (google.com) en direcciones IP.</li>
-            </ul>
-            <p class="mt-2"><strong>DHCP:</strong> Protocolo que asigna automáticamente direcciones IP a los dispositivos cuando se conectan a la red. El router actúa como servidor DHCP.</p>
-          </div>
-
-          <div class="callout callout-consejo">
-            <strong>Consejo práctico</strong>
-            Para ver la configuración de red de tu ordenador: en Windows usa el comando <code class="bg-white/50 px-1 rounded">ipconfig</code> en el símbolo del sistema. En Mac/Linux usa <code class="bg-white/50 px-1 rounded">ifconfig</code> o <code class="bg-white/50 px-1 rounded">ip addr</code> en la terminal.
+            <h4 class="font-semibold text-brand-700 mb-1">Una copia = el mismo trabajo en dos sitios</h4>
+            <p>La regla es sencilla: <strong>si el trabajo solo está en un sitio, no hay copia</strong>. Guarda siempre dos copias: una en el <strong>ordenador</strong> y otra en <strong>Google Drive</strong>. Así, aunque pierdas una, la otra está a salvo.</p>
+            <div class="callout callout-nota">
+              <strong>Dato de curiosidad: la regla 3-2-1</strong>
+              <p class="mt-1">Los profesionales guardan <strong>3 copias</strong> de su trabajo, en <strong>2 soportes distintos</strong> (por ejemplo, ordenador y Drive), y <strong>1 copia fuera de casa</strong>. Tú empieza con las dos copias de clase y ya irás más lejos.</p>
+            </div>
           </div>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Plano de red doméstico</h4>
-            <p>Un plano de red es un diagrama que representa la estructura de la red doméstica. Incluye:</p>
-            <ol class="mt-2 space-y-2 pl-5 list-decimal">
-              <li>El router como nodo central.</li>
-              <li>Los dispositivos cableados (PC de sobremesa, smart TV, consola).</li>
-              <li>Los dispositivos inalámbricos (móvil, portátil, tablet).</li>
-              <li>Las direcciones IP asignadas a cada dispositivo.</li>
-              <li>La conexión a Internet (fibra, ADSL, cable).</li>
-            </ol>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Resolución de problemas comunes</h4>
-            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>No hay conexión a Internet:</strong> Reiniciar el router (desconectar 30 segundos y reconectar).</li>
-              <li><strong>Conexión lenta:</strong> Verificar la distancia al router, interferencias, número de dispositivos conectados.</li>
-              <li><strong>Dispositivo no obtiene IP:</strong> Verificar que DHCP está activo en el router.</li>
-              <li><strong>Conexión Wi-Fi inestable:</strong> Cambiar el canal del router, actualizar el firmware.</li>
-            </ul>
+            <h4 class="font-semibold text-brand-700 mb-1">Google Drive o memoria USB: ¿cuál me conviene?</h4>
+            <table class="rubrica my-3 w-full">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Google Drive</th>
+                  <th>Memoria USB</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>¿Dónde está guardado?</strong></td><td>En internet (la nube)</td><td>En la memoria física</td></tr>
+                <tr><td><strong>¿Desde dónde lo abres?</strong></td><td>Desde cualquier ordenador con internet</td><td>Solo donde enchufes la memoria</td></tr>
+                <tr><td><strong>¿Cuándo se pierde?</strong></td><td>Si borras la cuenta o no tienes internet</td><td>Si la pierdes o se rompe</td></tr>
+                <tr><td><strong>¿Cuánto cuesta?</strong></td><td>Gratis hasta 15 GB</td><td>Se compra una vez</td></tr>
+                <tr><td><strong>Mejor para…</strong></td><td>Copiar desde clase y desde casa</td><td>Llevarlo a casa sin internet</td></tr>
+              </tbody>
+            </table>
           </div>
 
           <div class="actividad">
-            <h4 class="font-semibold text-brand-700 mb-1">Actividad práctica</h4>
-            <p>Realizar los siguientes ejercicios en el aula:</p>
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: crear la carpeta «Mis copias»</h4>
             <ol class="mt-2 space-y-2 pl-5 list-decimal">
-              <li>Consultar la configuración de red del ordenador usando la línea de comandos.</li>
-              <li>Identificar la dirección IP, la máscara de red, la puerta de enlace y los servidores DNS.</li>
-              <li>Hacer ping a google.com y analizar los resultados.</li>
-              <li>Dibujar un plano de red del aula incluyendo todos los dispositivos visibles.</li>
+              <li>Abre <strong>Google Drive</strong> con tu cuenta del instituto.</li>
+              <li>Crea una carpeta llamada <strong>«Mis copias»</strong>.</li>
+              <li>Sube a esa carpeta un <strong>trabajo de la UD1</strong> (arrastra el archivo desde el ordenador).</li>
+              <li>Cambia el nombre del archivo y añade la fecha, por ejemplo: <strong>Trabajo UD1_2026-03-12</strong>.</li>
+              <li>Comprueba que el trabajo está en <strong>dos sitios</strong>: en el ordenador y en Drive.</li>
             </ol>
+          </div>
+
+          <div class="actividad">
+            <h4 class="font-semibold text-brand-700 mb-1">Situación de aprendizaje</h4>
+            <p>Trabaja en parejas:</p>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li>Enviad al profesor una <strong>fotografía de la carpeta «Mis copias»</strong> de Drive con al menos un trabajo subido.</li>
+              <li>Rellenad la tabla con <strong>tres trabajos</strong> vuestros:</li>
+            </ol>
+            <table class="rubrica my-3 w-full">
+              <thead>
+                <tr>
+                  <th>Trabajo</th>
+                  <th>¿Copia en el ordenador?</th>
+                  <th>¿Copia en Drive?</th>
+                  <th>Fecha</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td></td><td>sí / no</td><td>sí / no</td><td></td></tr>
+                <tr><td></td><td>sí / no</td><td>sí / no</td><td></td></tr>
+                <tr><td></td><td>sí / no</td><td>sí / no</td><td></td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </article>
@@ -493,7 +503,7 @@
         <div class="flex items-center gap-3 mb-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
           <div>
-            <h3 class="font-bold text-ink-800 text-lg">Montaje de ordenador</h3>
+            <h3 class="font-bold text-ink-800 text-lg">Navegar seguro: timos, contraseñas y descanso</h3>
           </div>
         </div>
 
@@ -501,62 +511,90 @@
 
           <div>
             <h4 class="font-semibold text-brand-700 mb-1">Introducción</h4>
-            <p>El montaje de un ordenador es una actividad práctica que permite comprender cómo interactúan los componentes internos. En esta sesión aprenderemos las herramientas necesarias, los pasos del montaje y las precauciones de seguridad.</p>
+            <p>Internet es muy útil, pero hay personas que intentan <strong>engañarte</strong> para robar tus datos o para molestarte. En esta sesión aprendemos a detectar timos, a crear contraseñas fuertes y a cuidar tu vista y tu descanso.</p>
           </div>
 
-          <figure class="my-3">
-            <img src="../../assets/img/moodle/montaje-ordenador.jpg" alt="Montaje de ordenador" loading="lazy" class="rounded-lg w-full" />
-            <figcaption>Montaje de un ordenador de escritorio: herramientas y componentes preparados</figcaption>
-          </figure>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/2TferQprZ0g" title="Las 10 claves para usar Internet con seguridad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Las 10 claves para usar Internet con seguridad · PantallasAmigas</p>
 
           <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Herramientas necesarias</h4>
+            <h4 class="font-semibold text-brand-700 mb-1">Los timos (phishing)</h4>
+            <p>El <strong>phishing</strong> es cuando alguien <strong>se hace pasar</strong> por un banco, una tienda o una red social para que le des tus datos o tu dinero. Aprende a reconocer estas <strong>señales de alarma</strong>:</p>
             <ul class="mt-2 space-y-1.5 pl-5 list-disc">
-              <li><strong>Destornillador Phillips (cruz):</strong> Tamaño medio (PH1 o PH2). Para fijar la placa base, tarjetas y laterales.</li>
-              <li><strong>Destornillador de precisión:</strong> Para tornillos pequeños de componentes.</li>
-              <li><strong>Bandeja magnética:</strong> Para no perder los tornillos durante el montaje.</li>
-              <li><strong>Pinza antiestática:</strong> Para manipular componentes pequeños.</li>
-              <li><strong>Pulsera antiestática:</strong> Para descargar la electricidad estática antes de tocar componentes.</li>
+              <li>Te <strong>apuran</strong>: «última hora», «tu cuenta se cerrará en 5 minutos».</li>
+              <li>Tiene <strong>errores de ortografía</strong> o frases raras.</li>
+              <li>Te llega un <strong>enlace</strong> que no lleva a la web oficial.</li>
+              <li>Te piden <strong>contraseñas, códigos del móvil o datos de la tarjeta</strong>.</li>
+            </ul>
+            <div class="callout callout-peligro">
+              <strong>Si dudas, no pulses nada</strong>
+              <p class="mt-1">Ante cualquier mensaje sospechoso: <strong>no contestes, no pinches</strong> y pregúntale a un adulto de confianza.</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Contraseñas fuertes y segunda llave</h4>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li><strong>Larga:</strong> 12 caracteres o más. Cuanto más larga, mejor.</li>
+              <li><strong>Mezclada:</strong> letras mayúsculas y minúsculas, números y símbolos.</li>
+              <li><strong>Nada personal:</strong> nada de tu nombre, tu fecha de nacimiento ni la palabra «contraseña».</li>
+              <li><strong>Distinta para cada cuenta:</strong> si roban una, no tienen las demás.</li>
+              <li><strong>Nunca la apuntes</strong> en un papel ni la compartas en un mensaje.</li>
+            </ul>
+            <p class="mt-2">Muchas webs te envían además un <strong>código extra a tu móvil</strong> cada vez que entras. Es la <strong>segunda llave</strong> (también llamada doble factor o 2FA): quien solo conoce tu contraseña, sin ese código, <strong>no puede entrar</strong>.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">Si alguien te molesta (ciberacoso)</h4>
+            <ol class="mt-2 space-y-2 pl-5 list-decimal">
+              <li><strong>No contestes</strong> a quien te molesta.</li>
+              <li><strong>Guarda la prueba:</strong> haz una captura de pantalla del mensaje.</li>
+              <li><strong>Cuéntalo a un adulto de confianza:</strong> profesor, madre o padre. No estás solo.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand-700 mb-1">La regla 20-20-20</h4>
+            <p>Cada 20 minutos de pantalla:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>Mira durante <strong>20 segundos</strong>.</li>
+              <li>Lo que está a <strong>20 metros</strong> (la pared de enfrente, el patio).</li>
+              <li>Levántate, mueve las piernas y parpadea.</li>
+            </ul>
+            <p>Tus ojos y tu mal humor te lo agradecerán.</p>
+          </div>
+
+          <div class="actividad">
+            <h4 class="font-semibold text-brand-700 mb-1">Actividad: caza del phishing</h4>
+            <p>Leed los tres mensajes. ¿Cuáles son timos? ¿Qué señales de alarma encuentras?</p>
+            <div class="mt-3 grid gap-3 sm:grid-cols-3">
+              <div class="rounded-lg border border-slate-200 p-3">
+                <p class="font-semibold text-brand-700">Mensaje 1</p>
+                <p class="mt-1">«Hola, soy tu madre. ¿Me pasas el código que te acaba de llegar al móvil?»</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <p class="font-semibold text-brand-700">Mensaje 2</p>
+                <p class="mt-1">«¡Enhorabuena! Has ganado una consola. Entra en premios-ganar.xyz y paga 1 € de envío.»</p>
+              </div>
+              <div class="rounded-lg border border-slate-200 p-3">
+                <p class="font-semibold text-brand-700">Mensaje 3</p>
+                <p class="mt-1">«Trabajo de Tecnología: se entrega el viernes. — Google Classroom»</p>
+              </div>
+            </div>
+            <p class="mt-3">Después, hazte estas preguntas sobre <strong>tu propia contraseña</strong> sin escribirla en ningún sitio:</p>
+            <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+              <li>¿Tiene 12 caracteres o más?</li>
+              <li>¿Mezcla mayúsculas, minúsculas, números y símbolos?</li>
+              <li>¿Evita tu nombre, tu fecha y la palabra «contraseña»?</li>
+              <li>¿Es distinta de tus demás contraseñas?</li>
             </ul>
           </div>
 
-          <div class="callout callout-peligro">
-            <strong>Seguridad eléctrica y antiestática</strong>
-            La electricidad estática puede dañar irreversiblemente los componentes electrónicos. Antes de manipular componentes internos, toca una superficie metálica conectada a tierra (como el chasis del ordenador con la fuente enchufada pero apagada) para descargarte. Nunca abras la fuente de alimentación.
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">Pasos del montaje</h4>
-            <ol class="mt-2 space-y-3 pl-5 list-decimal">
-              <li><strong>Preparación:</strong> Desenroscar los laterales de la caja. Colocar la bandeja de tornillos. Identificar todos los componentes.</li>
-              <li><strong>Montar la CPU en la placa base:</strong> Levantar la pestaña del socket, alinear la flecha del procesador con la del socket, colocar sin forzar y cerrar la pestaña.</li>
-              <li><strong>Instalar el disipador/ventilador del procesador:</strong> Aplicar pasta térmica si no viene preaplicada. Fijar el disipador siguiendo las instrucciones del fabricante. Conectar el cable del ventilador al conector CPU_FAN.</li>
-              <li><strong>Insertar la memoria RAM:</strong> Abrir las pestañas de las ranuras DIMM. Alinear la muesca de la RAM con la ranura. Presionar firmemente hasta que las pestañas cierren con un clic.</li>
-              <li><strong>Colocar la placa base en la caja:</strong> Alinear los orificios con los separadores (standoffs). Fijar con tornillos sin apretar en exceso.</li>
-              <li><strong>Instalar la fuente de alimentación:</strong> Colocarla en la posición indicada (generalmente parte inferior o superior trasera). Fijar con tornillos.</li>
-              <li><strong>Instalar discos de almacenamiento:</strong> Colocar los SSD/HDD en las bahías correspondientes. Conectar el cable SATA y el cable de alimentación.</li>
-              <li><strong>Instalar tarjetas de expansión:</strong> Insertar la tarjeta gráfica en la ranura PCIe x16. Fijar con tornillos. Conectar los cables de alimentación si es necesario.</li>
-              <li><strong>Conectar los cables:</strong> Cable de alimentación de la placa base (24 pines y 4/8 pines CPU). Cables SATA a los discos. Cables frontales (Power SW, Reset SW, HDD LED, Power LED). Cables de ventiladores.</li>
-              <li><strong>Organizar el cableado:</strong> Pasar los cables por detrás de la placa base para mejorar la circulación de aire. Usar bridas o abrazaderas para mantener el orden.</li>
-              <li><strong>Cerrar la caja y probar:</strong> Colocar los laterales. Conectar monitor, teclado, ratón y cable de red. Encender y verificar que todo funciona correctamente.</li>
-            </ol>
-          </div>
-
-          <div>
-            <h4 class="font-semibold text-brand-700 mb-1">SdA: Proyecto de montaje</h4>
-            <p>En esta Situación de Aprendizaje, los alumnos trabajarán en parejas para:</p>
-            <ol class="mt-2 space-y-2 pl-5 list-decimal">
-              <li>Diseñar una configuración de ordenador para un uso específico (gaming, oficina, diseño) con un presupuesto determinado.</li>
-              <li>Justificar la elección de cada componente.</li>
-              <li>Realizar el montaje práctico en el aula de informática.</li>
-              <li>Configurar el sistema operativo y verificar el rendimiento.</li>
-              <li>Presentar el proyecto al resto de la clase explicando las decisiones tomadas.</li>
-            </ol>
-          </div>
-
-          <div class="callout callout-consejo">
-            <strong>Consejo para el montaje</strong>
-            Antes de empezar, revisa el manual de la placa base. Cada modelo tiene disposiciones diferentes de conectores y ranuras. Tener el manual a mano te evitará errores comunes como conectar los cables frontales en el orden incorrecto.
+          <div class="actividad">
+            <h4 class="font-semibold text-brand-700 mb-1">Situación de aprendizaje</h4>
+            <p>Haz un <strong>cartel</strong> (en papel o en una diapositiva) titulado <strong>«Mis 5 normas de oro de Internet»</strong> con cinco normas tuyas para navegar seguro. Ejemplos para empezar: <em>no comparto mis contraseñas</em>, <em>no pincho en enlaces de premios</em>. Ponlo en el aula.</p>
           </div>
         </div>
       </article>
