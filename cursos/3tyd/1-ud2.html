@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UD2 · Del plástico al diseño e impresión 3D · 3º TyD</title>
+  <meta name="description" content="UD2 de 3º TyD: plásticos y técnicas de fabricación explicados de forma práctica; diseño 3D con Tinkercad e impresión 3D con la impresora del aula; proyecto final de pieza impresa." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand:  {50:'#ecfdf5',100:'#d1fae5',200:'#a7f3d0',300:'#6ee7b7',400:'#34d399',500:'#10b981',600:'#059669',700:'#047857',800:'#065f46',900:'#064e3b'},
+          accent: {400:'#8b8df0',500:'#6366f1',600:'#4f46e5',700:'#4338ca'},
+          ink:    {800:'#1f2937',900:'#111827'}
+        },
+        fontFamily: { sans:['Inter','Segoe UI','system-ui','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+</head>
+<body data-pagina="3tyd" class="bg-slate-50 text-ink-900 font-sans antialiased">
+
+  <div id="shell-header"></div>
+
+  <main id="contenido" class="mx-auto w-full max-w-6xl px-4 pb-16 pt-6">
+
+<section class="rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-600 p-8 text-white shadow-lg">
+      <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-100">
+        <a href="../3tyd.html" class="hover:underline">3.º TyD</a>
+        <span>·</span>
+        <span>1.º Trimestre</span>
+        <span>·</span>
+        <span>Bloque A</span>
+      </div>
+      <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">UD2 · Del plástico al diseño e impresión 3D</h1>
+      <p class="mt-3 text-brand-50/90">Aprendemos qué son los plásticos, de dónde vienen y cómo se fabrican las cosas, y damos el salto al diseño 3D: modelamos piezas en Tinkercad e imprimimos en 3D con la impresora del aula. Contenido muy práctico, con vídeos, talleres y un proyecto final.</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.3.A.1. Estrategias de resolución de problemas.</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.3.A.2. Búsqueda crítica de información.</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.3.A.4. Herramientas de manipulación y mecanizado.</span>
+        <span class="rounded-full bg-white/20 px-3 py-1">TYD.3.A.5. Emprendimiento, resiliencia y creatividad.</span>
+      </div>
+</section>
+
+    <!-- CONTENIDO 1 -->
+    <article id="contenido-1" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+        <div>
+          <h3 class="font-bold text-ink-800 text-lg">El origen de los plásticos</h3>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+        <div>
+          <p>¿Alguna vez has pensado de qué están hechos el bolígrafo con el que escribes, la botella de agua o los auriculares? Todos son objetos de <strong>plástico</strong>. La palabra viene de su gran cualidad: <strong>poder moldearse</strong>. El nombre técnico de estos materiales es <strong>polímeros</strong>.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">¿Siempre ha habido plásticos?</h4>
+          <div class="mt-3 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+              <p class="font-bold text-brand-800">Plásticos naturales</p>
+              <p class="mt-1 text-sm">Antes de los plásticos actuales ya existían materiales como el algodón, el caucho (la goma) o el carey. Con ellos se hacían botones, peinetas o juguetes.</p>
+            </div>
+            <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+              <p class="font-bold text-brand-800">Plásticos sintéticos</p>
+              <p class="mt-1 text-sm">Los fabrican las personas en laboratorios e industrias. El primero fue la baquelita (1907). Después de la II Guerra Mundial aparecieron el nylon, el polietileno… y llegó el «boom» del plástico.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">¿De dónde salen hoy?</h4>
+          <p>La mayoría de los plásticos sintéticos vienen del <strong>petróleo</strong> y del gas natural. En la refinería el petróleo se calienta y se separan sus componentes (<strong>destilación fraccionada</strong>). Con ellos se consiguen moléculas pequeñitas llamadas <strong>monómeros</strong>, que se unen para formar el polímero. El resultado son unas <strong>bolitas o gránulos</strong> que cada fábrica funde y moldea como necesita.</p>
+        </div>
+
+        <div class="callout callout-nota">
+          <strong>Dato curioso</strong>
+          <p class="mt-1">No todos los plásticos vienen del petróleo: el <strong>PLA</strong>, el que usamos en la impresora 3D del aula, se fabrica a partir del almidón del maíz o de la caña de azúcar. Por eso se dice que es «bioplástico».</p>
+        </div>
+
+        <div>
+          <div class="video-embed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nIxq9mfhSGc" title="¿Qué son los Polímeros?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Vídeo: «¿Qué son los Polímeros?» · El Maestro Yona</p>
+        </div>
+
+        <div class="quiz" data-correcta="b" data-total="3">
+          <h4>Comprueba lo aprendido</h4>
+          <p class="font-semibold text-slate-700 mb-2">¿De qué material salen la mayoría de los plásticos que usamos?</p>
+          <button class="quiz-opcion" data-valor="a">A. De la madera</button>
+          <button class="quiz-opcion" data-valor="b">B. Del petróleo</button>
+          <button class="quiz-opcion" data-valor="c">C. Del vidrio</button>
+          <div class="quiz-resultado"></div>
+          <p class="quiz-score"></p>
+        </div>
+
+        <div class="actividad">
+          <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+          <p>Busca en tu casa <strong>5 objetos de plástico</strong>. Para cada uno escribe: (1) de qué crees que está hecho (petróleo, maíz…), (2) si crees que se puede reciclar fundiéndolo otra vez. Trae la lista a clase.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CONTENIDO 2 -->
+    <article id="contenido-2" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+        <div>
+          <h3 class="font-bold text-ink-800 text-lg">Monómeros y polímeros</h3>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+        <div>
+          <p>Imagina un collar: está formado por muchas <strong>cuentas</strong> iguales unidas. Pues eso mismo es un polímero:</p>
+          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+            <li><strong>Monómero</strong> (del griego <em>mono</em>: uno): una molécula pequeñita, una sola «cuenta».</li>
+            <li><strong>Polímero</strong> (del griego <em>polys</em>: muchos): millones de monómeros unidos en una cadena larga.</li>
+            <li><strong>Polimerización</strong>: el proceso de unir los monómeros para fabricar el polímero.</li>
+          </ul>
+        </div>
+
+        <figure>
+          <img src="../../assets/img/monomeros-polimeros.svg" alt="Diagrama: monómeros sueltos se unen por polimerización para formar un polímero en cadena" class="mx-auto w-full max-w-2xl rounded-lg border border-slate-200 bg-white" />
+          <figcaption class="mt-1 text-center text-xs text-slate-500 italic">De piezas sueltas a una cadena larga: la polimerización</figcaption>
+        </figure>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Ejemplo real</h4>
+          <p>El <strong>eteno</strong> es un gas (monómero) que, al polimerizar, se convierte en <strong>polietileno</strong>: la bolsa de la compra. Truco para reconocerlos: el monómero suele terminar en <strong>-eno</strong> y el polímero en <strong>-ileno</strong> (eteno → polietileno, propileno → polipropileno).</p>
+        </div>
+
+        <div class="callout callout-nota">
+          <strong>¿Por qué importa esto?</strong>
+          <p class="mt-1">Las cadenas pueden ser cortas, largas, retorcidas o planas… Y de eso dependen las propiedades del plástico: si es flexible, duro, transparente o resiste el calor. En el siguiente contenido veremos los tres grandes tipos.</p>
+        </div>
+
+        <div class="quiz" data-correcta="a" data-total="3">
+          <h4>Comprueba lo aprendido</h4>
+          <p class="font-semibold text-slate-700 mb-2">¿Cómo se llama el proceso de unir monómeros para formar un polímero?</p>
+          <button class="quiz-opcion" data-valor="a">A. Polimerización</button>
+          <button class="quiz-opcion" data-valor="b">B. Destilación fraccionada</button>
+          <button class="quiz-opcion" data-valor="c">C. Laminación</button>
+          <div class="quiz-resultado"></div>
+          <p class="quiz-score"></p>
+        </div>
+
+        <div class="actividad">
+          <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+          <p>Dibuja un polímero formado por <strong>8 monómeros</strong> circulares unidos (como un collar). Ponle nombre inventado al monómero y al polímero resultante (por ejemplo: «bolita» → «bolitero»).</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CONTENIDO 3 -->
+    <article id="contenido-3" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+        <div>
+          <h3 class="font-bold text-ink-800 text-lg">Tipos de polímeros</h3>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+        <p>Según cómo reaccionan al calor, los polímeros se dividen en <strong>tres grandes familias</strong>:</p>
+
+        <div class="mt-3 grid gap-3 sm:grid-cols-3">
+          <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+            <p class="font-bold text-brand-800">Termoplásticos</p>
+            <p class="mt-1 text-sm">Se funden al calentarlos y se solidifican al enfriarlos. Se pueden reciclar muchas veces fundiéndolos.</p>
+            <p class="mt-2 text-xs font-semibold text-brand-700">Botella PET · bolsa · tubería PVC</p>
+          </div>
+          <div class="rounded-lg bg-amber-50 p-3 border border-amber-200">
+            <p class="font-bold text-amber-800">Termoestables</p>
+            <p class="mt-1 text-sm">Al curarlos (con calor o químicos) se endurecen para siempre. Aguantan el calor, pero no se funden otra vez.</p>
+            <p class="mt-2 text-xs font-semibold text-amber-700">Cascos · vajilla melamina · resinas</p>
+          </div>
+          <div class="rounded-lg bg-sky-50 p-3 border border-sky-200">
+            <p class="font-bold text-sky-800">Elastómeros</p>
+            <p class="mt-1 text-sm">Son las gomas: se estiran mucho y vuelven a su forma original.</p>
+            <p class="mt-2 text-xs font-semibold text-sky-700">Neumáticos · gomas · guantes</p>
+          </div>
+        </div>
+
+        <figure>
+          <img src="../../assets/img/termoplasticos-ciclo.svg" alt="Diagrama comparando el ciclo reversible de los termoplásticos y el irreversible de los termoestables" class="mx-auto w-full max-w-2xl rounded-lg border border-slate-200 bg-white" />
+          <figcaption class="mt-1 text-center text-xs text-slate-500 italic">Termoplásticos: ciclo que se repite · Termoestables: no vuelven atrás</figcaption>
+        </figure>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Plásticos que ves todos los días</h4>
+          <table class="mt-2 w-full border-collapse text-sm">
+            <thead>
+              <tr class="bg-brand-600 text-white">
+                <th class="border border-brand-700 px-3 py-1.5 text-left">Plástico</th>
+                <th class="border border-brand-700 px-3 py-1.5 text-left">¿Dónde lo ves?</th>
+                <th class="border border-brand-700 px-3 py-1.5 text-left">Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="border border-slate-200 px-3 py-1.5">PET</td><td class="border border-slate-200 px-3 py-1.5">Botellas de agua y refrescos</td><td class="border border-slate-200 px-3 py-1.5">Termoplástico</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5">Polietileno (PE)</td><td class="border border-slate-200 px-3 py-1.5">Bolsas de la compra</td><td class="border border-slate-200 px-3 py-1.5">Termoplástico</td></tr>
+              <tr><td class="border border-slate-200 px-3 py-1.5">PVC</td><td class="border border-slate-200 px-3 py-1.5">Tuberías del agua</td><td class="border border-slate-200 px-3 py-1.5">Termoplástico</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5">Melamina</td><td class="border border-slate-200 px-3 py-1.5">Platos y vajilla de campamentos</td><td class="border border-slate-200 px-3 py-1.5">Termoestable</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-nota">
+          <strong>Clave para el taller de impresión 3D</strong>
+          <p class="mt-1">Los filamentos de la impresora (el <strong>PLA</strong> y el <strong>ABS</strong>) son <strong>termoplásticos</strong>. Por eso la boquilla puede fundirlos y la pieza se solidifica al enfriar. Si fueran termoestables, la impresora no podría funcionar.</p>
+        </div>
+
+        <div class="quiz" data-correcta="c" data-total="3">
+          <h4>Comprueba lo aprendido</h4>
+          <p class="font-semibold text-slate-700 mb-2">¿Qué tipo de polímero se puede fundir y reciclar varias veces?</p>
+          <button class="quiz-opcion" data-valor="a">A. El termoestable</button>
+          <button class="quiz-opcion" data-valor="b">B. El termoestable y el elastómero</button>
+          <button class="quiz-opcion" data-valor="c">C. El termoplástico</button>
+          <div class="quiz-resultado"></div>
+          <p class="quiz-score"></p>
+        </div>
+
+        <div class="actividad">
+          <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+          <p>Clasifica estos objetos en la tabla: bolígrafo, neumático de bici, plato de campamento, bolsa de patatas, casco de bici, asa de sartén. Marca para cada uno: termoplástico, termoestable o elastómero. ¿Cuál te cuesta más decidir?</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CONTENIDO 4 -->
+    <article id="contenido-4" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">4</span>
+        <div>
+          <h3 class="font-bold text-ink-800 text-lg">Técnicas de fabricación con plásticos</h3>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+        <p>Las industrias trabajan los termoplásticos siempre igual al principio: <strong>calientan las bolitas hasta que se ponen blandas</strong>. Lo que cambia es cómo les dan la forma final.</p>
+
+        <div class="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-4 sm:p-6" role="group" aria-label="Esquema de las técnicas de conformado de plásticos">
+          <p class="mb-4 text-center text-xs font-semibold uppercase tracking-wide text-brand-700">Esquema · técnicas de conformado de plásticos</p>
+          <div class="flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
+            <div class="flex items-center justify-center rounded-2xl bg-brand-600 px-6 py-5 text-center text-lg font-extrabold uppercase tracking-wide text-white shadow-md sm:w-40 sm:shrink-0">Técnicas</div>
+            <div class="space-y-3 border-l-4 border-brand-300 sm:flex-1">
+            <div class="flex items-start">
+              <span class="mt-5 h-1 w-5 shrink-0 bg-brand-300"></span>
+              <div class="flex-1 rounded-xl border border-brand-200 bg-white px-4 py-3 shadow-sm">
+                <span class="font-bold text-brand-800">Extrusión</span>
+                <div class="mt-2 space-y-2 border-l-4 border-accent-400">
+                  <div class="flex items-center">
+                    <span class="h-1 w-4 shrink-0 bg-accent-400"></span>
+                    <div class="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 rounded-lg border border-indigo-200 bg-indigo-50 px-3 py-1.5">
+                      <span class="font-semibold text-accent-700">De tubería</span>
+                      <span class="text-xs text-slate-600">tubos y tuberías</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="h-1 w-4 shrink-0 bg-accent-400"></span>
+                    <div class="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 rounded-lg border border-indigo-200 bg-indigo-50 px-3 py-1.5">
+                      <span class="font-semibold text-accent-700">De película soplada</span>
+                      <span class="text-xs text-slate-600">bolsas</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="h-1 w-4 shrink-0 bg-accent-400"></span>
+                    <div class="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 rounded-lg border border-indigo-200 bg-indigo-50 px-3 py-1.5">
+                      <span class="font-semibold text-accent-700">Sobreextrusión</span>
+                      <span class="text-xs text-slate-600">revestimiento</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span class="h-1 w-5 shrink-0 bg-brand-300"></span>
+              <div class="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-brand-200 bg-white px-4 py-2.5 shadow-sm">
+                <span class="font-bold text-brand-800">Compresión</span>
+                <span class="rounded-full bg-brand-50 px-3 py-0.5 text-xs text-brand-700 border border-brand-200">tapones, botones, enchufes</span>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span class="h-1 w-5 shrink-0 bg-brand-300"></span>
+              <div class="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-brand-200 bg-white px-4 py-2.5 shadow-sm">
+                <span class="font-bold text-brand-800">Soplado</span>
+                <span class="rounded-full bg-brand-50 px-3 py-0.5 text-xs text-brand-700 border border-brand-200">botellas, pelotas</span>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span class="h-1 w-5 shrink-0 bg-brand-300"></span>
+              <div class="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-brand-200 bg-white px-4 py-2.5 shadow-sm">
+                <span class="font-bold text-brand-800">Inyección</span>
+                <span class="rounded-full bg-brand-50 px-3 py-0.5 text-xs text-brand-700 border border-brand-200">cuencos, cubiertos</span>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span class="h-1 w-5 shrink-0 bg-brand-300"></span>
+              <div class="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-brand-200 bg-white px-4 py-2.5 shadow-sm">
+                <span class="font-bold text-brand-800">Conformado al vacío</span>
+                <span class="rounded-full bg-brand-50 px-3 py-0.5 text-xs text-brand-700 border border-brand-200">recipientes de yogures, hueveras</span>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span class="h-1 w-5 shrink-0 bg-brand-300"></span>
+              <div class="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-brand-200 bg-white px-4 py-2.5 shadow-sm">
+                <span class="font-bold text-brand-800">Calandrado</span>
+                <span class="rounded-full bg-brand-50 px-3 py-0.5 text-xs text-brand-700 border border-brand-200">manteles, cortinas</span>
+              </div>
+            </div>
+            </div>
+          </div>
+          <p class="mt-4 text-center text-xs italic text-slate-500">Debajo tienes cada técnica explicada.</p>
+        </div>
+
+        <div class="mt-3 grid gap-3 sm:grid-cols-2">
+          <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+            <p class="font-bold text-brand-800">Extrusión</p>
+            <p class="mt-1 text-sm">Se empuja el plástico fundido por un agujero (troquel) y sale en forma continua: tubos, láminas, pajitas, bolsas. Como exprimir pasta dental.</p>
+          </div>
+          <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+            <p class="font-bold text-brand-800">Inyección</p>
+            <p class="mt-1 text-sm">Se inyecta dentro de un molde cerrado y se queda con su forma exacta: juguetes, tapones, teclas, carcasas. Como una jeringa.</p>
+          </div>
+          <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+            <p class="font-bold text-brand-800">Soplado</p>
+            <p class="mt-1 text-sm">Se sopla aire dentro de una bolsa de plástico caliente dentro de un molde y se estira hasta dar la forma hueca: botellas de agua.</p>
+          </div>
+          <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+            <p class="font-bold text-brand-800">Conformado al vacío</p>
+            <p class="mt-1 text-sm">Se calienta una lámina y se le hace aire por debajo para que se pegue al molde: bandejas de comida, vasos, bandejas de herramientas.</p>
+          </div>
+          <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+            <p class="font-bold text-brand-800">Calandrado</p>
+            <p class="mt-1 text-sm">Se pasa la masa caliente entre rodillos que la aplastan y la estiran hasta dejarla en lámina fina: manteles de plástico, suelos de PVC, linóleo. Como aplanar la masa con el rodillo de la cocina.</p>
+          </div>
+          <div class="rounded-lg bg-brand-50 p-3 border border-brand-200">
+            <p class="font-bold text-brand-800">Compresión</p>
+            <p class="mt-1 text-sm">Se pone el material en un molde y se aprieta con calor y una prensa hasta que toma la forma: botones, piezas de melamina y aislantes. Como aplastar la masa caliente entre dos planchas.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="video-embed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QLOjsh8AV1M" title="Extrusión de plástico: ¿cómo funciona?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Vídeo: «Extrusión de plástico: ¿cómo funciona?»</p>
+        </div>
+
+        <div>
+          <div class="video-embed">
+            <iframe width="560" height="315" src="https://mediateca.educa.madrid.org/video/it12uf7zx8nexkfi/fs" title="Conformado de Plásticos" frameborder="0" scrolling="no" allowfullscreen></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Vídeo complementario: «Conformado de Plásticos» · Mediateca de EducaMadrid · Explica inyección, soplado y conformado al vacío (además de extrusión) · <a href="https://mediateca.educa.madrid.org/video/it12uf7zx8nexkfi" target="_blank" rel="noopener" class="underline">Ver en la Mediateca</a></p>
+        </div>
+
+        <div class="callout callout-nota">
+          <strong>Puente hacia el diseño 3D</strong>
+          <p class="mt-1">Casi todas estas técnicas necesitan <strong>un molde</strong>, y los moldes son caros. La <strong>impresión 3D</strong> es distinta: no usa molde y añade el material capa a capa hasta formar la pieza (se llama <strong>fabricación aditiva</strong>). Es la técnica que usaremos en los dos últimos contenidos.</p>
+        </div>
+
+        <div class="quiz" data-correcta="b" data-total="3">
+          <h4>Comprueba lo aprendido</h4>
+          <p class="font-semibold text-slate-700 mb-2">¿Con qué técnica se fabrican las botellas de plástico?</p>
+          <button class="quiz-opcion" data-valor="a">A. Extrusión</button>
+          <button class="quiz-opcion" data-valor="b">B. Soplado</button>
+          <button class="quiz-opcion" data-valor="c">C. Conformado al vacío</button>
+          <div class="quiz-resultado"></div>
+          <p class="quiz-score"></p>
+        </div>
+
+        <div class="actividad">
+          <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+          <p>Elige 5 objetos de tu mochila o de tu casa hechos de plástico y di con qué técnica crees que se fabricaron (extrusión, inyección, soplado, vacío, calandrado o compresión). Justifica en una frase cada uno: ¿es hueco?, ¿tiene forma complicada?, ¿es una lámina?, ¿está prensada en un molde?</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CONTENIDO 5 -->
+    <article id="contenido-5" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">5</span>
+        <div>
+          <h3 class="font-bold text-ink-800 text-lg">Diseño 3D con Tinkercad</h3>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+        <div>
+          <p>Antes de imprimir cualquier cosa en 3D hay que <strong>dibujarla en el ordenador</strong>. A eso le llamamos <strong>diseño 3D</strong>: crear un modelo con medidas reales (en milímetros) que después la impresora podrá fabricar. Es como hacer un plano, pero en tres dimensiones.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Tinkercad: el taller de diseño del aula</h4>
+          <ul class="mt-1 space-y-1.5 pl-5 list-disc">
+            <li><strong>Gratuito</strong> y funciona en el navegador de cualquier ordenador (sin instalar nada): <a href="https://www.tinkercad.com" target="_blank" rel="noopener" class="font-semibold text-emerald-600 hover:underline">tinkercad.com</a></li>
+            <li>Muy sencillo: partimos de <strong>formas básicas</strong> (cubo, cilindro, esfera) que movemos, giramos y cambiamos de tamaño.</li>
+            <li>Dos operaciones mágicas: <strong>agrupar</strong> (unir varias formas en una sola pieza) y <strong>hueco</strong> (marcar una forma para que sirva de agujero al agrupar).</li>
+            <li>Todo se mide en <strong>milímetros (mm)</strong>, igual que las medidas reales de la pieza.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Cómo se hace (taller paso a paso)</h4>
+          <ol class="mt-1 space-y-1.5 pl-5 list-decimal">
+            <li>Entra en tinkercad.com e inicia sesión con la cuenta del centro.</li>
+            <li>Pulsa <strong>Crear → Diseño 3D</strong>.</li>
+            <li>Arrastra una forma desde el panel derecho hasta el lienzo.</li>
+            <li>Selecciona la forma y cambia su tamaño escribiendo números (¡en mm!) o arrastrando los manejadores.</li>
+            <li>Añade una forma marcada como <strong>Hueco</strong> donde quieras un agujero.</li>
+            <li>Selecciona todo y pulsa <strong>Agrupar</strong> (Ctrl + G): ya tienes tu pieza.</li>
+            <li>En <strong>Enviar → Descargar → Archivo .STL</strong> para guardarlo e imprimirlo.</li>
+          </ol>
+        </div>
+
+        <div>
+          <div class="video-embed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0qzWMvn2dZs" title="Tutorial COMPLETO de Tinkercad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Vídeo: «Tutorial COMPLETO de Tinkercad [Guía para Principiantes 2025 de Diseño 3D]» · OBO We Teach Robotics</p>
+        </div>
+
+        <div class="quiz" data-correcta="a" data-total="3">
+          <h4>Comprueba lo aprendido</h4>
+          <p class="font-semibold text-slate-700 mb-2">¿En qué unidades se miden los diseños 3D en Tinkercad?</p>
+          <button class="quiz-opcion" data-valor="a">A. En milímetros (mm)</button>
+          <button class="quiz-opcion" data-valor="b">B. En pulgadas</button>
+          <button class="quiz-opcion" data-valor="c">C. No se miden, es a ojo</button>
+          <div class="quiz-resultado"></div>
+          <p class="quiz-score"></p>
+        </div>
+
+        <div class="actividad">
+          <h4 class="font-semibold text-brand-700 mb-1">Taller 1 · Tu primera pieza</h4>
+          <p>Diseña en Tinkercad una <strong>placa con tu nombre</strong> (un cubo achatado de 100 × 30 × 4 mm con las letras de tu nombre en hueco) o un <strong>llavero</strong> sencillo. Exporta el .STL y guárdalo en tu carpeta: lo imprimirás en el contenido 6.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CONTENIDO 6 -->
+    <article id="contenido-6" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">6</span>
+        <div>
+          <h3 class="font-bold text-ink-800 text-lg">La impresora 3D del aula</h3>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+        <div>
+          <p>Llegamos a la máquina que hace realidad los diseños. Nuestra impresora usa la tecnología <strong>FDM</strong>: funde un filamento de plástico (PLA) y lo deposita <strong>capa a capa</strong> hasta construir la pieza entera.</p>
+        </div>
+
+        <figure>
+          <img src="../../assets/img/capas-impresion3d.svg" alt="Esquema de una impresora 3D FDM: filamento, boquilla a 200 grados, cama caliente y capas de material" class="mx-auto w-full max-w-2xl rounded-lg border border-slate-200 bg-white" />
+          <figcaption class="mt-1 text-center text-xs text-slate-500 italic">Filamento, boquilla caliente y capas de 0,2 mm</figcaption>
+        </figure>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">El recorrido completo: del diseño a la pieza</h4>
+          <figure>
+            <img src="../../assets/img/flujo-impresion3d.svg" alt="Flujo de cinco pasos: diseñar en Tinkercad, exportar STL, laminar en Cura, generar G-code e imprimir" class="w-full rounded-lg border border-slate-200 bg-white" />
+            <figcaption class="mt-1 text-center text-xs text-slate-500 italic">Los 5 pasos: Tinkercad → .STL → Cura → G-code → impresora</figcaption>
+          </figure>
+          <p class="mt-2">El programa intermedio es el <strong>laminador</strong>: usamos <strong>Cura</strong> (gratuito). Cura recorta el modelo en capas finas y genera el <strong>G-code</strong>, un archivo de instrucciones que la impresora lee y sigue al pie de la letra.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Ajustes importantes en Cura</h4>
+          <ul class="mt-1 space-y-1.5 pl-5 list-disc">
+            <li><strong>Altura de capa:</strong> 0,2 mm (equilibrio entre velocidad y calidad).</li>
+            <li><strong>Relleno:</strong> 15-20 % (por dentro no es sólido, tiene una estructura de panal: ahorra material y tiempo).</li>
+            <li><strong>Soportes:</strong> solo si hay partes que «vuelan» sin debajo (voladizos); son columnas que se rompen después.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Pasos para imprimir</h4>
+          <ol class="mt-1 space-y-1.5 pl-5 list-decimal">
+            <li>El profe laminador tu .STL en Cura y genera el G-code.</li>
+            <li>Se copia el G-code a la tarjeta o USB de la impresora.</li>
+            <li>En la pantalla de la impresora: <strong>Seleccionar archivo → Imprimir</strong>.</li>
+            <li>Se espera (una pieza pequeña tarda unos 30-60 minutos).</li>
+            <li>Con la pieza fría, se retira con cuidado y se quitan los soportes.</li>
+          </ol>
+        </div>
+
+        <div class="callout callout-nota">
+          <strong>Seguridad y cuidados (imprescindible)</strong>
+          <ul class="mt-2 space-y-1.5 pl-5 list-disc">
+            <li>La <strong>boquilla está a ≈ 200 °C</strong> y la cama a ≈ 60 °C: <strong>nunca se tocan</strong> mientras imprime.</li>
+            <li>No dejar la impresora funcionando sin supervisión del profe.</li>
+            <li>Retirar la pieza solo cuando esté fría y con ayuda del profe si está pegada.</li>
+            <li>Si algo falla (se despega, hace ruidos raros), <strong>se para y se avisa</strong>: no se fuerza nada.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="video-embed">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Sx5oCKnqlZI" title="Así funciona una impresora 3D, explicado fácilmente" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center mt-1">Vídeo: «Así funciona una impresora 3D, explicado fácilmente» · Soy Thelma Castillo</p>
+        </div>
+
+        <div class="quiz" data-correcta="b" data-total="3">
+          <h4>Comprueba lo aprendido</h4>
+          <p class="font-semibold text-slate-700 mb-2">¿A qué temperatura aproximada sale fundido el PLA por la boquilla?</p>
+          <button class="quiz-opcion" data-valor="a">A. A unos 60 °C (la cama)</button>
+          <button class="quiz-opcion" data-valor="b">B. A unos 200 °C</button>
+          <button class="quiz-opcion" data-valor="c">C. A más de 1000 °C</button>
+          <div class="quiz-resultado"></div>
+          <p class="quiz-score"></p>
+        </div>
+
+        <div class="actividad">
+          <h4 class="font-semibold text-brand-700 mb-1">Actividad</h4>
+          <p>Dibuja en tu cuaderno una impresora 3D con sus partes etiquetadas (filamento, boquilla, cama, capas) y explica con tus palabras qué es el <strong>relleno</strong> y por qué no se imprime todo sólido por dentro.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CONTENIDO 7 -->
+    <article id="contenido-7" class="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">7</span>
+        <div>
+          <h3 class="font-bold text-ink-800 text-lg">Proyecto: diseñamos e imprimimos en 3D</h3>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+
+        <div>
+          <p><strong>Objetivo:</strong> en <strong>parejas</strong>, diseñar en Tinkercad e imprimir una <strong>pieza útil</strong> para el aula o para casa: porta-gomas, llavero, soporte de móvil, etiqueta de material, ficha de memoria, porta-cable…</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Ruta del proyecto</h4>
+          <ol class="mt-1 space-y-1.5 pl-5 list-decimal">
+            <li><strong>Idea y boceto:</strong> escribe en el cuaderno qué problema resuelve tu pieza y sus medidas (que sea <strong>pequeña: menos de 5 cm</strong>, así imprime rápido).</li>
+            <li><strong>Modelado en Tinkercad:</strong> constrúyela con formas básicas; paredes de al menos 2 mm de grosor.</li>
+            <li><strong>Revisión:</strong> comparad el diseño entre vosotros y con el profe. ¿Es útil? ¿Se puede imprimir sin desmoronarse?</li>
+            <li><strong>Exportar</strong> el archivo .STL.</li>
+            <li><strong>Laminar en Cura</strong> con el profe (relleno 15 %, soportes solo si hace falta).</li>
+            <li><strong>Imprimir por turnos</strong> (la pieza pequeña tarda unos 30-60 minutos).</li>
+            <li><strong>Acabo y presentación:</strong> retira soportes, limpia la pieza y preséntala en 3 minutos: problema que resuelve, cómo la diseñasteis, tiempo de impresión y qué mejoraríais.</li>
+          </ol>
+        </div>
+
+        <div class="callout callout-nota">
+          <strong>Consejo de taller</strong>
+          <p class="mt-1">El primer diseño no tiene por qué ser perfecto. Una pieza <strong>pequeña y bien hecha</strong> siempre gana a una grande y a medias. Si algo no sale bien, se corrige y se vuelve a imprimir: eso también es diseñar.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-brand-700 mb-1">Criterios de evaluación</h4>
+          <table class="mt-2 w-full border-collapse text-sm">
+            <thead>
+              <tr class="bg-brand-600 text-white">
+                <th class="border border-brand-700 px-3 py-1.5 text-left">Criterio</th>
+                <th class="border border-brand-700 px-3 py-1.5 text-left">Qué se valora</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="border border-slate-200 px-3 py-1.5 font-semibold">Diseño original y útil</td><td class="border border-slate-200 px-3 py-1.5">Resuelve un problema real; es original, no copiado.</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5 font-semibold">Dimensiones correctas</td><td class="border border-slate-200 px-3 py-1.5">Menos de 5 cm; paredes de al menos 2 mm.</td></tr>
+              <tr><td class="border border-slate-200 px-3 py-1.5 font-semibold">STL correcto</td><td class="border border-slate-200 px-3 py-1.5">El archivo abre bien en Cura y la forma es la deseada.</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5 font-semibold">Laminado correcto</td><td class="border border-slate-200 px-3 py-1.5">Relleno y soportes adecuados; se explica por qué.</td></tr>
+              <tr><td class="border border-slate-200 px-3 py-1.5 font-semibold">Normas de seguridad</td><td class="border border-slate-200 px-3 py-1.5">Se respeta todo lo de la impresora; turnos ordenados.</td></tr>
+              <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5 font-semibold">Presentación</td><td class="border border-slate-200 px-3 py-1.5">Se usa el vocabulario técnico; 3 minutos por pareja.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="actividad">
+          <h4 class="font-semibold text-brand-700 mb-1">Entrega</h4>
+          <p>Entregad una <strong>foto de vuestra pieza impresa</strong> (junto a una regla para ver el tamaño) y presentadla en clase. Al final, contestad por escrito: <em>¿qué cambiaríais del diseño? ¿Cuánto tiempo tardó en imprimirse y cuánto se va a usar?</em></p>
+        </div>
+
+        <div class="callout callout-nota">
+          <strong>Reflexión final de la unidad</strong>
+          <p class="mt-1">Has pasado de los plásticos del petróleo a diseñar y fabricar tu propia pieza. ¿En qué se parecen y en qué se diferencian la impresión 3D y las técnicas industriales del contenido 4 (inyección, soplado…)? Escribe 4-5 líneas.</p>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <div id="shell-footer"></div>
+  <script src="../../componentes/nucleo.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>
+
